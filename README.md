@@ -33,8 +33,9 @@ npm install -g @anthropic-ai/claude-code
 ```
 
 From this terminal, you can also install R packages. To install lots of packages to the Docker image, put these R commands in a file called packages.R and saved it to project folder (C:\work\myproject). And uncomment these two lines of code in Dockerfile. 
-```COPY ./packages.R /tmp/packages.R
-#RUN Rscript /tmp/packages.R
+```
+COPY ./packages.R /tmp/packages.R
+RUN Rscript /tmp/packages.R
 ```
 
 To test Shiny apps, open a new terminal in VS Code. Start R by typing ```R```. Then select all the code in the app.R and use Ctrl+Enter. When prompted, click on the link such as http://127.0.0.1:6778/, which is open in a web browser.
