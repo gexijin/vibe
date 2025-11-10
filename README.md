@@ -1,6 +1,6 @@
 ## Vibe Coding in the Docker Container for Shiny apps
 
-This setup enables both Claude Code and OpenAI's Codex running in a docker container using the ```rocker/shiny-verse``` image. 
+This minimal setup enables both Claude Code and OpenAI's Codex running in a docker container. To support Shiny apps, we use the [```rocker/shiny-verse```](https://rocker-project.org/images/versioned/shiny.html) image.   A more advanced version for general development is provided by [Claude](https://code.claude.com/docs/en/devcontainer).
 
 0. (Windows only) Install WSL2 (Windows Subsystem for Linux 2)
   
