@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Tutorials</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tutorials {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .tutorial-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: border-color 0.2s, transform 0.2s;
+            display: block;
+        }
+
+        .tutorial-card:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        .tutorial-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        .tutorial-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vibe Tutorials</h1>
+            <p class="subtitle">Guides for getting started with Claude Code, VS Code, and version control</p>
+        </header>
+
+        <section class="section">
+            <h2>Installation</h2>
+            <div class="tutorials">
+                <a href="Install_CLAUDE_Code_Win" class="tutorial-card">
+                    <h3>Installing Claude Code on Windows</h3>
+                    <p>Step-by-step guide using WSL, Ubuntu, and Node.js</p>
+                </a>
+                <a href="Install_Claude_Code_MacOS" class="tutorial-card">
+                    <h3>Installing Claude Code on Mac</h3>
+                    <p>Quick setup with Node.js and npm</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>VS Code</h2>
+            <div class="tutorials">
+                <a href="VS_Code_Getting_Started" class="tutorial-card">
+                    <h3>Getting Started with VS Code</h3>
+                    <p>Learn the basics of Visual Studio Code for coding</p>
+                </a>
+                <a href="R_Coding_VS_Code_Guide" class="tutorial-card">
+                    <h3>R Coding in VS Code</h3>
+                    <p>Set up R with code completion, plots, and Shiny apps</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Version Control</h2>
+            <div class="tutorials">
+                <a href="Github_desktop" class="tutorial-card">
+                    <h3>Getting Started with Version Control</h3>
+                    <p>Introduction to Git and GitHub Desktop</p>
+                </a>
+                <a href="GitHub_Desktop_Claude_Code_Workflow" class="tutorial-card">
+                    <h3>Using GitHub Desktop with Claude Code</h3>
+                    <p>Combine AI-assisted coding with professional version control</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Reference</h2>
+            <div class="tutorials">
+                <a href="skills-vs-commands" class="tutorial-card">
+                    <h3>Claude Skills vs Slash Commands</h3>
+                    <p>Understand the difference between model-invoked skills and user-invoked commands</p>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Part of the <a href="https://github.com/vibe">Vibe</a> project</p>
+        </footer>
+    </div>
+</body>
+</html>
