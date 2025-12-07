@@ -46,23 +46,24 @@ a {
 }
 
 code {
-  background: #161b22;
-  color: #e6edf3;
+  background: #2d333b !important;
+  color: #f0f6fc !important;
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
 pre {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #2d333b !important;
+  border: 1px solid #444c56;
   border-radius: 6px;
   padding: 1em;
   overflow-x: auto;
 }
 
 pre code {
-  background: transparent;
+  background: transparent !important;
+  color: #f0f6fc !important;
   padding: 0;
   border-radius: 0;
 }
