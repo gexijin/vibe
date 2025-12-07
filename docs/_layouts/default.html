@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <title>{{ page.title | default: site.title | default: site.github.repository_name }}</title>
+</head>
+<body>
+  <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+      {{ content }}
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('pre').forEach(function(pre) {
+        // Create wrapper
+        const wrapper = document.createElement('div');
+        wrapper.style.position = 'relative';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const btn = document.createElement('button');
+        btn.textContent = 'Copy';
+        btn.style.cssText = `
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          padding: 4px 10px;
+          background: #444c56;
+          color: #f0f6fc;
+          border: none;
+          border-radius: 4px;
+          font-size: 12px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.2s;
+        `;
+
+        wrapper.appendChild(btn);
+
+        // Show/hide on hover
+        wrapper.addEventListener('mouseenter', () => btn.style.opacity = '1');
+        wrapper.addEventListener('mouseleave', () => btn.style.opacity = '0');
+
+        // Copy functionality
+        btn.addEventListener('click', function() {
+          const code = pre.querySelector('code') || pre;
+          navigator.clipboard.writeText(code.textContent).then(() => {
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
