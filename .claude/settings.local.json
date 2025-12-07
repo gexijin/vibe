@@ -12,7 +12,8 @@
       "mcp__ide__executeCode",
       "Bash(python3:*)",
       "Bash(pip install:*)",
-      "Bash(pip3 install:*)"
+      "Bash(pip3 install:*)",
+      "SlashCommand(/tutorial installing Claude Code on Windows)"
     ],
     "deny": [],
     "ask": []

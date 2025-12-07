@@ -42,7 +42,7 @@ Create a beginner-friendly tutorial for: $ARGUMENTS
 - Internet connection, admin access, etc.
 - Keep to 3-5 items
 
-### 4. Step-by-Step Instructions
+### 6. Step-by-Step Instructions
 Each step should be a major phase (Step 1, Step 2, etc.):
 
 **Step title format:** `## Step N: Action Verb + What`
@@ -71,11 +71,11 @@ Each step should be a major phase (Step 1, Step 2, etc.):
 [instructions]
 ```
 
-### 5. How to Return/Reopen
+### 7. How to Return/Reopen
 - Show users how to get back to the tool after closing
 - Step-by-step instructions to reopen
 
-### 6. Troubleshooting
+### 8. Troubleshooting
 - Use exact error messages as headers (in quotes)
 - Provide specific solutions
 - Format:
@@ -85,7 +85,7 @@ Each step should be a major phase (Step 1, Step 2, etc.):
   - How to fix it
   ```
 
-### 7. Need Help?
+### 9. Need Help?
 - Links to official documentation
 - Links to community resources or GitHub issues
 
