@@ -1,3 +1,5 @@
+[Home](./)
+
 # Getting Started with VS Code
 
 ## The Problem

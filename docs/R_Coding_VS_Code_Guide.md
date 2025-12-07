@@ -1,3 +1,5 @@
+[Home](./)
+
 # R Coding in VS Code
 
 You want to write R code but RStudio feels heavy or you prefer VS Code's flexibility. Think of VS Code as a Swiss Army knife - it can handle R, Python, and many other languages in one lightweight editor. This tutorial shows you how to set up R in VS Code with smart features like code completion, interactive plots, and even Shiny apps.

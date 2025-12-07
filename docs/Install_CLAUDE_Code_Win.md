@@ -1,3 +1,5 @@
+[Home](./)
+
 # Installing Claude Code on Windows Using WSL
 
 This guide will walk you through installing Claude Code on Windows using Windows Subsystem for Linux (WSL). Each step includes detailed instructions for beginners.

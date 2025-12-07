@@ -1,3 +1,5 @@
+[Home](./)
+
 # Using GitHub Desktop with Claude Code
 
 ## The Problem

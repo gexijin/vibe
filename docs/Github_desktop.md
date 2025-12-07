@@ -1,3 +1,5 @@
+[Home](./)
+
 # Getting Started with Version Control
 
 This guide introduces you to Git and GitHub Desktop - tools that help you track changes to your code and never lose your work.

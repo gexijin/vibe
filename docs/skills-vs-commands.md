@@ -1,3 +1,5 @@
+[Home](./)
+
 # Claude Skills vs Slash Commands
 
 **Skills** are model-invoked capabilities that Claude automatically uses when relevant. **Slash commands** are user-invoked prompts that you trigger explicitly by typing `/command`.
