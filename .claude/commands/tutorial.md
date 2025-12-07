@@ -30,32 +30,34 @@ It needs to be focused, hands-on, and succinct. Design a minimal set of hands-on
 
 ### Structure
 
-1. **Title** - Clear, descriptive (e.g., "Installing Claude Code on Windows Using WSL")
+1. **Home Link** - Add `[Home](./)` at the very top of the file (before the title)
 
-2. **Hook** (one paragraph, 2-3 sentences)
+2. **Title** - Clear, descriptive (e.g., "Installing Claude Code on Windows Using WSL")
+
+3. **Hook** (one paragraph, 2-3 sentences)
    - Combine: problem scenario + simple analogy + why this matters
    - Keep it compact, not multiple paragraphs
 
-3. **Key Concepts** (3-4 terms max)
+4. **Key Concepts** (3-4 terms max)
    - Use bullet list format for compact spacing: `- **Term** - explanation`
    - One sentence per concept
 
-4. **What You'll Do** - Bullet list of main steps (5-10 items)
+5. **What You'll Do** - Bullet list of main steps (5-10 items)
 
-5. **What You'll Need** - Prerequisites (3-5 items)
+6. **What You'll Need** - Prerequisites (3-5 items)
 
-6. **Step-by-Step Instructions**
+7. **Step-by-Step Instructions**
    - Format: `## Step N: Action Verb + What`
    - Use **bullet points** for sub-steps (not numbered lists) to avoid confusion with step numbers
    - Exact actions: "Click **Button Name**" or "Type `command`"
    - Code blocks for commands
    - Keep explanations minimal - one short sentence when needed
 
-7. **Next Steps** - What to try next using this setup to learn on your own(2-3 examples)
+8. **Next Steps** - What to try next using this setup to learn on your own(2-3 examples)
 
-8. **Troubleshooting** - Use bullet list format, 2-3 most common issues with one-line solutions
+9. **Troubleshooting** - Use bullet list format, 2-3 most common issues with one-line solutions
 
-9. **Workflow overview** - Summary of the workflow / tech stack (optional). 3-5 bullet points. 
+10. **Workflow overview** - Summary of the workflow / tech stack (optional). 3-5 bullet points. 
 
 
 
