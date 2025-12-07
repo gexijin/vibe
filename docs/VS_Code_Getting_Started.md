@@ -16,7 +16,7 @@ You want to write code, but Notepad or TextEdit feels limiting. You need somethi
 - Windows, macOS, or Linux computer
 - Internet connection
 - ~500 MB disk space
-- 15-20 minutes
+- 20-25 minutes
 
 ## Step 1: Download and Install VS Code
 
@@ -117,18 +117,19 @@ mkdir notes
 
 Check Explorer - the `notes` folder appears! The terminal runs in your project folder, so commands affect your project directly.
 
-## Step 8: Use AI to Explain Code
+## Step 8: Use AI Agents in VS Code (Optional)
 
-VS Code has built-in AI features that can help you understand code.
+VS Code includes [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat), an AI assistant that can explain, write, and debug code.
 
 - Open the `README.md` file (or any other file in your project)
-- Look at the small window at the top center of VS Code
-- Click the **dropdown arrow** on the right side of this window
-- Select **Start Chat Session** (or similar AI chat option)
+- Click **Chat** → **Open Chat** in the title bar (or press `Ctrl+Alt+I` on Windows/Linux, `Ctrl+Cmd+I` on Mac)
+- If prompted, sign in with your **GitHub account** (a free plan is available)
 - In the chat panel that opens, type: "Explain this file"
 - Press **Enter**
 
-The AI will analyze your file and explain what it does. You can ask follow-up questions like "How do I add more features?" or "What does the syntax mean?"
+GitHub Copilot will analyze your file and explain what it does. You can ask it to write new code, fix bugs, or answer questions like "How do I add more features?"
+
+**Tip:** For [inline editing](https://code.visualstudio.com/docs/copilot/copilot-chat), highlight code in any file and press `Ctrl+I` (Windows/Linux) or `Cmd+I` (Mac) to ask Copilot to modify, fix, or explain just that section.
 
 ## How to Reopen Your Project
 
@@ -140,6 +141,7 @@ The AI will analyze your file and explain what it does. You can ask follow-up qu
 
 - **Preview not showing:** Make sure Markdown Preview Enhanced extension is installed and you have a `.md` file open
 - **Terminal shows wrong directory:** Click the trash icon in terminal panel, then click **Terminal** → **New Terminal**
+- **Chat menu not visible:** GitHub Copilot Chat may need to be installed - click **Extensions** icon, search for "GitHub Copilot Chat", and install it
 - **Extensions not working:** Click **View** → **Command Palette**, type "reload window", and select **Developer: Reload Window**
 
 ## The Complete Workflow
@@ -154,6 +156,7 @@ The AI will analyze your file and explain what it does. You can ask follow-up qu
 ## Next Steps
 
 - **Try other file types:** Create `.html`, `.css`, `.js`, or `.py` files and see VS Code's syntax highlighting
+- **Explore AI features:** Ask AI to write code, fix bugs, or suggest improvements to your projects
 - **Install more extensions:** Try "Prettier" for auto-formatting or "GitLens" for Git features
 - **Learn shortcuts:** Click **Help** → **Keyboard Shortcuts Reference** to speed up your workflow
 
