@@ -39,15 +39,10 @@ You'll configure VS Code to find R in Step 3, so don't worry if `R --version` do
 
 ## Step 2: Install R Extensions in VS Code
 
-Two extensions make R development smooth in VS Code.
-
 - Open VS Code
-- Click the **Extensions** icon in the left sidebar (or press `Ctrl+Shift+X` / `Cmd+Shift+X`)
+- Click the **Extensions** icon in the left sidebar
 - Search for `REditorSupport.r` and click **Install** on the R extension by REditorSupport
 - Search for `Posit.shiny` and click **Install** on the Shiny extension by Posit
-- You'll see both extensions listed in your installed extensions
-
-The R extension provides code execution and language support, while Shiny enables one-click app launching.
 
 ## Step 3: Find Your R Installation Path
 
@@ -90,8 +85,6 @@ which R
 
 ## Step 4: Configure VS Code to Find R
 
-Now tell VS Code where R is installed so it can run R code and create R terminals.
-
 - In VS Code, click the **gear icon** in the lower left corner
 - Select **Settings** from the menu
 - In the search bar at the top, type `r.rpath.windows` (Windows), `r.rpath.mac` (macOS), or `r.rpath.linux` (Linux)
@@ -128,11 +121,7 @@ Or if you installed R via Homebrew on Apple Silicon:
 - Save the file by clicking **File > Save**
 - **Restart VS Code** completely for changes to take effect
 
-This configuration ensures VS Code can find and run R regardless of your system PATH.
-
 ## Step 5: Install Required R Packages
-
-Now that VS Code knows where R is, install packages that enable smart features. This works the same on all platforms.
 
 - In VS Code, click **View** in the top menu, then select **Command Palette**
 - Type `R: Create R Terminal` and select it
@@ -150,24 +139,16 @@ install.packages("shiny")
 - Type `q()` and press Enter to exit R
 - Type `n` when asked about saving workspace
 
-These packages enable code completion and Shiny apps. Plots will display in separate windows using R's built-in graphics device.
-
-**Important**: Always use **Command Palette > R: Create R Terminal** to start R in VS Code. Simply typing `R` in a regular terminal won't work unless R is in your system PATH. The R extension uses your `r.rpath` setting to find R.
+Simply typing `R` in a regular terminal won't work unless R is in your system PATH. The R extension uses your `r.rpath` setting to find R.
 
 ## Step 6: Create Your R Project
-
-Organize your work in a dedicated folder.
 
 - Create a new folder on your computer (e.g., `my-r-project`)
 - In VS Code, click **File > Open Folder** and select your new folder
 - Click **File > New File** in the top menu
 - Save the file as `analysis.R` by clicking **File > Save**
 
-You now have a workspace for your R code.
-
 ## Step 7: Write Your First R Script
-
-Create a simple data analysis script using the built-in iris dataset.
 
 - Type this code into `analysis.R`:
 
@@ -186,8 +167,6 @@ hist(iris$Sepal.Length)
 
 - Save the file by clicking **File > Save**
 
-This script uses the famous iris flower dataset, displays summary statistics, and creates a histogram.
-
 ## Step 8: Run R Code Interactively
 
 - With `analysis.R` open, select a line of code and press `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (Mac) to run it
@@ -196,8 +175,6 @@ This script uses the famous iris flower dataset, displays summary statistics, an
 - You can also select all lines and run them the same way.
 
 ## Step 9: Create a Simple Shiny App
-
-Build an interactive web app that updates plots in real-time.
 
 - Create a new file in your project folder: **File > New File**
 - Save it as `app.R`
@@ -244,11 +221,7 @@ shinyApp(ui = ui, server = server)
 - The app opens in a browser or VS Code panel
 - Move the slider and watch the histogram update instantly
 
-The Shiny extension automatically detects `app.R` files and provides the run button.
-
 ## Step 10: Use Code Completion and Hover Help
-
-VS Code provides smart assistance as you code.
 
 - In `analysis.R`, start typing `mea` on a new line
 - A dropdown appears with suggestions - select `mean()` by pressing Enter
@@ -257,11 +230,7 @@ VS Code provides smart assistance as you code.
 - Try hovering over `lm`, `summary`, or `plot` to see their documentation
 - Type `data$` and watch VS Code suggest column names (`x` and `y`)
 
-The languageserver package enables these smart features by analyzing your code in real-time.
-
 ## Step 11: Try More Features
-
-Explore additional VS Code R capabilities.
 
 - **Markdown integration**: Create an R Markdown file (`.Rmd`) to mix code, output, and text
 - **Code formatting**: Right-click in your R script and select **Format Document** to auto-format code

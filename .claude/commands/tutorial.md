@@ -49,7 +49,10 @@ It needs to be focused, hands-on, and succinct. Design a minimal set of hands-on
    - Use **bullet points** for sub-steps (not numbered lists) to avoid confusion with step numbers
    - Exact actions: "Click **Button Name**" or "Type `command`"
    - Code blocks for commands
-   - Keep explanations minimal - one short sentence when needed
+   - **Remove introductory sentences** at the beginning of steps unless essential
+   - **Remove ending sentences** after steps unless they provide critical information
+   - **Avoid keyboard shortcuts** unless essential or very convenient - use menu-based instructions instead (e.g., "Click **File > Save**" instead of "Press Ctrl+S")
+   - For essential shortcuts (like running code), include both platforms: `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (Mac)
 
 7. **Next Steps** - What to try next using this setup to learn on your own(2-3 examples)
 
