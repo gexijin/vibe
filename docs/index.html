@@ -115,6 +115,11 @@
         }
 
         /* Network Graph Styles */
+        .graph-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
         #network-graph {
             height: 400px;
             background: var(--card-bg);
@@ -122,10 +127,13 @@
             border-radius: 8px;
         }
 
-        .section-desc {
+        .graph-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
             color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            margin: 0;
         }
 
         /* Modal Styles */
@@ -216,6 +224,11 @@
             <p class="subtitle">Guides for getting started with Claude Code, VS Code, and version control</p>
         </header>
 
+        <div class="graph-container">
+            <div id="network-graph"></div>
+            <p class="graph-hint">Click to learn</p>
+        </div>
+
         <section class="section">
             <h2>Installation</h2>
             <div class="tutorials">
@@ -245,6 +258,14 @@
                     <h3>R Coding in VS Code via Docker</h3>
                     <p>Run R in isolated, reproducible containers with pre-built Docker images</p>
                 </a>
+                <a href="Python_Coding_VS_Code_Guide" class="tutorial-card">
+                    <h3>Python Coding in VS Code</h3>
+                    <p>Set up Python with code completion, debugging, and Streamlit web apps</p>
+                </a>
+                <a href="Python_Coding_Docker_Guide" class="tutorial-card">
+                    <h3>Python Coding in VS Code via Docker</h3>
+                    <p>Run Python in isolated, reproducible containers with pre-built Docker images</p>
+                </a>
             </div>
         </section>
 
@@ -263,9 +284,13 @@
         </section>
 
         <section class="section">
-            <h2>Learning Paths</h2>
-            <p class="section-desc">Interactive guide showing tutorial progression from basic to advanced. Click a node to learn more.</p>
-            <div id="network-graph"></div>
+            <h2>Capstone</h2>
+            <div class="tutorials">
+                <a href="Vibe_Coding_R_Docker_Guide" class="tutorial-card">
+                    <h3>Vibe Coding in R with Claude Code</h3>
+                    <p>Build a real NBA stats dashboard using natural language—the complete vibe coding experience</p>
+                </a>
+            </div>
         </section>
 
         <footer>
@@ -286,20 +311,24 @@
     <script>
         // Tutorial data
         const tutorials = {
-            1: { label: 'Claude Code\n(Windows)', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code on Windows using WSL, Ubuntu, and Node.js', level: 1 },
-            2: { label: 'Claude Code\n(Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Quick setup guide for Claude Code on macOS with Node.js and npm', level: 1 },
-            3: { label: 'VS Code\nBasics', url: 'VS_Code_Getting_Started', desc: 'Learn the fundamentals of Visual Studio Code for coding', level: 1 },
-            4: { label: 'Version\nControl', url: 'Github_desktop', desc: 'Introduction to Git and GitHub Desktop for managing your code', level: 1 },
-            5: { label: 'R in\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Set up R with code completion, plots, and Shiny app support in VS Code', level: 2 },
-            6: { label: 'R via\nDocker', url: 'R_Coding_Docker_Guide', desc: 'Run R in isolated, reproducible containers with pre-built Docker images', level: 3 },
-            7: { label: 'GitHub Desktop\n+ Claude Code', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Combine AI-assisted coding with professional version control workflows', level: 3 }
+            1: { label: 'Install Claude Code\non Windows', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code on Windows using WSL, Ubuntu, and Node.js', level: 0 },
+            2: { label: 'Install Claude Code\non Mac', url: 'Install_Claude_Code_MacOS', desc: 'Quick setup guide for Claude Code on macOS with Node.js and npm', level: 0 },
+            3: { label: 'VS Code\nBasics', url: 'VS_Code_Getting_Started', desc: 'Learn the fundamentals of Visual Studio Code for coding', level: 0 },
+            4: { label: 'Version\nControl', url: 'Github_desktop', desc: 'Introduction to Git and GitHub Desktop for managing your code', level: 0 },
+            5: { label: 'R in\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Set up R with code completion, plots, and Shiny app support in VS Code', level: 1 },
+            6: { label: 'Python in\nVS Code', url: 'Python_Coding_VS_Code_Guide', desc: 'Set up Python with code completion, debugging, and Streamlit web apps', level: 1 },
+            7: { label: 'R via\nDocker', url: 'R_Coding_Docker_Guide', desc: 'Run R in isolated, reproducible containers with pre-built Docker images', level: 2 },
+            8: { label: 'Python via\nDocker', url: 'Python_Coding_Docker_Guide', desc: 'Run Python in isolated, reproducible containers with pre-built Docker images', level: 2 },
+            9: { label: 'GitHub Desktop\n+ Claude Code', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Combine AI-assisted coding with professional version control workflows', level: 2 },
+            10: { label: 'Vibe Coding\nin R', url: 'Vibe_Coding_R_Docker_Guide', desc: 'Build a real NBA stats dashboard using natural language requests—the complete vibe coding experience', level: 3 }
         };
 
         // Color scheme by level
         const levelColors = {
-            1: { background: '#58a6ff', border: '#79b8ff' },  // Blue - Basic
-            2: { background: '#3fb950', border: '#56d364' },  // Green - Intermediate
-            3: { background: '#a371f7', border: '#bc8cff' }   // Purple - Advanced
+            0: { background: '#58a6ff', border: '#79b8ff' },  // Blue - Basic
+            1: { background: '#3fb950', border: '#56d364' },  // Green - Intermediate
+            2: { background: '#a371f7', border: '#bc8cff' },  // Purple - Advanced
+            3: { background: '#f78166', border: '#ffa198' }   // Orange - Capstone
         };
 
         // Create nodes
@@ -318,10 +347,15 @@
         // Create edges (dependencies)
         const edges = new vis.DataSet([
             { from: 3, to: 5, arrows: 'to' },  // VS Code → R in VS Code
-            { from: 5, to: 6, arrows: 'to' },  // R in VS Code → R via Docker
-            { from: 1, to: 7, arrows: 'to' },  // Claude (Win) → GitHub + Claude
-            { from: 2, to: 7, arrows: 'to' },  // Claude (Mac) → GitHub + Claude
-            { from: 4, to: 7, arrows: 'to' }   // Version Control → GitHub + Claude
+            { from: 3, to: 6, arrows: 'to' },  // VS Code → Python in VS Code
+            { from: 5, to: 7, arrows: 'to' },  // R in VS Code → R via Docker
+            { from: 6, to: 8, arrows: 'to' },  // Python in VS Code → Python via Docker
+            { from: 1, to: 9, arrows: 'to' },  // Claude (Win) → GitHub + Claude
+            { from: 2, to: 9, arrows: 'to' },  // Claude (Mac) → GitHub + Claude
+            { from: 4, to: 9, arrows: 'to' },  // Version Control → GitHub + Claude
+            { from: 7, to: 10, arrows: 'to' }, // R via Docker → Vibe Coding
+            { from: 8, to: 10, arrows: 'to' }, // Python via Docker → Vibe Coding
+            { from: 9, to: 10, arrows: 'to' }  // GitHub + Claude → Vibe Coding
         ]);
 
         // Create network
@@ -330,10 +364,10 @@
         const options = {
             layout: {
                 hierarchical: {
-                    direction: 'UD',
+                    direction: 'LR',
                     sortMethod: 'directed',
-                    levelSeparation: 100,
-                    nodeSpacing: 150
+                    levelSeparation: 180,
+                    nodeSpacing: 100
                 }
             },
             physics: false,
