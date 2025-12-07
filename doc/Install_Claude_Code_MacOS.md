@@ -45,7 +45,7 @@ Claude Code requires Node.js version 18 or higher.
 11. Wait for installation to complete (1-2 minutes)
 12. Click **Close** when you see "The installation was successful"
 13. You can move the installer to Trash if asked
-hi
+
 ## Step 3: Verify Node.js Installation
 
 1. Press **Command (⌘) + Space** on your keyboard
