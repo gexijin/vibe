@@ -7,20 +7,8 @@ You want to write R code but RStudio feels heavy or you prefer VS Code's flexibi
 ## Key Concepts
 
 - **[languageserver](https://github.com/REditorSupport/languageserver)** - R package that enables code completion, syntax checking, and hover documentation in VS Code
-- **[httpgd](https://github.com/nx10/httpgd)** - R package that displays plots interactively in VS Code's plot viewer
 - **[R Extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)** - VS Code extension that connects your editor to R and provides syntax highlighting, code execution, and debugging
 - **[Shiny Extension](https://marketplace.visualstudio.com/items?itemName=Posit.shiny)** - VS Code extension for creating and running interactive Shiny web apps with auto-reload
-
-## What You'll Do
-
-- Install or update R on your system
-- Install R and Shiny extensions in VS Code
-- Install R packages for language support and plotting
-- Create a project folder with R scripts
-- Write and run R code interactively
-- Create visualizations that appear in VS Code
-- Build a simple Shiny app with interactive plots
-- Use code completion and hover help
 
 ## What You'll Need
 
@@ -33,12 +21,21 @@ You want to write R code but RStudio feels heavy or you prefer VS Code's flexibi
 
 You need R version 4.0 or higher for the best compatibility.
 
-- **Check if R is installed**: Open a terminal and type `R --version`
-- **If R is not installed or outdated**:
-  - **Windows**: Download the latest R from [CRAN Windows](https://cran.r-project.org/bin/windows/base/) and run the installer. If you have an old version, uninstall it first via Settings > Apps.
-  - **macOS**: Download from [CRAN macOS](https://cran.r-project.org/bin/macosx/) and run the .pkg installer. If updating, the new version will replace the old one.
-  - **Linux**: Use your package manager (e.g., `sudo apt install r-base` on Ubuntu) or follow [CRAN Linux](https://cran.r-project.org/bin/linux/) instructions.
-- **Verify installation**: Type `R --version` again to confirm you have version 4.0+
+- **Windows**:
+  - Download the latest R from [CRAN Windows](https://cran.r-project.org/bin/windows/base/) and run the installer
+  - During installation, **note the installation path** (for example: `C:\Program Files\R\R-4.5.3`)
+  - If you have an old version, uninstall it first via Settings > Apps
+
+- **macOS**:
+  - Download from [CRAN macOS](https://cran.r-project.org/bin/macosx/) and run the .pkg installer
+  - Note whether you're using Intel (`/Library/Frameworks/R.framework/Resources/bin/R`) or Apple Silicon with Homebrew (`/opt/homebrew/bin/R`)
+  - If updating, the new version will replace the old one
+
+- **Linux**:
+  - Use your package manager (e.g., `sudo apt install r-base` on Ubuntu)
+  - Or follow [CRAN Linux](https://cran.r-project.org/bin/linux/) instructions
+
+You'll configure VS Code to find R in Step 3, so don't worry if `R --version` doesn't work in your terminal yet.
 
 ## Step 2: Install R Extensions in VS Code
 
@@ -52,99 +49,159 @@ Two extensions make R development smooth in VS Code.
 
 The R extension provides code execution and language support, while Shiny enables one-click app launching.
 
-## Step 3: Install Required R Packages
+## Step 3: Find Your R Installation Path
 
-Two R packages enable smart features in VS Code.
+Before configuring VS Code, you need to know where R is installed on your system.
 
-- Open VS Code's integrated terminal (**Terminal > New Terminal** or `` Ctrl+` ``)
-- Type `R` and press Enter to start an R session
+### For Windows Users
+
+1. Open **File Explorer**
+2. Navigate to `C:\Program Files\R\`
+3. You'll see a folder like `R-4.5.3` (your version number may differ)
+4. Open that folder → Open the `bin` folder
+5. You'll see `R.exe` there
+6. The full path is: `C:\Program Files\R\R-4.5.3\bin\R.exe`
+
+**Write down or remember your version number** (e.g., `R-4.5.3`) - you'll need it in Step 4.
+
+### For macOS Users
+
+Your R installation is typically in one of these locations:
+
+- **Standard installation (Intel or Apple Silicon)**: `/Library/Frameworks/R.framework/Resources/bin/R`
+- **Homebrew on Apple Silicon**: `/opt/homebrew/bin/R`
+- **Homebrew on Intel**: `/usr/local/bin/R`
+
+To verify which path you have, open **Terminal** and type:
+```bash
+which R
+```
+
+This will show you the exact path to your R installation.
+
+### For Linux Users
+
+R is typically installed at: `/usr/bin/R`
+
+Verify by opening a terminal and typing:
+```bash
+which R
+```
+
+## Step 4: Configure VS Code to Find R
+
+Now tell VS Code where R is installed so it can run R code and create R terminals.
+
+- In VS Code, click the **gear icon** in the lower left corner
+- Select **Settings** from the menu
+- In the search bar at the top, type `r.rpath.windows` (Windows), `r.rpath.mac` (macOS), or `r.rpath.linux` (Linux)
+- You should see the setting appear. Click **Edit in settings.json** below the setting
+- The settings.json file will open
+- Add the appropriate configuration for your platform inside the curly braces `{}`
+
+**For Windows**, add this line (replace `R-4.5.3` with your version from Step 3):
+
+```json
+"r.rpath.windows": "C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe",
+```
+
+**Why two backslashes (`\\`)?** In JSON files, the backslash `\` is a special character (called an escape character). To represent a single backslash in the actual file path, you must type two backslashes `\\`. So `C:\Program Files` becomes `C:\\Program Files` in settings.json.
+
+**For macOS**, add one of these lines:
+
+```json
+"r.rpath.mac": "/Library/Frameworks/R.framework/Resources/bin/R",
+```
+
+Or if you installed R via Homebrew on Apple Silicon:
+
+```json
+"r.rpath.mac": "/opt/homebrew/bin/R",
+```
+
+**For Linux**, add:
+
+```json
+"r.rpath.linux": "/usr/bin/R",
+```
+
+- Save the file by clicking **File > Save**
+- **Restart VS Code** completely for changes to take effect
+
+This configuration ensures VS Code can find and run R regardless of your system PATH.
+
+## Step 5: Install Required R Packages
+
+Now that VS Code knows where R is, install packages that enable smart features. This works the same on all platforms.
+
+- In VS Code, click **View** in the top menu, then select **Command Palette**
+- Type `R: Create R Terminal` and select it
+- An R console will appear in the terminal panel at the bottom
+  - You should see R start up with version information
+  - If you get an error, double-check your settings.json configuration in Step 4 and restart VS Code
 - Install packages by typing these commands one at a time:
 
 ```r
 install.packages("languageserver")
-install.packages("httpgd")
 install.packages("shiny")
 ```
 
 - Wait for installation to complete (may take a few minutes)
-- Type `q()` and press Enter to exit R, then type `n` when asked about saving workspace
+- Type `q()` and press Enter to exit R
+- Type `n` when asked about saving workspace
 
-These packages enable code completion, interactive plots, and Shiny apps.
+These packages enable code completion and Shiny apps. Plots will display in separate windows using R's built-in graphics device.
 
-## Step 4: Configure the R Extension
+**Important**: Always use **Command Palette > R: Create R Terminal** to start R in VS Code. Simply typing `R` in a regular terminal won't work unless R is in your system PATH. The R extension uses your `r.rpath` setting to find R.
 
-Enable httpgd for interactive plotting.
-
-- In VS Code, open Settings (`Ctrl+,` / `Cmd+,`)
-- Type `r.plot` in the search box
-- Find **R > Plot: Use Httpgd** and check the box to enable it
-- Close the Settings tab
-
-This tells VS Code to display plots using httpgd instead of static images.
-
-## Step 5: Create Your R Project
+## Step 6: Create Your R Project
 
 Organize your work in a dedicated folder.
 
 - Create a new folder on your computer (e.g., `my-r-project`)
 - In VS Code, click **File > Open Folder** and select your new folder
-- Click **New File** icon or press `Ctrl+N` / `Cmd+N`
-- Save the file as `analysis.R` (`Ctrl+S` / `Cmd+S`)
+- Click **File > New File** in the top menu
+- Save the file as `analysis.R` by clicking **File > Save**
 
 You now have a workspace for your R code.
 
-## Step 6: Write Your First R Script
+## Step 7: Write Your First R Script
 
-Create a simple data analysis script with functions you can explore.
+Create a simple data analysis script using the built-in iris dataset.
 
 - Type this code into `analysis.R`:
 
 ```r
-# Create sample data
-set.seed(42)
-data <- data.frame(
-  x = rnorm(100, mean = 50, sd = 10),
-  y = rnorm(100, mean = 100, sd = 20)
-)
+# Load the iris dataset
+data(iris)
 
-# Calculate statistics
-mean_x <- mean(data$x)
-mean_y <- mean(data$y)
+# View the first few rows
+head(iris)
 
-print(paste("Mean of x:", round(mean_x, 2)))
-print(paste("Mean of y:", round(mean_y, 2)))
+# Generate summary statistics
+summary(iris)
 
-# Create a linear model
-model <- lm(y ~ x, data = data)
-print(summary(model))
-
-# Create a scatter plot
-plot(data$x, data$y,
-     main = "X vs Y Relationship",
-     xlab = "X values",
-     ylab = "Y values",
-     pch = 19,
-     col = "blue")
-abline(model, col = "red", lwd = 2)
+hist(iris$Sepal.Length)
 ```
 
-- Save the file
+- Save the file by clicking **File > Save**
 
-This script generates data, calculates means, fits a linear model, and creates a plot - perfect for testing VS Code features.
+This script uses the famous iris flower dataset, displays summary statistics, and creates a colorful scatter plot.
 
-## Step 7: Run R Code Interactively
+## Step 8: Run R Code Interactively
 
 Execute your code and see results in VS Code.
 
-- With `analysis.R` open, press `Ctrl+Shift+P` / `Cmd+Shift+P` to open the Command Palette
+- With `analysis.R` open, click **View** in the top menu, then select **Command Palette**
 - Type `R: Create R Terminal` and select it
 - An R console appears in the terminal panel at the bottom
-- Select all code (`Ctrl+A` / `Cmd+A`) and press `Ctrl+Enter` / `Cmd+Enter` to run it
-- Watch the output appear in the terminal and the plot appear in the **PLOTS** panel on the right
+  - If you get an error that R cannot be found, double-check Step 4 settings and restart VS Code
+- Select all code and press `Ctrl+Enter` to run it (or click **View > Command Palette**, then type `R: Run Selection/Line`)
+- Watch the output appear in the terminal and the plot will open in a separate window
 
-You can also select specific lines and press `Ctrl+Enter` / `Cmd+Enter` to run just those lines.
+You can also select specific lines and run them the same way.
 
-## Step 8: Create a Simple Shiny App
+## Step 9: Create a Simple Shiny App
 
 Build an interactive web app that updates plots in real-time.
 
@@ -195,7 +252,7 @@ shinyApp(ui = ui, server = server)
 
 The Shiny extension automatically detects `app.R` files and provides the run button.
 
-## Step 9: Use Code Completion and Hover Help
+## Step 10: Use Code Completion and Hover Help
 
 VS Code provides smart assistance as you code.
 
@@ -208,7 +265,7 @@ VS Code provides smart assistance as you code.
 
 The languageserver package enables these smart features by analyzing your code in real-time.
 
-## Step 10: Try More Features
+## Step 11: Try More Features
 
 Explore additional VS Code R capabilities.
 
@@ -227,10 +284,20 @@ Explore additional VS Code R capabilities.
 
 ## Troubleshooting
 
-- **Code completion not working**: Make sure languageserver installed successfully (`install.packages("languageserver")` in R). Restart VS Code after installation.
-- **Plots not appearing**: Verify httpgd is installed and enabled in settings (`R > Plot: Use Httpgd`). Try running `library(httpgd)` in R terminal to check for errors.
-- **Shiny app won't run**: Ensure the Shiny extension is installed and your file is named `app.R`. Check the terminal for error messages about missing packages.
-- **R terminal not starting**: Check that R is in your system PATH. Type `R --version` in a regular terminal - if it fails, reinstall R and ensure "Add to PATH" is checked.
+- **"R is not recognized" in VS Code terminal**: VS Code can't find R. Check your settings.json (Step 4) - verify the R path is correct and points to `R.exe` (Windows) or the R binary (Mac/Linux). Example paths:
+  - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (adjust version number)
+  - macOS Intel: `/Library/Frameworks/R.framework/Resources/bin/R`
+  - macOS Homebrew: `/opt/homebrew/bin/R`
+  - Linux: `/usr/bin/R`
+  After fixing, restart VS Code completely.
+
+- **R version mismatch in settings**: If you updated R but VS Code still uses the old version, update the version number in your settings.json `r.rpath` configuration to match the new R installation (see Step 3 to find your current installation path).
+
+- **Code completion not working**: Make sure languageserver installed successfully (Step 5). Restart VS Code after installation. Wait 10-20 seconds after opening an R file for the language server to initialize. Check the Output panel (View > Output > R Language Server) for errors.
+
+- **Plots not appearing**: Plots will open in separate windows using R's default graphics device. Make sure you have a window manager available. On some systems, you may need to install X11 (macOS) or ensure graphics support is enabled.
+
+- **Shiny app won't run**: Ensure the Shiny extension is installed (Step 2), shiny package is installed (Step 5), and your file is named `app.R`. Check the terminal for error messages. The Run button only appears when VS Code recognizes the file as a Shiny app.
 
 ## Workflow Summary
 
