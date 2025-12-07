@@ -192,14 +192,11 @@ This script uses the famous iris flower dataset, displays summary statistics, an
 
 Execute your code and see results in VS Code.
 
-- With `analysis.R` open, click **View** in the top menu, then select **Command Palette**
-- Type `R: Create R Terminal` and select it
-- An R console appears in the terminal panel at the bottom
-  - If you get an error that R cannot be found, double-check Step 4 settings and restart VS Code
-- Select all code and press `Ctrl+Enter` to run it (or click **View > Command Palette**, then type `R: Run Selection/Line`)
+- With `analysis.R` open, select a line of code and press `Ctrl+Enter` to run it 
+- If you don't have a terminal open, the first `Ctrl+Enter` opens a R terminal. The second runs the code.
 - Watch the output appear in the terminal and the plot will open in a separate window
 
-You can also select specific lines and run them the same way.
+You can also select all lines and run them the same way.
 
 ## Step 9: Create a Simple Shiny App
 
@@ -245,8 +242,8 @@ shinyApp(ui = ui, server = server)
 ```
 
 - Save the file
-- Notice the **▶ Run Shiny App** button that appears at the top right of the editor
-- Click **▶ Run Shiny App**
+- Notice the **▶** button that appears at the top right of the editor
+- Click the drop down to select **Run Shiny App**
 - The app opens in a browser or VS Code panel
 - Move the slider and watch the histogram update instantly
 
