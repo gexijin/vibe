@@ -304,7 +304,7 @@
             <button class="modal-close">&times;</button>
             <h3 id="modal-title"></h3>
             <p id="modal-desc"></p>
-            <a id="modal-link" class="modal-btn">Go to Tutorial</a>
+            <a id="modal-link" class="modal-btn">Start</a>
         </div>
     </div>
 
@@ -331,16 +331,37 @@
             3: { background: '#f78166', border: '#ffa198' }   // Orange - Capstone
         };
 
-        // Create nodes
+        // Fixed positions for clean layout
+        const positions = {
+            // Level 0 - Basic (left column)
+            1: { x: 0, y: -90 },    // Install Claude Code Win
+            2: { x: 0, y: -30 },    // Install Claude Code Mac
+            4: { x: 0, y: 30 },     // Version Control
+            3: { x: 0, y: 120 },    // VS Code Basics
+            // Level 1 - Intermediate
+            5: { x: 160, y: 90 },   // R in VS Code
+            6: { x: 160, y: 150 },  // Python in VS Code
+            // Level 2 - Advanced
+            9: { x: 320, y: -30 },  // GitHub Desktop + Claude
+            7: { x: 320, y: 60 },   // R via Docker
+            8: { x: 320, y: 120 },  // Python via Docker
+            // Level 3 - Capstone
+            10: { x: 480, y: 45 }   // Vibe Coding in R
+        };
+
+        // Create nodes with fixed positions
         const nodes = new vis.DataSet(
             Object.entries(tutorials).map(([id, t]) => ({
                 id: parseInt(id),
                 label: t.label,
                 color: levelColors[t.level],
-                font: { color: '#0d1117', size: 14, face: 'system-ui' },
+                font: { color: '#0d1117', size: 12, face: 'system-ui' },
                 shape: 'box',
-                margin: 10,
-                shadow: true
+                margin: 8,
+                shadow: true,
+                x: positions[id].x,
+                y: positions[id].y,
+                fixed: { x: true, y: true }
             }))
         );
 
@@ -363,12 +384,7 @@
         const data = { nodes, edges };
         const options = {
             layout: {
-                hierarchical: {
-                    direction: 'LR',
-                    sortMethod: 'directed',
-                    levelSeparation: 180,
-                    nodeSpacing: 100
-                }
+                hierarchical: false
             },
             physics: false,
             interaction: {
