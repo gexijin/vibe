@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(tree:*)",
+      "WebFetch(domain:liorpachter.wordpress.com)",
+      "WebFetch(domain:www.opiniomics.org)",
+      "WebFetch(domain:ivory.idyll.org)",
+      "WebFetch(domain:www.genomesunzipped.org)",
+      "WebFetch(domain:omicsomics.blogspot.com)",
+      "WebSearch",
+      "mcp__ide__executeCode",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "SlashCommand(/tutorial installing Claude Code on Windows)",
+      "WebFetch(domain:docs.claude.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
