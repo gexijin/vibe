@@ -2,7 +2,7 @@
 
 # Installing Claude Code on Windows Using WSL
 
-This guide will walk you through installing Claude Code on Windows using Windows Subsystem for Linux (WSL). Each step includes detailed instructions for beginners.
+This guide will walk you through installing Claude Code on Windows using Windows Subsystem for Linux (WSL). WSL enables a virtual machine running Linux operating system (OS) on your Windows machine. Although you can install Claude Code natively on Windows, it works much more efficiently under Linux due to the access of many command.
 
 ## Overview
 
@@ -19,18 +19,19 @@ This guide will walk you through installing Claude Code on Windows using Windows
 - Internet connection
 - Administrator access on your computer
 - Claude Pro/Max subscription or API key
+- 15 - 20 minutes
 
 ## Step 1: Check if Virtualization is Enabled
 
 Before installing WSL, you need to verify that virtualization is enabled on your computer. This is required for WSL to work.
 
-1. **Right-click** on the taskbar (the bar at the bottom of your screen)
-2. Click on **Task Manager** from the menu
-3. If Task Manager opens in a small window, click **More details** at the bottom
-4. Click on the **Performance** tab at the top
-5. Click on **CPU** in the left sidebar
-6. Look at the bottom-right section of the window
-7. Find the line that says **Virtualization:** and check if it says **Enabled**
+- **Right-click** on the taskbar (the bar at the bottom of your screen)
+- Click on **Task Manager** from the menu
+- If Task Manager opens in a small window, click **More details** at the bottom
+- Click on the **Performance** tab at the top
+- Click on **CPU** in the left sidebar
+- Look at the bottom-right section of the window
+- Find the line that says **Virtualization:** and check if it says **Enabled**
 
 **If it says "Enabled":** Great! Continue to Step 2.
 
@@ -44,30 +45,40 @@ Before installing WSL, you need to verify that virtualization is enabled on your
 
 ## Step 2: Open PowerShell as Administrator
 
-1. Click the **Windows Start button** (Windows icon in the bottom-left corner)
-2. Type `PowerShell` in the search box
-3. In the search results, you'll see **Windows PowerShell**
-4. **Right-click** on **Windows PowerShell**
-5. Click **Run as administrator** from the menu
-6. A window will pop up asking "Do you want to allow this app to make changes to your device?"
-7. Click **Yes**
+- Click the **Windows Start button** (Windows icon in the bottom-left corner)
+- Type `PowerShell` in the search box
+- In the search results, you'll see **Windows PowerShell**
+- **Right-click** on **Windows PowerShell**
+- Click **Run as administrator** from the menu
+- A window will pop up asking "Do you want to allow this app to make changes to your device?"
+- Click **Yes**
 
 A blue window with white text will open - this is PowerShell running as administrator.
 
 ## Step 3: Install WSL
 
-1. In the PowerShell window, type:
+**First, check if WSL and Ubuntu are already installed:**
+
+- In the PowerShell window, type:
+   ```
+   wsl --list --verbose
+   ```
+- Look at the results:
+   - **If you see "Ubuntu" listed** with a STATE of "Running" or "Stopped": WSL and Ubuntu are already installed! Skip to Step 4.
+   - **If you see an error message** or "Windows Subsystem for Linux has no installed distributions": Continue with the installation below.
+
+**To install WSL and Ubuntu:**
+
+- In the PowerShell window, type:
    ```
    wsl --install
    ```
-2. You'll see text appearing as Windows downloads and installs WSL
-3. This process may take 5-15 minutes depending on your internet speed
-4. You might see messages like "Installing: Windows Subsystem for Linux" and "Installing: Ubuntu"
-5. When you see a message saying installation is complete, you need to restart your computer:
+- You might see messages like "Installing: Windows Subsystem for Linux" and "Installing: Ubuntu"
+- When you see a message saying installation is complete, you need to restart your computer:
    - Click the **Windows Start button**
    - Click the **Power icon**
    - Click **Restart**
-6. Your computer will restart - this takes about 1-2 minutes
+- Your computer will restart - this takes about 1-2 minutes
 
 **What happens after restart:**
 - After you log back into Windows, wait 2-5 minutes
@@ -84,49 +95,44 @@ A blue window with white text will open - this is PowerShell running as administ
 After your computer restarts, a terminal window with "Ubuntu" in the title should open automatically within 2-5 minutes.
 
 **If the Ubuntu window did NOT open automatically:**
-1. Click the **Windows Start button**
-2. Type `Ubuntu` in the search box
-3. Click on **Ubuntu** (you'll see a circular orange icon)
-4. The Ubuntu terminal will open and continue the setup
+- Click the **Windows Start button**
+- Type `Ubuntu` in the search box
+- Click on **Ubuntu** (you'll see a circular orange icon)
+- The Ubuntu terminal will open and continue the setup
 
 **Now complete the first-time setup:**
 
-1. Wait for the message: `Enter new UNIX username:`
-2. Type a username (use lowercase letters and numbers only, no spaces)
+- Wait for the message: `Enter new UNIX username:`
+- Type a username (use lowercase letters and numbers only, no spaces)
    - Example: `myname` or `john123`
-3. Press **Enter**
-4. You'll see: `New password:`
-5. Type a password (you won't see the characters as you type - this is normal for security)
-6. Press **Enter**
-7. You'll see: `Retype new password:`
-8. Type the same password again
-9. Press **Enter**
-10. Wait for the setup to complete - you'll see a message like `Installation successful!`
+- You'll see: `New password:`
+- Type a password (you won't see the characters as you type - this is normal for security)
+- You'll see: `Retype new password:`
+- Type the same password again
+- Wait for the setup to complete - you'll see a message like `Installation successful!`
 
 **Important:** Remember this username and password - you'll need them later.
 
 ## Step 5: Update Ubuntu
 
-1. In the Ubuntu terminal window, type:
+- In the Ubuntu terminal window, type:
    ```
    sudo apt update
    ```
-2. Press **Enter**
-3. Type your password (the one you just created) and press **Enter**
+- Type your password (the one you just created) when prompted
    - Again, you won't see the characters as you type
-4. Wait for the update to complete (1-3 minutes)
-5. Next, type:
+- Wait for the update to complete (1-3 minutes)
+- Next, type:
    ```
    sudo apt upgrade -y
    ```
-6. Press **Enter**
-7. Wait for all packages to upgrade (this may take 5-10 minutes)
+- Wait for all packages to upgrade (this may take 5-10 minutes)
 
-## Step 6: Install Node.js 
+## Step 6: Install Node.js
 
 Claude Code requires Node.js version 18 or higher. Follow these steps:
 
-1. In the Ubuntu terminal, type these commands one at a time:
+- In the Ubuntu terminal, type these commands one at a time:
 
    First, download the nvm installer:
    ```
@@ -138,69 +144,88 @@ Claude Code requires Node.js version 18 or higher. Follow these steps:
    cat install.sh | bash
    ```
 
-2. Load nvm by typing:
+- Load nvm by typing:
    ```
    \. "$HOME/.nvm/nvm.sh"
    ```
 
-3. Install Node.js version 24 by typing:
+- Install Node.js version 24 by typing:
    ```
    nvm install 24
    ```
-4. Wait for Node.js to install (2-5 minutes)
-5. Verify installation by typing:
+- Wait for Node.js to install (2-5 minutes)
+- Verify installation by typing:
    ```
    node --version
    ```
-6. You should see something like `v24.x.x` (the exact numbers may vary)
+- You should see something like `v24.x.x` (the exact numbers may vary)
 
 ## Step 7: Install Claude Code
 
-1. In the Ubuntu terminal, type:
+- In the Ubuntu terminal, type:
    ```
    curl -fsSL https://claude.ai/install.sh | bash
    ```
-2. Wait for Claude Code to install (2-5 minutes)
-3. You may see some warnings in yellow or red text - this is usually normal
-5. When installation is complete, verify by typing:
+- Wait for Claude Code to install (2-5 minutes)
+- You may see some warnings in yellow or red text - this is usually normal
+- When installation is complete, verify by typing:
    ```
    claude --version
    ```
-6. You should see the version number of Claude Code
+- You should see the version number of Claude Code
 
 ## Step 8: Link with Your Anthropic API
 
 ### Option A. Use your Claude Pro or Max subscription
 
-1. In the Ubuntu terminal, type:
+- In the Ubuntu terminal, type:
    ```
    claude
    ```
-2. Claude tries to open a browser. If it cannot open automatically, hold **Ctrl** and click on the long URL to open it in a browser. Alternatively, copy the URL and paste it into an external browser.
-3. Log in to your Claude.ai account (this may happen automatically if you're using Chrome)
-4. Click **Authorize**
-5. Click **Copy Code** when a long code appears
-6. Go back to the terminal window
-7. To paste in the terminal: **Right-click** and select **Paste** (or press **Ctrl+Shift+V**)
-8. Press **Enter**
-9. You should see a success message
-10. Follow the instructions to complete the setup
+- Claude tries to open a browser. If it cannot open automatically, hold **Ctrl** and click on the long URL to open it in a browser. Alternatively, copy the URL and paste it into an external browser.
+- Log in to your Claude.ai account (this may happen automatically if you're using Chrome)
+- Click **Authorize**
+- Click **Copy Code** when a long code appears
+- Go back to the terminal window
+- To paste in the terminal: **Right-click** and select **Paste** (or press **Ctrl+Shift+V**)
+- You should see a success message
+- Follow the instructions to complete the setup
 
-### Option B. Use Anthropic API via Azure
+### Option B. Use Anthropic API key
+
+If you have an Anthropic API key instead of a Claude subscription:
+
+- First, get your API key from the [Anthropic Console](https://console.anthropic.com/)
+- In the Ubuntu terminal, type:
+   ```
+   export ANTHROPIC_API_KEY="your-api-key-here"
+   ```
+   Replace `your-api-key-here` with your actual API key
+- To make this permanent (so you don't have to set it every time), add it to your shell profile:
+   ```
+   echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc
+   ```
+   Replace `your-api-key-here` with your actual API key
+- Close and reopen the Ubuntu terminal for the changes to take effect
+- You should now be able to use Claude Code with your API key
+
+**Important:** If you have a Claude Pro or Max subscription, do NOT set the ANTHROPIC_API_KEY environment variable. Leave it unset to use your subscription's included usage and avoid unexpected API charges.
+
+### Option C. Use Anthropic API via Azure
 
 In the terminal window, paste this code to define environment variables:
 ```
 # Enable Microsoft Foundry integration
 export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
-export ANTHROPIC_FOUNDRY_RESOURCE=gexij-m7zjh4bo-eastus2
+export ANTHROPIC_FOUNDRY_RESOURCE=xxx-eastus2
 # Set models to your resource's deployment names
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=AqJqe
 ```
 
-Press **Enter** after pasting. You should now be able to use Claude Code with Azure-deployed Claude models.
+You should now be able to use Claude Code with Azure-deployed Claude models.
 
 **Note:** The API key shown above is incomplete. You'll need to get your complete API key from your Azure portal.
 
@@ -208,44 +233,43 @@ Press **Enter** after pasting. You should now be able to use Claude Code with Az
 
 You're all set! Here's how to use Claude Code:
 
-1. In the Ubuntu terminal, type:
+- In the Ubuntu terminal, type:
    ```
    claude
    ```
-2. Press **Enter**
-3. You can now chat with Claude!
-4. To see if it works, ask a general question such as "Explain quantum computing."
+- You can now chat with Claude!
+- To see if it works, ask a general question such as "Explain quantum computing."
 
 ## Step 10: Navigate to Your Project
-1. If you have a project in your Windows folders, you can access it:
+- If you have a project in your Windows folders, you can access it:
    ```
    cd /mnt/c/Users/Username/Documents/YourProject
    ```
    Replace `Username` with your actual Windows username
-2. Then start Claude:
+- Then start Claude:
    ```
    claude
    ```
-3. Start by asking Claude to explain the codebase to you. 
-4. You can ask Claude to make changes. 
-5. Test your code in your prefered IDE.
+- Start by asking Claude to explain the codebase to you.
+- You can ask Claude to make changes.
+- Test your code in your prefered IDE.
 
 ## How to Open Ubuntu Terminal Again
 
 After closing the terminal, here's how to open it again:
 
-1. Click the **Windows Start button**
-2. Type `Ubuntu` in the search box
-3. Click on **Ubuntu** (you'll see a circular orange icon)
-4. The Ubuntu terminal will open
+- Click the **Windows Start button**
+- Type `Ubuntu` in the search box
+- Click on **Ubuntu** (you'll see a circular orange icon)
+- The Ubuntu terminal will open
 
 ## Troubleshooting
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 This error means virtualization is not enabled:
-1. Go back to Step 1 and check Task Manager to see if virtualization is enabled
-2. If disabled, you need to enable it in your computer's BIOS (see Step 1 for instructions)
-3. After enabling virtualization, restart your computer and try `wsl --install` again
+- Go back to Step 1 and check Task Manager to see if virtualization is enabled
+- If disabled, you need to enable it in your computer's BIOS (see Step 1 for instructions)
+- After enabling virtualization, restart your computer and try `wsl --install` again
 
 ### "wsl --install" doesn't work
 - Make sure you're running PowerShell as Administrator
@@ -253,9 +277,9 @@ This error means virtualization is not enabled:
 - Try running: `wsl --update` first, then try `wsl --install` again
 
 ### Ubuntu window doesn't open after restart
-1. Click Windows Start
-2. Type `Ubuntu`
-3. Click on the Ubuntu app to launch it manually
+- Click Windows Start
+- Type `Ubuntu`
+- Click on the Ubuntu app to launch it manually
 
 ### "sudo: apt: command not found"
 - Your WSL might not have installed correctly
