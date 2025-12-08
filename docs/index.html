@@ -117,7 +117,7 @@
             top: 12px;
             left: 16px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             z-index: 10;
         }
 
@@ -126,21 +126,21 @@
             top: 12px;
             right: 16px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             z-index: 10;
         }
 
         .filter-btn {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            padding: 4px 10px;
+            gap: 4px;
+            padding: 3px 8px;
             background: #21262d;
             border: 1px solid #6e7681;
             color: var(--text);
-            font-size: 0.75rem;
+            font-size: 0.6rem;
             font-weight: 600;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s ease;
             user-select: none;
@@ -156,14 +156,14 @@
         .filter-btn::after {
             content: attr(data-tooltip);
             position: absolute;
-            bottom: calc(100% + 8px);
+            bottom: calc(100% + 6px);
             left: 50%;
             transform: translateX(-50%);
             background: #1c2128;
             color: var(--text);
-            padding: 6px 10px;
-            border-radius: 6px;
-            font-size: 0.75rem;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.6rem;
             white-space: nowrap;
             opacity: 0;
             pointer-events: none;
@@ -175,6 +175,18 @@
 
         .filter-btn:hover::after {
             opacity: 1;
+        }
+
+        /* Vis.js tooltip styling */
+        .vis-tooltip {
+            background: #1c2128 !important;
+            color: var(--text) !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 5px !important;
+            padding: 5px 8px !important;
+            font-size: 0.6rem !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
         }
 
         .filter-btn.active {
