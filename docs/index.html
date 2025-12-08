@@ -272,6 +272,7 @@
             <h2>All Tutorials</h2>
             <ol class="tutorial-list">
                 <li><a href="Install_CLAUDE_Code_Win">Installing Claude Code on Windows</a></li>
+                <li><a href="Claude_Code_Git_Windows">Claude Code with local version control for Windows</a></li>
                 <li><a href="Install_Claude_Code_MacOS">Installing Claude Code on Mac</a></li>
                 <li><a href="VS_Code_Getting_Started">Getting Started with VS Code</a></li>
                 <li><a href="Github_desktop">Getting Started with Version Control</a></li>
@@ -403,15 +404,16 @@
 
         // Tutorial data
         const tutorials = {
-            1: { label: 'Install Claude Code\non Windows', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code on Windows using WSL, Ubuntu, and Node.js', level: 0 },
-            2: { label: 'Install Claude Code\non Mac', url: 'Install_Claude_Code_MacOS', desc: 'Quick setup guide for Claude Code on macOS with Node.js and npm', level: 0 },
+            1: { label: 'Install Claude Code\n(Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code on Windows using WSL, Ubuntu, and Node.js', level: 0 },
+            11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Learn version control basics using Git locally with Claude Code—no GitHub account needed', level: 1 },
+            2: { label: 'Install Claude Code\n(Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Quick setup guide for Claude Code on macOS with Node.js and npm', level: 0 },
             3: { label: 'VS Code\nBasics', url: 'VS_Code_Getting_Started', desc: 'Learn the fundamentals of Visual Studio Code for coding', level: 0 },
             4: { label: 'Version\nControl', url: 'Github_desktop', desc: 'Introduction to Git and GitHub Desktop for managing your code', level: 0 },
             5: { label: 'R in\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Set up R with code completion, plots, and Shiny app support in VS Code', level: 1 },
             6: { label: 'Python in\nVS Code', url: 'Python_Coding_VS_Code_Guide', desc: 'Set up Python with code completion, debugging, and Streamlit web apps', level: 1 },
             7: { label: 'R via\nDocker', url: 'R_Coding_Docker_Guide', desc: 'Run R in isolated, reproducible containers with pre-built Docker images', level: 2 },
             8: { label: 'Python via\nDocker', url: 'Python_Coding_Docker_Guide', desc: 'Run Python in isolated, reproducible containers with pre-built Docker images', level: 2 },
-            9: { label: 'GitHub Desktop\n+ Claude Code', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Combine AI-assisted coding with professional version control workflows', level: 2 },
+            9: { label: 'Claude Code\n+ GitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Combine AI-assisted coding with professional version control workflows', level: 2 },
             10: { label: 'Vibe Coding\nin R', url: 'Vibe_Coding_R_Docker_Guide', desc: 'Build a real NBA stats dashboard using natural language requests—the complete vibe coding experience', level: 3 }
         };
 
@@ -431,6 +433,7 @@
             4: { x: 0, y: 30 },     // Version Control
             3: { x: 0, y: 120 },    // VS Code Basics
             // Level 1 - Intermediate
+            11: { x: 160, y: -110 }, // Claude Code + Git (Win)
             5: { x: 160, y: 90 },   // R in VS Code
             6: { x: 160, y: 150 },  // Python in VS Code
             // Level 2 - Advanced
@@ -517,7 +520,8 @@
             { id: 'e7', from: 4, to: 9 },   // Version Control → GitHub + Claude
             { id: 'e8', from: 7, to: 10 },  // R via Docker → Vibe Coding
             { id: 'e9', from: 8, to: 10 },  // Python via Docker → Vibe Coding
-            { id: 'e10', from: 9, to: 10 }  // GitHub + Claude → Vibe Coding
+            { id: 'e10', from: 9, to: 10 }, // GitHub + Claude → Vibe Coding
+            { id: 'e11', from: 1, to: 11 }  // Claude (Win) → Claude Code + Git (Win)
         ];
 
         // Get edge color based on connected nodes completion
