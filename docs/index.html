@@ -144,6 +144,7 @@
             cursor: pointer;
             transition: all 0.2s ease;
             user-select: none;
+            position: relative;
         }
 
         .filter-btn:hover {
@@ -152,18 +153,35 @@
             transform: translateY(-1px);
         }
 
-        .filter-btn.active {
-            background: linear-gradient(135deg, #58a6ff 0%, #4493e6 100%);
-            border-color: #58a6ff;
-            color: #ffffff;
-            box-shadow: 0 2px 8px rgba(88, 166, 255, 0.3);
+        .filter-btn::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1c2128;
+            color: var(--text);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
         }
 
-        .filter-btn.active.basics {
-            background: linear-gradient(135deg, #3fb950 0%, #2ea043 100%);
-            border-color: #3fb950;
+        .filter-btn:hover::after {
+            opacity: 1;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #d73a94 0%, #e856b0 100%);
+            border-color: #d73a94;
             color: #ffffff;
-            box-shadow: 0 2px 8px rgba(63, 185, 80, 0.3);
+            box-shadow: 0 2px 8px rgba(215, 58, 148, 0.4);
         }
 
         .progress-counter {
@@ -310,13 +328,13 @@
 
         <div class="graph-container">
             <div class="filter-controls">
-                <button class="filter-btn active" id="filter-windows" data-platform="windows" title="Show Windows tutorials">🪟 Windows</button>
-                <button class="filter-btn" id="filter-mac" data-platform="mac" title="Show Mac tutorials">🍎 Mac</button>
+                <button class="filter-btn active" id="filter-windows" data-platform="windows" data-tooltip="Show Windows tutorials">🪟 Windows</button>
+                <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="Show Mac tutorials">🍎 Mac</button>
             </div>
             <div class="filter-controls-right">
-                <button class="filter-btn active" id="filter-r" data-language="r" title="Show R tutorials. Hide Python.">📊 R</button>
-                <button class="filter-btn" id="filter-python" data-language="python" title="Show Python tutorials. Hide R.">🐍 Python</button>
-                <button class="filter-btn" id="filter-basics" data-type="basics" title="Basic tutorials. Hide coding related.">📚 Basics</button>
+                <button class="filter-btn active" id="filter-r" data-language="r" data-tooltip="Show R tutorials">📊 R</button>
+                <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Show Python tutorials">🐍 Python</button>
+                <button class="filter-btn" id="filter-basics" data-type="basics" data-tooltip="Not coding related. Installation and Git basics.">Docs</button>
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
@@ -638,7 +656,8 @@
             interaction: {
                 hover: true,
                 dragNodes: true,
-                zoomView: false
+                zoomView: false,
+                tooltipDelay: 0
             },
             edges: {
                 color: { color: '#30363d', hover: '#58a6ff' },
