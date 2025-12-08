@@ -2,11 +2,7 @@
 
 # Using GitHub Desktop with Claude Code
 
-## The Problem
-
-You're coding with AI assistance. Claude makes changes to your files. Sometimes the changes work perfectly. Sometimes they don't. You want to experiment boldly, but you need a safety net.
-
-**Version control is like an unlimited undo button for your entire project.** Every time you save a snapshot (called a "commit"), you create a restore point. You can always go back.
+You're coding with AI assistance. It makes changes to your files. Sometimes the changes work perfectly. Sometimes they don't. **Version control is like an undo button for your entire project.** Every time you save a snapshot (called a "commit"), you create a restore point. You can always go back.
 
 When you combine [GitHub Desktop](https://desktop.github.com) with [Claude Code](https://claude.com/claude-code), you get AI-speed development with professional version control.
 
@@ -39,84 +35,82 @@ Build a simple timer app with Claude Code and track all changes with GitHub Desk
 
 ## Step 1: Create Your Project
 
-1. Open **GitHub Desktop**
-2. Click **File** → **New Repository**
-3. Fill in:
-   - **Name:** `simple-timer`
-   - **Description:** `A timer app built with Claude Code`
-   - **Local Path:** Documents folder
-   - **Check** "Initialize this repository with a README"
-4. Click **Create Repository**
-5. Click **Publish repository** at the top
-6. Click **Publish Repository**
+- Open **GitHub Desktop**
+- Click **File** → **New Repository**
+- Fill in:
+  - **Name:** `simple-timer`
+  - **Description:** `A timer app built with Claude Code`
+  - **Local Path:** Documents folder
+  - **Check** "Initialize this repository with a README"
+- Click **Create Repository**
+- Click **Publish repository** at the top
+- Click **Publish Repository**
 
 You now have a local project and cloud backup on GitHub.
 
 ## Step 2: Ask Claude to Create the Timer App
 
-1. Open your **terminal**
-2. Navigate to your project:
-   ```
-   cd ~/Documents/simple-timer
-   ```
-3. Start Claude Code:
-   ```
-   claude
-   ```
-4. Type this request:
-   ```
-   Create a simple countdown timer app in a single HTML file called timer.html.
-   It should have:
-   - An input field to set minutes
-   - Start and Stop buttons
-   - Display showing time remaining in MM:SS format
-   - When timer reaches zero, display "Time's up!"
-   Keep it simple with inline CSS and JavaScript.
-   ```
-5. Press **Enter**
+- Open your **terminal**
+- Navigate to your project:
+  ```
+  cd ~/Documents/simple-timer
+  ```
+- Start Claude Code:
+  ```
+  claude
+  ```
+- Type this request:
+  ```
+  Create a simple countdown timer app in a single HTML file.
+  It should have:
+  - An input field to set minutes
+  - Start and Stop buttons
+  - Display showing time remaining in MM:SS format
+  - When timer reaches zero, display "Time's up!"
+  Keep it simple with inline CSS and JavaScript.
+  ```
 
-Claude creates the `timer.html` file (takes 10-30 seconds).
+Claude creates the `index.html` file (takes 10-30 seconds).
 
 ## Step 3: Test the Timer
 
-1. In GitHub Desktop, click **Repository** → **Show in Finder/Explorer**
-2. **Double-click** `timer.html` to open it in your browser
-3. Try the timer:
-   - Type `1` in the input field
-   - Click **Start**
-   - Watch the countdown
+- In GitHub Desktop, click **Repository** → **Show in Finder/Explorer**
+- **Double-click** `index.html` to open it in your browser
+- Try the timer:
+  - Type `1` in the input field
+  - Click **Start**
+  - Watch the countdown
 
 **If it works:** Move to Step 5.
 **If something's broken:** Continue to Step 4.
 
 ## Step 4: Fix Errors (If Needed)
 
-1. Open browser console (`F12` → **Console** tab)
-2. Copy any red error messages
-3. Go back to Claude Code in your terminal
-4. Paste the error:
-   ```
-   I'm seeing this error: [paste error]. Can you fix it?
-   ```
-5. Press **Enter**
-6. Refresh browser (`F5`) and test again
+- Open browser console (`F12` → **Console** tab)
+- Copy any red error messages
+- Go back to Claude Code in your terminal
+- Paste the error:
+  ```
+  I'm seeing this error: [paste error]. Can you fix it?
+  ```
+- Refresh browser (`F5`) and test again
 
 ## Step 5: Review Changes
 
-1. Switch to **GitHub Desktop**
-2. **Left panel:** Shows changed files (`timer.html`)
-3. **Right panel:** Shows the code (green = added)
-4. Read through to understand what Claude created
+- Switch to **GitHub Desktop**
+- **Left panel:** Shows changed files (`timer.html`)
+- **Right panel:** Shows the code (green = added)
+- Read through to understand what Claude created
 
 Always review AI-generated code before committing.
 
 ## Step 6: Commit Manually
 
-1. At bottom left, in **Summary field**, type:
-   ```
-   Create initial timer app with start/stop functionality
-   ```
-2. Click **Commit to main**
+- At bottom left, in **Summary field**, type:
+  ```
+  Create initial timer app with start/stop functionality
+  ```
+- Click **Commit to main**
 
 You've created a save point!
 
@@ -125,52 +119,52 @@ You've created a save point!
 
 ## Step 7: Push to GitHub
 
-1. Click **Push origin** button at top
-2. Verify: **Repository** → **View on GitHub** to see your code online
+- Click **Push origin** button at top
+- Verify: **Repository** → **View on GitHub** to see your code online
 
 Your code is now backed up in the cloud.
 
 ## Step 8: Add Sound Notification
 
-1. In Claude Code terminal:
-   ```
-   Add a sound notification when the timer reaches zero. Use the browser's
-   built-in beep sound or create a simple audio alert.
-   ```
-2. Press **Enter**
-3. Test: Refresh browser, set timer for 0.1 minutes, click Start
+- In Claude Code terminal:
+  ```
+  Add a sound notification when the timer reaches zero. Use the browser's
+  built-in beep sound or create a simple audio alert.
+  ```
+- Test: Refresh browser, set timer for 0.1 minutes, click Start
 
 **For this tutorial:** Pretend the sound doesn't work well. Don't commit yet!
 
 ## Step 9: Discard Bad Changes
 
-1. Open **GitHub Desktop**
-2. Click **Branch** menu → **Discard All Changes**
-3. Click **Discard Changes** to confirm
-4. Refresh browser - timer works without the sound!
+  Sometimes AI put us on the wrong path and we need to start over from our last commit (save point).
+
+- Open **GitHub Desktop**
+- Click **Branch** menu → **Discard All Changes**
+- Click **Discard Changes** to confirm
+- Refresh browser - timer works without the sound!
 
 You just threw away broken code and went back to your last save point.
 
 ## Step 10: Redo from Scratch
 
-1. In Claude Code:
-   ```
-   Add a sound notification when the timer reaches zero. This time, use an HTML5
-   audio element with a simple beep sound generated by the Web Audio API. Make
-   sure it handles browser autoplay restrictions gracefully.
-   ```
-2. Test immediately (refresh browser, set 0.1 minutes, Start)
+- In Claude Code:
+  ```
+  Add a sound notification when the timer reaches zero. This time, use an HTML5
+  audio element with a simple beep sound generated by the Web Audio API. Make
+  sure it handles browser autoplay restrictions gracefully.
+  ```
+- Test immediately (refresh browser, set 0.1 minutes, Start)
 
 **If it works:** Continue to Step 11.
 **If not:** Paste error to Claude or try again.
 
 ## Step 11: Let Claude Commit and Push
 
-1. In Claude Code:
-   ```
-   commit and push my changes
-   ```
-2. Press **Enter**
+- In Claude Code:
+  ```
+  commit and push my changes
+  ```
 
 Claude will check changes, write a commit message, commit, and push (10-20 seconds).
 
@@ -180,10 +174,10 @@ Claude will check changes, write a commit message, commit, and push (10-20 secon
 
 ## Step 12: Ask Claude to Summarize Changes
 
-1. In Claude Code:
-   ```
-   what files have I changed?
-   ```
+- In Claude Code:
+  ```
+  what files have I changed?
+  ```
 
 Claude explains your changes in plain English.
 
@@ -191,7 +185,7 @@ Claude explains your changes in plain English.
 
 ## Step 13: View History
 
-1. In **GitHub Desktop**, click **History** tab
+- In **GitHub Desktop**, click **History** tab
 
 You'll see:
 - Initial commit (README)
@@ -200,17 +194,14 @@ You'll see:
 
 Notice the first failed sound attempt isn't there - you discarded it! Only working code made it into your commits.
 
-## How to Reopen
+## Challenges
+- Custom sound: Download a free .mp3 from [freesound.org](https://freesound.org), put in your project folder, ask Claude to use it
+- Multiple timers: `Allow users to create and run multiple timers simultaneously`
+- Progress bar: `Add a progress bar that visually shows how much time remains`
 
-**GitHub Desktop:** Start menu/Spotlight → type "GitHub Desktop"
+**Remember:** Test after each feature, commit after each success, discard failures.
 
-**Claude Code:**
-```
-cd ~/Documents/simple-timer
-claude
-```
-
-**Project files:** In GitHub Desktop → **Repository** → **Show in Finder/Explorer**
+**View your project on GitHub.com:** Click **Repository** → **View on GitHub** in GitHub Desktop to see your complete commit history and code online.
 
 ## Troubleshooting
 
@@ -224,12 +215,12 @@ claude
 
 ## The Complete Workflow
 
-1. Ask Claude to make changes
-2. Test in browser
-3. If it works → Review and commit
-4. If it fails → Discard and try again
-5. Push to GitHub
-6. Repeat
+- Ask Claude to make changes
+- Test in browser
+- If it works → Review and commit
+- If it fails → Discard and try again
+- Push to GitHub
+- Repeat
 
 Manual commits when you want control. Claude commits when you want speed. Discard fearlessly - only commit working code!
 
@@ -242,15 +233,4 @@ Try adding features to your timer:
 - Pause button: `Add a Pause/Resume button that toggles the timer state`
 - Better styling: `Improve the visual design with a modern color scheme`
 
-**More challenging:**
-- Custom sound: Download a free .mp3 from [freesound.org](https://freesound.org), put in your project folder, ask Claude to use it
-- Multiple timers: `Allow users to create and run multiple timers simultaneously`
-- Progress bar: `Add a progress bar that visually shows how much time remains`
-
-**Remember:** Test after each feature, commit after each success, discard failures.
-
-**View your project on GitHub.com:** Click **Repository** → **View on GitHub** in GitHub Desktop to see your complete commit history and code online.
-
----
-
-*Created on December 7, 2025 with help from Claude Code.*
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
