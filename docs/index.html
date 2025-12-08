@@ -274,6 +274,7 @@
                 <li><a href="Install_CLAUDE_Code_Win">Installing Claude Code on Windows</a></li>
                 <li><a href="Claude_Code_Git_Windows">Claude Code with local version control for Windows</a></li>
                 <li><a href="Install_Claude_Code_MacOS">Installing Claude Code on Mac</a></li>
+                <li><a href="Claude_Code_Git_Mac">Claude Code with local version control for Mac</a></li>
                 <li><a href="VS_Code_Getting_Started">Getting Started with VS Code</a></li>
                 <li><a href="Github_desktop">Getting Started with Version Control</a></li>
                 <li><a href="R_Coding_VS_Code_Guide">R Coding in VS Code</a></li>
@@ -407,6 +408,7 @@
             1: { label: 'Install Claude Code\n(Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code on Windows using WSL, Ubuntu, and Node.js', level: 0 },
             11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Learn version control basics using Git locally with Claude Code—no GitHub account needed', level: 1 },
             2: { label: 'Install Claude Code\n(Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Quick setup guide for Claude Code on macOS with Node.js and npm', level: 0 },
+            12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: 'Learn version control basics using Git locally with Claude Code on Mac—no GitHub account needed', level: 1 },
             3: { label: 'VS Code\nBasics', url: 'VS_Code_Getting_Started', desc: 'Learn the fundamentals of Visual Studio Code for coding', level: 0 },
             4: { label: 'Version\nControl', url: 'Github_desktop', desc: 'Introduction to Git and GitHub Desktop for managing your code', level: 0 },
             5: { label: 'R in\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Set up R with code completion, plots, and Shiny app support in VS Code', level: 1 },
@@ -434,6 +436,7 @@
             3: { x: 0, y: 120 },    // VS Code Basics
             // Level 1 - Intermediate
             11: { x: 160, y: -110 }, // Claude Code + Git (Win)
+            12: { x: 160, y: -50 },  // Claude Code + Git (Mac)
             5: { x: 160, y: 90 },   // R in VS Code
             6: { x: 160, y: 150 },  // Python in VS Code
             // Level 2 - Advanced
@@ -521,7 +524,8 @@
             { id: 'e8', from: 7, to: 10 },  // R via Docker → Vibe Coding
             { id: 'e9', from: 8, to: 10 },  // Python via Docker → Vibe Coding
             { id: 'e10', from: 9, to: 10 }, // GitHub + Claude → Vibe Coding
-            { id: 'e11', from: 1, to: 11 }  // Claude (Win) → Claude Code + Git (Win)
+            { id: 'e11', from: 1, to: 11 }, // Claude (Win) → Claude Code + Git (Win)
+            { id: 'e12', from: 2, to: 12 }  // Claude (Mac) → Claude Code + Git (Mac)
         ];
 
         // Get edge color based on connected nodes completion

@@ -192,7 +192,7 @@ Claude throws away the new changes we don't like. The timer works again with jus
 
 - In Claude Code, type:
   ```
-  Add a sound notification when the timer reaches zero.
+  Add a sound notification when time is up.
   ```
 - Refresh browser and test after Claude is done (set timer for 0.1 minutes)
 - If it works, commit the changes:
