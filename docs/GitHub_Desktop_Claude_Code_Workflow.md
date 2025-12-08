@@ -2,104 +2,121 @@
 
 # Using GitHub Desktop with Claude Code
 
-You're coding with AI assistance. Claude makes changes to your files. Sometimes the changes work perfectly, sometimes they don't. You want to experiment boldly, but you need a safety net. Version control is like an unlimited undo button for your entire project—every commit creates a restore point you can always return to. When you combine [GitHub Desktop](https://desktop.github.com) with [Claude Code](https://claude.com/claude-code), you get AI-speed development with professional version control.
+## The Problem
+
+You're coding with AI assistance. Claude makes changes to your files. Sometimes the changes work perfectly. Sometimes they don't. You want to experiment boldly, but you need a safety net.
+
+**Version control is like an unlimited undo button for your entire project.** Every time you save a snapshot (called a "commit"), you create a restore point. You can always go back.
+
+When you combine [GitHub Desktop](https://desktop.github.com) with [Claude Code](https://claude.com/claude-code), you get AI-speed development with professional version control.
 
 ## Key Concepts
 
-- **Git** - Tracks every change to your files on your computer
-- **GitHub** - Stores your code in the cloud as backup
-- **GitHub Desktop** - Makes Git visual—you click buttons instead of typing commands
-- **Claude Code** - AI coding assistant that writes code, fixes bugs, and creates commits for you
+**Git** tracks every change to your files on your computer.
+
+**GitHub** stores your code in the cloud as backup.
+
+**GitHub Desktop** makes Git visual - you click buttons instead of typing commands.
+
+**Claude Code** is an AI coding assistant that writes code, fixes bugs, and creates commits for you.
+
+## What You'll Do
+
+Build a simple timer app with Claude Code and track all changes with GitHub Desktop:
+- Create project and timer app
+- Test and fix errors
+- Commit and push changes
+- Discard bad changes and try again
+- Let Claude automate commits
 
 ## What You'll Need
 
-- [GitHub Desktop](https://desktop.github.com) installed
-- [Claude Code](https://code.claude.com/docs/en/installation) installed
-- [GitHub](https://github.com) account (free)
+- GitHub Desktop installed ([download](https://desktop.github.com))
+- Claude Code installed ([guide](https://code.claude.com/docs/en/installation))
+- GitHub account (free at [github.com](https://github.com))
 - Web browser
 - Basic terminal familiarity
-- 20-25 minutes
 
 ## Step 1: Create Your Project
 
-- Open **GitHub Desktop**
-- Click **File** → **New Repository**
-- Fill in:
-  - **Name:** `simple-timer`
-  - **Description:** `A timer app built with Claude Code`
-  - **Local Path:** Documents folder
-  - Check **Initialize this repository with a README**
-- Click **Create Repository**
-- Click **Publish repository** at the top
-- Click **Publish Repository**
+1. Open **GitHub Desktop**
+2. Click **File** → **New Repository**
+3. Fill in:
+   - **Name:** `simple-timer`
+   - **Description:** `A timer app built with Claude Code`
+   - **Local Path:** Documents folder
+   - **Check** "Initialize this repository with a README"
+4. Click **Create Repository**
+5. Click **Publish repository** at the top
+6. Click **Publish Repository**
 
 You now have a local project and cloud backup on GitHub.
 
 ## Step 2: Ask Claude to Create the Timer App
 
-- Open your **terminal**
-- Navigate to your project:
-  ```
-  cd ~/Documents/simple-timer
-  ```
-- Start Claude Code:
-  ```
-  claude
-  ```
-- Type this request:
-  ```
-  Create a simple countdown timer app in a single HTML file called timer.html.
-  It should have:
-  - An input field to set minutes
-  - Start and Stop buttons
-  - Display showing time remaining in MM:SS format
-  - When timer reaches zero, display "Time's up!"
-  Keep it simple with inline CSS and JavaScript.
-  ```
-- Press **Enter**
+1. Open your **terminal**
+2. Navigate to your project:
+   ```
+   cd ~/Documents/simple-timer
+   ```
+3. Start Claude Code:
+   ```
+   claude
+   ```
+4. Type this request:
+   ```
+   Create a simple countdown timer app in a single HTML file called timer.html.
+   It should have:
+   - An input field to set minutes
+   - Start and Stop buttons
+   - Display showing time remaining in MM:SS format
+   - When timer reaches zero, display "Time's up!"
+   Keep it simple with inline CSS and JavaScript.
+   ```
+5. Press **Enter**
 
 Claude creates the `timer.html` file (takes 10-30 seconds).
 
 ## Step 3: Test the Timer
 
-- In GitHub Desktop, click **Repository** → **Show in Finder/Explorer**
-- Double-click `timer.html` to open it in your browser
-- Try the timer:
-  - Type `1` in the input field
-  - Click **Start**
-  - Watch the countdown
+1. In GitHub Desktop, click **Repository** → **Show in Finder/Explorer**
+2. **Double-click** `timer.html` to open it in your browser
+3. Try the timer:
+   - Type `1` in the input field
+   - Click **Start**
+   - Watch the countdown
 
 **If it works:** Move to Step 5.
 **If something's broken:** Continue to Step 4.
 
 ## Step 4: Fix Errors (If Needed)
 
-- Open browser developer tools (press **F12** or right-click → **Inspect**)
-- Click the **Console** tab
-- Copy any red error messages
-- Return to Claude Code in your terminal
-- Paste the error:
-  ```
-  I'm seeing this error: [paste error]. Can you fix it?
-  ```
-- Refresh browser and test again
+1. Open browser console (`F12` → **Console** tab)
+2. Copy any red error messages
+3. Go back to Claude Code in your terminal
+4. Paste the error:
+   ```
+   I'm seeing this error: [paste error]. Can you fix it?
+   ```
+5. Press **Enter**
+6. Refresh browser (`F5`) and test again
 
 ## Step 5: Review Changes
 
-- Switch to **GitHub Desktop**
-- **Left panel:** Shows changed files (`timer.html`)
-- **Right panel:** Shows the code (green = added)
-- Read through to understand what Claude created
+1. Switch to **GitHub Desktop**
+2. **Left panel:** Shows changed files (`timer.html`)
+3. **Right panel:** Shows the code (green = added)
+4. Read through to understand what Claude created
 
 Always review AI-generated code before committing.
 
 ## Step 6: Commit Manually
 
-- At bottom left, in **Summary field**, type:
-  ```
-  Create initial timer app with start/stop functionality
-  ```
-- Click **Commit to main**
+1. At bottom left, in **Summary field**, type:
+   ```
+   Create initial timer app with start/stop functionality
+   ```
+2. Click **Commit to main**
 
 You've created a save point!
 
@@ -108,54 +125,54 @@ You've created a save point!
 
 ## Step 7: Push to GitHub
 
-- Click **Push origin** button at top
-- Verify: Click **Repository** → **View on GitHub** to see your code online
+1. Click **Push origin** button at top
+2. Verify: **Repository** → **View on GitHub** to see your code online
 
 Your code is now backed up in the cloud.
 
 ## Step 8: Add Sound Notification
 
-- In Claude Code terminal:
-  ```
-  Add a sound notification when the timer reaches zero. Use the browser's
-  built-in beep sound or create a simple audio alert.
-  ```
-- Press **Enter**
-- Test: Refresh browser, set timer for 0.1 minutes, click Start
+1. In Claude Code terminal:
+   ```
+   Add a sound notification when the timer reaches zero. Use the browser's
+   built-in beep sound or create a simple audio alert.
+   ```
+2. Press **Enter**
+3. Test: Refresh browser, set timer for 0.1 minutes, click Start
 
 **For this tutorial:** Pretend the sound doesn't work well. Don't commit yet!
 
 ## Step 9: Discard Bad Changes
 
-- Open **GitHub Desktop**
-- Click **Branch** → **Discard All Changes**
-- Click **Discard Changes** to confirm
-- Refresh browser—timer works without the sound
+1. Open **GitHub Desktop**
+2. Click **Branch** menu → **Discard All Changes**
+3. Click **Discard Changes** to confirm
+4. Refresh browser - timer works without the sound!
 
-You just threw away broken code and returned to your last save point.
+You just threw away broken code and went back to your last save point.
 
 ## Step 10: Redo from Scratch
 
-- In Claude Code:
-  ```
-  Add a sound notification when the timer reaches zero. This time, use an HTML5
-  audio element with a simple beep sound generated by the Web Audio API. Make
-  sure it handles browser autoplay restrictions gracefully.
-  ```
-- Test immediately (refresh browser, set 0.1 minutes, Start)
+1. In Claude Code:
+   ```
+   Add a sound notification when the timer reaches zero. This time, use an HTML5
+   audio element with a simple beep sound generated by the Web Audio API. Make
+   sure it handles browser autoplay restrictions gracefully.
+   ```
+2. Test immediately (refresh browser, set 0.1 minutes, Start)
 
 **If it works:** Continue to Step 11.
 **If not:** Paste error to Claude or try again.
 
 ## Step 11: Let Claude Commit and Push
 
-- In Claude Code:
-  ```
-  commit and push my changes
-  ```
-- Press **Enter**
+1. In Claude Code:
+   ```
+   commit and push my changes
+   ```
+2. Press **Enter**
 
-Claude checks changes, writes a commit message, commits, and pushes (10-20 seconds).
+Claude will check changes, write a commit message, commit, and push (10-20 seconds).
 
 **When to use:**
 - Manual commits: When learning or want control
@@ -163,10 +180,10 @@ Claude checks changes, writes a commit message, commits, and pushes (10-20 secon
 
 ## Step 12: Ask Claude to Summarize Changes
 
-- In Claude Code:
-  ```
-  what files have I changed?
-  ```
+1. In Claude Code:
+   ```
+   what files have I changed?
+   ```
 
 Claude explains your changes in plain English.
 
@@ -174,14 +191,14 @@ Claude explains your changes in plain English.
 
 ## Step 13: View History
 
-- In **GitHub Desktop**, click the **History** tab
+1. In **GitHub Desktop**, click **History** tab
 
 You'll see:
 - Initial commit (README)
 - Create initial timer app
 - Add improved sound notification
 
-Notice the first failed sound attempt isn't there—you discarded it! Only working code made it into your commits.
+Notice the first failed sound attempt isn't there - you discarded it! Only working code made it into your commits.
 
 ## How to Reopen
 
@@ -195,31 +212,45 @@ claude
 
 **Project files:** In GitHub Desktop → **Repository** → **Show in Finder/Explorer**
 
+## Troubleshooting
+
+**"Authentication failed":** GitHub Desktop → File/Preferences → Accounts → Sign out and sign in again
+
+**Claude says "not a git repository":** Make sure you're in the right folder (`cd ~/Documents/simple-timer`)
+
+**Timer doesn't work:** Open browser console (`F12`), copy errors, paste to Claude
+
+**Need help?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://code.claude.com/docs)
+
+## The Complete Workflow
+
+1. Ask Claude to make changes
+2. Test in browser
+3. If it works → Review and commit
+4. If it fails → Discard and try again
+5. Push to GitHub
+6. Repeat
+
+Manual commits when you want control. Claude commits when you want speed. Discard fearlessly - only commit working code!
+
 ## Next Steps
 
 Try adding features to your timer:
 
-- **Preset buttons:** `Add three preset buttons: "5 min", "10 min", and "15 min"`
-- **Pause button:** `Add a Pause/Resume button that toggles the timer state`
-- **Better styling:** `Improve the visual design with a modern color scheme`
+**Quick wins:**
+- Preset buttons for 5, 10, 15 minutes: `Add three preset buttons: "5 min", "10 min", and "15 min"`
+- Pause button: `Add a Pause/Resume button that toggles the timer state`
+- Better styling: `Improve the visual design with a modern color scheme`
 
-## Troubleshooting
+**More challenging:**
+- Custom sound: Download a free .mp3 from [freesound.org](https://freesound.org), put in your project folder, ask Claude to use it
+- Multiple timers: `Allow users to create and run multiple timers simultaneously`
+- Progress bar: `Add a progress bar that visually shows how much time remains`
 
-- **"Authentication failed"** - In GitHub Desktop, click **File** (Windows) or **GitHub Desktop** (Mac) → **Preferences** → **Accounts** → Sign out and sign in again.
-- **Claude says "not a git repository"** - Make sure you're in the right folder: `cd ~/Documents/simple-timer`
-- **Timer doesn't work** - Open browser console (press **F12**), copy errors, paste to Claude.
+**Remember:** Test after each feature, commit after each success, discard failures.
 
-## Workflow Overview
-
-- Ask Claude to make changes
-- Test in browser
-- If it works → Review and commit
-- If it fails → Discard and try again
-- Push to GitHub
-- Repeat
-
-Manual commits when you want control. Claude commits when you want speed. Discard fearlessly—only commit working code!
+**View your project on GitHub.com:** Click **Repository** → **View on GitHub** in GitHub Desktop to see your complete commit history and code online.
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
+*Created on December 7, 2025 with help from Claude Code.*
