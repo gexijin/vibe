@@ -6,7 +6,7 @@ This guide will walk you through installing Claude Code on Windows using Windows
 
 ## Overview
 
-- Install WSL (Windows Subsystem for Linux)
+- Install WSL
 - Set up Ubuntu Linux
 - Install Node.js
 - Install Claude Code
@@ -18,6 +18,7 @@ This guide will walk you through installing Claude Code on Windows using Windows
 - A Windows 10 (version 2004 or higher) or Windows 11 computer
 - Internet connection
 - Administrator access on your computer
+- Claude Pro/Max subscription or API key
 
 ## Step 1: Check if Virtualization is Enabled
 
@@ -59,15 +60,14 @@ A blue window with white text will open - this is PowerShell running as administ
    ```
    wsl --install
    ```
-2. Press **Enter**
-3. You'll see text appearing as Windows downloads and installs WSL
-4. This process may take 5-15 minutes depending on your internet speed
-5. You might see messages like "Installing: Windows Subsystem for Linux" and "Installing: Ubuntu"
-6. When you see a message saying installation is complete, you need to restart your computer:
+2. You'll see text appearing as Windows downloads and installs WSL
+3. This process may take 5-15 minutes depending on your internet speed
+4. You might see messages like "Installing: Windows Subsystem for Linux" and "Installing: Ubuntu"
+5. When you see a message saying installation is complete, you need to restart your computer:
    - Click the **Windows Start button**
    - Click the **Power icon**
    - Click **Restart**
-7. Your computer will restart - this takes about 1-2 minutes
+6. Your computer will restart - this takes about 1-2 minutes
 
 **What happens after restart:**
 - After you log back into Windows, wait 2-5 minutes
