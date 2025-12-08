@@ -102,6 +102,66 @@ You just created your first save point!
 
 Your code is now backed up online at: `https://github.com/YOUR-USERNAME/my-first-project`
 
+## Your Daily Workflow
+
+### 1. Make Changes
+Work on your project—edit files, add new files, etc.
+
+### 2. Review Changes
+Open GitHub Desktop to see what changed:
+- Changed files appear in the left panel
+- Specific changes appear on the right (green = added, red = removed)
+
+### 3. Commit Your Changes
+Write a short message describing what you did:
+- **Good messages:** "Added login button", "Fixed spelling error in header"
+- **Bad messages:** "Updated stuff", "Changes"
+
+Click **Commit to main**.
+
+### 4. Push to GitHub
+Click **Push origin** to back up your commits to GitHub.
+
+**Tip:** Commit often! Small, frequent commits are better than one giant commit.
+
+## Useful Tasks
+
+### View Your History
+- In GitHub Desktop, click the **History** tab
+- You'll see all your commits (save points)
+- Click any commit to see what changed
+
+### Undo Your Last Commit
+If you haven't pushed yet:
+- Go to **History** tab
+- Right-click on your last commit
+- Click **Undo Commit**
+
+### Go Back to an Earlier Version
+- Go to **History** tab
+- Find the commit you want to go back to
+- Right-click and select **Revert Changes in Commit**
+- This creates a new commit that undoes those changes
+
+### Discard Changes You Haven't Committed
+- Right-click on the file in the Changes list
+- Click **Discard Changes**
+- The file returns to how it was in your last commit
+
+## Working with Claude Code
+
+Claude Code can help you with version control:
+- "What files have I changed?"
+- "Write a commit message for my recent changes"
+- "Explain what I changed in this file"
+- "How do I undo my last change?"
+
+When working on a project with Claude:
+- Ask Claude to make changes
+- Review the changes in GitHub Desktop
+- Commit with a descriptive message
+- Push to GitHub
+
 ## Next Steps
 
 - Try editing your README file again and committing the changes
@@ -114,13 +174,23 @@ Your code is now backed up online at: `https://github.com/YOUR-USERNAME/my-first
 - **Changes don't appear in GitHub Desktop** - Make sure you saved your files. Click **Repository** → **Refresh** or restart GitHub Desktop.
 - **Push fails with "rejected" error** - Someone else pushed changes. Click **Fetch origin** first, then try pushing again.
 
-## Workflow Overview
+## Common Questions
 
-- Make changes to your project files
-- Review changes in GitHub Desktop (green = added, red = removed)
-- Write a descriptive commit message and click **Commit to main**
-- Click **Push origin** to back up to GitHub
-- Repeat
+**How often should I commit?**
+Commit whenever you complete a small, logical piece of work. If you can describe what you did in one sentence, it's a good time to commit.
+
+**What if I forget to commit?**
+No problem! You can still commit later. Review all your changes and make one commit, or organize them into multiple commits.
+
+**What if I make a mistake?**
+That's the point of version control! You can always go back to any previous commit.
+
+**Do I need internet to commit?**
+No! Commits are saved on your computer first. You only need internet when you push to GitHub.
+
+**What's the difference between commit and push?**
+- **Commit** = Save locally (on your computer)
+- **Push** = Upload to GitHub (in the cloud)
 
 ---
 
