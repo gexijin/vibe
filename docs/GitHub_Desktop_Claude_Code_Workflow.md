@@ -31,7 +31,7 @@ Build a simple timer app with Claude Code and track all changes with GitHub Desk
 - Claude Code installed ([guide](https://code.claude.com/docs/en/installation))
 - GitHub account (free at [github.com](https://github.com))
 - Web browser
-- Basic terminal familiarity
+- 20 minutes
 
 ## Step 1: Create Your Project
 
