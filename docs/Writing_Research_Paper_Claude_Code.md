@@ -2,7 +2,7 @@
 
 # Writing a Research Paper with Claude Code
 
-Write research papers faster using Claude Code for research and drafting, while Git tracks every version. **Version control is like an undo button for your entire writing process.** Create save points at each phase—research, draft, revisions—and return to any version anytime.
+Write research papers using Claude Code as an assistant for research, brainstorming, planning, drafting and polishing. Use Git to track every version. 
 
 ## Key Concepts
 
