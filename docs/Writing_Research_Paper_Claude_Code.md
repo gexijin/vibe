@@ -9,8 +9,8 @@ Write research papers faster using Claude Code for research and drafting, while 
 - **Claude Code** - AI assistant that searches the web, organizes research, drafts content, and handles version control through simple requests
 - **Git** - Tracks every change to your files, creating restore points (commits) you can return to anytime
 - **Commit** - A snapshot of your project at a specific point in time with a description of what changed (e.g., "Add research notes", "Complete first draft")
-- **Research Paper Workflow** - Research → Brainstorm → Focused Research → Plan → Draft → Revise 
-- **Use AI as an assistant** for reserach, brainstorming, drafting, editing
+- **Research Paper Workflow** - Research → Brainstorm → Focused Research → Plan → Draft → Revise manually → Polish with AI → Add Abstract → Proofread with AI  
+- **Use AI as an assistant** for research, brainstorming, drafting, editing
 
 ## What You'll Need
 
@@ -18,7 +18,7 @@ Write research papers faster using Claude Code for research and drafting, while 
 - Git installed (comes with Mac/Linux, [Windows guide](https://git-scm.com/download/win))
 - Text editor (VS Code, TextEdit, Notepad, or any editor)
 - Terminal access
-- 15-20 minutes
+- 35-45 minutes
 
 ## Step 1: Set Up Project and Start Claude Code
 
@@ -44,36 +44,52 @@ claude
 
 Replace `YOUR_USERNAME` with your actual Windows username. Git is now tracking changes in this folder. Claude Code is ready.
 
-## Step 2: Research and Plan
+## Step 2: Initial Research
 
-Ask Claude to research your topic and create an outline:
+Ask Claude to research your topic:
 
 ```
 I'm writing a 2-page research paper on AI adoption in the workplace.
-Search for recent data on productivity gains and job displacement.
-Organize the information sources. Save as general_research.md
+Search for recent data (2023-2025) on:
+- Productivity gains from AI tools
+- Job displacement concerns and statistics
+- Real-world case studies from companies
+
+Organize the findings with clear sections and cite all sources.
+Prioritize peer-reviewed research and credible industry reports.
+Avoid anecdotes and opinion pieces.
+Save as general_research.md
 ```
 
-Claude will search the web, organize findings, and create your outline. Review the file in your text editor and add notes where you want your perspective. 
+Claude searches the web and organizes findings. Review `general_research.md` in your text editor. Then commit:
 
-Instract Claude to commit changes. 
 ```
 commit these changes
 ```
 
 **First save point created!**
 
-## Step 3: Draft the Paper
+## Step 3: Brainstorm Your Angle
 
-Ask Claude to write your paper:
+Read through the research and decide on your perspective. Ask Claude to help brainstorm:
 
 ```
-Using the outline and research, write a complete 2-page paper in
-paper.md. Include introduction, body with data and citations,
-and conclusion. Leave a placeholder for my perspective.
+Based on this research, brainstorm 3-4 different angles or perspectives
+I could take for this paper. Save as brainstorm.md
 ```
 
-Claude writes the full draft. Then commit:
+Review the angles in your editor and pick the one that interests you most. Add a note in `brainstorm.md` marking your choice.
+
+## Step 4: Focused Research
+
+Now that you have your angle, ask Claude for targeted research:
+
+```
+I want to focus on [your chosen angle]. Search for more specific data
+and examples that support this perspective. Save as focused_research.md
+```
+
+Claude finds targeted information. Commit your work:
 
 ```
 commit these changes
@@ -81,15 +97,34 @@ commit these changes
 
 **Second save point created!**
 
-## Step 4: Revise and Add Your Voice
+## Step 5: Create Your Plan
 
-Open `paper.md` in your editor. Read through and add your perspective where the placeholder is. Then ask Claude for any revisions:
+Ask Claude to create an outline based on your chosen angle:
 
 ```
-Make the introduction more engaging with a compelling hook.
+Create a brief outline for my 2-page paper based on the focused
+research and my chosen angle. Just give me main points for each paragraph in bullet points.
+Structure it with:
+
+1. Introduction
+   - Hook to grab attention
+   - Background context (2-3 sentences)
+   - Clear thesis statement
+
+2. Main Body (2-3 sections)
+   - Each section with a clear argument
+   - Key statistics/evidence to include
+   - Specific examples from the research
+
+3. Conclusion
+   - Summary of main points
+   - Implications or call to action
+
+For each section, note which sources [1], [2], etc. to cite.
+Aim for approximately 1,400 words total.
 ```
 
-After revisions, commit again:
+Review the outline and **prompt to adjust** as needed. Then commit:
 
 ```
 commit these changes
@@ -97,9 +132,113 @@ commit these changes
 
 **Third save point created!**
 
-## Step 5: Finalize
+## Step 6: Draft the Paper
 
-Polish the paper in your editor—fix phrasing, check citations. Then commit the final version:
+Ask Claude to write the full draft:
+
+```
+Using the outline and research, write a complete 2-page technical
+report in paper.md.
+
+Writing Style:
+- Clear and concise prose
+- Short, direct sentences (15-20 words average)
+- Analytical and objective tone
+- Active voice where possible
+
+Content Requirements:
+- Strong opening hook in the introduction
+- Statistics woven naturally into prose (not bullet lists)
+- Concrete examples from the research to illustrate key points
+- Smooth transitions between sections
+- Each paragraph should have a clear topic sentence
+
+Citations and References:
+- Add numbered references [1], [2], etc. for all citations
+- Place citations after relevant statements or quotes
+- Create a "References" section at the end with full source details
+- List references in order [1], [2], [3]...
+
+Length: Approximately 1,400 words (fits 2 pages with standard formatting)
+
+Save as paper.md
+```
+
+Claude writes the draft. Commit:
+
+```
+commit these changes
+```
+
+**Fourth save point created!**
+
+## Step 7: Revise Manually
+
+Open `paper.md` in your text editor. Read through carefully and make your own revisions:
+- Add your personal voice and insights
+- Adjust arguments to match your thinking
+- Fix any awkward phrasing
+- Ensure citations are accurate
+
+Save your changes after editing, then commit:
+
+```
+commit these changes
+```
+
+**Fifth save point created!**
+
+## Step 8: Polish with AI
+
+Ask Claude to improve specific sections:
+
+```
+Make the introduction more engaging with a compelling hook.
+```
+
+```
+Strengthen the conclusion with a clear call to action.
+```
+
+
+Review Claude's changes. If satisfied, commit:
+
+```
+commit these changes
+```
+
+**Sixth save point created!**
+
+## Step 9: Add an Abstract
+
+Ask Claude to add a short executive summary at the beginning:
+
+```
+Add an abstract at the beginning of the paper. Write 4-5 sentences
+that summarize the main argument, key findings, and conclusion.
+```
+
+Claude will add the abstract. Review to ensure it accurately captures your paper's essence. Then commit:
+
+```
+commit these changes
+```
+
+**Seventh save point created!**
+
+## Step 10: Proofread with AI
+
+Ask Claude to do a final proofread:
+
+```
+Do a final proofread of paper.md:
+- Fix any spelling and grammar errors
+- Ensure consistent formatting throughout
+- Verify all reference numbers [1], [2]... match the References section
+- Improve any awkward sentences for better flow
+```
+
+Review Claude's changes, then commit the final version:
 
 ```
 commit these changes
@@ -107,42 +246,56 @@ commit these changes
 
 **Final version saved!**
 
-## Step 6: View Your History
+To view your complete writing journey anytime, type: `show my commit history`
 
-See your complete writing journey:
+## Step 11: Create a Slash Command for Future Papers
+
+Save this workflow as a reusable slash command for your next research paper:
 
 ```
-show my commit history
+Create a slash command called /research-paper that guides me through
+this entire workflow: initial research, brainstorm angles, focused
+research, create outline, draft paper with references, manual revision,
+AI polish, add abstract, and AI proofread. Save it so I can use it for
+future research papers.
 ```
 
-Each commit is a restore point you can return to anytime.
+Claude will create a custom slash command in your `.claude/commands/` folder. Now you can start your next research paper by simply typing `/research-paper [your topic]`!
 
 ## The Complete Workflow
 
-1. **Research & Plan** - Claude searches, organizes findings, creates outline
-2. **Draft** - Claude writes the paper based on your plan
-3. **Revise** - You add your voice, request improvements from Claude
-4. **Finalize** - Polish and save final version
-5. **Commit** - Save at each phase to create restore points
+1. **Research** - Claude searches for general information on your topic
+2. **Brainstorm** - Review findings and pick your angle/perspective
+3. **Focused Research** - Claude finds targeted data for your chosen angle
+4. **Plan** - Claude creates a detailed outline based on your perspective
+5. **Draft** - Claude writes the full paper with references
+6. **Revise Manually** - You add your voice and make changes
+7. **Polish with AI** - Claude improves specific sections
+8. **Add Abstract** - Claude creates executive summary
+9. **Proofread with AI** - Claude fixes errors and improves flow
+10. **Commit** - Save at each phase to create restore points
+11. **Create Slash Command** - Save the workflow for future papers
 
 Version control means you can experiment fearlessly—return to any previous version anytime.
 
 ## Next Steps
 
-Try writing more research papers using this workflow:
+Now that you have the `/research-paper` slash command, try writing more papers:
 
-- **Technology topics:** "Impact of social media on teen mental health", "Electric vehicles and climate change"
-- **Business topics:** "Remote work productivity", "Gig economy and worker rights"
-- **Science topics:** "CRISPR gene editing ethics", "Renewable energy adoption challenges"
-- **Longer papers:** Ask Claude to create a 5-page paper with more detailed sections
+- **Technology topics:** `/research-paper "Impact of social media on teen mental health"`
+- **Business topics:** `/research-paper "Remote work productivity"`
+- **Science topics:** `/research-paper "CRISPR gene editing ethics"`
+- **Longer papers:** Tell Claude to create a 5-page paper with more detailed sections
 
-Remember: Research & Plan → Draft → Revise → Finalize. Commit after each phase.
+The slash command will guide you through the entire workflow automatically!
+
+Remember: Research → Brainstorm → Focused Research → Plan → Draft → Revise Manually → Polish with AI → Add Abstract → Proofread with AI → Save as Slash Command. Commit after each phase.
 
 ## Troubleshooting
 
 - **"not a git repository" error:** Make sure you're in your project folder (`cd ~/Documents/ai-workplace-research`)
 - **Claude search results seem outdated:** Specify "search for 2024-2025 data on [topic]"
-- **Draft is too long/short:** Tell Claude: "Make this 2 pages, approximately 1000 words"
+- **Draft is too long/short:** Tell Claude: "Make this 2 pages, approximately 1400 words"
 - **Can't find files:** In terminal, type `ls` to list all files in current folder
 - **Want to see what changed:** In Claude Code, type `show me what changed since last commit`
 
@@ -161,9 +314,16 @@ Claude handles research, writing, and Git operations through natural language—
 ## Quick Summary
 
 - **Setup:** One-time project and Git initialization
-- **Research & Plan:** Claude searches and creates your outline
-- **Draft:** Claude writes the paper
-- **Revise:** You add your voice, Claude improves sections
+- **Research:** Claude searches for general information
+- **Brainstorm:** Pick your angle from the research
+- **Focused Research:** Claude finds targeted data for your angle
+- **Plan:** Claude creates outline based on your perspective
+- **Draft:** Claude writes the paper with references
+- **Revise Manually:** You add your voice and make changes
+- **Polish with AI:** Claude improves specific sections
+- **Add Abstract:** Claude creates executive summary
+- **Proofread with AI:** Claude fixes errors and improves flow
+- **Create Slash Command:** Save workflow for future papers
 - **Commit:** Save work at each phase with "commit these changes"
 - **Safety:** Return to any previous version anytime
 

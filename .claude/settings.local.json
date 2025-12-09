@@ -20,7 +20,9 @@
       "Bash(git add:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nPolish VS Code tutorial and add GitHub Copilot AI section\n\nEnhanced the VS Code Getting Started guide following tutorial template best practices and added comprehensive AI features coverage. Replaced keyboard shortcuts with menu-based instructions for better beginner accessibility, and added Step 8 covering GitHub Copilot Chat integration.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git config:*)",
-      "Bash(git diff:*)"
+      "Bash(git diff:*)",
+      "WebFetch(domain:aimaker.substack.com)",
+      "WebFetch(domain:www.producttalk.org)"
     ],
     "deny": [],
     "ask": []
