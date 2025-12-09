@@ -9,7 +9,7 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 - **Claude Code** - AI assistant that searches the web, organizes research, drafts content, and handles version control through simple requests
 - **Git** - Tracks every change to your files, creating restore points (commits) you can return to anytime
 - **Commit** - A snapshot of your project at a specific point in time with a description of what changed (e.g., "Add research notes", "Complete first draft")
-- **Research Paper Workflow** - Research → Brainstorm → Focused Research → Plan → Draft → Revise manually → Polish with AI → Add Abstract → Proofread with AI  
+- **Research Paper Workflow** - Research → Brainstorm → Focused Research → Plan → Draft → Revise manually → Polish with AI → Add Abstract → Improve Title → Proofread with AI  
 - **Use AI as an assistant** for research, brainstorming, drafting, editing
 
 ## What You'll Need
@@ -206,25 +206,28 @@ commit these changes
 
 **Seventh save point created!**
 
-## Step 10: Immprove title
+## Step 10: Improve Title
 
-Ask Claude to give you a few options for title:
+Ask Claude to give you a few options for the title:
 
 ```
-Give me a few options for title. Make it more appealing.
+Give me a few options for the title. Make it more appealing.
 ```
 
-Select a tile. Add your own touch. Edit the paper and commit:
+Select a title. Add your own touch. Edit the paper and commit:
+
 ```
-I like the first option. But slightly change it to xxxx.  Edit the file and commit. 
+I like the first option. But slightly change it to [your modification]. Edit the file and commit.
 ```
+
+**Eighth save point created!**
 
 ## Step 11: Proofread with AI
 
 Ask Claude to do a final proofread:
 
 ```
-Do a final proofread of  the paper:
+Do a final proofread of the paper:
 - Fix any spelling and grammar errors
 - Ensure consistent formatting throughout
 - Verify all reference numbers [1], [2]... match the References section
@@ -266,9 +269,10 @@ Claude will create a custom slash command in your `.claude/commands/` folder. No
 6. **Revise Manually** - You add your voice and make changes
 7. **Polish with AI** - Claude improves specific sections
 8. **Add Abstract** - Claude creates executive summary
-9. **Proofread with AI** - Claude fixes errors and improves flow
-10. **Commit** - Save at each phase to create restore points
+9. **Improve Title** - Claude suggests title options, you customize
+10. **Proofread with AI** - Claude fixes errors and verifies references
 11. **Create Slash Command** - Save the workflow for future papers
+12. **Commit** - Save at each phase to create restore points
 
 Version control means you can experiment fearlessly—return to any previous version anytime.
 
