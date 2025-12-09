@@ -23,6 +23,7 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 ## Step 1: Set Up Project and Start Claude Code
 
 If you've completed the [Windows tutorial](./Claude_Code_Git_Windows.md) or [Mac tutorial](./Claude_Code_Git_Mac.md), you already have Git configured. Now create a new project folder for your research paper.
+We also configure git for version control before starting Claude Code.
 
 **Windows (WSL Ubuntu):**
 ```bash
@@ -30,15 +31,19 @@ cd /mnt/c/Users/YOUR_USERNAME/Documents
 mkdir ai-workplace-research
 cd ai-workplace-research
 git init
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
 claude
 ```
 
-**Mac:**
+**Mac, Linux, or running inside Docker:**
 ```bash
 cd ~/Documents
 mkdir ai-workplace-research
 cd ai-workplace-research
 git init
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
 claude
 ```
 
