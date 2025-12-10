@@ -10,6 +10,7 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 - **AI assistant** - Human makes key decisions while AI does the tedious work
 - **Claude Code** - Agentic AI system that searches the web, organizes research, drafts content, and handles version control through simple requests
 - **Git** - Tracks every change to your files, creating restore points (commits) you can return to anytime
+- **slash command** - A customized, detailed prompt that can be reused in Claude Code
 
 ## What You'll Need
 
@@ -79,9 +80,11 @@ Claude searches the web and organizes findings. Review `general_research.md` in 
 ```
 commit these changes
 ```
-
 **First save point created!** A commit is a snapshot of your work—like a save point in a video game. You can always return to this exact version later. 
 
+```
+Give me a brief summary.
+```
 ## Step 3: Read the Sources
 Read through the research document and click through to the original sources to verify the information. Open the file in **VS Code**:
 1. Go to File → **Open Folder** → navigate to the `ai_research` folder
@@ -184,8 +187,6 @@ Save your changes, then commit:
 commit these changes
 ```
 
-**Fifth save point created!**
-
 ## Step 9: Polish with AI
 
 Ask Claude to improve specific sections:
@@ -205,8 +206,6 @@ Review Claude's changes. If satisfied, commit:
 commit these changes
 ```
 
-**Sixth save point created!**
-
 ## Step 10: Add an Abstract
 
 Ask Claude to add a short executive summary at the beginning:
@@ -222,8 +221,6 @@ Claude will add the abstract. Review and edit to ensure it accurately captures y
 commit these changes
 ```
 
-**Seventh save point created!**
-
 ## Step 11: Improve Title
 
 Ask Claude to give you a few options for the title:
@@ -237,8 +234,6 @@ Select a title. Add your own touch. Edit the paper and commit:
 ```
 I like option #2 [your choice]. Edit the file and commit.
 ```
-
-**Eighth save point created!**
 
 ## Step 12: Check References (Optional)
 Ask Claude to verify your citations are consistent and complete:
@@ -281,14 +276,16 @@ Save this workflow as a reusable slash command for your next research paper:
 
 ```
 Create a slash command called /research-paper that guides me through
-this entire workflow. Save it so I can use it for future research papers.
+this entire workflow. Save it so I can use it for future research papers on various topics.
 ```
 
-Claude will create a custom slash command in your `.claude/commands/` folder. Now you can start your next research paper by simply typing `/research-paper [your topic]`!
+Claude will create a custom slash command in your `.claude/commands/` folder. It is a Markdown file containing a prompt. You can start your next research paper by simply typing `/research-paper [your topic]`!
 
-## Step 15: Get Fresh Feedback
+## Step 15: Get Feedback
 
-Clear Claude's memory to get unbiased feedback on your paper. Type:
+LLMs have no memory. For each response, we have to send all our previous conversations in the chat session for context. As the interaction gets longer, we need to be aware of the length of the context. If it is unrelated, or we can provide a cleaner context, we will benefit from a fresh start.
+
+Clear Claude's memory to get feedback on your paper. Type:
 
 ```
 /clear
@@ -300,11 +297,8 @@ This removes all conversation history, so Claude will read your paper with fresh
 Read paper.md and give me honest feedback. 
 ```
 
-Claude will critique your paper without being influenced by having written it. Make any final revisions based on the feedback, then commit:
+Claude will critique your paper without being influenced by having written it. Make any final revisions based on the feedback.
 
-```
-commit these changes
-```
 
 ## The Complete Workflow
 
@@ -334,7 +328,7 @@ Now that you have the `/research-paper` slash command, try writing more papers:
 - **Science:** `/research-paper "CRISPR gene editing ethics"`
 - **Longer papers:** Tell Claude to create a 5-page paper with more detailed sections
 
-The slash command will guide you through the entire workflow automatically!
+The slash command will guide you through the entire workflow automatically! Don't forget to clear the memory when you are switching topics. 
 
 ## Troubleshooting
 
