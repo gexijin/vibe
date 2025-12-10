@@ -24,33 +24,45 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 
 If you've completed the [Windows tutorial](./Claude_Code_Git_Windows.md) or [Mac tutorial](./Claude_Code_Git_Mac.md), you already have Git configured and can skip the `git config` commands below.
 
-First, navigate to a user folder. 
+First, start a terminal window and navigate to a user folder. 
 
 **Windows (WSL Ubuntu):**
+
+Start the **Ubuntu** app using the Windows **Start* button, and then search for Ubuntu. In the terminal:
+
 ```bash
 cd /mnt/c/Users/YOUR_USERNAME/Documents
 ```
 Replace `YOUR_USERNAME` with your actual Windows username. (To find it, type `whoami` in the terminal—it shows after the backslash.) 
 
 **Mac:**
+Start a terminal window, and then: 
+
 ```bash
 cd ~/Documents
 ```
 
-**Linux, or running inside Docker:**
+**Running VS Code inside Docker:**
+Start a terminal by clicking **Terminal --> New Terminal** from the main menu. Then:
 ```bash
 cd ~
 ```
 
-For all platforms, we create a new project folder for your research paper.
+For all platforms, we then create a new project folder for your research paper.
 We also configure git for version control before starting Claude Code.
 
 ```
+# Create a project folder
 mkdir ai_research
+# Enter that folder and start working
 cd ai_research
+
+# Configure for version control
 git init
 git config user.name "Your Name"
 git config user.email "your.email@example.com"
+
+# Start Claude Code
 claude
 ```
 Git is now tracking changes in this folder. Claude Code is ready.
