@@ -5,29 +5,31 @@
 Write research papers using Claude Code as an assistant for research, brainstorming, planning, drafting, and editing. Use Git to track every version. See an [example paper](./example_paper.md) created using this workflow.
 
 ## Key Concepts
-- **AI assistant** Human makes key decisions while AI does the tedious work
+
 - **Research Paper Workflow** - Research → Brainstorm → Focused Research → Outline → Draft → Revise manually → Polish with AI → Add Abstract → Improve Title → Check references → Proofread with AI  
+- **AI assistant** - Human makes key decisions while AI does the tedious work
 - **Claude Code** - Agentic AI system that searches the web, organizes research, drafts content, and handles version control through simple requests
 - **Git** - Tracks every change to your files, creating restore points (commits) you can return to anytime
 
 ## What You'll Need
 
-- Claude Code installed ([installation guide](https://code.claude.com/docs/en/installation))
+- Claude Code installed ([Windows guide](./Install_CLAUDE_Code_Win.md) | [Mac guide](./Install_Claude_Code_MacOS.md))
 - Git installed (comes with Mac/Linux, [Windows guide](https://git-scm.com/download/win))
-- Text editor (VS Code)
+- VS Code installed ([download](https://code.visualstudio.com/))
 - Terminal access
-- 35-45 minutes
+- 45-60 minutes
 
 ## Step 1: Set Up Project and Start Claude Code
 
-If you've completed the [Windows tutorial](./Claude_Code_Git_Windows.md) or [Mac tutorial](./Claude_Code_Git_Mac.md), you already have Git configured. 
-First, we navigate to a user folder. 
+If you've completed the [Windows tutorial](./Claude_Code_Git_Windows.md) or [Mac tutorial](./Claude_Code_Git_Mac.md), you already have Git configured and can skip the `git config` commands below.
+
+First, navigate to a user folder. 
 
 **Windows (WSL Ubuntu):**
 ```bash
 cd /mnt/c/Users/YOUR_USERNAME/Documents
 ```
-Replace `YOUR_USERNAME` with your actual Windows username. 
+Replace `YOUR_USERNAME` with your actual Windows username. (To find it, type `whoami` in the terminal—it shows after the backslash.) 
 
 **Mac:**
 ```bash
@@ -78,15 +80,14 @@ Claude searches the web and organizes findings. Review `general_research.md` in 
 commit these changes
 ```
 
-**First save point created!** 
+**First save point created!** A commit is a snapshot of your work—like a save point in a video game. You can always return to this exact version later. 
 
 ## Step 3: Read the Sources
-Read through the research document by opening it in **Visual Studio Code**, which includes a built-in markdown preview feature.
-- Install VS Code
-- Go to File → **Open Folder**
-- Navigate to the ai_research folder and click to open
-- Click to open the general_research.md file from the EXPLORER on the left
-- Preview: **Ctrl + Shift + V** (Windows/Linux) or **Cmd + Shift + V** (Mac)
+Read through the research document and click through to the original sources to verify the information. Open the file in **VS Code**:
+1. Go to File → **Open Folder** → navigate to the `ai_research` folder
+2. Click `general_research.md` in the Explorer panel on the left
+3. Preview the formatted document: **Ctrl + Shift + V** (Windows/Linux) or **Cmd + Shift + V** (Mac)
+4. Click the source links to read the original articles and studies
 
 ## Step 4: Brainstorm Your Angle
 
@@ -125,7 +126,7 @@ research and my chosen angle. Use bullet points for the narrative flow.
 Save as outlines.md
 ```
 
-Review the outline and **prompt to adjust** as needed. Then commit:
+Review the outline and ask Claude to adjust as needed (e.g., "Make section 2 focus more on case studies" or "Add a section on limitations"). Then commit:
 
 ```
 commit these changes
@@ -240,15 +241,16 @@ I like option #2 [your choice]. Edit the file and commit.
 **Eighth save point created!**
 
 ## Step 12: Check References (Optional)
-Ask Claude to check and verify all references:
+Ask Claude to verify your citations are consistent and complete:
 ```
-Check all references. For each listed reference:
-- Read it again using the link
-- Make sure citation information is correct
+Check all references in my paper:
+- Verify each citation number [1], [2], etc. has a matching reference
+- Verify each reference in the list is actually cited in the paper
+- Check that author names and titles are consistent
 - Verify the cited data and examples appear in the source
-- Make sure all listed references are cited in the paper
-- Make sure all citation numbers ([1], [2], etc.) have a corresponding reference
 ```
+
+Note: Claude can only verify publicly accessible sources. For paywalled articles, manually check that your citations match what you read.
 
 ## Step 13: Proofread with AI
 
@@ -271,18 +273,7 @@ commit these changes
 
 To view your complete writing journey, type: `show my commit history`
 
-In VS Code, preview the Markdown file with **Ctrl + Shift + V** (Windows/Linux) or **Cmd + Shift + V** (Mac). From the preview, select all, copy, and paste into Microsoft Word—the formatting will be retained.
-
-## Step 14: Create a Slash Command for Future Papers
-
-Save this workflow as a reusable slash command for your next research paper:
-
-```
-Create a slash command called /research-paper that guides me through
-this entire workflow. Save it so I can use it for future research papers.
-```
-
-Claude will create a custom slash command in your `.claude/commands/` folder. Now you can start your next research paper by simply typing `/research-paper [your topic]`!
+**Export to Word:** In VS Code, open the markdown preview with **Ctrl + Shift + V** (Windows/Linux) or **Cmd + Shift + V** (Mac). Click inside the preview pane, press **Ctrl + A** (or **Cmd + A** on Mac) to select all, then **Ctrl + C** (or **Cmd + C**) to copy. Paste into Microsoft Word—the formatting will be retained.
 
 ## The Complete Workflow
 
@@ -298,22 +289,28 @@ Claude will create a custom slash command in your `.claude/commands/` folder. No
 10. **Improve Title** - Claude suggests title options, you customize
 11. **Check References** - (Optional) Claude verifies all citations
 12. **Proofread with AI** - Claude fixes errors and improves flow
-13. **Create Slash Command** - Save the workflow for future papers
 
-Commit at each phase to create restore points.
-
-Version control means you can experiment fearlessly—return to any previous version anytime.
+Commit at each phase to create restore points. Version control means you can experiment fearlessly—return to any previous version anytime.
 
 ## Next Steps
 
-Now that you have the `/research-paper` slash command, try writing more papers:
+Try writing more papers on different topics:
 
-- **Technology topics:** `/research-paper "Impact of social media on teen mental health"`
-- **Business topics:** `/research-paper "Remote work productivity"`
-- **Science topics:** `/research-paper "CRISPR gene editing ethics"`
+- **Technology:** "Impact of social media on teen mental health"
+- **Business:** "Remote work productivity"
+- **Science:** "CRISPR gene editing ethics"
 - **Longer papers:** Tell Claude to create a 5-page paper with more detailed sections
 
-The slash command will guide you through the entire workflow automatically!
+## Advanced: Create a Slash Command (Optional)
+
+Once you're comfortable with the workflow, you can save it as a reusable command:
+
+```
+Create a slash command called /research-paper that guides me through
+this entire workflow. Save it so I can use it for future research papers.
+```
+
+Claude will create a custom slash command in your `.claude/commands/` folder. Then start future papers by typing `/research-paper [your topic]`.
 
 ## Troubleshooting
 
