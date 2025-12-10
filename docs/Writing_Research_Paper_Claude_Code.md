@@ -80,20 +80,27 @@ Claude searches the web and organizes findings. Review `general_research.md` in 
 commit these changes
 ```
 
-**First save point created!**
+**First save point created!** 
 
-## Step 3: Brainstorm Your Angle
+## Step 3: Read the sources.
+Read through the research document by openning it in a text Editor such as **Visual Studio Code**.  It includes a built-in markdown preview feature.
+- Install VS Code 
+- Go to File and then select **Open Foler**
+- Navigate to the ai_research folder and click to open
+- Click to open the general_research.md file from the EXPLORER on the top left. 
+- Ctrl + Shift + V to preview
 
-Read through the research and decide on your perspective. Ask Claude to help brainstorm:
+## Step 4: Brainstorm Your Angle
+
+Ask Claude to help brainstorm:
 
 ```
-Based on this research, brainstorm 3-4 different angles or perspectives
-I could take for this paper. 
+Based on this research, suggest 3-4 angles I could take for this paper.
 ```
 
 Review the angles and pick the one that interests you most. 
 
-## Step 4: Focused Research
+## Step 5: Focused Research
 
 Now that you have your angle, ask Claude for targeted research:
 
@@ -110,15 +117,15 @@ commit these changes
 
 **Second save point created!**
 
-## Step 5: Create Your Plan
+## Step 6: Create Your Plan
 
 Ask Claude to create an outline based on your chosen angle:
 
 ```
-Create a brief outline for my 2-page paper based on the focused
-research and my chosen angle. Just give me the narrative in bullet points.
+Give me 3 options for an brief outline for my paper based on the focused
+research and my chosen angle.  Use bullet points for the narrative flow.
+Save as outlines.md
 
-Give me a few options.
 ```
 
 Review the outline and **prompt to adjust** as needed. Then commit:
@@ -127,14 +134,16 @@ Review the outline and **prompt to adjust** as needed. Then commit:
 commit these changes
 ```
 
-**Third save point created!**
+**Third save point created!** If we don't like the paper in the end, we can revert to this point to start over with a different option. 
 
-## Step 6: Draft the Paper
+## Step 7: Draft the Paper
 
-Ask Claude to write the full draft:
+Select your outline and ask Claude to write the full draft:
 
 ```
-Write a 1.5 page research paper based on the outline and research.
+I like outline [ #2, your chosen option ]. 
+
+Write a ~1,000 word research paper based on the outline and research.
 
 Structure:
 - Introduction: Hook, context, thesis statement
@@ -152,8 +161,6 @@ Citations:
 - Include 5-15 references
 - Add a References section at the end
 
-Length: ~1,000 words
-
 Save as paper.md
 ```
 
@@ -165,7 +172,7 @@ commit these changes
 
 **Fourth save point created!**
 
-## Step 7: Revise Manually
+## Step 8: Revise Manually
 
 Open `paper.md` in your text editor. Read through carefully and make your own revisions:
 - Add your personal voice and insights
@@ -181,7 +188,7 @@ commit these changes
 
 **Fifth save point created!**
 
-## Step 8: Polish with AI
+## Step 9: Polish with AI
 
 Ask Claude to improve specific sections:
 
@@ -190,7 +197,7 @@ Make the introduction more engaging with a compelling hook.
 ```
 
 ```
-Strengthen the conclusion with a clear call to action.
+Strengthen the conclusion with a clear call to action. Do not increase its overall length.
 ```
 
 
@@ -200,15 +207,13 @@ Review Claude's changes. If satisfied, commit:
 commit these changes
 ```
 
-**Sixth save point created!**
-
-## Step 9: Add an Abstract
+## Step 10: Add an Abstract
 
 Ask Claude to add a short executive summary at the beginning:
 
 ```
-Add an abstract at the beginning of the paper. Write 4-5 sentences
-that summarize the main argument, key findings, and conclusion.
+Add an abstract at the beginning of the paper. Write 2-3 short sentences
+that summarize the paper.
 ```
 
 Claude will add the abstract. Review and edit to ensure it accurately captures your paper's essence. Then commit:
@@ -217,9 +222,9 @@ Claude will add the abstract. Review and edit to ensure it accurately captures y
 commit these changes
 ```
 
-**Seventh save point created!**
 
-## Step 10: Improve Title
+
+## Step 11: Improve Title
 
 Ask Claude to give you a few options for the title:
 
@@ -230,12 +235,21 @@ Give me a few options for the title. Make it more appealing.
 Select a title. Add your own touch. Edit the paper and commit:
 
 ```
-I like the first option. But slightly change it to [your modification]. Edit the file and commit.
+I like option #XXX. Edit the file and commit.
 ```
 
-**Eighth save point created!**
+## Step 12: Check references (Optional)
+Ask Claude to check and verify all references.
+```
+Check all references. For each listed reference:
+- Read it again using the link 
+- Make sure citation information is correct
+- The cited data, example, and other information are in the source
+- Make sure all the listed references are cited.
+- Make sure all the citation numbers ([1], [2], etc.) in the paper has a corresponding reference
+```
 
-## Step 11: Proofread with AI
+## Step 13: Proofread with AI
 
 Ask Claude to do a final proofread:
 
@@ -243,9 +257,7 @@ Ask Claude to do a final proofread:
 Do a final proofread of the paper:
 - Fix any spelling and grammar errors
 - Ensure consistent formatting throughout
-- Verify all reference numbers [1], [2]... match the References section
-- Verify all cited references actually exist.
-- Improve any awkward sentences for better flow
+- Check flow and transition
 ```
 
 Review Claude's changes, then commit the final version:
@@ -254,20 +266,15 @@ Review Claude's changes, then commit the final version:
 commit these changes
 ```
 
-**Final version saved!**
+In VS Code, you can preview the Markdown file by Ctrl + Shift + V. In the preview mode, you can select the entire paper, and copy. Then paste to Microsoft Word. The format will be retained. 
 
-To view your complete writing journey anytime, type: `show my commit history`
-
-## Step 12: Create a Slash Command for Future Papers
+## Step 14: Create a Slash Command for Future Papers
 
 Save this workflow as a reusable slash command for your next research paper:
 
 ```
 Create a slash command called /research-paper that guides me through
-this entire workflow: initial research, brainstorm angles, focused
-research, create outline, draft paper with references, manual revision,
-AI polish, add abstract, and AI proofread. Save it so I can use it for
-future research papers.
+this entire workflow. Save it so I can use it for future research papers.
 ```
 
 Claude will create a custom slash command in your `.claude/commands/` folder. Now you can start your next research paper by simply typing `/research-paper [your topic]`!
