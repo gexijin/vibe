@@ -7,8 +7,9 @@ You've installed WSL and Claude Code on your Windows machine - now you want a vi
 ## Key Concepts
 
 - **VS Code** - A free code editor from Microsoft that runs on Windows but can connect to WSL
-- **WSL Extension** - Lets VS Code edit files stored in your Linux environment
-- **Integrated Terminal** - A terminal panel inside VS Code that runs in your WSL environment
+- **WSL Extension** - Connects VS Code to your Linux environment so you can run Linux tools like Claude Code
+- **Integrated Terminal** - A terminal panel inside VS Code that runs in your WSL (Linux) environment
+- **/mnt/c/** - How WSL accesses your Windows files (e.g., `/mnt/c/Users/...` = `C:\Users\...`)
 
 ## What You'll Need
 
@@ -77,6 +78,7 @@ The first time you connect, VS Code installs a small server in WSL. This takes a
 
 ## Step 7: Start Claude Code
 
+- After VS Code reloads, open a new terminal: click **Terminal** in the menu bar, then **New Terminal**
 - In the terminal panel, type:
   ```
   claude
@@ -118,9 +120,9 @@ VS Code remembers your recent folders, so Option A with Open Recent is usually t
 ## Workflow Overview
 
 - **VS Code** runs on Windows and provides the visual editor interface
-- **WSL Extension** connects VS Code to your Ubuntu Linux environment
+- **WSL Extension** connects VS Code to Ubuntu so you can run Linux tools
 - **Integrated Terminal** runs Claude Code inside WSL
-- Your code files live in WSL (Linux) but you edit them through VS Code (Windows)
+- Your files stay in Windows (Documents folder) - WSL accesses them via `/mnt/c/`
 - Edit files in the editor, chat with Claude Code in the terminal - best of both worlds
 
 ---
