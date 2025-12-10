@@ -6,7 +6,7 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 
 ## Key Concepts
 
-- **Research Paper Workflow** - Research → Brainstorm → Focused Research → Outline → Draft → Revise manually → Polish with AI → Add Abstract → Improve Title → Check references → Proofread with AI  
+- **Workflow** - Research → Brainstorm → Focused Research → Outline → Draft → Revise manually → Polish with AI → Add Abstract → Improve Title → Check references → Proofread with AI  
 - **AI assistant** - Human makes key decisions while AI does the tedious work
 - **Claude Code** - Agentic AI system that searches the web, organizes research, drafts content, and handles version control through simple requests
 - **Git** - Tracks every change to your files, creating restore points (commits) you can return to anytime
