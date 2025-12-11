@@ -53,7 +53,7 @@ For Windows via WSL:
   /mnt/c/Users/YOUR_USERNAME/Documents/ai_research
   ```
   Replace `YOUR_USERNAME` with your Windows username (e.g., `John.Smith`)
-- Click **OK**. VS Code reloads with your `test_claude` folder 
+- Click **OK**. VS Code reloads with your `ai_research` folder 
 
 
 For Mac:

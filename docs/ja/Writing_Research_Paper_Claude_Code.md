@@ -53,7 +53,7 @@ WSL経由のWindowsの場合：
   /mnt/c/Users/YOUR_USERNAME/Documents/ai_research
   ```
   `YOUR_USERNAME`をWindowsのユーザー名に置き換えてください（例：`John.Smith`）
-- **OK**をクリック。VS Codeが`test_claude`フォルダでリロードされます
+- **OK**をクリック。VS Codeが`ai_research`フォルダでリロードされます
 
 
 Macの場合：
