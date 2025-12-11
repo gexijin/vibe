@@ -352,7 +352,7 @@
     <div class="container">
         <header>
             <h1>Vibe Working for Beginners</h1>
-            <p class="subtitle">Quick 15-minute tutorials for Claude Code, a powerful AI for coding, research, & much more</p>
+            <p class="subtitle">15-minute tutorials for Claude Code, a powerful AI for coding, research, & more</p>
         </header>
 
         <div class="graph-container">
@@ -369,7 +369,8 @@
             <p class="progress-counter" id="progress-counter"></p>
             <p class="learning-path-hint" id="learning-path-hint"> Pick Windows or Mac.<br>Start with Basic, then choose R or Python. <br> Learning path: from left to right & top to bottom.</p>
         </div>
-
+        <p>A set of hands-on, focused tutorials that introduces a set of tools to efficiently run Claude Code on your laptop: Visual Studio Code as an editor, Git and GitHub Desktop for Version Control, WSL and Docker for running inside virtual environments.</p>
+        <br>
         <section class="section">
             <h2>All Tutorials</h2>
             <ol class="tutorial-list">
@@ -618,7 +619,7 @@
             if (visibleCompleted > 0) {
                 counter.textContent = `${visibleCompleted}/${visibleTotal} completed`;
             } else if (visibleTotal < Object.keys(tutorials).length) {
-                counter.textContent = `0/${visibleTotal} visible`;
+                counter.textContent = `0/${visibleTotal} completed`;
             } else {
                 counter.textContent = '';
             }
