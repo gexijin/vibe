@@ -335,7 +335,7 @@
     <div class="container">
         <header>
             <h1>Vibe Working for Beginners</h1>
-            <p class="subtitle">Quick 15-minute tutorials to run Claude Code, a powerful AI agents, locally</p>
+            <p class="subtitle">Quick 15-minute tutorials to run Claude Code, an AI agent for coding & other tasks</p>
         </header>
 
         <div class="graph-container">
@@ -344,9 +344,9 @@
                 <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="Show Mac tutorials">🍎 Mac</button>
             </div>
             <div class="filter-controls-right">
+                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="Not coding related. Installation and Git basics.">Basic</button>
                 <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="Show R tutorials">📊 R</button>
                 <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Show Python tutorials">🐍 Python</button>
-                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="Not coding related. Installation and Git basics.">Docs</button>
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
@@ -530,17 +530,17 @@
             12: { x: 160, y: -60 },  // Claude Code + Git (Mac)
             3: { x: 160, y: 20 },    // VS Code Basics
             5: { x: 160, y: 120 },   // R in VS Code
-            6: { x: 160, y: 165 },   // Python in VS Code
+            6: { x: 160, y: 135 },   // Python in VS Code
             // Level 2 - Advanced
             14: { x: 320, y: -90 },  // Claude Code in VS Code (Win)
             15: { x: 320, y: -30 },  // Claude Code in VS Code (Mac)
             9: { x: 320, y: 30 },    // GitHub Desktop + Claude
             7: { x: 320, y: 120 },   // R via Docker
-            8: { x: 320, y: 165 },   // Python via Docker
+            8: { x: 320, y: 135 },   // Python via Docker
             // Level 3 - Projects & Capstone
             13: { x: 480, y: -60 },  // Research Paper with Claude
             10: { x: 480, y: 90 },   // Vibe Coding in R
-            16: { x: 480, y: 150 }   // Vibe Coding in Python
+            16: { x: 480, y: 120 }   // Vibe Coding in Python
         };
 
         // Get label with checkmark if completed
