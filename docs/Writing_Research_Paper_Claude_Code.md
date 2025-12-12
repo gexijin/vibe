@@ -26,14 +26,14 @@ Create a folder for your research paper:
 
 Everything about this project happens in this folder. 
 
-## Step 2 Start VS Code
+## Step 2: Start VS Code
 For Windows:
 - Click the **Windows Start button** (bottom-left corner of your screen)
 - Type `Visual Studio Code` or `VS Code` in the search box
 - Click on **Visual Studio Code** when it appears in the search results
 - VS Code opens with a Welcome tab - you can close this tab
 - Look at the bottom-left corner of VS Code - you'll see a blue or green icon
-- Click this icon (or press `F1` and type "WSL")
+- Click this icon to open the remote connection menu
 - Select **Connect to WSL** from the menu
 - VS Code will reload and connect to your Ubuntu installation
 - The bottom-left corner should now show **WSL: Ubuntu**
@@ -50,10 +50,10 @@ For Windows via WSL:
 - A **Open Folder** dropdown appears in the top center. 
 - Find your folder by typing:
   ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  /mnt/c/Users/YOUR_USERNAME/Documents/ai_research
   ```
   Replace `YOUR_USERNAME` with your Windows username (e.g., `John.Smith`)
-- Click **OK**. VS Code reloads with your `test_claude` folder 
+- Click **OK**. VS Code reloads with your `ai_research` folder 
 
 
 For Mac:
@@ -237,9 +237,9 @@ Do a final proofread of the paper:
 
 Review Claude's changes.
 
-**Export to Word:** In VS Code, open the markdown preview with **Ctrl + Shift + V** (Windows/Linux) or **Cmd + Shift + V** (Mac). Click inside the preview pane, press **Ctrl + A** (or **Cmd + A** on Mac) to select all, then **Ctrl + C** (or **Cmd + C**) to copy. Paste into Microsoft Word—the formatting will be retained.
+**Export to Word:** In VS Code, right-click on the `paper.md` tab and select **Open Preview**. Click inside the preview pane, then click **Edit > Select All** and **Edit > Copy**. Paste into Microsoft Word—the formatting will be retained.
 
-## Step 16: Create a Slash Command for Future Papers
+## Step 17: Create a Slash Command for Future Papers
 
 Save this workflow as a reusable slash command for your next research paper:
 
@@ -314,5 +314,7 @@ The slash command will guide you through the entire workflow automatically! Don'
 - `cite all sources in APA format` - Format references
 
 Claude handles research and writing through natural language—no commands to memorize!
+
+---
 
 Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 9, 2025.

@@ -14,7 +14,7 @@ You're coding with AI assistance. It makes changes to your files. Sometimes the 
 ## What You'll Need
 
 - Finished [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
-- 20 minutes
+- 30 minutes
 
 ## Step 1: Open Terminal
 
@@ -60,7 +60,7 @@ Git needs to know who you are for commit messages.
   git config --global user.email "your.email@example.com"
   ```
 
-Using your name and email helps you identify who made changes when multiple persons work on this.
+Using your name and email helps you identify who made changes when multiple people work on this.
 
 ## Step 4: Navigate to Your Documents Folder
 
@@ -160,7 +160,6 @@ You've created your first save point! You can always return to this working vers
 
 We created a 2nd save point. This version has the two buttons working.
 
-
 ## Step 12: Add Another Button
 
 - In Claude Code, type:
@@ -209,6 +208,7 @@ Claude throws away the new changes we don't like. The timer works again with jus
   ```
   Save these changes.
   ```
+
 ## Step 16: View Your Commit History
 
 - In Claude Code, type:
@@ -220,7 +220,7 @@ Claude displays your commits in a readable format. You'll see:
 - Your initial timer app commit
 - The preset buttons (1-min and 5-min) commit
 - The sound notification commit
-- The snooze button.
+- The snooze button commit
 
 Notice the 15-minute button attempt isn't there—you discarded it!
 
@@ -260,7 +260,7 @@ Remember: Test after each feature, commit after each success, discard failures.
 - **"not a git repository" error:** Make sure you're in the timer folder (`cd ~/Documents/timer`)
 - **Can't find timer.html in Finder:** The file is at `/Users/YOUR_USERNAME/Documents/timer/timer.html`
 - **Git commands don't work:** Make sure you completed Step 2 and installed Git
-- **Timer doesn't work:** Open browser console (press `Option (⌥) + Command (⌘) + I`, click **Console** tab), copy any red error messages, paste them to Claude
+- **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, then click the **Console** tab), copy any red error messages, paste them to Claude
 
 ## What You Can Ask Claude
 

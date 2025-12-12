@@ -41,7 +41,7 @@ Verify installation by opening a terminal and typing `python3 --version` or `pyt
 ## Step 2: Install Python Extensions in VS Code
 
 - Open VS Code
-- Click the **Extensions** icon in the left sidebar (or press `Ctrl+Shift+X` on Windows/Linux, `Cmd+Shift+X` on Mac)
+- Click the **Extensions** icon in the left sidebar (or click **View > Extensions**)
 - Search for `ms-python.python` and click **Install** on the Python extension by Microsoft
 - Pylance should install automatically with the Python extension. If not, search for `ms-python.vscode-pylance` and install it
 
@@ -58,7 +58,7 @@ The Python extension includes support for debugging, IntelliSense, code formatti
 
 VS Code needs to know which Python installation to use.
 
-- Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac) to open the Command Palette
+- Click **View** in the menu bar, then **Command Palette**
 - Type `Python: Select Interpreter` and select it
 - Choose the Python version you installed (e.g., `Python 3.12.x` or similar)
 - The selected interpreter appears in the bottom-right corner of VS Code
@@ -69,7 +69,7 @@ If you don't see your Python installation, click **Enter interpreter path** and 
 
 Virtual environments keep your project dependencies isolated.
 
-- Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
+- Click **View** in the menu bar, then **Command Palette**
 - Type `Python: Create Environment` and select it
 - Choose **Venv** (built-in virtual environment)
 - Select your Python interpreter from the list
@@ -90,7 +90,7 @@ pip install pandas matplotlib streamlit
 
 - Wait for installation to complete (may take 1-2 minutes)
 
-If `(.venv)` doesn't appear, the environment isn't active. Press `Ctrl+Shift+P` and run `Python: Select Interpreter`, then choose the interpreter with `('.venv': venv)` next to it.
+If `(.venv)` doesn't appear, the environment isn't active. Click **View > Command Palette**, run `Python: Select Interpreter`, then choose the interpreter with `('.venv': venv)` next to it.
 
 ## Step 7: Write Your First Python Script
 
@@ -190,11 +190,11 @@ streamlit run app.py
 ## Step 11: Try Debugging
 
 - In `analysis.py`, click to the left of line number 8 (the `print(iris.head())` line) to set a breakpoint (red dot appears)
-- Press `F5` or click **Run > Start Debugging**
+- Click **Run** in the menu bar, then **Start Debugging**
 - Select **Python File** when prompted
 - Code execution pauses at the breakpoint
 - Use the debug toolbar to step through code, inspect variables, and see the call stack
-- Press `F5` again to continue execution
+- Click **Run > Continue** to resume execution
 
 ## Next Steps
 
@@ -208,7 +208,7 @@ streamlit run app.py
 
 - **"Python is not recognized" in terminal**: Python isn't in your system PATH. On Windows, reinstall Python and check "Add python.exe to PATH". On Mac/Linux, use `python3` instead of `python`. Restart VS Code after fixing.
 
-- **No interpreter found**: Click the interpreter selector in the bottom-right corner of VS Code, or press `Ctrl+Shift+P` and run `Python: Select Interpreter`. If your Python installation doesn't appear, select **Enter interpreter path** and browse to your Python executable.
+- **No interpreter found**: Click the interpreter selector in the bottom-right corner of VS Code, or click **View > Command Palette** and run `Python: Select Interpreter`. If your Python installation doesn't appear, select **Enter interpreter path** and browse to your Python executable.
 
 - **Virtual environment not activating**: VS Code should auto-activate it when you open a terminal. If not, manually activate: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`. Verify by seeing `(.venv)` in your terminal prompt.
 
@@ -232,5 +232,3 @@ VS Code provides a modern, lightweight environment for Python development with t
 ---
 
 Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
-
-[Other tutorials](https://github.com/gexijin/vibe)

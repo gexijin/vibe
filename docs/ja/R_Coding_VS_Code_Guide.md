@@ -273,6 +273,4 @@ VS CodeはRStudioに代わるモダンで軽量な環境を提供し、以下の
 
 ---
 
-推定完了時間：15分。[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月7日に作成。
-
-[その他のチュートリアル](https://github.com/gexijin/vibe)
+[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月7日に作成。

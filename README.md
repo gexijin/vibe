@@ -1,5 +1,9 @@
 ## Vibe Coding in VS Code + Docker Container for R
 
+[ARM64 CPU](https://github.com/gexijin/vibe/tree/ARM64)
+
+[Vibe coding tutorials](https://gexijin.github.io/vibe/)
+
 This minimal setup enables both Claude Code and OpenAI's Codex to run inside a Docker container. To support Shiny apps, we use the [rocker/shiny-verse](https://rocker-project.org/images/versioned/shiny.html) image.   A more advanced version for general development is provided by [Claude](https://code.claude.com/docs/en/devcontainer).
 
 0. (Windows only) Install WSL2 (Windows Subsystem for Linux 2)

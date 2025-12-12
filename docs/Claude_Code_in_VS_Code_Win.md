@@ -43,7 +43,7 @@ You've installed WSL and Claude Code on your Windows machine - now you want a vi
 ## Step 4: Connect VS Code to WSL
 
 - Look at the bottom-left corner of VS Code - you'll see a blue or green icon
-- Click this icon (or press `F1` and type "WSL")
+- Click this icon to open the remote connection menu
 - Select **Connect to WSL** from the menu
 - VS Code will reload and connect to your Ubuntu installation
 - The bottom-left corner should now show **WSL: Ubuntu**
@@ -88,7 +88,7 @@ Write a short article explaining why LLMs like to use Markdown format. Save it a
 
 After closing VS Code, here's how to get back to your WSL projects:
 
-- **Option A:** Open VS Code, click the bottom-left corner, select **Connect to WSL**, then **File > Open Recent**. Select '/mnt/c/Users/YOUR_USERNAME/Documents/test_claude[WSL:Ubuntu 24.01]`
+- **Option A:** Open VS Code, click the bottom-left corner, select **Connect to WSL**, then **File > Open Recent**. Select `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude [WSL: Ubuntu]`
 - **Option B:** Open Ubuntu App from Windows, navigate to your project in the terminal, and type `code .`
 
 VS Code remembers your recent folders, so Option A with Open Recent is usually the quickest.
@@ -99,7 +99,7 @@ VS Code remembers your recent folders, so Option A with Open Recent is usually t
 - Have Claude Code help you write new features: "Add a function that calculates the average of a list"
 - Use Claude Code to fix bugs: "This code gives an error, can you fix it?"
 - Try the Claude Code VS Code extension for a visual interface with inline diffs (search "Claude Code" in Extensions)
-- To handle bigger files more efficiently, create a folder in the WSL file system (/home/user/). From Windows, look for the Linux icon in bottom of the sidebar of File explorer. Or enter `\\wsl.localhost\' in the explorer.
+- To handle bigger files more efficiently, create a folder in the WSL file system (`/home/user/`). From Windows, look for the Linux icon at the bottom of the sidebar in File Explorer. Or enter `\\wsl.localhost\` in the address bar.
 
 ## Troubleshooting
 

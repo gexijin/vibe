@@ -96,7 +96,7 @@ A preview panel opens showing your formatted Markdown - edit on the left, see ch
 
 ## Step 7: Use the Integrated Terminal
 
-- Click **Terminal** → **New Terminal** (or press `` Ctrl+` `` with backtick)
+- Click **Terminal** → **New Terminal**
 - Try these commands:
 
 **List files:**

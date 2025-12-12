@@ -3,19 +3,29 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+
+# pass API keys and other environment variables to the container
+#  "runArgs": [
+#    "--env-file",
+#    ".devcontainer/api.env"
+#  ],
+
   "customizations": {
     "vscode": {
       "extensions": [
         "REditorSupport.r",
         "RDebugger.r-debugger",
+        "posit.shiny",
         "ms-azuretools.vscode-docker"
       ],
       "settings": {
-        "r.rterm.linux": "/usr/local/bin/R",
+        "r.rterm.linux": "/usr/bin/R",
         "r.alwaysUseActiveTerminal": true
       }
     }
   },
+  
+  "remoteUser": "shiny",
   "forwardPorts": [3838],
   "portsAttributes": {
     "3838": { "label": "Shiny app", "onAutoForward": "openBrowser" }

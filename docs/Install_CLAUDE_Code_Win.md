@@ -2,23 +2,21 @@
 
 # Install Claude Code on Windows Using WSL
 
-This guide will walk you through installing Claude Code on Windows using Windows Subsystem for Linux (WSL). WSL enables a virtual machine running Linux operating system (OS) on your Windows machine. Although you can install Claude Code natively on Windows, it works much more efficiently under Linux due to the access of many command.
+Claude Code is a powerful AI coding assistant, but Windows users face a challenge: many developer tools work better on Linux. The solution? WSL (Windows Subsystem for Linux) lets you run a full Linux environment inside Windows—like having two computers in one. This guide walks you through the complete setup so you can start coding with Claude in about 20 minutes.
 
-## Overview
+## Key Concepts
 
-- Install WSL
-- Set up Ubuntu Linux
-- Install Node.js
-- Install Claude Code
-- Configure your API key
-- Ready to use Claude Code!
+- **WSL (Windows Subsystem for Linux)** - A Windows feature that runs a real Linux system alongside Windows
+- **Ubuntu** - A popular, beginner-friendly Linux distribution we'll install through WSL
+- **PowerShell** - Windows' built-in command-line tool, used here to install WSL
+- **Node.js** - A JavaScript runtime that Claude Code requires to run
+- **Terminal** - A text-based interface for running commands (like Ubuntu's command line)
 
 ## What You'll Need
 
 - A Windows 10 (version 2004 or higher) or Windows 11 computer
-- Internet connection
 - Administrator access on your computer
-- Claude Pro/Max subscription or API key
+- Claude Pro/Max subscription or API key through Azure Foundry
 - 15 - 20 minutes
 
 ## Step 1: Check if Virtualization is Enabled
@@ -80,13 +78,7 @@ A blue window with white text will open - this is PowerShell running as administ
    - Click **Restart**
 - Your computer will restart - this takes about 1-2 minutes
 
-**What happens after restart:**
-- After you log back into Windows, wait 2-5 minutes
-- An Ubuntu terminal window should **automatically appear** to continue the installation
-- This is normal! The window opens automatically to complete the setup
-- If the window doesn't appear after 5 minutes, don't worry - just manually open Ubuntu (instructions in Step 4)
-
-**Why restart is needed:** The restart allows Windows to enable the WSL and Virtual Machine Platform features that were just installed. Without restarting, WSL won't work properly.
+**Why restart is needed:** The restart allows Windows to enable the WSL and Virtual Machine Platform features that were just installed. 
 
 **Note:** If you get an error saying the command is not recognized, your Windows version might be too old. Make sure you have Windows 10 version 2004 or higher, or Windows 11. Run Windows Update to get the latest version.
 
@@ -104,12 +96,11 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
 
 - Wait for the message: `Enter new UNIX username:`
 - Type a username (use lowercase letters and numbers only, no spaces)
-   - Example: `myname` or `john123`
+   - Example:  `john`
 - You'll see: `New password:`
-- Type a password (you won't see the characters as you type - this is normal for security)
-- You'll see: `Retype new password:`
-- Type the same password again
-- Wait for the setup to complete - you'll see a message like `Installation successful!`
+- Type a simple password (even the same as the user name `john`)
+- You won't see the characters as you type - this is normal
+- Type the same password again when prompted
 
 **Important:** Remember this username and password - you'll need them later.
 
@@ -120,39 +111,26 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
    sudo apt update
    ```
 - Type your password (the one you just created) when prompted
-   - Again, you won't see the characters as you type
-- Wait for the update to complete (1-3 minutes)
 - Next, type:
    ```
    sudo apt upgrade -y
    ```
-- Wait for all packages to upgrade (this may take 5-10 minutes)
+- Wait for all packages to upgrade (this may take 5 minutes)
 
 ## Step 6: Install Node.js
 
 Claude Code requires Node.js version 18 or higher. Follow these steps:
 
-- In the Ubuntu terminal, type these commands one at a time:
+- In the Ubuntu terminal, copy and paste these commands:
 
    First, download the nvm installer:
    ```
    wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh --no-check-certificate
-   ```
-
-   Then run the installer:
-   ```
    cat install.sh | bash
-   ```
-
-- Load nvm by typing:
-   ```
    \. "$HOME/.nvm/nvm.sh"
-   ```
-
-- Install Node.js version 24 by typing:
-   ```
    nvm install 24
    ```
+   This first downloads the nvm installer, installs it, then use it to install node.js v 24.0
 - Wait for Node.js to install (2-5 minutes)
 - Verify installation by typing:
    ```
@@ -174,7 +152,7 @@ Claude Code requires Node.js version 18 or higher. Follow these steps:
    ```
 - You should see the version number of Claude Code
 
-## Step 8: Link with Your Anthropic API
+## Step 8: Configure Your Anthropic API Connection
 
 ### Option A. Use your Claude Pro or Max subscription
 
@@ -209,61 +187,60 @@ If you have an Anthropic API key instead of a Claude subscription:
 - Close and reopen the Ubuntu terminal for the changes to take effect
 - You should now be able to use Claude Code with your API key
 
-**Important:** If you have a Claude Pro or Max subscription, do NOT set the ANTHROPIC_API_KEY environment variable. Leave it unset to use your subscription's included usage and avoid unexpected API charges.
+### Option C. Use Anthropic API via Azure Foundry
 
-### Option C. Use Anthropic API via Azure
-
-In the terminal window, paste this code to define environment variables:
+Before starting Claude Code, in the Ubuntu terminal window, paste this code to define environment variables:
 ```
 # Enable Microsoft Foundry integration
 export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
-export ANTHROPIC_FOUNDRY_RESOURCE=xxx-eastus2
+export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
-export ANTHROPIC_FOUNDRY_API_KEY=AqJqe
+export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
+```
+
+**Note:** Replace `xxxx-eastus2` with your Foundry Resource name (do not use the entire base URL). Replace `your_api_key` with your complete API key from your Azure portal.
+ 
+Then start Claude Code:
+``` 
+claude
 ```
 
 You should now be able to use Claude Code with Azure-deployed Claude models.
 
-**Note:** The API key shown above is incomplete. You'll need to get your complete API key from your Azure portal.
 
-## Step 9: Start Using Claude Code
+## Step 9: Test Claude Code
 
-You're all set! Here's how to use Claude Code:
+You're all set! To see if it works, ask a general question such as "Explain quantum computing."
 
-- In the Ubuntu terminal, type:
+## Step 10: Access Your Windows Projects
+- If you have a Windows folder called `myProject` containing the files of a project, you can access it:
    ```
-   claude
+   cd /mnt/c/Users/Username/Documents/myProject
    ```
-- You can now chat with Claude!
-- To see if it works, ask a general question such as "Explain quantum computing."
-
-## Step 10: Navigate to Your Project
-- If you have a project in your Windows folders, you can access it:
-   ```
-   cd /mnt/c/Users/Username/Documents/YourProject
-   ```
-   Replace `Username` with your actual Windows username
+   Replace `Username` with your actual Windows username.
 - Then start Claude:
    ```
    claude
    ```
 - Start by asking Claude to explain the codebase to you.
 - You can ask Claude to make changes.
-- Test your code in your prefered IDE.
+- Test your code in your preferred IDE.
 
-## How to Open Ubuntu Terminal Again
+**Note:** Claude operates inside a project folder. It saves settings in that folder. It's Claude's workspace.
 
-After closing the terminal, here's how to open it again:
+## Next Steps
 
-- Click the **Windows Start button**
-- Type `Ubuntu` in the search box
-- Click on **Ubuntu** (you'll see a circular orange icon)
-- The Ubuntu terminal will open
+- **Set up VS Code**: Follow the [VS Code Getting Started](VS_Code_Getting_Started) guide, then connect it to Claude Code with [Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win)
+- **Learn Git basics**: Add version control to your projects with [Claude Code Git on Windows](Claude_Code_Git_Windows)
+- **Try a project**: Work through [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code) to see Claude Code in action
 
 ## Troubleshooting
+
+### How to open Ubuntu terminal after closing it
+- Click the **Windows Start button**, type `Ubuntu`, and click the **Ubuntu** app (orange circle icon)
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 This error means virtualization is not enabled:
@@ -300,5 +277,6 @@ This error means virtualization is not enabled:
 - For WSL issues: [Microsoft WSL Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
 - For Claude Code issues: [Claude Code GitHub](https://github.com/anthropics/claude-code)
 
+---
 
-
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.

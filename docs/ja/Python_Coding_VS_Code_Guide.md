@@ -1,106 +1,106 @@
 [ホーム](./)
 
-# VS CodeでPythonコーディング
+# VS CodeでPythonを書く
 
-Pythonコードを書きたいけど、どのエディターを使うか迷っている、またはPyCharmより軽いものを探している。VS CodeはスイスアーミーナイフのようなもYouの - Python、R、JavaScript、その他多くの言語を1つの軽量エディターで扱えます。このチュートリアルでは、コード補完、対話型デバッグ、さらにはWebアプリまで、VS CodeでPythonをセットアップする方法を紹介します。
+「Pythonを書きたいけど、どのエディターを使えばいい？」「PyCharmは少し重い…」そんなときはVS Code。軽快なのに高機能で、PythonやR、JavaScriptなどを1つのエディターで扱えます。このガイドでは、VS CodeにPython環境を整え、補完やデバッグ、Streamlitアプリまで動かすところを体験します。
 
-## 主要な概念
+## キーワード
 
-- **[Python拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - シンタックスハイライト、デバッグ、コード実行、Jupyterノートブックサポートを提供するMicrosoftのVS Code拡張機能
-- **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)** - Python用の高速IntelliSense、型チェック、自動インポートを可能にする言語サーバー
-- **[仮想環境](https://docs.python.org/3/library/venv.html)** - システムPythonに影響を与えずにプロジェクト固有のパッケージを管理するための隔離されたPython環境
-- **[Streamlit](https://streamlit.io/)** - シンプルなPythonスクリプトで対話型Webアプリを作成するためのPythonライブラリ
+- **[Python拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - Microsoftが提供するVS Code拡張機能。構文ハイライト、デバッグ、コード実行、Jupyterノートブックのサポートを提供します
+- **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)** - 高速なインテリセンス、型チェック、自動インポートを実現する言語サーバー
+- **[仮想環境](https://docs.python.org/ja/3/library/venv.html)** - システムのPythonに影響を与えずにプロジェクト固有のパッケージを管理するための独立したPython環境
+- **[Streamlit](https://streamlit.io/)** - シンプルなPythonスクリプトでインタラクティブなWebアプリを作成できるPythonライブラリ
 
-## 必要なもの
+## 前提条件
 
-- [VS Codeの基本](./VS_Code_Getting_Started)を完了
-- Pythonとパッケージをダウンロードするためのインターネット接続
-- 15〜20分
+- [VS Codeの基本](./VS_Code_Getting_Started)を完了していること
+- Pythonとパッケージをダウンロードできるインターネット接続
+- 作業時間：15〜20分
 
-## ステップ1：Pythonをインストール
+## ステップ1：Python本体をインストール
 
-モダンなパッケージとの最高の互換性のためにPython 3.8以上が必要です。
+最新のパッケージとの互換性を確保するため、Python 3.8以降が必要です。
 
-- **Windows**：
-  - [python.org](https://www.python.org/downloads/)から最新のPythonをダウンロード
-  - インストーラーを実行
-  - Install Nowをクリックする前に**「Add python.exe to PATH」にチェック**
-  - インストール場所をメモ（通常は`C:\Users\YourName\AppData\Local\Programs\Python\Python312`）
+- **Windows**:
+  - [python.org](https://www.python.org/downloads/)から最新のPythonをダウンロードします
+  - インストーラーを実行します
+  - **「Add python.exe to PATH」のチェックボックスにチェックを入れてから**、Install Nowをクリックします
+  - インストール場所を確認します（通常は`C:\Users\YourName\AppData\Local\Programs\Python\Python312`）
 
-- **macOS**：
-  - [python.org](https://www.python.org/downloads/)からダウンロードしてインストーラーを実行
-  - またはHomebrewを使用：ターミナルを開いて`brew install python`と入力
-  - Homebrewパス：`/opt/homebrew/bin/python3`（Apple Silicon）または`/usr/local/bin/python3`（Intel）
+- **macOS**:
+  - [python.org](https://www.python.org/downloads/)からダウンロードしてインストーラーを実行します
+  - またはHomebrewを使用：ターミナルを開いて`brew install python`と入力します
+  - Homebrewのパス：`/opt/homebrew/bin/python3`（Apple Silicon）または`/usr/local/bin/python3`（Intel）
 
-- **Linux**：
-  - Pythonは通常プリインストールされています。`python3 --version`でバージョンを確認
-  - 必要に応じてパッケージマネージャーでインストール：`sudo apt install python3 python3-pip python3-venv`（Ubuntu/Debian）
+- **Linux**:
+  - Pythonは通常プリインストールされています。`python3 --version`でバージョンを確認します
+  - 必要に応じて、パッケージマネージャー経由でインストール：`sudo apt install python3 python3-pip python3-venv`（Ubuntu/Debian）
 
-ターミナルを開いて`python3 --version`または`python --version`と入力してインストールを確認。
+ターミナルを開いて`python3 --version`または`python --version`と入力してインストールを確認します。
 
 ## ステップ2：VS CodeにPython拡張機能をインストール
 
-- VS Codeを開く
-- 左サイドバーの**拡張機能**アイコンをクリック（またはWindows/Linuxで`Ctrl+Shift+X`、Macで`Cmd+Shift+X`を押す）
-- `ms-python.python`を検索し、MicrosoftのPython拡張機能で**インストール**をクリック
-- PylanceはPython拡張機能と一緒に自動的にインストールされるはずです。そうでない場合は`ms-python.vscode-pylance`を検索してインストール
+- VS Codeを開きます
+- 左サイドバーの**拡張機能**アイコンをクリックします（または**表示 > 拡張機能**をクリック）
+- `ms-python.python`を検索し、MicrosoftのPython拡張機能の**インストール**をクリックします
+- PylanceはPython拡張機能と一緒に自動的にインストールされるはずです。されない場合は、`ms-python.vscode-pylance`を検索してインストールします
 
-Python拡張機能にはデバッグ、IntelliSense、コードフォーマット、Jupyterノートブックのサポートが含まれています。
+Python拡張機能には、デバッグ、インテリセンス、コードフォーマット、Jupyterノートブックのサポートが含まれています。
 
 ## ステップ3：Pythonプロジェクトを作成
 
-- コンピュータに新しいフォルダを作成（例：`my-python-project`）
-- VS Codeで**ファイル > フォルダーを開く**をクリックし、新しいフォルダを選択
-- トップメニューで**ファイル > 新規ファイル**をクリック
-- **ファイル > 保存**をクリックして`analysis.py`として保存
+- コンピューター上に新しいフォルダーを作成します（例：`my-python-project`）
+- VS Codeで、**ファイル > フォルダーを開く**をクリックし、新しく作成したフォルダーを選択します
+- トップメニューの**ファイル > 新しいファイル**をクリックします
+- **ファイル > 保存**をクリックしてファイルを`analysis.py`として保存します
 
-## ステップ4：Pythonインタープリターを選択
+## ステップ4：Pythonインタープリタを選択
 
-VS Codeはどのpythonインストールを使用するか知る必要があります。
+VS CodeがどのPythonインストールを使用するかを指定する必要があります。
 
-- `Ctrl+Shift+P`（Windows/Linux）または`Cmd+Shift+P`（Mac）を押してコマンドパレットを開く
-- `Python: Select Interpreter`と入力して選択
-- インストールしたPythonバージョンを選択（例：`Python 3.12.x`など）
-- 選択したインタープリターがVS Codeの右下隅に表示されます
+- メニューバーの**表示**をクリックし、**コマンドパレット**を選択します
+- `Python: Select Interpreter`と入力して選択します
+- インストールしたPythonバージョンを選択します（例：`Python 3.12.x`など）
+- 選択したインタープリタがVS Codeの右下隅に表示されます
 
-Pythonインストールが表示されない場合は、**Enter interpreter path**をクリックしてPythonがインストールされている場所に移動してください。
+Pythonインストールが表示されない場合は、**インタープリタパスを入力**をクリックし、Pythonがインストールされている場所に移動します。
 
 ## ステップ5：仮想環境を作成
 
-仮想環境はプロジェクトの依存関係を隔離します。
+仮想環境により、プロジェクトの依存関係を分離して管理できます。
 
-- `Ctrl+Shift+P`（Windows/Linux）または`Cmd+Shift+P`（Mac）を押す
-- `Python: Create Environment`と入力して選択
-- **Venv**（組み込み仮想環境）を選択
-- リストからPythonインタープリターを選択
-- VS Codeが環境を作成するまで待つ（`.venv`フォルダが表示されます）
-- VS Codeはプロジェクトでこの環境を自動的にアクティブにします
+- メニューバーの**表示**をクリックし、**コマンドパレット**を選択します
+- `Python: Create Environment`と入力して選択します
+- **Venv**（組み込みの仮想環境）を選択します
+- リストからPythonインタープリタを選択します
+- VS Codeが環境を作成するまで待ちます（`.venv`フォルダが表示されます）
+- VS Codeがプロジェクト用にこの環境を自動的にアクティブ化します
 
-環境がアクティブな場合、ターミナルプロンプトに`(.venv)`が表示されます。
+環境がアクティブになると、ターミナルプロンプトに`(.venv)`が表示されます。
 
 ## ステップ6：必要なパッケージをインストール
 
-- **表示 > ターミナル**をクリックしてVS Codeで新しいターミナルを開く
-- ターミナルに`(.venv)`が表示され、仮想環境がアクティブであることを示すはずです
-- これらのコマンドを入力してパッケージをインストール：
+- **表示 > ターミナル**をクリックして、VS Codeで新しいターミナルを開きます
+- ターミナルに`(.venv)`が表示され、仮想環境がアクティブであることを確認します
+- 次のコマンドを入力してパッケージをインストールします：
 
 ```bash
 pip install pandas matplotlib streamlit
 ```
 
-- インストールが完了するまで待つ（1〜2分かかる場合があります）
+- インストールが完了するまで待ちます（1〜2分かかる場合があります）
 
-`(.venv)`が表示されない場合、環境がアクティブになっていません。`Ctrl+Shift+P`を押して`Python: Select Interpreter`を実行し、横に`('.venv': venv)`があるインタープリターを選択してください。
+`(.venv)`が表示されない場合、環境がアクティブになっていません。**表示 > コマンドパレット**をクリックし、`Python: Select Interpreter`を実行して、横に`('.venv': venv)`と表示されているインタープリタを選択します。
 
 ## ステップ7：最初のPythonスクリプトを書く
 
-`analysis.py`に以下のコードを入力：
+`analysis.py`に次のコードを入力します：
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# irisデータセットを読み込み
+# irisデータセットを読み込む
 url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 iris = pd.read_csv(url)
 
@@ -108,129 +108,127 @@ iris = pd.read_csv(url)
 print(iris.head())
 
 # 要約統計を生成
-print("\n要約統計:")
+print("\nSummary Statistics:")
 print(iris.describe())
 
 # ヒストグラムを作成
 plt.figure(figsize=(8, 6))
 plt.hist(iris['sepal_length'], bins=20, color='steelblue', edgecolor='white')
-plt.xlabel('がく片の長さ (cm)')
-plt.ylabel('頻度')
-plt.title('がく片の長さの分布')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Frequency')
+plt.title('Distribution of Sepal Length')
 plt.show()
 ```
 
-- **ファイル > 保存**をクリックしてファイルを保存
+- **ファイル > 保存**をクリックしてファイルを保存します
 
-## ステップ8：Pythonコードを対話的に実行
+## ステップ8：Pythonコードをインタラクティブに実行
 
-- `analysis.py`を開いた状態で、右上の**▶ Run Python File**ボタンをクリック
-- または、エディターで右クリックして**Run Python File in Terminal**を選択
-- ターミナルパネルに出力が表示されるのを見る
-- プロットを表示するヒストグラムウィンドウがポップアップします
-- 特定の行を選択して`Shift+Enter`を押すと、対話型Pythonセッションでその行だけを実行することもできます
+- `analysis.py`を開いた状態で、右上隅の**▶ Pythonファイルを実行**ボタンをクリックします
+- またはエディター内で右クリックし、**ターミナルでPythonファイルを実行**を選択します
+- 出力がターミナルパネルに表示されるのを確認します
+- ヒストグラムを表示するウィンドウがポップアップします
+- 特定の行を選択して`Shift+Enter`を押すと、その行だけをインタラクティブなPythonセッションで実行できます
 
 ## ステップ9：シンプルなStreamlitアプリを作成
 
-- 新しいファイルを作成：**ファイル > 新規ファイル**
-- `app.py`として保存
-- 以下のコードを入力：
+- 新しいファイルを作成します：**ファイル > 新しいファイル**
+- `app.py`として保存します
+- 次のコードを入力します：
 
 ```python
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title("対話型ヒストグラム")
+st.title("Interactive Histogram")
 
 # サイドバースライダー
 bins = st.sidebar.slider(
-    "ビンの数:",
+    "Number of bins:",
     min_value=5,
     max_value=50,
     value=30
 )
 
-# データを読み込み
+# データを読み込む
 url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
 iris = pd.read_csv(url)
 
 # ヒストグラムを作成
 fig, ax = plt.subplots(figsize=(8, 6))
 ax.hist(iris['sepal_length'], bins=bins, color='steelblue', edgecolor='white')
-ax.set_xlabel('がく片の長さ (cm)')
-ax.set_ylabel('頻度')
-ax.set_title('がく片の長さの分布')
+ax.set_xlabel('Sepal Length (cm)')
+ax.set_ylabel('Frequency')
+ax.set_title('Distribution of Sepal Length')
 
 # Streamlitで表示
 st.pyplot(fig)
 ```
 
-- ファイルを保存
-- ターミナルを開いて実行：
+- ファイルを保存します
+- ターミナルを開いて次のコマンドを実行します：
 
 ```bash
 streamlit run app.py
 ```
 
 - アプリがブラウザで開きます（通常は`http://localhost:8501`）
-- サイドバーでスライダーを動かすとヒストグラムが即座に更新されます
-- `Ctrl+C`をターミナルで押すとアプリを停止
+- サイドバーのスライダーを動かすと、ヒストグラムが即座に更新されます
+- アプリを停止するには、ターミナルで`Ctrl+C`を押します
 
-## ステップ10：コード補完とIntelliSenseを使用
+## ステップ10：コード補完とインテリセンスを使用
 
-- `analysis.py`で、新しい行に`iris.`と入力し始める
+- `analysis.py`で、新しい行に`iris.`と入力し始めます
 - 利用可能なすべてのメソッドと属性を含むドロップダウンが表示されます
-- `iris.gr`と入力すると`groupby()`が提案されます
-- 既存コードの`pd.read_csv`の上にマウスを置く
-- ポップアップに関数のシグネチャ、パラメータ、ドキュメントが表示されます
-- `import `と入力するとVS Codeがパッケージ名を提案します
-- 関数呼び出しを入力すると、IntelliSenseがパラメータのヒントを表示します
+- `iris.gr`と入力すると、`groupby()`が提案されます
+- 既存のコードの`pd.read_csv`にマウスを合わせます
+- 関数のシグネチャ、パラメータ、ドキュメントを表示するポップアップが表示されます
+- `import `と入力すると、VS Codeがパッケージ名を提案します
+- 関数呼び出しを入力すると、インテリセンスがパラメータヒントを表示します
 
 ## ステップ11：デバッグを試す
 
-- `analysis.py`で、行番号8（`print(iris.head())`の行）の左をクリックしてブレークポイントを設定（赤い点が表示されます）
-- `F5`を押すか、**実行 > デバッグの開始**をクリック
-- プロンプトが表示されたら**Python File**を選択
-- コード実行がブレークポイントで一時停止します
-- デバッグツールバーを使用してコードをステップ実行し、変数を検査し、コールスタックを確認
-- `F5`を再度押して実行を続行
+- `analysis.py`で、8行目（`print(iris.head())`の行）の行番号の左側をクリックしてブレークポイントを設定します（赤い点が表示されます）
+- メニューバーの**実行**をクリックし、**デバッグの開始**を選択します
+- プロンプトが表示されたら**Pythonファイル**を選択します
+- ブレークポイントでコードの実行が一時停止します
+- デバッグツールバーを使用してコードをステップ実行し、変数を検査し、コールスタックを確認します
+- **実行 > 続行**をクリックして実行を再開します
 
 ## 次のステップ
 
-- データ操作と分析のために[pandas](https://pandas.pydata.org/)を探索
-- 対話型データサイエンスのためにVS Codeで[Jupyterノートブック](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)を学ぶ
+- データ操作と分析のために[pandas](https://pandas.pydata.org/)を探索する
+- インタラクティブなデータサイエンスのためにVS Codeで[Jupyterノートブック](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)を学ぶ
 - Web APIを構築するために[Flask](https://flask.palletsprojects.com/)や[FastAPI](https://fastapi.tiangolo.com/)を試す
-- 自動コードフォーマットのために[Black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)をインストール
-- テストの作成と実行のために[pytest](https://docs.pytest.org/)を使用
+- 自動コードフォーマットのために[Black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)をインストールする
+- テストを書いて実行するために[pytest](https://docs.pytest.org/)を使用する
 
 ## トラブルシューティング
 
-- **ターミナルで「Python is not recognized」**：PythonがシステムPATHにありません。Windowsでは、Pythonを再インストールして「Add python.exe to PATH」にチェックしてください。Mac/Linuxでは、`python`の代わりに`python3`を使用してください。修正後にVS Codeを再起動。
+- **ターミナルで「Pythonが認識されません」というエラー**：PythonがシステムのPATHに含まれていません。Windowsでは、Pythonを再インストールし、「Add python.exe to PATH」にチェックを入れます。Mac/Linuxでは、`python`の代わりに`python3`を使用します。修正後はVS Codeを再起動してください。
 
-- **インタープリターが見つからない**：VS Codeの右下隅にあるインタープリターセレクターをクリックするか、`Ctrl+Shift+P`を押して`Python: Select Interpreter`を実行してください。Pythonインストールが表示されない場合は、**Enter interpreter path**を選択してPython実行ファイルを参照してください。
+- **インタープリタが見つかりません**：VS Codeの右下隅にあるインタープリタセレクターをクリックするか、**表示 > コマンドパレット**をクリックして`Python: Select Interpreter`を実行します。Pythonインストールが表示されない場合は、**インタープリタパスを入力**を選択し、Pythonの実行可能ファイルを参照します。
 
-- **仮想環境がアクティブにならない**：VS Codeはターミナルを開くと自動的にアクティブにするはずです。そうでない場合は、手動でアクティブにしてください：Windows: `.venv\Scripts\activate`、Mac/Linux: `source .venv/bin/activate`。ターミナルプロンプトに`(.venv)`が表示されることを確認してください。
+- **仮想環境がアクティブにならない**：VS Codeはターミナルを開いたときに自動的にアクティブ化します。されない場合は手動でアクティブ化します：Windows：`.venv\Scripts\activate`、Mac/Linux：`source .venv/bin/activate`。ターミナルプロンプトに`(.venv)`が表示されることで確認できます。
 
-- **IntelliSenseが動作しない**：Pylanceがインストールされ有効になっていることを確認してください。右下隅に選択したインタープリターが表示されていることを確認してください。ファイルを開いた後、Pylanceが初期化されるまで10〜20秒待ってください。問題が続く場合はVS Codeを再起動してください。
+- **インテリセンスが動作しない**：Pylanceがインストールされ、有効になっていることを確認します。右下隅に選択したインタープリタが表示されていることを確認します。Pylanceの初期化のために、ファイルを開いてから10〜20秒待ちます。問題が解決しない場合はVS Codeを再起動します。
 
-- **pip installが失敗**：仮想環境がアクティブであることを確認してください（ターミナルに`(.venv)`を探す）。Linuxでは、最初に`python3-venv`をインストールする必要があるかもしれません。Windowsでは、アンチウイルスがpipをブロックしていないか確認してください。
+- **pip installが失敗する**：仮想環境がアクティブになっていることを確認します（ターミナルに`(.venv)`が表示されているか確認）。Linuxでは、最初に`python3-venv`をインストールする必要がある場合があります。Windowsでは、ウイルス対策ソフトがpipをブロックしていないか確認します。
 
-- **Streamlitアプリが実行されない**：仮想環境にstreamlitがインストールされていることを確認してください（`pip list | grep streamlit`）。ターミナルでエラーメッセージを確認してください。ポート8501を使用している他のアプリがないことを確認してください。
+- **Streamlitアプリが実行されない**：streamlitが仮想環境にインストールされていることを確認します（`pip list | grep streamlit`）。エラーメッセージがないかターミナルを確認します。他のアプリがポート8501を使用していないことを確認します。
 
-## ワークフロー概要
+## ワークフローのまとめ
 
-VS Codeは以下の利点を持つモダンで軽量なPython開発環境を提供します：
+VS Codeは、次の利点を備えたPython開発のための現代的で軽量な環境を提供します：
 
-- **統一環境**：1つのエディターでPython、R、JavaScriptなどをコーディング
-- **強力なIntelliSense**：Pylanceによるスマートな補完、型チェック、自動インポート
-- **統合デバッグ**：ブレークポイントを設定し、変数を検査し、コードをステップ実行
-- **Jupyterサポート**：別のアプリケーションなしでVS Codeで直接ノートブックを実行
-- **バージョン管理**：変更を追跡するためのGit統合
-- **拡張機能エコシステム**：テスト、フォーマット、リンティングなど何千もの拡張機能
+- **統合環境**：Python、R、JavaScriptなど、1つのエディターで複数の言語をコーディング
+- **強力なインテリセンス**：Pylanceによるスマートな補完、型チェック、自動インポート
+- **統合デバッグ**：ブレークポイントの設定、変数の検査、コードのステップ実行
+- **Jupyterサポート**：別のアプリケーションなしでVS Code内で直接ノートブックを実行
+- **バージョン管理**：変更を追跡するための組み込みGit統合
+- **拡張機能エコシステム**：テスト、フォーマット、リンティングなどのための数千の拡張機能
 
 ---
 
-[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月7日に作成。
-
-[その他のチュートリアル](https://github.com/gexijin/vibe)
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.

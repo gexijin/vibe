@@ -46,5 +46,8 @@ RUN npm install -g @anthropic-ai/claude-code
 #COPY ./packages.R /tmp/packages.R
 #RUN Rscript /tmp/packages.R
 
+# 8. Give shiny passwordless sudo for updating Claude Code from VS Code
+RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    rm -rf /var/lib/apt/lists/*
 # Expose Shiny server port
 EXPOSE 3838

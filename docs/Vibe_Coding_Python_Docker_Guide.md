@@ -80,21 +80,7 @@ claude
 
 Claude Code is now running and ready for your requests.
 
-## Step 5: Create Context File
-
-Claude works better when it knows what your project is about. Create a simple context file.
-
-- In the Claude Code terminal, type:
-
-```
-create a file called CLAUDE.md with this content: This project analyzes the Iris flower dataset using Python. We use pandas for data manipulation and matplotlib for visualizations. We're practicing vibe coding - describing what we want in plain English.
-```
-
-- Press Enter
-- Claude creates the file
-- This context helps Claude understand your project goals
-
-## Step 6: First Vibe - Load the Data
+## Step 5: First Vibe - Load the Data
 
 Now the fun begins. Instead of looking up documentation, just describe what you want.
 
@@ -113,7 +99,11 @@ Load the iris dataset from scikit-learn. Convert it to a pandas dataframe with p
 
 You just used vibe coding! No searching documentation, no trial and error—just describe and test.
 
-## Step 7: Second Vibe - Summary Statistics
+Ask Claude to commit using Git. Or do this yourself from GitHub Desktop.
+```
+Commit these changes.
+```
+## Step 6: Second Vibe - Summary Statistics
 
 Before creating visualizations, understand what the data contains.
 
@@ -130,7 +120,9 @@ Show me summary statistics for the iris data grouped by species. I want to see t
 
 This exploration helps you understand patterns in the data.
 
-## Step 8: Third Vibe - Create a Histogram
+Ask Claude to commit using Git. Or do this yourself from GitHub Desktop.
+
+## Step 7: Third Vibe - Create a Histogram
 
 Time to visualize the data.
 
@@ -146,7 +138,7 @@ Create a histogram showing the distribution of petal lengths for all flowers. Us
 - Open `petal_length_histogram.png` to see the chart
 - Notice the two peaks—this shows the species have different petal lengths
 
-## Step 9: Fourth Vibe - Scatter Plot
+## Step 8: Fourth Vibe - Scatter Plot
 
 Scatter plots show relationships between two variables.
 
@@ -164,7 +156,7 @@ Create a scatter plot with petal length on the x-axis and petal width on the y-a
 
 This is vibe coding in action: describe the visualization, test it, iterate.
 
-## Step 10: Fifth Vibe - Box Plot
+## Step 9: Fifth Vibe - Box Plot
 
 Box plots are great for comparing distributions across groups.
 
@@ -180,7 +172,7 @@ Create a box plot comparing petal lengths across the three species. Put species 
 - The boxes show the median and quartiles for each species
 - You can clearly see Virginica has the longest petals
 
-## Step 11: Review and Commit
+## Step 10: Review and Commit
 
 Before committing, review what Claude built.
 
@@ -200,6 +192,35 @@ Iris data analysis with histograms, scatter plots, and box plots
 - Click **Push origin** to back up to GitHub
 
 You've saved your first working analysis!
+
+## Step 11: Iterate and Improve
+
+Vibe coding shines when you iterate. Try adding features by describing them:
+
+**Example requests to Claude:**
+
+- "Add a correlation matrix heatmap showing relationships between all four measurements"
+- "Create a violin plot comparing sepal width across species"
+- "Calculate and display the correlation coefficient between petal length and width"
+- "Add statistical test results comparing species (ANOVA or t-test)"
+- "Create a pair plot showing all variable relationships colored by species"
+
+After each successful feature:
+- Test it by running the script
+- If it works, commit with GitHub Desktop
+- If it breaks, tell Claude the error and ask to fix it
+- When fixed, commit the working version
+
+
+**Key principles:**
+
+- **Describe outcomes, not implementation** - Say "show correlation heatmap" not "use seaborn.heatmap() with df.corr()"
+- **Iterate quickly** - Test → refine → test → refine
+- **Commit working versions** - Save each success before trying new features
+- **Embrace failures** - If Claude's code breaks, just describe the error and ask to fix it
+- **Stay in control** - You decide features, priorities, and when it's good enough
+
+Each time, follow the pattern: describe → test → iterate → commit.
 
 ## Next Steps
 
@@ -230,6 +251,7 @@ This tutorial combined several technologies into one workflow:
 - **matplotlib** - Creating visualizations
 
 The magic isn't any single tool—it's how vibe coding lets you describe what you want and iterate rapidly. You went from empty project to complete data analysis with multiple visualizations in 20 minutes without writing a single line of code manually.
+
 
 ---
 

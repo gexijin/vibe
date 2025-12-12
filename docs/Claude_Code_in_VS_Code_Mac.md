@@ -29,7 +29,7 @@ You've installed Claude Code on your Mac - now you want a visual editor to work 
 
 - Open **Finder**
 - Click **Documents** in the left sidebar
-- Click **File** in the menu bar, then **New Folder** (or press **Shift + Command + N**)
+- Click **File** in the menu bar, then **New Folder**
 - Name the folder `test_claude`
 
 ## Step 3: Open the Folder in VS Code
@@ -82,7 +82,7 @@ VS Code remembers your recent folders, so Option A with Open Recent is usually t
 ## Troubleshooting
 
 - **Terminal shows "zsh" but Claude Code won't start** - Make sure Claude Code is installed correctly; run `claude --version` to verify
-- **"code" command not found in Terminal** - In VS Code, press **Command + Shift + P**, type "shell command", and select **Shell Command: Install 'code' command in PATH**
+- **"code" command not found in Terminal** - In VS Code, click **View** in the menu bar, then **Command Palette**, type "shell command", and select **Shell Command: Install 'code' command in PATH**
 - **VS Code won't open because it's from an unidentified developer** - Go to **System Settings > Privacy & Security** and click **Open Anyway**
 
 ## Workflow Overview

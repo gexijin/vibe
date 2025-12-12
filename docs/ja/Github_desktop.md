@@ -2,124 +2,110 @@
 
 # バージョン管理を始めよう
 
-プロジェクトで作業していて、すべてを壊す変更を加えてしまいました。何を変更したか覚えていなくて、動いていた時に戻りたい。バージョン管理はビデオゲームのセーブポイントのようなものです - 作業を「コミット」するたびに、いつでも戻れる復元ポイントを作成します。[GitHub](https://github.com)はセーブポイントをクラウドに保存するので、コードは安全にバックアップされ、どのコンピュータからでもアクセスできます。
+動いていたコードに手を加えたら突然壊れてしまった——そんな経験はありませんか？何を変えたか思い出せず、「動いていたときに戻れたらいいのに…」と思うはずです。バージョン管理はまさにビデオゲームのセーブポイント。コミットを作るたびに復元ポイントができ、必要なときにいつでも戻れます。[GitHub](https://github.com) を使えば、そのセーブポイントをクラウドに保存して安全にバックアップできます。
 
 ## 主要な概念
 
-- **Git** - コンピュータ上のファイルへの変更を追跡するバージョン管理ソフトウェア
-- **GitHub** - コードをクラウドに保存するウェブサイト、コード用のGoogleドライブのようなもの
-- **GitHub Desktop** - Gitを簡単に使えるアプリ、コマンドの代わりにボタンをクリック
-- **リポジトリ（リポ）** - すべての変更を追跡するプロジェクトフォルダ
+- **Git**：ローカルPC上のファイル変更履歴を追跡するソフト
+- **GitHub**：その履歴をクラウドに保存するサービス（コード版Google Drive）
+- **GitHub Desktop**：GitをGUIで操作できる公式クライアント
+- **リポジトリ（repo）**：変更履歴を記録するプロジェクトフォルダ
 
 ## 必要なもの
 
-- Windows、macOS、またはLinuxコンピュータ
+- Windows、macOS、またはLinux PC
 - インターネット接続
 - GitHubアカウント用のメールアドレス
 - 15〜20分
 
 ## ステップ1：GitHubアカウントを作成
 
-- Webブラウザを開く
-- [github.com](https://github.com)にアクセス
-- **Sign up**をクリック
-- メールアドレスを入力し、パスワードを作成し、ユーザー名を選択
-- 確認手順を完了
+1. ブラウザで [github.com](https://github.com) へ
+2. **Sign up** をクリック
+3. メールアドレス・パスワード・ユーザー名を入力
+4. 案内に従って本人確認を完了
 
-## ステップ2：GitHub Desktopをダウンロード
+## ステップ2：GitHub Desktopをインストール
 
-- [desktop.github.com](https://desktop.github.com)にアクセス
-- **ダウンロード**ボタンをクリック
-- ダウンロードしたファイルを開いてインストール
-
-**Windowsの場合：**
-- インストーラーファイルをダブルクリック
-- GitHub Desktopがインストールされ、自動的に開きます
-
-**Macの場合：**
-- ダウンロードした`.zip`ファイルを開く
-- **GitHub Desktop**をアプリケーションフォルダにドラッグ
-- アプリケーションからGitHub Desktopを開く
+1. [desktop.github.com](https://desktop.github.com) を開き、**Download** をクリック
+2. ダウンロードしたファイルを開いてインストール
+   - **Windows**：インストーラーをダブルクリックすると自動でセットアップ＆起動
+   - **Mac**：ダウンロードした`.zip`ファイルを開き、**GitHub Desktop**をApplicationsフォルダへドラッグして起動
 
 ## ステップ3：GitHub Desktopにサインイン
 
-- GitHub Desktopを開く
-- **Sign in to GitHub.com**をクリック
-- ブラウザが開きます - **Authorize desktop**をクリック
-- GitHub Desktopに戻る
-- **Finish**をクリックしてセットアップを完了
+1. アプリを開き **Sign in to GitHub.com**
+2. ブラウザが自動で開くので **Authorize desktop**
+3. アプリに戻り **Finish** でセットアップ完了
 
-## ステップ4：最初のリポジトリを作成
+## ステップ4：最初のリポジトリを作る
 
-- GitHub Desktopで、**Create a New Repository on your Hard Drive**をクリック
-- フォームに記入：
-  - **Name：** `my-first-project`（またはお好きな名前）
-  - **Description：** `バージョン管理を学習中`（オプション）
-  - **Local Path：** 保存場所を選択（書類フォルダで可）
-  - **Initialize this repository with a README**にチェック
-- **Create Repository**をクリック
+1. GitHub Desktop のトップ画面で **Create a New Repository on your Hard Drive**
+2. 次のように入力：
+   - **Name**: `my-first-project`
+   - **Description**: `Learning version control`（任意）
+   - **Local Path**: 保存先（Documentsなど）
+   - **Initialize this repository with a README** にチェック
+3. **Create Repository** をクリック
 
-## ステップ5：プロジェクトフォルダを開く
+## ステップ5：フォルダを開いてみる
 
-- GitHub Desktopで、メニューバーの**Repository**をクリック
-- **Show in Finder**（Mac）または**Show in Explorer**（Windows）を選択
-- プロジェクト名のフォルダが表示されます
-- 中には`README.md`というファイルがあります
+- **Repository > Show in Finder/Explorer** を選択
+- `my-first-project` フォルダと `README.md` ファイルが確認できます
 
-## ステップ6：最初の変更を加える
+## ステップ6：READMEを編集
 
-- `README.md`を任意のテキストエディター（メモ帳、テキストエディット、またはVS Code）で開く
-- 内容を以下に置き換える：
-  ```
-  # マイファーストプロジェクト
+1. `README.md` をメモ帳／TextEdit／VS Codeなどで開く
+2. 内容を以下に書き換え、保存
+   ```
+   # My First Project
 
-  GitHub Desktopでバージョン管理を学んでいます。
+   I'm learning version control with GitHub Desktop.
 
-  ## 作っているもの
+   ## What I'm Building
 
-  これは以下を学ぶための練習プロジェクトです：
-  - コードへの変更を追跡
-  - セーブポイント（コミット）を作成
-  - GitHubに作業をバックアップ
-  ```
-- **ファイル** → **保存**をクリック
+   This is a practice project to learn how to:
+   - Track changes to my code
+   - Create save points (commits)
+   - Back up my work to GitHub
+   ```
 
-## ステップ7：最初のコミット（セーブポイント）を作成
+## ステップ7：初めてのコミット
 
-- GitHub Desktopに戻る
-- 右側に変更がハイライトされています（緑 = 追加、赤 = 削除）
-- 左下にコミットメッセージを入力：`READMEにプロジェクト説明を更新`
-- 青い**Commit to main**ボタンをクリック
+1. GitHub Desktopに戻ると差分が表示される（緑＝追加、赤＝削除）
+2. 左下のメッセージ欄に `Updated README with project description` と入力
+3. **Commit to main** をクリック
 
-## ステップ8：GitHubにプッシュ（クラウドにバックアップ）
+## ステップ8：GitHubにプッシュ
 
-- 上部の青い**Publish repository**ボタンをクリック
-- 名前はそのまま
-- 他の人に見せたい場合は「Keep this code private」のチェックを外す（オプション）
-- **Publish Repository**をクリック
+1. 画面上部の **Publish repository** をクリック
+2. 必要に応じて「Keep this code private」をオン／オフ
+3. **Publish Repository** を押して完了
 
-コードがオンラインでバックアップされました：`https://github.com/YOUR-USERNAME/my-first-project`
+これで `https://github.com/YOUR-USERNAME/my-first-project` にリポジトリが公開されました。
 
 ## 次のステップ
 
-- READMEファイルを再度編集して変更をコミット
-- プロジェクトフォルダに新しいファイルを作成してコミット
-- **History**タブを探索してプロジェクトがどう進化するか確認
+- READMEをもう一度編集 → コミット → プッシュ
+- 新しいファイルを作ってコミット
+- GitHub Desktopの **History** タブで履歴を確認
 
 ## トラブルシューティング
 
-- **GitHubにサインインできない** - インターネット接続を確認。まずgithub.comでサインインして認証情報が動作するか確認。
-- **変更がGitHub Desktopに表示されない** - ファイルを保存したことを確認。**Repository** → **Refresh**をクリックするか、GitHub Desktopを再起動。
-- **プッシュが「rejected」エラーで失敗** - 他の誰かが変更をプッシュしました。まず**Fetch origin**をクリックしてから、再度プッシュを試みてください。
+| 症状 | 対処 |
+| --- | --- |
+| GitHubにサインインできない | ネット接続を確認。まずブラウザでgithub.comにログインできるかチェック |
+| 変更が表示されない | ファイルを保存したか確認。**Repository > Refresh** またはアプリ再起動を試す |
+| Pushがrejectedと言われる | 他の人が先にPushした可能性。**Fetch origin** → もう一度Push |
 
-## ワークフロー概要
+## 基本ワークフロー
 
-- プロジェクトファイルに変更を加える
-- GitHub Desktopで変更を確認（緑 = 追加、赤 = 削除）
-- 説明的なコミットメッセージを書いて**Commit to main**をクリック
-- **Push origin**をクリックしてGitHubにバックアップ
-- 繰り返す
+1. ファイルを編集・保存
+2. GitHub Desktopで差分を確認
+3. 説明的なメッセージを付けて **Commit to main**
+4. **Push origin** でGitHubにバックアップ
+5. 繰り返す
 
 ---
 
-[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月7日に作成。
+[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 作成（2025年12月7日）

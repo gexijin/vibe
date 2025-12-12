@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>初心者のためのVibe Working</title>
+    <title>初心者のためのClaude Code</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -378,7 +378,6 @@
 <body>
     <div class="lang-switch">
         <a href="../">English</a>
-        <a href="./" class="active">日本語</a>
     </div>
     <div class="container">
         <header>
@@ -421,6 +420,10 @@
                 <li><a href="Vibe_Coding_R_Docker_Guide">Claude CodeでRのVibe Coding</a></li>
                 <li><a href="Vibe_Coding_Python_Docker_Guide">Claude CodeでPythonのVibe Coding</a></li>
                 <li><a href="Writing_Research_Paper_Claude_Code">Claude Codeで研究論文を書く</a></li>
+                <li><a href="Claude_Code_RStudio_Mac">MacでRStudioとClaude Codeを併用</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">WindowsでWSL経由でRStudioとClaude Codeを併用</a></li>
+                <li><a href="Claude_Code_R_VS_Code_Mac">MacのVS CodeでRにClaude Codeを使う</a></li>
+                <li><a href="Claude_Code_Python_VS_Code_Mac">MacのVS CodeでPythonにClaude Codeを使う</a></li>
             </ol>
         </section>
 
@@ -558,7 +561,11 @@
             9: { label: 'Claude Code\n+ GitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'AIアシストコーディングとプロフェッショナルなバージョン管理ワークフローの組み合わせ', level: 2 },
             10: { label: 'RでVibe\nCoding', url: 'Vibe_Coding_R_Docker_Guide', desc: '自然言語リクエストで実際のNBA統計ダッシュボードを構築 - 完全なVibe Coding体験', level: 3 },
             13: { label: 'Claudeで\n研究論文', url: 'Writing_Research_Paper_Claude_Code', desc: 'Claude Codeを使って研究論文を素早く作成 - Gitで全バージョンを追跡しながら研究とドラフト作成', level: 2 },
-            16: { label: 'Pythonで\nVibe Coding', url: 'Vibe_Coding_Python_Docker_Guide', desc: '自然言語リクエストでIrisデータセットを分析 - 可視化を説明するとそれが現れる', level: 3 }
+            16: { label: 'Pythonで\nVibe Coding', url: 'Vibe_Coding_Python_Docker_Guide', desc: '自然言語リクエストでIrisデータセットを分析 - 可視化を説明するとそれが現れる', level: 3 },
+            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'MacでRStudioとClaude Codeを組み合わせ、RプロジェクトをAIで強化しながらRStudioでコードを実行', level: 2 },
+            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'WSLのClaude CodeでWindows上のRStudioプロジェクトを強化し、WindowsとLinuxのAI環境をつなぐ', level: 2 },
+            19: { label: 'RにClaude\nCode (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'VS CodeでRコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
+            20: { label: 'Pythonに\nClaude Code (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'VS CodeでPythonコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 }
         };
 
         // Color scheme by level
@@ -571,26 +578,35 @@
 
         // Fixed positions for clean layout
         const positions = {
-            // Level 0 - Basic (left column)
-            1: { x: 0, y: -90 },    // Install Claude Code Win
-            2: { x: 0, y: 0 },      // Install Claude Code Mac
-            4: { x: 0, y: 105 },    // Version Control
-            // Level 1 - Intermediate (first branch point)
-            11: { x: 160, y: -120 }, // Claude Code + Git (Win)
-            12: { x: 160, y: -60 },  // Claude Code + Git (Mac)
-            3: { x: 160, y: 20 },    // VS Code Basics
-            5: { x: 160, y: 120 },   // R in VS Code
-            6: { x: 160, y: 135 },   // Python in VS Code
-            // Level 2 - Advanced
-            14: { x: 320, y: -90 },  // Claude Code in VS Code (Win)
-            15: { x: 320, y: -30 },  // Claude Code in VS Code (Mac)
-            9: { x: 320, y: 30 },    // GitHub Desktop + Claude
-            7: { x: 320, y: 120 },   // R via Docker
-            8: { x: 320, y: 135 },   // Python via Docker
-            // Level 3 - Projects & Capstone
-            13: { x: 480, y: -60 },  // Research Paper with Claude
-            10: { x: 480, y: 90 },   // Vibe Coding in R
-            16: { x: 480, y: 120 }   // Vibe Coding in Python
+            // レベル1 - 基礎
+            1: { x: 0, y: 0 },    // Install Claude Code Win
+            2: { x: 0, y: 0 },    // Install Claude Code Mac
+
+            // レベル2 - 必須
+            17: { x: 120, y: 60 },   // RStudio (Mac)
+            18: { x: 120, y: 75 },   // RStudio (Windows)
+            11: { x: 120, y: -60 },  // Claude Code + Git (Win)
+            12: { x: 120, y: -60 },  // Claude Code + Git (Mac)
+
+            // レベル3 - 中級 I
+            3: { x: 240, y: 30 },   // VS Code Basics
+            4: { x: 240, y: -100 }, // Version Control
+
+            // レベル4 - 中級 II
+            5: { x: 360, y: 80 },   // R in VS Code
+            6: { x: 360, y: 80 },   // Python in VS Code
+            14: { x: 360, y: 0 },   // Claude Code in VS Code (Win)
+            15: { x: 360, y: 0 },   // Claude Code in VS Code (Mac)
+            9: { x: 360, y: -60 },  // GitHub Desktop + Claude
+
+            // レベル5 - 発展
+            13: { x: 480, y: -60 }, // Research Paper with Claude
+            7: { x: 480, y: 40 },   // R via Docker
+            8: { x: 480, y: 40 },   // Python via Docker
+            10: { x: 500, y: -30 }, // Vibe Coding in R
+            16: { x: 500, y: -30 }, // Vibe Coding in Python
+            19: { x: 500, y: 100 }, // Claude Code for R (Mac)
+            20: { x: 500, y: 100 }  // Claude Code for Python (Mac)
         };
 
         // Get label with checkmark if completed
@@ -693,7 +709,11 @@
             { id: 'e17', from: 14, to: 13 }, // Claude in VS Code (Win) → Research Paper
             { id: 'e18', from: 15, to: 13 }, // Claude in VS Code (Mac) → Research Paper
             { id: 'e19', from: 8, to: 16 },  // Python via Docker → Vibe Coding in Python
-            { id: 'e20', from: 9, to: 16 }   // GitHub + Claude → Vibe Coding in Python
+            { id: 'e20', from: 9, to: 16 },  // GitHub + Claude → Vibe Coding in Python
+            { id: 'e21', from: 2, to: 17 },  // Install (Mac) → RStudio (Mac)
+            { id: 'e22', from: 1, to: 18 },  // Install (Win) → RStudio (Windows)
+            { id: 'e23', from: 5, to: 19 },  // R in VS Code → Claude Code for R (Mac)
+            { id: 'e24', from: 6, to: 20 }   // Python in VS Code → Claude Code for Python (Mac)
         ];
 
         // Get edge color based on connected nodes completion
@@ -760,13 +780,17 @@
 
         // Tutorial categorization
         const tutorialCategories = {
-            windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
-            mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
-            basics: [1, 2, 3, 14, 15, 11, 12, 13], // All install, VS Code Basics, VS Code platform, git, and research paper tutorials
-            r: [5, 7, 10],         // R in VS Code, R via Docker, Vibe Coding in R
-            python: [6, 8, 16],    // Python in VS Code, Python via Docker, Vibe Coding in Python
-            shared: [3, 4, 9, 13], // VS Code Basics, Version Control, GitHub Desktop, Research Paper (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16] // All coding tutorials
+            windows: [1, 14, 11],      // Windows向けの基本フロー
+            mac: [2, 15, 12],          // Mac向けの基本フロー
+            basics: [1, 2, 3, 14, 15, 11, 12, 13], // インストール、VS Code、Git、リサーチ
+            r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
+            rstudio_mac: [17],         // RStudio (Mac)
+            rstudio_windows: [18],     // RStudio (Windows)
+            claude_code_r_mac: [19],   // Claude Code for R (Mac only)
+            claude_code_python_mac: [20], // Claude Code for Python (Mac only)
+            python: [6, 8, 16],        // Python系チュートリアル
+            shared: [3, 4, 9, 13],     // VS Code基礎、バージョン管理、GitHub Desktop、リサーチ
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20] // すべてのコーディング関連チュートリアル
         };
 
         // Filter nodes based on current state
@@ -778,17 +802,23 @@
                 // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper
                 visibleNodes = [...tutorialCategories[currentPlatform], 3, 13];
             } else if (currentLanguage === 'r') {
-                // R mode: show platform install + R tutorials + coding shared (no git, no research paper)
+                // Rモード：プラットフォーム別インストール + R系 + プラットフォーム別RStudio + 共有チュートリアル
+                const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
+                const claudeCodeRTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_r_mac : [];
                 visibleNodes = [
                     tutorialCategories[currentPlatform][0], // Install only (first item)
                     ...tutorialCategories.r,
+                    ...rstudioTutorial,
+                    ...claudeCodeRTutorial, // Add Claude Code for R (Mac only)
                     3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13)
                 ];
             } else if (currentLanguage === 'python') {
                 // Python mode: show platform install + Python tutorials + coding shared (no git, no research paper)
+                const claudeCodePythonTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_python_mac : [];
                 visibleNodes = [
                     tutorialCategories[currentPlatform][0], // Install only (first item)
                     ...tutorialCategories.python,
+                    ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
                     3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13)
                 ];
             } else {

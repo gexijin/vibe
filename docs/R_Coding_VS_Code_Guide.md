@@ -273,6 +273,4 @@ VS Code provides a modern, lightweight alternative to RStudio with these key adv
 
 ---
 
-Estimated completion time: 15 minutes. Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
-
-[Other tutorials](https://github.com/gexijin/vibe)
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
