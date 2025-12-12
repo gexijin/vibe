@@ -14,6 +14,7 @@ Rコードを同僚と共有しようとして、「でも私のマシンでは�
 ## 必要なもの
 
 - [VS CodeでRコーディング](./R_Coding_VS_Code_Guide)を完了
+- [GitHub Desktopの基本](./Github_desktop)を完了
 - 20〜25分
 
 ## ステップ1：Docker Desktopをインストール
@@ -59,6 +60,8 @@ Rコードを同僚と共有しようとして、「でも私のマシンでは�
 - VS Codeがコンテナをビルドします（初回は5〜10分かかります）
 - ビルドステップを示す進行通知が表示されます
 - 完了すると、緑色のアイコンに**Dev Container: R in Docker**と表示されます
+
+**注：** コンテナにはR拡張機能とlanguageserverパッケージが自動的に含まれます。Dockerfileとdevcontainer.jsonがこれを処理します。
 
 ## ステップ6：コンテナ環境を理解する
 
@@ -112,13 +115,10 @@ cd vibe
 - `hist()`コマンドを実行すると、ヒストグラムプロットが別ウィンドウで開きます
 - 複数の行を選択して`Ctrl+Enter`または`Cmd+Enter`で一緒に実行することもできます
 
-## ステップ8：Shiny拡張機能をインストールしてアプリを実行
+## ステップ8：アプリを実行
 
 プロジェクトには対話型ヒストグラムを作成するデモShinyアプリが含まれています。
 
-- 左サイドバーの**拡張機能**アイコンをクリック
-- `Posit.shiny`を検索
-- PositのShiny拡張機能で**インストール**をクリック（VS Code Rチュートリアルを完了していれば、すでにインストールされています）
 - VS Codeエクスプローラーで`R/app.R`に移動
 - クリックしてファイルを開く
 - Shiny Webアプリケーション用のコードが表示されます
@@ -202,8 +202,7 @@ Rコンソールでインストールしたパッケージ（`install.packages()
 
 - VS Codeエクスプローラーで`.devcontainer/Dockerfile`に移動
 - クリックしてファイルを開く
-- 11行目を見つける：`RUN R -q -e 'install.packages(c("rstudioapi", "languageserver"), ...)'`
-- その下に新しい行を追加して`data.table`パッケージをインストール：
+- 他の'install.packages'の行の下に新しい行を追加して`data.table`パッケージをインストール：
 
 ```dockerfile
 RUN R -q -e 'install.packages("data.table", repos="https://cloud.r-project.org")'
@@ -224,14 +223,14 @@ library(data.table)
 ## 次のステップ
 
 - **新しいRスクリプトを作成** - `R/`フォルダに新しい`.R`ファイルを作成し、`mtcars`や`iris`などの組み込みデータセットを使用してデータ分析コードを書く
-- **Rパッケージをインストール** - Dockerfile（12行目）を編集してコンテナを再ビルドして、必要なパッケージを追加
+- **Rパッケージをインストール** - Dockerfileを編集してコンテナを再ビルドして、必要なパッケージを追加
 - **tidyverseを探索** - サンプルデータセットを使用して`dplyr`でデータ操作、`ggplot2`で可視化を試す
 
 ## トラブルシューティング
 
 - **Docker Desktopが実行されていない** - Docker Desktopを開き、コンテナを再度開く前に緑色のステータスインジケーターを待つ
 - **コンテナビルドが失敗** - インターネット接続を確認。最初のビルドは約2GBダウンロードします。**Rebuild Container**をクリックして再試行
-- **ポート3838がすでに使用中** - そのポートを使用している他のアプリを停止するか、`.devcontainer/devcontainer.json`の21行目でポートを変更
+- **ポート3838がすでに使用中** - そのポートを使用している他のアプリを停止するか、`.devcontainer/devcontainer.json`でポートを変更
 
 ## ワークフロー概要
 

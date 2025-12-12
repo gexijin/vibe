@@ -18,8 +18,6 @@
 - 約500MBのディスク空き
 - 作業時間 20〜25分
 
----
-
 ## ステップ1：VS Codeをダウンロード＆インストール
 
 1. [code.visualstudio.com](https://code.visualstudio.com) を開く
@@ -28,7 +26,7 @@
    - **Windows**：`.exe` をダブルクリック → 画面の指示に従い Next を押していく
    - **Mac**：`.dmg` を開き、VS Code を **Applications** フォルダにドラッグ
    - **Linux**：パッケージマネージャーの案内に従う
-4. VS Codeを起動（Welomeタブが開きます）
+4. VS Codeを起動（Welcomeタブが開きます）
 
 ## ステップ2：画面構成を見てみる
 
@@ -55,24 +53,26 @@ VS Codeは主に5つの領域で構成されています。
 1. エクスプローラーの **新しいファイル** アイコンをクリック
 2. ファイル名を `README.md` に設定
 3. 例として以下を貼り付け、保存します：
-   ```markdown
-   # My Project
 
-   This is a **demo project** for learning VS Code.
+```
+# My Project
 
-   ## Features
-   - Easy to edit
-   - Markdown formatting
-   - Live preview
+This is a **demo project** for learning VS Code.
 
-   ## Next Steps
-   1. Add more content
-   2. Try other file types
-   3. Explore extensions
-   ```
-Markdownは `#` で見出し、`**` で太字、`-` でリストを表す簡単なテキスト記法で、ドキュメントやAIへの指示でよく使われます。
+## Features
+- Easy to edit
+- Markdown formatting
+- Live preview
 
-## ステップ5：Markdownプレビューを入れる
+## Next Steps
+1. Add more content
+2. Try other file types
+3. Explore extensions
+```
+
+Markdownは `#` で見出し、`**` で太字、`-` でリストを表す簡単なテキスト記法で、ドキュメントやChatGPTやClaudeなどのLLMとのコミュニケーションに広く使われています。
+
+## ステップ5：Markdown Preview Enhanced拡張機能をインストール
 
 1. アクティビティバーの **拡張機能**（四角いアイコン）をクリック
 2. 検索欄に `Markdown Preview Enhanced` と入力
@@ -87,52 +87,70 @@ Markdownは `#` で見出し、`**` で太字、`-` でリストを表す簡単�
 
 ## ステップ7：統合ターミナルを使う
 
-1. **ターミナル > 新しいターミナル**（ショートカット `` Ctrl+` ``）
-2. いくつか基本コマンドを試します：
-   ```bash
-   ls        # ファイル一覧（Windowsのcmdなら dir）
-   pwd       # 現在のパス（cmdなら cd）
-   mkdir notes  # notesフォルダを作成
-   ```
-エクスプローラーにも `notes` フォルダが追加されているはずです。統合ターミナルは現在開いているフォルダで動作するため、コマンド結果がすぐ反映されます。
+1. **ターミナル > 新しいターミナル**
+2. 以下のコマンドを試してみましょう：
 
-## ステップ8：AI機能（GitHub Copilot Chat）を試す（任意）
+**ファイル一覧を表示：**
+```
+ls
+```
+（WindowsのCommand Promptでは `dir` を使用）
 
-1. `README.md` など任意のファイルを開く
-2. タイトルバーの **Chat > Open Chat**（ショートカット Windows/Linux: `Ctrl+Alt+I`, Mac: `Ctrl+Cmd+I`）
-3. 初回はGitHubアカウントでサインイン
-4. 「Explain this file」（このファイルを説明して）など質問を入力
+**現在のディレクトリを表示：**
+```
+pwd
+```
+（WindowsのCommand Promptでは `cd` を使用）
 
-Copilotがファイルを解析し、内容を説明したり改善案を提案してくれます。コードの一部分だけを指示したい場合は該当箇所を選択して `Ctrl+I`（Macは `Cmd+I`）。
+**新しいフォルダを作成：**
+```
+mkdir notes
+```
+
+エクスプローラーに `notes` フォルダが表示されます。ターミナルはプロジェクトフォルダ内で実行されるため、コマンドはプロジェクトに直接影響します。
+
+## ステップ8：VS CodeでAIエージェントを使う（任意）
+
+VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat)が搭載されており、コードの説明、作成、デバッグを支援するAIアシスタントです。
+
+- `README.md` ファイル（またはプロジェクト内の他のファイル）を開く
+- タイトルバーの **Chat > Open Chat** をクリック（Windows/Linuxでは `Ctrl+Alt+I`、Macでは `Ctrl+Cmd+I` を押す）
+- プロンプトが表示されたら、**GitHubアカウント**でサインイン（無料プランも利用可能）
+- 開いたチャットパネルに「Explain this file」と入力
+- **Enter**を押す
+
+GitHub Copilotがファイルを分析し、その内容を説明します。新しいコードの作成、バグの修正、「どうすれば機能を追加できますか？」などの質問も可能です。
+
+**ヒント：** [インライン編集](https://code.visualstudio.com/docs/copilot/copilot-chat)の場合、任意のファイルでコードをハイライトし、`Ctrl+I`（Windows/Linux）または `Cmd+I`（Mac）を押すと、Copilotにその部分のみの変更、修正、説明を依頼できます。
 
 ## プロジェクトを再度開くには
 
-- VS Codeを起動 → **ファイル > 最近使用した項目** からフォルダを選択
-- もしくは **ファイル > フォルダーを開く** で再度指定
+- スタートメニュー（Windows）、Spotlight（Mac）、アプリケーション（Linux）からVS Codeを開く
+- **ファイル > 最近使用した項目** → フォルダを選択
+- または **ファイル > フォルダーを開く** で移動して選択
 
 ## トラブルシューティング
 
-| 症状 | 対処 |
-| --- | --- |
-| Markdownプレビューが出ない | 拡張機能がインストール済みか、`.md` ファイルを開いているか確認 |
-| ターミナルのパスが変 | ターミナルのゴミ箱アイコンでセッションを閉じ、**新しいターミナル** を開き直す |
-| Chatメニューが見当たらない | 「GitHub Copilot Chat」拡張機能のインストールが必要な場合があります |
-| 拡張機能が効かない | **表示 > コマンドパレット** → `reload window` → **Developer: Reload Window** を実行 |
+- **プレビューが表示されない：** Markdown Preview Enhanced拡張機能がインストールされており、`.md` ファイルを開いていることを確認してください
+- **ターミナルに間違ったディレクトリが表示される：** ターミナルパネルのゴミ箱アイコンをクリックし、**ターミナル > 新しいターミナル** をクリックします
+- **Chatメニューが表示されない：** GitHub Copilot Chatのインストールが必要な場合があります - **拡張機能**アイコンをクリックし、「GitHub Copilot Chat」を検索してインストールしてください
+- **拡張機能が動作しない：** **表示 > コマンドパレット** をクリックし、「reload window」と入力して **Developer: Reload Window** を選択します
 
 ## ワークフローまとめ
 
 1. VS Codeでフォルダを開く
-2. ファイルを編集／Markdownをプレビュー
-3. ターミナルでコマンドを実行
-4. 必要ならAIに説明・改善を依頼
-5. 保存して作業を進める
+2. ファイルを作成／編集
+3. 拡張機能を使ってプレビュー
+4. ターミナルでコマンドを実行
+5. AIを使ってコードを理解・改善
+6. 保存して繰り返す
 
-## 次に試したいこと
+## 次のステップ
 
-- `.html` や `.py` など他のファイルを作ってシンタックスハイライトを体験
-- Copilotに「このコードを改良して」「バグを直して」と依頼
-- 拡張機能マーケットプレイスで「Prettier」「GitLens」などを探索
-- **ヘルプ > キーボードショートカット参照** から便利なショートカットを覚える
+- **他のファイルタイプを試す：** `.html`、`.css`、`.js`、`.py` ファイルを作成して、VS Codeのシンタックスハイライトを確認
+- **AI機能を探索：** AIにコードの作成、バグの修正、プロジェクトの改善提案を依頼
+- **さらに拡張機能をインストール：** 自動フォーマット用の「Prettier」やGit機能用の「GitLens」を試す
+- **ショートカットを学ぶ：** **ヘルプ > キーボードショートカット参照** をクリックして、ワークフローを高速化
 
 ---
 

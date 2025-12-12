@@ -12,114 +12,165 @@ WindowsではRStudioでRコードを実行し、WSLのUbuntu内にインスト�
 
 ## 必要なもの
 
-- [WSL経由でClaude Codeをインストール](./Install_CLAUDE_Code_Win.md)済み
+- [WSL経由でClaude Codeをインストール](./Install_CLAUDE_Code_Win)済み
 - Windows版RStudio
 - 所要時間：20〜30分
 
 ---
 
-## ステップ1：RStudioを起動
+## ステップ1：WindowsでRStudioを開く
 
-1. **Windowsスタートボタン**をクリック → `RStudio` と入力
-2. 表示された **RStudio** を開くと、複数ペインのウィンドウが表示されます
+- **Windowsスタートボタン**をクリック
+- 検索ボックスに`RStudio`と入力
+- **RStudio**をクリックして開く
+- RStudioウィンドウが複数のペインとともに開きます
 
 ## ステップ2：新規Rプロジェクトを作成
 
-1. RStudio上部メニューから **File > New Project…**
-2. **New Directory > New Project** を選択
-3. **Directory name** に `test_claude` と入力
-4. **Browse** で **Documents** フォルダを指定 → **Select Folder** → **Create Project**
-5. RStudioがこの新規プロジェクトに切り替わります
+- RStudioで、上部メニューから**File**をクリック
+- **New Project...**をクリック
+- **New Directory**を選択
+- **New Project**を選択
+- **Directory name**に：`test_claude`と入力
+- "Create project as subdirectory of:"の横にある**Browse**をクリック
+- **Documents**フォルダに移動
+- **Select Folder**をクリック
+- **Create Project**をクリック
+- RStudioがプロジェクトを作成し、そのプロジェクトに切り替わります
 
-## ステップ3：Rスクリプトを用意
+## ステップ3：新規Rスクリプトを作成
 
-1. **File > New File > R Script**
-2. 空のスクリプトを **Ctrl + S**（または保存アイコン）で保存し、`iris.R` という名前を付けます
+- RStudioで**File > New File > R Script**をクリック
+- 左上のペインに新しい空のスクリプトが開きます
+- **File > Save**をクリック（または保存アイコン）
+- ファイル名：`iris.R`と入力
+- **Save**をクリック
 
 ## ステップ4：初期コードを手書き
 
-`iris.R` に以下を入力・保存します。
+`iris.R` ファイルに以下のコードを入力します：
+
 ```r
 data(iris)
 str(iris)
 summary(iris)
 ```
-全行を選択して **Run** を押すと、Consoleに構造と統計量が出力されます。
+
+- **File > Save**をクリックして変更を保存
+- コードを実行するには：すべての行を選択し、**Run**ボタン（スクリプトペインの右上）をクリック
+- Consoleペインに、データセットの構造と統計量が表示されるはずです
 
 ## ステップ5：Ubuntuターミナルを開く
 
-1. **Windowsスタートボタン** → `Ubuntu` と入力
-2. オレンジ色の **Ubuntu** アプリを起動するとWSLのターミナルが開きます
+- **Windowsスタートボタン**をクリック
+- 検索ボックスに`Ubuntu`と入力
+- **Ubuntu**（オレンジ色の円形アイコン）をクリック
+- Ubuntuターミナルが開きます
 
 ## ステップ6：プロジェクトフォルダへ移動
 
-```bash
-cd /mnt/c/Users/YourUsername/Documents/test_claude
-ls
-```
-`YourUsername` を自分のWindowsユーザー名に置き換えてください。`iris.R` と `test_claude.Rproj` が見えれば成功です。
-> **ヒント**：`ls /mnt/c/Users/` でユーザーフォルダ一覧を確認できます。パスにスペースがある場合は `"Your Name"` のように引用符で囲みます。
+- Ubuntuターミナルで以下のコマンドを入力します（`YourUsername`を実際のWindowsユーザー名に置き換えてください）：
+  ```
+  cd /mnt/c/Users/YourUsername/Documents/test_claude
+  ```
+- ユーザー名を確認するには：`ls /mnt/c/Users/`と入力してフォルダ名を確認できます
+- 正しい場所にいることを確認するため、以下を入力：
+  ```
+  ls
+  ```
+- `iris.R`と`test_claude.Rproj`が表示されるはずです
 
 ## ステップ7：Claude Codeを起動
 
-```bash
-claude
-```
-初回は再ログインを求められる場合があります。完了すると指示待ち状態になります。
+- Ubuntuターミナルで以下を入力：
+  ```
+  claude
+  ```
+- Claude Codeが起動し、ウェルカムメッセージが表示されます
+- 再度サインインが必要な場合があります - 認証手順については[WSL経由でClaude Codeをインストール](./Install_CLAUDE_Code_Win)ガイドを参照してください
+- これでRプロジェクトに対してAI支援を使用する準備ができました
 
 ## ステップ8：散布図コードを追加
 
-Claudeに以下を送信：
+Claude Codeの起動が遅い場合は、初期化が完了するまで待ちましょう。その後、以下のリクエストを入力します：
+
 ```
 Add code to iris.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
 ```
-- Claudeが`iris.R`を読み込み、ggplot2を用いた散布図コードを追加します
-- ファイル編集確認が出たら選択肢「2」を入力して許可します
+- Claude Codeが`iris.R`ファイルを読み込み、可視化コードを追加します
+- 確認を求められたら、適切な選択肢を選んでiris.Rファイルの編集を許可します
+- Claudeが完了するまで待ちます（完了メッセージが表示されます）
 
-## ステップ9：RStudioで実行
 
-1. RStudioに戻り、変更の再読み込みを聞かれたら **Yes**
-2. すべてのコードを選択して **Run**
-3. **Plots**ペインに散布図が表示されます
-4. ggplot2未インストールなら Console で `install.packages("ggplot2")`
+## ステップ9：RStudioで新しいコードを実行
+
+- RStudioウィンドウに戻ります（RStudioウィンドウをクリック）
+- ファイルが変更されたというプロンプトが表示される場合があります - **Yes**をクリックして再読み込みします
+- プロンプトが表示されない場合は、**File > Reopen with Encoding > UTF-8**をクリックします
+- すべてのコードを選択して**Run**をクリック
+- **Plots**ペイン（右下）に散布図が表示されます
+- ggplot2に関するエラーが出た場合は、Consoleペインで`install.packages("ggplot2")`と入力してインストールします
 
 ## ステップ10：散布図を改良
 
-Ubuntuターミナルで：
-```
-Remove title. Change marker type by species. Change to the classic theme.
-```
-再びRStudioでファイルを読み込み直して実行。タイトルなし、種ごとに異なるマーカーかつクラシックテーマのプロットが得られます。
+- Ubuntuターミナルに切り替えます
+- 以下のリクエストを入力：
+  ```
+  Remove title. Change marker type by species. Change to the classic theme.
+  ```
 
-## ステップ11：PCAプロットを追加
+## ステップ11：改良されたプロットを表示
 
-Ubuntuターミナルで：
-```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
-```
-RStudioに戻って実行すると、PC1×PC2に色分けされたPCA散布図が表示されます。
+- RStudioに切り替えます
+- プロンプトが表示されたらファイルを再読み込みします
+- 更新されたコードを選択して**Run**をクリック
+- プロットがタイトルなしで表示され、種ごとに異なるマーカー形状、クラシックテーマが適用されているはずです
 
-## ステップ12：スクリプトレビューとコメント
 
-Ubuntuターミナルで：
-```
-Review the entire script for correctness. Add comments when necessary.
-```
-Claudeがコードをチェックし、要所にコメントを挿入します。
+## ステップ12：PCAプロットを追加
 
-## ステップ13：R Markdownを生成
+- Ubuntuターミナルに切り替えます
+- 以下のリクエストを入力：
+  ```
+  Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+  ```
 
-Ubuntuターミナルで：
-```
-Create a new R Markdown file for this analysis. Save as iris_report.Rmd
-```
-同意すると、`iris_report.Rmd` がプロジェクトフォルダに作成されます。
+## ステップ13：PCA解析を実行
 
-## ステップ14：RStudioでKnit
+- RStudioに切り替えます
+- プロンプトが表示されたらファイルを再読み込みします
+- すべてのコードを選択して**Run**をクリック
+- PC1とPC2に投影されたサンプルを示すPCAプロットが表示され、種ごとに色分けされます
 
-1. **File > Open File…** から `iris_report.Rmd` を開く
-2. エディタ上部の **Knit**（毛糸玉アイコン）をクリック
-3. HTMLレポートが生成され、新しいウィンドウで表示されます（ファイルもフォルダに保存）
+## ステップ14：レビューとコメント追加をClaudeに依頼
+
+- Ubuntuターミナルに切り替えます
+- 以下のリクエストを入力：
+  ```
+  Review the entire script for correctness. Add comments when necessary.
+  ```
+- Claudeがコードをレビューし、包括的なコメントを追加します
+
+## ステップ15：R Markdownを作成
+
+- Ubuntuターミナルに切り替えます
+- 以下のリクエストを入力：
+  ```
+  Create a new R Markdown file for this analysis. Save as iris_report.Rmd
+  ```
+- Claudeがこのファイルの作成許可を求めます
+- Claudeがプロジェクトフォルダに新しい`.Rmd`ファイルを作成します
+
+
+## ステップ16：R Markdownファイルをニット
+
+- RStudioに切り替えます
+- **File > Open File...**をクリック
+- `iris_report.Rmd`を選択して**Open**をクリック
+- スクリプトペインの上部にある**Knit**ボタン（毛糸玉アイコン）をクリック
+- RStudioがHTMLレポートを生成します
+- 完全な解析とナラティブテキストを含むレポートが新しいウィンドウで開きます
+- HTMLファイルはプロジェクトフォルダに保存されます
 
 ---
 
@@ -134,20 +185,26 @@ Create a new R Markdown file for this analysis. Save as iris_report.Rmd
 | `cannot change working directory` | Windowsのユーザー名にスペースがある場合、`cd "/mnt/c/Users/Your Name/Documents/..."` のように引用符で囲む |
 | 初回リクエストが遅い | 30〜60秒待てば初期化され、その後は高速化します |
 
-## 次のステップ例
+## 次のステップ
 
-- t検定やANOVAなどの統計解析を追加するようClaudeに依頼
-- Python版スクリプトとQuartoレポートを生成してもらう
-- 繰り返し処理を関数化するコードを作成してもらう
-- エラーをClaudeに貼り付けてデバッグを依頼
-- 重い処理を高速化する最適化案を提案してもらう
+- 統計検定（t検定、ANOVA）を解析に追加するようClaudeに依頼
+- このコードの**Python版**を取得し、Quartoドキュメントを準備するようClaudeに依頼
+- Rスクリプトの繰り返し作業のための関数を作成するようClaudeに依頼
+- Rコードが実行されないときのエラーメッセージのデバッグにClaudeを使用
+- より良いパフォーマンスのために遅いRコードを最適化するようClaudeに依頼
 
 ## ワークフローまとめ
 
-- **RStudio（Windows）**：GUIでRコードを実行し、プロットやKnitを即座に確認
-- **Claude Code（WSL）**：AIによるコード生成・レビュー・コメント付け
-- **共有ファイル**：`/mnt/c/...` を介して両環境が同じフォルダを操作
-- **反復的な改良**：手動コード → Claudeの提案 → RStudioでテスト → さらに改良
-- **ドキュメント化**：ClaudeにR Markdownやレポート作成も依頼可能
+このハイブリッドセットアップは、両方の長所を組み合わせています：
 
-UbuntuターミナルでClaudeにコードを書かせ、そのままRStudioで実行して確認——この往復だけで高度な分析とレポート作成まで完結します。
+- **RStudio（Windows）** - インタラクティブなRコンソール、即座のプロット表示、コード実行のための使い慣れたGUI
+- **Claude Code（WSL）** - AI駆動のコード生成、レビュー、改善
+- **共有ファイル** - WSLの`/mnt/c/`マウントポイントを通じて、両ツールが同じファイルを操作
+- **反復的な改善** - 手動コードから始め、Claudeで強化、RStudioでテスト、そしてさらに改善
+- **ドキュメント化** - Claudeが解析のための包括的なレポートとコメントを生成できます
+
+ワークフローはシンプルです：UbuntuターミナルでClaudeを使ってコードを書くか編集し、すぐにRStudioでテストして実行します。ファイルのコピーや手動同期は不要です—WSLとWindowsは同じファイルをシームレスに共有します。
+
+---
+
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.

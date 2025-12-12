@@ -4,7 +4,7 @@
 
 MacにClaude Codeを入れたら、次は「ファイルを編集しながらClaudeと会話したい」という場面が増えます。Visual Studio Code (VS Code) を使えば、エディターとターミナルが1ウィンドウに収まり、片側でファイルを編集しつつ、もう片側で`claude`を操作できます。
 
-## 3つのキーポイント
+## キーコンセプト
 
 - **VS Code**：Microsoft製の無料エディター。Macで動き、拡張機能も豊富
 - **統合ターミナル**：VS Code下部にあるターミナルパネル。ここで`claude`を実行
@@ -12,82 +12,85 @@ MacにClaude Codeを入れたら、次は「ファイルを編集しながらCla
 
 ## 事前に済ませておくこと
 
-- [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)
-- [VS Codeの基本](./VS_Code_Getting_Started)でインターフェースに慣れておく
+- [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS) を完了
+- [VS Codeの基本](./VS_Code_Getting_Started) を完了
 - 作業時間の目安：10〜15分
-
----
 
 ## ステップ1：VS Codeを起動
 
-1. **Finder > アプリケーション**にある **Visual Studio Code** をダブルクリック
-2. 「インターネットからダウンロードされたアプリです」と出たら **開く** を選択
-3. Welcomeタブは閉じてOK
+- **Finder** を開き、**アプリケーション** に移動
+- **Visual Studio Code** を見つけてダブルクリック
+- 「Visual Studio Code はインターネットからダウンロードされたアプリケーションです」という警告が表示された場合は、**開く** をクリック
+- Welcomeタブが開きます - このタブは閉じてもかまいません
 
-> Dockからすぐ開けるよう、アイコンを右クリック → **オプション > Dockに追加** にしておくと便利です。
+**ヒント:** 後で簡単にアクセスできるように、Dock内のVS Codeを右クリックして **オプション > Dockに追加** を選択してください。
 
 ## ステップ2：作業用フォルダを作成
 
-1. Finderで **書類** フォルダを開く
-2. **Shift + Command + N** で新規フォルダを作り、`test_claude` と命名
+- **Finder** を開く
+- 左サイドバーの **書類** をクリック
+- メニューバーの **ファイル** をクリックし、次に **新規フォルダ** をクリック
+- フォルダに `test_claude` と名前を付ける
 
 ## ステップ3：VS Codeでフォルダを開く
 
-1. VS Codeメニューの **ファイル > フォルダーを開く**
-2. `書類 > test_claude` を選択して **開く**
-3. 「作成者を信頼しますか？」と聞かれたら **はい** を選択
+- VS Codeで、メニューバーの **ファイル** をクリックし、次に **フォルダーを開く** をクリック
+- **書類** に移動し、作成した `test_claude` フォルダを選択
+- **開く** をクリック
+- 「このフォルダー内のファイルの作成者を信頼しますか?」と表示された場合は、**はい、作成者を信頼します** をクリック
 
-左側のエクスプローラーに `TEST_CLAUDE` が表示されます。
+左側のエクスプローラーパネルに `TEST_CLAUDE` が表示されます。
 
 ## ステップ4：統合ターミナルでClaude Codeを起動
 
-1. **ターミナル > 新しいターミナル** を選択
-2. 下部に開いたターミナルで以下を入力：
-   ```bash
-   claude
-   ```
-3. Claude Codeのインターフェースが立ち上がります
+- 新しいターミナルを開く：メニューバーの **ターミナル** をクリックし、次に **新しいターミナル** をクリック
+- VS Codeの下部にターミナルパネルが表示されます
+- ターミナルで、次のように入力：
+  ```
+  claude
+  ```
+- Claude Codeが起動します - おなじみのClaude Codeインターフェースが表示されます
+- これで、VS Codeでファイルを編集しながらClaude Codeを使用する準備が整いました
 
-これで「左：ファイル」「下：Claude」という構成が完成です。
+## ステップ5：ワークフローをテスト
 
-## ステップ5：動作確認のミニワーク
-
-Claudeに次の指示を出してみましょう：
+- Claude Codeで、次のように入力：
 ```
 Write a short article explaining why LLMs like to use Markdown format. Save it as article.md
 ```
-- 数秒後、エクスプローラーに `article.md` が表示されます
-- ファイルをクリックするとVS Codeのエディターで内容を閲覧・編集可能
-- プレビューを見たいときは、タブを右クリック → **プレビューを開く**
+- Claude Codeがファイルを作成します - 左側のエクスプローラーパネルに `article.md` が表示されます
+- エクスプローラーで `article.md` をクリックすると、エディターで表示されます
+- フォーマットされた記事をプレビューするには：`article.md` タブを右クリックし、**プレビューを開く** を選択
+- 適切な見出し、箇条書き、フォーマットでレンダリングされたMarkdownが表示されます
 
-## VS Codeを閉じたあとに再開するには
+## 後でVS CodeでClaudeを再度開く
 
-- **方法A（おすすめ）**：VS Codeを起動 → **ファイル > 最近使った項目** から `test_claude` を選ぶ
-- **方法B**：通常のターミナルで `cd ~/Documents/test_claude` → `code .`
+VS Codeを閉じた後、プロジェクトに戻る方法は次のとおりです：
 
-VS Codeは最近のフォルダを覚えているので、方法Aが最速です。
+- **方法A:** VS Codeを開き、**ファイル > 最近使用したファイルを開く** をクリックし、`test_claude` を選択
+- **方法B:** ターミナルを開き、`cd ~/Documents/test_claude` でプロジェクトに移動し、`code .` と入力
 
-## 次のアクション例
+VS Codeは最近使用したフォルダを記憶しているため、通常は「最近使用したファイルを開く」を使用する方法Aが最も早いです。
 
-- `Explain what this project does` と聞いて既存コードの概要を掴む
-- `Add a function that calculates the average of a list` のように機能追加を依頼
-- `This code gives an error, can you fix it?` でバグ修正をお願い
-- 拡張機能ビューで「Claude Code」を検索し、VS Code向け拡張版も試す
+## 次のステップ
 
-## よくある質問 / トラブル
+- Claude Codeに既存のコードベースの説明を依頼：「Explain what this project does」
+- Claude Codeに新しい機能の作成を依頼：「Add a function that calculates the average of a list」
+- Claude Codeを使用してバグを修正：「This code gives an error, can you fix it?」
+- Claude Code VS Code拡張機能を試して、インラインdiffを含む視覚的なインターフェースを使用（拡張機能で「Claude Code」を検索）
 
-| 症状 | 対処 |
-| --- | --- |
-| ターミナルに `zsh` だけ表示され `claude` が起動しない | `claude --version` でインストール済みか確認。未インストールなら[セットアップガイド](./Install_Claude_Code_MacOS)へ |
-| `code` コマンドがターミナルで使えない | VS Codeで `Command + Shift + P` → “shell command”と入力 → **Shell Command: Install 'code' command in PATH** を実行 |
-| 「不明な開発元」エラーでVS Codeが開けない | **システム設定 > プライバシーとセキュリティ** の下部にある **このまま開く** をクリック |
+## トラブルシューティング
 
-## ワークフローの全体像
+- **ターミナルに「zsh」と表示されるが、Claude Codeが起動しない** - Claude Codeが正しくインストールされているか確認してください。`claude --version` を実行して確認します
+- **ターミナルで「code」コマンドが見つからない** - VS Codeで、メニューバーの **表示** をクリックし、次に **コマンドパレット** をクリックして、「shell command」と入力し、**Shell Command: Install 'code' command in PATH** を選択します
+- **VS Codeが不明な開発者からのものとして開けない** - **システム設定 > プライバシーとセキュリティ** に移動し、**このまま開く** をクリックします
 
-1. VS Codeがビジュアル編集を担当
-2. 統合ターミナルで `claude` を起動し、自然言語で依頼
-3. ファイルは通常通り `~/Documents` などのフォルダに保存
-4. エディターでコードを眺めながら、同じ画面でClaudeとチャットできる
+## ワークフローの概要
+
+- **VS Code** はビジュアルエディターインターフェースを提供します
+- **統合ターミナル** はVS Code内でClaude Codeを実行します
+- ファイルは書類フォルダ（または選択した場所）に保存されます
+- エディターでファイルを編集し、ターミナルでClaude Codeとチャット - 両方の長所を活用できます
 
 ---
 

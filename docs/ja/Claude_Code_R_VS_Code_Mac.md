@@ -56,7 +56,7 @@ summary(iris)
 
 - **File > Save**をクリックしてファイルを保存します
 - Rターミナルを開く：メニューバーの**View**をクリックし、**Command Palette**を選択、`R: Create R Terminal`と入力してEnterを押します
-- コードを選択して`Ctrl+Enter`（Windows/Linux）または`Cmd+Enter`（Mac）を押して実行します
+- コードを選択して`Cmd+Enter`を押して実行します
 - ターミナルにデータセットの構造と要約統計が表示されます
 
 ## ステップ4: Claudeに散布図の追加を依頼
@@ -77,7 +77,7 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 ## ステップ5: 更新したコードを実行
 
 - `iris_analysis.R`のすべてのコードを選択します
-- `Ctrl+Enter`（Windows/Linux）または`Cmd+Enter`（Mac）を押します
+- `Cmd+Enter`を押します
 - 別のグラフィックウィンドウに散布図が表示されます
 - 種（setosa、versicolor、virginica）ごとに色分けされた点が表示されます
 
@@ -92,7 +92,7 @@ Remove title. Change marker type by species. Change to the classic theme.
 - Enterを押します
 - Claudeが更新されたコード変更を表示します
 - **Accept**をクリックします
-- 更新されたコードを再度実行：すべてを選択して`Ctrl+Enter` / `Cmd+Enter`を押します
+- 更新されたコードを再度実行：すべてを選択して`Cmd+Enter`を押します
 - グラフが種ごとに異なるマーカー形状、タイトルなし、classicテーマで表示されます
 
 ## ステップ7: ClaudeにPCA分析を依頼
@@ -106,7 +106,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - Enterを押します
 - ClaudeがPCAコードをスクリプトに追加します
 - **Accept**をクリックします
-- すべてのコードを実行：すべてを選択して`Ctrl+Enter` / `Cmd+Enter`を押します
+- すべてのコードを実行：すべてを選択して`Cmd+Enter`を押します
 - 種ごとに色分けされた、PC1とPC2に投影されたサンプルを示すPCAプロットが表示されます
 
 ## ステップ8: Claudeにレビューとコメント追加を依頼
@@ -148,6 +148,4 @@ Review the entire script for correctness. Add comments when necessary.
 
 ---
 
-推定所要時間: 30分。作成者: [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 2025年12月11日
-
-[その他のチュートリアル](https://github.com/gexijin/vibe)
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.

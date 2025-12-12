@@ -163,6 +163,4 @@ Review the entire script for correctness. Add comments when necessary.
 
 ---
 
-推定所要時間: 30分。作成者: [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 2025年12月11日
-
-[その他のチュートリアル](https://github.com/gexijin/vibe)
+作成者: [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 2025年12月11日

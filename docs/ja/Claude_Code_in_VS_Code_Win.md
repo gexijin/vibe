@@ -4,7 +4,7 @@
 
 WSLとClaude Codeの準備ができたら、コードを編集するためのビジュアルエディターが欲しくなります。VS CodeはWindowsとLinux環境をつなぎ、エディターでファイルを編集しながら統合ターミナルでClaude Codeを実行できます。VS Codeを「Linux環境への窓」と考えてください。
 
-## 主要なポイント
+## 重要な概念
 
 - **VS Code**：Windowsで動くMicrosoft製の無料エディター。WSLに接続してLinux側のファイルも扱えます。
 - **WSL拡張機能**：VS CodeにWSLへの接続機能を追加。Linuxツール（Claude Codeなど）をそのまま使えます。
@@ -78,7 +78,7 @@ LLMがMarkdown形式を好む理由を解説する短い記事を書き、articl
 
 ## 後からVS Codeで再開するには
 
-- **方法A：** VS Codeを起動 → 左下アイコンから **WSLへ接続** → **ファイル > 最近使った項目** で `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude (WSL: Ubuntu)` を選択
+- **方法A：** VS Codeを起動 → 左下アイコンから **WSLへ接続** → **ファイル > 最近使った項目** で `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude [WSL: Ubuntu]` を選択
 - **方法B：** WindowsでUbuntuアプリを開き、プロジェクトフォルダへ移動して `code .` を実行
 
 最近使ったフォルダに表示されるので、方法Aが最も早いことが多いです。
@@ -89,7 +89,7 @@ LLMがMarkdown形式を好む理由を解説する短い記事を書き、articl
 - 新機能を追加：「リストの平均を計算する関数を追加して」
 - バグ修正を依頼：「このコードのエラーを修正してください」
 - 「Claude Code」拡張機能を検索し、インライン差分付きのビジュアルUIを試す
-- 大きなプロジェクトはWSL側（`/home/<user>`）にフォルダを作成すると高速です。Windowsからはエクスプローラーのアドレスバーに `\\wsl.localhost\` と入力してアクセスできます。
+- 大きなファイルをより効率的に扱うには、WSLファイルシステム内（`/home/user/`）にフォルダを作成します。Windowsからは、エクスプローラーのサイドバー下部にあるLinuxアイコンを探すか、アドレスバーに `\\wsl.localhost\` と入力してアクセスできます。
 
 ## トラブルシューティング
 
@@ -107,4 +107,4 @@ LLMがMarkdown形式を好む理由を解説する短い記事を書き、articl
 
 ---
 
-[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)（2025年12月10日作成）
+作成者：[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)（2025年12月10日）

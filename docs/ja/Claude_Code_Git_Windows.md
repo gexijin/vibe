@@ -1,8 +1,8 @@
 [ホーム](./)
 
-# Windows版Claude Codeでローカルバージョン管理
+# Windows版Claude Codeとバージョン管理
 
-Claude Codeに作業を任せると、ファイルが自動で書き換えられます。成功することもあれば、期待外れの結果になることもあります。そこで役立つのがGitです。**Gitはプロジェクト全体に対する「やり直しボタン」**。スナップショット（コミット）を残しておけば、いつでも安全な地点に戻れます。しかも操作はすべてClaude Codeに頼めます。
+AIの支援を受けて作業しています。AIはファイルを変更します。変更が素晴らしいこともあれば、そうでないこともあります。**バージョン管理はプロジェクト全体の取り消しボタンのようなものです。** スナップショット（「コミット」と呼ばれる）を保存するたびに、いつでも戻れる復元ポイントが作成されます。しかも、すべてコンピューター上で実行でき、Claude Codeがすべて処理してくれます。
 
 ## 主要な概念
 
@@ -11,198 +11,266 @@ Claude Codeに作業を任せると、ファイルが自動で書き換えられ
 - **コミット**：特定の時点でのプロジェクトの状態を説明付きで保存したもの
 - **Claude Code**：自然言語で指示するだけでコード作成・修正・Git操作まで行ってくれるAIアシスタント
 
-## 準備するもの
+## 必要なもの
 
-- [WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win)済み
-- 作業時間の目安：20分
-
----
+- [WindowsへのClaude Codeのインストール](./Install_CLAUDE_Code_Win)が完了していること
+- WSLとUbuntuがインストール済み
+- 20分
 
 ## ステップ1：Ubuntuターミナルを開く
 
-1. **Windowsスタートボタン**をクリック
-2. `Ubuntu` と入力し、表示された **Ubuntu** アプリを開く
-3. `$` や `%` で終わるプロンプトが表示されたら準備完了です
+- **スタート**メニューをクリック
+- `Ubuntu` と入力
+- **Ubuntu** をクリックしてターミナルを開く
+
+`$` で終わるコマンドプロンプトが表示されます。
 
 ## ステップ2：Gitをインストール
 
-```bash
-sudo apt-get install git
-```
-- パスワード入力後、数十秒で完了します
-- 確認：
-  ```bash
+- 次のコマンドを入力してEnterを押します：
+  ```
+  sudo apt-get install git
+  ```
+- パスワードを求められたら入力してEnterを押します
+- インストールが完了するまで待ちます（10〜30秒）
+- Gitがインストールされたことを確認します：
+  ```
   git --version
   ```
-  `git version ...` と表示されればOK
+
+`git version 2.34.1` のように表示されるはずです。
 
 ## ステップ3：Gitに身元情報を登録
 
-コミットログに誰が変更したかを残すため、名前とメールアドレスを設定します（実名でなくても構いません）。
+Gitはコミットメッセージに誰が変更したかを記録する必要があります。
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
+- 名前とメールアドレスを設定します（架空のものでも構いません）
+  ```
+  git config --global user.name "Your Name"
+  git config --global user.email "your.email@example.com"
+  ```
 
-## ステップ4：Windows上のフォルダへ移動
+複数人で作業する場合、名前とメールアドレスを使うことで誰が変更したかを識別できます。
 
-WSLではWindowsドライブを `/mnt/c/` から参照できます。
+## ステップ4：Windowsフォルダへ移動
 
-```bash
-cd /mnt/c/Users/YOUR_USERNAME/Documents
-pwd
-```
-`YOUR_USERNAME` を自分のユーザー名に置き換えると、`/mnt/c/Users/…/Documents` と表示されるはずです。
+WSLは `/mnt/c/` を通じてWindowsファイルにアクセスできます。
 
-## ステップ5：プロジェクトフォルダを用意
+- Windowsのユーザーフォルダに移動します：
+  ```
+  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  `YOUR_USERNAME` は実際のWindowsユーザー名に置き換えてください。
+- 正しい場所にいることを確認します：
+  ```
+  pwd
+  ```
 
-```bash
-mkdir timer
-cd timer
-```
-ここがタイマーアプリの作業フォルダになります。
+`/mnt/c/Users/YOUR_USERNAME/Documents` と表示されるはずです。
+
+## ステップ5：プロジェクトフォルダを作成
+
+- `timer` というフォルダを作成します：
+  ```
+  mkdir timer
+  ```
+- フォルダ内に移動します：
+  ```
+  cd timer
+  ```
+
+ここがプロジェクトの作業場所になります。
 
 ## ステップ6：Claude Codeを起動
 
-```bash
-claude
-```
-Claude Codeが立ち上がり、指示待ちの状態になります。
+- Claude Codeを起動します：
+  ```
+  claude
+  ```
 
-## ステップ7：Gitリポジトリを初期化
+Claude Codeが起動し、リクエストを待機します。
 
-Claude Codeにこうお願いしてください：
-```
-Start tracking changes
-```
-数秒でGitリポジトリが作成され、バージョン管理の準備が整います。
+## ステップ7：ClaudeにGitの初期化を依頼
 
-## ステップ8：タイマーアプリを作成
+- このリクエストを入力します：
+  ```
+  Start tracking changes
+  ```
 
-Claude Codeに以下を送信します：
-```
-Create a simple countdown timer app in a single file called timer.html.
-It should have:
-- An input field to set minutes
-- Start and Stop buttons
-- Display showing time remaining in MM:SS format
-```
-`tamar.html` が生成され、HTML/CSS/JavaScriptが書かれます。
+ClaudeがフォルダにGitリポジトリを初期化します（2〜5秒かかります）。これでバージョン管理の準備が整いました。
 
-## ステップ9：ブラウザで動作確認
+## ステップ8：タイマーアプリを構築
 
-1. Windowsの**エクスプローラー**で `Documents\timer` を開く
-2. `timer.html` をダブルクリックしてブラウザで開く
-3. 入力欄に `1` と入力 → **Start** をクリック → カウントダウンを確認
-4. 不具合があればClaudeに「こんなエラーが出た。直せる？」と伝えましょう
+- Claude Codeで次のように入力します：
+  ```
+  Create a simple countdown timer app in a single file called timer.html.
+  It should have:
+  - An input field to set minutes
+  - Start and Stop buttons
+  - Display showing time remaining in MM:SS format
+  ```
+
+Claudeが `timer.html` を作成します（10〜30秒かかります）。CSSとJavaScriptのコードも含まれます。
+
+## ステップ9：タイマーをテスト
+
+- Windowsのファイルエクスプローラーを開く
+- `Documents\timer` に移動
+- `timer.html` をダブルクリックしてブラウザで開く
+- タイマーを試します：
+  - 入力フィールドに `1` と入力
+  - **Start** をクリック
+  - カウントダウンを確認
+
+**何か壊れている場合：** Claude Codeで、エラーを説明します：`I'm seeing this error: [何が起こったか説明]. Can you fix it?`
 
 ## ステップ10：Claudeにコミットを依頼
 
-```
-Save these changes.
-```
-Claudeが変更ファイルの確認・メッセージ作成・コミットまで自動で行い、最初の復元ポイントができあがります。
+- Claude Codeで次のように入力します：
+  ```
+  Save these changes.
+  ```
+
+Claudeが次の処理を行います：
+- 変更されたファイルを確認
+- 説明的なコミットメッセージを作成
+- コミットを作成（5〜10秒かかります）
+
+最初のセーブポイントが作成されました。いつでもこの動作するバージョンに戻ることができます。
 
 ## ステップ11：プリセットボタンを追加
 
-```
-Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
-```
-- ブラウザを更新してボタンを確認
-- 問題なければ再度 `Save these changes.` でコミット
+- Claude Codeで次のように入力します：
+  ```
+  Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
+  ```
+- ブラウザタブを更新
+- テスト：**5 min** ボタンをクリック
+- 動作する場合は、変更をコミットします：
+  ```
+  Save these changes.
+  ```
 
-## ステップ12：15分ボタンを試作
+2つ目のセーブポイントが作成されました。このバージョンでは2つのボタンが動作しています。
 
-```
-Add a 15-minute button.
-```
-ただし今回は「バグが出たことにする」想定。テスト後もコミットせずに次の練習へ進みます。
+## ステップ12：別のボタンを追加
 
-## ステップ13：失敗した変更を破棄
+- Claude Codeで次のように入力します：
+  ```
+  Add a 15-minute button.
+  ```
+- ブラウザタブを更新
+- テスト：**15 min** ボタンをクリック
 
-```
-discard these changes.
-```
-- Claudeが確認を求めたら `yes`
-- ブラウザを更新すると、問題のボタンだけが消えます
+**このチュートリアルでは：** 15分ボタンが正しく動作しないふりをします。まだコミットしないでください。不適切な変更を破棄する練習をします。
 
-## ステップ14：アラーム音を追加
+## ステップ13：変更を破棄
 
-```
-Add a sound notification when the timer reaches zero.
-```
-0.1分（6秒）で試し、成功したらコミットします。
+AIのコードがうまく動作しないことがあり、最後のセーブポイントからやり直す必要があります。
+
+- Claude Codeで次のように入力します：
+  ```
+  discard these changes.
+  ```
+- Claudeが確認を求めます
+- `yes` と入力してEnterを押します
+- ブラウザを更新すると、15分ボタンが消えます
+
+Claudeが気に入らない新しい変更を破棄します。タイマーは1分と5分のボタンだけで再び動作します。
+
+## ステップ14：サウンド通知を追加
+
+- Claude Codeで次のように入力します：
+  ```
+  Add a sound notification when the timer reaches zero.
+  ```
+- Claudeの処理が終わったらブラウザを更新してテスト（タイマーを0.1分に設定）
+- 動作する場合は、変更をコミットします：
+  ```
+  Save these changes.
+  ```
 
 ## ステップ15：スヌーズボタンを追加
 
-```
-The sound should continue until I click a button to snooze it.
-```
-こちらもテスト後にコミット。
+- Claude Codeで次のように入力します：
+  ```
+  The sound should continue until I click a button to snooze it.
+  ```
+- Claudeの処理が終わったらブラウザを更新してテスト（タイマーを0.1分に設定）
+- 動作する場合は、変更をコミットします：
+  ```
+  Save these changes.
+  ```
 
-## ステップ16：コミット履歴を確認
+## ステップ16：コミット履歴を表示
 
-```
-show my change history
-```
-- 初期バージョン
-- プリセットボタン
-- サウンド通知
+- Claude Codeで次のように入力します：
+  ```
+  show my change history
+  ```
+
+Claudeがコミットを読みやすい形式で表示します。次のように表示されるはずです：
+- 初期のタイマーアプリのコミット
+- プリセットボタン（1分と5分）のコミット
+- サウンド通知のコミット
 - スヌーズボタン
-が並んでいるはずです。15分ボタンは破棄したので登場しません。
 
-## ステップ17：コードを学ぶ
+15分ボタンの試みはありません。破棄したからです。
 
-1. ブラウザでページを開き、右クリック → **ページのソースを表示**
-2. Claudeに `Explain this code. Just big picture.` と頼むと、構造を説明してくれます。
+## ステップ17：コードを確認
 
----
+- アプリを表示しているブラウザで、右クリックして **ページのソースを表示** を選択
+- コードのソースを確認できます。
+- Claude Codeで次のように尋ねます：
+  ```
+  Explain this code. Just big picture.
+  ```
 
-## 1つのセッションで行ったこと
+## 完全なワークフロー
 
-1. 変更をClaudeに依頼
-2. ブラウザでテスト
-3. 成功 ⇒ コミットを依頼
-4. 失敗 ⇒ 修正依頼、直らなければ破棄
-5. 必要に応じて繰り返し
+- Claudeに変更を依頼
+- テスト
+- 動作する場合 → Claudeにコミットを依頼
+- 失敗する場合 → Claudeに修正を依頼
+- 修正できない場合 → 変更を破棄して再試行
+- 繰り返し
 
-この流れで「常に成功しているコードだけがコミットされる」状態を維持できます。
+いつでも任意のコミットに戻ることができます。恐れずに破棄してください。動作するコードだけをコミットします。
 
-## 次のチャレンジ
+## 次のステップ
 
-- `Add a working 15-minute preset button`
-- `Add a Pause/Resume button that toggles the timer state`
-- `Improve the visual design with a modern color scheme`
-- `Add a visual progress bar showing time remaining`
+タイマーにさらに機能を追加してみましょう：
 
-各ステップで必ずテスト → 成功したらコミット → 失敗したら破棄、というリズムを保ちましょう。
+- **15分ボタン：** `Add a working 15-minute preset button`（破棄したものをやり直します）
+- **一時停止ボタン：** `Add a Pause/Resume button that toggles the timer state`
+- **スタイル改善：** `Improve the visual design with a modern color scheme and larger fonts`
+- **プログレスバー：** `Add a visual progress bar showing time remaining`
+
+各機能の後にテストし、成功したらコミット、失敗したら破棄することを忘れないでください。
 
 ## トラブルシューティング
 
-| 症状 | 対処 |
-| --- | --- |
-| `not a git repository` | `cd /mnt/c/Users/YOUR_USERNAME/Documents/timer` で正しいフォルダにいるか確認 |
-| `timer.html` が見つからない | Windows側では `C:\Users\YOUR_USERNAME\Documents\timer\timer.html` にあります |
-| Gitがパスワードを聞く | `sudo` パスワードの入力ミス。落ち着いて再入力 |
-| タイマーが動作しない | ブラウザで **F12 → Console** を開き、赤いエラーをコピーしてClaudeに貼り付ける |
+- **"not a git repository" エラー：** timerフォルダにいることを確認してください（`cd /mnt/c/Users/YOUR_USERNAME/Documents/timer`）
+- **Windows上でtimer.htmlが見つからない：** ファイルは `C:\Users\YOUR_USERNAME\Documents\timer\timer.html` にあります
+- **Gitがパスワードを要求する：** `sudo` パスワードの入力ミスです。注意深く再入力してください
+- **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証** を選択、**Console** タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
 
-## Claudeに頼めること（例）
+## Claudeに依頼できること
 
-- `what files have I changed?`
-- `show me the diff`
-- `explain what the timer code does`
-- `create a branch called experiment`
-- `go back to the previous commit`
+- `what files have I changed?` - コミットされていない変更を確認
+- `show me the diff` - 変更されたコードを正確に確認
+- `explain what the timer code does` - 実装を理解
+- `create a branch called experiment` - リスクのある変更を安全に試す
+- `go back to the previous commit` - 最後のコミット以降のすべてを元に戻す
 
-Gitコマンドを覚えなくても、自然言語で指示すればClaudeが処理してくれます。
+ClaudeはすべてのGit操作を自然言語で処理します。コマンドを覚える必要はありません。
 
-## ワークフローまとめ
+## ワークフロー概要
 
-- **セットアップ**：Gitインストールとユーザー設定は最初に一度だけ
-- **開発**：Claudeがコードを書き、あなたがブラウザで確認
-- **バージョン管理**：コミット・差分確認・巻き戻しをすべてClaudeに依頼
-- **安全性**：失敗した変更はすぐ破棄し、成功した状態だけ記録
-- **ローカル作業**：すべてPC内で完結。余計なアカウントやクラウド不要
+- **セットアップ：** Gitを一度インストールし、身元情報を一度設定
+- **開発：** Claudeがコードを書き、ブラウザでテスト
+- **バージョン管理：** ClaudeがシンプルなリクエストですべてのGit操作を処理
+- **安全性：** いつでも不適切な変更を破棄し、任意の過去のコミットに戻れる
+- **ローカル：** すべてがコンピューター上で完結。アカウントやインターネット接続は不要
 
 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 作成（2025年12月8日）

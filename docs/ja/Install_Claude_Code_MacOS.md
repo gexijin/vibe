@@ -2,6 +2,8 @@
 
 # MacにClaude Codeをインストール
 
+Claude Codeは、ターミナル上で動作するAIアシスタントで、コードの作成、デバッグ、理解を支援します。いつでも相談できる頼れるコーディングパートナーのようなものです。完全な初心者でも経験豊富な開発者でも、Claude Codeはワークフローを加速し、学習を助けます。
+
 このガイドでは、MacにClaude Codeをセットアップする手順を最初から最後まで説明します。初心者でも迷わないよう、各ステップを細かく分けて記載しています。
 
 ## 概要
@@ -10,6 +12,12 @@
 - npmでClaude Codeをインストール
 - APIキー（またはサブスクリプション）を設定
 - Claude Codeを使って作業開始
+
+## 主要な概念
+
+- **ターミナル**：ボタンをクリックする代わりにコマンドを入力するMac内蔵のアプリです。Claude Codeとのやり取りはここで行います。
+- **Node.js**：Claude Codeを動かすために必要なソフトウェアです。Claude Codeを動かすエンジンのようなものです。
+- **Claude Code**：ターミナルで実行するAIコーディングアシスタントです。質問に答えたり、コードを書いたり、既存のプロジェクトを理解するのを助けたりできます。
 
 ## 用意するもの
 
@@ -25,7 +33,9 @@ Claude CodeにはNode.js 18以上が必要です。まず現在の環境を確�
 
 **Node.jsが入っているか確認する：**
 
-- **Command (⌘) + Space**を押し、`ターミナル`と入力して**ターミナル**を開く（黒い四角アイコン）
+- Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
+- 上部の検索ボックスに`ターミナル`と入力
+- **ターミナル**（黒い四角アイコン）をクリック
 - ターミナルで以下を入力：
   ```
   node --version
@@ -60,70 +70,82 @@ Claude CodeにはNode.js 18以上が必要です。まず現在の環境を確�
 
 ## ステップ3：Node.jsが入ったか確認
 
-- もう一度 **Command (⌘) + Space** でターミナルを開く
-- 次のコマンドを実行：
+- Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
+- 上部の検索ボックスに`ターミナル`と入力
+- **ターミナル**（黒い四角アイコン）をクリック
+- ターミナルウィンドウが開きます
+- ターミナルで以下を入力：
   ```
   node --version
   ```
 - `v24.x.x`のような表示が出れば成功です（数字は多少違っていても問題ありません）
+- バージョン番号が表示されれば、Node.jsは正しくインストールされています
 
 **「command not found」が出た場合：**
-- **Command (⌘) + Q**でターミナルを終了→再度開いてコマンドを試す
-- それでも駄目ならMacを再起動して再実行
+- ターミナルを完全に終了します（メニューバーの**ターミナル**をクリックし、**ターミナルを終了**を選択）
+- ターミナルを再度開きます
+- もう一度コマンドを試してください
 
-> **ヒント：** この後もターミナルを使うので、開いたままにしておくと便利です。
+**ヒント：** 次のステップでもターミナルを使うので、開いたままにしておいてください。
 
 ## ステップ4：Claude Codeをインストール
 
-- ターミナルで以下を実行：
+- ターミナルで以下を入力：
+  ```
+  npm install -g @anthropic/claude-code
+  ```
+- Claude Codeのインストールを待ちます（2〜5分）
+- 「permission denied」エラーが表示された場合は、`sudo`を付けて試してください：
   ```
   sudo npm install -g @anthropic/claude-code
   ```
-- パスワード入力を求められたら、Macのログインパスワードを入力（画面には表示されません）
-- 2〜5分ほど待つとインストールが完了します。黄色や赤の警告が出る場合がありますが、多くは問題ありません。
-- 完了後、次で確認：
+  その後、プロンプトが表示されたらMacのパスワードを入力します（入力中は表示されません）
+- 黄色や赤のテキストで警告が表示される場合がありますが、通常は問題ありません
+- インストールが完了したら、以下を入力して確認します：
   ```
   claude --version
   ```
-- Claude Codeのバージョン番号が表示されればインストール成功です。
+- Claude Codeのバージョン番号が表示されるはずです
 
-## ステップ5：Anthropic APIにリンク
+## ステップ5：Anthropicアカウントに接続
 
-### オプションA：Claude Pro/Maxサブスクリプションを使う
+### オプションA：Claude ProまたはMaxサブスクリプションを使用
 
 - ターミナルで以下を入力：
   ```
   claude
   ```
-- Claudeがブラウザを開きます。自動で開かない場合は、**Command (⌘)** を押しながら長いURLをクリック、またはURLをコピーしてブラウザに貼り付けてください。
-- Claude.aiにログイン（自動ログインされることもあります）
+- Claudeがブラウザを開こうとします。自動的に開かない場合は、ターミナルに表示されたURLをコピーしてブラウザに貼り付けてください。
+- Claude.aiアカウントにログインします（自動的にログインされる場合もあります）
 - **Authorize**をクリック
-- 表示された長いコードで**Copy Code**をクリック
-- ターミナルに戻り、右クリック > **貼り付け** または **Command (⌘) + V** でコードを貼り付ける
-- 成功メッセージが出たらセットアップ完了です。
+- 長いコードが表示されたら**Copy Code**をクリック
+- ターミナルウィンドウに戻ります
+- ターミナルに貼り付けるには：メニューバーの**編集**をクリックし、次に**貼り付け**をクリック
+- 成功メッセージが表示されるはずです
+- 指示に従ってセットアップを完了してください
 
-### オプションB：Anthropic APIキーを使う
+### オプションB：Anthropic APIキーを使用
 
-Claudeサブスクリプションの代わりにAPIキーを使う場合：
+Claudeサブスクリプションの代わりにAnthropic APIキーを使用する場合：
 
-1. [Anthropic Console](https://console.anthropic.com/)でAPIキーを取得
-2. ターミナルで以下を入力（`your-api-key-here`を自分のキーに置き換え）：
-   ```
-   export ANTHROPIC_API_KEY="your-api-key-here"
-   ```
-3. 毎回設定するのが面倒な場合は、シェル設定へ追記：
-   ```
-   echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.zshrc
-   ```
-4. ターミナルを閉じて開き直すと設定が反映され、Claude CodeでAPIキーが利用できます。
+- まず、[Anthropic Console](https://console.anthropic.com/)からAPIキーを取得します
+- ターミナルで以下を入力：
+  ```
+  export ANTHROPIC_API_KEY="your-api-key-here"
+  ```
+  `your-api-key-here`を実際のAPIキーに置き換えてください
+- これを永続的にする（毎回設定する必要がないようにする）には、シェルプロファイルに追加します：
+  ```
+  echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.zshrc
+  ```
+  `your-api-key-here`を実際のAPIキーに置き換えてください
+- 変更を有効にするため、ターミナルを閉じて再度開いてください
 
-> **重要：** Claude Pro/Maxを利用している場合は `ANTHROPIC_API_KEY` を設定しないでください。サブスクリプション枠を優先的に使い、意図しないAPI課金を避けられます。
->
-> **補足：** 古いMacでbashを使っている場合は `~/.zshrc` の代わりに `~/.bash_profile` を指定してください。
+**注意：** bashを使用している古いMacの場合は、上記のコマンドで`~/.zshrc`を`~/.bash_profile`に置き換えてください。
 
-### オプションC：Azure経由のAnthropic APIを使う
+### オプションC：Azure Foundry経由でAnthropic APIを使用
 
-ターミナルで以下を貼り付け、Azure Foundry向けの環境変数を設定します：
+このオプションは、Azure上にホストされたClaudeモデルを使用している組織向けです。ターミナルウィンドウで、このコードを貼り付けて環境変数を定義します（Claudeを起動する前に）：
 ```
 # Microsoft Foundry統合を有効化
 export CLAUDE_CODE_USE_FOUNDRY=1
@@ -134,34 +156,51 @@ export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
-`xxxx-eastus2`は自分のFoundryリソース名に、`your_api_key`はAzureポータルで発行した完全なAPIキーに置き換えてください。設定後は、Azure上のClaudeモデルをClaude Codeから呼び出せます。
 
-## ステップ6：Claude Codeを使ってみる
+**注意：** `xxxx-eastus2`をFoundryリソース名に置き換えてください（ベースURL全体ではありません）。`your_api_key`をAzureポータルから取得した完全なAPIキーに置き換えてください。
 
-準備完了です！
+## ステップ6：Claude Codeを使い始める
 
-- ターミナルで：
+これで準備完了です！Claude Codeの使い方は次のとおりです：
+
+- ターミナルで以下を入力：
   ```
   claude
   ```
-- これでClaudeとチャットできます。動作確認として「量子コンピューティングについて説明して」などの質問を投げてみてください。
+- チャットの準備をする前にいくつか質問されます
+- 動作を確認するには、「量子コンピューティングについて説明してください」などの一般的な質問をしてみてください。
 
-## ステップ7：プロジェクトフォルダで作業する
+## ステップ7：プロジェクトに移動する
 
-- Mac内のプロジェクトフォルダへ移動：
+- Macのフォルダにプロジェクトがある場合は、そこに移動できます：
   ```
   cd ~/Documents/YourProject
   ```
-  `YourProject`を実際のフォルダ名に置き換えます。
-- そのフォルダで`claude`を起動すれば、該当プロジェクトのファイルを直接扱えます。
-- まずは「このコードベースが何をするのか説明して」と聞き、状況を把握しましょう。
-- 修正や追加をClaudeに依頼し、完了したらお好みのIDEでテストします。
+  `YourProject`を実際のプロジェクトフォルダ名に置き換えてください
+
+- 次にClaudeを起動します：
+  ```
+  claude
+  ```
+- まずは、Claudeにコードベースについて説明してもらうことから始めましょう。
+- Claudeに変更を依頼できます。
+- お好みのIDEでコードをテストしてください。
+
+**注意：** Claudeはプロジェクトフォルダ内で動作します。フォルダ内で書き込み権限を定義し、そのフォルダに設定を保存します。これがClaudeのワークスペースです。
+
+## 次のステップ
+- [VS Code入門](./VS_Code_Getting_Started.md) - 人気のコードエディタVS Codeの使い方を学ぶ
+- [VS CodeでClaude Code（Mac）](./Claude_Code_in_VS_Code_Mac.md) - VS Code内でClaude Codeを実行
+- [Claude Codeで研究論文を書く](./Writing_Research_Paper_Claude_Code.md) - 学術論文執筆にClaude Codeを使用
 
 ## ターミナルを再度開く方法
 
-- **Command (⌘) + Space**を押す、またはDockから**Launchpad**を開く
-- `ターミナル`と入力して**ターミナル**をクリック
-- 新しいターミナルウィンドウが開きます
+ターミナルを閉じた後、再度開く方法は次のとおりです：
+
+- Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
+- 上部の検索ボックスに`ターミナル`と入力
+- **ターミナル**をクリック
+- ターミナルウィンドウが開きます
 
 ## トラブルシューティング
 
@@ -171,54 +210,51 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 - **システム設定** > **プライバシーとセキュリティ**の下部にある**このまま開く**をクリック
 
 ### インストール後に「node: command not found」と表示される
-- **Command (⌘) + Q**でターミナルを終了→再起動
-- `node --version`を再実行
-- それでも解決しない場合はMacを再起動してやり直す
+- ターミナルを完全に終了します（メニューバーの**ターミナル**をクリックし、**ターミナルを終了**を選択）
+- ターミナルを再度開きます
+- もう一度`node --version`を試してください
+- それでもうまくいかない場合は、Macを再起動して再度試してください
 
 ### npmインストールがパーミッションエラーで失敗する
-- `sudo`を付けて再実行：
+- npmコマンドの前に`sudo`を付けます：
   ```
   sudo npm install -g @anthropic/claude-code
   ```
-- プロンプトが表示されたらパスワードを入力
+- プロンプトが表示されたらMacのパスワードを入力してください（入力中は表示されません）
 
 ### Claude Codeコマンドが見つからない
-- npmのインストールが最後まで完了したか確認
-- ターミナルを再起動
-- 次でインストール状況を確認：`npm list -g @anthropic/claude-code`
-- 必要なら再インストール：
-  ```
-  sudo npm uninstall -g @anthropic/claude-code
-  sudo npm install -g @anthropic/claude-code
-  ```
+- npmのインストールが正常に完了したことを確認してください
+- ターミナルを閉じて再度開いてみてください
+- Claude Codeがインストールされているか確認します：`npm list -g @anthropic/claude-code`
+- 再度インストールしてみてください：`npm install -g @anthropic/claude-code`
 
 ### 「Cannot find module」エラー
-- `node --version`でNode.jsの動作を確認
-- 上記の手順でClaude Codeを再インストール
+- Node.jsが正しくインストールされていることを確認してください：`node --version`
+- Claude Codeを再インストールしてみてください：`npm uninstall -g @anthropic/claude-code`を実行してから`npm install -g @anthropic/claude-code`を実行
 
-## Macで便利な小ワザ
+## Macユーザー向けのヒント
 
-### プロジェクトパスを簡単に取得
-1. Finderで目的のフォルダを開く
-2. そのフォルダをターミナルウィンドウへドラッグ＆ドロップ
-3. 自動でフルパスが挿入されます
+### プロジェクトパスを見つける
+フォルダへのパスを見つけるには：
+- Finderを開きます
+- プロジェクトフォルダに移動します
+- フォルダをターミナルにドラッグ＆ドロップすると、フルパスが表示されます！
 
-### よく使うキーボードショートカット
-- **Command (⌘) + T**：ターミナルの新規タブ
-- **Command (⌘) + N**：ターミナルの新規ウィンドウ
-- **Command (⌘) + K**：画面クリア
-- **Control + C**：実行中のコマンドを停止
+### 別のターミナルアプリを使用する
+他のターミナルアプリも使用できます：
+- iTerm2（より多くの機能を持つ人気の代替品）
+- Warp（AI機能を備えたモダンなターミナル）
+- Hyper（クロスプラットフォームターミナル）
 
-### ほかのターミナルアプリを使う
-- **iTerm2**：多機能で人気のターミナル
-- **Warp**：AI機能を備えたモダンなターミナル
-- **Hyper**：クロスプラットフォームで動作
-
-Claude Codeはどのターミナルアプリでも動作します。
+Claude Codeはすべてのターミナルで動作します！
 
 ## 困ったときは
 
-- Node.jsのダウンロード： [Node.js公式サイト](https://nodejs.org/)
-- Node.jsの問題： [Node.jsドキュメント](https://nodejs.org/docs/)
-- npmの問題： [npmドキュメント](https://docs.npmjs.com/)
-- Claude Codeの問題： [Claude Code GitHub](https://github.com/anthropics/claude-code)
+- Node.jsのダウンロード：[Node.js公式ウェブサイト](https://nodejs.org/)
+- Node.jsの問題：[Node.jsドキュメント](https://nodejs.org/docs/)
+- npmの問題：[npmドキュメント](https://docs.npmjs.com/)
+- Claude Codeの問題：[Claude Code GitHub](https://github.com/anthropics/claude-code)
+
+---
+
+*最終更新：2025年12月*

@@ -1,8 +1,8 @@
 [ホーム](./)
 
-# Docker経由でVS CodeでPythonコーディング
+# DockerコンテナによるVS CodeでのPythonコーディング
 
-Pythonコードを同僚と共有しようとして、「でも私のマシンでは動くよ」問題のデバッグに何時間も費やしたことはありませんか？Dockerコンテナはコード用の輸送コンテナのようなものです—Python環境、ライブラリ、依存関係を、どこでも同じように動作する密閉されたボックスにパッケージ化します。さらに、[Docker Hub](https://hub.docker.com/)には何万もの事前構築イメージがあり、ソフトウェア開発者がすぐに使える環境を公開しているので、手動インストールの苦痛をスキップできます。このチュートリアルでは、VS CodeとDocker Desktopを使って、隔離された再現可能な環境でPythonを実行する方法を紹介します。
+Pythonコードを同僚と共有しようとして、「でも私のマシンでは動くよ」問題のデバッグに何時間も費やしたことはありませんか？Dockerコンテナはコード用の輸送コンテナのようなものです。Python環境、ライブラリ、依存関係を、どこでも同じように動作する密閉されたボックスにパッケージ化します。さらに、[Docker Hub](https://hub.docker.com/)には何万もの事前構築イメージがあり、ソフトウェア開発者がすぐに使える環境を公開しているので、手動インストールの苦痛をスキップできます。このチュートリアルでは、VS CodeとDocker Desktopを使って、隔離された再現可能な環境でPythonを実行する方法を紹介します。
 
 ## 主要な概念
 
@@ -37,8 +37,8 @@ Pythonコードを同僚と共有しようとして、「でも私のマシン�
 
 - コンピュータに`python-docker-demo`という新しいフォルダを作成
 - その中に`.devcontainer`というサブフォルダを作成
-- その中に`python`というサブフォルダを作成
-- 構造は次のようになるはずです：`python-docker-demo/.devcontainer/`と`python-docker-demo/python/`
+- `python-docker-demo`の中に`python`というサブフォルダを作成
+- 構造は次のようになります：`python-docker-demo/.devcontainer/` と `python-docker-demo/python/`
 
 ## ステップ4：Dockerfileを作成
 
@@ -173,7 +173,7 @@ st.pyplot(fig)
 
 - **ファイル > 保存**をクリック
 
-## ステップ8：コンテナで再度開く
+## ステップ8：コンテナ内で再度開く
 
 - VS Code左下隅の緑色のアイコンをクリック
 - メニューから**Reopen in Container**を選択
@@ -183,10 +183,10 @@ st.pyplot(fig)
 
 ## ステップ9：コンテナ環境を理解する
 
-これでLinuxコンテナ内でコーディングしています。これが何を意味するか探索しましょう。
+これでLinuxコンテナ内でコーディングしています。これが何を意味するのか探ってみましょう。
 
 - **ターミナル > 新しいターミナル**をクリックしてコンテナ内のターミナルを開く
-- 現在の場所を確認：
+- 現在の場所を確認します：
 
 ```bash
 pwd
@@ -194,15 +194,15 @@ pwd
 
 `/workspaces/python-docker-demo`と表示されます - これはコンテナ内のプロジェクトフォルダです。
 
-- ファイルをリスト：
+- ファイルを一覧表示：
 
 ```bash
 ls
 ```
 
-作成したフォルダが表示されます：`.devcontainer/`、`python/`など。
+作成したフォルダが表示されます：`.devcontainer/`、`python/` など。
 
-- 一つ上のディレクトリに移動してみる：
+- 一つ上のディレクトリに移動してみます：
 
 ```bash
 cd ..
@@ -211,7 +211,7 @@ ls
 
 `python-docker-demo/`だけが表示されます - コンテナは隔離されています。コンピュータの他のフォルダ、デスクトップ、ドキュメントにはアクセスできません。この隔離により、Python環境がクリーンで再現可能になります。
 
-- プロジェクトフォルダに戻る：
+- プロジェクトフォルダに戻ります：
 
 ```bash
 cd python-docker-demo
@@ -237,8 +237,8 @@ cd python-docker-demo
 
 - VS Codeエクスプローラーで`python/app.py`に移動
 - クリックしてファイルを開く
-- 新しいターミナルを開く（**ターミナル > 新しいターミナル**）
-- アプリを実行：
+- 新しいターミナルを開きます（**ターミナル > 新しいターミナル**）
+- アプリを実行します：
 
 ```bash
 cd python
@@ -257,17 +257,17 @@ streamlit run app.py
 
 - アプリを実行したまま
 - VS Codeで`python/app.py`を編集
-- 6行目を見つける：`st.title("オールドフェイスフル間欠泉データ")`
+- 6行目を見つけます：`st.title("オールドフェイスフル間欠泉データ")`
 - 以下に変更：
 
 ```python
-st.title("初めてのPython Dockerアプリ")
+st.title("私の初めてのPython Dockerアプリ")
 ```
 
 - **ファイル > 保存**をクリック
 - ブラウザに戻る
 - 右上隅の**Always rerun**をクリック
-- タイトルがカスタムテキストで表示されます
+- タイトルがカスタムテキストとして表示されます
 
 ## ステップ13：Dockerfileを理解する（オプション）
 
@@ -280,9 +280,9 @@ st.title("初めてのPython Dockerアプリ")
 - `FROM python:3.12-slim` - Python 3.12公式ベースイメージ（軽量なDebian系）
 - `RUN apt-get install` - Pythonパッケージをビルドするためのシステムライブラリ
 - `RUN pip install --no-cache-dir ...` - Pythonパッケージを永続的にインストール
-- `RUN curl... && apt-get install -y nodejs` - Claude Codeを実行するために必要なNode.jsをインストール
+- `RUN curl... && apt-get install -y nodejs` - Claude Codeの実行に必要なNode.jsをインストール
 - `RUN npm install -g @anthropic-ai/claude-code` - AIアシスタンス用にClaude Codeをグローバルにインストール
-- `EXPOSE 8501` - Streamlitアプリ用にポート8501を開く
+- `EXPOSE 8501` - Streamlitアプリ用にポート8501を公開
 
 **使用できる他のPythonイメージ：**
 
@@ -291,16 +291,16 @@ st.title("初めてのPython Dockerアプリ")
 - `python:3.12-alpine` - 最小のAlpine Linuxベースイメージ（最小サイズ）
 - `jupyter/datascience-notebook` - データサイエンスライブラリが事前設定されたJupyter
 
-ベースイメージを変更した後、コンテナを再ビルドして変更を適用してください。
+ベースイメージを変更した後は、コンテナを再ビルドして変更を適用します。
 
 ## ステップ14：DockerイメージにPythonパッケージをインストール（オプション）
 
-ターミナルでpipを使ってインストールしたパッケージ（`pip install package`）は一時的で、コンテナを再ビルドすると消えます。パッケージを永続的にするには、Dockerfileに追加してください。
+ターミナルでpipを使ってインストールしたパッケージ（`pip install package`）は一時的で、コンテナを再ビルドすると消えます。パッケージを永続的にするには、Dockerfileに追加します。
 
 - VS Codeエクスプローラーで`.devcontainer/Dockerfile`に移動
 - クリックしてファイルを開く
-- 9行目を見つける：`RUN pip install --no-cache-dir ...`
-- リストに`scikit-learn`を追加：
+- 9行目を見つけます：`RUN pip install --no-cache-dir ...`
+- リストに`scikit-learn`を追加します：
 
 ```dockerfile
 RUN pip install --no-cache-dir \
@@ -311,7 +311,7 @@ RUN pip install --no-cache-dir \
 - 左下隅の緑色のアイコンをクリック
 - メニューから**Rebuild Container**を選択
 - VS Codeが新しいパッケージでコンテナを再ビルドします（2〜5分かかります）
-- 確認するには、Pythonターミナルを開いて入力：
+- 確認するには、Pythonターミナルを開いて入力します：
 
 ```python
 import sklearn
