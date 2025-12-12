@@ -144,7 +144,6 @@ If you have an Anthropic API key instead of a Claude subscription:
    ```
    Replace `your-api-key-here` with your actual API key
 - Close and reopen Terminal for the changes to take effect
-- You should now be able to use Claude Code with your API key
 
 **Note:** If you're using an older Mac with bash instead of zsh, replace `~/.zshrc` with `~/.bash_profile` in the command above.
 
@@ -172,7 +171,7 @@ You're all set! Here's how to use Claude Code:
    ```
    claude
    ```
-- You can now chat with Claude!
+- It asks you a few questions before getting ready to chat
 - To see if it works, ask a general question such as "Explain quantum computing."
 
 ## Step 7: Navigate to Your Project
@@ -244,12 +243,6 @@ To find the path to a folder:
 - Open Finder
 - Navigate to your project folder
 - Drag and drop the folder into Terminal - the full path will appear!
-
-### Keyboard Shortcuts
-- **Command (⌘) + T**: Open new Terminal tab
-- **Command (⌘) + N**: Open new Terminal window
-- **Command (⌘) + K**: Clear Terminal screen
-- **Control + C**: Stop a running command
 
 ### Using Different Terminal Apps
 You can also use other terminal apps like:
