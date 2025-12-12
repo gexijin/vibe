@@ -3,6 +3,8 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+# This file must exist; otherwise, remove this line
+  "envFile": ".devcontainer/api.env",
   "customizations": {
     "vscode": {
       "extensions": [
