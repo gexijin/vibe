@@ -1,5 +1,5 @@
 {
-  "name": "R in Docker (AMD64)",
+  "name": "R in Docker (ARM64)",
   "build": {
     "dockerfile": "Dockerfile"
   },
