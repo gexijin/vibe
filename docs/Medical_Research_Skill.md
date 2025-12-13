@@ -4,7 +4,7 @@
 
 Keeping up with medical research means wading through dense scientific papers filled with jargon. A Claude Skill is like having a research assistant that reads hundreds of papers and explains them in plain English - instead of spending hours searching PubMed and decoding technical language, you ask a simple question and get a clear summary based on the latest science.
 
-In this tutorial, you'll create a Claude Skill that searches peer-reviewed medical literature, which is very different from web searches. To do this we create a Python script to query PubMed. 
+In this tutorial, you'll create a Claude Skill that searches peer-reviewed medical literature, which is very different from web searches. To do this we create a Python script to query PubMed. The best part? You can ask Claude to create the Skill for you! Yes, Claude has a Skills that create Skills!
 
 ## Key Concepts
 
