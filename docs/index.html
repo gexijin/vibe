@@ -377,7 +377,7 @@
             <div class="lang-switch">
                 <a href="ja/">日本語</a>
             </div>
-            <h1>Claude Code for Beginners</h1>
+            <h1>Claude Code for Babies</h1>
             <p class="subtitle">15-minute tutorials for Claude Code, a powerful AI for coding, research, & more</p>
         </header>
 
@@ -401,9 +401,9 @@
         <p> Claude Code is a powerful AI coding assistant that can also automate research, writing, editing, and more.
             It operates locally inside a folder on your computer, serving as a partner to help you accomplish
             many tasks efficiently, all under your guidance.
-            For total beginners, I introduce concepts and tools that help unleash the power of Claude Code. 
+            Through hands-on activities, I gently introduce concepts and tools that help unleash the power of Claude Code. 
             Git for version control, or keeping track of changes to your files. 
-            Visual Studio Code (VS Code) for a friendly coding/editing environment.
+            Visual Studio Code (VS Code) for a convenient coding and editing environment.
             WSL (Windows Subsystem for Linux) to run Claude Code on Windows machines efficiently. 
             Docker to run coding environments in isolated containers.
             Follow the learning path or pick tutorials that interest you!
@@ -426,6 +426,7 @@
                 <li><a href="Vibe_Coding_R_Docker_Guide">Vibe Coding in R with Claude Code</a></li>
                 <li><a href="Vibe_Coding_Python_Docker_Guide">Vibe Coding in Python with Claude Code</a></li>
                 <li><a href="Writing_Research_Paper_Claude_Code">Write a Research Paper with Claude Code</a></li>
+                <li><a href="Reuse_Prompts_via_Slash_Commands">Create Custom Slash Commands</a></li>
                 <li><a href="Claude_Code_RStudio_Mac">Using Claude Code with RStudio on Mac</a></li>
                 <li><a href="Claude_Code_WSL_RStudio_Windows">Using Claude Code from WSL with RStudio on Windows</a></li>
                 <li><a href="Claude_Code_R_VS_Code_Mac">Use Claude Code for R in VS Code on Mac</a></li>
@@ -571,7 +572,8 @@
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Use Claude Code with RStudio on Mac—create R projects and enhance them with AI while RStudio runs your code', level: 2 },
             18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Use Claude Code from WSL with RStudio on Windows—bridge the gap between Windows RStudio and Linux-based AI assistance', level: 2 },
             19: { label: 'Claude Code\nfor R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve R code in VS Code—ask for plots, analysis, and code improvements', level: 3 },
-            20: { label: 'Claude Code\nfor Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve Python code in VS Code—ask for plots, analysis, and code improvements', level: 3 }
+            20: { label: 'Claude Code\nfor Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve Python code in VS Code—ask for plots, analysis, and code improvements', level: 3 },
+            21: { label: 'Slash Commands', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Create reusable shortcuts for complex prompts—turn lengthy instructions into simple commands like /stock-report', level: 2 }
         };
 
         // Color scheme by level
@@ -589,30 +591,34 @@
             2: { x: 0, y: 0 },      // Install Claude Code Mac
 
             // Level 2 - Minimum 
-            17: { x: 120, y: 60 },   // RStudio (Mac)
-            18: { x: 120, y: 75 },    // RStudio (Windows)
+            17: { x: 120, y: 90 },   // RStudio (Mac)
+            18: { x: 120, y: 90 },    // RStudio (Windows)
             11: { x: 120, y: -60 }, // Claude Code + Git (Win)
             12: { x: 120, y: -60 },  // Claude Code + Git (Mac)
-
+            3: { x: 120, y: 30 },    // VS Code Basics
             // Level 3 - Intermediate I
-            3: { x: 240, y: 30 },    // VS Code Basics
+
             4: { x: 240, y: -100 },   // Version Control
+            5: { x: 240, y: 80 },   // R in VS Code
+            6: { x: 240, y: 80 },   // Python in VS Code
+            14: { x: 240, y: 0 },  // Claude Code in VS Code (Win)
+            15: { x: 240, y: 0 },  // Claude Code in VS Code (Mac)    
 
             // Level 4 - Intermediate II
-            5: { x: 360, y: 80 },   // R in VS Code
-            6: { x: 360, y: 80 },   // Python in VS Code
-            14: { x: 360, y: 0 },  // Claude Code in VS Code (Win)
-            15: { x: 360, y: 0 },  // Claude Code in VS Code (Mac)
+            13: { x: 360, y: -60 },  // Research Paper with Claude
+
             9: { x: 360, y: -60 },    // GitHub Desktop + Claude
+            19: { x: 360, y: 100 },   // Claude Code for R (Mac)
+            20: { x: 360, y: 100 },    // Claude Code for Python (Mac)
 
             // Level 5 - Advanced
-            13: { x: 480, y: -60 },  // Research Paper with Claude
+
+            21: { x: 500, y: -60 },  // Custom Slash Commands
             7: { x: 480, y: 40 },   // R via Docker
             8: { x: 480, y: 40 },   // Python via Docker
             10: { x: 500, y: -30 },   // Vibe Coding in R
-            16: { x: 500, y: -30 },  // Vibe Coding in Python
-            19: { x: 500, y: 100 },   // Claude Code for R (Mac)
-            20: { x: 500, y: 100 }    // Claude Code for Python (Mac)
+            16: { x: 500, y: -30 }  // Vibe Coding in Python
+
 
 
         };
@@ -721,7 +727,8 @@
             { id: 'e21', from: 2, to: 17 },  // Install (Mac) → RStudio (Mac)
             { id: 'e22', from: 1, to: 18 },  // Install (Win) → RStudio (Windows)
             { id: 'e23', from: 5, to: 19 },  // R via Docker → Claude Code for R (Mac)
-            { id: 'e24', from: 6, to: 20 }   // Python in VS Code → Claude Code for Python (Mac)
+            { id: 'e24', from: 6, to: 20 },   // Python in VS Code → Claude Code for Python (Mac)
+            { id: 'e25', from: 13, to: 21 }  // Research Paper → Custom Slash Commands
 
         ];
 
@@ -791,15 +798,15 @@
         const tutorialCategories = {
             windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
             mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
-            basics: [1, 2, 3, 14, 15, 11, 12, 13], // All install, VS Code Basics, VS Code platform, git, and research paper tutorials
+            basics: [1, 2, 3, 14, 15, 11, 12, 13, 21], // All install, VS Code Basics, VS Code platform, git, research paper, and slash commands tutorials
             r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
             rstudio_mac: [17],         // RStudio (Mac)
             rstudio_windows: [18],     // RStudio (Windows)
             claude_code_r_mac: [19],   // Claude Code for R (Mac only)
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
-            shared: [3, 4, 9, 13],     // VS Code Basics, Version Control, GitHub Desktop, Research Paper (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20] // All coding tutorials
+            shared: [3, 4, 9, 13, 21],     // VS Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands (language-agnostic)
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -808,8 +815,8 @@
             let visibleNodes = [];
 
             if (currentLanguage === 'basics') {
-                // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper
-                visibleNodes = [...tutorialCategories[currentPlatform], 3, 13];
+                // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper + slash commands
+                visibleNodes = [...tutorialCategories[currentPlatform], 3, 13, 21];
             } else if (currentLanguage === 'r') {
                 // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper)
                 const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
