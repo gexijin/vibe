@@ -174,6 +174,7 @@ The **document skill** helps you read and write files in PDF, Word, PowerPoint, 
 
 ## Next Steps
 
+- **PDF:** Copy a few PDF files in a subfolder in this project folder and ask for summaries.
 - **Other public skills:** Try skills available from Anthropic.
 - **Share skills:** Skills are just zipped folders!
 - **Create other skills:** Anything you are interested in. For example, you can put your own data files in a skill folder.

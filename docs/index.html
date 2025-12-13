@@ -397,16 +397,14 @@
         </div>
 
         <section class="section">
-        <p> Claude Code is a powerful AI coding assistant that can also automate research, writing, editing, and more.
-            It operates locally inside a folder on your computer, serving as a partner to help you accomplish
-            many tasks efficiently, all under your guidance.
-            Through hands-on activities, I gently introduce concepts and tools that help unleash the power of Claude Code. 
-            Git for version control, or keeping track of changes to your files. 
-            Visual Studio Code (VS Code) for a convenient coding and editing environment.
-            WSL (Windows Subsystem for Linux) to run Claude Code on Windows machines efficiently. 
-            Docker to run coding environments in isolated containers.
-            Follow the learning path or pick tutorials that interest you!
-        </p>  
+        <p>&nbsp;&nbsp;&nbsp; Claude Code is a powerful AI coding assistant that can also automate research, writing, editing, and more.
+             It runs locally in a folder on your computer, acting as a helpful sidekick under your guidance. </p>
+
+        <p> &nbsp;&nbsp;&nbsp; Through hands-on activities, I introduce the core concepts and tools that unlock Claude Code’s full potential,
+            including Git for version control, Visual Studio Code for coding and editing, WSL 
+            (Windows Subsystem for Linux) for running on Windows, and Docker for isolated 
+            development environments. </p>
+        <p> &nbsp;&nbsp;&nbsp; Follow the learning path or pick tutorials that interest you!</p>  
         <br>
             <ol class="tutorial-list">
                 <li><a href="Install_CLAUDE_Code_Win">Install Claude Code on Windows</a></li>
@@ -825,7 +823,7 @@
                 // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills
                 visibleNodes = [...tutorialCategories[currentPlatform], 3, 13, 21, 22, 23];
             } else if (currentLanguage === 'r') {
-                // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper) + skills
+                // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper, no skills)
                 const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
                 const claudeCodeRTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_r_mac : [];
                 visibleNodes = [
@@ -833,16 +831,16 @@
                     ...tutorialCategories.r,
                     ...rstudioTutorial, // Add platform-specific RStudio tutorial
                     ...claudeCodeRTutorial, // Add Claude Code for R (Mac only)
-                    3, 4, 9, 21, 22, 23 // VS Code Basics, Version Control, GitHub Desktop, Slash Commands, Skills (exclude Research Paper 13)
+                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
                 ];
             } else if (currentLanguage === 'python') {
-                // Python mode: show platform install + Python tutorials + coding shared (no git, no research paper) + skills
+                // Python mode: show platform install + Python tutorials + coding shared (no git, no research paper, no skills)
                 const claudeCodePythonTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_python_mac : [];
                 visibleNodes = [
                     tutorialCategories[currentPlatform][0], // Install only (first item)
                     ...tutorialCategories.python,
                     ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
-                    3, 4, 9, 21, 22, 23 // VS Code Basics, Version Control, GitHub Desktop, Slash Commands, Skills (exclude Research Paper 13)
+                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
                 ];
             } else {
                 // All mode: show platform-specific basics + all coding tutorials
