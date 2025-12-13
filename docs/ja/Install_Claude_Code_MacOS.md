@@ -174,9 +174,9 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 - Macのフォルダにプロジェクトがある場合は、そこに移動できます：
   ```
-  cd ~/Documents/YourProject
+  cd ~/Documents/test_claude
   ```
-  `YourProject`を実際のプロジェクトフォルダ名に置き換えてください
+  `test_claude`を実際のプロジェクトフォルダ名に置き換えてください
 
 - 次にClaudeを起動します：
   ```

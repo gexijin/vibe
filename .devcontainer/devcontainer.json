@@ -10,10 +10,6 @@
 #    ".devcontainer/api.env"
 #  ],
 
-  "runArgs": [
-    "--env-file",
-    ".devcontainer/api.env"
-  ],
   "customizations": {
     "vscode": {
       "extensions": [

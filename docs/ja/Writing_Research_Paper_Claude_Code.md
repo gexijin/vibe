@@ -22,7 +22,7 @@ Claude Codeを研究、ブレインストーミング、計画、ドラフト、
 
 - **エクスプローラー**（Windows）または**Finder**（Mac）を開く
 - **ドキュメント**に移動
-- `ai_research`という新しいフォルダを作成
+- `test_claude`という新しいフォルダを作成
 
 このプロジェクトに関するすべてがこのフォルダで行われます。
 
@@ -50,15 +50,15 @@ WSL経由のWindowsの場合：
 - 上部中央に**フォルダーを開く**ドロップダウンが表示されます
 - 以下を入力してフォルダを見つけます：
   ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/ai_research
+  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
   `YOUR_USERNAME`をWindowsのユーザー名に置き換えてください（例：`John.Smith`）
-- **OK**をクリック。VS Codeが`ai_research`フォルダでリロードされます
+- **OK**をクリック。VS Codeが`test_claude`フォルダでリロードされます
 
 
 Macの場合：
 - VS Codeで、メニューバーの**ファイル**をクリックし、**フォルダーを開く**をクリック
-- `ai_research`フォルダに移動して選択
+- `test_claude`フォルダに移動して選択
 - **開く**（Mac）または**OK**（Windows）をクリック
 - 「このフォルダー内のファイルの作成者を信頼しますか？」と聞かれたら、**はい、作成者を信頼します**をクリック
 

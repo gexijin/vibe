@@ -36,7 +36,7 @@ Build a simple timer app with Claude Code and track all changes with GitHub Desk
 - Open **GitHub Desktop**
 - Click **File** → **New Repository**
 - Fill in:
-  - **Name:** `simple-timer`
+  - **Name:** `test_claude`
   - **Description:** `A timer app built with Claude Code`
   - **Local Path:** Documents folder
   - **Check** "Initialize this repository with a README"
@@ -51,7 +51,7 @@ You now have a local project and cloud backup on GitHub.
 - Open your **terminal**
 - Navigate to your project:
   ```
-  cd ~/Documents/simple-timer
+  cd ~/Documents/test_claude
   ```
 - Start Claude Code:
   ```
@@ -205,7 +205,7 @@ Notice the first failed sound attempt isn't there - you discarded it! Only worki
 
 **"Authentication failed":** GitHub Desktop → File/Preferences → Accounts → Sign out and sign in again
 
-**Claude says "not a git repository":** Make sure you're in the right folder (`cd ~/Documents/simple-timer`)
+**Claude says "not a git repository":** Make sure you're in the right folder (`cd ~/Documents/test_claude`)
 
 **Timer doesn't work:** Open browser console (right-click → **Inspect** → **Console**), copy errors, paste to Claude
 

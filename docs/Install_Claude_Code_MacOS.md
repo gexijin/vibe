@@ -178,9 +178,9 @@ You're all set! Here's how to use Claude Code:
 
 - If you have a project in your Mac folders, you can navigate to it:
    ```
-   cd ~/Documents/YourProject
+   cd ~/Documents/test_claude
    ```
-   Replace `YourProject` with your actual project folder name
+   Replace `test_claude` with your actual project folder name
 
 - Then start Claude:
    ```

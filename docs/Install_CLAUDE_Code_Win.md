@@ -216,9 +216,9 @@ You should now be able to use Claude Code with Azure-deployed Claude models.
 You're all set! To see if it works, ask a general question such as "Explain quantum computing."
 
 ## Step 10: Access Your Windows Projects
-- If you have a Windows folder called `myProject` containing the files of a project, you can access it:
+- If you have a Windows folder called `test_claude` containing the files of a project, you can access it:
    ```
-   cd /mnt/c/Users/Username/Documents/myProject
+   cd /mnt/c/Users/Username/Documents/test_claude
    ```
    Replace `Username` with your actual Windows username.
 - Then start Claude:

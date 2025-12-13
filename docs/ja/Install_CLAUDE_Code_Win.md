@@ -215,9 +215,9 @@ claude
 すべて完了です！動作するか確認するために、「量子コンピューティングについて説明してください」などの一般的な質問をしてみましょう。
 
 ## ステップ10：Windowsプロジェクトにアクセス
-- `myProject`というWindowsフォルダにプロジェクトのファイルが含まれている場合、次のようにアクセスできます：
+- `test_claude`というWindowsフォルダにプロジェクトのファイルが含まれている場合、次のようにアクセスできます：
    ```
-   cd /mnt/c/Users/Username/Documents/myProject
+   cd /mnt/c/Users/Username/Documents/test_claude
    ```
    `Username`を実際のWindowsユーザー名に置き換えてください。
 - 次にClaudeを起動します：
