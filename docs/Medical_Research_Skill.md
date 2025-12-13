@@ -4,6 +4,8 @@
 
 Keeping up with medical research means wading through dense scientific papers filled with jargon. A Claude Skill is like having a research assistant that reads hundreds of papers and explains them in plain English - instead of spending hours searching PubMed and decoding technical language, you ask a simple question and get a clear summary based on the latest science.
 
+In this tutorial, you'll create a Claude Skill that searches PubMed and provides plain-language summaries of medical research. By the end, you'll be able to ask questions like "Can I lose weight via keto diet?" and get clear answers based on current scientific literature.
+
 ## Key Concepts
 
 - **Claude Skill** - A specialized tool that extends Claude Code's capabilities with custom instructions, code, and documentation stored in `.claude/skills/`
@@ -15,7 +17,7 @@ Keeping up with medical research means wading through dense scientific papers fi
 
 - Completed [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) or [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Internet connection for PubMed searches
-- 20-25 minutes
+- 15-20 minutes
 
 ## Step 1: Navigate to Project Folder
 
@@ -57,34 +59,19 @@ Press **Shift+Tab** to enable auto-edit mode. You'll see a confirmation message.
 
 Auto-edit mode allows Claude to create and modify multiple files without asking for permission each time. This is essential for building skills which involve creating many files.
 
-## Step 4: Install Biopython
-
-Copy and paste this prompt into Claude:
-
-```
-Install the Biopython library so we can query PubMed
-```
-
-Claude installs the library using pip. This may take 1-2 minutes.
-
-**Note:** If installation fails with permission errors, Claude will automatically try alternative installation methods like `--break-system-packages` or `--user` flags.
-
-## Step 5: Create the PubMed Search Script
+## Step 4: Create the PubMed Search Script
 
 Copy and paste this prompt:
 
 ```
 Write a Python script called pubmed_search.py that:
-- Uses Biopython's Entrez module to search PubMed
 - Takes a search query as command line argument
 - Retrieves up to 10 recent papers
-- Displays for each paper: PMID, title, authors, journal, year, abstract preview, and URL
-- Has a default query "immunotherapy melanoma" if no argument provided
+- Returns PMID, title, authors, journal, year, abstract preview, and URL
 ```
+Claude creates the script. It installs the required Biopython package, which includes a entrez module for interacting with PubMed. Review the output to see the script structure.
 
-Claude creates the script. Review the output to see the script structure.
-
-## Step 6: Test the Script
+## Step 5: Test the Script
 
 Ask Claude to test it:
 
@@ -96,18 +83,16 @@ Claude runs the script and displays 10 recent papers about immunotherapy for bre
 
 **Note:** The search finds thousands of papers but retrieves only the 10 most recent for quick review.
 
-## Step 7: Create the Medical Research Skill
+## Step 6: Create the Medical Research Skill
 
 Now we'll package everything into a reusable skill. Copy and paste:
 
 ```
 Create a Claude Skill called "medical-research" that:
-- Retrieves papers from PubMed on any medical topic
+- Takes on a medical question
+- Designs queries to retrieve PubMed abstracts
 - Creates plain-language summaries accessible to non-scientists
 - Includes the pubmed_search.py script inside the skill folder
-- Has comprehensive documentation in SKILL.md, README.md, and EXAMPLES.md
-- Uses the breast cancer immunotherapy summary we just did as an example
-- The skill should automatically activate when I ask research questions
 ```
 
 Claude creates the complete skill structure:
@@ -118,7 +103,7 @@ Claude creates the complete skill structure:
 
 This takes 2-3 minutes as Claude writes comprehensive documentation.
 
-## Step 8: Test the Skill
+## Step 7: Test the Skill
 
 Ask a research question in plain language:
 
@@ -135,7 +120,7 @@ Claude automatically:
 
 The response includes sections like "How It Works," "Research Findings," "Important Considerations," and "The Bottom Line."
 
-## Step 9: Test Another Question
+## Step 8: Test Another Question
 
 Try another research topic:
 
@@ -143,9 +128,9 @@ Try another research topic:
 Does vaccine cause autism?
 ```
 
-Claude searches PubMed, finds over 1,000 papers, and provides a clear answer based on systematic reviews and large-scale studies. The response explains the scientific consensus, the origin of the myth, and real-world consequences.
+The response explains the scientific consensus, the origin of the myth, and real-world consequences.
 
-## Step 10: Explore the Skill Files (Optional)
+## Step 9: Explore the Skill Files (Optional)
 
 Open VS Code to see the skill structure:
 
@@ -176,7 +161,7 @@ Now that you've built a medical research skill, try creating other skills:
 
 ## Troubleshooting
 
-- **Biopython installation fails:** Claude will automatically try alternative installation methods, but if it still fails, restart Claude and ask it to try again
+- **Biopython not installed:** Claude will automatically install Biopython when it creates the script. If you see import errors when testing, ask Claude to install Biopython manually with `pip install biopython`
 - **Script not found:** Check that auto-edit mode was enabled (Shift+Tab) - Claude needs permission to create files
 - **Skill doesn't activate:** The skill should work immediately after creation - try asking the question again or check that SKILL.md has the correct `name: medical-research` in the header
 
