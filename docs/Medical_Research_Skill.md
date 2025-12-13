@@ -4,7 +4,7 @@
 
 Keeping up with medical research means wading through dense scientific papers filled with jargon. A Claude Skill is like having a research assistant that reads hundreds of papers and explains them in plain English - instead of spending hours searching PubMed and decoding technical language, you ask a simple question and get a clear summary based on the latest science.
 
-In this tutorial, you'll create a Claude Skill that searches peer-reviewed medical literature, which is very different from web searches. To do this we create a Python script to query PubMed. The best part? You can ask Claude to create the Skill for you! Yes, Claude has a Skills that create Skills!
+In this tutorial, you'll create a Claude Skill that searches peer-reviewed medical literature. We first create a Python script to query PubMed. The best part? You can ask Claude to do all the work! It has a Skill that creates Skills!
 
 ## Key Concepts
 
@@ -141,6 +141,7 @@ Open VS Code to see the skill structure:
 **Mac:**
 - Open **Finder**, navigate to `Documents/test_claude`
 - Right-click the folder and select **Open with Visual Studio Code**
+- Or just type ``` code . ``` from Terminal
 
 In VS Code:
 - Expand `.claude/skills/medical-research/` in the file explorer
@@ -150,14 +151,32 @@ In VS Code:
 
 **Note:** The skill is completely self-contained - all code and documentation live in one folder.
 
+## Step 10: Installing Skills from Anthropic's Repository
+
+Anthropic maintains a repository of pre-built skills that you can install and use instantly. 
+
+- To install a skill from the repository, simply ask Claude:
+
+  ```
+  Install the document skill from Anthropic's repository
+  ```
+- Try this skill:
+  ```
+  Create a PowerPoint presentation on Claude Skills.
+  ```
+
+
+The **document skill** helps you read and write files in PDF, Word, PowerPoint, and Excel. Claude will clone the skill into your `.claude/skills/` folder.
+
+**Other available skills from Anthropic's repository:**
+- Browse the full catalog at [github.com/anthropics/claude-skills](https://github.com/anthropics/skills)
+- Ask Claude "What skills are available in the Anthropic repository?" to see the current list
+
 ## Next Steps
 
-Now that you've built a medical research skill, try creating other skills:
-
-- **Financial analysis:** Fetch stock data and generate financial reports
-- **Weather forecasting:** Pull weather data and create location-based forecasts
-- **Recipe generator:** Search recipe databases and suggest meals based on ingredients
-- **Academic citation:** Format references from DOI or PubMed IDs in various citation styles
+- **Other public skills:** Try skills available from Anthropic.
+- **Share skills:** Skills are just zipped folders!
+- **Create other skills:** Anything you are interested in. For example, you can put your own data files in a skill folder.
 
 ## Troubleshooting
 
