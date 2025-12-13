@@ -84,13 +84,14 @@ Now test your new command with a real stock ticker:
 
 Claude searches the web and generates a comprehensive report about Apple Inc. This may take 1-2 minutes.
 
-## Step 6: Review the Generated Report
+## Step 5: Review the Generated Report
 
-Claude creates a formatted report with all four sections. Review the output:
+Claude creates a report with all four sections. Review the output:
 
 - Check that each section has relevant, current information
 - Verify the sources are credible and recent
 - Notice how Claude organized the information
+
 
 ## Step 7: Understand How Arguments Work
 
