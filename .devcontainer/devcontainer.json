@@ -9,6 +9,7 @@
 #    "--env-file",
 #    ".devcontainer/api.env"
 #  ],
+
   "customizations": {
     "vscode": {
       "extensions": [
