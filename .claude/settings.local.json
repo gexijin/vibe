@@ -31,7 +31,13 @@
       "WebFetch(domain:pubmed.ncbi.nlm.nih.gov)",
       "WebFetch(domain:www.frontiersin.org)",
       "Bash(sudo apt-get update:*)",
-      "Bash(sudo apt-get install:*)"
+      "Bash(sudo apt-get install:*)",
+      "Bash(git clone:*)",
+      "Bash(for dir in /tmp/anthropic-skills/skills/*/)",
+      "Bash(do if [ -f \"$dirSKILL.md\" ])",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(head:*)"
     ],
     "deny": [],
     "ask": []
