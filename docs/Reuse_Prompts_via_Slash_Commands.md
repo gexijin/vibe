@@ -2,7 +2,9 @@
 
 # Create Custom Slash Commands 
 
-Tired of typing the same detailed prompts over and over? Custom slash commands let you save complex instructions as reusable shortcuts. Like creating keyboard shortcuts for your most frequent tasks, slash commands turn lengthy prompts into simple commands like `/stock-report AAPL` that generate comprehensive reports instantly.
+Tired of typing the same detailed prompts over and over? Custom slash commands let you save complex instructions as reusable shortcuts. Like creating keyboard shortcuts for your most frequent tasks, slash commands turn lengthy prompts into simple commands like `/stock-report Apple` that generate comprehensive reports instantly.
+
+The best part? We use Claude to write the detailed prompt and create the Skill. Yes, Claude is very good at prompting...itself.
 
 ## Key Concepts
 

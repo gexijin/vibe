@@ -70,13 +70,13 @@ WSLは `/mnt/c/` を通じてWindowsファイルにアクセスできます。
 
 ## ステップ5：プロジェクトフォルダを作成
 
-- `timer` というフォルダを作成します：
+- `test_claude` というフォルダを作成します：
   ```
-  mkdir timer
+  mkdir test_claude
   ```
 - フォルダ内に移動します：
   ```
-  cd timer
+  cd test_claude
   ```
 
 ここがプロジェクトの作業場所になります。
@@ -250,8 +250,8 @@ Claudeがコミットを読みやすい形式で表示します。次のよう�
 
 ## トラブルシューティング
 
-- **"not a git repository" エラー：** timerフォルダにいることを確認してください（`cd /mnt/c/Users/YOUR_USERNAME/Documents/timer`）
-- **Windows上でtimer.htmlが見つからない：** ファイルは `C:\Users\YOUR_USERNAME\Documents\timer\timer.html` にあります
+- **"not a git repository" エラー：** test_claudeフォルダにいることを確認してください（`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
+- **Windows上でtimer.htmlが見つからない：** ファイルは `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` にあります
 - **Gitがパスワードを要求する：** `sudo` パスワードの入力ミスです。注意深く再入力してください
 - **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証** を選択、**Console** タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
 

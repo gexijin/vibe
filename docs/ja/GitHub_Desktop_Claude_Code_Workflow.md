@@ -35,7 +35,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 - **GitHub Desktop** を開く
 - **File** → **New Repository** をクリック
 - 入力：
-  - **Name：** `simple-timer`
+  - **Name：** `test_claude`
   - **Description：** `A timer app built with Claude Code`
   - **Local Path：** Documentsフォルダ
   - **「Initialize this repository with a README」にチェック**
@@ -50,7 +50,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 - **ターミナル**を開く
 - プロジェクトに移動：
   ```
-  cd ~/Documents/simple-timer
+  cd ~/Documents/test_claude
   ```
 - Claude Codeを起動：
   ```
@@ -206,7 +206,7 @@ Claudeが変更内容を分かりやすく説明してくれます。
 
 **「認証失敗」：** GitHub Desktop → File/環境設定 → Accounts → サインアウトして再度サインイン
 
-**Claudeが「not a git repository」と表示：** 正しいフォルダにいることを確認（`cd ~/Documents/simple-timer`）
+**Claudeが「not a git repository」と表示：** 正しいフォルダにいることを確認（`cd ~/Documents/test_claude`）
 
 **タイマーが動作しない：** ブラウザコンソールを開き（右クリック → **検証** → **Console**）、エラーをコピーしてClaudeに貼り付け
 

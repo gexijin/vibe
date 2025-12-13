@@ -77,13 +77,13 @@ Gitはコミットメッセージのために、あなたが誰であるかを�
 
 ## ステップ5：プロジェクトフォルダを作成
 
-- `timer`というフォルダを作成します：
+- `test_claude`というフォルダを作成します：
   ```
-  mkdir timer
+  mkdir test_claude
   ```
 - その中に移動します：
   ```
-  cd timer
+  cd test_claude
   ```
 
 ここがプロジェクトの場所になります。
@@ -122,7 +122,7 @@ Claudeが`timer.html`を作成します（10〜30秒かかります）。CSSとJ
 ## ステップ9：タイマーをテスト
 
 - Finderを開く
-- **書類** > **timer**に移動
+- **書類** > **test_claude**に移動
 - `timer.html`をダブルクリックしてブラウザで開く
 - タイマーを試してみます：
   - 入力欄に`1`と入力
@@ -257,8 +257,8 @@ Claudeがコミットを読みやすい形式で表示します。次のもの�
 
 ## トラブルシューティング
 
-- **「not a git repository」エラー：** timerフォルダにいることを確認してください（`cd ~/Documents/timer`）
-- **Finderでtimer.htmlが見つからない：** ファイルは`/Users/YOUR_USERNAME/Documents/timer/timer.html`にあります
+- **「not a git repository」エラー：** test_claudeフォルダにいることを確認してください（`cd ~/Documents/test_claude`）
+- **Finderでtimer.htmlが見つからない：** ファイルは`/Users/YOUR_USERNAME/Documents/test_claude/timer.html`にあります
 - **Gitコマンドが動作しない：** ステップ2を完了してGitをインストールしたことを確認してください
 - **タイマーが動作しない：** ブラウザコンソールを開き（ページを右クリックして**検証**を選択し、**コンソール**タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けます
 

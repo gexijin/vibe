@@ -22,7 +22,7 @@ Create a folder for your research paper:
 
 - Open **File Explorer** (Windows) or **Finder** (Mac)
 - Navigate to **Documents**
-- Create a new folder called `ai_research`
+- Create a new folder called `test_claude`
 
 Everything about this project happens in this folder. 
 
@@ -47,18 +47,18 @@ For Mac:
 ## Step 3: Open the Folder in VS Code
 For Windows via WSL:
 - In VS Code (still connected to WSL), click **File** in the menu bar, then **Open Folder**
-- A **Open Folder** dropdown appears in the top center. 
+- A **Open Folder** dropdown appears in the top center.
 - Find your folder by typing:
   ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/ai_research
+  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
   Replace `YOUR_USERNAME` with your Windows username (e.g., `John.Smith`)
-- Click **OK**. VS Code reloads with your `ai_research` folder 
+- Click **OK**. VS Code reloads with your `test_claude` folder
 
 
 For Mac:
 - In VS Code, click **File** in the menu bar, then **Open Folder**
-- Navigate to and select the `ai_research` folder
+- Navigate to and select the `test_claude` folder
 - Click **Open** (Mac) or **OK** (Windows)
 - If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 

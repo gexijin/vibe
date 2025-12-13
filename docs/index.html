@@ -397,7 +397,6 @@
         </div>
 
         <section class="section">
-        <h2>What is Claude Code?</h2>
         <p> Claude Code is a powerful AI coding assistant that can also automate research, writing, editing, and more.
             It operates locally inside a folder on your computer, serving as a partner to help you accomplish
             many tasks efficiently, all under your guidance.
@@ -427,6 +426,8 @@
                 <li><a href="Vibe_Coding_Python_Docker_Guide">Vibe Coding in Python with Claude Code</a></li>
                 <li><a href="Writing_Research_Paper_Claude_Code">Write a Research Paper with Claude Code</a></li>
                 <li><a href="Reuse_Prompts_via_Slash_Commands">Create Custom Slash Commands</a></li>
+                <li><a href="Create_Your_First_Claude_Skill">Create Your First Claude Skill</a></li>
+                <li><a href="Medical_Research_Skill">Create a Claude Skill for Medical Research</a></li>
                 <li><a href="Claude_Code_RStudio_Mac">Using Claude Code with RStudio on Mac</a></li>
                 <li><a href="Claude_Code_WSL_RStudio_Windows">Using Claude Code from WSL with RStudio on Windows</a></li>
                 <li><a href="Claude_Code_R_VS_Code_Mac">Use Claude Code for R in VS Code on Mac</a></li>
@@ -573,7 +574,9 @@
             18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Use Claude Code from WSL with RStudio on Windows—bridge the gap between Windows RStudio and Linux-based AI assistance', level: 2 },
             19: { label: 'Claude Code\nfor R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve R code in VS Code—ask for plots, analysis, and code improvements', level: 3 },
             20: { label: 'Claude Code\nfor Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve Python code in VS Code—ask for plots, analysis, and code improvements', level: 3 },
-            21: { label: 'Slash Commands', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Create reusable shortcuts for complex prompts—turn lengthy instructions into simple commands like /stock-report', level: 2 }
+            21: { label: 'Slash Commands', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Create reusable shortcuts for complex prompts—turn lengthy instructions into simple commands like /stock-report', level: 2 },
+            22: { label: 'Claude Skill', url: 'Create_Your_First_Claude_Skill', desc: 'Build a Claude Skill that automatically activates based on context—upgrade from manual slash commands to AI-triggered capabilities', level: 2 },
+            23: { label: 'Claude Skill for \nMedical Research', url: 'Medical_Research_Skill', desc: 'Create a specialized skill that searches PubMed and summarizes medical research papers in plain English', level: 2 }
         };
 
         // Color scheme by level
@@ -613,7 +616,9 @@
 
             // Level 5 - Advanced
 
-            21: { x: 500, y: -60 },  // Custom Slash Commands
+            21: { x: 500, y: -80 },  // Slash Commands
+            22: { x: 500, y: -10 },  // Create Your First Skill
+            23: { x: 500, y: 60 },    // Medical Research Skill
             7: { x: 480, y: 40 },   // R via Docker
             8: { x: 480, y: 40 },   // Python via Docker
             10: { x: 500, y: -30 },   // Vibe Coding in R
@@ -728,7 +733,9 @@
             { id: 'e22', from: 1, to: 18 },  // Install (Win) → RStudio (Windows)
             { id: 'e23', from: 5, to: 19 },  // R via Docker → Claude Code for R (Mac)
             { id: 'e24', from: 6, to: 20 },   // Python in VS Code → Claude Code for Python (Mac)
-            { id: 'e25', from: 13, to: 21 }  // Research Paper → Custom Slash Commands
+            { id: 'e25', from: 13, to: 21 },  // Research Paper → Custom Slash Commands
+            { id: 'e26', from: 21, to: 22 },  // Slash Commands → Create Your First Skill
+            { id: 'e27', from: 22, to: 23 }   // Create Your First Skill → Medical Research Skill
 
         ];
 
@@ -798,15 +805,15 @@
         const tutorialCategories = {
             windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
             mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
-            basics: [1, 2, 3, 14, 15, 11, 12, 13, 21], // All install, VS Code Basics, VS Code platform, git, research paper, and slash commands tutorials
+            basics: [1, 2, 3, 14, 15, 11, 12, 13, 21, 22, 23], // All install, VS Code Basics, VS Code platform, git, research paper, slash commands, and skills tutorials
             r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
             rstudio_mac: [17],         // RStudio (Mac)
             rstudio_windows: [18],     // RStudio (Windows)
             claude_code_r_mac: [19],   // Claude Code for R (Mac only)
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
-            shared: [3, 4, 9, 13, 21],     // VS Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21] // All coding tutorials
+            shared: [3, 4, 9, 13, 21, 22, 23],     // VS Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills (language-agnostic)
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -815,10 +822,10 @@
             let visibleNodes = [];
 
             if (currentLanguage === 'basics') {
-                // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper + slash commands
-                visibleNodes = [...tutorialCategories[currentPlatform], 3, 13, 21];
+                // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills
+                visibleNodes = [...tutorialCategories[currentPlatform], 3, 13, 21, 22, 23];
             } else if (currentLanguage === 'r') {
-                // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper)
+                // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper) + skills
                 const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
                 const claudeCodeRTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_r_mac : [];
                 visibleNodes = [
@@ -826,16 +833,16 @@
                     ...tutorialCategories.r,
                     ...rstudioTutorial, // Add platform-specific RStudio tutorial
                     ...claudeCodeRTutorial, // Add Claude Code for R (Mac only)
-                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13)
+                    3, 4, 9, 21, 22, 23 // VS Code Basics, Version Control, GitHub Desktop, Slash Commands, Skills (exclude Research Paper 13)
                 ];
             } else if (currentLanguage === 'python') {
-                // Python mode: show platform install + Python tutorials + coding shared (no git, no research paper)
+                // Python mode: show platform install + Python tutorials + coding shared (no git, no research paper) + skills
                 const claudeCodePythonTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_python_mac : [];
                 visibleNodes = [
                     tutorialCategories[currentPlatform][0], // Install only (first item)
                     ...tutorialCategories.python,
                     ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
-                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13)
+                    3, 4, 9, 21, 22, 23 // VS Code Basics, Version Control, GitHub Desktop, Slash Commands, Skills (exclude Research Paper 13)
                 ];
             } else {
                 // All mode: show platform-specific basics + all coding tutorials

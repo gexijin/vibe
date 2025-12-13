@@ -77,13 +77,13 @@ You should see `/Users/YOUR_USERNAME/Documents`.
 
 ## Step 5: Create Project Folder
 
-- Create a folder called `timer`:
+- Create a folder called `test_claude`:
   ```
-  mkdir timer
+  mkdir test_claude
   ```
 - Navigate into it:
   ```
-  cd timer
+  cd test_claude
   ```
 
 This is where your project will live.
@@ -257,8 +257,8 @@ Remember: Test after each feature, commit after each success, discard failures.
 
 ## Troubleshooting
 
-- **"not a git repository" error:** Make sure you're in the timer folder (`cd ~/Documents/timer`)
-- **Can't find timer.html in Finder:** The file is at `/Users/YOUR_USERNAME/Documents/timer/timer.html`
+- **"not a git repository" error:** Make sure you're in the test_claude folder (`cd ~/Documents/test_claude`)
+- **Can't find timer.html in Finder:** The file is at `/Users/YOUR_USERNAME/Documents/test_claude/timer.html`
 - **Git commands don't work:** Make sure you completed Step 2 and installed Git
 - **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, then click the **Console** tab), copy any red error messages, paste them to Claude
 

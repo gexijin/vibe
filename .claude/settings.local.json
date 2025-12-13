@@ -24,7 +24,14 @@
       "WebFetch(domain:aimaker.substack.com)",
       "WebFetch(domain:www.producttalk.org)",
       "Bash(ls:*)",
-      "SlashCommand(/tutorial:*)"
+      "SlashCommand(/tutorial:*)",
+      "Skill(generating-stock-reports)",
+      "Skill(medical-research)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:pubmed.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:www.frontiersin.org)",
+      "Bash(sudo apt-get update:*)",
+      "Bash(sudo apt-get install:*)"
     ],
     "deny": [],
     "ask": []
