@@ -139,16 +139,10 @@ You can edit the file directly or ask Claude to update it.
 Now test your agent with a real comparison. Type:
 
 ```
-Use the stock-picker agent to compare AAPL and MSFT for investment
+Which is a better investment: Apple or Google?
 ```
 
-Or more naturally:
-
-```
-Which is a better investment: Apple or Microsoft?
-```
-
-The agent will automatically activate based on your description.
+The agent will automatically activate based on your description. 
 
 ## Step 7: Watch the Agent Work
 
@@ -167,9 +161,7 @@ The agent returns a detailed analysis including:
 - **Comparison scorecard** - Numerical scores across categories (Financial Health, Growth Potential, Management Quality, Market Sentiment)
 - **Final recommendation** - Which stock to invest in and why
 
-The agent may display this in the terminal or generate a markdown file with the full report.
-
-Check that scores match evidence from the reports and the recommendation is well-reasoned. You can edit the agent file to customize scoring weights or output format.
+The agent may display this in the terminal or generate a markdown file with the full report. You can edit the agent file to customize scoring weights or output format.
 
 ## Next Steps
 
