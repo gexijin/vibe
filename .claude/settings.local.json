@@ -39,7 +39,9 @@
       "Bash(done)",
       "Bash(head:*)",
       "Bash(claude doctor)",
-      "SlashCommand(/review-translation:*)"
+      "SlashCommand(/review-translation:*)",
+      "WebFetch(domain:github.com)",
+      "SlashCommand(/review-tutorial docs/Claude_Code_Basic_Operations.md)"
     ],
     "deny": [],
     "ask": []
