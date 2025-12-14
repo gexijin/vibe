@@ -169,36 +169,39 @@ If you working with Claude Code from VS Code and has the Claude Code extension i
 Furthermore, you can select a few lines of code and Claude will show **3 lines selected**. You can ask Claude to make quick changes to these lines or ask questions. Therefore, I highly recommend using Claude Code from VS Code. 
 
 
-## Step 9: Claude takes actions by runing Linux commands
-By running commands, Claude can take 'actions' in many forms. 
+## Step 9: Take Actions with Linux Commands
+
+Claude can take actions by running Linux commands in many forms. 
 
 - Install software
   ```
   Install the pandas library
   ```
 
-- Version control via Git
+- Start version control
   ```
   Start tracking changes using Git. My name is James Bond and my email is bond@earth.com
   ```
+- Commit changes
   ```
   Commit these changes.
   ```
 - Find and download data
   ```
-  Find and download the Social Security baby names dataset. Put it in a new folder called "baby_names".
+  Download the wine quality dataset from UCI. Put it in a new folder called wine.
   ```
-  
-  - Execute code
+
+- Execute code
   ```
-  Rewrite the nested pie chart code as a regular Python script. 
+  Rewrite the nested pie chart code as a regular Python script.
   Run it and save the new code and plots in the same folder.
-  ```  
-  We can ask this vage question because we just asked it to explain the code. Lot's of things happens after this. Claudes installs software, trouble shoots errors, solves environments - all on its own.
+  ```
+
+We can ask this vague question because we just asked it to explain the code. Lots of things happen after this. Claude installs software, troubleshoots errors, solves environments - all on its own.
 
 
 
-You essentially has an expert Linux bash commands in your disposal. As long as you manage permissions and communications, you can be very productive. 
+You essentially have an expert in Linux bash commands at your disposal. As long as you manage permissions and approve actions, you can be very productive. 
 
 ## Next Steps
 
