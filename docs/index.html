@@ -410,6 +410,7 @@
                 <li><a href="Install_CLAUDE_Code_Win">Install Claude Code on Windows</a></li>
                 <li><a href="Claude_Code_in_VS_Code_Win">Set Up VS Code for Claude Code on Windows</a></li>
                 <li><a href="Claude_Code_Git_Windows">Claude Code with local version control for Windows</a></li>
+                <li><a href="Claude_Code_Basic_Operations">Claude Code: Basic Operations</a></li>
                 <li><a href="Install_Claude_Code_MacOS">Install Claude Code on Mac</a></li>
                 <li><a href="Claude_Code_in_VS_Code_Mac">Use Claude Code from VS Code on Mac</a></li>
                 <li><a href="Claude_Code_Git_Mac">Claude Code with local version control for Mac</a></li>
@@ -576,7 +577,8 @@
             21: { label: 'Slash Commands', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Create reusable shortcuts for complex prompts—turn lengthy instructions into simple commands like /stock-report', level: 3 },
             22: { label: 'Claude Skill', url: 'Create_Your_First_Claude_Skill', desc: 'Build a Claude Skill that automatically activates based on context—upgrade from manual slash commands to AI-triggered capabilities', level: 3 },
             23: { label: 'Claude Skill for \nMedical Research', url: 'Medical_Research_Skill', desc: 'Create a specialized skill that searches PubMed and summarizes medical research papers in plain English', level: 3 },
-            24: { label: 'Create an\nsubagent', url: 'Create_subagents', desc: 'Build an autonomous agent that uses skills to complete complex tasks—create a stock picker that researches, scores, and recommends investments', level: 3 }
+            24: { label: 'Create an\nsubagent', url: 'Create_subagents', desc: 'Build an autonomous agent that uses skills to complete complex tasks—create a stock picker that researches, scores, and recommends investments', level: 3 },
+            25: { label: 'Claude Code\nBasics', url: 'Claude_Code_Basic_Operations', desc: 'Learn essential Claude Code operations—starting conversations, managing context, using slash commands, and working with files', level: 0 }
         };
 
         // Color scheme by level
@@ -598,7 +600,9 @@
             18: { x: 120, y: 90 },    // RStudio (Windows)
             11: { x: 120, y: -60 }, // Claude Code + Git (Win)
             12: { x: 120, y: -60 },  // Claude Code + Git (Mac)
-            3: { x: 120, y: 30 },    // VS Code Basics
+            3: { x: 120, y: 20 },    // VS Code Basics
+            16: { x: 500, y: -30 },  // Vibe Coding in Python
+            25: { x: 120, y: 85 },    // Claude Code Basics
 
             // Level 3 - Intermediate I
             4: { x: 240, y: -100 },   // Version Control
@@ -620,8 +624,8 @@
             24: { x: 500, y: 80 },    // Creating an Agent
             7: { x: 480, y: 40 },   // R via Docker
             8: { x: 480, y: 40 },   // Python via Docker
-            10: { x: 500, y: -30 },   // Vibe Coding in R
-            16: { x: 500, y: -30 }  // Vibe Coding in Python
+            10: { x: 500, y: -30 }   // Vibe Coding in R
+
 
         };
 
@@ -733,7 +737,9 @@
             { id: 'e25', from: 13, to: 21 },  // Research Paper → Custom Slash Commands
             { id: 'e26', from: 21, to: 22 },  // Slash Commands → Create Your First Skill
             { id: 'e27', from: 22, to: 23 },   // Create Your First Skill → Medical Research Skill
-            { id: 'e28', from: 23, to: 24 }   // Medical Research Skill → Creating an Agent
+            { id: 'e28', from: 23, to: 24 },   // Medical Research Skill → Creating an Agent
+            { id: 'e29', from: 1, to: 25 },    // Install Win → Claude Code Basics
+            { id: 'e30', from: 2, to: 25 }     // Install Mac → Claude Code Basics
 
         ];
 
@@ -803,14 +809,14 @@
         const tutorialCategories = {
             windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
             mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
-            basics: [1, 2, 3, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, VS Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
+            basics: [1, 2, 3, 25, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, VS Code Basics, Claude Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
             r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
             rstudio_mac: [17],         // RStudio (Mac)
             rstudio_windows: [18],     // RStudio (Windows)
             claude_code_r_mac: [19],   // Claude Code for R (Mac only)
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
-            shared: [3, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
+            shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
             coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24] // All coding tutorials
         };
 
@@ -820,8 +826,8 @@
             let visibleNodes = [];
 
             if (currentLanguage === 'basics') {
-                // Basics mode: show VS Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
-                visibleNodes = [...tutorialCategories[currentPlatform], 3, 13, 21, 22, 23, 24];
+                // Basics mode: show VS Code Basics + Claude Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
+                visibleNodes = [...tutorialCategories[currentPlatform], 3, 25, 13, 21, 22, 23, 24];
             } else if (currentLanguage === 'r') {
                 // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper, no skills)
                 const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
