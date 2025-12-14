@@ -188,9 +188,11 @@ By running commands, Claude can take 'actions' in many forms.
   ```
   Find and download the Social Security baby names dataset. Put it in a new folder called "baby_names".
   ```
+  
   - Execute code
   ```
-  Execute the nested pie chart code. Render the notebook in the same folder.
+  Rewrite the nested pie chart code as a regular Python script. 
+  Run it and save the new code and plots in the same folder.
   ```  
   We can ask this vage question because we just asked it to explain the code. Lot's of things happens after this. Claudes installs software, trouble shoots errors, solves environments - all on its own.
 
