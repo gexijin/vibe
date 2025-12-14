@@ -6,7 +6,7 @@ Learning to code with AI assistance can feel overwhelming at first. Think of Cla
 
 ## Key Concepts
 
-- **Claude Code** - An AI-powered command-line tool that understands your codebase and helps you write, debug, and understand code through conversation
+- **Workspace** - If you start Claude Code from a folder, that's the sessions workspace. 
 - **REPL (Read-Eval-Print Loop)** - An interactive session where you type commands, Claude responds, and the conversation continues until you exit
 - **Context** - The amount of code and conversation history Claude remembers; like working memory that fills up over time
 - **Slash Commands** - Built-in shortcuts starting with `/` that perform specific actions like clearing history or showing help
@@ -34,7 +34,7 @@ We'll use a real data science project to explore Claude Code's features. You can
 
 ```
 git clone https://github.com/gexijin/data_projects
-cd data-projects
+cd data_projects
 ```
 
 **Option B: Download without Git:**
@@ -51,7 +51,7 @@ Replace `YourName` with your actual username and adjust the path if you extracte
 
 ## Step 3: Start Claude Code from the folder
 
-In your terminal (make sure you're inside the data-projects folder), type:
+In your terminal (make sure you're inside the data_projects folder), type:
 
 ```bash
 claude
