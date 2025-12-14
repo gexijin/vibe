@@ -363,6 +363,30 @@
             color: var(--text);
         }
 
+        /* Skill Level Bars */
+        .skill-level-bar {
+            position: absolute;
+            height: 16px;
+            opacity: 0.35;
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .skill-label {
+            position: absolute;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--text-muted);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        #network-graph {
+            position: relative;
+        }
+
         @media (max-width: 600px) {
             #network-graph {
                 height: 350px;
@@ -800,6 +824,56 @@
         };
 
         const network = new vis.Network(container, data, options);
+
+        // Add skill level bars
+        function createSkillLevelBars() {
+            const graphContainer = document.getElementById('network-graph');
+
+            // Define bars: [x-start, x-end, color, label]
+            const bars = [
+                { xStart: -50, xEnd: 170, color: '#58a6ff', label: 'Beginner' },
+                { xStart: 180, xEnd: 420, color: '#a371f7', label: 'Intermediate' },
+                { xStart: 430, xEnd: 580, color: '#f78166', label: 'Advanced' }
+            ];
+
+            const yPosition = 180;
+
+            console.log('Creating skill level bars...');
+
+            bars.forEach(bar => {
+                // Convert network coordinates to DOM positions
+                const startPos = network.canvasToDOM({ x: bar.xStart, y: yPosition });
+                const endPos = network.canvasToDOM({ x: bar.xEnd, y: yPosition });
+
+                const width = endPos.x - startPos.x;
+                const centerX = (startPos.x + endPos.x) / 2;
+
+                console.log(`Bar ${bar.label}: left=${startPos.x}, top=${startPos.y}, width=${width}`);
+
+                // Create bar element
+                const barDiv = document.createElement('div');
+                barDiv.className = 'skill-level-bar';
+                barDiv.style.left = startPos.x + 'px';
+                barDiv.style.top = startPos.y + 'px';
+                barDiv.style.width = width + 'px';
+                barDiv.style.backgroundColor = bar.color;
+                graphContainer.appendChild(barDiv);
+
+                // Create label element (positioned above bar)
+                const labelDiv = document.createElement('div');
+                labelDiv.className = 'skill-label';
+                labelDiv.textContent = bar.label;
+                labelDiv.style.left = (centerX - 35) + 'px'; // Center label (approximate width)
+                labelDiv.style.top = (startPos.y - 18) + 'px'; // 18px above bar
+                labelDiv.style.width = '70px';
+                graphContainer.appendChild(labelDiv);
+            });
+
+            console.log('Skill level bars created');
+        }
+
+        // Create bars after a short delay to ensure network is fully rendered
+        setTimeout(createSkillLevelBars, 500);
 
         // Filter state
         let currentPlatform = 'windows';
