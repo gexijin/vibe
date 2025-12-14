@@ -1016,6 +1016,15 @@
             }
         });
 
+        // Handle start button click - mark as complete when starting
+        modalLink.addEventListener('click', function() {
+            if (currentNodeId !== null && !isCompleted(currentNodeId)) {
+                toggleComplete(currentNodeId);
+                updateNodeLabel(currentNodeId);
+                celebrate();
+            }
+        });
+
         // Close modal
         modalClose.addEventListener('click', () => modal.classList.remove('active'));
         modal.addEventListener('click', (e) => {
