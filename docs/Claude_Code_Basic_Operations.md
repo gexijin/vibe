@@ -13,16 +13,15 @@ Learning to code with AI assistance can feel overwhelming at first. Think of Cla
 
 ## What You'll Need
 
-- [Claude Code installed](https://code.claude.com/docs/en/quickstart) with an active Claude Pro/Max subscription or API key
+- Claude Code installed from the [Windows](Install_CLAUDE_Code_Win.md) or [Mac](Install_Claude_Code_MacOS.md) tutorial
 - Basic familiarity with using a terminal or command prompt
 - Internet connection
 - 15-20 minutes
 
 ## Step 1: Open Your Terminal
 
-- **Windows**: Press the Windows key, type `Terminal` or `PowerShell`, and press Enter
+- **Windows**: Press the Windows key, type `Ubuntu`, and press Enter to open the WSL terminal
 - **Mac**: Press `Cmd+Space`, type `Terminal`, and press Enter
-- **Linux**: Press `Ctrl+Alt+T` or find Terminal in your applications menu
 
 A text window will open where you can type commands.
 
