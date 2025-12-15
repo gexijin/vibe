@@ -1,6 +1,6 @@
-[ホーム](./)
+[ホーム](./ja/)
 
-# MacのVS CodeでRにClaude Codeを使う
+# MacのVS CodeでRにClaude Codeを使う方法
 
 VS CodeでRをセットアップし、手動でコードを書くことができるようになりました。次は、AIにコードの作成、改善、デバッグを手伝ってもらいながら、あなたは分析に集中したいと思います。Claude CodeをVS Code内に住むコーディングパートナーと考えてください - やりたいことを説明すれば、同じウィンドウ内でコードを書いたり改善したりしてくれます。
 
@@ -12,8 +12,8 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 
 ## 必要なもの
 
-- [VS CodeでR](./R_Coding_VS_Code_Guide)チュートリアルを完了していること - VS CodeでRが動作していること
-- [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)チュートリアルを完了していること - Claude Code CLIがインストールされていること
+- [VS CodeでR](./ja/R_Coding_VS_Code_Guide)チュートリアルを完了していること - VS CodeでRが動作していること
+- [MacにClaude Codeをインストール](./ja/Install_Claude_Code_MacOS)チュートリアルを完了していること - Claude Code CLIがインストールされていること
 - Claude Pro/Maxサブスクリプション または Anthropic APIキー
 - 20〜30分
 
@@ -38,7 +38,7 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 - 認証方法を選択します：
   - **Claude Pro/Maxユーザー**: **Sign in with Claude.ai**をクリックし、ブラウザで認証してコードをVS Codeにコピーします
   - **APIキーユーザー**: **Use API Key**をクリックしてAnthropic APIキーを貼り付けます
-- 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)ガイド（ステップ5）を参照してください
+- 詳細な認証手順については、[MacにClaude Codeをインストール](./ja/Install_Claude_Code_MacOS)ガイド（ステップ5）を参照してください
 - サインインすると、チャットパネルに「Ready to help」と表示されます
 
 ## ステップ3: 最初のRスクリプトを手動で作成
@@ -134,7 +134,7 @@ Review the entire script for correctness. Add comments when necessary.
 
 - **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**をクリックしてインストールされていることを確認してください。
 - **「Cannot read R file」エラー** - ファイルが`.R`拡張子で保存されていることを確認してください。Claudeは保存されたファイルを読み取る必要があります。
-- **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)を参照してください。
+- **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./ja/Install_Claude_Code_MacOS)を参照してください。
 - **ggplot2が見つからない** - Rターミナルでインストール：`install.packages("ggplot2")`。コードを実行する前にインストールが完了するまで待ってください。
 - **コード変更が適用されない** - 差分の**Accept**をクリックしてください。それでもうまくいかない場合は、Claudeが提案したコードを手動でコピーしてみてください。
 

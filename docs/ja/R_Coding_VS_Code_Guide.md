@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # VS CodeでRを実行
 
@@ -12,7 +12,7 @@ Rコードを書きたいけど、RStudioが重く感じる、またはVS Code�
 
 ## 必要なもの
 
-- [VS Codeの基本](./VS_Code_Getting_Started)を完了
+- [VS Codeの基本](./ja/VS_Code_Getting_Started)を完了
 - Rとパッケージをダウンロードするためのインターネット接続
 - 10〜15分
 
@@ -183,12 +183,12 @@ hist(iris$Sepal.Length)
 library(shiny)
 
 ui <- fluidPage(
-  titlePanel("対話型ヒストグラム"),
+  titlePanel("Interactive Histogram"),
 
   sidebarLayout(
     sidebarPanel(
       sliderInput("bins",
-                  "ビンの数:",
+                  "Number of bins:",
                   min = 5,
                   max = 50,
                   value = 30)
@@ -206,8 +206,8 @@ server <- function(input, output) {
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
     hist(x, breaks = bins, col = "steelblue", border = "white",
-         xlab = "待ち時間 (分)",
-         main = "待ち時間の分布")
+         xlab = "Waiting time (minutes)",
+         main = "Distribution of Waiting Times")
   })
 }
 

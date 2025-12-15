@@ -15,7 +15,7 @@
 
 ## 必要なもの
 
-- [WindowsでVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacでVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
+- [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
 - PubMed検索用のインターネット接続
 - 15〜20分
 
@@ -69,7 +69,7 @@ pubmed_search.pyというPythonスクリプトを作成してください。こ�
 - 最大10件の最近の論文を取得
 - PMID、タイトル、著者、ジャーナル、年、要約のプレビュー、URLを返す
 ```
-Claudeがスクリプトを作成します。PubMedとのやり取りにentrezモジュールを含む必要なBiopythonパッケージをインストールします。スクリプトの構造を確認するために出力を確認してください。
+Claudeがスクリプトを作成します。PubMedとのやり取りに使用するentrezモジュールを含む、必要なBiopythonパッケージをインストールします。スクリプトの構造を確認するために出力を確認してください。
 
 ## ステップ5：スクリプトをテスト
 
@@ -141,7 +141,7 @@ VS Codeを開いてスキル構造を確認：
 **Mac：**
 - **Finder**を開き、`Documents/test_claude`に移動
 - フォルダを右クリックして**Visual Studio Codeで開く**を選択
-- またはターミナルから``` code . ```と入力
+- またはターミナルから```code .```と入力
 
 VS Codeで：
 - ファイルエクスプローラで`.claude/skills/medical-research/`を展開
@@ -168,7 +168,7 @@ Anthropicは、すぐにインストールして使用できる事前構築さ�
 **documentスキル**は、PDF、Word、PowerPoint、Excelのファイルの読み書きを支援します。Claudeはスキルを`.claude/skills/`フォルダにクローンします。
 
 **Anthropicのリポジトリから利用可能な他のスキル：**
-- 完全なカタログは[github.com/anthropics/claude-skills](https://github.com/anthropics/skills)で閲覧できます
+- 完全なカタログは[github.com/anthropics/skills](https://github.com/anthropics/skills)で閲覧できます
 - Claudeに「Anthropicリポジトリで利用可能なスキルは何ですか？」と尋ねて現在のリストを確認してください
 
 ## 次のステップ

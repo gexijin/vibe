@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # MacでRStudioとClaude Codeを使用する
 
@@ -12,7 +12,7 @@ MacでRコードを実行するためのRStudioと、AIによるコーディン�
 
 ## 必要なもの
 
-- [MacでClaude Codeをインストール](./Install_Claude_Code_MacOS)ガイドを完了していること
+- [MacでClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイドを完了していること
 - MacにインストールされたRStudio
 - 20〜30分
 
@@ -175,7 +175,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 ## トラブルシューティング
 
 - **RStudioがファイル変更を表示しない** - **File > Reopen with Encoding > UTF-8**をクリックして手動でファイルを再読み込みするか、ファイルを閉じて再度開きます。
-- **"claude: command not found"** - [インストールガイド](./Install_Claude_Code_MacOS)を完了していることを確認してください。新しいターミナルウィンドウを開くか、ターミナルを完全に閉じて（**Command (⌘) + Q**）再度開きます。
+- **"claude: command not found"** - [インストールガイド](./Install_Claude_Code_MacOS.md)を完了していることを確認してください。新しいターミナルウィンドウを開くか、ターミナルを完全に閉じて（**Command (⌘) + Q**）再度開きます。
 - **プロットが表示されない** - ggplot2がインストールされていることを確認してください。必要に応じてRStudio Consoleで`install.packages("ggplot2")`を実行します。
 - **"No such file or directory"** - ステップ6でパスを正しく入力したか確認してください。ドラッグアンドドロップのコツを試してください：Finderから`cd `（スペース付き）と入力した後にtest_claudeフォルダをターミナルにドラッグします。
 - **Claude Codeの最初のリクエストが遅い** - Claudeが初期化されるまで30〜60秒待ちます。その後のリクエストは高速になります。

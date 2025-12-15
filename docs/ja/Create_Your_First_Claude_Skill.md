@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # 最初のClaudeスキルを作成
 
@@ -12,7 +12,7 @@
 
 ## 必要なもの
 
-- [カスタムスラッシュコマンドを作成](./Reuse_Prompts_via_Slash_Commands.md)チュートリアルを完了していること
+- [カスタムスラッシュコマンドを作成](./ja/Reuse_Prompts_via_Slash_Commands.md)チュートリアルを完了していること
 - そのチュートリアルの`stock-report`スラッシュコマンド
 - VS Codeがインストールされていること
 - 10〜15分

@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # Claude CodeとDockerでRのVibe Coding
 
@@ -12,8 +12,8 @@ Vibe Codingはコンピュータとの会話のようなものです—結果を
 
 ## 必要なもの
 
-- [Docker経由でVS CodeでRコーディング](./R_Coding_Docker_Guide)を完了
-- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow)を完了
+- [Docker経由でVS CodeでRコーディング](./R_Coding_Docker_Guide.md)を完了
+- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow.md)を完了
 - Docker Desktopがインストールされ、起動している
 - 25〜30分
 

@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # MacのVS CodeでPythonにClaude Codeを使う
 
@@ -12,8 +12,8 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 
 ## 必要なもの
 
-- [VS CodeでPython](./Python_Coding_VS_Code_Guide)チュートリアルを完了していること - VS CodeでPythonが動作していること
-- [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)チュートリアルを完了していること - Claude Code CLIがインストールされていること
+- [VS CodeでPython](./Python_Coding_VS_Code_Guide.md)チュートリアルを完了していること - VS CodeでPythonが動作していること
+- [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)チュートリアルを完了していること - Claude Code CLIがインストールされていること
 - Claude Pro/Maxサブスクリプション または Anthropic APIキー
 - 20〜30分
 
@@ -38,7 +38,7 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 - 認証方法を選択します：
   - **Claude Pro/Maxユーザー**: **Sign in with Claude.ai**をクリックし、ブラウザで認証してコードをVS Codeにコピーします
   - **APIキーユーザー**: **Use API Key**をクリックしてAnthropic APIキーを貼り付けます
-- 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)ガイド（ステップ5）を参照してください
+- 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイド（ステップ5）を参照してください
 - サインインすると、チャットパネルに「Ready to help」と表示されます
 
 ## ステップ3: 最初のPythonスクリプトを手動で作成
@@ -148,7 +148,7 @@ Review the entire script for correctness. Add comments when necessary.
 
 - **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**をクリックしてインストールされていることを確認してください。
 - **「Cannot read Python file」エラー** - ファイルが`.py`拡張子で保存されていることを確認してください。Claudeは保存されたファイルを読み取る必要があります。
-- **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)を参照してください。
+- **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)を参照してください。
 - **パッケージが見つからないエラー** - ターミナルで必要なパッケージをインストール：`pip install seaborn matplotlib scikit-learn pandas`。コードを実行する前にインストールが完了するまで待ってください。
 - **コード変更が適用されない** - 差分の**Accept**をクリックしてください。それでもうまくいかない場合は、Claudeが提案したコードを手動でコピーしてみてください。
 - **プロットが表示されない** - ディスプレイがあることを確認してください。一部のシステムでは、最後に`plt.show()`を追加するか、Jupyterで`%matplotlib inline`を使用する必要がある場合があります。

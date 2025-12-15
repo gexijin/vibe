@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # Claude CodeとDockerでPythonのVibe Coding
 
@@ -13,8 +13,8 @@
 
 ## 必要なもの
 
-- [Docker経由でVS CodeでPythonコーディング](./Python_Coding_Docker_Guide)を完了
-- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow)を完了
+- [Docker経由でVS CodeでPythonコーディング](./Python_Coding_Docker_Guide.md)を完了
+- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow.md)を完了
 - 20〜25分
 
 ## ステップ1：新しいGitHubリポジトリを作成

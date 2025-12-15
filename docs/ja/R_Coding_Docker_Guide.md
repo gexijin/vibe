@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # Docker経由でVS CodeでRコーディング
 
@@ -13,8 +13,8 @@ Rコードを同僚と共有しようとして、「でも私のマシンでは�
 
 ## 必要なもの
 
-- [VS CodeでRコーディング](./R_Coding_VS_Code_Guide)を完了
-- [GitHub Desktopの基本](./Github_desktop)を完了
+- [VS CodeでRコーディング](./R_Coding_VS_Code_Guide.md)を完了
+- [GitHub Desktopの基本](./Github_desktop.md)を完了
 - 20〜25分
 
 ## ステップ1：Docker Desktopをインストール
@@ -155,7 +155,7 @@ titlePanel("初めてのR Dockerアプリ")
 - 完全な設定が表示されます：
 
 ```dockerfile
-# Dockerhubベースイメージを選択
+# Docker Hubベースイメージを選択
 FROM rocker/shiny-verse:latest
 
 # 1. Rパッケージに一般的に必要なシステム依存関係

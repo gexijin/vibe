@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # DockerコンテナによるVS CodeでのPythonコーディング
 
@@ -36,7 +36,7 @@ Pythonコードを同僚と共有しようとして、「でも私のマシン�
 ## ステップ3：Pythonプロジェクトフォルダを作成
 
 - コンピュータに`python-docker-demo`という新しいフォルダを作成
-- その中に`.devcontainer`というサブフォルダを作成
+- `python-docker-demo`の中に`.devcontainer`というサブフォルダを作成
 - `python-docker-demo`の中に`python`というサブフォルダを作成
 - 構造は次のようになります：`python-docker-demo/.devcontainer/` と `python-docker-demo/python/`
 
@@ -128,11 +128,11 @@ print(df.describe())
 
 # ヒストグラムを作成
 plt.figure(figsize=(10, 6))
-plt.hist(df['sepal length (cm)'], bins=20, alpha=0.7, label='がく片の長さ')
-plt.hist(df['sepal width (cm)'], bins=20, alpha=0.7, label='がく片の幅')
-plt.xlabel('測定値 (cm)')
-plt.ylabel('頻度')
-plt.title('アイリスのがく片測定値')
+plt.hist(df['sepal length (cm)'], bins=20, alpha=0.7, label='Sepal Length')
+plt.hist(df['sepal width (cm)'], bins=20, alpha=0.7, label='Sepal Width')
+plt.xlabel('Measurement (cm)')
+plt.ylabel('Frequency')
+plt.title('Iris Sepal Measurements')
 plt.legend()
 plt.show()
 ```
@@ -257,7 +257,7 @@ streamlit run app.py
 
 - アプリを実行したまま
 - VS Codeで`python/app.py`を編集
-- 6行目を見つけます：`st.title("オールドフェイスフル間欠泉データ")`
+- `st.title("オールドフェイスフル間欠泉データ")`の行を見つけます
 - 以下に変更：
 
 ```python

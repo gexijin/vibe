@@ -1,4 +1,4 @@
-[ホーム](./)
+[ホーム](./ja/)
 
 # VS CodeでPythonを書く
 
@@ -13,7 +13,7 @@
 
 ## 前提条件
 
-- [VS Codeの基本](./VS_Code_Getting_Started)を完了していること
+- [VS Codeの基本](./VS_Code_Getting_Started.md)を完了していること
 - Pythonとパッケージをダウンロードできるインターネット接続
 - 作業時間：15〜20分
 
