@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # Windows 系统上的 Claude Code 版本控制
 

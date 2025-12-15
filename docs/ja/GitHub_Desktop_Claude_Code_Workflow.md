@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # GitHub DesktopとClaude Codeを組み合わせて使う
 

@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 在 Mac 上使用 Claude Code 与 RStudio
 

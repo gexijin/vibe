@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # Claude CodeとDockerでRのVibe Coding
 

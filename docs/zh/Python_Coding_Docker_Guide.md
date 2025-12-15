@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 通过 Docker 容器在 VS Code 中进行 Python 编程
 

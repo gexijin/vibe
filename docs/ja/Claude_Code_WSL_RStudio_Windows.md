@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # WindowsでWSL版Claude CodeとRStudioを併用する
 

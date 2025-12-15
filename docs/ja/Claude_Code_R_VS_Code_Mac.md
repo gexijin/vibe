@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # MacのVS CodeでRにClaude Codeを使う方法
 

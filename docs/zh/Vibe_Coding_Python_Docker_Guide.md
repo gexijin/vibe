@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 使用 Claude Code 和 Docker 进行 Python Vibe 编程
 

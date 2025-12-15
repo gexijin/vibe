@@ -135,7 +135,7 @@ Custom commands available via `.claude/commands/`:
 
 - `/tutorial [topic]` - Create a new beginner-friendly tutorial following the style guide
 - `/review-tutorial [file]` - Review and polish an existing tutorial for clarity, accuracy, and formatting
-- `/review-translation [file]` - Review and update Japanese translations to match English originals
+- `/review-translation [file]` - Review and update translations to match English originals
 - `/bioinfo-newsletter` - Generate a bioinformatics research newsletter from blog content
 
 ## Writing Style Guidelines
@@ -171,10 +171,20 @@ All tutorials follow these principles:
 - Remove unnecessary explanations
 - Keep it actionable and concise
 
-## Japanese Translations
+## Translations
 
-Complete Japanese translations are available in the `ja/` folder. All English tutorials have corresponding Japanese versions with the same filename structure:
+Complete translations are available in three languages:
 
+### Japanese (`ja/`)
+All English tutorials have corresponding Japanese versions with the same filename structure.
+
+### Chinese (`zh/`)
+All English tutorials have corresponding Simplified Chinese versions with the same filename structure.
+
+### Spanish (`es/`)
+All English tutorials have corresponding Spanish versions with the same filename structure.
+
+Each translation folder includes:
 - All installation guides
 - All VS Code setup guides
 - All coding guides (R and Python)
@@ -185,8 +195,8 @@ Complete Japanese translations are available in the `ja/` folder. All English tu
 Translation guidelines:
 - Technical terms (Git, Docker, VS Code) kept in English
 - Command-line instructions never translated
-- UI elements match Japanese localization when applicable
-- Natural, fluent Japanese using です/ます form
+- UI elements match localization when applicable
+- Natural, fluent language appropriate to each locale
 - Consistent terminology throughout
 
 ## File Structure
@@ -199,9 +209,15 @@ docs/
 ├── _layouts/                               # HTML templates
 │   └── default.html
 ├── assets/                                 # Images and static files
+├── es/                                     # Spanish translations
+│   ├── index.html
+│   └── [all tutorials in Spanish]
 ├── ja/                                     # Japanese translations
 │   ├── index.html
 │   └── [all tutorials in Japanese]
+├── zh/                                     # Chinese translations
+│   ├── index.html
+│   └── [all tutorials in Chinese]
 │
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md

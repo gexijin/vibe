@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 在 Windows 上使用 WSL 安装 Claude Code
 

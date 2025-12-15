@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 在 WSL 上为 Claude Code 设置 VS Code
 

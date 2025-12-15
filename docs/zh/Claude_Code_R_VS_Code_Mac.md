@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 在Mac上的VS Code中使用Claude Code进行R编程
 

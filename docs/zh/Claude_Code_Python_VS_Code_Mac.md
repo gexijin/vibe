@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 在 Mac 的 VS Code 中使用 Claude Code 进行 Python 开发
 

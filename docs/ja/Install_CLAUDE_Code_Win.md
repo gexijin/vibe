@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # WSLを使ってWindowsにClaude Codeをインストール
 

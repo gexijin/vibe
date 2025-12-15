@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # MacのVS CodeでPythonにClaude Codeを使う
 

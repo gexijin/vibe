@@ -1,4 +1,4 @@
-[首页](./zh/)
+[首页](./)
 
 # 在 Claude Code 中创建 Subagent
 

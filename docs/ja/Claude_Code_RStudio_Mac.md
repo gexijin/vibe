@@ -1,4 +1,4 @@
-[ホーム](./ja/)
+[ホーム](./)
 
 # MacでRStudioとClaude Codeを使用する
 
