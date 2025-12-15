@@ -234,7 +234,7 @@
 
         .learning-path-hint {
             position: absolute;
-            bottom: 12px;
+            bottom: 40px;
             right: 16px;
             color: var(--text-muted);
             font-size: 0.75rem;
@@ -367,6 +367,30 @@
             color: var(--text);
         }
 
+        /* Skill Level Bars */
+        .skill-level-bar {
+            position: absolute;
+            height: 2px;
+            opacity: 0.2;
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .skill-label {
+            position: absolute;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--text-muted);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        #network-graph {
+            position: relative;
+        }
+
         @media (max-width: 600px) {
             #network-graph {
                 height: 350px;
@@ -381,7 +405,7 @@
     </div>
     <div class="container">
         <header>
-            <h1>初心者のためのVibe Working</h1>
+            <h1>Claude Code 超初心者向け</h1>
             <p class="subtitle">Claude Code（コーディング、研究などに使える強力なAI）の15分チュートリアル</p>
         </header>
 
@@ -401,30 +425,42 @@
         </div>
 
         <section class="section">
-        <p>VS Code、Git、GitHub Desktop、WSL、Dockerを使って、ラップトップでClaude Codeを実行するハンズオンチュートリアル。</p>
+        <p>&nbsp;&nbsp;&nbsp; Claude Codeは、コーディング、研究、執筆、編集などを自動化できる強力なAIコーディングアシスタントです。コンピュータのフォルダ内でローカルに動作し、あなたの指示のもとで有益な相棒として機能します。</p>
+
+        <p>&nbsp;&nbsp;&nbsp; 実践的なアクティビティを通じて、Claude Codeの潜在能力を最大限に引き出すための中核となる概念とツールを紹介します。バージョン管理用のGit、コーディングと編集用のVisual Studio Code、Windows上で実行するためのWSL（Windows Subsystem for Linux）、隔離された開発環境用のDockerなどが含まれます。</p>
+        <p>&nbsp;&nbsp;&nbsp; 学習パスに従うか、興味のあるチュートリアルを選んでください！</p>
         <br>
+            <h2>はじめに</h2>
             <ol class="tutorial-list">
                 <li><a href="Install_CLAUDE_Code_Win">WindowsにClaude Codeをインストール</a></li>
-                <li><a href="Claude_Code_in_VS_Code_Win">WindowsでClaude Code用にVS Codeをセットアップ</a></li>
-                <li><a href="Claude_Code_Git_Windows">Windows版Claude Codeでローカルバージョン管理</a></li>
-                <li><a href="Claude_Code_Basic_Operations">Claude Code: 基本操作</a></li>
                 <li><a href="Install_Claude_Code_MacOS">MacにClaude Codeをインストール</a></li>
-                <li><a href="Claude_Code_in_VS_Code_Mac">MacでVS CodeからClaude Codeを使用</a></li>
-                <li><a href="Claude_Code_Git_Mac">Mac版Claude Codeでローカルバージョン管理</a></li>
                 <li><a href="VS_Code_Getting_Started">VS Codeを始めよう</a></li>
+                <li><a href="Claude_Code_Basic_Operations">Claude Code: 基本操作</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Win">WindowsでClaude Code用にVS Codeをセットアップ</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Mac">MacでVS CodeからClaude Codeを使用</a></li>
+                <li><a href="Claude_Code_Git_Windows">Windows版Claude Codeでローカルバージョン管理</a></li>
+                <li><a href="Claude_Code_Git_Mac">Mac版Claude Codeでローカルバージョン管理</a></li>
+                <li><a href="Claude_Code_RStudio_Mac">MacでRStudioとClaude Codeを併用</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">WindowsでWSL経由でRStudioとClaude Codeを併用</a></li>
+            </ol>
+
+            <h2>スキル構築</h2>
+            <ol class="tutorial-list" start="11">
                 <li><a href="Github_desktop">バージョン管理を始めよう</a></li>
                 <li><a href="R_Coding_VS_Code_Guide">VS CodeでRを実行</a></li>
                 <li><a href="Python_Coding_VS_Code_Guide">VS CodeでPythonを実行</a></li>
-                <li><a href="R_Coding_Docker_Guide">Docker経由でVS CodeでRコーディング</a></li>
-                <li><a href="Python_Coding_Docker_Guide">Docker経由でVS CodeでPythonコーディング</a></li>
-                <li><a href="GitHub_Desktop_Claude_Code_Workflow">GitHub DesktopとClaude Codeを使用</a></li>
-                <li><a href="Vibe_Coding_R_Docker_Guide">Claude CodeでRのVibe Coding</a></li>
-                <li><a href="Vibe_Coding_Python_Docker_Guide">Claude CodeでPythonのVibe Coding</a></li>
-                <li><a href="Writing_Research_Paper_Claude_Code">Claude Codeで研究論文を書く</a></li>
-                <li><a href="Claude_Code_RStudio_Mac">MacでRStudioとClaude Codeを併用</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">WindowsでWSL経由でRStudioとClaude Codeを併用</a></li>
                 <li><a href="Claude_Code_R_VS_Code_Mac">MacのVS CodeでRにClaude Codeを使う</a></li>
                 <li><a href="Claude_Code_Python_VS_Code_Mac">MacのVS CodeでPythonにClaude Codeを使う</a></li>
+                <li><a href="GitHub_Desktop_Claude_Code_Workflow">GitHub DesktopとClaude Codeを使用</a></li>
+                <li><a href="Writing_Research_Paper_Claude_Code">Claude Codeで研究論文を書く</a></li>
+            </ol>
+
+            <h2>エキスパートトピック</h2>
+            <ol class="tutorial-list" start="18">
+                <li><a href="R_Coding_Docker_Guide">Docker経由でVS CodeでRコーディング</a></li>
+                <li><a href="Python_Coding_Docker_Guide">Docker経由でVS CodeでPythonコーディング</a></li>
+                <li><a href="Vibe_Coding_R_Docker_Guide">Claude CodeでRのVibe Coding</a></li>
+                <li><a href="Vibe_Coding_Python_Docker_Guide">Claude CodeでPythonのVibe Coding</a></li>
                 <li><a href="Reuse_Prompts_via_Slash_Commands">カスタムスラッシュコマンドを作成</a></li>
                 <li><a href="Create_Your_First_Claude_Skill">最初のClaudeスキルを作成</a></li>
                 <li><a href="Medical_Research_Skill">医学研究用のClaudeスキルを作成</a></li>
@@ -797,6 +833,40 @@
 
         const network = new vis.Network(container, data, options);
 
+        // Add skill level bars
+        function createSkillLevelBars() {
+            const graphContainer = document.getElementById('network-graph');
+
+            // Define bars with same color, increasing brightness
+            const bars = [
+                { xStart: -50, xEnd: 170, color: '#3a5f8f' },
+                { xStart: 180, xEnd: 420, color: '#4a7faf' },
+                { xStart: 430, xEnd: 580, color: '#58a6ff' }
+            ];
+
+            const yPosition = 180;
+
+            bars.forEach(bar => {
+                // Convert network coordinates to DOM positions
+                const startPos = network.canvasToDOM({ x: bar.xStart, y: yPosition });
+                const endPos = network.canvasToDOM({ x: bar.xEnd, y: yPosition });
+
+                const width = endPos.x - startPos.x;
+
+                // Create bar element
+                const barDiv = document.createElement('div');
+                barDiv.className = 'skill-level-bar';
+                barDiv.style.left = startPos.x + 'px';
+                barDiv.style.top = startPos.y + 'px';
+                barDiv.style.width = width + 'px';
+                barDiv.style.backgroundColor = bar.color;
+                graphContainer.appendChild(barDiv);
+            });
+        }
+
+        // Create bars after a short delay to ensure network is fully rendered
+        setTimeout(createSkillLevelBars, 500);
+
         // Filter state
         let currentPlatform = 'windows';
         let currentLanguage = 'basics'; // null = all, 'r', 'python', 'basics'
@@ -1015,6 +1085,15 @@
                     modal.classList.remove('active');
                     celebrate();
                 }
+            }
+        });
+
+        // Handle start button click - mark as complete when starting
+        modalLink.addEventListener('click', function() {
+            if (currentNodeId !== null && !isCompleted(currentNodeId)) {
+                toggleComplete(currentNodeId);
+                updateNodeLabel(currentNodeId);
+                celebrate();
             }
         });
 
