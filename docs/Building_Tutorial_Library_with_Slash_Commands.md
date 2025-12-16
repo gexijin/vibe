@@ -1,4 +1,4 @@
-# How I Automated Documentation with reusable prompts
+# How Claude Code helped me create these tutorials
 
 In December 2025, I set out to create a comprehensive tutorial library for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.
 
