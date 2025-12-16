@@ -42,7 +42,8 @@
       "SlashCommand(/review-translation:*)",
       "WebFetch(domain:github.com)",
       "SlashCommand(/review-tutorial docs/Claude_Code_Basic_Operations.md)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []
