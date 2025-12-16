@@ -2,18 +2,18 @@
 
 # 在Mac上的VS Code中使用Claude Code进行R编程
 
-你已经在VS Code中设置好了R，可以手动编写代码。现在你希望AI帮助编写、改进和调试你的R代码，这样你就可以专注于数据分析。可以把Claude Code想象成一个生活在VS Code内部的编程伙伴——你描述你想要什么，它就会编写或改进代码，而你始终停留在同一个窗口中。
+你已经在VS Code中设置好了R，可以手动编写代码。现在你希望AI帮助编写、改进和调试你的R代码，专注于数据分析本身。把Claude Code想象成你在VS Code中的编程伙伴——描述你想要什么，它就会编写或改进代码，无需切换窗口。
 
 ## 核心概念
 
-- **[Claude Code Extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - 将Claude AI助手直接集成到编辑器中的VS Code扩展，支持内联代码编辑
-- **Chat Panel（聊天面板）** - VS Code中的侧边面板，你可以在这里与Claude讨论你的代码
-- **Inline Edits（内联编辑）** - Claude建议的代码更改会直接显示在你的文件中，以差异对比的形式呈现，你可以接受或拒绝
+- **[Claude Code Extension](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - 将Claude AI助手集成到VS Code的扩展，支持内联代码编辑
+- **Chat Panel（聊天面板）** - VS Code侧边栏面板，用于与Claude讨论代码
+- **Inline Edits（内联编辑）** - Claude建议的代码更改以差异对比形式显示在文件中，可接受或拒绝
 
 ## 准备工作
 
-- 完成[在VS Code中使用R](./R_Coding_VS_Code_Guide)教程 - R应该已经在VS Code中正常工作
-- 完成[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)教程 - Claude Code CLI应该已经安装
+- 完成[在VS Code中使用R](./R_Coding_VS_Code_Guide)教程 - R已在VS Code中正常工作
+- 完成[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)教程 - Claude Code CLI已安装
 - Claude Pro/Max订阅或Anthropic API密钥
 - 20-30分钟
 
@@ -21,7 +21,7 @@
 
 - 打开**Visual Studio Code**
 - 点击菜单栏中的**File**，然后选择**Open Folder**
-- 导航到你的**Documents**文件夹
+- 导航到**Documents**文件夹
 - 点击对话框底部的**New Folder**
 - 将文件夹命名为`claude_r_test`
 - 点击**Open**打开新文件夹
@@ -29,17 +29,17 @@
 
 ## 步骤2：安装并登录Claude Code Extension
 
-- 点击左侧边栏中的**Extensions**图标（四个方块图标）
+- 点击左侧边栏的**Extensions**图标（四个方块图标）
 - 在搜索框中输入`Claude Code`
 - 找到Anthropic的**Claude Code**并点击**Install**
-- 安装完成后，左侧边栏会出现一个Claude图标（星星图标）
+- 安装完成后，左侧边栏会出现Claude图标（星星图标）
 - 点击Claude图标打开聊天面板
 - 点击聊天面板中的**Sign in to Claude Code**
-- 选择你的身份验证方法：
+- 选择身份验证方法：
   - **Claude Pro/Max用户**：点击**Sign in with Claude.ai**，在浏览器中授权，然后将代码复制回VS Code
-  - **API密钥用户**：点击**Use API Key**并粘贴你的Anthropic API密钥
-- 有关详细的身份验证步骤，请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)指南（步骤5）
-- 登录后，你会在聊天面板中看到"Ready to help"
+  - **API密钥用户**：点击**Use API Key**并粘贴Anthropic API密钥
+- 详细身份验证步骤请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)指南（步骤5）
+- 登录后，聊天面板会显示"Ready to help"
 
 ## 步骤3：手动创建初始R脚本
 
@@ -57,29 +57,29 @@ summary(iris)
 - 点击**File > Save**保存文件
 - 打开R终端：点击菜单栏中的**View**，然后选择**Command Palette**，输入`R: Create R Terminal`，按Enter
 - 选择代码并按`Ctrl+Enter`（Windows/Linux）或`Cmd+Enter`（Mac）运行
-- 你应该在终端中看到数据集结构和摘要统计信息
+- 应该在终端中看到数据集结构和摘要统计信息
 
 ## 步骤4：让Claude添加散点图
 
-- 点击左侧边栏中的**Claude**图标打开聊天面板
-- 在底部的聊天框中输入：
+- 点击左侧边栏的**Claude**图标打开聊天面板
+- 在底部聊天框中输入：
 
 ```
 Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
 ```
 
 - 按Enter发送
-- Claude会读取你的文件并提出更改建议——你会看到一个差异对比，显示要添加的新代码
+- Claude会读取文件并建议更改——以差异对比显示要添加的新代码
 - 点击**Accept**应用更改
-- ggplot2代码会出现在你的文件中
-- 如果你还没有安装ggplot2，请在R终端中运行`install.packages("ggplot2")`
+- ggplot2代码会出现在文件中
+- 如果尚未安装ggplot2，在R终端中运行`install.packages("ggplot2")`
 
 ## 步骤5：运行更新后的代码
 
 - 选择`iris_analysis.R`中的所有代码
 - 按`Ctrl+Enter`（Windows/Linux）或`Cmd+Enter`（Mac）
 - 散点图会出现在单独的图形窗口中
-- 你应该看到按物种（setosa、versicolor、virginica）着色的点
+- 应该看到按物种（setosa、versicolor、virginica）着色的点
 
 ## 步骤6：让Claude优化图形
 
@@ -104,10 +104,10 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 ```
 
 - 按Enter
-- Claude会向你的脚本添加PCA代码
+- Claude会向脚本添加PCA代码
 - 点击**Accept**
 - 运行所有代码：选择全部并按`Ctrl+Enter` / `Cmd+Enter`
-- 会出现一个PCA图，显示投影到PC1和PC2上的样本，按物种着色
+- 会出现PCA图，显示样本投影到PC1和PC2上，按物种着色
 
 ## 步骤8：让Claude审查并添加注释
 
@@ -118,9 +118,9 @@ Review the entire script for correctness. Add comments when necessary.
 ```
 
 - 按Enter
-- Claude会审查代码并建议添加解释每个部分的注释
+- Claude会审查代码并建议添加注释
 - 点击**Accept**
-- 你的脚本现在有了清晰的注释，解释了数据加载、可视化和PCA分析
+- 脚本现在有了清晰的注释，解释了数据加载、可视化和PCA分析
 
 ## 下一步
 
@@ -132,18 +132,18 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## 故障排除
 
-- **Claude扩展未显示** - 安装后重启VS Code。点击**View > Extensions**验证它已安装。
-- **"Cannot read R file"错误** - 确保你使用`.R`扩展名保存了文件。Claude需要保存的文件才能读取它们。
-- **身份验证失败** - 验证你的Claude Pro/Max订阅是否有效或你的API密钥是否有效。有关身份验证故障排除，请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)。
-- **找不到ggplot2** - 在R终端中安装它：`install.packages("ggplot2")`。运行代码前等待安装完成。
+- **Claude扩展未显示** - 安装后重启VS Code。点击**View > Extensions**验证已安装。
+- **"Cannot read R file"错误** - 确保使用`.R`扩展名保存文件。Claude需要已保存的文件才能读取。
+- **身份验证失败** - 验证Claude Pro/Max订阅或API密钥是否有效。身份验证故障排除请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)。
+- **找不到ggplot2** - 在R终端中安装：`install.packages("ggplot2")`。运行代码前等待安装完成。
 - **代码更改未应用** - 确保在差异对比上点击了**Accept**。如果不起作用，尝试手动复制Claude建议的代码。
 
 ## 工作流程总结
 
-- **Claude Code Extension**直接在VS Code中提供AI助手，带有聊天面板和内联差异对比
+- **Claude Code Extension**在VS Code中提供AI助手，带有聊天面板和内联差异对比
 - **迭代优化** - 从基础代码开始，让Claude增强，立即测试，然后进一步优化
-- **上下文感知** - Claude读取你的R文件并理解你的项目结构
-- **内联编辑** - 建议的更改以差异对比的形式出现在你的实际文件中，而不是单独的聊天响应
+- **上下文感知** - Claude读取R文件并理解项目结构
+- **内联编辑** - 建议的更改以差异对比形式显示在实际文件中，而非单独的聊天响应
 - **保持专注** - 无需在浏览器和编辑器之间切换——一切都在VS Code中完成
 
 ---

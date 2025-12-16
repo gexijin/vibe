@@ -2,12 +2,12 @@
 
 # Windows 系统上的 Claude Code 版本控制
 
-你正在使用 AI 助手协作。它会修改你的文件。有时这些修改很出色，有时则不然。**版本控制就像整个项目的撤销按钮。**每次保存快照（称为"提交"），你就创建了一个可以随时返回的还原点。最棒的是，你可以完全在本地计算机上完成这些操作，而且 Claude Code 会为你处理一切。
+你正在使用 AI 助手协作，它会修改你的文件。有时效果出色，有时则不然。**版本控制就像整个项目的撤销按钮。**每次保存快照（称为"提交"），你就创建了一个可以随时返回的还原点。最棒的是，你可以完全在本地完成这些操作，Claude Code 会为你处理一切。
 
 ## 核心概念
 
 - **WSL (Windows Subsystem for Linux)** - 在 Windows 上原生运行 Linux 工具（如 Git）
-- **Git** - 在你的计算机上跟踪文件的每次更改，创建你可以随时返回的还原点
+- **Git** - 在计算机上跟踪文件的每次更改，创建可以随时返回的还原点
 - **Commit** - 项目在特定时间点的快照，附带变更描述
 - **Claude Code** - AI 编码助手，可以编写代码、修复错误，并通过简单请求处理 Git 操作
 
@@ -44,29 +44,29 @@
 
 Git 需要知道你是谁以便在提交消息中记录。
 
-- 设置你的姓名和邮箱（可以是虚构的）
+- 设置姓名和邮箱（可以是虚构的）
   ```
   git config --global user.name "Your Name"
   git config --global user.email "your.email@example.com"
   ```
 
-使用你的姓名和邮箱有助于在多人协作时识别是谁做出了更改。
+使用姓名和邮箱有助于在多人协作时识别是谁做出了更改。
 
 ## 步骤 4：导航到 Windows 文件夹
 
-WSL 可以通过 `/mnt/c/` 访问你的 Windows 文件。
+WSL 可以通过 `/mnt/c/` 访问 Windows 文件。
 
-- 导航到你的 Windows 用户文件夹：
+- 导航到 Windows 用户文件夹：
   ```
   cd /mnt/c/Users/YOUR_USERNAME/Documents
   ```
-  将 `YOUR_USERNAME` 替换为你实际的 Windows 用户名。
-- 验证你在正确的位置：
+  将 `YOUR_USERNAME` 替换为实际的 Windows 用户名。
+- 验证位置：
   ```
   pwd
   ```
 
-你应该会看到 `/mnt/c/Users/YOUR_USERNAME/Documents`。
+你应该看到 `/mnt/c/Users/YOUR_USERNAME/Documents`。
 
 ## 步骤 5：创建项目文件夹
 
@@ -97,7 +97,7 @@ Claude Code 启动并等待你的请求。
   Start tracking changes
   ```
 
-Claude 会在你的文件夹中初始化一个 Git 仓库（需要 2-5 秒）。现在你拥有了版本控制！
+Claude 会在文件夹中初始化 Git 仓库（需要 2-5 秒）。现在你拥有了版本控制！
 
 ## 步骤 8：构建倒计时应用
 
@@ -136,7 +136,7 @@ Claude 会：
 - 编写描述性的提交消息
 - 创建提交（需要 5-10 秒）
 
-你已经创建了第一个保存点！你可以随时返回到这个可工作的版本。
+你已创建了第一个保存点！可以随时返回到这个可工作的版本。
 
 ## 步骤 11：添加预设按钮
 
@@ -177,7 +177,7 @@ Claude 会：
 - 输入 `yes` 并按回车
 - 刷新浏览器——15 分钟按钮消失了
 
-Claude 丢弃了我们不喜欢的新更改。倒计时器又可以正常工作了，只有 1 分钟和 5 分钟按钮！
+Claude 丢弃了我们不喜欢的新更改。倒计时器恢复正常，只有 1 分钟和 5 分钟按钮！
 
 ## 步骤 14：添加声音通知
 
@@ -210,13 +210,13 @@ Claude 丢弃了我们不喜欢的新更改。倒计时器又可以正常工作�
   show my change history
   ```
 
-Claude 会以易读的格式显示你的提交。你会看到：
+Claude 会以易读格式显示你的提交。你会看到：
 - 初始倒计时应用的提交
 - 预设按钮（1 分钟和 5 分钟）的提交
 - 声音通知的提交
 - 小睡按钮的提交
 
-注意 15 分钟按钮的尝试不在其中——你已经丢弃了它！
+注意 15 分钟按钮的尝试不在其中——你已丢弃了它！
 
 ## 步骤 17：检查代码
 
@@ -240,7 +240,7 @@ Claude 会以易读的格式显示你的提交。你会看到：
 
 ## 下一步
 
-尝试为你的倒计时器添加更多功能：
+尝试为倒计时器添加更多功能：
 
 - **15 分钟按钮：** `Add a working 15-minute preset button`（重做我们丢弃的内容！）
 - **暂停按钮：** `Add a Pause/Resume button that toggles the timer state`
@@ -251,7 +251,7 @@ Claude 会以易读的格式显示你的提交。你会看到：
 
 ## 故障排除
 
-- **"not a git repository" 错误：** 确保你在 test_claude 文件夹中（`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
+- **"not a git repository" 错误：** 确保在 test_claude 文件夹中（`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
 - **在 Windows 中找不到 timer.html：** 文件位于 `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
 - **Git 要求输入密码：** 你输错了 `sudo` 密码——仔细重试
 - **倒计时器无法工作：** 打开浏览器控制台（右键点击页面，选择 **检查**，点击 **Console** 标签），复制任何红色错误消息，粘贴给 Claude
@@ -272,6 +272,6 @@ Claude 通过自然语言处理所有 Git 操作——无需记忆命令！
 - **开发：** Claude 编写代码，你在浏览器中测试
 - **版本控制：** Claude 通过简单请求处理所有 Git 操作
 - **安全性：** 随时丢弃不良更改，返回到任何之前的提交
-- **本地：** 一切都保存在你的计算机上，无需账户或互联网连接
+- **本地：** 一切都保存在计算机上，无需账户或互联网连接
 
 由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 2025 年 12 月 8 日。
