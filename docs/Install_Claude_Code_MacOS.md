@@ -96,12 +96,12 @@ Claude Code requires Node.js version 18 or higher.
 
 - In Terminal, type:
    ```
-   npm install -g @anthropic/claude-code
+   npm install -g @anthropic-ai/claude-code
    ```
 - Wait for Claude Code to install (2-5 minutes)
 - If you see a "permission denied" error, try with `sudo`:
    ```
-   sudo npm install -g @anthropic/claude-code
+   sudo npm install -g @anthropic-ai/claude-code
    ```
    Then enter your Mac password when prompted (you won't see it as you type)
 - You may see some warnings in yellow or red text - this is usually normal
@@ -222,7 +222,7 @@ After closing Terminal, here's how to open it again:
 ### npm installation fails with permission errors
 - Add `sudo` before the npm command:
   ```
-  sudo npm install -g @anthropic/claude-code
+  sudo npm install -g @anthropic-ai/claude-code
   ```
 - Enter your Mac password when prompted (you won't see it as you type)
 
@@ -230,11 +230,11 @@ After closing Terminal, here's how to open it again:
 - Make sure npm installation completed successfully
 - Try closing and reopening Terminal
 - Check if Claude Code is installed: `npm list -g @anthropic/claude-code`
-- Try installing again: `npm install -g @anthropic/claude-code`
+- Try installing again: `npm install -g @anthropic-ai/claude-code`
 
 ### "Cannot find module" errors
 - Make sure Node.js is properly installed: `node --version`
-- Try reinstalling Claude Code: `npm uninstall -g @anthropic/claude-code` then `npm install -g @anthropic/claude-code`
+- Try reinstalling Claude Code: `npm uninstall -g @anthropic/claude-code` then `npm install -g @anthropic-ai/claude-code`
 
 ## Tips for Mac Users
 
