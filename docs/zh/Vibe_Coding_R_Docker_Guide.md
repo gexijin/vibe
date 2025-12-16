@@ -90,7 +90,7 @@ Claude Code 现在已准备就绪,可接受你的请求。
 - 在 Claude Code 终端中,输入:
 
 ```
-Install the hoopR package and load current NBA player statistics. Show me the top 10 players by total points scored this season. Display it as a nice table.
+安装 hoopR 包并加载当前 NBA 球员统计数据。显示本赛季总得分前 10 的球员。以漂亮的表格形式展示。
 ```
 
 - 按 Enter
@@ -105,7 +105,7 @@ Install the hoopR package and load current NBA player statistics. Show me the to
 
 **保存进度:** 要求 Claude 使用 Git 提交,或从 GitHub Desktop 自己完成:
 ```
-Commit these changes.
+提交这些更改。
 ```
 
 ## 步骤 6:第二次 Vibe - 探索数据
@@ -115,7 +115,7 @@ Commit these changes.
 - 在 Claude Code 终端中,输入:
 
 ```
-Show me what columns are available in this NBA data. Then create a summary showing: number of players, number of teams, average points per player, and who has the most assists and rebounds.
+显示这个 NBA 数据中有哪些可用列。然后创建摘要显示：球员数量、球队数量、每位球员的平均得分，以及谁的助攻和篮板最多。
 ```
 
 - 按 Enter
@@ -133,7 +133,7 @@ Show me what columns are available in this NBA data. Then create a summary showi
 - 在 Claude Code 终端中,输入:
 
 ```
-Create a Shiny app in a file called app.R that shows an interactive table of NBA player stats. Include columns for player name, team, points, assists, and rebounds. Add a slider to filter players by minimum points scored (from 0 to 1000). Make it look clean and professional.
+在名为 app.R 的文件中创建一个 Shiny 应用，显示 NBA 球员统计数据的交互式表格。包含球员姓名、球队、得分、助攻和篮板列。添加滑块按最低得分（0 到 1000）过滤球员。让它看起来简洁专业。
 ```
 
 - 按 Enter
@@ -163,7 +163,7 @@ Create a Shiny app in a file called app.R that shows an interactive table of NBA
 - 返回 Claude Code 终端,输入:
 
 ```
-Add a bar chart below the table showing the top 15 players by points. Use different colors for each player. Also add a scatter plot showing the relationship between points and assists for all filtered players.
+在表格下方添加柱状图，显示得分前 15 的球员。每个球员使用不同颜色。同时添加散点图，显示所有过滤球员的得分和助攻之间的关系。
 ```
 
 - 按 Enter
@@ -182,7 +182,7 @@ Add a bar chart below the table showing the top 15 players by points. Use differ
 - 在 Claude Code 终端中,输入:
 
 ```
-Add a dropdown menu to filter players by team. Put it at the top. When I select a team, show only players from that team. Include an "All Teams" option to show everyone.
+添加下拉菜单按球队过滤球员。放在顶部。当我选择一个球队时，只显示该球队的球员。包含"所有球队"选项以显示所有人。
 ```
 
 - 按 Enter
@@ -220,11 +220,11 @@ Vibe 编程在迭代时更显威力。尝试通过描述来添加功能:
 
 **向 Claude 请求的示例:**
 
-- "Add a player search box so I can type a player's name and jump to them"
-- "Show the team logos next to team names in the dropdown"
-- "Add a line chart showing points per game trend for the selected team"
-- "Make the bar chart sortable by clicking column headers"
-- "Add tooltips to the scatter plot showing player names when I hover"
+- "添加球员搜索框，让我可以输入球员姓名并跳转到他们"
+- "在下拉菜单中的球队名称旁边显示球队标志"
+- "添加折线图显示所选球队的场均得分趋势"
+- "让柱状图可以通过点击列标题排序"
+- "为散点图添加工具提示，悬停时显示球员姓名"
 
 每次成功添加功能后:
 - 在浏览器中测试

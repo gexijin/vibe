@@ -125,10 +125,10 @@ VS Code 包含 [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/
 - 打开 `README.md` 文件(或项目中的任何其他文件)
 - 点击标题栏中的 **Chat** → **Open Chat**(或在 Windows/Linux 上按 `Ctrl+Alt+I`,在 Mac 上按 `Ctrl+Cmd+I`)
 - 如果提示,请使用你的 **GitHub 账户**登录(有免费计划可用)
-- 在打开的聊天面板中,输入:"Explain this file"
+- 在打开的聊天面板中,输入:"解释这个文件"
 - 按 **Enter**
 
-GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编写新代码、修复错误,或回答诸如"How do I add more features?"之类的问题。
+GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编写新代码、修复错误,或回答诸如"如何添加更多功能?"之类的问题。
 
 **提示:** 对于[内联编辑](https://code.visualstudio.com/docs/copilot/copilot-chat),在任何文件中高亮显示代码并按 `Ctrl+I`(Windows/Linux)或 `Cmd+I`(Mac),要求 Copilot 仅修改、修复或解释该部分。
 

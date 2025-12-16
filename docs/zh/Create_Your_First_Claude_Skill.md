@@ -65,8 +65,8 @@ Claude Code启动并显示欢迎信息。
 
 输入以下提示：
 ```
-Convert my stock-report slash command to a Skill called generate-stock-reports.
-The Skill should activate automatically when I ask about companies or stocks.
+将我的 stock-report slash 命令转换为名为 generate-stock-reports 的 Skill。
+这个 Skill 应该在我询问公司或股票时自动激活。
 ```
 
 Claude会分析现有的slash命令，并将其转换为`.claude/skills/stock-report/`中的Skill。
@@ -97,7 +97,7 @@ description: Generates reports on companies... Use when users ask about stocks, 
 
 不要输入`/stock-report AAPL`，只需提出一个自然的问题：
 ```
-What's happening with Apple lately?
+苹果公司最近有什么动态？
 ```
 
 **关键区别：**你没有输入命令。Claude阅读问题，识别出你在询问某家公司，检查Skill描述，然后自动决定使用stock-report Skill。
@@ -116,15 +116,15 @@ What's happening with Apple lately?
 
 **Skill（自动）：**
 ```
-Tell me about Tesla's recent developments
+告诉我特斯拉最近的发展情况
 ```
 或
 ```
-I'm thinking about investing in Microsoft
+我在考虑投资微软
 ```
 或
 ```
-What's NVIDIA up to?
+英伟达最近在做什么？
 ```
 - Claude决定是否使用Skill
 - 更自然的对话
@@ -134,14 +134,14 @@ What's NVIDIA up to?
 
 尝试不应该触发股票报告Skill的问题：
 ```
-How do I install Python?
+如何安装 Python？
 ```
 
 Claude正常回答，不调用Skill。
 
 现在尝试一个应该触发它的问题：
 ```
-Compare Google and Meta
+比较 Google 和 Meta
 ```
 
 Claude应该使用Skill两次——一次用于Google，一次用于Meta。
@@ -150,18 +150,17 @@ Claude应该使用Skill两次——一次用于Google，一次用于Meta。
 
 让我们使Skill更具选择性。询问Claude：
 ```
-Update the stock-report Skill to only activate when I explicitly mention
-"analyze" or "report" along with a company name.
+更新 stock-report Skill，使其仅在我明确提到"分析"或"报告"以及公司名称时才激活。
 ```
 
 Claude会更新`SKILL.md`中的`description`字段。测试差异：
 ```
-What's Apple doing?
+苹果公司在做什么？
 ```
 （现在可能不会触发Skill）
 
 ```
-Analyze Apple
+分析苹果公司
 ```
 （应该触发Skill）
 

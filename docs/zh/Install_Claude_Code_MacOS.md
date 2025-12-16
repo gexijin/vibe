@@ -168,7 +168,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
   claude
   ```
 - Claude 会先问几个问题
-- 测试是否正常工作,可以问:"Explain quantum computing."
+- 测试是否正常工作,可以问:"解释量子计算。"
 
 ## 步骤 7:导航到项目
 

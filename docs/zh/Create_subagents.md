@@ -54,7 +54,7 @@ Claude Code启动并显示欢迎消息。
 在构建subagent之前，确认skill可用。输入：
 
 ```
-List all available skills
+列出所有可用的 skill
 ```
 
 应该在输出中看到`generate-stock-reports`。这个skill研究公司并生成涵盖产品新闻、管理层更新、财务绩效和分析师见解的报告。
@@ -95,11 +95,11 @@ List all available skills
 - 选择**Generate with Claude (recommended)**
 - 粘贴以下指令：
   ```
-  Create a markdown file for a new subagent called stock-picker:
-  - It takes two or more stocks
-  - Uses the generate-stock-reports skill to do research
-  - Score cards are created based on the categories of data collected
-  - A final recommendation is given.
+  为名为 stock-picker 的新 subagent 创建一个 markdown 文件：
+  - 它接受两只或更多股票
+  - 使用 generate-stock-reports skill 进行研究
+  - 根据收集的数据类别创建评分卡
+  - 给出最终推荐。
   ```
 - 在**[Continue]**上按**Enter**以使用**All tools**
 - 选择**Sonnet**作为模型
@@ -111,7 +111,7 @@ List all available skills
 
 或者让Claude：
 ```
-Show me the stock-picker subagent file.
+给我看 stock-picker subagent 文件。
 ```
 Claude将显示位于`.claude/agents/stock-picker.md`的subagent文件。会看到：
 
@@ -140,7 +140,7 @@ frontmatter下方有一个**系统提示词**，包含你的评分方法。
 现在用真实的比较来测试subagent。输入：
 
 ```
-Which is a better investment: Apple or Google?
+哪个是更好的投资：苹果还是谷歌？
 ```
 
 subagent将根据描述自动激活。
@@ -168,15 +168,15 @@ subagent可能会在终端中显示这些内容，或生成一个包含完整报
 
 现在你有了一个可用的股票选择器subagent，尝试这些扩展：
 
-- **比较3只或更多股票**："Compare AAPL, MSFT, and GOOGL"，看看subagent如何处理更多选项
+- **比较3只或更多股票**："比较 AAPL、MSFT 和 GOOGL"，看看subagent如何处理更多选项
 - **调整评分权重**：编辑subagent文件以更改40/30/20/10的细分（例如，如果偏好成长股，可以将增长设为40%）
 - **创建其他subagent**：为不同任务构建"code-reviewer" subagent、"bug-hunter" subagent或"document-writer" subagent
 
 ## 故障排除
 
-- **Subagent未激活**：确保请求提到了比较公司或投资决策。尝试："Use the stock-picker subagent to compare..."
+- **Subagent未激活**：确保请求提到了比较公司或投资决策。尝试："使用 stock-picker subagent 比较..."
 - **找不到Skill**：验证`.claude/skills/generate-stock-reports/SKILL.md`是否存在。如果刚添加，请重启Claude Code。
-- **评分不完整**：让subagent "continue"或"explain the scores for each category in more detail"
+- **评分不完整**：让subagent "继续"或"更详细地解释每个类别的分数"
 - **创建subagent时出错**：检查`.claude/agents/`文件夹是否存在。Claude Code应该会自动创建它。
 
 ## 工作流程概述

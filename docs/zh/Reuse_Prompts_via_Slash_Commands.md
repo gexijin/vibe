@@ -61,13 +61,13 @@ Claude Code 启动并显示欢迎消息。
 无需手动创建文件,让 Claude 来完成。输入此提示词:
 
 ```
-Create a slash command called stock-report that generates
-reports on recent developments of a company identified by name or ticker symbol.
-Include:
-- Product or service news
-- Management team news
-- Recent financial reports
-- Analyst reports
+创建一个名为 stock-report 的 slash command,用于生成
+通过公司名称或股票代码识别的公司近期发展报告。
+包含:
+- 产品或服务新闻
+- 管理团队新闻
+- 近期财务报告
+- 分析师报告
 ```
 当被询问时,授权 Claude 创建文件。
 Claude 会创建详细提示词,并保存为 `stock-report.md` 到 `.claude/commands/` 文件夹。
@@ -116,7 +116,7 @@ Claude 在命令行创建报告。查看输出:
 - 打开 `.claude/commands/` 文件夹中的 `stock-report.md` 文件
 - 将以下内容附加到末尾。
   ```
-  Save the report as a markdown file. File name has company name and date.
+  将报告保存为 markdown 文件。文件名包含公司名称和日期。
   ```
 - 保存文件。
 
@@ -140,7 +140,7 @@ Claude 生成报告并保存为名为 `Apple_2025-12-13.md` 之类的 markdown �
 可以让 Claude 编辑 slash command:
 
 ```
-Revise the stock-report slash command to save the report as a html file.
+修改 stock-report slash command,将报告保存为 html 文件。
 ```
 
 Claude 更新命令文件。可以从编辑器验证。
@@ -204,7 +204,7 @@ slash command 中的 `$ARGUMENTS` 关键字充当占位符。输入 `/stock-repo
 
 - **找不到命令:** 重新启动 Claude Code 以从 `.claude/commands/` 重新加载命令
 - **参数不起作用:** 检查命令文件中的 `$ARGUMENTS` 拼写是否正确(区分大小写)
-- **报告不完整:** 要求 Claude "continue" 或 "add more detail to the [section name] section"
+- **报告不完整:** 要求 Claude "继续" 或 "为[部分名称]部分添加更多细节"
 
 ## 工作流程概述
 

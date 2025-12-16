@@ -64,10 +64,10 @@ Claude Code 启动并显示欢迎消息。
 复制并粘贴以下提示:
 
 ```
-Write a Python script called pubmed_search.py that:
-- Takes a search query as command line argument
-- Retrieves up to 10 recent papers
-- Returns PMID, title, authors, journal, year, abstract preview, and URL
+编写一个名为 pubmed_search.py 的 Python 脚本:
+- 以命令行参数接收搜索查询
+- 检索最多 10 篇最新论文
+- 返回 PMID、标题、作者、期刊、年份、摘要预览和 URL
 ```
 Claude 会创建脚本。它会安装所需的 Biopython 包,其中包括用于与 PubMed 交互的 entrez 模块。查看输出以了解脚本结构。
 
@@ -76,7 +76,7 @@ Claude 会创建脚本。它会安装所需的 Biopython 包,其中包括用于�
 让 Claude 测试它:
 
 ```
-Test the script with the query "immunotherapy breast cancer"
+用查询 "immunotherapy breast cancer" 测试这个脚本
 ```
 
 Claude 运行脚本并显示 10 篇关于乳腺癌免疫治疗的最新论文。你会看到标题、作者、摘要和 PubMed 链接。
@@ -88,11 +88,11 @@ Claude 运行脚本并显示 10 篇关于乳腺癌免疫治疗的最新论文。
 现在我们将把所有内容打包成可重用的 skill。复制并粘贴:
 
 ```
-Create a Claude Skill called "medical-research" that:
-- Takes on a medical question
-- Designs queries to retrieve PubMed abstracts
-- Creates plain-language summaries accessible to non-scientists
-- Includes the pubmed_search.py script inside the skill folder
+创建一个名为 "medical-research" 的 Claude Skill:
+- 接收医学问题
+- 设计查询以检索 PubMed 摘要
+- 创建非科学家也能理解的通俗语言摘要
+- 在 skill 文件夹中包含 pubmed_search.py 脚本
 ```
 
 Claude 创建完整的 skill 结构:
@@ -108,7 +108,7 @@ Claude 创建完整的 skill 结构:
 用通俗语言提出研究问题:
 
 ```
-Can I lose weight via keto diet?
+生酮饮食能减肥吗？
 ```
 
 Claude 会自动:
@@ -125,7 +125,7 @@ Claude 会自动:
 尝试另一个研究主题:
 
 ```
-Does vaccine cause autism?
+疫苗会导致自闭症吗？
 ```
 
 回复会解释科学共识、这个谬论的起源以及现实世界的后果。
@@ -158,11 +158,11 @@ Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使�
 - 要从存储库安装 skill,只需询问 Claude:
 
   ```
-  Install the document skill from Anthropic's repository
+  从 Anthropic 的存储库安装 document skill
   ```
 - 尝试这个 skill:
   ```
-  Create a PowerPoint presentation on Claude Skills.
+  创建一个关于 Claude Skills 的 PowerPoint 演示文稿。
   ```
 
 
