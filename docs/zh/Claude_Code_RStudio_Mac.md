@@ -93,7 +93,7 @@ summary(iris)
 如果 Claude Code 较慢或无响应，等待它初始化。然后输入请求：
 
 ```
-Add code to iris.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+在 iris.R 中添加代码，创建萼片长度与宽度的散点图，按物种着色。使用 ggplot2。
 ```
 - Claude Code 读取 `iris.R` 文件并添加可视化代码
 - 询问时，通过选择适当选项给 Claude 权限编辑 iris.R 文件
@@ -114,7 +114,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - 切换到 Terminal（按 **Command (⌘) + Tab** 或点击 Terminal 窗口）
 - 输入这个请求：
   ```
-  Remove title. Change marker type by species. Change to the classic theme.
+  移除标题。按物种更改标记类型。更改为 classic 主题。
   ```
 
 ## 步骤 11：查看优化后的图表
@@ -129,7 +129,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - 切换到 Terminal
 - 输入这个请求：
   ```
-  Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+  添加代码对数值变量进行 PCA 分析，并使用前两个主成分绘制样本图。
   ```
 
 ## 步骤 13：运行 PCA 分析
@@ -144,7 +144,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - 切换到 Terminal
 - 输入这个请求：
   ```
-  Review the entire script for correctness. Add comments when necessary.
+  检查整个脚本的正确性。必要时添加注释。
   ```
 - Claude 审查代码并添加全面注释
 
@@ -153,7 +153,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - 切换到 Terminal
 - 输入这个请求：
   ```
-  Create a new R Markdown file for this analysis. Save as iris_report.Rmd
+  为这个分析创建一个新的 R Markdown 文件。保存为 iris_report.Rmd
   ```
 - Claude 请求你的权限来创建此文件
 - Claude 在项目文件夹中创建新的 `.Rmd` 文件

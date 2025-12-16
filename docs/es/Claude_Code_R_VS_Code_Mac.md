@@ -2,7 +2,7 @@
 
 # Use Claude Code para R en VS Code en Mac
 
-Ha configurado R en VS Code y puede escribir código manualmente. Ahora desea que la IA le ayude a escribir, mejorar y depurar su código R mientras usted se concentra en el análisis. Piense en Claude Code como un compañero de programación que vive dentro de VS Code: usted describe lo que desea y él escribe o mejora el código mientras usted permanece en la misma ventana.
+Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere que la IA le ayude a escribir, mejorar y depurar su código R mientras se concentra en el análisis. Piense en Claude Code como un compañero de programación dentro de VS Code: describa lo que necesita y él escribe o mejora el código sin salir de su ventana de trabajo.
 
 ## Conceptos Clave
 
@@ -12,8 +12,8 @@ Ha configurado R en VS Code y puede escribir código manualmente. Ahora desea qu
 
 ## Lo Que Necesitará
 
-- Haber completado el tutorial [R en VS Code](./R_Coding_VS_Code_Guide) - R debe estar funcionando en VS Code
-- Haber completado el tutorial [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) - Claude Code CLI debe estar instalado
+- Tutorial [R en VS Code](./R_Coding_VS_Code_Guide) completado - R debe funcionar en VS Code
+- Tutorial [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) completado - Claude Code CLI instalado
 - Suscripción a Claude Pro/Max o clave de API de Anthropic
 - 20-30 minutos
 
@@ -65,11 +65,11 @@ summary(iris)
 - En el cuadro de chat en la parte inferior, escriba:
 
 ```
-Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+Agrega código a iris_analysis.R para crear un gráfico de dispersión de longitud vs. ancho del sépalo, coloreado por especie. Usa ggplot2.
 ```
 
 - Presione Enter para enviar
-- Claude lee su archivo y propone cambios: verá una diferencia que muestra el nuevo código a agregar
+- Claude lee su archivo y propone cambios: verá una diferencia mostrando el nuevo código a agregar
 - Haga clic en **Accept** para aplicar los cambios
 - El código de ggplot2 aparece en su archivo
 - Si no tiene ggplot2 instalado, ejecute `install.packages("ggplot2")` en la terminal de R
@@ -86,49 +86,49 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 - En el panel de chat de Claude, escriba:
 
 ```
-Remove title. Change marker type by species. Change to the classic theme.
+Elimina el título. Cambia el tipo de marcador según la especie. Usa el tema clásico.
 ```
 
 - Presione Enter
 - Claude muestra los cambios de código actualizados
 - Haga clic en **Accept**
 - Ejecute el código actualizado nuevamente: seleccione todo y presione `Ctrl+Enter` / `Cmd+Enter`
-- El gráfico ahora se muestra con diferentes formas de marcadores por especie, sin título y con el tema clásico
+- El gráfico ahora muestra diferentes formas de marcadores por especie, sin título y con el tema clásico
 
 ## Paso 7: Pida a Claude un Análisis de PCA
 
 - En el panel de chat de Claude, escriba:
 
 ```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+Agrega código para realizar un análisis de componentes principales (PCA) sobre las variables numéricas y graficar las muestras usando los dos primeros componentes principales.
 ```
 
 - Presione Enter
 - Claude agrega código de PCA a su script
 - Haga clic en **Accept**
 - Ejecute todo el código: seleccione todo y presione `Ctrl+Enter` / `Cmd+Enter`
-- Aparece un gráfico de PCA que muestra las muestras proyectadas en PC1 y PC2, coloreadas por especie
+- Aparece un gráfico de PCA mostrando las muestras proyectadas en PC1 y PC2, coloreadas por especie
 
 ## Paso 8: Pida a Claude que Revise y Comente
 
 - En el panel de chat de Claude, escriba:
 
 ```
-Review the entire script for correctness. Add comments when necessary.
+Revisa todo el script para verificar que esté correcto. Agrega comentarios donde sea necesario.
 ```
 
 - Presione Enter
-- Claude revisa el código y sugiere comentarios que explican cada sección
+- Claude revisa el código y sugiere comentarios explicando cada sección
 - Haga clic en **Accept**
-- Su script ahora tiene comentarios claros que explican la carga de datos, la visualización y el análisis de PCA
+- Su script ahora tiene comentarios claros explicando la carga de datos, la visualización y el análisis de PCA
 
 ## Próximos Pasos
 
-- Pida a Claude que cree un informe de R Markdown: "Create an R Markdown file for this analysis"
-- Use Claude para depurar errores: "This code gives Error X, can you fix it?"
-- Solicite pruebas estadísticas: "Add a t-test comparing sepal length between setosa and versicolor"
-- Pida a Claude que optimice el código: "Make this loop faster using vectorization"
-- Obtenga ayuda con funciones desconocidas: "Explain what dplyr::mutate does"
+- Pida a Claude que cree un informe de R Markdown: "Crea un archivo R Markdown para este análisis"
+- Use Claude para depurar errores: "Este código da el Error X, ¿puedes arreglarlo?"
+- Solicite pruebas estadísticas: "Agrega una prueba t comparando la longitud del sépalo entre setosa y versicolor"
+- Pida a Claude que optimice el código: "Haz este bucle más rápido usando vectorización"
+- Obtenga ayuda con funciones desconocidas: "Explica qué hace dplyr::mutate"
 
 ## Solución de Problemas
 
@@ -140,11 +140,11 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## Resumen del Flujo de Trabajo
 
-- **Claude Code Extension** proporciona un asistente de IA directamente en VS Code con panel de chat y diferencias en línea
-- **Refinamiento iterativo** - Comience con código básico, pida a Claude que lo mejore, pruebe inmediatamente y luego refine más
-- **Conocimiento del contexto** - Claude lee sus archivos de R y comprende la estructura de su proyecto
+- **Claude Code Extension** proporciona un asistente de IA directamente en VS Code con panel de chat y ediciones en línea
+- **Refinamiento iterativo** - Comience con código básico, pida a Claude mejoras, pruebe inmediatamente y refine más
+- **Comprensión del contexto** - Claude lee sus archivos de R y entiende la estructura de su proyecto
 - **Edición en línea** - Los cambios propuestos aparecen como diferencias en sus archivos reales, no como respuestas de chat separadas
-- **Manténgase en el flujo** - No hay necesidad de cambiar entre el navegador y el editor: todo sucede en VS Code
+- **Flujo continuo** - No necesita cambiar entre el navegador y el editor: todo ocurre en VS Code
 
 ---
 

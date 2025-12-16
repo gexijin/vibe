@@ -87,7 +87,7 @@ Claude Code 现在已准备就绪,可接收你的请求。
 - 在 Claude Code 终端中,输入:
 
 ```
-Load the iris dataset from scikit-learn. Convert it to a pandas dataframe with proper column names. Add the species names as a column (not just numbers). Show me the first 10 rows. Save the code to a file called iris_exploration.py
+从 scikit-learn 加载 iris 数据集。将其转换为带有正确列名的 pandas 数据框。添加物种名称作为列（不只是数字）。显示前 10 行。将代码保存到名为 iris_exploration.py 的文件中
 ```
 
 - 按 Enter
@@ -101,7 +101,7 @@ Load the iris dataset from scikit-learn. Convert it to a pandas dataframe with p
 
 要求 Claude 使用 Git 提交,或从 GitHub Desktop 自己完成:
 ```
-Commit these changes.
+提交这些更改。
 ```
 ## 步骤 6:第二次 Vibe - 汇总统计
 
@@ -110,7 +110,7 @@ Commit these changes.
 - 在 Claude Code 终端中,输入:
 
 ```
-Show me summary statistics for the iris data grouped by species. I want to see the mean, min, and max for each measurement (sepal length, sepal width, petal length, petal width) for each of the three species. Add this to iris_exploration.py
+显示按物种分组的 iris 数据汇总统计。我想看到三个物种中每个测量值（萼片长度、萼片宽度、花瓣长度、花瓣宽度）的均值、最小值和最大值。将此添加到 iris_exploration.py
 ```
 
 - 按 Enter
@@ -129,7 +129,7 @@ Show me summary statistics for the iris data grouped by species. I want to see t
 - 在 Claude Code 终端中,输入:
 
 ```
-Create a histogram showing the distribution of petal lengths for all flowers. Use 20 bins. Add a title and axis labels. Save the plot as petal_length_histogram.png. Add this code to iris_exploration.py
+创建显示所有花卉花瓣长度分布的直方图。使用 20 个区间。添加标题和坐标轴标签。将图表保存为 petal_length_histogram.png。将此代码添加到 iris_exploration.py
 ```
 
 - 按 Enter
@@ -145,7 +145,7 @@ Create a histogram showing the distribution of petal lengths for all flowers. Us
 - 在 Claude Code 终端中,输入:
 
 ```
-Create a scatter plot with petal length on the x-axis and petal width on the y-axis. Color each point by species using different colors. Add a legend showing which color is which species. Save as petal_scatter.png. Add this to iris_exploration.py
+创建散点图，花瓣长度在 x 轴，花瓣宽度在 y 轴。使用不同颜色按物种为每个点着色。添加图例显示哪种颜色对应哪个物种。保存为 petal_scatter.png。将此添加到 iris_exploration.py
 ```
 
 - 按 Enter
@@ -163,7 +163,7 @@ Create a scatter plot with petal length on the x-axis and petal width on the y-a
 - 在 Claude Code 终端中,输入:
 
 ```
-Create a box plot comparing petal lengths across the three species. Put species on the x-axis and petal length on the y-axis. Use different colors for each species. Add a title. Save as species_boxplot.png. Add this to iris_exploration.py
+创建箱线图比较三个物种的花瓣长度。将物种放在 x 轴，花瓣长度在 y 轴。每个物种使用不同颜色。添加标题。保存为 species_boxplot.png。将此添加到 iris_exploration.py
 ```
 
 - 按 Enter
@@ -199,11 +199,11 @@ Vibe 编程在迭代时更显威力。尝试通过描述来添加功能:
 
 **向 Claude 请求的示例:**
 
-- "Add a correlation matrix heatmap showing relationships between all four measurements"
-- "Create a violin plot comparing sepal width across species"
-- "Calculate and display the correlation coefficient between petal length and width"
-- "Add statistical test results comparing species (ANOVA or t-test)"
-- "Create a pair plot showing all variable relationships colored by species"
+- "添加相关性矩阵热图，显示四个测量值之间的关系"
+- "创建小提琴图比较各物种的萼片宽度"
+- "计算并显示花瓣长度和宽度之间的相关系数"
+- "添加比较物种的统计检验结果（方差分析或 t 检验）"
+- "创建配对图，显示所有变量关系并按物种着色"
 
 每次成功添加功能后:
 - 通过运行脚本测试

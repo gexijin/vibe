@@ -2,19 +2,19 @@
 
 # Vibe Coding en Python con Claude Code y Docker
 
-Ha escrito código Python escribiendo cada línea usted mismo. Pero ¿qué pasaría si pudiera describir lo que desea en inglés sencillo y ver cómo aparece el código? Vibe coding es como tener una conversación con su computadora: usted describe el resultado, Claude Code lo construye, usted prueba y refina. No es magia; es una nueva forma de trabajar donde usted guía la visión y la IA maneja la implementación. Este tutorial le muestra cómo analizar el conjunto de datos clásico de flores Iris usando nada más que solicitudes en lenguaje natural.
+Ha escrito código Python línea por línea. Pero ¿qué pasaría si pudiera describir lo que desea en lenguaje natural y ver cómo aparece el código? Vibe coding es como tener una conversación con su computadora: usted describe el resultado, Claude Code lo construye, usted prueba y refina. No es magia; es una nueva forma de trabajar donde usted guía la visión y la IA maneja la implementación. Este tutorial le muestra cómo analizar el conjunto de datos clásico de flores Iris usando únicamente solicitudes en lenguaje natural.
 
 ## Conceptos Clave
 
-- **[Vibe Coding](https://www.ibm.com/think/topics/vibe-coding)** - Programar describiendo lo que desea en lenguaje natural, luego iterar basándose en resultados en lugar de escribir código línea por línea
-- **[Claude Code](https://code.claude.com/)** - Asistente de codificación IA que escribe, depura y refactoriza código basándose en sus solicitudes en lenguaje natural
-- **[Iris Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - Conjunto de datos clásico que contiene mediciones de 150 flores iris de tres especies
-- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones funcionales
+- **[Vibe Coding](https://www.ibm.com/think/topics/vibe-coding)** - Programar describiendo lo que desea en lenguaje natural, iterando basándose en resultados en lugar de escribir código línea por línea
+- **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
+- **[Iris Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - Conjunto de datos clásico con mediciones de 150 flores iris de tres especies
+- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones que funcionen
 
 ## Lo Que Necesitará
 
-- Haber completado [Python Coding in VS Code via Docker](./Python_Coding_Docker_Guide)
-- Haber completado [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Haber completado [Programación en Python con VS Code y Docker](./Python_Coding_Docker_Guide)
+- Haber completado [Uso de GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 minutos
 
 ## Paso 1: Crear Nuevo Repositorio en GitHub
@@ -23,7 +23,7 @@ Ha escrito código Python escribiendo cada línea usted mismo. Pero ¿qué pasar
 - Haga clic en **File > New Repository**
 - Complete los detalles:
   - **Name:** `iris-analysis`
-  - **Description:** `Iris data analysis built with vibe coding`
+  - **Description:** `Análisis de datos Iris construido con vibe coding`
   - **Local Path:** Elija una ubicación (ej., Documents o carpeta de trabajo)
   - Marque **Initialize this repository with a README**
 - Haga clic en **Create Repository**
@@ -31,7 +31,7 @@ Ha escrito código Python escribiendo cada línea usted mismo. Pero ¿qué pasar
 - Desmarque **Keep this code private** si desea que sea público (opcional)
 - Haga clic en **Publish Repository**
 
-Ahora tiene un repositorio Git local y una copia de seguridad en GitHub.
+Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 
 ## Paso 2: Copiar Configuración de Docker
 
@@ -87,7 +87,7 @@ Ahora comienza la diversión. En lugar de buscar documentación, simplemente des
 - En el terminal de Claude Code, escriba:
 
 ```
-Load the iris dataset from scikit-learn. Convert it to a pandas dataframe with proper column names. Add the species names as a column (not just numbers). Show me the first 10 rows. Save the code to a file called iris_exploration.py
+Carga el conjunto de datos iris desde scikit-learn. Conviértelo en un dataframe de pandas con los nombres de columnas apropiados. Agrega los nombres de las especies como una columna (no solo números). Muéstrame las primeras 10 filas. Guarda el código en un archivo llamado iris_exploration.py
 ```
 
 - Presione Enter
@@ -101,7 +101,7 @@ Load the iris dataset from scikit-learn. Convert it to a pandas dataframe with p
 
 Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub Desktop.
 ```
-Commit these changes.
+Confirma estos cambios.
 ```
 ## Paso 6: Segundo Vibe - Estadísticas Resumidas
 
@@ -110,15 +110,15 @@ Antes de crear visualizaciones, comprenda qué contienen los datos.
 - En el terminal de Claude Code, escriba:
 
 ```
-Show me summary statistics for the iris data grouped by species. I want to see the mean, min, and max for each measurement (sepal length, sepal width, petal length, petal width) for each of the three species. Add this to iris_exploration.py
+Muéstrame estadísticas resumidas de los datos de iris agrupados por especie. Quiero ver la media, mínimo y máximo de cada medición (longitud de sépalo, ancho de sépalo, longitud de pétalo, ancho de pétalo) para cada una de las tres especies. Agrega esto a iris_exploration.py
 ```
 
 - Presione Enter
 - Claude actualiza el script y muestra las estadísticas
-- Note cómo diferentes especies tienen diferentes rangos de mediciones
+- Note cómo cada especie tiene rangos de mediciones diferentes
 - Setosa tiene pétalos mucho más pequeños que Virginica
 
-Esta exploración le ayuda a comprender patrones en los datos.
+Esta exploración le ayuda a comprender los patrones en los datos.
 
 Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub Desktop.
 
@@ -129,14 +129,14 @@ Es hora de visualizar los datos.
 - En el terminal de Claude Code, escriba:
 
 ```
-Create a histogram showing the distribution of petal lengths for all flowers. Use 20 bins. Add a title and axis labels. Save the plot as petal_length_histogram.png. Add this code to iris_exploration.py
+Crea un histograma que muestre la distribución de las longitudes de pétalos para todas las flores. Usa 20 intervalos. Agrega un título y etiquetas de ejes. Guarda el gráfico como petal_length_histogram.png. Agrega este código a iris_exploration.py
 ```
 
 - Presione Enter
 - Claude crea el código de visualización
 - Un archivo PNG aparece en su carpeta del proyecto
 - Abra `petal_length_histogram.png` para ver el gráfico
-- Note los dos picos—esto muestra que las especies tienen diferentes longitudes de pétalos
+- Note los dos picos—esto muestra que las especies tienen longitudes de pétalos diferentes
 
 ## Paso 8: Cuarto Vibe - Gráfico de Dispersión
 
@@ -145,7 +145,7 @@ Los gráficos de dispersión muestran relaciones entre dos variables.
 - En el terminal de Claude Code, escriba:
 
 ```
-Create a scatter plot with petal length on the x-axis and petal width on the y-axis. Color each point by species using different colors. Add a legend showing which color is which species. Save as petal_scatter.png. Add this to iris_exploration.py
+Crea un gráfico de dispersión con la longitud de pétalo en el eje x y el ancho de pétalo en el eje y. Colorea cada punto por especie usando colores diferentes. Agrega una leyenda que muestre qué color representa cada especie. Guárdalo como petal_scatter.png. Agrega esto a iris_exploration.py
 ```
 
 - Presione Enter
@@ -154,7 +154,7 @@ Create a scatter plot with petal length on the x-axis and petal width on the y-a
 - Note cómo las tres especies forman grupos distintos
 - Setosa (pétalos pequeños) está claramente separada de las demás
 
-Esto es vibe coding en acción: describa la visualización, pruébela, itere.
+Esto es vibe coding en acción: describa la visualización, pruébela e itere.
 
 ## Paso 9: Quinto Vibe - Gráfico de Cajas
 
@@ -163,7 +163,7 @@ Los gráficos de cajas son excelentes para comparar distribuciones entre grupos.
 - En el terminal de Claude Code, escriba:
 
 ```
-Create a box plot comparing petal lengths across the three species. Put species on the x-axis and petal length on the y-axis. Use different colors for each species. Add a title. Save as species_boxplot.png. Add this to iris_exploration.py
+Crea un gráfico de cajas comparando las longitudes de pétalos entre las tres especies. Coloca las especies en el eje x y la longitud de pétalo en el eje y. Usa colores diferentes para cada especie. Agrega un título. Guárdalo como species_boxplot.png. Agrega esto a iris_exploration.py
 ```
 
 - Presione Enter
@@ -185,7 +185,7 @@ Antes de confirmar, revise lo que Claude construyó.
 - En el campo **Summary** en la parte inferior izquierda, escriba:
 
 ```
-Iris data analysis with histograms, scatter plots, and box plots
+Análisis de datos Iris con histogramas, gráficos de dispersión y gráficos de cajas
 ```
 
 - Haga clic en **Commit to main**
@@ -199,11 +199,11 @@ Vibe coding brilla cuando usted itera. Intente añadir funciones describiéndola
 
 **Ejemplos de solicitudes a Claude:**
 
-- "Add a correlation matrix heatmap showing relationships between all four measurements"
-- "Create a violin plot comparing sepal width across species"
-- "Calculate and display the correlation coefficient between petal length and width"
-- "Add statistical test results comparing species (ANOVA or t-test)"
-- "Create a pair plot showing all variable relationships colored by species"
+- "Agrega un mapa de calor de la matriz de correlación mostrando las relaciones entre las cuatro mediciones"
+- "Crea un gráfico de violín comparando el ancho de sépalo entre especies"
+- "Calcula y muestra el coeficiente de correlación entre la longitud y el ancho de pétalo"
+- "Agrega resultados de pruebas estadísticas comparando especies (ANOVA o prueba t)"
+- "Crea un gráfico de pares mostrando todas las relaciones entre variables coloreadas por especie"
 
 Después de cada función exitosa:
 - Pruébela ejecutando el script
@@ -214,43 +214,43 @@ Después de cada función exitosa:
 
 **Principios clave:**
 
-- **Describa resultados, no implementación** - Diga "show correlation heatmap" no "use seaborn.heatmap() with df.corr()"
+- **Describa resultados, no implementación** - Diga "muestra un mapa de calor de correlación" no "usa seaborn.heatmap() con df.corr()"
 - **Itere rápidamente** - Probar → refinar → probar → refinar
 - **Confirme versiones funcionales** - Guarde cada éxito antes de probar nuevas funciones
-- **Acepte los fallos** - Si el código de Claude falla, simplemente describa el error y solicite que lo corrija
+- **Acepte los fallos** - Si el código de Claude falla, simplemente describa el error y solicite corrección
 - **Mantenga el control** - Usted decide las funciones, prioridades y cuándo es suficientemente bueno
 
 Cada vez, siga el patrón: describir → probar → iterar → confirmar.
 
 ## Próximos Pasos
 
-- **Pruebe diferentes conjuntos de datos** - Solicite a Claude que use el conjunto de datos wine, digits, o cargue un archivo CSV
-- **Explore más visualizaciones** - Pruebe heatmaps, pair plots, o violin plots
-- **Aprenda preguntando** - Cuando Claude escriba código, pregunte "explain what this line does" para aprender Python
+- **Pruebe diferentes conjuntos de datos** - Solicite a Claude que use el conjunto de datos wine, digits o cargue un archivo CSV
+- **Explore más visualizaciones** - Pruebe mapas de calor, gráficos de pares o gráficos de violín
+- **Aprenda preguntando** - Cuando Claude escriba código, pregunte "explica qué hace esta línea" para aprender Python
 - **Aplique a sus propios datos** - Use vibe coding para analizar sus datos de investigación o trabajo
-- **Lea sobre vibe coding** - Visite [la guía de IBM](https://www.ibm.com/think/topics/vibe-coding) para aprender más sobre este estilo de codificación
+- **Lea sobre vibe coding** - Visite [la guía de IBM](https://www.ibm.com/think/topics/vibe-coding) para más información sobre este estilo de codificación
 
 ## Solución de Problemas
 
-- **El gráfico no se muestra** - El código guarda los gráficos como archivos PNG. Busque en su carpeta del proyecto y abra el archivo de imagen directamente en VS Code.
-- **Errores de importación** - El container de Docker debe tener pandas, matplotlib, y scikit-learn preinstalados. Si no, solicite a Claude que los instale con pip.
-- **Claude comete errores** - ¡Normal! Copie el mensaje de error, péguelo a Claude y diga "fix this error." Vibe coding incluye iteración y depuración.
+- **El gráfico no se muestra** - El código guarda los gráficos como archivos PNG. Búsquelos en su carpeta del proyecto y ábralos directamente en VS Code.
+- **Errores de importación** - El contenedor de Docker debe tener pandas, matplotlib y scikit-learn preinstalados. Si no, solicite a Claude que los instale con pip.
+- **Claude comete errores** - ¡Es normal! Copie el mensaje de error, péguelo a Claude y diga "corrige este error". Vibe coding incluye iteración y depuración.
 - **No puede hacer push a GitHub** - Asegúrese de haber iniciado sesión en GitHub Desktop y publicado el repositorio (Paso 1). Verifique su conexión a internet.
-- **El container no inicia** - Asegúrese de que Docker Desktop esté ejecutándose (indicador de estado verde). Intente hacer clic en el ícono verde en VS Code y seleccionar **Rebuild Container**.
+- **El contenedor no inicia** - Asegúrese de que Docker Desktop esté ejecutándose (indicador de estado verde). Intente hacer clic en el ícono verde en VS Code y seleccionar **Rebuild Container**.
 
 ## Resumen del Flujo de Trabajo
 
 Este tutorial combinó varias tecnologías en un flujo de trabajo:
 
 - **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, confirmar, hacer push)
-- **Docker container** - Entorno Python aislado con todas las dependencias preinstaladas
-- **VS Code** - Editor de código que se conecta al container de Docker
-- **Claude Code** - Asistente IA que escribe código Python desde sus descripciones
+- **Contenedor Docker** - Entorno Python aislado con todas las dependencias preinstaladas
+- **VS Code** - Editor de código que se conecta al contenedor de Docker
+- **Claude Code** - Asistente con IA que escribe código Python a partir de sus descripciones
 - **scikit-learn** - Proporciona el conjunto de datos Iris y herramientas de machine learning
 - **pandas** - Manipulación y análisis de datos
 - **matplotlib** - Creación de visualizaciones
 
-La magia no es una sola herramienta—es cómo vibe coding le permite describir lo que desea e iterar rápidamente. Pasó de un proyecto vacío a un análisis de datos completo con múltiples visualizaciones en 20 minutos sin escribir una sola línea de código manualmente.
+La magia no está en una sola herramienta—es cómo vibe coding le permite describir lo que desea e iterar rápidamente. Pasó de un proyecto vacío a un análisis de datos completo con múltiples visualizaciones en 20 minutos sin escribir una sola línea de código manualmente.
 
 
 ---

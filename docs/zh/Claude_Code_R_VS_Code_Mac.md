@@ -65,7 +65,7 @@ summary(iris)
 - 在底部聊天框中输入：
 
 ```
-Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+在 iris_analysis.R 中添加代码，创建萼片长度与宽度的散点图，按物种着色。使用 ggplot2。
 ```
 
 - 按Enter发送
@@ -86,7 +86,7 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 - 在Claude聊天面板中输入：
 
 ```
-Remove title. Change marker type by species. Change to the classic theme.
+移除标题。按物种更改标记类型。更改为 classic 主题。
 ```
 
 - 按Enter
@@ -100,7 +100,7 @@ Remove title. Change marker type by species. Change to the classic theme.
 - 在Claude聊天面板中输入：
 
 ```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+添加代码对数值变量进行 PCA 分析，并使用前两个主成分绘制样本图。
 ```
 
 - 按Enter
@@ -114,7 +114,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - 在Claude聊天面板中输入：
 
 ```
-Review the entire script for correctness. Add comments when necessary.
+检查整个脚本的正确性。必要时添加注释。
 ```
 
 - 按Enter
@@ -124,11 +124,11 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## 下一步
 
-- 让Claude创建R Markdown报告："Create an R Markdown file for this analysis"
-- 使用Claude调试错误："This code gives Error X, can you fix it?"
-- 请求统计检验："Add a t-test comparing sepal length between setosa and versicolor"
-- 让Claude优化代码："Make this loop faster using vectorization"
-- 获取不熟悉函数的帮助："Explain what dplyr::mutate does"
+- 让Claude创建R Markdown报告："为这个分析创建一个 R Markdown 文件"
+- 使用Claude调试错误："这段代码报错 X，你能修复吗？"
+- 请求统计检验："添加 t 检验比较 setosa 和 versicolor 的萼片长度"
+- 让Claude优化代码："使用向量化使这个循环更快"
+- 获取不熟悉函数的帮助："解释 dplyr::mutate 的作用"
 
 ## 故障排除
 

@@ -101,7 +101,7 @@ Claude Code 启动并等待你的请求。
 
 - 输入此请求：
   ```
-  Start tracking changes
+  开始跟踪更改
   ```
 
 Claude 在文件夹中初始化 Git 仓库（需要 2-5 秒）。现在你有版本控制了！
@@ -110,11 +110,11 @@ Claude 在文件夹中初始化 Git 仓库（需要 2-5 秒）。现在你有版
 
 - 在 Claude Code 中，输入：
   ```
-  Create a simple countdown timer app in a single file called timer.html.
-  It should have:
-  - An input field to set minutes
-  - Start and Stop buttons
-  - Display showing time remaining in MM:SS format
+  创建一个简单的倒计时器应用，放在一个名为 timer.html 的文件中。
+  它应该包含：
+  - 一个输入框用于设置分钟数
+  - 开始和停止按钮
+  - 以 MM:SS 格式显示剩余时间
   ```
 
 Claude 创建包含 CSS 和 JavaScript 代码的 `timer.html`（需要 10-30 秒）。
@@ -129,13 +129,13 @@ Claude 创建包含 CSS 和 JavaScript 代码的 `timer.html`（需要 10-30 秒
   - 点击 **Start**
   - 观看倒计时
 
-**如果出现问题：** 在 Claude Code 中描述错误：`I'm seeing this error: [describe what happened]. Can you fix it?`
+**如果出现问题：** 在 Claude Code 中描述错误：`我看到这个错误：[描述发生了什么]。你能修复它吗？`
 
 ## 步骤 10：让 Claude 提交
 
 - 在 Claude Code 中输入：
   ```
-  Save these changes.
+  保存这些更改
   ```
 
 Claude 将：
@@ -149,7 +149,7 @@ Claude 将：
 
 - 在 Claude Code 中，输入：
   ```
-  Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
+  在顶部添加两个按钮。点击它们时自动启动 1 分钟和 5 分钟的计时器。
   ```
 - 刷新浏览器标签页（或按 `Command (⌘) + R`）
 - 测试：点击 **5 min** 按钮
@@ -164,7 +164,7 @@ Claude 将：
 
 - 在 Claude Code 中，输入：
   ```
-  Add a 15-minute button.
+  添加一个 15 分钟按钮
   ```
 - 刷新浏览器标签页（按 `Command (⌘) + R`）
 - 测试：点击 **15 min** 按钮
@@ -177,7 +177,7 @@ Claude 将：
 
 - 在 Claude Code 中输入：
   ```
-  discard these changes.
+  丢弃这些更改
   ```
 - Claude 会要求确认
 - 输入 `yes` 并按 Enter
@@ -189,31 +189,31 @@ Claude 丢弃了我们不喜欢的新更改。计时器恢复正常，只有 1 �
 
 - 在 Claude Code 中，输入：
   ```
-  Add a sound notification when time is up.
+  时间到时添加声音通知
   ```
 - Claude 完成后刷新浏览器并测试（将计时器设置为 0.1 分钟）
 - 如果正常工作，提交更改：
   ```
-  Save these changes.
+  保存这些更改
   ```
 
 ## 步骤 15：添加贪睡按钮
 
 - 在 Claude Code 中，输入：
   ```
-  The sound should continue until I click a button to snooze it.
+  声音应该持续播放，直到我点击按钮关闭它
   ```
 - Claude 完成后刷新浏览器并测试（将计时器设置为 0.1 分钟）
 - 如果正常工作，提交更改：
   ```
-  Save these changes.
+  保存这些更改
   ```
 
 ## 步骤 16：查看你的提交历史
 
 - 在 Claude Code 中输入：
   ```
-  show my change history
+  显示我的更改历史
   ```
 
 Claude 以可读格式显示你的提交。你会看到：
@@ -230,7 +230,7 @@ Claude 以可读格式显示你的提交。你会看到：
 - 你可以看到源代码
 - 在 Claude Code 中询问：
   ```
-  Explain this code. Just big picture.
+  解释这段代码。只需要大致说明。
   ```
 
 ## 完整工作流程
@@ -248,10 +248,10 @@ Claude 以可读格式显示你的提交。你会看到：
 
 尝试为计时器添加更多功能：
 
-- **15 分钟按钮：** `Add a working 15-minute preset button`（重做我们丢弃的功能！）
-- **暂停按钮：** `Add a Pause/Resume button that toggles the timer state`
-- **更好的样式：** `Improve the visual design with a modern color scheme and larger fonts`
-- **进度条：** `Add a visual progress bar showing time remaining`
+- **15 分钟按钮：** `添加一个可用的 15 分钟预设按钮`（重做我们丢弃的功能！）
+- **暂停按钮：** `添加一个暂停/恢复按钮来切换计时器状态`
+- **更好的样式：** `用现代配色方案和更大字体改进视觉设计`
+- **进度条：** `添加显示剩余时间的进度条`
 
 记住：每个功能后测试，每次成功后提交，失败时丢弃。
 
@@ -264,11 +264,11 @@ Claude 以可读格式显示你的提交。你会看到：
 
 ## 你可以问 Claude 什么
 
-- `what files have I changed?` - 查看未提交的更改
-- `show me the diff` - 查看具体更改了哪些代码
-- `explain what the timer code does` - 理解实现方式
-- `create a branch called experiment` - 安全地尝试有风险的更改
-- `go back to the previous commit` - 撤销自上次提交以来的所有操作
+- `我修改了哪些文件？` - 查看未提交的更改
+- `显示差异` - 查看具体更改了哪些代码
+- `解释计时器代码的作用` - 理解实现方式
+- `创建一个名为 experiment 的分支` - 安全地尝试有风险的更改
+- `回到上一次提交` - 撤销自上次提交以来的所有操作
 
 Claude 通过自然语言处理所有 Git 操作——无需记忆命令！
 

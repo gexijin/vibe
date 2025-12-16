@@ -74,7 +74,7 @@ print(iris_df.describe())
 - 在底部聊天框中输入：
 
 ```
-Add code to iris_analysis.py to create a scatter plot of sepal length vs. width, colored by species. Use seaborn.
+在 iris_analysis.py 中添加代码，创建萼片长度与宽度的散点图，按物种着色。使用 seaborn。
 ```
 
 - 按 Enter 发送
@@ -98,7 +98,7 @@ Add code to iris_analysis.py to create a scatter plot of sepal length vs. width,
 - 在 Claude 聊天面板中，输入：
 
 ```
-Remove title. Change marker type by species. Change to the whitegrid style.
+移除标题。按物种更改标记类型。更改为 whitegrid 样式。
 ```
 
 - 按 Enter
@@ -113,7 +113,7 @@ Remove title. Change marker type by species. Change to the whitegrid style.
 - 在 Claude 聊天面板中，输入：
 
 ```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+添加代码对数值变量进行 PCA 分析，并使用前两个主成分绘制样本图。
 ```
 
 - 按 Enter
@@ -128,7 +128,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - 在 Claude 聊天面板中，输入：
 
 ```
-Review the entire script for correctness. Add comments when necessary.
+检查整个脚本的正确性。必要时添加注释。
 ```
 
 - 按 Enter
@@ -138,11 +138,11 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## 下一步
 
-- 让 Claude 创建 Jupyter notebook："Convert this to a Jupyter notebook"
-- 用 Claude 调试错误："This code gives Error X, can you fix it?"
-- 请求统计检验："Add a t-test comparing sepal length between setosa and versicolor"
-- 让 Claude 优化代码："Make this code more efficient using numpy vectorization"
-- 获取函数帮助："Explain what pandas.groupby does"
+- 让 Claude 创建 Jupyter notebook："将这个转换为 Jupyter notebook"
+- 用 Claude 调试错误："这段代码报错 X，你能修复吗？"
+- 请求统计检验："添加 t 检验比较 setosa 和 versicolor 的萼片长度"
+- 让 Claude 优化代码："使用 numpy 向量化使这段代码更高效"
+- 获取函数帮助："解释 pandas.groupby 的作用"
 
 ## 故障排除
 

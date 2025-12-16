@@ -2,7 +2,7 @@
 
 # MacでRStudioとClaude Codeを使用する
 
-MacでRコードを実行するためのRStudioと、AIによるコーディング支援のためのClaude Codeがあります。このチュートリアルでは、同じプロジェクトファイルで両方のツールを一緒に使用する方法を紹介します。Rプロジェクトを作成し、手動でコードを書き、その後ターミナルからClaude Codeを使用して可視化と分析で強化します。RStudioは開いたままでコードを実行してテストできます。
+MacでRコードを実行するRStudioと、AIによるコーディング支援を行うClaude Codeを組み合わせて使う方法を学びます。このチュートリアルでは、Rプロジェクトを作成し、基本的なコードを手動で記述した後、ターミナルからClaude Codeを使って可視化や分析を強化します。RStudioを開いたまま、コードを実行してテストできます。
 
 ## 主要コンセプト
 
@@ -96,7 +96,7 @@ summary(iris)
 Claude Codeが遅い、または反応しない場合は、初期化されるまで待ちます。その後、次のリクエストを入力：
 
 ```
-Add code to iris.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けして作成するコードを追加してください。ggplot2を使用してください。
 ```
 - Claude Codeが`iris.R`ファイルを読み込み、可視化コードを追加します
 - 求められたら、適切なオプションを選択してiris.Rファイルの編集をClaudeに許可します
@@ -116,7 +116,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - ターミナルに切り替え（**Command (⌘) + Tab**を押すか、ターミナルウィンドウをクリック）
 - 次のリクエストを入力：
   ```
-  Remove title. Change marker type by species. Change to the classic theme.
+  タイトルを削除してください。種別ごとにマーカーの形を変更してください。クラシックテーマに変更してください。
   ```
 
 ## ステップ11：改良されたプロットを表示
@@ -132,7 +132,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - ターミナルに切り替え
 - 次のリクエストを入力：
   ```
-  Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+  数値変数にPCAを実行し、第1・第2主成分を使ってサンプルをプロットするコードを追加してください。
   ```
 
 ## ステップ13：PCA分析を実行
@@ -147,7 +147,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - ターミナルに切り替え
 - 次のリクエストを入力：
   ```
-  Review the entire script for correctness. Add comments when necessary.
+  スクリプト全体の正確性をレビューしてください。必要に応じてコメントを追加してください。
   ```
 - Claudeがコードをレビューし、包括的なコメントを追加します
 
@@ -156,20 +156,20 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - ターミナルに切り替え
 - 次のリクエストを入力：
   ```
-  Create a new R Markdown file for this analysis. Save as iris_report.Rmd
+  この分析のための新しいR Markdownファイルを作成してください。iris_report.Rmdとして保存してください。
   ```
 - Claudeがファイル作成の許可を求めます
 - Claudeがプロジェクトフォルダに新しい`.Rmd`ファイルを作成します
 
 
-## ステップ16：R Markdownファイルをニット
+## ステップ16：R Markdownファイルをニット（編集）
 
 - RStudioに切り替え
 - **File > Open File...**をクリック
 - `iris_report.Rmd`を選択して**Open**をクリック
 - スクリプトペインの上部にある**Knit**ボタン（毛糸玉のアイコン）をクリック
 - RStudioがHTMLレポートを生成します
-- 説明文を含む完全な分析を示すレポートが新しいウィンドウで開きます
+- 完全な分析と説明文を含むレポートが新しいウィンドウで開きます
 - HTMLファイルがプロジェクトフォルダに保存されます
 
 ## トラブルシューティング
@@ -190,23 +190,23 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## 次のステップ
 
-- Claudeに統計検定（t検定、ANOVA）を分析に追加するよう依頼する
-- Claudeにこのコードの**Python版**を取得し、Quartoドキュメントを準備するよう依頼する
-- Rスクリプトの反復タスクのための関数を作成するようClaudeに依頼する
-- Rコードが実行されないときにエラーメッセージのデバッグにClaudeを使用する
-- パフォーマンス向上のため、遅いRコードを最適化するようClaudeに依頼する
+- 統計検定（t検定、ANOVA）を分析に追加するようClaudeに依頼
+- このコードのPython版を作成し、Quartoドキュメントを準備するようClaudeに依頼
+- Rスクリプトの繰り返し処理のための関数を作成するようClaudeに依頼
+- Rコード実行時のエラーメッセージのデバッグにClaudeを活用
+- パフォーマンス向上のため、低速なRコードの最適化をClaudeに依頼
 
 ## ワークフローまとめ
 
-このハイブリッドセットアップは両方の長所を組み合わせます：
+このハイブリッドセットアップは両方のツールの長所を組み合わせます：
 
-- **RStudio（Mac）**：インタラクティブなRコンソール、即座のプロット表示、コード実行のための使い慣れたGUI
-- **Claude Code（ターミナル）**：AIによるコード生成、レビュー、改善
-- **共有ファイル**：Documentsフォルダ内の同じファイルを両方のツールが操作
-- **反復的な改善**：手動でコードを書き始め、Claudeで強化し、RStudioでテストし、さらに改善
-- **ドキュメント化**：Claudeが分析の包括的なレポートとコメントを生成
+- **RStudio（Mac）** - インタラクティブなRコンソール、即座のプロット表示、使い慣れたGUIでコードを実行
+- **Claude Code（ターミナル）** - AIによるコード生成、レビュー、改善
+- **共有ファイル** - Documentsフォルダ内の同じファイルを両ツールが操作
+- **反復的な改善** - 手動でコードを記述し、Claudeで強化し、RStudioでテストして、さらに改善
+- **ドキュメント化** - Claudeが分析の包括的なレポートとコメントを生成
 
-ワークフローはシンプルです：ターミナルのClaudeでコードを書いたり編集したりし、すぐにRStudioでテストして実行します。ファイルのコピーや手動同期は不要で、両方のアプリケーションがMac上の同じファイルにシームレスにアクセスします。
+ワークフローはシンプルです。ターミナルのClaudeでコードを記述・編集し、すぐにRStudioでテストして実行します。ファイルのコピーや手動同期は不要で、両アプリケーションがMac上の同じファイルにシームレスにアクセスします。
 
 ---
 

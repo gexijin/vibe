@@ -189,7 +189,7 @@ Claude.aiサブスクリプションの代わりにAnthropic APIキーをお持�
 
 ### オプションC. Azure Foundry経由でAnthropic APIを使用
 
-Claude Codeを起動する前に、Ubuntuターミナルウィンドウで次のコードを貼り付けて環境変数を定義します：
+このオプションは、Azure上でClaudeモデルをホストしている組織向けです。Claude Codeを起動する前に、Ubuntuターミナルウィンドウで以下のコードを貼り付けて環境変数を定義します：
 ```
 # Microsoft Foundry統合を有効化
 export CLAUDE_CODE_USE_FOUNDRY=1
@@ -201,7 +201,7 @@ export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
-**注意：** `xxxx-eastus2`をFoundryリソース名に置き換えてください（ベースURL全体ではありません）。`your_api_key`をAzureポータルからの完全なAPIキーに置き換えてください。
+**注意：** `xxxx-eastus2`を実際のFoundryリソース名に置き換えてください（ベースURL全体ではなく、リソース名のみ）。`your_api_key`をAzureポータルから取得した完全なAPIキーに置き換えてください。
 
 次にClaude Codeを起動します：
 ```
@@ -212,7 +212,10 @@ claude
 
 ## ステップ9：Claude Codeをテスト
 
-すべて完了です！動作するか確認するために、「量子コンピューティングについて説明してください」などの一般的な質問をしてみましょう。
+すべて完了です！動作するか確認するために、次のような一般的な質問をしてみましょう：
+```
+量子コンピューティングについて説明してください
+```
 
 ## ステップ10：Windowsプロジェクトにアクセス
 - `test_claude`というWindowsフォルダにプロジェクトのファイルが含まれている場合、次のようにアクセスできます：
@@ -224,8 +227,14 @@ claude
    ```
    claude
    ```
-- まずClaudeにコードベースを説明してもらうことから始めましょう。
-- Claudeに変更を依頼できます。
+- まずClaudeにコードベースを説明してもらうことから始めましょう：
+   ```
+   このプロジェクトの構造を説明してください
+   ```
+- Claudeに変更を依頼できます：
+   ```
+   このコードをリファクタリングして、読みやすくしてください
+   ```
 - 好みのIDEでコードをテストします。
 
 **注意：** Claudeはプロジェクトフォルダ内で動作します。そのフォルダに設定を保存します。これがClaudeのワークスペースです。

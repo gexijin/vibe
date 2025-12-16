@@ -2,18 +2,18 @@
 
 # Use Claude Code desde VS Code en Mac
 
-Ha instalado Claude Code en su Mac - ahora desea un editor visual para trabajar con su código. VS Code le permite editar archivos visualmente mientras ejecuta Claude Code en el terminal integrado. Piense en ello como tener su editor de código y asistente de IA uno al lado del otro en una sola ventana.
+Ya instaló Claude Code en su Mac, ahora necesita un editor visual para trabajar con su código. VS Code le permite editar archivos visualmente mientras ejecuta Claude Code en el terminal integrado. Es como tener su editor de código y asistente de IA lado a lado en una sola ventana.
 
 ## Conceptos Clave
 
-- **VS Code** - Un editor de código gratuito de Microsoft que se ejecuta en Mac
-- **Integrated Terminal** - Un panel de terminal dentro de VS Code donde ejecuta Claude Code
-- **Explorer Panel** - El navegador de archivos en el lado izquierdo de VS Code
+- **VS Code** - Editor de código gratuito de Microsoft para Mac
+- **Terminal Integrado** - Panel de terminal dentro de VS Code donde ejecuta Claude Code
+- **Panel Explorer** - Navegador de archivos en el lado izquierdo de VS Code
 
 ## Lo Que Necesitará
 
-- Haber completado [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
-- Haber completado [VS Code Basics](./VS_Code_Getting_Started)
+- Haber completado [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS)
+- Haber completado [Conceptos Básicos de VS Code](./VS_Code_Getting_Started)
 - 10-15 minutos
 
 ## Paso 1: Inicie VS Code
@@ -39,33 +39,33 @@ Ha instalado Claude Code en su Mac - ahora desea un editor visual para trabajar 
 - Haga clic en **Open**
 - Si se le pregunta "Do you trust the authors of the files in this folder?", haga clic en **Yes, I trust the authors**
 
-Ahora debería ver `TEST_CLAUDE` en el Explorer panel en el lado izquierdo.
+Ahora debería ver `TEST_CLAUDE` en el panel Explorer del lado izquierdo.
 
 ## Paso 4: Inicie Claude Code
 
 - Abra un nuevo terminal: haga clic en **Terminal** en la barra de menú, luego en **New Terminal**
-- Un panel de terminal aparece en la parte inferior de VS Code
+- Aparece un panel de terminal en la parte inferior de VS Code
 - En el terminal, escriba:
   ```
   claude
   ```
-- Claude Code se inicia - verá la interfaz familiar de Claude Code
+- Claude Code se inicia y verá la interfaz familiar
 - Ahora está listo para usar Claude Code mientras edita archivos en VS Code
 
 ## Paso 5: Pruebe el Flujo de Trabajo
 
 - En Claude Code, escriba:
 ```
-Write a short article explaining why LLMs like to use Markdown format. Save it as article.md
+Escribe un artículo breve explicando por qué a los LLMs les gusta usar el formato Markdown. Guárdalo como article.md
 ```
-- Claude Code crea el archivo - verá que `article.md` aparece en el Explorer panel a la izquierda
+- Claude Code crea el archivo y verá que `article.md` aparece en el panel Explorer a la izquierda
 - Haga clic en `article.md` en el Explorer para verlo en el editor
 - Para previsualizar el artículo formateado: haga clic derecho en la pestaña `article.md` y seleccione **Open Preview**
 - Verá el Markdown renderizado con encabezados, viñetas y formato apropiados
 
-## Reabriendo Claude en VS Code Más Tarde
+## Reabrir Claude en VS Code Más Tarde
 
-Después de cerrar VS Code, así es como volver a su proyecto:
+Después de cerrar VS Code, puede volver a su proyecto de estas formas:
 
 - **Opción A:** Abra VS Code, haga clic en **File > Open Recent**, y seleccione `test_claude`
 - **Opción B:** Abra Terminal, navegue a su proyecto con `cd ~/Documents/test_claude`, y escriba `code .`
@@ -74,9 +74,9 @@ VS Code recuerda sus carpetas recientes, por lo que la Opción A con Open Recent
 
 ## Próximos Pasos
 
-- Pida a Claude Code que explique una base de código existente: "Explain what this project does"
-- Haga que Claude Code le ayude a escribir nuevas funcionalidades: "Add a function that calculates the average of a list"
-- Use Claude Code para corregir errores: "This code gives an error, can you fix it?"
+- Pida a Claude Code que explique una base de código existente: "Explica qué hace este proyecto"
+- Haga que Claude Code le ayude a escribir nuevas funcionalidades: "Agrega una función que calcule el promedio de una lista"
+- Use Claude Code para corregir errores: "Este código da un error, ¿puedes arreglarlo?"
 - Pruebe la extensión de Claude Code para VS Code para una interfaz visual con diffs en línea (busque "Claude Code" en Extensions)
 
 ## Solución de Problemas
@@ -88,9 +88,9 @@ VS Code recuerda sus carpetas recientes, por lo que la Opción A con Open Recent
 ## Resumen del Flujo de Trabajo
 
 - **VS Code** proporciona la interfaz del editor visual
-- **Integrated Terminal** ejecuta Claude Code dentro de VS Code
-- Sus archivos permanecen en su carpeta Documents (o donde usted elija)
-- Edite archivos en el editor, converse con Claude Code en el terminal - lo mejor de ambos mundos
+- **Terminal Integrado** ejecuta Claude Code dentro de VS Code
+- Sus archivos permanecen en su carpeta Documents (o donde elija)
+- Edite archivos en el editor, converse con Claude Code en el terminal: lo mejor de ambos mundos
 
 ---
 

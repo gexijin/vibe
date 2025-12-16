@@ -46,11 +46,11 @@ Git necesita saber quién es usted para los mensajes de commit.
 
 - Configure su nombre y correo electrónico (pueden ser ficticios)
   ```
-  git config --global user.name "Your Name"
-  git config --global user.email "your.email@example.com"
+  git config --global user.name "Su Nombre"
+  git config --global user.email "su.correo@ejemplo.com"
   ```
 
-Usar su nombre y correo electrónico le ayuda a identificar quién realizó los cambios cuando varias personas trabajan en esto.
+Usar su nombre y correo electrónico ayuda a identificar quién realizó los cambios cuando varias personas trabajan en el proyecto.
 
 ## Paso 4: Navegue a una Carpeta de Windows
 
@@ -58,15 +58,15 @@ WSL puede acceder a sus archivos de Windows a través de `/mnt/c/`.
 
 - Navegue a su carpeta de usuario de Windows:
   ```
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  cd /mnt/c/Users/SU_USUARIO/Documents
   ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario real de Windows.
+  Reemplace `SU_USUARIO` con su nombre de usuario real de Windows.
 - Verifique que está en el lugar correcto:
   ```
   pwd
   ```
 
-Debería ver `/mnt/c/Users/YOUR_USERNAME/Documents`.
+Debería ver `/mnt/c/Users/SU_USUARIO/Documents`.
 
 ## Paso 5: Cree una Carpeta de Proyecto
 
@@ -94,7 +94,7 @@ Claude Code se ejecuta y espera su solicitud.
 
 - Escriba esta solicitud:
   ```
-  Start tracking changes
+  Comienza a rastrear los cambios
   ```
 
 Claude inicializa un repositorio de Git en su carpeta (toma 2-5 segundos). ¡Ahora tiene control de versiones!
@@ -103,11 +103,11 @@ Claude inicializa un repositorio de Git en su carpeta (toma 2-5 segundos). ¡Aho
 
 - En Claude Code, escriba:
   ```
-  Create a simple countdown timer app in a single file called timer.html.
-  It should have:
-  - An input field to set minutes
-  - Start and Stop buttons
-  - Display showing time remaining in MM:SS format
+  Crea una aplicación simple de temporizador en un solo archivo llamado timer.html.
+  Debe tener:
+  - Un campo de entrada para establecer minutos
+  - Botones de Iniciar y Detener
+  - Una pantalla que muestre el tiempo restante en formato MM:SS
   ```
 
 Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
@@ -122,13 +122,13 @@ Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
   - Haga clic en **Start**
   - Observe la cuenta regresiva
 
-**Si algo está roto:** En Claude Code, describa el error: `I'm seeing this error: [describe what happened]. Can you fix it?`
+**Si algo está roto:** En Claude Code, describa el error: `Veo este error: [describa lo que pasó]. ¿Puedes corregirlo?`
 
 ## Paso 10: Solicite a Claude que Haga un Commit
 
 - En Claude Code, escriba:
   ```
-  Save these changes.
+  Guarda estos cambios
   ```
 
 Claude hará lo siguiente:
@@ -142,13 +142,13 @@ Claude hará lo siguiente:
 
 - En Claude Code, escriba:
   ```
-  Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
+  Agrega dos botones en la parte superior. Si hago clic en ellos, inician automáticamente temporizadores de 1 y 5 minutos
   ```
 - Actualice la pestaña de su navegador
 - Pruebe: Haga clic en el botón **5 min**
 - Si funciona, haga commit de los cambios:
   ```
-  Save these changes.
+  Guarda estos cambios
   ```
 
 Creamos un segundo punto de guardado. Esta versión tiene los dos botones funcionando.
@@ -158,7 +158,7 @@ Creamos un segundo punto de guardado. Esta versión tiene los dos botones funcio
 
 - En Claude Code, escriba:
   ```
-  Add a 15-minute button.
+  Agrega un botón de 15 minutos
   ```
 - Actualice la pestaña de su navegador
 - Pruebe: Haga clic en el botón **15 min**
@@ -171,7 +171,7 @@ A veces el código de la IA no funciona y necesita comenzar de nuevo desde su ú
 
 - En Claude Code, escriba:
   ```
-  discard these changes.
+  descarta estos cambios
   ```
 - Claude le pedirá confirmación
 - Escriba `yes` y presione Enter
@@ -183,31 +183,31 @@ Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona
 
 - En Claude Code, escriba:
   ```
-  Add a sound notification when the timer reaches zero.
+  Agrega una notificación de sonido cuando el temporizador llegue a cero
   ```
 - Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 0.1 minutos)
 - Si funciona, haga commit de los cambios:
   ```
-  Save these changes.
+  Guarda estos cambios
   ```
 
 ## Paso 15: Agregue un Botón de Posponer
 
 - En Claude Code, escriba:
   ```
-  The sound should continue until I click a button to snooze it.
+  El sonido debe continuar hasta que haga clic en un botón para posponerlo
   ```
 - Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 0.1 minutos)
 - Si funciona, haga commit de los cambios:
   ```
-  Save these changes.
+  Guarda estos cambios
   ```
 
 ## Paso 16: Vea Su Historial de Commits
 
 - En Claude Code, escriba:
   ```
-  show my change history
+  muestra mi historial de cambios
   ```
 
 Claude muestra sus commits en un formato legible. Verá:
@@ -221,10 +221,10 @@ Claude muestra sus commits en un formato legible. Verá:
 ## Paso 17: Examine el Código
 
 - En el navegador que muestra la aplicación, haga clic derecho y seleccione **View Page Source**
-- Puede ver el código fuente para esto.
+- Puede ver el código fuente.
 - En Claude Code, pregunte
   ```
-  Explain this code. Just big picture.
+  Explica este código. Solo lo general
   ```
 
 ## El Flujo de Trabajo Completo
@@ -242,27 +242,27 @@ Claude muestra sus commits en un formato legible. Verá:
 
 Intente agregar más características a su temporizador:
 
-- **Botón de 15 minutos:** `Add a working 15-minute preset button` (¡rehaga lo que descartamos!)
-- **Botón de pausa:** `Add a Pause/Resume button that toggles the timer state`
-- **Mejor estilo:** `Improve the visual design with a modern color scheme and larger fonts`
-- **Barra de progreso:** `Add a visual progress bar showing time remaining`
+- **Botón de 15 minutos:** `Agrega un botón preconfigurado de 15 minutos que funcione` (¡rehaga lo que descartamos!)
+- **Botón de pausa:** `Agrega un botón de Pausa/Reanudar que alterne el estado del temporizador`
+- **Mejor estilo:** `Mejora el diseño visual con un esquema de colores moderno y fuentes más grandes`
+- **Barra de progreso:** `Agrega una barra de progreso visual que muestre el tiempo restante`
 
 Recuerde: Pruebe después de cada característica, haga commit después de cada éxito, descarte los fallos.
 
 ## Solución de Problemas
 
-- **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
-- **No puede encontrar timer.html en Windows:** El archivo está en `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
+- **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd /mnt/c/Users/SU_USUARIO/Documents/test_claude`)
+- **No puede encontrar timer.html en Windows:** El archivo está en `C:\Users\SU_USUARIO\Documents\test_claude\timer.html`
 - **Git solicita contraseña:** Escribió mal la contraseña de `sudo`—intente nuevamente con cuidado
-- **El temporizador no funciona:** Abra la consola del navegador (haga clic derecho en la página, seleccione **Inspect**, haga clic en la pestaña **Console**), copie cualquier mensaje de error rojo, péguelos en Claude
+- **El temporizador no funciona:** Abra la consola del navegador (haga clic derecho en la página, seleccione **Inspect**, haga clic en la pestaña **Console**), copie cualquier mensaje de error rojo y péguelo en Claude
 
 ## Lo Que Puede Preguntarle a Claude
 
-- `what files have I changed?` - Ver cambios sin hacer commit
-- `show me the diff` - Ver exactamente qué código cambió
-- `explain what the timer code does` - Entender la implementación
-- `create a branch called experiment` - Probar cambios riesgosos de manera segura
-- `go back to the previous commit` - Deshacer todo desde el último commit
+- `¿qué archivos he cambiado?` - Ver cambios sin hacer commit
+- `muéstrame las diferencias` - Ver exactamente qué código cambió
+- `explica qué hace el código del temporizador` - Entender la implementación
+- `crea una rama llamada experimento` - Probar cambios riesgosos de manera segura
+- `vuelve al commit anterior` - Deshacer todo desde el último commit
 
 ¡Claude maneja todas las operaciones de Git a través del lenguaje natural—no hay comandos que memorizar!
 

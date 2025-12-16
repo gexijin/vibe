@@ -56,11 +56,11 @@ MacにClaude Codeを入れたら、次は「ファイルを編集しながらCla
 
 - Claude Codeで、次のように入力：
 ```
-Write a short article explaining why LLMs like to use Markdown format. Save it as article.md
+LLMがMarkdown形式を好む理由を説明する短い記事を書き、article.mdとして保存してください。
 ```
 - Claude Codeがファイルを作成します - 左側のエクスプローラーパネルに `article.md` が表示されます
 - エクスプローラーで `article.md` をクリックすると、エディターで表示されます
-- フォーマットされた記事をプレビューするには：`article.md` タブを右クリックし、**プレビューを開く** を選択
+- 整形された記事をプレビューするには：`article.md` タブを右クリックし、**プレビューを開く** を選択
 - 適切な見出し、箇条書き、フォーマットでレンダリングされたMarkdownが表示されます
 
 ## 後でVS CodeでClaudeを再度開く
@@ -74,10 +74,10 @@ VS Codeは最近使用したフォルダを記憶しているため、通常は�
 
 ## 次のステップ
 
-- Claude Codeに既存のコードベースの説明を依頼：「Explain what this project does」
-- Claude Codeに新しい機能の作成を依頼：「Add a function that calculates the average of a list」
-- Claude Codeを使用してバグを修正：「This code gives an error, can you fix it?」
-- Claude Code VS Code拡張機能を試して、インラインdiffを含む視覚的なインターフェースを使用（拡張機能で「Claude Code」を検索）
+- Claude Codeに既存のコードベースの説明を依頼：「このプロジェクトが何をするのか説明してください」
+- Claude Codeに新しい機能の作成を依頼：「リストの平均を計算する関数を追加してください」
+- Claude Codeを使用してバグを修正：「このコードがエラーを出します。修正してもらえますか？」
+- Claude Code VS Code拡張機能を試して、インライン差分を含む視覚的なインターフェースを使用（拡張機能で「Claude Code」を検索）
 
 ## トラブルシューティング
 

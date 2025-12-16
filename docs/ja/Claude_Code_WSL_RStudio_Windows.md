@@ -1,8 +1,8 @@
 [ホーム](./)
 
-# WindowsでWSL版Claude CodeとRStudioを併用する
+# WindowsでClaude Code（WSL）とRStudioを使用する
 
-WindowsではRStudioでRコードを実行し、WSLのUbuntu内にインストールしたClaude CodeでAI支援を受けられます。このチュートリアルでは、同じ`Documents`フォルダを共有しながら両者を切り替えて使う方法を解説します。RStudioでRプロジェクトを作成→基礎コードを手書き→UbuntuターミナルのClaudeに可視化やPCA解析を生成させ→R Markdownレポートまで仕上げる流れです。
+WindowsのRStudioでRコードを実行しながら、WSLのUbuntu内のClaude CodeでAI支援を受ける方法を学びます。このチュートリアルでは、同じ`Documents`フォルダを共有しながら両者を切り替えて使用します。RStudioでRプロジェクトを作成し、基本的なコードを記述した後、UbuntuターミナルのClaudeに可視化やPCA解析を生成させ、R Markdownレポートまで仕上げます。
 
 ## 主要コンセプト
 
@@ -95,7 +95,7 @@ summary(iris)
 Claude Codeの起動が遅い場合は、初期化が完了するまで待ちましょう。その後、以下のリクエストを入力します：
 
 ```
-Add code to iris.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けして作成するコードを追加してください。ggplot2を使用してください。
 ```
 - Claude Codeが`iris.R`ファイルを読み込み、可視化コードを追加します
 - 確認を求められたら、適切な選択肢を選んでiris.Rファイルの編集を許可します
@@ -116,7 +116,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Ubuntuターミナルに切り替えます
 - 以下のリクエストを入力：
   ```
-  Remove title. Change marker type by species. Change to the classic theme.
+  タイトルを削除してください。種別ごとにマーカーの形を変更してください。クラシックテーマに変更してください。
   ```
 
 ## ステップ11：改良されたプロットを表示
@@ -132,7 +132,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Ubuntuターミナルに切り替えます
 - 以下のリクエストを入力：
   ```
-  Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+  数値変数にPCAを実行し、第1・第2主成分を使ってサンプルをプロットするコードを追加してください。
   ```
 
 ## ステップ13：PCA解析を実行
@@ -147,7 +147,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Ubuntuターミナルに切り替えます
 - 以下のリクエストを入力：
   ```
-  Review the entire script for correctness. Add comments when necessary.
+  スクリプト全体の正確性をレビューしてください。必要に応じてコメントを追加してください。
   ```
 - Claudeがコードをレビューし、包括的なコメントを追加します
 
@@ -156,7 +156,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Ubuntuターミナルに切り替えます
 - 以下のリクエストを入力：
   ```
-  Create a new R Markdown file for this analysis. Save as iris_report.Rmd
+  この分析のための新しいR Markdownファイルを作成してください。iris_report.Rmdとして保存してください。
   ```
 - Claudeがこのファイルの作成許可を求めます
 - Claudeがプロジェクトフォルダに新しい`.Rmd`ファイルを作成します
@@ -187,23 +187,23 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## 次のステップ
 
-- 統計検定（t検定、ANOVA）を解析に追加するようClaudeに依頼
-- このコードの**Python版**を取得し、Quartoドキュメントを準備するようClaudeに依頼
-- Rスクリプトの繰り返し作業のための関数を作成するようClaudeに依頼
-- Rコードが実行されないときのエラーメッセージのデバッグにClaudeを使用
-- より良いパフォーマンスのために遅いRコードを最適化するようClaudeに依頼
+- 統計検定（t検定、ANOVA）を分析に追加するようClaudeに依頼
+- このコードのPython版を作成し、Quartoドキュメントを準備するようClaudeに依頼
+- Rスクリプトの繰り返し処理のための関数を作成するようClaudeに依頼
+- Rコード実行時のエラーメッセージのデバッグにClaudeを活用
+- パフォーマンス向上のため、低速なRコードの最適化をClaudeに依頼
 
 ## ワークフローまとめ
 
-このハイブリッドセットアップは、両方の長所を組み合わせています：
+このハイブリッドセットアップは両方のツールの長所を組み合わせます：
 
-- **RStudio（Windows）** - インタラクティブなRコンソール、即座のプロット表示、コード実行のための使い慣れたGUI
-- **Claude Code（WSL）** - AI駆動のコード生成、レビュー、改善
+- **RStudio（Windows）** - インタラクティブなRコンソール、即座のプロット表示、使い慣れたGUIでコードを実行
+- **Claude Code（WSL）** - AIによるコード生成、レビュー、改善
 - **共有ファイル** - WSLの`/mnt/c/`マウントポイントを通じて、両ツールが同じファイルを操作
-- **反復的な改善** - 手動コードから始め、Claudeで強化、RStudioでテスト、そしてさらに改善
-- **ドキュメント化** - Claudeが解析のための包括的なレポートとコメントを生成できます
+- **反復的な改善** - 手動でコードを記述し、Claudeで強化し、RStudioでテストして、さらに改善
+- **ドキュメント化** - Claudeが分析の包括的なレポートとコメントを生成
 
-ワークフローはシンプルです：UbuntuターミナルでClaudeを使ってコードを書くか編集し、すぐにRStudioでテストして実行します。ファイルのコピーや手動同期は不要です—WSLとWindowsは同じファイルをシームレスに共有します。
+ワークフローはシンプルです。UbuntuターミナルのClaudeでコードを記述・編集し、すぐにRStudioでテストして実行します。ファイルのコピーや手動同期は不要で、WSLとWindowsが同じファイルをシームレスに共有します。
 
 ---
 

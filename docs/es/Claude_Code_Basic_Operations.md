@@ -2,14 +2,14 @@
 
 # Claude Code: Operaciones Básicas
 
-Aprender a programar con asistencia de IA puede resultar abrumador al principio. Piense en Claude Code como un colega experto sentado junto a usted: usted describe lo que desea en español sencillo, y Claude le ayuda a llegar allí. Este tutorial le enseña las operaciones esenciales que utilizará diariamente, desde iniciar conversaciones hasta gestionar su espacio de trabajo.
+Aprender a programar con asistencia de IA puede resultar abrumador al principio. Claude Code funciona como un colega experto: usted describe lo que necesita en lenguaje natural y Claude le ayuda a lograrlo. Este tutorial enseña las operaciones esenciales para el uso diario, desde iniciar conversaciones hasta gestionar su espacio de trabajo.
 
 ## Conceptos Clave
 
-- **Workspace** - Si inicia Claude Code desde una carpeta, esa es el espacio de trabajo de la sesión.
-- **REPL (Read-Eval-Print Loop)** - Una sesión interactiva donde usted escribe comandos, Claude responde, y la conversación continúa hasta que usted salga.
-- **Context** - La cantidad de código e historial de conversación que Claude recuerda; como memoria de trabajo que se llena con el tiempo.
-- **Slash Commands** - Atajos incorporados que comienzan con `/` y realizan acciones específicas como limpiar el historial o mostrar ayuda.
+- **Workspace** - Espacio de trabajo: la carpeta desde donde inicia Claude Code se convierte en el espacio de trabajo de la sesión
+- **REPL (Read-Eval-Print Loop)** - Sesión interactiva donde escribe comandos, Claude responde y la conversación continúa hasta que cierra la sesión
+- **Contexto** - Cantidad de código e historial que Claude recuerda; funciona como memoria de trabajo que se llena con el tiempo
+- **Slash Commands** - Comandos especiales que comienzan con `/` para realizar acciones específicas como limpiar el historial o mostrar ayuda
 
 ## Lo Que Necesitará
 
@@ -25,9 +25,9 @@ Aprender a programar con asistencia de IA puede resultar abrumador al principio.
 
 Se abrirá una ventana de texto donde puede escribir comandos.
 
-## Paso 2: Obtenga el Proyecto de Demostración
+## Paso 2: Obtener el Proyecto de Demostración
 
-Utilizaremos un proyecto real de ciencia de datos para explorar las características de Claude Code. Puede clonarlo con Git o descargarlo directamente.
+Usaremos un proyecto real de ciencia de datos para explorar las funcionalidades de Claude Code. Puede clonarlo con Git o descargarlo directamente.
 
 **Opción A: Clonar con Git (si tiene Git instalado):**
 
@@ -58,31 +58,31 @@ claude
 
 Verá un mensaje de bienvenida y el prompt de Claude Code.
 
-## Paso 4: Haga Preguntas Sobre Su Proyecto
+## Paso 4: Hacer Preguntas Sobre Su Proyecto
 
 Claude Code lee automáticamente sus archivos cuando es necesario. Pruebe estas preguntas para entender su proyecto:
 
 **Pregunte sobre la estructura de carpetas:**
 
 ```
-What is the folder structure of this project?
+¿Cuál es la estructura de carpetas de este proyecto?
 ```
 
 **Pregunte sobre tecnologías:**
 
 ```
-What technologies and libraries does this project use?
+¿Qué tecnologías y bibliotecas usa este proyecto?
 ```
 
 **Pregunte sobre cambios recientes:**
 
 ```
-What was the last change made to this project?
+¿Cuál fue el último cambio realizado en este proyecto?
 ```
 
 Claude verificará el historial de Git (si está disponible) y le informará sobre los commits recientes.
 
-Puede preguntarle a Claude cualquier cosa sobre su código en lenguaje natural. Claude lee archivos según sea necesario para responder sus preguntas.
+Puede preguntarle a Claude cualquier cosa sobre su código en lenguaje natural. Claude lee los archivos necesarios para responder sus preguntas.
 
 ## Paso 5: Slash Commands Esenciales
 
@@ -118,7 +118,7 @@ Cuando el contexto se llena, inicie una nueva conversación con `/clear`.
 ```
 /clear
 ```
-Borra la conversación actual y comienza de nuevo. Use esto cuando desee cambiar de tema o cuando su conversación se vuelva demasiado larga. Es esencial para gestionar el contexto.
+Elimina la conversación actual y comienza de nuevo. Úselo cuando desee cambiar de tema o cuando la conversación sea demasiado larga. Es esencial para gestionar el contexto.
 
 
 **Salir de Claude Code:**
@@ -139,11 +139,11 @@ Estos atajos hacen que trabajar con Claude Code sea más rápido:
 - **Ctrl+D** - Aprobar cambios en archivos cuando Claude solicite permiso
 - **Esc** - Cerrar menús o cancelar la entrada actual
 
-## Paso 7: Siempre Cree un Archivo CLAUDE.md
+## Paso 7: Siempre Crear un Archivo CLAUDE.md
 
-El archivo CLAUDE.md es el manual de instrucciones de su proyecto para Claude. Persiste a través de sesiones, por lo que Claude recuerda contexto importante sobre su proyecto.
+El archivo CLAUDE.md es el manual de instrucciones de su proyecto para Claude. Persiste entre sesiones, permitiendo que Claude recuerde el contexto importante de su proyecto.
 
-**Cree el archivo:**
+**Crear el archivo:**
 
 ```
 /init
@@ -151,54 +151,52 @@ El archivo CLAUDE.md es el manual de instrucciones de su proyecto para Claude. P
 
 Claude creará el archivo con un resumen de su proyecto. Este archivo permanece en la raíz de su proyecto y Claude lo lee automáticamente cada vez que inicia una nueva sesión.
 
-Puede editar CLAUDE.md en la carpeta del proyecto en cualquier momento para agregar instrucciones específicas del proyecto, convenciones de codificación, o contexto importante como el propósito de los archivos, etc.
+Puede editar CLAUDE.md en cualquier momento para agregar instrucciones específicas del proyecto, convenciones de codificación o contexto importante como el propósito de los archivos.
 
 ## Paso 8: Referirse a Archivos o Líneas de Código
 
 Puede usar `@` para referirse a un archivo específico:
 
 ```
-Explain the code in @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
+Explica el código en @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 ```
 
-Claude leerá el notebook y explicará qué hace, cómo funciona, y qué logra el código. Esto efectivamente trae el archivo al contexto.
+Claude leerá el notebook y explicará qué hace, cómo funciona y qué logra el código. Esto efectivamente trae el archivo al contexto.
 
-Si trabaja con Claude Code desde VS Code y tiene la extensión de Claude Code instalada, puede agregar el archivo al contexto simplemente abriéndolo. Verá en la parte inferior derecha de la ventana de comandos que dice `In Nested_Pie_Chart.ipynb`. Entonces Claude sabe que está hablando de este archivo.
+Si trabaja con Claude Code desde VS Code y tiene la extensión instalada, puede agregar el archivo al contexto simplemente abriéndolo. Verá en la parte inferior derecha de la ventana de comandos `In Nested_Pie_Chart.ipynb`. Así Claude sabe que está hablando de este archivo.
 
-Además, puede seleccionar unas pocas líneas de código y Claude mostrará **3 lines selected**. Puede pedirle a Claude que haga cambios rápidos a estas líneas o hacer preguntas. Por lo tanto, recomiendo encarecidamente usar Claude Code desde VS Code.
+Además, puede seleccionar algunas líneas de código y Claude mostrará **3 lines selected**. Puede pedirle a Claude que haga cambios rápidos a estas líneas o hacer preguntas sobre ellas. Por esto recomendamos usar Claude Code desde VS Code.
 
 
-## Paso 9: Realice Acciones con Comandos de Linux
+## Paso 9: Realizar Acciones con Comandos de Linux
 
-Claude puede realizar acciones ejecutando comandos de Linux de muchas formas.
+Claude puede realizar acciones ejecutando comandos de Linux de diversas formas.
 
 - Instalar software
   ```
-  Install the pandas library
+  Instala la biblioteca pandas
   ```
 
 - Iniciar control de versiones
   ```
-  Start tracking changes using Git. My name is James Bond and my email is bond@earth.com
+  Comienza a rastrear cambios usando Git. Mi nombre es James Bond y mi correo es bond@earth.com
   ```
 - Confirmar cambios
   ```
-  Commit these changes.
+  Confirma estos cambios.
   ```
 - Encontrar y descargar datos
   ```
-  Download the wine quality dataset from UCI. Put it in a new folder called wine.
+  Descarga el dataset de calidad de vino de UCI. Ponlo en una nueva carpeta llamada wine.
   ```
 
 - Ejecutar código
   ```
-  Rewrite the nested pie chart code as a regular Python script.
-  Run it and save the new code and plots in the same folder.
+  Reescribe el código del gráfico circular anidado como un script regular de Python.
+  Ejecútalo y guarda el nuevo código y gráficos en la misma carpeta.
   ```
 
-Podemos hacer esta pregunta vaga porque acabamos de pedirle que explique el código. Muchas cosas suceden después de esto. Claude instala software, soluciona errores, resuelve problemas de entornos - todo por su cuenta.
-
-
+Podemos hacer esta solicitud vaga porque acabamos de pedirle que explique el código. Muchas cosas suceden después de esto. Claude instala software, soluciona errores, resuelve problemas de entornos, todo por su cuenta.
 
 Esencialmente tiene un experto en comandos bash de Linux a su disposición. Mientras gestione los permisos y apruebe las acciones, puede ser muy productivo.
 
@@ -214,9 +212,9 @@ Ahora que conoce lo básico, pruebe esto por su cuenta:
 ## Solución de Problemas
 
 - **Error "Command not found"** - Claude Code no está instalado o no está en su PATH. Ejecute `npm install -g @anthropic-ai/claude-code` para instalarlo.
-- **Claude proporciona información desactualizada** - Limpie el contexto con `/clear` y pregunte nuevamente. Las conversaciones largas pueden llenar la memoria de Claude.
-- **Los cambios en archivos no funcionan** - Asegúrese de tener permisos de escritura en su carpeta de proyecto. Claude solicitará aprobación antes de modificar archivos—presione Ctrl+D para aprobar.
-- **El contexto se llena rápidamente** - Use `/context` para verificar el uso. Cuando esté casi lleno, use `/clear` para iniciar una conversación nueva con contexto limpio.
+- **Claude proporciona información desactualizada** - Limpie el contexto con `/clear` y pregunte nuevamente. Las conversaciones largas llenan la memoria de Claude.
+- **Los cambios en archivos no funcionan** - Asegúrese de tener permisos de escritura en su carpeta de proyecto. Claude solicitará aprobación antes de modificar archivos. Presione Ctrl+D para aprobar.
+- **El contexto se llena rápidamente** - Use `/context` para verificar el uso. Cuando esté casi lleno, use `/clear` para iniciar una nueva conversación con contexto limpio.
 
 ## Resumen del Flujo de Trabajo
 

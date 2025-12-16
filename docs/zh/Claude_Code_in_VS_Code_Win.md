@@ -77,7 +77,7 @@
 
 - 在 Claude Code 中输入：
 ```
-Write a short article explaining why LLMs like to use Markdown format. Save it as article.md
+写一篇简短的文章，解释为什么 LLM 喜欢使用 Markdown 格式。保存为 article.md
 ```
 - Claude Code 创建文件，你会看到 `article.md` 出现在左侧资源管理器面板中
 - 点击 `article.md` 在编辑器中查看
@@ -95,9 +95,9 @@ VS Code 会记住最近的文件夹，使用方法 A 的"Open Recent"通常最�
 
 ## 下一步
 
-- 让 Claude Code 解释现有代码库："Explain what this project does"
-- 让 Claude Code 编写新功能："Add a function that calculates the average of a list"
-- 使用 Claude Code 修复错误："This code gives an error, can you fix it?"
+- 让 Claude Code 解释现有代码库："解释这个项目做什么"
+- 让 Claude Code 编写新功能："添加一个计算列表平均值的函数"
+- 使用 Claude Code 修复错误："这段代码出现错误，你能修复它吗？"
 - 尝试 Claude Code VS Code 扩展，获得内联差异的可视化界面（在扩展中搜索"Claude Code"）
 - 处理大文件时，可在 WSL 文件系统（`/home/user/`）中创建文件夹。从 Windows 在文件资源管理器侧边栏底部找 Linux 图标，或在地址栏输入 `\\wsl.localhost\`
 
