@@ -31,7 +31,7 @@ This is exactly the pattern described in my [research paper tutorial](./Writing_
 
 The result was five specialized slash commands that handled the entire tutorial lifecycle:
 
-### 1. `/tutorial` - The Tutorial Generator
+### 1. [`/tutorial`](./assets/commands/tutorial.md) - The Tutorial Generator
 
 Born from creating several tutorials interactively, this command captures the proven workflow. It follows a rigorous three-phase approach:
 
@@ -60,7 +60,7 @@ The command enforces consistent structure across all tutorials. Every tutorial f
 
 **Result**: I generated 20+ tutorials covering topics from basic Git operations to advanced Docker workflows, all with consistent quality and structure.
 
-### 2. `/review-tutorial` - The Quality Control Bot
+### 2. [`/review-tutorial`](./assets/commands/review-tutorial.md) - The Quality Control Bot
 
 After generating tutorials, quality matters. This slash command performs comprehensive review against 40+ quality criteria:
 
@@ -74,9 +74,15 @@ The command presents findings in a structured report, then applies fixes after a
 
 **Result**: Uniform quality across all tutorials without manually reviewing each one multiple times.
 
-### 3. `/translate-chinese` & `/translate-spanish` - The Localization Engine
+### 3. [`/translate-chinese`](./assets/commands/translate-chinese.md) & [`/translate-spanish`](./assets/commands/translate-spanish.md) - The Localization Engine
 
-Once I had solid English tutorials, I needed them in multiple languages. These translation commands handle the complexity of technical translation:
+Interestingly, the Japanese translations came first—and without a slash command. I simply asked Claude Code to translate all the tutorials to Japanese in one prompt. Claude automatically spawned 8 subagents running in parallel, each handling different tutorials simultaneously. The results were excellent, which gave me confidence to formalize the process into slash commands for Chinese and Spanish.
+
+For Chinese and Spanish, I discovered Claude's remarkable ability to write prompts. I simply asked Claude to create a slash command for translating tutorials—without giving any specific guidelines. Claude generated comprehensive commands on its own, adding detailed rules for what to translate, what to keep in English, language-specific formatting, and quality checklists. The AI wrote better prompts than I would have.
+
+With the slash commands ready, I asked Claude Code to translate all 25 tutorials using subagents. The entire translation—50 new files across two languages—took only 15 minutes.
+
+These translation commands handle the complexity of technical translation:
 
 **What Gets Translated:**
 - Instructional text
@@ -97,7 +103,7 @@ Each translation command also performs a quality review checklist before saving,
 
 **Result**: 81 translated tutorial files across Chinese (zh), Spanish (es), and Japanese (ja) directories—all maintaining consistent quality and structure.
 
-### 4. `/review-translation` - The Translation Maintenance Tool
+### 4. [`/review-translation`](./assets/commands/review-translation.md) - The Translation Maintenance Tool
 
 Tutorials evolve. Commands change. New sections get added. This command keeps translations in sync:
 
@@ -200,7 +206,7 @@ That's the power of systematic automation.
 
 ---
 
-*Want to see the slash commands I built? Check out the `.claude/commands/` directory in the [Vibe repository](https://github.com/gexijin/vibe). The full tutorial library is available at the [project documentation site](https://github.com/gexijin/vibe/tree/main/docs).*
+*Want to see the slash commands I built? Check out the [commands folder](./assets/commands/). The full tutorial library is available at the [project documentation site](https://github.com/gexijin/vibe/tree/main/docs).*
 
 Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 15, 2025.
 
