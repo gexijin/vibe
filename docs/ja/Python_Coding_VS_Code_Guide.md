@@ -2,7 +2,7 @@
 
 # VS CodeでPythonを書く
 
-「Pythonを書きたいけど、どのエディターを使えばいい？」「PyCharmは少し重い…」そんなときはVS Code。軽快なのに高機能で、PythonやR、JavaScriptなどを1つのエディターで扱えます。このガイドでは、VS CodeにPython環境を整え、補完やデバッグ、Streamlitアプリまで動かすところを体験します。
+Pythonを書きたいけど、どのエディターを使えばいい？PyCharmは少し重い...そんなときはVS Codeがおすすめです。軽快ながら高機能で、Python、R、JavaScriptなど複数の言語を1つのエディターで扱えます。このガイドでは、VS CodeにPython環境を構築し、コード補完、デバッグ、Streamlitアプリの実行まで体験します。
 
 ## キーワード
 

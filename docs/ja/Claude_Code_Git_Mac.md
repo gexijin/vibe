@@ -101,7 +101,7 @@ Claude Codeが起動し、リクエストを待機します。
 
 - 次のリクエストを入力します：
   ```
-  Start tracking changes
+  変更の追跡を開始してください
   ```
 
 Claudeがフォルダ内にGitリポジトリを初期化します（2〜5秒かかります）。これでバージョン管理が有効になりました！
@@ -110,11 +110,11 @@ Claudeがフォルダ内にGitリポジトリを初期化します（2〜5秒か
 
 - Claude Codeで次のように入力します：
   ```
-  Create a simple countdown timer app in a single file called timer.html.
-  It should have:
-  - An input field to set minutes
-  - Start and Stop buttons
-  - Display showing time remaining in MM:SS format
+  timer.htmlという単一のファイルにシンプルなカウントダウンタイマーアプリを作成してください。
+  以下の機能を含めてください：
+  - 分数を設定する入力フィールド
+  - 開始ボタンと停止ボタン
+  - MM:SS形式で残り時間を表示する画面
   ```
 
 Claudeが`timer.html`を作成します（10〜30秒かかります）。CSSとJavaScriptのコードも含まれています。
@@ -129,13 +129,13 @@ Claudeが`timer.html`を作成します（10〜30秒かかります）。CSSとJ
   - **Start**をクリック
   - カウントダウンを確認
 
-**何か問題がある場合：** Claude Codeでエラーを説明します：`I'm seeing this error: [何が起こったかを説明]. Can you fix it?`
+**何か問題がある場合：** Claude Codeでエラーを説明します：`このエラーが表示されます：[何が起こったかを説明]。修正してもらえますか？`
 
 ## ステップ10：Claudeにコミットを依頼
 
 - Claude Codeで次のように入力します：
   ```
-  Save these changes.
+  これらの変更を保存してください
   ```
 
 Claudeは次のことを行います：
@@ -149,13 +149,13 @@ Claudeは次のことを行います：
 
 - Claude Codeで次のように入力します：
   ```
-  Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
+  上部に2つのボタンを追加してください。クリックすると自動的に1分と5分のタイマーが開始されるようにしてください。
   ```
 - ブラウザタブを更新します（または`Command (⌘) + R`を押します）
 - テスト：**5 min**ボタンをクリック
 - 動作する場合は、変更をコミットします：
   ```
-  Save these changes.
+  これらの変更を保存してください
   ```
 
 2番目のセーブポイントが作成されました。このバージョンには2つのボタンが動作しています。
@@ -164,7 +164,7 @@ Claudeは次のことを行います：
 
 - Claude Codeで次のように入力します：
   ```
-  Add a 15-minute button.
+  15分ボタンを追加してください
   ```
 - ブラウザタブを更新します（`Command (⌘) + R`を押します）
 - テスト：**15 min**ボタンをクリック
@@ -177,43 +177,43 @@ AIのコードが動作しない場合があり、最後のセーブポイント
 
 - Claude Codeで次のように入力します：
   ```
-  discard these changes.
+  これらの変更を破棄してください
   ```
 - Claudeが確認を求めます
 - `yes`と入力してEnterを押します
 - ブラウザを更新すると、15分ボタンが消えます
 
-Claudeは気に入らない新しい変更を破棄します。タイマーは1分と5分のボタンだけで再び動作します！
+Claudeが気に入らない新しい変更を破棄してくれます。タイマーは1分と5分のボタンだけで再び動作します！
 
 ## ステップ14：サウンド通知を追加
 
 - Claude Codeで次のように入力します：
   ```
-  Add a sound notification when time is up.
+  時間になったら音で通知するようにしてください
   ```
 - Claudeが完了したらブラウザを更新してテスト（タイマーを0.1分に設定）
 - 動作する場合は、変更をコミットします：
   ```
-  Save these changes.
+  これらの変更を保存してください
   ```
 
 ## ステップ15：スヌーズボタンを追加
 
 - Claude Codeで次のように入力します：
   ```
-  The sound should continue until I click a button to snooze it.
+  スヌーズボタンをクリックするまで音が鳴り続けるようにしてください
   ```
 - Claudeが完了したらブラウザを更新してテスト（タイマーを0.1分に設定）
 - 動作する場合は、変更をコミットします：
   ```
-  Save these changes.
+  これらの変更を保存してください
   ```
 
 ## ステップ16：コミット履歴を表示
 
 - Claude Codeで次のように入力します：
   ```
-  show my change history
+  変更履歴を表示してください
   ```
 
 Claudeがコミットを読みやすい形式で表示します。次のものが表示されます：
@@ -230,7 +230,7 @@ Claudeがコミットを読みやすい形式で表示します。次のもの�
 - ソースコードが表示されます
 - Claude Codeで次のように尋ねます：
   ```
-  Explain this code. Just big picture.
+  このコードを説明してください。全体像だけで構いません
   ```
 
 ## 完全なワークフロー
@@ -248,10 +248,10 @@ Claudeがコミットを読みやすい形式で表示します。次のもの�
 
 タイマーにさらに機能を追加してみましょう：
 
-- **15分ボタン：** `Add a working 15-minute preset button`（破棄したものをやり直しましょう！）
-- **一時停止ボタン：** `Add a Pause/Resume button that toggles the timer state`
-- **より良いスタイリング：** `Improve the visual design with a modern color scheme and larger fonts`
-- **プログレスバー：** `Add a visual progress bar showing time remaining`
+- **15分ボタン：** `動作する15分プリセットボタンを追加してください`（破棄したものをやり直しましょう！）
+- **一時停止ボタン：** `タイマーの状態を切り替える一時停止/再開ボタンを追加してください`
+- **より良いスタイリング：** `モダンな配色と大きめのフォントで見た目を改善してください`
+- **プログレスバー：** `残り時間を視覚的に示すプログレスバーを追加してください`
 
 覚えておいてください：各機能の後にテストし、成功したらコミットし、失敗したら破棄します。
 
@@ -264,11 +264,11 @@ Claudeがコミットを読みやすい形式で表示します。次のもの�
 
 ## Claudeに依頼できること
 
-- `what files have I changed?` - コミットされていない変更を確認
-- `show me the diff` - 変更されたコードを正確に確認
-- `explain what the timer code does` - 実装を理解
-- `create a branch called experiment` - リスクのある変更を安全に試す
-- `go back to the previous commit` - 最後のコミット以降のすべてを元に戻す
+- `どのファイルを変更しましたか？` - コミットされていない変更を確認
+- `差分を表示してください` - 変更されたコードを正確に確認
+- `タイマーのコードが何をしているか説明してください` - 実装を理解
+- `experimentという名前のブランチを作成してください` - リスクのある変更を安全に試す
+- `前のコミットに戻ってください` - 最後のコミット以降のすべてを元に戻す
 
 ClaudeはすべてのGit操作を自然言語で処理します。コマンドを覚える必要はありません！
 

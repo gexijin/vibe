@@ -58,22 +58,22 @@
 1. `README.md` をメモ帳／TextEdit／VS Codeなどで開く
 2. 内容を以下に書き換え、保存
    ```
-   # My First Project
+   # 初めてのプロジェクト
 
-   I'm learning version control with GitHub Desktop.
+   GitHub Desktopでバージョン管理を学習中です。
 
-   ## What I'm Building
+   ## 作成するもの
 
-   This is a practice project to learn how to:
-   - Track changes to my code
-   - Create save points (commits)
-   - Back up my work to GitHub
+   このプロジェクトで学ぶこと：
+   - コードの変更を追跡する
+   - セーブポイント（コミット）を作成する
+   - 作業をGitHubにバックアップする
    ```
 
 ## ステップ7：初めてのコミット
 
 1. GitHub Desktopに戻ると差分が表示される（緑＝追加、赤＝削除）
-2. 左下のメッセージ欄に `Updated README with project description` と入力
+2. 左下のメッセージ欄に `プロジェクトの説明を追加` と入力
 3. **Commit to main** をクリック
 
 ## ステップ8：GitHubにプッシュ

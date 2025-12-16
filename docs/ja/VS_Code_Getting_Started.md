@@ -90,7 +90,7 @@ Markdownは `#` で見出し、`**` で太字、`-` でリストを表す簡単�
 ## ステップ6：Markdownファイルをプレビュー
 
 - `README.md` がまだ開いていない場合は開く
-- エディター内を右クリックし、**Markdown Preview Enhanced: Open Preview to the Side** を選択
+- エディター内を右クリックし、**Markdown Preview Enhanced: サイドでプレビューを開く** を選択
 
 フォーマットされたMarkdownを表示するプレビューパネルが開きます - 左で編集、右でリアルタイムに変更を確認できます！
 
@@ -125,12 +125,12 @@ VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/ch
 - `README.md` ファイル（またはプロジェクト内の他のファイル）を開く
 - タイトルバーの **Chat > Open Chat** をクリック（Windows/Linuxでは `Ctrl+Alt+I`、Macでは `Ctrl+Cmd+I` を押す）
 - プロンプトが表示されたら、**GitHubアカウント**でサインイン（無料プランも利用可能）
-- 開いたチャットパネルに「Explain this file」と入力
+- 開いたチャットパネルに「このファイルを説明してください」と入力
 - **Enter**を押す
 
-GitHub Copilotがファイルを分析し、その内容を説明します。新しいコードの作成、バグの修正、「どうすれば機能を追加できますか？」などの質問も可能です。
+GitHub Copilotがファイルを分析し、その内容を説明します。新しいコードの作成、バグの修正、機能追加の方法などについて質問することも可能です。
 
-**ヒント：** [インライン編集](https://code.visualstudio.com/docs/copilot/copilot-chat)の場合、任意のファイルでコードをハイライトし、`Ctrl+I`（Windows/Linux）または `Cmd+I`（Mac）を押すと、Copilotにその部分のみの変更、修正、説明を依頼できます。
+**ヒント：** [インライン編集](https://code.visualstudio.com/docs/copilot/copilot-chat)を使う場合は、任意のファイルでコードをハイライトし、`Ctrl+I`（Windows/Linux）または `Cmd+I`（Mac）を押すと、Copilotにその部分のみの変更、修正、説明を依頼できます。
 
 ## プロジェクトを再度開くには
 

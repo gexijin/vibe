@@ -65,7 +65,7 @@ summary(iris)
 - 下部のチャットボックスに次のように入力します：
 
 ```
-Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを追加してください。種ごとに色分けして、ggplot2を使用してください。
 ```
 
 - Enterを押して送信します
@@ -86,7 +86,7 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 - Claudeチャットパネルに次のように入力します：
 
 ```
-Remove title. Change marker type by species. Change to the classic theme.
+タイトルを削除してください。種ごとにマーカーの形状を変更してください。classicテーマに変更してください。
 ```
 
 - Enterを押します
@@ -100,7 +100,7 @@ Remove title. Change marker type by species. Change to the classic theme.
 - Claudeチャットパネルに次のように入力します：
 
 ```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+数値変数に対してPCAを実行し、最初の2つの主成分を使用してサンプルをプロットするコードを追加してください。
 ```
 
 - Enterを押します
@@ -114,7 +114,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - Claudeチャットパネルに次のように入力します：
 
 ```
-Review the entire script for correctness. Add comments when necessary.
+スクリプト全体の正確性をレビューしてください。必要に応じてコメントを追加してください。
 ```
 
 - Enterを押します
@@ -124,11 +124,11 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## 次のステップ
 
-- ClaudeにR Markdownレポートの作成を依頼：「Create an R Markdown file for this analysis」
-- Claudeを使ってエラーをデバッグ：「This code gives Error X, can you fix it?」
-- 統計検定を要求：「Add a t-test comparing sepal length between setosa and versicolor」
-- Claudeにコードの最適化を依頼：「Make this loop faster using vectorization」
-- 馴染みのない関数について助けを得る：「Explain what dplyr::mutate does」
+- ClaudeにR Markdownレポートの作成を依頼：「この分析のためのR Markdownファイルを作成してください」
+- Claudeを使ってエラーをデバッグ：「このコードがエラーXを出します。修正してもらえますか？」
+- 統計検定を要求：「setosaとversicolorの間でsepal lengthを比較するt検定を追加してください」
+- Claudeにコードの最適化を依頼：「ベクトル化を使ってこのループを高速化してください」
+- 馴染みのない関数について助けを得る：「dplyr::mutateが何をするのか説明してください」
 
 ## トラブルシューティング
 
@@ -148,4 +148,4 @@ Review the entire script for correctness. Add comments when necessary.
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.
+作成者: [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 2025年12月11日
