@@ -92,12 +92,12 @@ Claude Code 需要 Node.js 版本 18 或更高。
 
 - 在 Terminal 中输入:
   ```
-  npm install -g @anthropic/claude-code
+  npm install -g @anthropic-ai/claude-code
   ```
 - 等待安装完成(2-5 分钟)
 - 如果出现 "permission denied" 错误,使用 `sudo`:
   ```
-  sudo npm install -g @anthropic/claude-code
+  sudo npm install -g @anthropic-ai/claude-code
   ```
   输入 Mac 密码(输入时不显示)
 - 可能看到黄色或红色警告文本,这是正常的
@@ -217,7 +217,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ### npm 安装权限错误
 - 在命令前添加 `sudo`:
   ```
-  sudo npm install -g @anthropic/claude-code
+  sudo npm install -g @anthropic-ai/claude-code
   ```
 - 输入 Mac 密码(输入时不显示)
 
@@ -225,11 +225,11 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 - 确保 npm 安装已成功完成
 - 关闭并重新打开 Terminal
 - 检查是否已安装:`npm list -g @anthropic/claude-code`
-- 重新安装:`npm install -g @anthropic/claude-code`
+- 重新安装:`npm install -g @anthropic-ai/claude-code`
 
 ### "Cannot find module" 错误
 - 确保 Node.js 已正确安装:`node --version`
-- 重新安装 Claude Code:`npm uninstall -g @anthropic/claude-code` 然后 `npm install -g @anthropic/claude-code`
+- 重新安装 Claude Code:`npm uninstall -g @anthropic/claude-code` 然后 `npm install -g @anthropic-ai/claude-code`
 
 ## Mac 用户提示
 

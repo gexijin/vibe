@@ -92,12 +92,12 @@ Claude CodeにはNode.js 18以上が必要です。まず現在の環境を確�
 
 - ターミナルで以下を入力：
   ```
-  npm install -g @anthropic/claude-code
+  npm install -g @anthropic-ai/claude-code
   ```
 - Claude Codeのインストールを待ちます（2〜5分）
 - 「permission denied」エラーが表示された場合は、`sudo`を付けて試してください：
   ```
-  sudo npm install -g @anthropic/claude-code
+  sudo npm install -g @anthropic-ai/claude-code
   ```
   その後、プロンプトが表示されたらMacのパスワードを入力します（入力中は表示されません）
 - 黄色や赤のテキストで警告が表示される場合がありますが、通常は問題ありません
@@ -227,7 +227,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ### npmインストールがパーミッションエラーで失敗する
 - npmコマンドの前に`sudo`を付けます：
   ```
-  sudo npm install -g @anthropic/claude-code
+  sudo npm install -g @anthropic-ai/claude-code
   ```
 - プロンプトが表示されたらMacのパスワードを入力してください（入力中は表示されません）
 
@@ -235,11 +235,11 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 - npmのインストールが正常に完了したことを確認してください
 - ターミナルを閉じて再度開いてみてください
 - Claude Codeがインストールされているか確認します：`npm list -g @anthropic/claude-code`
-- 再度インストールしてみてください：`npm install -g @anthropic/claude-code`
+- 再度インストールしてみてください：`npm install -g @anthropic-ai/claude-code`
 
 ### 「Cannot find module」エラー
 - Node.jsが正しくインストールされていることを確認してください：`node --version`
-- Claude Codeを再インストールしてみてください：`npm uninstall -g @anthropic/claude-code`を実行してから`npm install -g @anthropic/claude-code`を実行
+- Claude Codeを再インストールしてみてください：`npm uninstall -g @anthropic/claude-code`を実行してから`npm install -g @anthropic-ai/claude-code`を実行
 
 ## Macユーザー向けのヒント
 
