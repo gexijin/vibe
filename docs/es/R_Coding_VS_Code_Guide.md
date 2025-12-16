@@ -2,7 +2,7 @@
 
 # Ejecutar R en VS Code
 
-Usted desea escribir código R pero RStudio se siente pesado o prefiere la flexibilidad de VS Code. Piense en VS Code como una navaja suiza: puede manejar R, Python y muchos otros lenguajes en un solo editor liviano. Este tutorial le muestra cómo configurar R en VS Code con características inteligentes como finalización de código, gráficos interactivos e incluso aplicaciones Shiny.
+Quiere escribir código R pero RStudio se siente pesado o prefiere la flexibilidad de VS Code. Piense en VS Code como una navaja suiza: puede manejar R, Python y muchos otros lenguajes en un solo editor liviano. Este tutorial muestra cómo configurar R en VS Code con características inteligentes como finalización de código, gráficos interactivos e incluso aplicaciones Shiny.
 
 ## Conceptos Clave
 
@@ -12,13 +12,13 @@ Usted desea escribir código R pero RStudio se siente pesado o prefiere la flexi
 
 ## Lo Que Necesitará
 
-- Haber terminado [VS Code Basics](./VS_Code_Getting_Started)
+- Tutorial [VS Code Basics](./VS_Code_Getting_Started) completado
 - Conexión a Internet para descargar R y paquetes
 - 10-15 minutos
 
 ## Paso 1: Instale o Actualice R
 
-Usted necesita R versión 4.0 o superior para la mejor compatibilidad.
+Necesita R versión 4.0 o superior para la mejor compatibilidad.
 
 - **Windows**:
   - Descargue la última versión de R desde [CRAN Windows](https://cran.r-project.org/bin/windows/base/) y ejecute el instalador
@@ -27,14 +27,14 @@ Usted necesita R versión 4.0 o superior para la mejor compatibilidad.
 
 - **macOS**:
   - Descargue desde [CRAN macOS](https://cran.r-project.org/bin/macosx/) y ejecute el instalador .pkg
-  - Note si está usando Intel (`/Library/Frameworks/R.framework/Resources/bin/R`) o Apple Silicon con Homebrew (`/opt/homebrew/bin/R`)
+  - Note si usa Intel (`/Library/Frameworks/R.framework/Resources/bin/R`) o Apple Silicon con Homebrew (`/opt/homebrew/bin/R`)
   - Si está actualizando, la nueva versión reemplazará la antigua
 
 - **Linux**:
   - Use su gestor de paquetes (por ejemplo, `sudo apt install r-base` en Ubuntu)
   - O siga las instrucciones de [CRAN Linux](https://cran.r-project.org/bin/linux/)
 
-Usted configurará VS Code para encontrar R en el Paso 3, así que no se preocupe si `R --version` aún no funciona en su terminal.
+Configurará VS Code para encontrar R en el Paso 3, así que no se preocupe si `R --version` aún no funciona en su terminal.
 
 ## Paso 2: Instale las Extensiones de R en VS Code
 
@@ -45,7 +45,7 @@ Usted configurará VS Code para encontrar R en el Paso 3, así que no se preocup
 
 ## Paso 3: Encuentre la Ruta de Instalación de R
 
-Antes de configurar VS Code, usted necesita saber dónde está instalado R en su sistema.
+Antes de configurar VS Code, necesita saber dónde está instalado R en su sistema.
 
 ### Para Usuarios de Windows
 
@@ -225,7 +225,7 @@ shinyApp(ui = ui, server = server)
 - En `analysis.R`, comience a escribir `mea` en una nueva línea
 - Aparece un menú desplegable con sugerencias - seleccione `mean()` presionando Enter
 - Coloque su mouse sobre la palabra `mean` en su código existente
-- Aparece una ventana emergente que muestra la documentación de la función y ejemplos de uso
+- Aparece una ventana emergente mostrando la documentación de la función y ejemplos de uso
 - Intente colocar el cursor sobre `lm`, `summary`, o `plot` para ver su documentación
 - Escriba `data$` y observe cómo VS Code sugiere nombres de columnas (`x` e `y`)
 
@@ -267,8 +267,8 @@ VS Code proporciona una alternativa moderna y liviana a RStudio con estas ventaj
 
 - **Entorno unificado**: Codifique en R, Python, JavaScript y más en un solo editor
 - **Personalizable**: Instale solo las extensiones que necesita para una configuración liviana
-- **Terminal integrado**: Ejecute R, Git y comandos de shell lado a lado
-- **Desarrollo Shiny**: Lanzamiento de aplicaciones con un clic y recarga automática que ahorra tiempo
+- **Terminal integrado**: Ejecute R, Git y comandos de shell juntos
+- **Desarrollo Shiny**: Lanzamiento de aplicaciones con un clic y recarga automática
 - **Control de versiones**: Integración con Git incorporada sin herramientas externas
 
 ---

@@ -1,19 +1,19 @@
 [Inicio](index.html)
 
-# Codificación en Python en VS Code mediante Contenedor Docker
+# Codificación en Python con VS Code mediante Contenedor Docker
 
-¿Alguna vez intentó compartir su código Python con un colega, solo para pasar horas depurando problemas del tipo "pero funciona en mi máquina"? Los contenedores Docker son como contenedores de envío para código: empaquetan su entorno Python, bibliotecas y dependencias en una caja sellada que funciona igual en todas partes. Además, obtiene acceso a decenas de miles de imágenes preconstruidas en [Docker Hub](https://hub.docker.com/), donde los desarrolladores de software publican entornos listos para usar, evitando el dolor de la instalación manual de software. Este tutorial le muestra cómo ejecutar Python en un entorno aislado y reproducible usando VS Code y Docker Desktop.
+¿Alguna vez intentó compartir su código Python con un colega solo para pasar horas depurando problemas del tipo "funciona en mi máquina"? Los contenedores Docker son como contenedores de envío para código: empaquetan su entorno Python, bibliotecas y dependencias en una caja sellada que funciona igual en todas partes. Además, obtiene acceso a decenas de miles de imágenes preconstruidas en [Docker Hub](https://hub.docker.com/), donde los desarrolladores publican entornos listos para usar, evitando la instalación manual de software. Este tutorial muestra cómo ejecutar Python en un entorno aislado y reproducible usando VS Code y Docker Desktop.
 
 ## Conceptos Clave
 
 - **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** - Aplicación que ejecuta contenedores en su computadora, administrando entornos aislados
-- **[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)** - Función de VS Code que le permite codificar dentro de un contenedor Docker con soporte completo del IDE
+- **[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)** - Función de VS Code que permite codificar dentro de un contenedor Docker con soporte completo del IDE
 - **Container Isolation** - Su código se ejecuta en un entorno Linux separado que solo ve su carpeta de proyecto, no toda su computadora
 - **[Python Official Images](https://hub.docker.com/_/python)** - Imágenes Docker preconstruidas con Python y herramientas esenciales preinstaladas
 
 ## Lo Que Necesitará
 
-- Haber completado [Python Coding in VS Code](./Python_Coding_VS_Code_Guide)
+- Haber completado [Programación en Python con VS Code](./Python_Coding_VS_Code_Guide)
 - 20-25 minutos
 
 ## Paso 1: Instalar Docker Desktop
@@ -183,7 +183,7 @@ st.pyplot(fig)
 
 ## Paso 9: Comprender el Entorno del Contenedor
 
-Ahora está codificando dentro de un contenedor Linux. Exploremos qué significa esto.
+Ahora está codificando dentro de un contenedor Linux. Exploremos lo que esto significa.
 
 - Haga clic en **Terminal > New Terminal** para abrir una terminal dentro del contenedor
 - Verifique su ubicación actual:
@@ -209,7 +209,7 @@ cd ..
 ls
 ```
 
-Solo verá `python-docker-demo/` - el contenedor está aislado. No puede acceder a las otras carpetas de su computadora, Escritorio o Documentos. Este aislamiento asegura que su entorno Python sea limpio y reproducible.
+Solo verá `python-docker-demo/` - el contenedor está aislado. No puede acceder a otras carpetas de su computadora, Escritorio o Documentos. Este aislamiento garantiza que su entorno Python sea limpio y reproducible.
 
 - Regrese a la carpeta del proyecto:
 
@@ -251,7 +251,7 @@ streamlit run app.py
 - La aplicación Streamlit se abre en su navegador web
 - Mueva el deslizador para cambiar los contenedores del histograma - el gráfico se actualiza en tiempo real
 
-## Paso 12: Hacer un Cambio Simple
+## Paso 12: Hacer un Cambio Sencillo
 
 Modifiquemos la aplicación para ver cómo funciona el desarrollo.
 
@@ -295,7 +295,7 @@ Después de cambiar la imagen base, reconstruya el contenedor para aplicar los c
 
 ## Paso 14: Instalar Paquetes Python en la Imagen Docker (Opcional)
 
-Los paquetes instalados mediante pip en la terminal (`pip install package`) son temporales y desaparecen cuando reconstruye el contenedor. Para hacer los paquetes permanentes, agréguelos al Dockerfile.
+Los paquetes instalados mediante pip en la terminal (`pip install package`) son temporales y desaparecen cuando reconstruye el contenedor. Para hacer permanentes los paquetes, agréguelos al Dockerfile.
 
 - En VS Code Explorer, navegue a `.devcontainer/Dockerfile`
 - Haga clic para abrir el archivo
@@ -335,21 +335,21 @@ Si muestra la versión sin errores, el paquete está instalado permanentemente.
 
 ## Descripción General del Flujo de Trabajo
 
-Esta configuración le brinda un entorno de desarrollo Python profesional:
+Esta configuración proporciona un entorno de desarrollo Python profesional:
 
 - **VS Code** proporciona el editor de código con resaltado de sintaxis, IntelliSense y depuración
 - **Contenedor Docker** ejecuta un entorno Linux aislado con Python y todas las dependencias
 - **Imagen oficial de Python** (`python:3.12-slim`) incluye Python, pip y herramientas esenciales
 - **Configuración de Dev Container** (`.devcontainer/`) instala automáticamente extensiones de VS Code para depuración Python y soporte de lenguaje
-- **Reenvío de puertos** le permite acceder a aplicaciones web (Streamlit, Flask) que se ejecutan dentro del contenedor desde su navegador
+- **Reenvío de puertos** permite acceder a aplicaciones web (Streamlit, Flask) que se ejecutan dentro del contenedor desde su navegador
 
 ## Flujo de Trabajo Diario
 
-Una vez que todo esté configurado, aquí está su rutina diaria:
+Una vez configurado todo, esta es su rutina diaria:
 
 1. **Iniciar Docker Desktop** - Abra la aplicación y espere el indicador de estado verde (Docker debe estar ejecutándose)
 2. **Abrir VS Code** - Inicie VS Code y abra su carpeta de proyecto
-3. **Reabrir en Contenedor** - Si no está ya en el contenedor, haga clic en el icono verde (inferior izquierdo) y seleccione **Reopen in Container**
+3. **Reabrir en Contenedor** - Si no está ya en el contenedor, haga clic en el ícono verde (inferior izquierdo) y seleccione **Reopen in Container**
 4. **Escribir y ejecutar código** - Edite archivos `.py`, ejecute línea por línea con `Shift+Enter`, o ejecute aplicaciones con `streamlit run app.py`
 5. **Guardar su trabajo** - Sus archivos de código (`.py`, `.ipynb`) se guardan en su computadora y persisten entre sesiones
 6. **Confirmar y enviar** - Use GitHub Desktop para confirmar sus cambios y enviarlos al repositorio

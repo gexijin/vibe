@@ -1,15 +1,15 @@
 [Inicio](index.html)
 
-# Escriba un Artículo de Investigación con Claude Code
+# Escribir Artículos de Investigación con Claude Code
 
-Escriba artículos de investigación utilizando Claude Code como asistente para investigar, generar ideas, planificar, redactar y editar. Luego automatice este proceso creando un slash command de plantilla. Vea un [ejemplo de artículo](./example_paper.md) creado usando este flujo de trabajo.
+Aprenda a escribir artículos de investigación utilizando Claude Code como asistente para investigar, generar ideas, planificar, redactar y editar. Automatice el proceso completo creando un slash command reutilizable. Vea un [ejemplo de artículo](./example_paper.md) creado con este flujo de trabajo.
 
 ## Conceptos Clave
 
 - **Flujo de trabajo** - Investigación → Lluvia de ideas → Investigación enfocada → Esquema → Borrador → Revisión manual → Pulir con IA → Agregar resumen → Mejorar título → Verificar referencias → Corrección con IA
-- **Asistente de IA** - El humano toma las decisiones clave mientras la IA hace el trabajo tedioso
-- **Claude Code** - Sistema de IA agéntica que busca en la web, organiza la investigación y redacta contenido mediante solicitudes simples
-- **slash command** - Un prompt personalizado y detallado que puede reutilizarse en Claude Code
+- **Asistente de IA** - Usted toma las decisiones importantes mientras la IA realiza el trabajo repetitivo
+- **Claude Code** - Sistema de IA que busca información en la web, organiza la investigación y redacta contenido mediante instrucciones en lenguaje natural
+- **Slash command** - Comando personalizado que puede reutilizarse en Claude Code para automatizar flujos de trabajo
 
 ## Lo Que Necesitará
 
@@ -24,7 +24,7 @@ Cree una carpeta para su artículo de investigación:
 - Navegue a **Documentos**
 - Cree una nueva carpeta llamada `test_claude`
 
-Todo sobre este proyecto ocurre en esta carpeta.
+Todo el trabajo de este proyecto se realizará en esta carpeta.
 
 ## Paso 2: Iniciar VS Code
 Para Windows:
@@ -76,28 +76,28 @@ Para Mac:
 Pídale a Claude que investigue su tema. Copie y pegue este prompt en Claude Code, reemplazando el tema con el suyo propio:
 
 ```
-I'm writing a ~1,000 word research paper on AI adoption in the workplace.
-Search for recent data (2023-2025) on:
-- Productivity gains from AI tools
-- Job displacement concerns and statistics
-- Real-world case studies from companies
+Estoy escribiendo un artículo de investigación de aproximadamente 1,000 palabras sobre la adopción de IA en el lugar de trabajo.
+Busca datos recientes (2023-2025) sobre:
+- Ganancias de productividad con herramientas de IA
+- Preocupaciones sobre desplazamiento laboral y estadísticas
+- Casos de estudio reales de empresas
 
-Requirements:
-- Prioritize peer-reviewed research and credible industry reports
-- Avoid anecdotes and opinion pieces
-- List each source with a 1-3 sentence summary
-- Group sources by topic
+Requisitos:
+- Prioriza investigación revisada por pares e informes de la industria confiables
+- Evita anécdotas y artículos de opinión
+- Lista cada fuente con un resumen de 1-3 oraciones
+- Agrupa las fuentes por tema
 
-Save as general_research.md
+Guarda como general_research.md
 ```
 
-Claude busca en la web y organiza los hallazgos en un archivo llamado `general_research.md`. Esto puede tomar uno o dos minutos. Cuando complete, solicite un resumen:
+Claude buscará en la web y organizará los resultados en un archivo llamado `general_research.md`. Esto puede tardar uno o dos minutos. Cuando termine, solicite un resumen:
 
 ```
-Give me a brief summary.
+Dame un resumen breve.
 ```
 
-Revise el resumen de Claude para obtener una vista rápida del panorama de investigación.
+Revise el resumen para obtener una visión general rápida del panorama de investigación.
 
 ## Paso 6: Leer las Fuentes
 Lea el documento de investigación y haga clic en las fuentes originales para verificar la información:
@@ -108,66 +108,66 @@ Lea el documento de investigación y haga clic en las fuentes originales para ve
 
 ## Paso 7: Lluvia de Ideas Sobre Su Enfoque
 
-Pídale a Claude que ayude con la lluvia de ideas:
+Pídale a Claude que le ayude a generar ideas:
 
 ```
-Based on this research, suggest 3-4 angles I could take for this paper.
+Basándote en esta investigación, sugiere 3-4 enfoques que podría tomar para este artículo.
 ```
 
-Revise los enfoques y elija el que más le interese.
+Revise las opciones y elija la que más le interese.
 
 ## Paso 8: Investigación Enfocada
 
-Ahora que tiene su enfoque, pídale a Claude investigación dirigida:
+Ahora que tiene su enfoque, pídale a Claude una investigación más específica:
 
 ```
-I want to focus on [your chosen angle]. Search for more specific data
-and examples that support this perspective. Save as focused_research.md
+Quiero enfocarme en [tu enfoque elegido]. Busca datos más específicos
+y ejemplos que respalden esta perspectiva. Guarda como focused_research.md
 ```
 
-Claude encuentra información específica.
+Claude encontrará información específica sobre su enfoque.
 
 ## Paso 9: Crear Su Plan
 
 Pídale a Claude que cree un esquema basado en su enfoque elegido:
 
 ```
-Give me 3 options for a brief outline for my paper based on the focused
-research and my chosen angle. Use bullet points for the narrative flow.
-Save as outlines.md
+Dame 3 opciones de esquema breve para mi artículo basado en la investigación
+enfocada y mi enfoque elegido. Usa viñetas para el flujo narrativo.
+Guarda como outlines.md
 ```
 
-Revise el esquema y pídale a Claude que lo ajuste según sea necesario (por ejemplo, "Make section 2 focus more on case studies" o "Add a section on limitations").
+Revise el esquema y pídale a Claude que lo ajuste según sea necesario (por ejemplo, "Haz que la sección 2 se enfoque más en casos de estudio" o "Agrega una sección sobre limitaciones").
 
 ## Paso 10: Redactar el Artículo
 
 Seleccione su esquema y pídale a Claude que escriba el borrador completo:
 
 ```
-I like outline #2 [your chosen option].
+Me gusta el esquema #2 [tu opción elegida].
 
-Write a ~1,000 word research paper based on the outline and research.
+Escribe un artículo de investigación de aproximadamente 1,000 palabras basado en el esquema y la investigación.
 
-Structure:
-- Introduction: Hook, context, thesis statement
-- Body: 2-3 sections with arguments, statistics, and examples
-- Conclusion: Summary and implications
+Estructura:
+- Introducción: Gancho, contexto, declaración de tesis
+- Cuerpo: 2-3 secciones con argumentos, estadísticas y ejemplos
+- Conclusión: Resumen e implicaciones
 
-Style:
-- Clear, concise sentences (15-20 words average)
-- Active voice, analytical tone
-- Statistics woven into prose (no bullet lists)
-- Smooth transitions between paragraphs
+Estilo:
+- Oraciones claras y concisas (promedio de 15-20 palabras)
+- Voz activa, tono analítico
+- Estadísticas integradas en la prosa (sin listas de viñetas)
+- Transiciones suaves entre párrafos
 
-Citations:
-- Use numbered references [1], [2], etc. after claims
-- Include 5-15 references
-- Add a References section at the end
+Citas:
+- Usa referencias numeradas [1], [2], etc. después de las afirmaciones
+- Incluye 5-15 referencias
+- Agrega una sección de Referencias al final
 
-Save as paper.md
+Guarda como paper.md
 ```
 
-Claude escribe el borrador.
+Claude escribirá el borrador completo.
 
 ## Paso 11: Revisar Manualmente
 
@@ -184,89 +184,89 @@ Guarde sus cambios en el editor.
 Pídale a Claude que mejore secciones específicas:
 
 ```
-Make the introduction more engaging with a compelling hook.
+Haz la introducción más atractiva con un gancho convincente.
 ```
 
 ## Paso 13: Agregar un Resumen
 
-Pídale a Claude que agregue un resumen ejecutivo breve al principio:
+Pídale a Claude que agregue un resumen breve al principio:
 
 ```
-Add an abstract at the beginning of the paper. Write 2-3 short sentences
-that summarize the paper.
+Agrega un resumen al inicio del artículo. Escribe 2-3 oraciones cortas
+que resuman el artículo.
 ```
 
-Claude agregará el resumen. Revise y edite para asegurarse de que capture con precisión la esencia de su artículo.
+Claude agregará el resumen. Revíselo y edítelo para asegurarse de que capture con precisión la esencia de su artículo.
 
 ## Paso 14: Mejorar el Título
 
-Pídale a Claude que le dé algunas opciones para el título:
+Pídale a Claude que le sugiera opciones para el título:
 
 ```
-Give me a few options for the title. Make it more appealing.
+Dame varias opciones para el título. Hazlo más atractivo.
 ```
 
-Seleccione un título. Agregue su toque personal:
+Seleccione un título y agregue su toque personal:
 
 ```
-I like option #2 [your choice]. Edit the file.
+Me gusta la opción #2 [tu elección]. Edita el archivo.
 ```
 
 ## Paso 15: Verificar Referencias (Opcional)
 Pídale a Claude que verifique que sus citas sean consistentes y completas:
 ```
-Check all references in my paper:
-- Verify each citation number [1], [2], etc. has a matching reference
-- Verify each reference in the list is actually cited in the paper
-- Check that author names and titles are consistent
-- Verify the cited data and examples appear in the source
+Verifica todas las referencias en mi artículo:
+- Verifica que cada número de cita [1], [2], etc. tenga una referencia correspondiente
+- Verifica que cada referencia en la lista esté citada en el artículo
+- Verifica que los nombres de autores y títulos sean consistentes
+- Verifica que los datos y ejemplos citados aparezcan en la fuente
 ```
 
-Nota: Claude solo puede verificar fuentes de acceso público. Para artículos con acceso de pago, verifique manualmente que sus citas coincidan con lo que leyó.
+Nota: Claude solo puede verificar fuentes de acceso público. Para artículos con acceso restringido, verifique manualmente que sus citas coincidan con lo que leyó.
 
 ## Paso 16: Corrección con IA
 
 Pídale a Claude que haga una corrección final:
 
 ```
-Do a final proofread of the paper:
-- Fix any spelling and grammar errors
-- Ensure consistent formatting throughout
-- Check flow and transition
+Haz una corrección final del artículo:
+- Corrige cualquier error ortográfico y gramatical
+- Asegura un formato consistente en todo el documento
+- Verifica el flujo y las transiciones
 ```
 
-Revise los cambios de Claude.
+Revise los cambios realizados por Claude.
 
 **Exportar a Word:** En VS Code, haga clic derecho en la pestaña `paper.md` y seleccione **Open Preview**. Haga clic dentro del panel de vista previa, luego haga clic en **Edit > Select All** y **Edit > Copy**. Pegue en Microsoft Word—el formato se conservará.
 
 ## Paso 17: Crear un Slash Command para Futuros Artículos
 
-Guarde este flujo de trabajo como un slash command reutilizable para su próximo artículo de investigación:
+Guarde este flujo de trabajo como un slash command reutilizable para sus próximos artículos:
 
 ```
-Create a slash command called /research-paper that guides me through
-this entire workflow. Save it so I can use it for future research papers on various topics.
+Crea un slash command llamado /research-paper que me guíe a través de
+todo este flujo de trabajo. Guárdalo para que pueda usarlo en futuros artículos de investigación sobre diversos temas.
 ```
 
-Claude creará un slash command personalizado en su carpeta `.claude/commands/`. Es un archivo Markdown que contiene un prompt. Puede comenzar su próximo artículo de investigación simplemente escribiendo `/research-paper [your topic]`!
+Claude creará un slash command personalizado en su carpeta `.claude/commands/`. Es un archivo Markdown que contiene un prompt. Podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [tu tema]`.
 
 ## Paso 18: Obtener Retroalimentación
 
-Los LLM no tienen memoria. Para cada respuesta, tenemos que enviar todas nuestras conversaciones anteriores en la sesión de chat para contexto. A medida que la interacción se hace más larga, debemos ser conscientes de la longitud del contexto. Si no está relacionado, o podemos proporcionar un contexto más limpio, nos beneficiaremos de un nuevo comienzo.
+Los LLM no tienen memoria permanente. Para cada respuesta, se envía el historial completo de la conversación como contexto. A medida que la interacción se hace más larga, es importante gestionar la longitud del contexto. Limpiar el contexto permite obtener una perspectiva fresca.
 
-Limpie la memoria de Claude para obtener retroalimentación sobre su artículo. Escriba:
+Limpie la memoria de Claude para obtener retroalimentación imparcial sobre su artículo:
 
 ```
 /clear
 ```
 
-Esto elimina todo el historial de conversación, por lo que Claude leerá su artículo con ojos frescos. Ahora solicite retroalimentación:
+Esto elimina todo el historial de conversación, permitiendo que Claude lea su artículo con una perspectiva fresca. Ahora solicite retroalimentación:
 
 ```
-Read paper.md and give me honest feedback.
+Lee paper.md y dame retroalimentación honesta.
 ```
 
-Claude criticará su artículo sin estar influenciado por haberlo escrito. Haga las revisiones finales basándose en la retroalimentación.
+Claude evaluará su artículo de forma objetiva, sin estar influenciado por haberlo escrito. Realice las revisiones finales según la retroalimentación recibida.
 
 
 ## El Flujo de Trabajo Completo
@@ -293,27 +293,27 @@ Claude criticará su artículo sin estar influenciado por haberlo escrito. Haga 
 
 Ahora que tiene el slash command `/research-paper`, intente escribir más artículos:
 
-- **Tecnología:** `/research-paper "Impact of social media on teen mental health"`
-- **Negocios:** `/research-paper "Remote work productivity"`
-- **Ciencia:** `/research-paper "CRISPR gene editing ethics"`
-- **Formato:** Pídale a Claude `Give me the paper in LaTeX format`
+- **Tecnología:** `/research-paper "Impacto de las redes sociales en la salud mental adolescente"`
+- **Negocios:** `/research-paper "Productividad del trabajo remoto"`
+- **Ciencia:** `/research-paper "Ética de la edición genética CRISPR"`
+- **Formato:** Pídale a Claude `Dame el artículo en formato LaTeX`
 
-¡El slash command lo guiará a través de todo el flujo de trabajo automáticamente! No olvide limpiar la memoria cuando esté cambiando de temas.
+El slash command lo guiará automáticamente a través de todo el flujo de trabajo. Recuerde limpiar la memoria cuando cambie de tema.
 
 ## Solución de Problemas
 
-- **Los resultados de búsqueda de Claude parecen desactualizados:** Especifique "search for 2024-2025 data on [topic]"
-- **El borrador es muy largo/corto:** Dígale a Claude: "Make this approximately 1,000 words"
+- **Los resultados de búsqueda parecen desactualizados:** Especifique "busca datos de 2024-2025 sobre [tema]"
+- **El borrador es muy largo o corto:** Indique: "Haz que tenga aproximadamente 1,000 palabras"
 - **No puede encontrar archivos:** En el terminal, escriba `ls` para listar todos los archivos en la carpeta actual
 
 ## Lo Que Puede Pedirle a Claude
 
-- `search for more recent statistics on [topic]` - Encontrar datos más recientes
-- `summarize the key arguments in this paper` - Obtener una vista general
-- `make the conclusion more persuasive` - Mejorar secciones específicas
-- `cite all sources in APA format` - Formatear referencias
+- `Busca estadísticas más recientes sobre [tema]` - Encontrar datos actualizados
+- `Resume los argumentos clave de este artículo` - Obtener una visión general
+- `Haz la conclusión más persuasiva` - Mejorar secciones específicas
+- `Cita todas las fuentes en formato APA` - Formatear referencias
 
-¡Claude maneja la investigación y redacción a través de lenguaje natural—no hay comandos que memorizar!
+Claude maneja la investigación y redacción mediante lenguaje natural. No hay comandos que memorizar.
 
 ---
 

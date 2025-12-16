@@ -2,7 +2,7 @@
 
 # Programación en R en VS Code a través de Docker Container
 
-¿Alguna vez intentó compartir su código R con un colega, solo para pasar horas depurando problemas de "pero funciona en mi máquina"? Los contenedores Docker son como contenedores de envío para código: empaquetan su entorno R, bibliotecas y dependencias en una caja sellada que funciona igual en todas partes. Además, tiene acceso a decenas de miles de imágenes preconstruidas en [Docker Hub](https://hub.docker.com/), donde los desarrolladores de software publican entornos listos para usar, evitando el dolor de la instalación manual de software. Este tutorial le muestra cómo ejecutar R en un entorno aislado y reproducible usando VS Code y Docker Desktop.
+¿Alguna vez intentó compartir su código R con un colega, solo para pasar horas depurando problemas de "pero funciona en mi máquina"? Los contenedores Docker son como contenedores de envío para código: empaquetan su entorno R, bibliotecas y dependencias en una caja sellada que funciona igual en todas partes. Además, tiene acceso a decenas de miles de imágenes preconstruidas en [Docker Hub](https://hub.docker.com/), donde los desarrolladores publican entornos listos para usar, evitando la instalación manual de software. Este tutorial muestra cómo ejecutar R en un entorno aislado y reproducible usando VS Code y Docker Desktop.
 
 ## Conceptos Clave
 
@@ -13,8 +13,8 @@
 
 ## Lo Que Necesitará
 
-- Haber completado [R Coding in VS Code](./R_Coding_VS_Code_Guide)
-- Haber completado [GitHub Desktop Basics](./Github_desktop)
+- Tutorial [R Coding in VS Code](./R_Coding_VS_Code_Guide) completado
+- Tutorial [GitHub Desktop Basics](./Github_desktop) completado
 - 20-25 minutos
 
 ## Paso 1: Instalar Docker Desktop
@@ -91,7 +91,7 @@ cd ..
 ls
 ```
 
-Solo verá `vibe/` - el contenedor está aislado. No puede acceder a las otras carpetas de su computadora, Escritorio o Documentos. Este aislamiento asegura que su entorno R sea limpio y reproducible.
+Solo verá `vibe/` - el contenedor está aislado. No puede acceder a otras carpetas de su computadora, Escritorio o Documentos. Este aislamiento garantiza que su entorno R sea limpio y reproducible.
 
 - Regrese a la carpeta del proyecto:
 
@@ -198,7 +198,7 @@ Después de cambiar la imagen base, reconstruya el contenedor para aplicar los c
 
 ## Paso 11: Instalar Paquetes R en la Imagen Docker (Opcional)
 
-Los paquetes instalados a través de la consola R (`install.packages()`) son temporales y desaparecen cuando reconstruye el contenedor. Para hacer los paquetes permanentes, agréguelos al Dockerfile.
+Los paquetes instalados mediante la consola R (`install.packages()`) son temporales y desaparecen cuando reconstruye el contenedor. Para hacer los paquetes permanentes, agréguelos al Dockerfile.
 
 - En VS Code Explorer, navegue hasta `.devcontainer/Dockerfile`
 - Haga clic para abrir el archivo
@@ -210,7 +210,7 @@ RUN R -q -e 'install.packages("data.table", repos="https://cloud.r-project.org")
 - Guarde el archivo (**File > Save**)
 - Haga clic en el icono verde en la esquina inferior izquierda
 - Seleccione **Rebuild Container** del menú
-- VS Code reconstruirá el contenedor con su nuevo paquete (esto toma 2-5 minutos)
+- VS Code reconstruirá el contenedor con su nuevo paquete (toma 2-5 minutos)
 - Para verificar, abra una terminal R y escriba:
 
 ```r
@@ -233,13 +233,13 @@ Si se carga sin errores, el paquete está instalado permanentemente.
 
 ## Resumen del Flujo de Trabajo
 
-Esta configuración le proporciona un entorno profesional de desarrollo en R:
+Esta configuración proporciona un entorno profesional de desarrollo en R:
 
 - **VS Code** proporciona el editor de código con resaltado de sintaxis e IntelliSense
 - **Docker container** ejecuta un entorno Linux aislado con R y todas las dependencias
 - **Rocker image** (`rocker/shiny-verse`) incluye R, Shiny, tidyverse y herramientas de desarrollo
 - **Dev Container config** (`.devcontainer/`) instala automáticamente extensiones de VS Code para depuración de R y soporte de lenguaje
-- **Port forwarding** le permite acceder a la aplicación Shiny que se ejecuta dentro del contenedor desde su navegador
+- **Port forwarding** permite acceder a la aplicación Shiny que se ejecuta dentro del contenedor desde su navegador
 
 ## Flujo de Trabajo Diario
 

@@ -2,14 +2,14 @@
 
 # Primeros Pasos con VS Code
 
-Usted desea escribir código, pero Notepad o TextEdit se siente limitante. Necesita algo que le ayude a codificar más rápido, con resaltado de sintaxis, autocompletado y herramientas integradas. **VS Code es como un cuaderno inteligente para código**: entiende lo que está escribiendo y le ayuda en el camino. [Visual Studio Code](https://code.visualstudio.com) es gratuito, funciona en cualquier sistema operativo y es utilizado por millones de desarrolladores.
+Quiere escribir código, pero Notepad o TextEdit le resulta muy limitante. Necesita algo que le ayude a codificar más rápido, con resaltado de sintaxis, autocompletado y herramientas integradas. **VS Code es como un cuaderno inteligente para código**: entiende lo que escribe y le ayuda en el proceso. [Visual Studio Code](https://code.visualstudio.com) es gratuito, funciona en cualquier sistema operativo y millones de desarrolladores lo utilizan.
 
 ## Conceptos Clave
 
-- **Editor** - El área principal donde escribe código
-- **Explorer** - La barra lateral que muestra sus archivos y carpetas
-- **Extensions** - Complementos que dan nuevas funciones a VS Code
-- **Integrated Terminal** - Una línea de comandos integrada en VS Code
+- **Editor** - Área principal donde escribe código
+- **Explorer** - Barra lateral que muestra sus archivos y carpetas
+- **Extensions** - Complementos que agregan nuevas funciones a VS Code
+- **Terminal Integrado** - Línea de comandos integrada en VS Code
 
 ## Lo Que Necesitará
 
@@ -34,13 +34,13 @@ Verá una pestaña de bienvenida con opciones para comenzar.
 
 VS Code tiene cinco áreas principales:
 
-- **Activity Bar** (borde izquierdo) - Iconos para Explorer, Search, Git, Extensions, etc.
-- **Side Bar** - Muestra el contenido de la actividad seleccionada (archivos, resultados de búsqueda)
+- **Barra de Actividad** (borde izquierdo) - Iconos para Explorer, Search, Git, Extensions, etc.
+- **Barra Lateral** - Muestra el contenido de la actividad seleccionada (archivos, resultados de búsqueda)
 - **Editor** (centro) - Donde escribe código
 - **Panel** (parte inferior) - Terminal, Problems, Output
-- **Status Bar** (borde inferior) - Información sobre su archivo y proyecto
+- **Barra de Estado** (borde inferior) - Información sobre su archivo y proyecto
 
-Haga clic en el icono **Explorer** (parte superior del Activity Bar) para ver el navegador de archivos.
+Haga clic en el icono **Explorer** (parte superior de la Barra de Actividad) para ver el navegador de archivos.
 
 ## Paso 3: Abra una Carpeta y Explore
 
@@ -62,23 +62,23 @@ La barra lateral Explorer ahora muestra los archivos de su carpeta:
 - Agregue este contenido:
 
 ```
-# My Project
+# Mi Proyecto
 
-This is a **demo project** for learning VS Code.
+Este es un **proyecto de demostración** para aprender VS Code.
 
-## Features
-- Easy to edit
-- Markdown formatting
-- Live preview
+## Características
+- Fácil de editar
+- Formato Markdown
+- Vista previa en vivo
 
-## Next Steps
-1. Add more content
-2. Try other file types
-3. Explore extensions
+## Próximos Pasos
+1. Agregar más contenido
+2. Probar otros tipos de archivos
+3. Explorar extensiones
 ```
 - Haga clic en **File** → **Save** para guardar
 
-Markdown es un formato de texto simple que usa símbolos como `#` para encabezados, `**` para negrita y `-` para listas. Es ampliamente utilizado para documentación y para comunicarse con LLMs como ChatGPT y Claude.
+Markdown es un formato de texto simple que usa símbolos como `#` para encabezados, `**` para negrita y `-` para listas. Se usa ampliamente para documentación y para comunicarse con LLMs como ChatGPT y Claude.
 
 ## Paso 5: Instale la Extensión Markdown Preview
 
@@ -89,10 +89,10 @@ Markdown es un formato de texto simple que usa símbolos como `#` para encabezad
 
 ## Paso 6: Previsualice Su Archivo Markdown
 
-- Abra `README.md` si no está ya abierto
+- Abra `README.md` si aún no está abierto
 - Haga clic derecho en el editor y seleccione **Markdown Preview Enhanced: Open Preview to the Side**
 
-Se abre un panel de vista previa que muestra su Markdown formateado: edite a la izquierda, vea los cambios a la derecha en tiempo real.
+Se abre un panel de vista previa que muestra su Markdown formateado: edite a la izquierda y vea los cambios a la derecha en tiempo real.
 
 ## Paso 7: Use el Terminal Integrado
 
@@ -105,13 +105,13 @@ ls
 ```
 (En Windows Command Prompt, use `dir`)
 
-**Imprimir directorio de trabajo:**
+**Mostrar directorio de trabajo:**
 ```
 pwd
 ```
 (En Windows Command Prompt, use `cd`)
 
-**Crear una nueva carpeta:**
+**Crear una carpeta nueva:**
 ```
 mkdir notes
 ```
@@ -125,10 +125,10 @@ VS Code incluye [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot
 - Abra el archivo `README.md` (o cualquier otro archivo en su proyecto)
 - Haga clic en **Chat** → **Open Chat** en la barra de título (o presione `Ctrl+Alt+I` en Windows/Linux, `Ctrl+Cmd+I` en Mac)
 - Si se le solicita, inicie sesión con su cuenta de **GitHub** (hay un plan gratuito disponible)
-- En el panel de chat que se abre, escriba: "Explain this file"
+- En el panel de chat que se abre, escriba: "Explica este archivo"
 - Presione **Enter**
 
-GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que escriba código nuevo, corrija errores o responda preguntas como "How do I add more features?"
+GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que escriba código nuevo, corrija errores o responda preguntas como "¿Cómo agrego más características?"
 
 **Consejo:** Para [edición en línea](https://code.visualstudio.com/docs/copilot/copilot-chat), resalte código en cualquier archivo y presione `Ctrl+I` (Windows/Linux) o `Cmd+I` (Mac) para pedirle a Copilot que modifique, corrija o explique solo esa sección.
 
@@ -140,17 +140,17 @@ GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que e
 
 ## Solución de Problemas
 
-- **La vista previa no se muestra:** Asegúrese de que la extensión Markdown Preview Enhanced esté instalada y tenga un archivo `.md` abierto
-- **El terminal muestra el directorio incorrecto:** Haga clic en el icono de papelera en el panel del terminal, luego haga clic en **Terminal** → **New Terminal**
-- **El menú Chat no es visible:** Es posible que GitHub Copilot Chat necesite instalarse: haga clic en el icono **Extensions**, busque "GitHub Copilot Chat" e instálelo
+- **La vista previa no se muestra:** Asegúrese de que la extensión Markdown Preview Enhanced esté instalada y que tenga un archivo `.md` abierto
+- **El terminal muestra el directorio incorrecto:** Haga clic en el icono de papelera en el panel del terminal, luego en **Terminal** → **New Terminal**
+- **El menú Chat no es visible:** Es posible que necesite instalar GitHub Copilot Chat: haga clic en el icono **Extensions**, busque "GitHub Copilot Chat" e instálelo
 - **Las extensiones no funcionan:** Haga clic en **View** → **Command Palette**, escriba "reload window" y seleccione **Developer: Reload Window**
 
-## El Flujo de Trabajo Completo
+## Flujo de Trabajo Completo
 
 1. Abra una carpeta en VS Code
-2. Cree/edite archivos
+2. Cree y edite archivos
 3. Use extensiones para previsualizar
-4. Use el terminal para comandos
+4. Use el terminal para ejecutar comandos
 5. Use IA para entender y mejorar el código
 6. Guarde y repita
 

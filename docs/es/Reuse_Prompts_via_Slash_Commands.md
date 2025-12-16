@@ -2,9 +2,9 @@
 
 # Crear Comandos Slash Personalizados
 
-¿Cansado de escribir los mismos prompts detallados una y otra vez? Los comandos slash personalizados le permiten guardar instrucciones complejas como atajos reutilizables. Como crear atajos de teclado para sus tareas más frecuentes, los comandos slash convierten prompts extensos en comandos simples como `/stock-report Apple` que generan informes completos instantáneamente.
+¿Cansado de escribir los mismos prompts detallados una y otra vez? Los comandos slash personalizados le permiten guardar instrucciones complejas como atajos reutilizables. Al igual que crear atajos de teclado para sus tareas más frecuentes, los comandos slash transforman prompts extensos en comandos simples como `/stock-report Apple` que generan informes completos al instante.
 
-¿La mejor parte? Usamos Claude para escribir el prompt detallado y crear el Skill. Sí, Claude es muy bueno escribiendo prompts para...sí mismo.
+¿La mejor parte? Usamos Claude para escribir el prompt detallado y crear el comando. Así es, Claude es muy bueno escribiendo prompts para... sí mismo.
 
 ## Conceptos Clave
 
@@ -61,13 +61,13 @@ Claude Code se inicia y muestra un mensaje de bienvenida.
 En lugar de crear archivos manualmente, deje que Claude haga el trabajo. Escriba este prompt:
 
 ```
-Create a slash command called stock-report that generates
-reports on recent developments of a company identified by name or ticker symbol.
-Include:
-- Product or service news
-- Management team news
-- Recent financial reports
-- Analyst reports
+Crea un comando slash llamado stock-report que genere informes sobre
+desarrollos recientes de una empresa identificada por nombre o símbolo bursátil.
+Incluye:
+- Noticias de productos o servicios
+- Noticias del equipo directivo
+- Informes financieros recientes
+- Informes de analistas
 ```
 Cuando se le solicite, otorgue a Claude permiso para crear el archivo.
 Claude creará un prompt detallado y lo guardará como `stock-report.md` en la carpeta `.claude/commands/`.
@@ -83,9 +83,9 @@ Si tiene VS Code instalado (recomendado):
 - Desde **File**, elija **Open folder**, y seleccione la carpeta del proyecto `Documents/test_claude`
 - Desde el explorador de archivos, navegue a `.claude/commands` y haga clic en el archivo `stock-report.md` para abrirlo
 
-Revise el prompt y haga cambios a las instrucciones si lo desea.
+Revise el prompt y modifique las instrucciones si lo desea.
 
-**Nota:** Claude es increíblemente bueno escribiendo prompts. Puede ver que su prompt está bien estructurado usando formato markdown y claramente escrito. Aprenda a escribir prompts como este. A veces incluso incluye instrucciones para solicitar aclaraciones si el identificador es ambiguo.
+**Nota:** Claude es excelente escribiendo prompts. Notará que su prompt está bien estructurado con formato markdown y redactado con claridad. Aprenda a escribir prompts como este. A veces incluso incluye instrucciones para solicitar aclaraciones si el identificador es ambiguo.
 
 ## Paso 5: Probar el Comando
 
@@ -111,12 +111,12 @@ Claude crea un informe en la línea de comandos. Revise la salida:
 
 ## Paso 7: Guardar el Informe en un Archivo
 
-Modifiquemos el comando slash para guardar automáticamente los informes como archivos markdown. Agregue esto al archivo markdown del comando slash manualmente.
+Modifiquemos el comando slash para guardar automáticamente los informes como archivos markdown. Agregue esto manualmente al archivo markdown del comando slash.
 
 - Abra el archivo `stock-report.md` de la carpeta `.claude/commands/`
-- Agregue esto al final.
+- Agregue esto al final:
   ```
-  Save the report as a markdown file. File name has company name and date.
+  Guarda el informe como un archivo markdown. El nombre del archivo debe incluir el nombre de la empresa y la fecha.
   ```
 - Guarde el archivo.
 
@@ -140,10 +140,10 @@ Claude genera el informe y lo guarda como un archivo markdown llamado algo como 
 Puede pedir a Claude que edite los comandos slash:
 
 ```
-Revise the stock-report slash command to save the report as a html file.
+Modifica el comando slash stock-report para que guarde el informe como un archivo html.
 ```
 
-Claude actualiza el archivo de comando. Puede verificar desde el editor.
+Claude actualiza el archivo de comando. Puede verificarlo desde el editor.
 
 ## Paso 10: Probar el Comando Actualizado
 
@@ -162,15 +162,15 @@ Claude crea un archivo llamado algo como `Apple_2025-12-13.html`. Haga clic en e
 
 ## Paso 11: Reutilizar el Comando Slash (Opcional)
 
-La palabra clave `$ARGUMENTS` en su comando slash actúa como un marcador de posición. Cuando usted escribe `/stock-report AAPL`, Claude reemplaza `$ARGUMENTS` con `AAPL` antes de ejecutar el prompt.
+La palabra clave `$ARGUMENTS` en su comando slash funciona como un marcador de posición. Cuando escribe `/stock-report AAPL`, Claude reemplaza `$ARGUMENTS` con `AAPL` antes de ejecutar el prompt.
 
-Pruebe otro símbolo:
+Pruebe con otro símbolo:
 
 ```
 /stock-report TSLA
 ```
 
-La misma estructura de comando ahora investiga Tesla en su lugar.
+La misma estructura de comando ahora investiga Tesla.
 
 ## Paso 12: Probar Otro Comando Slash (Opcional)
 
@@ -189,29 +189,29 @@ Luego ejecute el comando de artículo de investigación:
 ```
 
 Dos diferencias clave:
-- /research-paper fue creado al final de una sesión capturando la interacción humana, mientras que /stock-report se crea desde cero.
-- /research-paper solicita entradas de manera interactiva antes de redactar un artículo.
+- `/research-paper` se creó al final de una sesión capturando la interacción humana, mientras que `/stock-report` se crea desde cero
+- `/research-paper` solicita información de manera interactiva antes de redactar el artículo
 
 ## Próximos Pasos
 
-Ahora que entiende los comandos slash, cree más comandos personalizados para sus flujos de trabajo:
+Ahora que comprende los comandos slash, cree más comandos personalizados para sus flujos de trabajo:
 
-- **Revisión de código:** `/review-code` - Analizar código en busca de errores y mejoras
-- **Notas de reunión:** `/meeting-summary` - Generar resúmenes estructurados de reuniones
-- **Borradores de correo electrónico:** `/email-reply` - Crear respuestas de correo electrónico profesionales
+- **Revisión de código:** `/review-code` - Analiza código en busca de errores y mejoras
+- **Notas de reunión:** `/meeting-summary` - Genera resúmenes estructurados de reuniones
+- **Borradores de correo electrónico:** `/email-reply` - Crea respuestas de correo electrónico profesionales
 
 ## Solución de Problemas
 
 - **Comando no encontrado:** Reinicie Claude Code para recargar los comandos desde `.claude/commands/`
-- **Los argumentos no funcionan:** Verifique que `$ARGUMENTS` esté escrito correctamente en el archivo de comando (sensible a mayúsculas)
-- **Informe incompleto:** Pida a Claude que "continue" o "add more detail to the [section name] section"
+- **Los argumentos no funcionan:** Verifique que `$ARGUMENTS` esté escrito correctamente en el archivo de comando (distingue mayúsculas y minúsculas)
+- **Informe incompleto:** Pida a Claude que "continúe" o "agregue más detalle a la sección [nombre de sección]"
 
 ## Resumen del Flujo de Trabajo
 
-- **Los comandos slash personalizados** ahorran tiempo convirtiendo prompts complejos en atajos simples
+- **Los comandos slash personalizados** ahorran tiempo al convertir prompts complejos en atajos simples
 - **Los argumentos** hacen que los comandos sean flexibles para diferentes entradas (símbolos bursátiles, temas, archivos)
-- **Claude construye comandos** - No necesita escribir archivos Markdown manualmente; solo describa lo que desea
-- **Los comandos son reutilizables** - Una vez creados, úselos en proyectos y sesiones
+- **Claude construye comandos** - No necesita escribir archivos Markdown manualmente; solo describa lo que necesita
+- **Los comandos son reutilizables** - Una vez creados, úselos en cualquier proyecto y sesión
 - **Combine comandos** - Construya una biblioteca de comandos especializados para diferentes tareas
 
 ---

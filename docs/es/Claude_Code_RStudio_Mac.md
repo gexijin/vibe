@@ -2,7 +2,7 @@
 
 # Uso de Claude Code con RStudio en Mac
 
-Usted tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de codificación con IA. Este tutorial le muestra cómo usar ambas herramientas juntas en los mismos archivos de proyecto. Creará un proyecto R, escribirá código manualmente y luego usará Claude Code desde Terminal para mejorarlo con visualizaciones y análisis, todo mientras RStudio permanece abierto para ejecutar y probar su código.
+Tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de codificación con IA. Este tutorial muestra cómo usar ambas herramientas juntas en los mismos archivos de proyecto. Creará un proyecto R, escribirá código manualmente y luego usará Claude Code desde Terminal para mejorarlo con visualizaciones y análisis, todo mientras RStudio permanece abierto para ejecutar y probar su código.
 
 ## Conceptos Clave
 
@@ -12,7 +12,7 @@ Usted tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia
 
 ## Lo Que Necesitará
 
-- Haber completado la guía [Install Claude Code on Mac](./Install_Claude_Code_MacOS)
+- Guía [Install Claude Code on Mac](./Install_Claude_Code_MacOS) completada
 - RStudio instalado en Mac
 - 20-30 minutos
 
@@ -91,13 +91,13 @@ summary(iris)
 
 ## Paso 8: Solicitar a Claude un Gráfico de Dispersión
 
-Si Claude Code es lento o no responde, simplemente espere a que se inicialice. Luego, escriba esta solicitud:
+Si Claude Code es lento o no responde, simplemente espere a que se inicialice. Luego escriba esta solicitud:
 
 ```
-Add code to iris.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+Agrega código a iris.R para crear un gráfico de dispersión de longitud vs. ancho del sépalo, coloreado por especie. Usa ggplot2.
 ```
 - Claude Code leerá su archivo `iris.R` y agregará el código de visualización
-- Cuando se le solicite, otorgue a Claude permiso para editar el archivo iris.R seleccionando la opción apropiada
+- Cuando se le solicite, otorgue permiso a Claude para editar el archivo iris.R seleccionando la opción apropiada
 - Espere a que Claude termine (verá un mensaje de confirmación)
 
 
@@ -115,7 +115,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Cambie a Terminal (presione **Command (⌘) + Tab** o haga clic en la ventana de Terminal)
 - Escriba esta solicitud:
   ```
-  Remove title. Change marker type by species. Change to the classic theme.
+  Elimina el título. Cambia el tipo de marcador según la especie. Usa el tema clásico.
   ```
 
 ## Paso 11: Ver el Gráfico Refinado
@@ -131,7 +131,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Cambie a Terminal
 - Escriba esta solicitud:
   ```
-  Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+  Agrega código para realizar un análisis de componentes principales (PCA) sobre las variables numéricas y graficar las muestras usando los dos primeros componentes principales.
   ```
 
 ## Paso 13: Ejecutar el Análisis PCA
@@ -146,7 +146,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Cambie a Terminal
 - Escriba esta solicitud:
   ```
-  Review the entire script for correctness. Add comments when necessary.
+  Revisa todo el script para verificar que esté correcto. Agrega comentarios donde sea necesario.
   ```
 - Claude revisará el código y agregará comentarios completos
 
@@ -155,7 +155,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Cambie a Terminal
 - Escriba esta solicitud:
   ```
-  Create a new R Markdown file for this analysis. Save as iris_report.Rmd
+  Crea un nuevo archivo R Markdown para este análisis. Guárdalo como iris_report.Rmd
   ```
 - Claude le pedirá permiso para crear este archivo
 - Claude creará un nuevo archivo `.Rmd` en su carpeta de proyecto
@@ -189,23 +189,23 @@ Atajos útiles para cambiar entre aplicaciones:
 
 ## Próximos Pasos
 
-- Intente pedirle a Claude que agregue pruebas estadísticas (pruebas t, ANOVA) a su análisis
-- Solicite a Claude obtener una **versión Python** de este código y preparar un documento Quarto
+- Pida a Claude que agregue pruebas estadísticas (pruebas t, ANOVA) a su análisis
+- Solicite a Claude una **versión Python** de este código y preparar un documento Quarto
 - Solicite a Claude crear funciones para tareas repetitivas en sus scripts R
-- Use Claude para depurar mensajes de error cuando su código R no se ejecute
-- Explore pedirle a Claude que optimice código R lento para un mejor rendimiento
+- Use Claude para depurar mensajes de error cuando su código R no funcione
+- Pida a Claude que optimice código R lento para mejor rendimiento
 
 ## Resumen del Flujo de Trabajo
 
 Esta configuración híbrida combina lo mejor de ambos mundos:
 
-- **RStudio (Mac)** - Consola R interactiva, visualización inmediata de gráficos, interfaz gráfica familiar para ejecutar código
+- **RStudio (Mac)** - Consola R interactiva, visualización inmediata de gráficos, interfaz familiar para ejecutar código
 - **Claude Code (Terminal)** - Generación, revisión y mejora de código impulsada por IA
-- **Archivos compartidos** - Ambas herramientas trabajan en los mismos archivos en su carpeta Documentos
-- **Refinamiento iterativo** - Comience con código manual, mejore con Claude, pruebe en RStudio y luego refine más
+- **Archivos compartidos** - Ambas herramientas trabajan en los mismos archivos de su carpeta Documentos
+- **Refinamiento iterativo** - Comience con código manual, mejore con Claude, pruebe en RStudio y refine más
 - **Documentación** - Claude puede generar reportes y comentarios completos para su análisis
 
-El flujo de trabajo es simple: escriba o edite código con Claude en Terminal, luego pruébelo y ejecútelo inmediatamente en RStudio. No se necesita copiar archivos ni sincronización manual: ambas aplicaciones acceden a los mismos archivos sin problemas en su Mac.
+El flujo de trabajo es simple: escriba o edite código con Claude en Terminal, luego pruébelo y ejecútelo inmediatamente en RStudio. No necesita copiar archivos ni sincronización manual: ambas aplicaciones acceden a los mismos archivos sin problemas en su Mac.
 
 ---
 

@@ -2,18 +2,18 @@
 
 # Programación en Python con VS Code
 
-Usted desea escribir código Python pero no está seguro de qué editor usar, o está buscando algo más ligero que PyCharm. Piense en VS Code como una navaja suiza: maneja Python, R, JavaScript y muchos otros lenguajes en un solo editor ligero. Este tutorial le muestra cómo configurar Python en VS Code con características inteligentes como autocompletado de código, depuración interactiva e incluso aplicaciones web.
+Desea escribir código Python pero no está seguro de qué editor usar, o busca algo más ligero que PyCharm. Piense en VS Code como una navaja suiza: maneja Python, R, JavaScript y muchos otros lenguajes en un solo editor ligero. Este tutorial muestra cómo configurar Python en VS Code con características inteligentes como autocompletado de código, depuración interactiva y aplicaciones web.
 
 ## Conceptos Clave
 
 - **[Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - Extensión de VS Code desarrollada por Microsoft que proporciona resaltado de sintaxis, depuración, ejecución de código y soporte para notebooks Jupyter
-- **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)** - Servidor de lenguaje que habilita IntelliSense rápido, verificación de tipos e importaciones automáticas para Python
+- **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)** - Servidor de lenguaje que proporciona IntelliSense rápido, verificación de tipos e importaciones automáticas para Python
 - **[Virtual Environment](https://docs.python.org/3/library/venv.html)** - Entorno Python aislado para gestionar paquetes específicos del proyecto sin afectar el Python del sistema
 - **[Streamlit](https://streamlit.io/)** - Biblioteca de Python para crear aplicaciones web interactivas con scripts simples de Python
 
 ## Lo Que Necesitará
 
-- Haber completado [Conceptos Básicos de VS Code](./VS_Code_Getting_Started)
+- Tutorial completado [Primeros Pasos con VS Code](./VS_Code_Getting_Started)
 - Conexión a Internet para descargar Python y paquetes
 - 15-20 minutos
 
@@ -36,7 +36,7 @@ Necesita Python 3.8 o superior para la mejor compatibilidad con paquetes moderno
   - Python generalmente viene preinstalado. Verifique la versión con `python3 --version`
   - Si es necesario, instale vía gestor de paquetes: `sudo apt install python3 python3-pip python3-venv` (Ubuntu/Debian)
 
-Verifique la instalación abriendo una terminal y escribiendo `python3 --version` o `python --version`.
+Verifique la instalación abriendo una terminal y ejecutando `python3 --version` o `python --version`.
 
 ## Paso 2: Instalar Extensiones de Python en VS Code
 
@@ -67,7 +67,7 @@ Si no ve su instalación de Python, haga clic en **Enter interpreter path** y na
 
 ## Paso 5: Crear un Entorno Virtual
 
-Los entornos virtuales mantienen las dependencias de su proyecto aisladas.
+Los entornos virtuales mantienen aisladas las dependencias de su proyecto.
 
 - Haga clic en **View** en la barra de menú, luego **Command Palette**
 - Escriba `Python: Create Environment` y selecciónelo
@@ -126,8 +126,8 @@ plt.show()
 
 - Con `analysis.py` abierto, haga clic en el botón **▶ Run Python File** en la esquina superior derecha
 - O haga clic derecho en el editor y seleccione **Run Python File in Terminal**
-- Observe cómo la salida aparece en el panel de terminal
-- Una ventana de histograma aparecerá mostrando su gráfico
+- Observe la salida en el panel de terminal
+- Aparecerá una ventana de histograma mostrando su gráfico
 - También puede seleccionar líneas específicas y presionar `Shift+Enter` para ejecutar solo esas líneas en una sesión interactiva de Python
 
 ## Paso 9: Crear una Aplicación Simple de Streamlit
@@ -173,26 +173,26 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
-- La aplicación se abre en su navegador (generalmente en `http://localhost:8501`)
-- Mueva el control deslizante en la barra lateral y observe cómo el histograma se actualiza instantáneamente
+- La aplicación se abrirá en su navegador (generalmente en `http://localhost:8501`)
+- Mueva el control deslizante en la barra lateral y observe la actualización instantánea del histograma
 - Presione `Ctrl+C` en la terminal para detener la aplicación
 
 ## Paso 10: Usar Autocompletado de Código e IntelliSense
 
 - En `analysis.py`, comience a escribir `iris.` en una nueva línea
-- Aparece un menú desplegable con todos los métodos y atributos disponibles
-- Escriba `iris.gr` y observe cómo sugiere `groupby()`
+- Aparecerá un menú desplegable con todos los métodos y atributos disponibles
+- Escriba `iris.gr` y observe la sugerencia de `groupby()`
 - Pase el cursor del mouse sobre `pd.read_csv` en su código existente
-- Un popup muestra la firma de la función, parámetros y documentación
-- Intente escribir `import ` y observe cómo VS Code sugiere nombres de paquetes
+- Un popup mostrará la firma de la función, parámetros y documentación
+- Intente escribir `import ` y observe las sugerencias de nombres de paquetes de VS Code
 - Cuando escribe una llamada a función, IntelliSense muestra sugerencias de parámetros
 
 ## Paso 11: Probar la Depuración
 
-- En `analysis.py`, haga clic a la izquierda del número de línea 8 (la línea `print(iris.head())`) para establecer un punto de interrupción (aparece un punto rojo)
-- Haga clic en **Run** en la barra de menú, luego **Start Debugging**
+- En `analysis.py`, haga clic a la izquierda del número de línea 8 (la línea `print(iris.head())`) para establecer un punto de interrupción (aparecerá un punto rojo)
+- Haga clic en **Run** en la barra de menú, luego en **Start Debugging**
 - Seleccione **Python File** cuando se le solicite
-- La ejecución del código se pausa en el punto de interrupción
+- La ejecución del código se pausará en el punto de interrupción
 - Use la barra de herramientas de depuración para avanzar paso a paso por el código, inspeccionar variables y ver la pila de llamadas
 - Haga clic en **Run > Continue** para reanudar la ejecución
 
@@ -206,24 +206,24 @@ streamlit run app.py
 
 ## Solución de Problemas
 
-- **"Python is not recognized" en la terminal**: Python no está en su PATH del sistema. En Windows, reinstale Python y marque "Add python.exe to PATH". En Mac/Linux, use `python3` en lugar de `python`. Reinicie VS Code después de corregir.
+- **"Python is not recognized" en la terminal**: Python no está en su PATH del sistema. En Windows, reinstale Python y marque "Add python.exe to PATH". En Mac/Linux, use `python3` en lugar de `python`. Reinicie VS Code después.
 
-- **No se encuentra el intérprete**: Haga clic en el selector de intérprete en la esquina inferior derecha de VS Code, o haga clic en **View > Command Palette** y ejecute `Python: Select Interpreter`. Si su instalación de Python no aparece, seleccione **Enter interpreter path** y navegue hasta su ejecutable de Python.
+- **No se encuentra el intérprete**: Haga clic en el selector de intérprete en la esquina inferior derecha de VS Code, o en **View > Command Palette** y ejecute `Python: Select Interpreter`. Si su instalación de Python no aparece, seleccione **Enter interpreter path** y navegue hasta su ejecutable de Python.
 
-- **El entorno virtual no se activa**: VS Code debería auto-activarlo cuando abre una terminal. Si no, active manualmente: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`. Verifique viendo `(.venv)` en el prompt de su terminal.
+- **El entorno virtual no se activa**: VS Code debería activarlo automáticamente al abrir una terminal. Si no, active manualmente: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`. Verifique viendo `(.venv)` en el prompt de su terminal.
 
-- **IntelliSense no funciona**: Asegúrese de que Pylance esté instalado y habilitado. Verifique que la esquina inferior derecha muestre su intérprete seleccionado. Espere 10-20 segundos después de abrir un archivo para que Pylance se inicialice. Reinicie VS Code si los problemas persisten.
+- **IntelliSense no funciona**: Asegúrese de que Pylance esté instalado y habilitado. Verifique que la esquina inferior derecha muestre su intérprete seleccionado. Espere 10-20 segundos después de abrir un archivo para que Pylance se inicialice. Reinicie VS Code si persisten los problemas.
 
-- **pip install falla**: Asegúrese de que su entorno virtual esté activado (busque `(.venv)` en la terminal). En Linux, podría necesitar instalar `python3-venv` primero. En Windows, verifique que el antivirus no esté bloqueando pip.
+- **pip install falla**: Asegúrese de que su entorno virtual esté activado (busque `(.venv)` en la terminal). En Linux, podría necesitar instalar `python3-venv` primero. En Windows, verifique que el antivirus no bloquee pip.
 
-- **La aplicación Streamlit no se ejecuta**: Asegúrese de que streamlit esté instalado en su entorno virtual (`pip list | grep streamlit`). Revise la terminal para mensajes de error. Asegúrese de que ninguna otra aplicación esté usando el puerto 8501.
+- **La aplicación Streamlit no se ejecuta**: Verifique que streamlit esté instalado en su entorno virtual (`pip list | grep streamlit`). Revise la terminal para mensajes de error. Asegúrese de que ninguna otra aplicación use el puerto 8501.
 
 ## Resumen del Flujo de Trabajo
 
 VS Code proporciona un entorno moderno y ligero para el desarrollo en Python con estas ventajas:
 
 - **Entorno unificado**: Codifique en Python, R, JavaScript y más en un solo editor
-- **IntelliSense poderoso**: Autocompletados inteligentes, verificación de tipos e importaciones automáticas vía Pylance
+- **IntelliSense potente**: Autocompletados inteligentes, verificación de tipos e importaciones automáticas vía Pylance
 - **Depuración integrada**: Establezca puntos de interrupción, inspeccione variables y avance paso a paso por el código
 - **Soporte Jupyter**: Ejecute notebooks directamente en VS Code sin aplicaciones separadas
 - **Control de versiones**: Integración Git incorporada para seguimiento de cambios
