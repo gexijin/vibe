@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>人人都能用的Claude Code</title>
+    <title>Claude Code 入门教程</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -405,72 +405,70 @@
     </div>
     <div class="container">
         <header>
-            <h1>Claude Code手把手教程</h1>
-            <p class="subtitle">让AI在你的电脑里当助手</p>
+            <h1>Claude Code 入门教程</h1>
+            <p class="subtitle">AI编程助手，从零开始</p>
         </header>
 
         <div class="graph-container">
             <div class="filter-controls">
-                <button class="filter-btn active" id="filter-windows" data-platform="windows" data-tooltip="显示Windows教程">🪟 Windows</button>
-                <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="显示Mac教程">🍎 Mac</button>
+                <button class="filter-btn active" id="filter-windows" data-platform="windows" data-tooltip="Windows 教程">🪟 Windows</button>
+                <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="Mac 教程">🍎 Mac</button>
             </div>
             <div class="filter-controls-right">
-                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="研究与写作。从这里开始。">基础</button>
-                <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="R编程教程">📊 R</button>
-                <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Python编程教程">🐍 Python</button>
+                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="研究与写作，从这里开始">基础</button>
+                <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="R 编程教程">📊 R</button>
+                <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Python 编程教程">🐍 Python</button>
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
-            <p class="learning-path-hint" id="learning-path-hint">点击主题开始学习。选择Windows或Mac。<br>先从基础开始，然后选择R或Python。</p>
+            <p class="learning-path-hint" id="learning-path-hint">点击主题开始学习。选择 Windows 或 Mac。<br>先学基础，再选 R 或 Python。</p>
         </div>
 
         <section class="section">
-        <p>&nbsp;&nbsp;&nbsp; Claude Code不仅是一个强大的AI编程助手，还可以自动化研究、写作、编辑等任务。
-             它在你计算机的工作目录中本地运行，在你的指导下充当有用的助手。
-             在给定任务时，它会多次使用Claude（大语言模型）来规划工作、执行任务并检查结果。</p>
+        <p>&nbsp;&nbsp;&nbsp; Claude Code 不仅是一款强大的 AI 编程助手，还可帮助你完成研究、写作、编辑和编程等任务。它在本地运行，通过 Claude 大语言模型来规划、执行和检验任务。</p>
 
-        <p>&nbsp;&nbsp;&nbsp; 通过精心设计的实践，我将介绍释放Claude Code全部潜力的核心概念和工具，包括用于版本控制的Git、用于编码和编辑的Visual Studio Code、用于在Windows上运行的WSL（Windows子系统Linux）以及用于隔离开发环境的Docker。</p>
-        <p>&nbsp;&nbsp;&nbsp; 按照学习路径进行，或选择你感兴趣的教程！</p>
+        <p>&nbsp;&nbsp;&nbsp; 本教程将介绍发挥 Claude Code 潜力所需的核心工具：Git（版本控制）、VS Code（代码编辑器）、WSL（Windows Linux 子系统）和 Docker（隔离开发环境）。</p>
+        <p>&nbsp;&nbsp;&nbsp; 按学习路径循序渐进，或直接选择感兴趣的教程！</p>
         <br>
             <h2>入门指南</h2>
             <ol class="tutorial-list">
-                <li><a href="Install_CLAUDE_Code_Win">在Windows上安装Claude Code</a></li>
-                <li><a href="Install_Claude_Code_MacOS">在Mac上安装Claude Code</a></li>
-                <li><a href="VS_Code_Getting_Started">VS Code入门</a></li>
-                <li><a href="Claude_Code_Basic_Operations">Claude Code：基本操作</a></li>
-                <li><a href="Claude_Code_in_VS_Code_Win">在Windows上为Claude Code设置VS Code</a></li>
-                <li><a href="Claude_Code_in_VS_Code_Mac">在Mac上从VS Code使用Claude Code</a></li>
-                <li><a href="Claude_Code_Git_Windows">Windows版Claude Code本地版本控制</a></li>
-                <li><a href="Claude_Code_Git_Mac">Mac版Claude Code本地版本控制</a></li>
-                <li><a href="Claude_Code_RStudio_Mac">在Mac上使用Claude Code与RStudio</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">在Windows上通过WSL使用Claude Code与RStudio</a></li>
+                <li><a href="Install_CLAUDE_Code_Win">在 Windows 上安装 Claude Code</a></li>
+                <li><a href="Install_Claude_Code_MacOS">在 Mac 上安装 Claude Code</a></li>
+                <li><a href="VS_Code_Getting_Started">VS Code 入门</a></li>
+                <li><a href="Claude_Code_Basic_Operations">Claude Code 基本操作</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Win">Windows：VS Code 配置 Claude Code</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Mac">Mac：VS Code 配置 Claude Code</a></li>
+                <li><a href="Claude_Code_Git_Windows">Windows：本地版本控制入门</a></li>
+                <li><a href="Claude_Code_Git_Mac">Mac：本地版本控制入门</a></li>
+                <li><a href="Claude_Code_RStudio_Mac">Mac：Claude Code 与 RStudio</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">Windows：Claude Code 与 RStudio（WSL）</a></li>
             </ol>
 
             <h2>技能提升</h2>
             <ol class="tutorial-list" start="11">
-                <li><a href="Github_desktop">版本控制入门</a></li>
-                <li><a href="R_Coding_VS_Code_Guide">在VS Code中运行R</a></li>
-                <li><a href="Python_Coding_VS_Code_Guide">在VS Code中运行Python</a></li>
-                <li><a href="Claude_Code_R_VS_Code_Mac">在Mac的VS Code中使用Claude Code开发R</a></li>
-                <li><a href="Claude_Code_Python_VS_Code_Mac">在Mac的VS Code中使用Claude Code开发Python</a></li>
-                <li><a href="GitHub_Desktop_Claude_Code_Workflow">使用GitHub Desktop与Claude Code</a></li>
-                <li><a href="Writing_Research_Paper_Claude_Code">使用Claude Code撰写研究论文</a></li>
+                <li><a href="Github_desktop">Git 与 GitHub Desktop 入门</a></li>
+                <li><a href="R_Coding_VS_Code_Guide">在 VS Code 中运行 R</a></li>
+                <li><a href="Python_Coding_VS_Code_Guide">在 VS Code 中运行 Python</a></li>
+                <li><a href="Claude_Code_R_VS_Code_Mac">Mac：Claude Code 辅助 R 开发</a></li>
+                <li><a href="Claude_Code_Python_VS_Code_Mac">Mac：Claude Code 辅助 Python 开发</a></li>
+                <li><a href="GitHub_Desktop_Claude_Code_Workflow">GitHub Desktop 与 Claude Code 协作</a></li>
+                <li><a href="Writing_Research_Paper_Claude_Code">用 Claude Code 写研究论文</a></li>
             </ol>
 
             <h2>高级主题</h2>
             <ol class="tutorial-list" start="18">
-                <li><a href="R_Coding_Docker_Guide">通过Docker在VS Code中进行R编程</a></li>
-                <li><a href="Python_Coding_Docker_Guide">通过Docker在VS Code中进行Python编程</a></li>
-                <li><a href="Vibe_Coding_R_Docker_Guide">使用Claude Code进行R的Vibe编程</a></li>
-                <li><a href="Vibe_Coding_Python_Docker_Guide">使用Claude Code进行Python的Vibe编程</a></li>
-                <li><a href="Reuse_Prompts_via_Slash_Commands">创建自定义斜杠命令</a></li>
-                <li><a href="Create_Your_First_Claude_Skill">创建你的第一个Claude技能</a></li>
-                <li><a href="Medical_Research_Skill">创建医学研究用的Claude技能</a></li>
-                <li><a href="Create_subagents">在Claude Code中创建子代理</a></li>
+                <li><a href="R_Coding_Docker_Guide">Docker 环境下的 R 编程</a></li>
+                <li><a href="Python_Coding_Docker_Guide">Docker 环境下的 Python 编程</a></li>
+                <li><a href="Vibe_Coding_R_Docker_Guide">R 语言 Vibe 编程</a></li>
+                <li><a href="Vibe_Coding_Python_Docker_Guide">Python Vibe 编程</a></li>
+                <li><a href="Reuse_Prompts_via_Slash_Commands">自定义斜杠命令</a></li>
+                <li><a href="Create_Your_First_Claude_Skill">创建你的第一个 Claude 技能</a></li>
+                <li><a href="Medical_Research_Skill">医学研究 Claude 技能</a></li>
+                <li><a href="Create_subagents">创建子代理</a></li>
             </ol>
 
             <br>
-            <p><a href="Building_Tutorial_Library_with_Slash_Commands">Claude Code如何帮助我创建这些教程</a></p>
+            <p><a href="Building_Tutorial_Library_with_Slash_Commands">Claude Code 如何帮我创建这些教程</a></p>
         </section>
 
         <div style="text-align: center; margin: 2rem 0;">
@@ -478,8 +476,8 @@
         </div>
 
         <footer>
-            <p><a href="https://www.linkedin.com/in/steven-ge-ab016947/">Steven Ge</a>，<a href="https://orditus.com">Orditus LLC</a>。反馈和源代码请访问<a href="https://github.com/gexijin/vibe">GitHub</a></p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">由Claude翻译，未经人工审核。</p>
+            <p><a href="https://www.linkedin.com/in/steven-ge-ab016947/">Steven Ge</a>，<a href="https://orditus.com">Orditus LLC</a>。源代码与反馈：<a href="https://github.com/gexijin/vibe">GitHub</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">Claude 翻译，未经人工校对</p>
         </footer>
     </div>
 
@@ -493,8 +491,8 @@
             <h3 id="modal-title"></h3>
             <p id="modal-desc"></p>
             <div class="modal-buttons">
-                <a id="modal-link" class="modal-btn">开始</a>
-                <button id="modal-complete" class="modal-btn-secondary">标记完成</button>
+                <a id="modal-link" class="modal-btn">开始学习</a>
+                <button id="modal-complete" class="modal-btn-secondary">标记为已完成</button>
             </div>
         </div>
     </div>
@@ -597,31 +595,31 @@
 
         // Tutorial data (Chinese)
         const tutorials = {
-            1: { label: '安装Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: '使用WSL、Ubuntu和Node.js在Windows上安装Claude Code的分步指南', level: 0 },
-            14: { label: 'VS Code中的\nClaude Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: '在Windows WSL上设置VS Code与Claude Code——在终端运行AI的同时可视化编辑文件', level: 1 },
-            11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: '学习使用Git和Claude Code进行本地版本控制的基础知识——无需GitHub账户', level: 1 },
-            2: { label: '安装Claude\nCode (Mac)', url: 'Install_Claude_Code_MacOS', desc: '使用Node.js和npm在macOS上快速设置Claude Code', level: 0 },
-            15: { label: 'VS Code中的\nClaude Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: '在Mac上设置VS Code与Claude Code——在终端运行AI的同时可视化编辑文件', level: 1 },
-            12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: '在Mac上学习使用Git和Claude Code进行本地版本控制的基础知识——无需GitHub账户', level: 1 },
-            3: { label: 'VS Code\n基础', url: 'VS_Code_Getting_Started', desc: '学习Visual Studio Code的基础知识——安装、界面导航、扩展以及使用GitHub Copilot进行AI编程', level: 0 },
-            4: { label: '版本\n控制', url: 'Github_desktop', desc: 'Git和GitHub Desktop代码管理入门', level: 0 },
-            5: { label: 'VS Code中\n的R', url: 'R_Coding_VS_Code_Guide', desc: '在VS Code中设置R——代码补全、绘图和Shiny应用支持', level: 1 },
-            6: { label: 'VS Code中\n的Python', url: 'Python_Coding_VS_Code_Guide', desc: '设置Python——代码补全、调试和Streamlit网页应用', level: 1 },
-            7: { label: '通过Docker\n运行R', url: 'R_Coding_Docker_Guide', desc: '使用预构建Docker镜像在隔离、可重现的容器中运行R', level: 3 },
-            8: { label: '通过Docker\n运行Python', url: 'Python_Coding_Docker_Guide', desc: '使用预构建Docker镜像在隔离、可重现的容器中运行Python', level: 3 },
-            9: { label: 'Claude Code\n+ GitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: '将AI辅助编程与专业版本控制工作流程相结合', level: 2 },
-            10: { label: 'R的Vibe\n编程', url: 'Vibe_Coding_R_Docker_Guide', desc: '使用自然语言请求构建真实的NBA统计仪表板——完整的Vibe编程体验', level: 3 },
-            13: { label: '使用Claude\n写研究论文', url: 'Writing_Research_Paper_Claude_Code', desc: '使用Claude Code更快地撰写研究论文——用Git跟踪每个版本进行研究和起草', level: 2 },
-            16: { label: 'Python的\nVibe编程', url: 'Vibe_Coding_Python_Docker_Guide', desc: '使用自然语言请求分析Iris数据集——描述可视化效果，看它们出现', level: 3 },
-            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: '在Mac上将Claude Code与RStudio结合使用——创建R项目并用AI增强，同时RStudio运行你的代码', level: 2 },
-            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: '在Windows上从WSL使用Claude Code与RStudio——连接Windows RStudio和基于Linux的AI助手', level: 2 },
-            19: { label: 'Claude Code\n开发R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: '使用Claude Code AI助手在VS Code中编写和改进R代码——请求绘图、分析和代码改进', level: 3 },
-            20: { label: 'Claude Code\n开发Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: '使用Claude Code AI助手在VS Code中编写和改进Python代码——请求绘图、分析和代码改进', level: 3 },
-            21: { label: '斜杠\n命令', url: 'Reuse_Prompts_via_Slash_Commands', desc: '为复杂提示创建可重用快捷方式——将冗长的指令转换为像/stock-report这样的简单命令', level: 3 },
-            22: { label: 'Claude\n技能', url: 'Create_Your_First_Claude_Skill', desc: '构建根据上下文自动激活的Claude技能——从手动斜杠命令升级到AI触发的功能', level: 3 },
-            23: { label: '医学研究\nClaude技能', url: 'Medical_Research_Skill', desc: '创建专门搜索PubMed并用通俗语言总结医学研究论文的技能', level: 3 },
-            24: { label: '创建\n子代理', url: 'Create_subagents', desc: '构建使用技能完成复杂任务的自主代理——创建研究、评分并推荐投资的股票选择代理', level: 3 },
-            25: { label: 'Claude Code\n基本操作', url: 'Claude_Code_Basic_Operations', desc: '学习Claude Code的基本操作——开始对话、管理上下文、使用斜杠命令和处理文件', level: 0 }
+            1: { label: '安装Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: '在 Windows 上通过 WSL 安装 Claude Code', level: 0 },
+            14: { label: 'VS Code中的\nClaude Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: '在 Windows 上配置 VS Code 与 Claude Code 协同工作', level: 1 },
+            11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: '学习 Git 本地版本控制基础，无需 GitHub 账户', level: 1 },
+            2: { label: '安装Claude\nCode (Mac)', url: 'Install_Claude_Code_MacOS', desc: '在 macOS 上快速安装 Claude Code', level: 0 },
+            15: { label: 'VS Code中的\nClaude Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: '在 Mac 上配置 VS Code 与 Claude Code 协同工作', level: 1 },
+            12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: '学习 Git 本地版本控制基础，无需 GitHub 账户', level: 1 },
+            3: { label: 'VS Code\n基础', url: 'VS_Code_Getting_Started', desc: 'VS Code 入门：安装、界面、扩展和 AI 编程', level: 0 },
+            4: { label: '版本\n控制', url: 'Github_desktop', desc: 'Git 和 GitHub Desktop 代码管理入门', level: 0 },
+            5: { label: 'VS Code中\n的R', url: 'R_Coding_VS_Code_Guide', desc: '在 VS Code 中配置 R 开发环境', level: 1 },
+            6: { label: 'VS Code中\n的Python', url: 'Python_Coding_VS_Code_Guide', desc: '在 VS Code 中配置 Python 开发环境', level: 1 },
+            7: { label: '通过Docker\n运行R', url: 'R_Coding_Docker_Guide', desc: '用 Docker 容器运行 R，实现环境隔离与可重现', level: 3 },
+            8: { label: '通过Docker\n运行Python', url: 'Python_Coding_Docker_Guide', desc: '用 Docker 容器运行 Python，实现环境隔离与可重现', level: 3 },
+            9: { label: 'Claude Code\n+ GitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: '结合 AI 编程与专业版本控制工作流', level: 2 },
+            10: { label: 'R的Vibe\n编程', url: 'Vibe_Coding_R_Docker_Guide', desc: '用自然语言构建 NBA 统计仪表板', level: 3 },
+            13: { label: '使用Claude\n写研究论文', url: 'Writing_Research_Paper_Claude_Code', desc: '用 Claude Code 加速论文写作，Git 追踪每个版本', level: 2 },
+            16: { label: 'Python的\nVibe编程', url: 'Vibe_Coding_Python_Docker_Guide', desc: '用自然语言描述需求，自动生成数据可视化', level: 3 },
+            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: '在 Mac 上结合 Claude Code 与 RStudio 开发 R', level: 2 },
+            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: '在 Windows 上通过 WSL 连接 Claude Code 与 RStudio', level: 2 },
+            19: { label: 'Claude Code\n开发R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: '用 Claude Code 在 VS Code 中辅助 R 开发', level: 3 },
+            20: { label: 'Claude Code\n开发Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: '用 Claude Code 在 VS Code 中辅助 Python 开发', level: 3 },
+            21: { label: '斜杠\n命令', url: 'Reuse_Prompts_via_Slash_Commands', desc: '创建可复用的命令快捷方式，如 /stock-report', level: 3 },
+            22: { label: 'Claude\n技能', url: 'Create_Your_First_Claude_Skill', desc: '构建根据上下文自动激活的 Claude 技能', level: 3 },
+            23: { label: '医学研究\nClaude技能', url: 'Medical_Research_Skill', desc: '创建自动搜索 PubMed 并总结论文的技能', level: 3 },
+            24: { label: '创建\n子代理', url: 'Create_subagents', desc: '构建能完成复杂任务的自主代理', level: 3 },
+            25: { label: 'Claude Code\n基本操作', url: 'Claude_Code_Basic_Operations', desc: '掌握对话、上下文管理、斜杠命令等基本操作', level: 0 }
         };
 
         // Color scheme by level
@@ -1064,7 +1062,7 @@
         // Update complete button state
         function updateCompleteButton() {
             const completed = isCompleted(currentNodeId);
-            modalComplete.textContent = completed ? '✓ 已完成' : '标记完成';
+            modalComplete.textContent = completed ? '✓ 已完成' : '标记为已完成';
             modalComplete.classList.toggle('completed', completed);
         }
 
