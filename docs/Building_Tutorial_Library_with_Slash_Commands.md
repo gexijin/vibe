@@ -75,6 +75,17 @@ Tutorials evolve. Commands change. New sections get added. This command keeps tr
 
 The quality review is thorough—for Japanese, it checks natural phrasing (not word-for-word), appropriate politeness level (です/ます form), correct particle usage (は/が, を, に, で), and no unnatural katakana overuse. When I updated English tutorials, I could quickly propagate changes to all translations while maintaining language quality.
 
+### Polishing Translations for Natural Flow
+
+After syncing translations with English originals, I added a final polish step: editing each translated document on its own for language quality, without comparing to English. This step focuses purely on making the text read naturally to native speakers.
+
+The key insight: **use prompts in the target language**. Instead of asking Claude in English to "polish this Japanese document," I used ChatGPT to write the prompts in Japanese, Chinese, or Spanish. This produced noticeably better results—Claude seemed to think more naturally in that language when the instructions were also in that language.
+
+For example, to polish Chinese documents, I used: 
+"修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents." For Spanish: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." For Japanese: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
+
+Better models such as Opus 4.5 also seem to help. This polish step caught awkward phrasings that weren't technically wrong but didn't sound natural. Combined with subagents, I could polish all 25+ documents in each language in a single batch operation. 
+
 ## Scaling with Subagents
 
 For truly parallel work, I used Claude's subagent feature. When polishing Japanese translations, I launched multiple review agents simultaneously, processing 19 files with coordinated improvements.
@@ -93,6 +104,7 @@ All tutorials follow the same structure, writing style, and formatting conventio
 - **Structure commands as multi-phase workflows.** Tell Claude how to think through the problem, not just what to do.
 - **Build quality control into the process.** Create a review command alongside your generation command.
 - **Make commands collaborative, not autonomous.** Include approval steps. Claude handles tedious parts; you make strategic decisions.
+- **Use subagents for batch processing.** When processing many documents, explicitly say "Use subagents" in your prompt. Press Shift+Tab first to enable auto-accept mode—subagents won't ask for permissions, making parallel processing seamless.
 
 ## Conclusion
 

@@ -75,6 +75,16 @@ Los tutoriales evolucionan. Los comandos cambian. Se añaden nuevas secciones. E
 
 La revisión de calidad es exhaustiva. Para japonés, verifica frases naturales (no palabra por palabra), nivel de cortesía apropiado (forma です/ます), uso correcto de partículas (は/が, を, に, で), y que no haya uso excesivo de katakana antinatural. Cuando actualicé los tutoriales en inglés, pude propagar rápidamente los cambios a todas las traducciones manteniendo la calidad del idioma.
 
+### Puliendo Traducciones para un Flujo Natural
+
+Después de sincronizar las traducciones con los originales en inglés, añadí un paso final de pulido: editar cada documento traducido por sí solo para mejorar la calidad del lenguaje, sin comparar con el inglés. Este paso se enfoca puramente en hacer que el texto suene natural para hablantes nativos.
+
+La idea clave: **usa prompts en el idioma de destino**. En lugar de pedirle a Claude en inglés que "pula este documento en japonés", usé ChatGPT para escribir los prompts en japonés, chino o español. Esto produjo resultados notablemente mejores—Claude parecía pensar más naturalmente en ese idioma cuando las instrucciones también estaban en ese idioma.
+
+Por ejemplo, para pulir documentos en chino, usé: "修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。Use subagents." Para español: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." Para japonés: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
+
+Modelos más potentes como Opus 4.5 también parecen ayudar. Este paso de pulido detectó frases incómodas que no eran técnicamente incorrectas pero no sonaban naturales. Combinado con subagentes, pude pulir los más de 25 documentos en cada idioma en una sola operación por lotes.
+
 ## Escalando con subagentes
 
 Para trabajo verdaderamente paralelo, usé la función de subagentes de Claude. Al pulir las traducciones al japonés, lancé múltiples agentes de revisión simultáneamente, procesando 19 archivos con mejoras coordinadas.
@@ -93,6 +103,7 @@ Todos los tutoriales siguen la misma estructura, estilo de escritura y convencio
 - **Estructura los comandos como flujos de trabajo de múltiples fases.** Dile a Claude cómo pensar el problema, no solo qué hacer.
 - **Incorpora el control de calidad en el proceso.** Crea un comando de revisión junto con tu comando de generación.
 - **Haz los comandos colaborativos, no autónomos.** Incluye pasos de aprobación. Claude maneja las partes tediosas; tú tomas las decisiones estratégicas.
+- **Usa subagentes para procesamiento por lotes.** Al procesar muchos documentos, di explícitamente "Use subagents" en tu prompt. Presiona Shift+Tab primero para habilitar el modo de aceptación automática—los subagentes no pedirán permisos, haciendo el procesamiento paralelo más fluido.
 
 ## Conclusión
 
