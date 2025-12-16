@@ -20,37 +20,60 @@ The result was five specialized slash commands that handled the entire tutorial 
 
 ### [`/tutorial`](./assets/commands/tutorial.md) - The Tutorial Generator
 
-Born from creating several tutorials interactively, this command captures the proven workflow. It follows a rigorous three-phase approach.
+Born from creating several tutorials interactively, this command captures the proven workflow:
 
-First, Claude searches the web for current information before writing anything—no more outdated version numbers or deprecated installation methods. Then, before writing a single word, Claude presents a plan: what it learned from research, recommended approach for beginners, and outline of major steps. 
-I then considered the plan carefully. Prompted Claude to revise it many times. 
-Only after I approve the plan does Claude write the tutorial following strict formatting rules: home link at top, engaging hook, key concepts, step-by-step instructions with action verbs, troubleshooting section, and creation date. I then test the steps myself in a separate terminal. Revise if I found issues. Sometimes I mannualy edit the tutorials. Sometimes I ask Claude to do it. 
+1. **Research**: Claude searches the web for current information—no outdated version numbers or deprecated methods
+2. **Plan**: Claude presents what it learned, recommends an approach, and outlines major steps
+3. **Iterate**: I review the plan, prompt Claude to revise multiple times until satisfied
+4. **Write**: After approval, Claude writes following strict formatting rules:
+   - Home link at top
+   - Engaging hook
+   - Key concepts
+   - Step-by-step instructions with action verbs
+   - Troubleshooting section
+   - Creation date
+5. **Test**: I test the steps myself in a separate terminal, revise if needed
+6. **Polish**: Sometimes I edit manually, sometimes I ask Claude to do it
 
-The command enforces consistent structure across all tutorials. Every tutorial feels like it came from the same author—because they followed the same systematic process. I generated 20+ tutorials covering topics from basic Git operations to advanced Docker workflows, all with consistent quality and structure.
+The command enforces consistent structure across all tutorials. Every tutorial feels like it came from the same author—because they followed the same systematic process. I generated 20+ tutorials covering topics from basic Git operations to advanced Docker workflows.
 
 ### [`/review-tutorial`](./assets/commands/review-tutorial.md) - The Quality Control Bot
 
-After generating tutorials, quality matters. This slash command performs comprehensive review against 40+ quality criteria covering content quality, formatting standards, beginner-friendliness, technical accuracy, and writing quality.
+Here's something remarkable: I simply asked Claude to "create a slash command to review tutorials." No detailed specifications. Claude generated a comprehensive three-phase workflow with 30+ quality criteria organized into categories:
 
-The command presents findings in a structured report, then applies fixes after approval. I used this to batch-polish multiple tutorials at once, applying consistent improvements across the entire library. Uniform quality across all tutorials without manually reviewing each one multiple times.
+- **Content Quality**: title, hook, key concepts, prerequisites, step flow, next steps, troubleshooting
+- **Formatting Standards**: home link, step headings, bullet points, bold/backticks, code blocks, paragraphs
+- **Beginner-Friendliness**: menu-based instructions, platform differences, exact click targets, no jargon
+- **Technical Accuracy**: correct commands, current UI, realistic time estimates
+- **Writing Quality**: grammar, consistent terminology, concise language
+
+The command presents findings in a structured report, then applies fixes after approval. Why was this needed? Two reasons: Claude doesn't always follow the `/tutorial` rules strictly, and the `/tutorial` command itself evolved as I built more tutorials. The review command lets me batch-polish earlier tutorials to conform with the latest standards.
 
 ### [`/translate-chinese`](./assets/commands/translate-chinese.md) & [`/translate-spanish`](./assets/commands/translate-spanish.md) - The Localization Engine
 
 Interestingly, the Japanese translations came first—and without a slash command. I simply asked Claude Code to translate all the tutorials to Japanese in one prompt. Claude automatically spawned 8 subagents running in parallel, each handling different tutorials simultaneously. The results were excellent, which gave me confidence to formalize the process into slash commands for Chinese and Spanish.
 
-For Chinese and Spanish, I discovered Claude's remarkable ability to write prompts. I simply asked Claude to create a slash command for translating tutorials—without giving any specific guidelines. Claude generated comprehensive commands on its own, adding detailed rules for what to translate, what to keep in English, language-specific formatting, and quality checklists. The AI wrote better prompts than I would have.
+Again, I simply asked Claude to "create a slash command for translating tutorials to Chinese"—no specific guidelines. Claude generated a six-phase workflow with comprehensive rules:
+
+- **Translation Rules**: Keep code blocks, technical terms (Git, Docker, VS Code), file paths, and URLs in English; translate instructional text, headings, and explanations
+- **Language Guidelines**: Tone and style rules, common technical translations (Click = 点击, Install = 安装), formal address conventions
+- **Formatting Requirements**: Localized home link, preserved structure, correct punctuation (。，！？ for Chinese, ¿? ¡! for Spanish)
+- **Quality Review**: Natural flow checklist, consistent terminology, proper character usage
 
 With the slash commands ready, I asked Claude Code to translate all 25 tutorials using subagents. The entire translation—50 new files across two languages—took only 15 minutes.
-
-These translation commands handle the complexity of technical translation. Instructional text, section headings, and explanations get translated. Code blocks, commands, technical terms like Git and Docker, file paths, and URLs stay in English. The commands include language-specific rules: Simplified Chinese characters with proper punctuation for Chinese, formal "usted" form with proper accent marks for Spanish. Each translation command also performs a quality review checklist before saving, ensuring natural phrasing rather than word-for-word translation.
 
 The result: 81 translated tutorial files across Chinese, Spanish, and Japanese directories—all maintaining consistent quality and structure.
 
 ### [`/review-translation`](./assets/commands/review-translation.md) - The Translation Maintenance Tool
 
-Tutorials evolve. Commands change. New sections get added. This command keeps translations in sync by reading both the English original and target language translation side-by-side, identifying missing sections, outdated content, and structural differences.
+Tutorials evolve. Commands change. New sections get added. This command keeps translations in sync through a four-phase workflow:
 
-Even if translations are up-to-date, it checks translation accuracy, language quality, and formatting consistency. Then it presents findings, gets approval, and applies updates. When I updated English tutorials, I could quickly propagate changes to all translations.
+1. **Read Both Versions**: Load English original and translation side-by-side
+2. **Compare and Update**: Identify missing sections, outdated content, changed commands or URLs
+3. **Review Quality**: Check translation accuracy, language quality, formatting consistency
+4. **Report and Fix**: Present findings, get approval, apply updates
+
+The quality review is thorough—for Japanese, it checks natural phrasing (not word-for-word), appropriate politeness level (です/ます form), correct particle usage (は/が, を, に, で), and no unnatural katakana overuse. When I updated English tutorials, I could quickly propagate changes to all translations while maintaining language quality.
 
 ## Scaling with Subagents
 
@@ -66,13 +89,10 @@ All tutorials follow the same structure, writing style, and formatting conventio
 
 ## Key Lessons
 
-**Start manual, then automate.** Don't write slash commands from scratch. Do the task manually first, refine the process, then ask Claude to save it as a command. The `/tutorial` command works because it codifies a workflow I'd already validated through creating real tutorials.
-
-**Structure commands as multi-phase workflows.** Don't just tell Claude what to do—tell it how to think through the problem. The research → plan → approve → execute structure prevented countless issues.
-
-**Build quality control into the process.** The `/review-tutorial` and `/review-translation` commands weren't afterthoughts—they were core parts of the workflow. Automated generation without automated quality control leads to inconsistent output.
-
-**Make commands collaborative, not autonomous.** Every slash command includes approval steps. This kept me in control while eliminating repetitive work. Claude handled the tedious parts; I made the strategic decisions.
+- **Start manual, then automate.** Do the task manually first, refine the process, then ask Claude to save it as a command.
+- **Structure commands as multi-phase workflows.** Tell Claude how to think through the problem, not just what to do.
+- **Build quality control into the process.** Create a review command alongside your generation command.
+- **Make commands collaborative, not autonomous.** Include approval steps. Claude handles tedious parts; you make strategic decisions.
 
 ## Conclusion
 
