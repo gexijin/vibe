@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W28447R3P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4W28447R3P');
+    </script>
+    <title>Claude Code für Alle</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79b8ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-switch a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .lang-switch a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .lang-switch a.active {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tutorial-list {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .tutorial-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tutorial-list a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .tutorial-list a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Network Graph Styles */
+        .graph-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        #network-graph {
+            height: 400px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        /* Filter Buttons */
+        .filter-controls {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+
+        .filter-controls-right {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            display: flex;
+            gap: 6px;
+            z-index: 10;
+        }
+
+        .filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 8px;
+            background: #21262d;
+            border: 1px solid #6e7681;
+            color: var(--text);
+            font-size: 0.6rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+            position: relative;
+        }
+
+        .filter-btn:hover {
+            background: #30363d;
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .filter-btn::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1c2128;
+            color: var(--text);
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.6rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+        }
+
+        .filter-btn:hover::after {
+            opacity: 1;
+        }
+
+        /* Vis.js tooltip styling */
+        .vis-tooltip {
+            background: #1c2128 !important;
+            color: var(--text) !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 5px !important;
+            padding: 5px 8px !important;
+            font-size: 0.6rem !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #d73a94 0%, #e856b0 100%);
+            border-color: #d73a94;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(215, 58, 148, 0.4);
+        }
+
+        .progress-counter {
+            position: absolute;
+            bottom: 12px;
+            left: 16px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .learning-path-hint {
+            position: absolute;
+            bottom: 40px;
+            right: 16px;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        .learning-path-hint.visible {
+            opacity: 1;
+        }
+
+        /* Confetti canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2000;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .modal-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .modal-btn {
+            display: inline-block;
+            background: #f78166;
+            color: #fff;
+            padding: 0.4rem 0.9rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+
+        .modal-btn:hover {
+            background: #ffa198;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+
+        .modal-btn-secondary {
+            background: #21262d;
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.9rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .modal-btn-secondary:hover {
+            background: #30363d;
+            border-color: var(--accent);
+        }
+
+        .modal-btn-secondary.completed {
+            background: #238636;
+            border-color: #238636;
+            color: white;
+        }
+
+        .modal-btn-secondary.completed:hover {
+            background: #2ea043;
+            border-color: #2ea043;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0.25rem;
+        }
+
+        .modal-close:hover {
+            color: var(--text);
+        }
+
+        /* Skill Level Bars */
+        .skill-level-bar {
+            position: absolute;
+            height: 2px;
+            opacity: 0.2;
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .skill-label {
+            position: absolute;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--text-muted);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        #network-graph {
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            #network-graph {
+                height: 350px;
+            }
+        }
+    </style>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="../">English</a>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Claude Code für Alle</h1>
+            <p class="subtitle">Schritt-für-Schritt-Tutorials, um KI für Sie arbeiten zu lassen</p>
+        </header>
+
+        <div class="graph-container">
+            <div class="filter-controls">
+                <button class="filter-btn active" id="filter-windows" data-platform="windows" data-tooltip="Windows-Tutorials anzeigen">🪟 Windows</button>
+                <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="Mac-Tutorials anzeigen">🍎 Mac</button>
+            </div>
+            <div class="filter-controls-right">
+                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="Recherche und Schreiben. Hier starten.">Grundlagen</button>
+                <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="R-Programmier-Tutorials">📊 R</button>
+                <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Python-Programmier-Tutorials">🐍 Python</button>
+            </div>
+            <div id="network-graph"></div>
+            <p class="progress-counter" id="progress-counter"></p>
+            <p class="learning-path-hint" id="learning-path-hint">Klicken Sie auf ein Thema, um zu starten. Wählen Sie Windows oder Mac.<br>Beginnen Sie mit Grundlagen, dann wählen Sie R oder Python.</p>
+        </div>
+
+        <section class="section">
+        <p>&nbsp;&nbsp;&nbsp; Claude Code ist ein leistungsstarker KI-Programmierassistent, der auch Recherche, Schreiben, Bearbeiten und mehr automatisieren kann.
+             Es läuft lokal auf Ihrem Computer in einem Arbeitsverzeichnis und fungiert als hilfreicher Assistent unter Ihrer Anleitung.
+             Bei einer Aufgabe verwendet es Claude, das große Sprachmodell, mehrfach, um die Arbeit zu planen, durchzuführen und
+             die Ergebnisse zu überprüfen.</p>
+
+        <p>&nbsp;&nbsp;&nbsp; Durch praktische Aktivitäten stelle ich die grundlegenden Konzepte und Werkzeuge vor, die das volle Potenzial von Claude Code erschließen, einschließlich Git für Versionskontrolle, Visual Studio Code zum Programmieren und Bearbeiten, WSL (Windows-Subsystem für Linux) zum Ausführen unter Windows und Docker für isolierte Entwicklungsumgebungen.</p>
+        <p>&nbsp;&nbsp;&nbsp; Folgen Sie dem Lernpfad oder wählen Sie die Tutorials aus, die Sie interessieren!</p>
+        <br>
+            <h2>Erste Schritte</h2>
+            <ol class="tutorial-list">
+                <li><a href="Install_CLAUDE_Code_Win">Claude Code unter Windows installieren</a></li>
+                <li><a href="Install_Claude_Code_MacOS">Claude Code auf dem Mac installieren</a></li>
+                <li><a href="VS_Code_Getting_Started">Erste Schritte mit VS Code</a></li>
+                <li><a href="Claude_Code_Basic_Operations">Claude Code: Grundlegende Operationen</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Win">VS Code für Claude Code unter Windows einrichten</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Mac">Claude Code aus VS Code auf dem Mac verwenden</a></li>
+                <li><a href="Claude_Code_Git_Windows">Claude Code mit lokaler Versionskontrolle für Windows</a></li>
+                <li><a href="Claude_Code_Git_Mac">Claude Code mit lokaler Versionskontrolle für Mac</a></li>
+                <li><a href="Claude_Code_RStudio_Mac">Claude Code mit RStudio auf dem Mac verwenden</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">Claude Code aus WSL mit RStudio unter Windows verwenden</a></li>
+            </ol>
+
+            <h2>Kompetenzentwicklung</h2>
+            <ol class="tutorial-list" start="11">
+                <li><a href="Github_desktop">Erste Schritte mit Versionskontrolle</a></li>
+                <li><a href="R_Coding_VS_Code_Guide">R in VS Code ausführen</a></li>
+                <li><a href="Python_Coding_VS_Code_Guide">Python in VS Code ausführen</a></li>
+                <li><a href="Claude_Code_R_VS_Code_Mac">Claude Code für R in VS Code auf dem Mac verwenden</a></li>
+                <li><a href="Claude_Code_Python_VS_Code_Mac">Claude Code für Python in VS Code auf dem Mac verwenden</a></li>
+                <li><a href="GitHub_Desktop_Claude_Code_Workflow">GitHub Desktop mit Claude Code verwenden</a></li>
+                <li><a href="Writing_Research_Paper_Claude_Code">Eine Forschungsarbeit mit Claude Code schreiben</a></li>
+            </ol>
+
+            <h2>Fortgeschrittene Themen</h2>
+            <ol class="tutorial-list" start="18">
+                <li><a href="R_Coding_Docker_Guide">R-Programmierung in VS Code über Docker</a></li>
+                <li><a href="Python_Coding_Docker_Guide">Python-Programmierung in VS Code über Docker</a></li>
+                <li><a href="Vibe_Coding_R_Docker_Guide">Vibe Coding in R mit Claude Code</a></li>
+                <li><a href="Vibe_Coding_Python_Docker_Guide">Vibe Coding in Python mit Claude Code</a></li>
+                <li><a href="Reuse_Prompts_via_Slash_Commands">Benutzerdefinierte Slash-Befehle erstellen</a></li>
+                <li><a href="Create_Your_First_Claude_Skill">Ihren ersten Claude Skill erstellen</a></li>
+                <li><a href="Medical_Research_Skill">Einen Claude Skill für medizinische Forschung erstellen</a></li>
+                <li><a href="Create_subagents">Einen Subagenten in Claude Code erstellen</a></li>
+            </ol>
+
+            <br>
+            <p><a href="Building_Tutorial_Library_with_Slash_Commands">Wie Claude Code mir half, diese Tutorials zu erstellen</a></p>
+        </section>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../assets/robot2.jpg" alt="Claude Code Roboter" style="max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+        </div>
+
+        <footer>
+            <p><a href="https://www.linkedin.com/in/steven-ge-ab016947/">Steven Ge</a>, <a href="https://orditus.com">Orditus LLC</a>. Feedback und Quellcode auf <a href="https://github.com/gexijin/vibe">GitHub</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">Von Claude übersetzt ohne menschliche Überprüfung.</p>
+        </footer>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Tutorial Modal -->
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+            <div class="modal-buttons">
+                <a id="modal-link" class="modal-btn">Starten</a>
+                <button id="modal-complete" class="modal-btn-secondary">Als abgeschlossen markieren</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load completed tutorials from localStorage
+        function getCompleted() {
+            try {
+                return JSON.parse(localStorage.getItem('completedTutorials')) || [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveCompleted(completed) {
+            localStorage.setItem('completedTutorials', JSON.stringify(completed));
+        }
+
+        function toggleComplete(id) {
+            const completed = getCompleted();
+            const index = completed.indexOf(id);
+            if (index === -1) {
+                completed.push(id);
+            } else {
+                completed.splice(index, 1);
+            }
+            saveCompleted(completed);
+            return completed;
+        }
+
+        function isCompleted(id) {
+            return getCompleted().includes(id);
+        }
+
+        // Confetti celebration
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        const ctx = confettiCanvas.getContext('2d');
+        let confettiPieces = [];
+        let animationId = null;
+
+        function resizeCanvas() {
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        function randomColor() {
+            const colors = ['#58a6ff', '#3fb950', '#a371f7', '#f78166', '#ffd700', '#ff6b6b', '#4ecdc4'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function createConfetti() {
+            const pieces = [];
+            for (let i = 0; i < 150; i++) {
+                pieces.push({
+                    x: Math.random() * confettiCanvas.width,
+                    y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                    size: Math.random() * 10 + 5,
+                    color: randomColor(),
+                    speed: Math.random() * 3 + 2,
+                    angle: Math.random() * Math.PI * 2,
+                    spin: (Math.random() - 0.5) * 0.2,
+                    drift: (Math.random() - 0.5) * 2
+                });
+            }
+            return pieces;
+        }
+
+        function drawConfetti() {
+            ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+
+            confettiPieces.forEach(p => {
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate(p.angle);
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+                ctx.restore();
+
+                p.y += p.speed;
+                p.x += p.drift;
+                p.angle += p.spin;
+            });
+
+            confettiPieces = confettiPieces.filter(p => p.y < confettiCanvas.height + 20);
+
+            if (confettiPieces.length > 0) {
+                animationId = requestAnimationFrame(drawConfetti);
+            } else {
+                ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            }
+        }
+
+        function celebrate() {
+            if (animationId) cancelAnimationFrame(animationId);
+            confettiPieces = createConfetti();
+            drawConfetti();
+        }
+
+        // Tutorial data (German)
+        const tutorials = {
+            1: { label: 'Claude Code\ninstallieren (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Schritt-für-Schritt-Anleitung zur Installation von Claude Code unter Windows mit WSL, Ubuntu und Node.js', level: 0 },
+            14: { label: 'Claude Code in\nVS Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Richten Sie VS Code ein, um mit Claude Code unter Windows WSL zu arbeiten – bearbeiten Sie Dateien visuell, während Sie KI im Terminal ausführen', level: 1 },
+            11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Lernen Sie die Grundlagen der Versionskontrolle mit Git lokal und Claude Code – kein GitHub-Konto erforderlich', level: 1 },
+            2: { label: 'Claude Code\ninstallieren (Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Schnelle Einrichtungsanleitung für Claude Code auf macOS mit Node.js und npm', level: 0 },
+            15: { label: 'Claude Code in\nVS Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'Richten Sie VS Code ein, um mit Claude Code auf dem Mac zu arbeiten – bearbeiten Sie Dateien visuell, während Sie KI im Terminal ausführen', level: 1 },
+            12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: 'Lernen Sie die Grundlagen der Versionskontrolle mit Git lokal und Claude Code auf dem Mac – kein GitHub-Konto erforderlich', level: 1 },
+            3: { label: 'VS Code\nGrundlagen', url: 'VS_Code_Getting_Started', desc: 'Lernen Sie die Grundlagen von Visual Studio Code – Installation, Interface-Navigation, Erweiterungen und KI-Programmierung mit GitHub Copilot', level: 0 },
+            4: { label: 'Versions-\nkontrolle', url: 'Github_desktop', desc: 'Einführung in Git und GitHub Desktop zur Verwaltung Ihres Codes', level: 0 },
+            5: { label: 'R in\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Richten Sie R mit Code-Vervollständigung, Grafiken und Shiny-App-Unterstützung in VS Code ein', level: 1 },
+            6: { label: 'Python in\nVS Code', url: 'Python_Coding_VS_Code_Guide', desc: 'Richten Sie Python mit Code-Vervollständigung, Debugging und Streamlit-Web-Apps ein', level: 1 },
+            7: { label: 'R über\nDocker', url: 'R_Coding_Docker_Guide', desc: 'Führen Sie R in isolierten, reproduzierbaren Containern mit vorgefertigten Docker-Images aus', level: 3 },
+            8: { label: 'Python über\nDocker', url: 'Python_Coding_Docker_Guide', desc: 'Führen Sie Python in isolierten, reproduzierbaren Containern mit vorgefertigten Docker-Images aus', level: 3 },
+            9: { label: 'Claude Code +\nGitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Kombinieren Sie KI-unterstützte Programmierung mit professionellen Versionskontroll-Workflows', level: 2 },
+            10: { label: 'Vibe Coding\nin R', url: 'Vibe_Coding_R_Docker_Guide', desc: 'Erstellen Sie ein echtes NBA-Statistik-Dashboard mit natürlichsprachlichen Anfragen – die vollständige Vibe-Coding-Erfahrung', level: 3 },
+            13: { label: 'Forschungs-\narbeit', url: 'Writing_Research_Paper_Claude_Code', desc: 'Schreiben Sie Forschungsarbeiten schneller mit Claude Code für Recherche und Schreiben, während Git jede Version verfolgt', level: 2 },
+            16: { label: 'Vibe Coding\nin Python', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'Analysieren Sie den Iris-Datensatz mit natürlichsprachlichen Anfragen – beschreiben Sie Visualisierungen und sehen Sie, wie sie erscheinen', level: 3 },
+            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Verwenden Sie Claude Code mit RStudio auf dem Mac – erstellen Sie R-Projekte und verbessern Sie sie mit KI, während RStudio Ihren Code ausführt', level: 2 },
+            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Verwenden Sie Claude Code aus WSL mit RStudio unter Windows – verbinden Sie Windows RStudio mit Linux-basierter KI-Unterstützung', level: 2 },
+            19: { label: 'Claude Code\nfür R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Verwenden Sie den KI-Assistenten Claude Code, um R-Code in VS Code zu schreiben und zu verbessern – fordern Sie Grafiken, Analysen und Code-Verbesserungen an', level: 3 },
+            20: { label: 'Claude Code für\nPython (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Verwenden Sie den KI-Assistenten Claude Code, um Python-Code in VS Code zu schreiben und zu verbessern – fordern Sie Grafiken, Analysen und Code-Verbesserungen an', level: 3 },
+            21: { label: 'Slash-\nBefehle', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Erstellen Sie wiederverwendbare Shortcuts für komplexe Prompts – wandeln Sie lange Anweisungen in einfache Befehle wie /stock-report um', level: 3 },
+            22: { label: 'Claude\nSkill', url: 'Create_Your_First_Claude_Skill', desc: 'Erstellen Sie einen Claude Skill, der automatisch basierend auf dem Kontext aktiviert wird – upgraden Sie von manuellen Slash-Befehlen zu KI-aktivierten Fähigkeiten', level: 3 },
+            23: { label: 'Medizinische\nForschung Skill', url: 'Medical_Research_Skill', desc: 'Erstellen Sie einen spezialisierten Skill, der PubMed durchsucht und medizinische Forschungsartikel in einfachem Deutsch zusammenfasst', level: 3 },
+            24: { label: 'Subagenten\nerstellen', url: 'Create_subagents', desc: 'Erstellen Sie einen autonomen Agenten, der Skills verwendet, um komplexe Aufgaben zu erledigen – erstellen Sie einen Stock-Picker, der recherchiert, bewertet und Investitionen empfiehlt', level: 3 },
+            25: { label: 'Grundlegende\nOperationen', url: 'Claude_Code_Basic_Operations', desc: 'Lernen Sie die wesentlichen Claude Code-Operationen – Konversationen starten, Kontext verwalten, Slash-Befehle verwenden und mit Dateien arbeiten', level: 0 }
+        };
+
+        // Color scheme by level
+        const levelColors = {
+            0: { background: '#58a6ff', border: '#79b8ff' },  // Blue - Basic
+            1: { background: '#3fb950', border: '#56d364' },  // Green - Intermediate
+            2: { background: '#a371f7', border: '#bc8cff' },  // Purple - Advanced
+            3: { background: '#f78166', border: '#ffa198' }   // Orange - Capstone
+        };
+
+        // Fixed positions for clean layout
+        const positions = {
+            // Level 1 - Basic
+            1: { x: 0, y: 0 },    // Install Claude Code Win
+            2: { x: 0, y: 0 },      // Install Claude Code Mac
+
+            // Level 2 - Minimum
+            17: { x: 120, y: 90 },   // RStudio (Mac)
+            18: { x: 120, y: 90 },    // RStudio (Windows)
+            11: { x: 120, y: -60 }, // Claude Code + Git (Win)
+            12: { x: 120, y: -60 },  // Claude Code + Git (Mac)
+            3: { x: 120, y: 20 },    // VS Code Basics
+            16: { x: 500, y: -30 },  // Vibe Coding in Python
+            25: { x: 120, y: 85 },    // Claude Code Basics
+
+            // Level 3 - Intermediate I
+            4: { x: 240, y: -100 },   // Version Control
+            5: { x: 240, y: 80 },   // R in VS Code
+            6: { x: 240, y: 80 },   // Python in VS Code
+            14: { x: 240, y: 0 },  // Claude Code in VS Code (Win)
+            15: { x: 240, y: 0 },  // Claude Code in VS Code (Mac)
+
+            // Level 4 - Intermediate II
+            13: { x: 360, y: -60 },  // Research Paper with Claude
+            9: { x: 360, y: -60 },    // GitHub Desktop + Claude
+            19: { x: 360, y: 100 },   // Claude Code for R (Mac)
+            20: { x: 360, y: 100 },    // Claude Code for Python (Mac)
+
+            // Level 5 - Advanced
+            21: { x: 500, y: -110 },  // Slash Commands
+            22: { x: 500, y: -50 },  // Create Your First Skill
+            23: { x: 500, y: 10 },    // Medical Research Skill
+            24: { x: 500, y: 80 },    // Creating an Agent
+            7: { x: 480, y: 40 },   // R via Docker
+            8: { x: 480, y: 40 },   // Python via Docker
+            10: { x: 500, y: -30 }   // Vibe Coding in R
+
+        };
+
+        // Get label with checkmark if completed
+        function getNodeLabel(id, label) {
+            return isCompleted(id) ? '✓ ' + label : label;
+        }
+
+        // Get node color based on completion status
+        function getNodeColor(id, level) {
+            if (isCompleted(id)) {
+                return {
+                    background: '#484f58',
+                    border: '#6e7681',
+                    hover: { background: '#6e7681', border: '#8b949e' },
+                    highlight: { background: '#6e7681', border: '#8b949e' }
+                };
+            }
+            const base = levelColors[level];
+            return {
+                ...base,
+                hover: { background: base.border, border: base.border },
+                highlight: { background: base.border, border: base.border }
+            };
+        }
+
+        // Create nodes with fixed positions
+        const nodes = new vis.DataSet(
+            Object.entries(tutorials).map(([id, t]) => ({
+                id: parseInt(id),
+                label: getNodeLabel(parseInt(id), t.label),
+                title: 'Klicken Sie, um zu lernen',
+                color: getNodeColor(parseInt(id), t.level),
+                font: { color: isCompleted(parseInt(id)) ? '#e6edf3' : '#0d1117', size: 12, face: 'system-ui' },
+                shape: 'box',
+                margin: 8,
+                shadow: true,
+                x: positions[id].x,
+                y: positions[id].y,
+                fixed: { x: true, y: true }
+            }))
+        );
+
+        // Update progress counter
+        function updateProgress() {
+            const completed = getCompleted();
+            const counter = document.getElementById('progress-counter');
+
+            // Count only visible tutorials
+            const visibleNodes = nodes.get({
+                filter: node => !node.hidden
+            });
+            const visibleTotal = visibleNodes.length;
+            const visibleCompleted = completed.filter(id =>
+                visibleNodes.some(node => node.id === id)
+            ).length;
+
+            if (visibleCompleted > 0) {
+                counter.textContent = `${visibleCompleted}/${visibleTotal} abgeschlossen`;
+            } else if (visibleTotal < Object.keys(tutorials).length) {
+                counter.textContent = `0/${visibleTotal} abgeschlossen`;
+            } else {
+                counter.textContent = '';
+            }
+        }
+
+        // Update node appearance when completion changes
+        function updateNodeLabel(id) {
+            const tutorial = tutorials[id];
+            const completed = isCompleted(id);
+            nodes.update({
+                id: id,
+                label: getNodeLabel(id, tutorial.label),
+                title: 'Klicken Sie, um zu lernen',
+                color: getNodeColor(id, tutorial.level),
+                font: { color: completed ? '#e6edf3' : '#0d1117', size: 12, face: 'system-ui' }
+            });
+            updateEdgeColors();
+            updateProgress();
+        }
+
+        // Edge definitions
+        const edgeData = [
+            { id: 'e1', from: 3, to: 5 },   // VS Code Basics → R in VS Code
+            { id: 'e2', from: 3, to: 6 },   // VS Code Basics → Python in VS Code
+            { id: 'e3', from: 5, to: 7 },   // R in VS Code → R via Docker
+            { id: 'e4', from: 6, to: 8 },   // Python in VS Code → Python via Docker
+            { id: 'e5', from: 1, to: 9 },   // Claude (Win) → GitHub + Claude
+            { id: 'e6', from: 2, to: 9 },   // Claude (Mac) → GitHub + Claude
+            { id: 'e7', from: 4, to: 9 },   // Version Control → GitHub + Claude
+            { id: 'e8', from: 7, to: 10 },  // R via Docker → Vibe Coding
+            { id: 'e9', from: 8, to: 10 },  // Python via Docker → Vibe Coding
+            { id: 'e10', from: 9, to: 10 }, // GitHub + Claude → Vibe Coding
+            { id: 'e11', from: 1, to: 11 }, // Claude (Win) → Claude Code + Git (Win)
+            { id: 'e12', from: 2, to: 12 }, // Claude (Mac) → Claude Code + Git (Mac)
+            // VS Code path: Install → VS Code Basics → Claude in VS Code → Research Paper
+            { id: 'e13', from: 1, to: 3 },   // Install (Win) → VS Code Basics
+            { id: 'e14', from: 2, to: 3 },   // Install (Mac) → VS Code Basics
+            { id: 'e15', from: 3, to: 14 },  // VS Code Basics → Claude in VS Code (Win)
+            { id: 'e16', from: 3, to: 15 },  // VS Code Basics → Claude in VS Code (Mac)
+            { id: 'e17', from: 14, to: 13 }, // Claude in VS Code (Win) → Research Paper
+            { id: 'e18', from: 15, to: 13 }, // Claude in VS Code (Mac) → Research Paper
+            { id: 'e19', from: 8, to: 16 },  // Python via Docker → Vibe Coding in Python
+            { id: 'e20', from: 9, to: 16 },  // GitHub + Claude → Vibe Coding in Python
+            { id: 'e21', from: 2, to: 17 },  // Install (Mac) → RStudio (Mac)
+            { id: 'e22', from: 1, to: 18 },  // Install (Win) → RStudio (Windows)
+            { id: 'e23', from: 5, to: 19 },  // R via Docker → Claude Code for R (Mac)
+            { id: 'e24', from: 6, to: 20 },   // Python in VS Code → Claude Code for Python (Mac)
+            { id: 'e25', from: 13, to: 21 },  // Research Paper → Custom Slash Commands
+            { id: 'e26', from: 21, to: 22 },  // Slash Commands → Create Your First Skill
+            { id: 'e27', from: 22, to: 23 },   // Create Your First Skill → Medical Research Skill
+            { id: 'e28', from: 23, to: 24 },   // Medical Research Skill → Creating an Agent
+            { id: 'e29', from: 1, to: 25 },    // Install Win → Claude Code Basics
+            { id: 'e30', from: 2, to: 25 }     // Install Mac → Claude Code Basics
+
+        ];
+
+        // Get edge color based on connected nodes completion
+        function getEdgeColor(from, to) {
+            const completedSet = new Set(getCompleted());
+            const bothCompleted = completedSet.has(from) && completedSet.has(to);
+            return {
+                color: bothCompleted ? '#f85149' : '#30363d',
+                hover: '#58a6ff'
+            };
+        }
+
+        // Create edges (dependencies)
+        const edges = new vis.DataSet(
+            edgeData.map(e => ({
+                ...e,
+                arrows: 'to',
+                color: getEdgeColor(e.from, e.to)
+            }))
+        );
+
+        // Update edge colors based on connected node completion
+        function updateEdgeColors() {
+            edgeData.forEach(e => {
+                edges.update({
+                    id: e.id,
+                    color: getEdgeColor(e.from, e.to)
+                });
+            });
+        }
+
+        // Initialize progress counter
+        updateProgress();
+
+        // Create network
+        const container = document.getElementById('network-graph');
+        const data = { nodes, edges };
+        const options = {
+            layout: {
+                hierarchical: false
+            },
+            physics: false,
+            interaction: {
+                hover: true,
+                dragNodes: true,
+                zoomView: false,
+                tooltipDelay: 0
+            },
+            edges: {
+                color: { color: '#30363d', hover: '#58a6ff' },
+                width: 2,
+                smooth: { type: 'cubicBezier' }
+            },
+            nodes: {
+                borderWidth: 2
+            }
+        };
+
+        const network = new vis.Network(container, data, options);
+
+        // Add skill level bars
+        function createSkillLevelBars() {
+            const graphContainer = document.getElementById('network-graph');
+
+            // Define bars with same color, increasing brightness
+            const bars = [
+                { xStart: -50, xEnd: 170, color: '#3a5f8f' },
+                { xStart: 180, xEnd: 420, color: '#4a7faf' },
+                { xStart: 430, xEnd: 580, color: '#58a6ff' }
+            ];
+
+            const yPosition = 180;
+
+            bars.forEach(bar => {
+                // Convert network coordinates to DOM positions
+                const startPos = network.canvasToDOM({ x: bar.xStart, y: yPosition });
+                const endPos = network.canvasToDOM({ x: bar.xEnd, y: yPosition });
+
+                const width = endPos.x - startPos.x;
+
+                // Create bar element
+                const barDiv = document.createElement('div');
+                barDiv.className = 'skill-level-bar';
+                barDiv.style.left = startPos.x + 'px';
+                barDiv.style.top = startPos.y + 'px';
+                barDiv.style.width = width + 'px';
+                barDiv.style.backgroundColor = bar.color;
+                graphContainer.appendChild(barDiv);
+            });
+        }
+
+        // Create bars after a short delay to ensure network is fully rendered
+        setTimeout(createSkillLevelBars, 500);
+
+        // Filter state
+        let currentPlatform = 'windows';
+        let currentLanguage = 'basics'; // null = all, 'r', 'python', 'basics'
+
+        // Tutorial categorization
+        const tutorialCategories = {
+            windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
+            mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
+            basics: [1, 2, 3, 25, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, VS Code Basics, Claude Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
+            r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
+            rstudio_mac: [17],         // RStudio (Mac)
+            rstudio_windows: [18],     // RStudio (Windows)
+            claude_code_r_mac: [19],   // Claude Code for R (Mac only)
+            claude_code_python_mac: [20], // Claude Code for Python (Mac only)
+            python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
+            shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24] // All coding tutorials
+        };
+
+        // Filter nodes based on current state
+        function applyFilters() {
+            const allNodes = Object.keys(tutorials).map(id => parseInt(id));
+            let visibleNodes = [];
+
+            if (currentLanguage === 'basics') {
+                // Basics mode: show VS Code Basics + Claude Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
+                visibleNodes = [...tutorialCategories[currentPlatform], 3, 25, 13, 21, 22, 23, 24];
+            } else if (currentLanguage === 'r') {
+                // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper, no skills)
+                const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
+                const claudeCodeRTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_r_mac : [];
+                visibleNodes = [
+                    tutorialCategories[currentPlatform][0], // Install only (first item)
+                    ...tutorialCategories.r,
+                    ...rstudioTutorial, // Add platform-specific RStudio tutorial
+                    ...claudeCodeRTutorial, // Add Claude Code for R (Mac only)
+                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
+                ];
+            } else if (currentLanguage === 'python') {
+                // Python mode: show platform install + Python tutorials + coding shared (no git, no research paper, no skills)
+                const claudeCodePythonTutorial = currentPlatform === 'mac' ? tutorialCategories.claude_code_python_mac : [];
+                visibleNodes = [
+                    tutorialCategories[currentPlatform][0], // Install only (first item)
+                    ...tutorialCategories.python,
+                    ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
+                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
+                ];
+            } else {
+                // All mode: show platform-specific basics + all coding tutorials
+                visibleNodes = [
+                    ...tutorialCategories[currentPlatform],
+                    ...tutorialCategories.coding
+                ];
+            }
+
+            // Update node visibility
+            allNodes.forEach(id => {
+                const isVisible = visibleNodes.includes(id);
+                const node = nodes.get(id);
+
+                if (isVisible) {
+                    // Make node visible and interactive
+                    nodes.update({
+                        id: id,
+                        hidden: false,
+                        physics: false,
+                        title: 'Klicken Sie, um zu lernen'
+                    });
+                } else {
+                    // Hide node
+                    nodes.update({
+                        id: id,
+                        hidden: true
+                    });
+                }
+            });
+
+            // Update edge visibility - only show edges between visible nodes
+            edgeData.forEach(e => {
+                const fromVisible = visibleNodes.includes(e.from);
+                const toVisible = visibleNodes.includes(e.to);
+                edges.update({
+                    id: e.id,
+                    hidden: !(fromVisible && toVisible)
+                });
+            });
+
+            updateProgress();
+        }
+
+        // Filter button elements
+        const filterWindows = document.getElementById('filter-windows');
+        const filterMac = document.getElementById('filter-mac');
+        const filterR = document.getElementById('filter-r');
+        const filterPython = document.getElementById('filter-python');
+        const filterBasics = document.getElementById('filter-basics');
+
+        // Platform filter buttons
+        filterWindows.addEventListener('click', () => {
+            if (currentPlatform !== 'windows') {
+                currentPlatform = 'windows';
+                filterWindows.classList.add('active');
+                filterMac.classList.remove('active');
+                applyFilters();
+            }
+        });
+
+        filterMac.addEventListener('click', () => {
+            if (currentPlatform !== 'mac') {
+                currentPlatform = 'mac';
+                filterMac.classList.add('active');
+                filterWindows.classList.remove('active');
+                applyFilters();
+            }
+        });
+
+        // Language filter buttons
+        filterR.addEventListener('click', () => {
+            if (currentLanguage !== 'r') {
+                currentLanguage = 'r';
+                filterR.classList.add('active');
+                filterPython.classList.remove('active');
+                filterBasics.classList.remove('active');
+            } else {
+                // Toggle off - show all
+                currentLanguage = null;
+                filterR.classList.remove('active');
+            }
+            applyFilters();
+        });
+
+        filterPython.addEventListener('click', () => {
+            if (currentLanguage !== 'python') {
+                currentLanguage = 'python';
+                filterPython.classList.add('active');
+                filterR.classList.remove('active');
+                filterBasics.classList.remove('active');
+            } else {
+                // Toggle off - show all
+                currentLanguage = null;
+                filterPython.classList.remove('active');
+            }
+            applyFilters();
+        });
+
+        filterBasics.addEventListener('click', () => {
+            if (currentLanguage !== 'basics') {
+                currentLanguage = 'basics';
+                filterBasics.classList.add('active');
+                filterR.classList.remove('active');
+                filterPython.classList.remove('active');
+            } else {
+                // Toggle off - show all
+                currentLanguage = null;
+                filterBasics.classList.remove('active');
+            }
+            applyFilters();
+        });
+
+        // Apply initial filters
+        applyFilters();
+
+        // Learning path hint on graph hover
+        const learningPathHint = document.getElementById('learning-path-hint');
+        const networkGraph = document.getElementById('network-graph');
+
+        networkGraph.addEventListener('mouseenter', function() {
+            learningPathHint.classList.add('visible');
+        });
+
+        networkGraph.addEventListener('mouseleave', function() {
+            learningPathHint.classList.remove('visible');
+        });
+
+        // Modal elements
+        const modal = document.getElementById('tutorial-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalLink = document.getElementById('modal-link');
+        const modalClose = document.querySelector('.modal-close');
+        const modalComplete = document.getElementById('modal-complete');
+
+        let currentNodeId = null;
+
+        // Update complete button state
+        function updateCompleteButton() {
+            const completed = isCompleted(currentNodeId);
+            modalComplete.textContent = completed ? '✓ Abgeschlossen' : 'Als abgeschlossen markieren';
+            modalComplete.classList.toggle('completed', completed);
+        }
+
+        // Show modal on node click
+        network.on('click', function(params) {
+            if (params.nodes.length > 0) {
+                currentNodeId = params.nodes[0];
+                const tutorial = tutorials[currentNodeId];
+                modalTitle.textContent = tutorial.label.replace('\n', ' ');
+                modalDesc.textContent = tutorial.desc;
+                modalLink.href = tutorial.url;
+
+                updateCompleteButton();
+                modal.classList.add('active');
+            }
+        });
+
+        // Handle completion toggle
+        modalComplete.addEventListener('click', function() {
+            if (currentNodeId !== null) {
+                const wasCompleted = isCompleted(currentNodeId);
+                toggleComplete(currentNodeId);
+                updateNodeLabel(currentNodeId);
+                updateCompleteButton();
+
+                // Celebrate when marking complete (not when unmarking)
+                if (!wasCompleted) {
+                    modal.classList.remove('active');
+                    celebrate();
+                }
+            }
+        });
+
+        // Handle start button click - mark as complete when starting
+        modalLink.addEventListener('click', function() {
+            if (currentNodeId !== null && !isCompleted(currentNodeId)) {
+                toggleComplete(currentNodeId);
+                updateNodeLabel(currentNodeId);
+                celebrate();
+            }
+        });
+
+        // Close modal
+        modalClose.addEventListener('click', () => modal.classList.remove('active'));
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
