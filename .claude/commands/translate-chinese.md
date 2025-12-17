@@ -71,7 +71,7 @@ Create the Chinese translation following these guidelines:
 
 ### Formatting Requirements
 
-1. **Home Link** - Change to `[首页](./zh/)` at the top
+1. **Home Link** - Change to `[首页](./)` at the top
 2. **Preserve structure** - Keep the same sections and order as English
 3. **Code blocks** - Copy exactly, do not translate
 4. **Bold/backtick formatting** - Preserve all formatting
@@ -112,4 +112,4 @@ Present to the user:
 - Chinese translations go in `docs/zh/`
 - Both should have the same filename
 - When in doubt about a technical term, keep it in English
-- Test that the Chinese home link `./zh/` will work in the site structure
+- Test that the Chinese home link `./` will work in the site structure
