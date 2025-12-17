@@ -1,10 +1,10 @@
-[Accueil](../fr/)
+[Accueil](./)
 
 # Installer Claude Code sur Mac
 
-Claude Code est un assistant IA qui fonctionne dans votre Terminal et vous aide à écrire, déboguer et comprendre du code. Considérez-le comme un partenaire de codage compétent disponible chaque fois que vous avez besoin d'aide. Que vous soyez débutant complet ou développeur expérimenté, Claude Code peut accélérer votre flux de travail et vous aider à apprendre.
+Claude Code est un assistant IA qui s'exécute dans votre Terminal et vous aide à écrire, déboguer et comprendre du code. Voyez-le comme un partenaire de programmation compétent, disponible dès que vous en avez besoin. Que vous soyez débutant ou développeur expérimenté, Claude Code accélère votre flux de travail et facilite l'apprentissage.
 
-Ce guide vous accompagne à travers l'installation étape par étape, avec des instructions détaillées pour les débutants.
+Ce guide vous accompagne pas à pas dans l'installation, avec des instructions détaillées pour les débutants.
 
 ## Vue d'ensemble
 
