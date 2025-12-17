@@ -35,7 +35,7 @@ Mac hat Git oft vorinstalliert. Lassen Sie uns prüfen:
   git --version
   ```
 
-**Wenn Sie eine Versionsnummer sehen** (wie `git version 2.39.0`), ist Git bereits installiert – springen Sie zu Schritt 3.
+**Wenn Sie eine Versionsnummer sehen** (wie `git version 2.39.0`), ist Git bereits installiert – fahren Sie mit Schritt 3 fort.
 
 **Wenn Sie „command not found" sehen** oder ein Popup zur Installation von Entwicklertools erscheint:
 - Klicken Sie im Popup auf **Installieren**, oder führen Sie aus:

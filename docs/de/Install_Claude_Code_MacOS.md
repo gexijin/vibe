@@ -41,7 +41,7 @@ Claude Code erfordert Node.js Version 18 oder höher.
    node --version
    ```
 - Schauen Sie sich das Ergebnis an:
-   - **Wenn Sie eine Versionsnummer wie `v18.x.x` oder höher sehen**: Node.js ist bereits installiert! Springen Sie zu Schritt 4.
+   - **Wenn Sie eine Versionsnummer wie `v18.x.x` oder höher sehen**: Node.js ist bereits installiert! Fahren Sie mit Schritt 4 fort.
    - **Wenn Sie „command not found" sehen**: Fahren Sie mit der Installation unten fort.
 
 **Um Node.js herunterzuladen:**
@@ -83,7 +83,7 @@ Claude Code erfordert Node.js Version 18 oder höher.
    node --version
    ```
 - Sie sollten etwas wie `v24.x.x` sehen (die genauen Zahlen können variieren)
-- Wenn Sie eine Versionsnummer sehen, großartig! Node.js ist korrekt installiert
+- Wenn Sie eine Versionsnummer sehen: Ausgezeichnet! Node.js ist korrekt installiert
 
 **Wenn Sie „command not found" sehen:**
 - Schließen Sie Terminal vollständig (klicken Sie auf **Terminal** in der Menüleiste, dann auf **Terminal beenden**)

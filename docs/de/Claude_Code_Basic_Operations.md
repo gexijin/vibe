@@ -165,7 +165,7 @@ Claude liest das Notebook und erklärt, was es tut, wie es funktioniert und was 
 
 Wenn Sie mit Claude Code aus VS Code arbeiten und die Claude Code-Erweiterung installiert haben, können Sie die Datei zum Kontext hinzufügen, indem Sie sie einfach öffnen. Sie sehen unten rechts im Befehlsfenster `In Nested_Pie_Chart.ipynb`. Dann weiß Claude, dass Sie über diese Datei sprechen.
 
-Außerdem können Sie einige Codezeilen auswählen und Claude zeigt **3 lines selected** an. Sie können Claude bitten, schnelle Änderungen an diesen Zeilen vorzunehmen oder Fragen zu stellen. Daher empfehle ich dringend, Claude Code aus VS Code zu verwenden.
+Außerdem können Sie einige Codezeilen auswählen und Claude zeigt **3 Zeilen ausgewählt** an. Sie können Claude bitten, schnelle Änderungen an diesen Zeilen vorzunehmen oder Fragen zu stellen. Daher empfehle ich dringend, Claude Code aus VS Code zu verwenden.
 
 
 ## Schritt 9: Aktionen mit Linux-Befehlen ausführen

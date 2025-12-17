@@ -31,7 +31,7 @@ Bevor Sie WSL installieren, müssen Sie überprüfen, ob die Virtualisierung auf
 - Schauen Sie auf den unteren rechten Bereich des Fensters
 - Suchen Sie die Zeile **Virtualisierung:** und prüfen Sie, ob dort **Aktiviert** steht
 
-**Wenn dort „Aktiviert" steht:** Großartig! Fahren Sie mit Schritt 2 fort.
+**Wenn dort „Aktiviert" steht:** Ausgezeichnet! Fahren Sie mit Schritt 2 fort.
 
 **Wenn dort „Deaktiviert" steht:** Sie müssen die Virtualisierung in den BIOS-Einstellungen Ihres Computers aktivieren:
 - Starten Sie Ihren Computer neu
@@ -62,7 +62,7 @@ Ein blaues Fenster mit weißem Text öffnet sich - das ist PowerShell mit Admini
    wsl --list --verbose
    ```
 - Schauen Sie sich das Ergebnis an:
-   - **Wenn Sie „Ubuntu" aufgelistet sehen** mit einem STATUS „Running" oder „Stopped": WSL und Ubuntu sind bereits installiert! Springen Sie zu Schritt 4.
+   - **Wenn Sie „Ubuntu" aufgelistet sehen** mit einem STATUS „Running" oder „Stopped": WSL und Ubuntu sind bereits installiert! Fahren Sie mit Schritt 4 fort.
    - **Wenn Sie eine Fehlermeldung sehen** oder „Windows-Subsystem für Linux hat keine installierten Distributionen": Fahren Sie mit der Installation unten fort.
 
 **Um WSL und Ubuntu zu installieren:**

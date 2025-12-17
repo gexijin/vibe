@@ -29,12 +29,12 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 
 - Öffnen Sie den **Finder**
 - Klicken Sie in der linken Seitenleiste auf **Dokumente**
-- Klicken Sie in der Menüleiste auf **File**, dann auf **New Folder**
+- Klicken Sie in der Menüleiste auf **Datei**, dann auf **Neuer Ordner**
 - Nennen Sie den Ordner `test_claude`
 
 ## Schritt 3: Den Ordner in VS Code öffnen
 
-- Klicken Sie in VS Code in der Menüleiste auf **File**, dann auf **Open Folder**
+- Klicken Sie in VS Code in der Menüleiste auf **Datei**, dann auf **Ordner öffnen**
 - Navigieren Sie zu **Dokumente** und wählen Sie den Ordner `test_claude`, den Sie erstellt haben
 - Klicken Sie auf **Öffnen**
 - Wenn Sie gefragt werden „Vertrauen Sie den Autoren der Dateien in diesem Ordner?", klicken Sie auf **Ja, ich vertraue den Autoren**
@@ -43,7 +43,7 @@ Sie sollten nun `TEST_CLAUDE` im Explorer-Panel auf der linken Seite sehen.
 
 ## Schritt 4: Claude Code starten
 
-- Öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **New Terminal**
+- Öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **Neues Terminal**
 - Ein Terminal-Panel erscheint am unteren Rand von VS Code
 - Geben Sie im Terminal ein:
   ```
@@ -60,17 +60,17 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 ```
 - Claude Code erstellt die Datei – Sie sehen `article.md` im Explorer-Panel auf der linken Seite erscheinen
 - Klicken Sie auf `article.md` im Explorer, um sie im Editor anzuzeigen
-- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
+- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Vorschau öffnen**
 - Sie sehen das Markdown mit korrekten Überschriften, Aufzählungspunkten und Formatierung gerendert
 
 ## Claude später in VS Code wieder öffnen
 
 Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 
-- **Option A:** Öffnen Sie VS Code, klicken Sie auf **File > Open Recent** und wählen Sie `test_claude`
+- **Option A:** Öffnen Sie VS Code, klicken Sie auf **Datei > Zuletzt geöffnet** und wählen Sie `test_claude`
 - **Option B:** Öffnen Sie Terminal, navigieren Sie mit `cd ~/Documents/test_claude` zu Ihrem Projekt und geben Sie `code .` ein
 
-VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent normalerweise am schnellsten.
+VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Zuletzt geöffnet normalerweise am schnellsten.
 
 ## Nächste Schritte
 
@@ -82,7 +82,7 @@ VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent norma
 ## Fehlerbehebung
 
 - **Terminal zeigt „zsh", aber Claude Code startet nicht** - Stellen Sie sicher, dass Claude Code korrekt installiert ist; führen Sie `claude --version` aus, um es zu überprüfen
-- **Befehl „code" wird im Terminal nicht gefunden** - Klicken Sie in VS Code in der Menüleiste auf **View**, dann auf **Command Palette**, geben Sie „shell command" ein und wählen Sie **Shell Command: Install 'code' command in PATH**
+- **Befehl „code" wird im Terminal nicht gefunden** - Klicken Sie in VS Code in der Menüleiste auf **Ansicht**, dann auf **Befehlspalette**, geben Sie „shell command" ein und wählen Sie **Shell Command: Install 'code' command in PATH**
 - **VS Code öffnet sich nicht, weil es von einem nicht identifizierten Entwickler stammt** - Gehen Sie zu **Systemeinstellungen > Datenschutz & Sicherheit** und klicken Sie auf **Trotzdem öffnen**
 
 ## Workflow-Überblick

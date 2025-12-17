@@ -20,11 +20,11 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 ## Schritt 1: VS Code öffnen und R-Projekt erstellen
 
 - Öffnen Sie **Visual Studio Code**
-- Klicken Sie in der Menüleiste auf **File**, dann auf **Open Folder**
+- Klicken Sie in der Menüleiste auf **Datei**, dann auf **Ordner öffnen**
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
-- Klicken Sie unten im Dialog auf **New Folder**
+- Klicken Sie unten im Dialog auf **Neuer Ordner**
 - Nennen Sie den Ordner `claude_r_test`
-- Klicken Sie auf **Open**, um den neuen Ordner zu öffnen
+- Klicken Sie auf **Öffnen**, um den neuen Ordner zu öffnen
 - Wenn Sie gefragt werden „Vertrauen Sie den Autoren?", klicken Sie auf **Ja, ich vertraue den Autoren**
 
 ## Schritt 2: Claude Code Extension installieren und anmelden
@@ -43,9 +43,9 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 
 ## Schritt 3: Erstes R-Skript manuell erstellen
 
-- Klicken Sie in der Menüleiste auf **File > New File**
-- Klicken Sie auf **Select a language** und geben Sie `R` ein, dann wählen Sie **R**
-- Speichern Sie die Datei durch Klicken auf **File > Save**, nennen Sie sie `iris_analysis.R`
+- Klicken Sie in der Menüleiste auf **Datei > Neue Datei**
+- Klicken Sie auf **Sprache auswählen** und geben Sie `R` ein, dann wählen Sie **R**
+- Speichern Sie die Datei durch Klicken auf **Datei > Speichern**, nennen Sie sie `iris_analysis.R`
 - Geben Sie diesen Code ein:
 
 ```r
@@ -54,8 +54,8 @@ str(iris)
 summary(iris)
 ```
 
-- Speichern Sie die Datei durch Klicken auf **File > Save**
-- Öffnen Sie das R-Terminal: Klicken Sie in der Menüleiste auf **View**, dann auf **Command Palette**, geben Sie `R: Create R Terminal` ein und drücken Sie Enter
+- Speichern Sie die Datei durch Klicken auf **Datei > Speichern**
+- Öffnen Sie das R-Terminal: Klicken Sie in der Menüleiste auf **Ansicht**, dann auf **Befehlspalette**, geben Sie `R: Create R Terminal` ein und drücken Sie Enter
 - Wählen Sie den Code aus und drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um ihn auszuführen
 - Sie sollten die Datensatzstruktur und zusammenfassende Statistiken im Terminal sehen
 
@@ -132,7 +132,7 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 
 ## Fehlerbehebung
 
-- **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
+- **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **Ansicht > Erweiterungen**, um zu überprüfen, ob sie installiert ist.
 - **„Cannot read R file"-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.R` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
 - **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **ggplot2 nicht gefunden** - Installieren Sie es im R-Terminal: `install.packages("ggplot2")`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.

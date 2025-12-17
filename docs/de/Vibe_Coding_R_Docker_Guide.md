@@ -206,7 +206,7 @@ Sie bauen ein professionelles Dashboard durch ein Gespräch.
 - Geben Sie im **Summary**-Feld unten links ein:
 
 ```
-Create NBA dashboard with team filter and visualizations
+Erstelle NBA-Dashboard mit Team-Filter und Visualisierungen
 ```
 
 - Klicken Sie auf **Commit to main**

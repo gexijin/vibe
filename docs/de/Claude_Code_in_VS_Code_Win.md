@@ -52,8 +52,8 @@ Beim ersten Verbinden installiert VS Code einen kleinen Server in WSL. Dies daue
 
 ## Schritt 5: Den Ordner in VS Code öffnen
 
-- Klicken Sie in VS Code (noch mit WSL verbunden) in der Menüleiste auf **File**, dann auf **Open Folder**
-- Ein **Open Folder**-Dropdown erscheint oben in der Mitte.
+- Klicken Sie in VS Code (noch mit WSL verbunden) in der Menüleiste auf **Datei**, dann auf **Ordner öffnen**
+- Ein **Ordner öffnen**-Dropdown erscheint oben in der Mitte.
 - Finden Sie Ihren Ordner durch Eingabe von:
   ```
   /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude
@@ -65,7 +65,7 @@ Beim ersten Verbinden installiert VS Code einen kleinen Server in WSL. Dies daue
 
 ## Schritt 6: Claude Code starten
 
-- Nachdem VS Code neu geladen hat, öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **New Terminal**
+- Nachdem VS Code neu geladen hat, öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **Neues Terminal**
 - Geben Sie im Terminal-Panel ein:
   ```
   claude
@@ -81,17 +81,17 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 ```
 - Claude Code erstellt die Datei – Sie sehen `article.md` im Explorer-Panel auf der linken Seite erscheinen
 - Klicken Sie auf `article.md` im Explorer, um sie im Editor anzuzeigen
-- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
+- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Vorschau öffnen**
 - Sie sehen das Markdown mit korrekten Überschriften, Aufzählungspunkten und Formatierung gerendert
 
 ## Claude später in VS Code wieder öffnen
 
 Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihren WSL-Projekten:
 
-- **Option A:** Öffnen Sie VS Code, klicken Sie auf die untere linke Ecke, wählen Sie **Connect to WSL**, dann **File > Open Recent**. Wählen Sie `/mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude [WSL: Ubuntu]`
+- **Option A:** Öffnen Sie VS Code, klicken Sie auf die untere linke Ecke, wählen Sie **Mit WSL verbinden**, dann **Datei > Zuletzt geöffnet**. Wählen Sie `/mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude [WSL: Ubuntu]`
 - **Option B:** Öffnen Sie die Ubuntu-App von Windows, navigieren Sie im Terminal zu Ihrem Projekt und geben Sie `code .` ein
 
-VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent normalerweise am schnellsten.
+VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Zuletzt geöffnet normalerweise am schnellsten.
 
 ## Nächste Schritte
 
