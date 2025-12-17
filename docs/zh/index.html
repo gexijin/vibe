@@ -507,17 +507,21 @@
     </div>
 
     <script>
+        // Language identifier for completion tracking
+        const LANG = 'zh';
+        const STORAGE_KEY = `completedTutorials-${LANG}`;
+
         // Load completed tutorials from localStorage
         function getCompleted() {
             try {
-                return JSON.parse(localStorage.getItem('completedTutorials')) || [];
+                return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
             } catch {
                 return [];
             }
         }
 
         function saveCompleted(completed) {
-            localStorage.setItem('completedTutorials', JSON.stringify(completed));
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
         }
 
         function toggleComplete(id) {
