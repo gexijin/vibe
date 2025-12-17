@@ -51,7 +51,7 @@ Claude Code nécessite Node.js version 18 ou supérieure.
    ```
    https://nodejs.org/
    ```
-- Cliquez sur le bouton vert qui dit **Get Node.js**
+- Cliquez sur le bouton vert qui dit **Obtenir Node.js** (ou **Get Node.js** en anglais)
 - Cliquez sur le bouton vert qui dit **macOS Installer (.pkg)** au milieu de l'écran
 - Un fichier sera téléchargé dans votre dossier Téléchargements (prend généralement 30 à 60 secondes)
    - Le fichier sera nommé quelque chose comme `node-v24.x.x.pkg`
@@ -121,8 +121,8 @@ Claude Code nécessite Node.js version 18 ou supérieure.
    ```
 - Claude essaie d'ouvrir un navigateur. S'il ne s'ouvre pas automatiquement, copiez l'URL affichée dans Terminal et collez-la dans votre navigateur.
 - Connectez-vous à votre compte Claude.ai (cela peut se produire automatiquement)
-- Cliquez sur **Authorize**
-- Cliquez sur **Copy Code** lorsqu'un long code apparaît
+- Cliquez sur **Autoriser** (ou **Authorize**)
+- Cliquez sur **Copier le Code** (ou **Copy Code**) lorsqu'un long code apparaît
 - Retournez à la fenêtre Terminal
 - Pour coller dans Terminal : Cliquez sur **Édition** dans la barre de menus, puis cliquez sur **Coller**
 - Vous devriez voir un message de succès

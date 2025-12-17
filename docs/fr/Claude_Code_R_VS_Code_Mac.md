@@ -65,7 +65,7 @@ summary(iris)
 - Dans la zone de discussion en bas, tapez :
 
 ```
-Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2.
+Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 
 - Appuyez sur Entrée pour envoyer
@@ -86,7 +86,7 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 - Dans le panneau de discussion Claude, tapez :
 
 ```
-Remove title. Change marker type by species. Change to the classic theme.
+Supprime le titre. Change le type de marqueur par espèce. Passe au thème classique.
 ```
 
 - Appuyez sur Entrée
@@ -100,7 +100,7 @@ Remove title. Change marker type by species. Change to the classic theme.
 - Dans le panneau de discussion Claude, tapez :
 
 ```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+Ajoute du code pour effectuer une ACP sur les variables numériques et tracer les échantillons en utilisant les deux premières composantes principales.
 ```
 
 - Appuyez sur Entrée
@@ -114,7 +114,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - Dans le panneau de discussion Claude, tapez :
 
 ```
-Review the entire script for correctness. Add comments when necessary.
+Révise le script entier pour vérifier qu'il est correct. Ajoute des commentaires si nécessaire.
 ```
 
 - Appuyez sur Entrée
@@ -124,11 +124,11 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## Prochaines Étapes
 
-- Demandez à Claude de créer un rapport R Markdown : "Create an R Markdown file for this analysis"
-- Utilisez Claude pour déboguer les erreurs : "This code gives Error X, can you fix it?"
-- Demandez des tests statistiques : "Add a t-test comparing sepal length between setosa and versicolor"
-- Demandez à Claude d'optimiser le code : "Make this loop faster using vectorization"
-- Obtenez de l'aide avec des fonctions inconnues : "Explain what dplyr::mutate does"
+- Demandez à Claude de créer un rapport R Markdown : « Crée un fichier R Markdown pour cette analyse »
+- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'Erreur X, peux-tu le corriger ? »
+- Demandez des tests statistiques : « Ajoute un test t comparant la longueur des sépales entre setosa et versicolor »
+- Demandez à Claude d'optimiser le code : « Rends cette boucle plus rapide en utilisant la vectorisation »
+- Obtenez de l'aide avec des fonctions inconnues : « Explique ce que fait dplyr::mutate »
 
 ## Dépannage
 

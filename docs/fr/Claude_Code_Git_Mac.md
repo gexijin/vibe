@@ -101,7 +101,7 @@ Claude Code se lance et attend votre demande.
 
 - Tapez cette demande :
   ```
-  Start tracking changes
+  Commence à suivre les modifications
   ```
 
 Claude initialise un dépôt Git dans votre dossier (prend 2-5 secondes). Vous avez maintenant le contrôle de version !
@@ -110,11 +110,11 @@ Claude initialise un dépôt Git dans votre dossier (prend 2-5 secondes). Vous a
 
 - Dans Claude Code, tapez :
   ```
-  Create a simple countdown timer app in a single file called timer.html.
-  It should have:
-  - An input field to set minutes
-  - Start and Stop buttons
-  - Display showing time remaining in MM:SS format
+  Crée une application de minuterie simple dans un seul fichier appelé timer.html.
+  Elle doit avoir :
+  - Un champ de saisie pour définir les minutes
+  - Des boutons Démarrer et Arrêter
+  - Un affichage montrant le temps restant au format MM:SS
   ```
 
 Claude crée `timer.html` (prend 10-30 secondes) avec le code CSS et JavaScript.
@@ -129,13 +129,13 @@ Claude crée `timer.html` (prend 10-30 secondes) avec le code CSS et JavaScript.
   - Cliquez sur **Start**
   - Regardez le compte à rebours
 
-**Si quelque chose ne fonctionne pas :** Dans Claude Code, décrivez l'erreur : `I'm seeing this error: [décrivez ce qui s'est passé]. Can you fix it?`
+**Si quelque chose ne fonctionne pas :** Dans Claude Code, décrivez l'erreur : « Je vois cette erreur : [décrivez ce qui s'est passé]. Peux-tu la corriger ? »
 
 ## Étape 10 : Demander à Claude de Faire un Commit
 
 - Dans Claude Code, tapez :
   ```
-  Save these changes.
+  Enregistre ces modifications.
   ```
 
 Claude va :
@@ -149,13 +149,13 @@ Vous avez créé votre premier point de sauvegarde ! Vous pouvez toujours reveni
 
 - Dans Claude Code, tapez :
   ```
-  Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
+  Ajoute deux boutons en haut. Si je clique dessus, cela démarre automatiquement des minuteries de 1 et 5 minutes.
   ```
 - Actualisez votre onglet de navigateur (ou appuyez sur `Command (⌘) + R`)
 - Testez : Cliquez sur le bouton **5 min**
 - Si cela fonctionne, faites un commit des modifications :
   ```
-  Save these changes.
+  Enregistre ces modifications.
   ```
 
 Nous avons créé un 2e point de sauvegarde. Cette version a les deux boutons qui fonctionnent.
@@ -164,7 +164,7 @@ Nous avons créé un 2e point de sauvegarde. Cette version a les deux boutons qu
 
 - Dans Claude Code, tapez :
   ```
-  Add a 15-minute button.
+  Ajoute un bouton de 15 minutes.
   ```
 - Actualisez votre onglet de navigateur (appuyez sur `Command (⌘) + R`)
 - Testez : Cliquez sur le bouton **15 min**
@@ -177,7 +177,7 @@ Parfois, le code de l'IA ne fonctionne pas et vous devez recommencer à partir d
 
 - Dans Claude Code, tapez :
   ```
-  discard these changes.
+  Abandonne ces modifications.
   ```
 - Claude demandera une confirmation
 - Tapez `yes` et appuyez sur Entrée
@@ -189,31 +189,31 @@ Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie f
 
 - Dans Claude Code, tapez :
   ```
-  Add a sound notification when time is up.
+  Ajoute une notification sonore quand le temps est écoulé.
   ```
 - Actualisez le navigateur et testez après que Claude ait terminé (réglez la minuterie sur 0.1 minutes)
 - Si cela fonctionne, faites un commit des modifications :
   ```
-  Save these changes.
+  Enregistre ces modifications.
   ```
 
 ## Étape 15 : Ajouter un Bouton de Répétition
 
 - Dans Claude Code, tapez :
   ```
-  The sound should continue until I click a button to snooze it.
+  Le son doit continuer jusqu'à ce que je clique sur un bouton pour le mettre en pause.
   ```
 - Actualisez le navigateur et testez après que Claude ait terminé (réglez la minuterie sur 0.1 minutes)
 - Si cela fonctionne, faites un commit des modifications :
   ```
-  Save these changes.
+  Enregistre ces modifications.
   ```
 
 ## Étape 16 : Voir Votre Historique de Commits
 
 - Dans Claude Code, tapez :
   ```
-  show my change history
+  Montre-moi mon historique de modifications
   ```
 
 Claude affiche vos commits dans un format lisible. Vous verrez :
@@ -230,7 +230,7 @@ Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abando
 - Vous pouvez voir le code source de ceci.
 - Dans Claude Code, demandez
   ```
-  Explain this code. Just big picture.
+  Explique ce code. Juste les grandes lignes.
   ```
 
 ## Le Workflow Complet
@@ -248,10 +248,10 @@ Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte�
 
 Essayez d'ajouter plus de fonctionnalités à votre minuterie :
 
-- **Bouton 15 minutes :** `Add a working 15-minute preset button` (refaites ce que nous avons abandonné !)
-- **Bouton Pause :** `Add a Pause/Resume button that toggles the timer state`
-- **Meilleure mise en page :** `Improve the visual design with a modern color scheme and larger fonts`
-- **Barre de progression :** `Add a visual progress bar showing time remaining`
+- **Bouton 15 minutes :** « Ajoute un bouton prédéfini de 15 minutes qui fonctionne » (refaites ce que nous avons abandonné !)
+- **Bouton Pause :** « Ajoute un bouton Pause/Reprendre qui bascule l'état de la minuterie »
+- **Meilleure mise en page :** « Améliore le design visuel avec une palette de couleurs moderne et des polices plus grandes »
+- **Barre de progression :** « Ajoute une barre de progression visuelle montrant le temps restant »
 
 N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque succès, abandonnez les échecs.
 
@@ -264,11 +264,11 @@ N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque suc
 
 ## Ce Que Vous Pouvez Demander à Claude
 
-- `what files have I changed?` - Voir les modifications non commitées
-- `show me the diff` - Voir exactement quel code a changé
-- `explain what the timer code does` - Comprendre l'implémentation
-- `create a branch called experiment` - Essayer des modifications risquées en toute sécurité
-- `go back to the previous commit` - Annuler tout depuis le dernier commit
+- « Quels fichiers ai-je modifiés ? » - Voir les modifications non commitées
+- « Montre-moi les différences » - Voir exactement quel code a changé
+- « Explique ce que fait le code de la minuterie » - Comprendre l'implémentation
+- « Crée une branche appelée expérience » - Essayer des modifications risquées en toute sécurité
+- « Reviens au commit précédent » - Annuler tout depuis le dernier commit
 
 Claude gère toutes les opérations Git en langage naturel—aucune commande à mémoriser !
 

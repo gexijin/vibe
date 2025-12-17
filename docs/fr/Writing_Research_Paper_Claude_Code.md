@@ -76,25 +76,25 @@ Pour Mac :
 Demandez à Claude de rechercher votre sujet. Copiez et collez ce prompt dans Claude Code, en remplaçant le sujet par le vôtre :
 
 ```
-I'm writing a ~1,000 word research paper on AI adoption in the workplace.
-Search for recent data (2023-2025) on:
-- Productivity gains from AI tools
-- Job displacement concerns and statistics
-- Real-world case studies from companies
+J'écris un article de recherche d'environ 1 000 mots sur l'adoption de l'IA en milieu de travail.
+Recherche des données récentes (2023-2025) sur :
+- Les gains de productivité grâce aux outils d'IA
+- Les préoccupations et statistiques sur le déplacement d'emplois
+- Des études de cas réelles d'entreprises
 
-Requirements:
-- Prioritize peer-reviewed research and credible industry reports
-- Avoid anecdotes and opinion pieces
-- List each source with a 1-3 sentence summary
-- Group sources by topic
+Exigences :
+- Priorise les recherches évaluées par les pairs et les rapports d'industrie crédibles
+- Évite les anecdotes et les articles d'opinion
+- Liste chaque source avec un résumé de 1-3 phrases
+- Regroupe les sources par sujet
 
-Save as general_research.md
+Enregistre sous general_research.md
 ```
 
 Claude effectue des recherches sur le web et organise les résultats dans un fichier appelé `general_research.md`. Cela peut prendre une minute ou deux. Une fois terminé, demandez un résumé :
 
 ```
-Give me a brief summary.
+Donne-moi un bref résumé.
 ```
 
 Examinez le résumé de Claude pour obtenir un aperçu rapide du paysage de la recherche.
@@ -111,7 +111,7 @@ Lisez le document de recherche et cliquez sur les sources originales pour vérif
 Demandez à Claude de vous aider à faire un brainstorming :
 
 ```
-Based on this research, suggest 3-4 angles I could take for this paper.
+En fonction de cette recherche, suggère 3-4 angles que je pourrais prendre pour cet article.
 ```
 
 Examinez les angles et choisissez celui qui vous intéresse le plus.
@@ -121,8 +121,8 @@ Examinez les angles et choisissez celui qui vous intéresse le plus.
 Maintenant que vous avez votre angle, demandez à Claude une recherche ciblée :
 
 ```
-I want to focus on [your chosen angle]. Search for more specific data
-and examples that support this perspective. Save as focused_research.md
+Je veux me concentrer sur [ton angle choisi]. Recherche des données plus spécifiques
+et des exemples qui soutiennent cette perspective. Enregistre sous focused_research.md
 ```
 
 Claude trouve des informations ciblées.
@@ -132,39 +132,39 @@ Claude trouve des informations ciblées.
 Demandez à Claude de créer un plan basé sur votre angle choisi :
 
 ```
-Give me 3 options for a brief outline for my paper based on the focused
-research and my chosen angle. Use bullet points for the narrative flow.
-Save as outlines.md
+Donne-moi 3 options pour un bref plan de mon article basé sur la recherche
+ciblée et mon angle choisi. Utilise des puces pour le flux narratif.
+Enregistre sous outlines.md
 ```
 
-Examinez le plan et demandez à Claude de l'ajuster si nécessaire (par exemple, « Make section 2 focus more on case studies » ou « Add a section on limitations »).
+Examinez le plan et demandez à Claude de l'ajuster si nécessaire (par exemple, « Fais en sorte que la section 2 se concentre davantage sur les études de cas » ou « Ajoute une section sur les limites »).
 
 ## Étape 10 : Rédiger l'article
 
 Sélectionnez votre plan et demandez à Claude de rédiger le brouillon complet :
 
 ```
-I like outline #2 [your chosen option].
+J'aime le plan n°2 [ton option choisie].
 
-Write a ~1,000 word research paper based on the outline and research.
+Rédige un article de recherche d'environ 1 000 mots basé sur le plan et la recherche.
 
-Structure:
-- Introduction: Hook, context, thesis statement
-- Body: 2-3 sections with arguments, statistics, and examples
-- Conclusion: Summary and implications
+Structure :
+- Introduction : Accroche, contexte, énoncé de thèse
+- Corps : 2-3 sections avec arguments, statistiques et exemples
+- Conclusion : Résumé et implications
 
-Style:
-- Clear, concise sentences (15-20 words average)
-- Active voice, analytical tone
-- Statistics woven into prose (no bullet lists)
-- Smooth transitions between paragraphs
+Style :
+- Phrases claires et concises (15-20 mots en moyenne)
+- Voix active, ton analytique
+- Statistiques intégrées à la prose (pas de listes à puces)
+- Transitions fluides entre les paragraphes
 
-Citations:
-- Use numbered references [1], [2], etc. after claims
-- Include 5-15 references
-- Add a References section at the end
+Citations :
+- Utilise des références numérotées [1], [2], etc. après les affirmations
+- Inclus 5-15 références
+- Ajoute une section Références à la fin
 
-Save as paper.md
+Enregistre sous paper.md
 ```
 
 Claude rédige le brouillon.
@@ -184,7 +184,7 @@ Enregistrez vos modifications dans l'éditeur.
 Demandez à Claude d'améliorer des sections spécifiques :
 
 ```
-Make the introduction more engaging with a compelling hook.
+Rends l'introduction plus engageante avec une accroche captivante.
 ```
 
 ## Étape 13 : Ajouter un résumé
@@ -192,8 +192,8 @@ Make the introduction more engaging with a compelling hook.
 Demandez à Claude d'ajouter un bref résumé exécutif au début :
 
 ```
-Add an abstract at the beginning of the paper. Write 2-3 short sentences
-that summarize the paper.
+Ajoute un résumé au début de l'article. Écris 2-3 phrases courtes
+qui résument l'article.
 ```
 
 Claude ajoutera le résumé. Examinez et modifiez pour vous assurer qu'il capture avec précision l'essence de votre article.
@@ -203,23 +203,23 @@ Claude ajoutera le résumé. Examinez et modifiez pour vous assurer qu'il captur
 Demandez à Claude de vous donner quelques options pour le titre :
 
 ```
-Give me a few options for the title. Make it more appealing.
+Donne-moi quelques options pour le titre. Rends-le plus attrayant.
 ```
 
 Sélectionnez un titre. Ajoutez votre propre touche :
 
 ```
-I like option #2 [your choice]. Edit the file.
+J'aime l'option n°2 [ton choix]. Modifie le fichier.
 ```
 
 ## Étape 15 : Vérifier les références (optionnel)
 Demandez à Claude de vérifier que vos citations sont cohérentes et complètes :
 ```
-Check all references in my paper:
-- Verify each citation number [1], [2], etc. has a matching reference
-- Verify each reference in the list is actually cited in the paper
-- Check that author names and titles are consistent
-- Verify the cited data and examples appear in the source
+Vérifie toutes les références dans mon article :
+- Vérifie que chaque numéro de citation [1], [2], etc. a une référence correspondante
+- Vérifie que chaque référence de la liste est réellement citée dans l'article
+- Vérifie que les noms d'auteurs et les titres sont cohérents
+- Vérifie que les données et exemples cités apparaissent dans la source
 ```
 
 Remarque : Claude ne peut vérifier que les sources accessibles publiquement. Pour les articles payants, vérifiez manuellement que vos citations correspondent à ce que vous avez lu.
@@ -229,10 +229,10 @@ Remarque : Claude ne peut vérifier que les sources accessibles publiquement. Po
 Demandez à Claude de faire une relecture finale :
 
 ```
-Do a final proofread of the paper:
-- Fix any spelling and grammar errors
-- Ensure consistent formatting throughout
-- Check flow and transition
+Fais une relecture finale de l'article :
+- Corrige toutes les erreurs d'orthographe et de grammaire
+- Assure un formatage cohérent tout au long
+- Vérifie le flux et les transitions
 ```
 
 Examinez les modifications de Claude.
@@ -244,8 +244,8 @@ Examinez les modifications de Claude.
 Enregistrez ce workflow comme un slash command réutilisable pour votre prochain article de recherche :
 
 ```
-Create a slash command called /research-paper that guides me through
-this entire workflow. Save it so I can use it for future research papers on various topics.
+Crée une commande slash appelée /research-paper qui me guide à travers
+tout ce workflow. Enregistre-la pour que je puisse l'utiliser pour de futurs articles de recherche sur divers sujets.
 ```
 
 Claude créera un slash command personnalisé dans votre dossier `.claude/commands/`. C'est un fichier Markdown contenant un prompt. Vous pouvez démarrer votre prochain article de recherche en tapant simplement `/research-paper [your topic]` !
@@ -263,7 +263,7 @@ Effacez la mémoire de Claude pour obtenir des commentaires sur votre article. T
 Cela supprime tout l'historique de conversation, donc Claude lira votre article avec un regard neuf. Maintenant, demandez des commentaires :
 
 ```
-Read paper.md and give me honest feedback.
+Lis paper.md et donne-moi des commentaires honnêtes.
 ```
 
 Claude critiquera votre article sans être influencé par le fait de l'avoir écrit. Apportez les révisions finales en fonction des commentaires.
@@ -302,16 +302,16 @@ Le slash command vous guidera automatiquement à travers tout le workflow ! N'ou
 
 ## Dépannage
 
-- **Les résultats de recherche de Claude semblent obsolètes :** Spécifiez « search for 2024-2025 data on [topic] »
-- **Le brouillon est trop long/court :** Dites à Claude : « Make this approximately 1,000 words »
+- **Les résultats de recherche de Claude semblent obsolètes :** Spécifiez « recherche des données 2024-2025 sur [sujet] »
+- **Le brouillon est trop long/court :** Dites à Claude : « Fais en sorte que ce soit environ 1 000 mots »
 - **Impossible de trouver les fichiers :** Dans le terminal, tapez `ls` pour lister tous les fichiers du dossier actuel
 
 ## Ce que vous pouvez demander à Claude
 
-- `search for more recent statistics on [topic]` - Trouver des données plus récentes
-- `summarize the key arguments in this paper` - Obtenir un aperçu
-- `make the conclusion more persuasive` - Améliorer des sections spécifiques
-- `cite all sources in APA format` - Formater les références
+- « Recherche des statistiques plus récentes sur [sujet] » - Trouver des données plus récentes
+- « Résume les arguments clés de cet article » - Obtenir un aperçu
+- « Rends la conclusion plus persuasive » - Améliorer des sections spécifiques
+- « Cite toutes les sources au format APA » - Formater les références
 
 Claude gère la recherche et la rédaction par langage naturel—aucune commande à mémoriser !
 

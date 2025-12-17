@@ -162,8 +162,8 @@ Claude Code nécessite Node.js version 18 ou supérieure. Suivez ces étapes :
    ```
 - Claude essaie d'ouvrir un navigateur. S'il ne peut pas s'ouvrir automatiquement, maintenez **Ctrl** enfoncé et cliquez sur l'URL longue pour l'ouvrir dans un navigateur. Alternativement, copiez l'URL et collez-la dans un navigateur externe.
 - Connectez-vous à votre compte Claude.ai (cela peut se produire automatiquement si vous utilisez Chrome)
-- Cliquez sur **Authorize**
-- Cliquez sur **Copy Code** lorsqu'un long code apparaît
+- Cliquez sur **Autoriser** (ou **Authorize**)
+- Cliquez sur **Copier le Code** (ou **Copy Code**) lorsqu'un long code apparaît
 - Retournez à la fenêtre du terminal
 - Pour coller dans le terminal : **Faites un clic droit** et sélectionnez **Coller** (ou appuyez sur **Ctrl+Maj+V**)
 - Vous devriez voir un message de succès

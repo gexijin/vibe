@@ -87,7 +87,7 @@ Maintenant, le plaisir commence. Au lieu de consulter la documentation, décrive
 - Dans le terminal Claude Code, tapez :
 
 ```
-Load the iris dataset from scikit-learn. Convert it to a pandas dataframe with proper column names. Add the species names as a column (not just numbers). Show me the first 10 rows. Save the code to a file called iris_exploration.py
+Charge le jeu de données iris depuis scikit-learn. Convertis-le en dataframe pandas avec des noms de colonnes appropriés. Ajoute les noms des espèces comme colonne (pas juste des nombres). Montre-moi les 10 premières lignes. Enregistre le code dans un fichier appelé iris_exploration.py
 ```
 
 - Appuyez sur Entrée
@@ -101,7 +101,7 @@ Vous venez d'utiliser le vibe coding ! Pas de recherche dans la documentation, p
 
 Demandez à Claude de valider en utilisant Git. Ou faites-le vous-même depuis GitHub Desktop.
 ```
-Commit these changes.
+Valide ces modifications.
 ```
 ## Étape 6 : Deuxième Vibe - Statistiques Récapitulatives
 
@@ -110,7 +110,7 @@ Avant de créer des visualisations, comprenez ce que contiennent les données.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Show me summary statistics for the iris data grouped by species. I want to see the mean, min, and max for each measurement (sepal length, sepal width, petal length, petal width) for each of the three species. Add this to iris_exploration.py
+Montre-moi les statistiques récapitulatives pour les données iris regroupées par espèce. Je veux voir la moyenne, le min et le max pour chaque mesure (longueur sépale, largeur sépale, longueur pétale, largeur pétale) pour chacune des trois espèces. Ajoute ceci à iris_exploration.py
 ```
 
 - Appuyez sur Entrée
@@ -129,7 +129,7 @@ Il est temps de visualiser les données.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Create a histogram showing the distribution of petal lengths for all flowers. Use 20 bins. Add a title and axis labels. Save the plot as petal_length_histogram.png. Add this code to iris_exploration.py
+Crée un histogramme montrant la distribution des longueurs de pétales pour toutes les fleurs. Utilise 20 intervalles. Ajoute un titre et des étiquettes d'axes. Enregistre le graphique sous petal_length_histogram.png. Ajoute ce code à iris_exploration.py
 ```
 
 - Appuyez sur Entrée
@@ -145,7 +145,7 @@ Les nuages de points montrent les relations entre deux variables.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Create a scatter plot with petal length on the x-axis and petal width on the y-axis. Color each point by species using different colors. Add a legend showing which color is which species. Save as petal_scatter.png. Add this to iris_exploration.py
+Crée un nuage de points avec la longueur des pétales sur l'axe x et la largeur des pétales sur l'axe y. Colore chaque point par espèce en utilisant différentes couleurs. Ajoute une légende montrant quelle couleur correspond à quelle espèce. Enregistre sous petal_scatter.png. Ajoute ceci à iris_exploration.py
 ```
 
 - Appuyez sur Entrée
@@ -163,7 +163,7 @@ Les diagrammes en boîte sont excellents pour comparer les distributions entre g
 - Dans le terminal Claude Code, tapez :
 
 ```
-Create a box plot comparing petal lengths across the three species. Put species on the x-axis and petal length on the y-axis. Use different colors for each species. Add a title. Save as species_boxplot.png. Add this to iris_exploration.py
+Crée un diagramme en boîte comparant les longueurs de pétales des trois espèces. Mets les espèces sur l'axe x et la longueur des pétales sur l'axe y. Utilise différentes couleurs pour chaque espèce. Ajoute un titre. Enregistre sous species_boxplot.png. Ajoute ceci à iris_exploration.py
 ```
 
 - Appuyez sur Entrée
@@ -199,11 +199,11 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 **Exemples de demandes à Claude :**
 
-- "Add a correlation matrix heatmap showing relationships between all four measurements"
-- "Create a violin plot comparing sepal width across species"
-- "Calculate and display the correlation coefficient between petal length and width"
-- "Add statistical test results comparing species (ANOVA or t-test)"
-- "Create a pair plot showing all variable relationships colored by species"
+- « Ajoute une carte thermique de matrice de corrélation montrant les relations entre les quatre mesures »
+- « Crée un violin plot comparant la largeur des sépales entre les espèces »
+- « Calcule et affiche le coefficient de corrélation entre la longueur et la largeur des pétales »
+- « Ajoute les résultats de tests statistiques comparant les espèces (ANOVA ou test t) »
+- « Crée un pair plot montrant toutes les relations entre variables colorées par espèce »
 
 Après chaque fonctionnalité réussie :
 - Testez-la en exécutant le script
@@ -214,7 +214,7 @@ Après chaque fonctionnalité réussie :
 
 **Principes clés :**
 
-- **Décrivez les résultats, pas l'implémentation** - Dites "show correlation heatmap" et non "use seaborn.heatmap() with df.corr()"
+- **Décrivez les résultats, pas l'implémentation** - Dites « montre une carte thermique de corrélation » et non « utilise seaborn.heatmap() avec df.corr() »
 - **Itérez rapidement** - Tester → affiner → tester → affiner
 - **Validez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
 - **Acceptez les échecs** - Si le code de Claude ne fonctionne pas, décrivez simplement l'erreur et demandez de la corriger
@@ -226,7 +226,7 @@ Après chaque fonctionnalité réussie :
 
 - **Essayez différents jeux de données** - Demandez à Claude d'utiliser le jeu de données wine, digits ou de charger un fichier CSV
 - **Explorez plus de visualisations** - Essayez les heatmaps, les pair plots ou les violin plots
-- **Apprenez en posant des questions** - Quand Claude écrit du code, demandez "explain what this line does" pour apprendre Python
+- **Apprenez en posant des questions** - Quand Claude écrit du code, demandez « explique ce que fait cette ligne » pour apprendre Python
 - **Appliquez à vos propres données** - Utilisez le vibe coding pour analyser vos données de recherche ou de travail
 - **Lisez sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
 
@@ -234,7 +234,7 @@ Après chaque fonctionnalité réussie :
 
 - **Le graphique ne s'affiche pas** - Le code enregistre les graphiques sous forme de fichiers PNG. Regardez dans votre dossier de projet et ouvrez directement le fichier image dans VS Code.
 - **Erreurs d'importation** - Le conteneur Docker devrait avoir pandas, matplotlib et scikit-learn pré-installés. Si ce n'est pas le cas, demandez à Claude de les installer avec pip.
-- **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites "fix this error." Le vibe coding inclut l'itération et le débogage.
+- **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites « corrige cette erreur ». Le vibe coding inclut l'itération et le débogage.
 - **Impossible de pousser vers GitHub** - Assurez-vous que vous êtes connecté à GitHub Desktop et que vous avez publié le dépôt (Étape 1). Vérifiez votre connexion Internet.
 - **Le conteneur ne démarre pas** - Assurez-vous que Docker Desktop est en cours d'exécution (indicateur d'état vert). Essayez de cliquer sur l'icône verte dans VS Code et de sélectionner **Rebuild Container**.
 

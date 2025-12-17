@@ -70,7 +70,7 @@ Create the French translation following these guidelines:
 
 ### Formatting Requirements
 
-1. **Home Link** - Change to `[Accueil](./fr/)` at the top
+1. **Home Link** - Change to `[Accueil](./)` at the top
 2. **Preserve structure** - Keep the same sections and order as English
 3. **Code blocks** - Copy exactly, do not translate
 4. **Bold/backtick formatting** - Preserve all formatting
@@ -113,4 +113,4 @@ Present to the user:
 - French translations go in `docs/fr/`
 - Both should have the same filename
 - When in doubt about a technical term, keep it in English
-- Test that the French home link `./fr/` will work in the site structure
+- Test that the French home link `./` will work in the site structure

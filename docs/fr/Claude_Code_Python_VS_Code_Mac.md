@@ -74,7 +74,7 @@ print(iris_df.describe())
 - Dans la zone de chat en bas, tapez :
 
 ```
-Add code to iris_analysis.py to create a scatter plot of sepal length vs. width, colored by species. Use seaborn.
+Ajoute du code à iris_analysis.py pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise seaborn.
 ```
 
 - Appuyez sur Entrée pour envoyer
@@ -98,7 +98,7 @@ Add code to iris_analysis.py to create a scatter plot of sepal length vs. width,
 - Dans le panneau de chat Claude, tapez :
 
 ```
-Remove title. Change marker type by species. Change to the whitegrid style.
+Supprime le titre. Change le type de marqueur par espèce. Passe au style whitegrid.
 ```
 
 - Appuyez sur Entrée
@@ -113,7 +113,7 @@ Remove title. Change marker type by species. Change to the whitegrid style.
 - Dans le panneau de chat Claude, tapez :
 
 ```
-Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
+Ajoute du code pour effectuer une ACP sur les variables numériques et tracer les échantillons en utilisant les deux premières composantes principales.
 ```
 
 - Appuyez sur Entrée
@@ -128,7 +128,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - Dans le panneau de chat Claude, tapez :
 
 ```
-Review the entire script for correctness. Add comments when necessary.
+Révise le script entier pour vérifier qu'il est correct. Ajoute des commentaires si nécessaire.
 ```
 
 - Appuyez sur Entrée
@@ -138,11 +138,11 @@ Review the entire script for correctness. Add comments when necessary.
 
 ## Prochaines Étapes
 
-- Demandez à Claude de créer un notebook Jupyter : "Convert this to a Jupyter notebook"
-- Utilisez Claude pour déboguer les erreurs : "This code gives Error X, can you fix it?"
-- Demandez des tests statistiques : "Add a t-test comparing sepal length between setosa and versicolor"
-- Demandez à Claude d'optimiser le code : "Make this code more efficient using numpy vectorization"
-- Obtenez de l'aide sur les fonctions inconnues : "Explain what pandas.groupby does"
+- Demandez à Claude de créer un notebook Jupyter : « Convertis ceci en notebook Jupyter »
+- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'Erreur X, peux-tu le corriger ? »
+- Demandez des tests statistiques : « Ajoute un test t comparant la longueur des sépales entre setosa et versicolor »
+- Demandez à Claude d'optimiser le code : « Rends ce code plus efficace en utilisant la vectorisation numpy »
+- Obtenez de l'aide sur les fonctions inconnues : « Explique ce que fait pandas.groupby »
 
 ## Dépannage
 

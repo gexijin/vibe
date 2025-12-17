@@ -64,10 +64,10 @@ Le mode auto-edit permet à Claude de créer et modifier plusieurs fichiers sans
 Copiez et collez ce prompt :
 
 ```
-Write a Python script called pubmed_search.py that:
-- Takes a search query as command line argument
-- Retrieves up to 10 recent papers
-- Returns PMID, title, authors, journal, year, abstract preview, and URL
+Écris un script Python appelé pubmed_search.py qui :
+- Prend une requête de recherche comme argument de ligne de commande
+- Récupère jusqu'à 10 articles récents
+- Renvoie le PMID, le titre, les auteurs, le journal, l'année, un aperçu du résumé et l'URL
 ```
 Claude crée le script. Il installe le package Biopython requis, qui inclut un module entrez pour interagir avec PubMed. Passez en revue la sortie pour voir la structure du script.
 
@@ -76,7 +76,7 @@ Claude crée le script. Il installe le package Biopython requis, qui inclut un m
 Demandez à Claude de le tester :
 
 ```
-Test the script with the query "immunotherapy breast cancer"
+Teste le script avec la requête "immunotherapy breast cancer"
 ```
 
 Claude exécute le script et affiche 10 articles récents sur l'immunothérapie pour le cancer du sein. Vous verrez les titres, les auteurs, les résumés et les liens PubMed.
@@ -88,11 +88,11 @@ Claude exécute le script et affiche 10 articles récents sur l'immunothérapie 
 Maintenant, nous allons tout regrouper dans un skill réutilisable. Copiez et collez :
 
 ```
-Create a Claude Skill called "medical-research" that:
-- Takes on a medical question
-- Designs queries to retrieve PubMed abstracts
-- Creates plain-language summaries accessible to non-scientists
-- Includes the pubmed_search.py script inside the skill folder
+Crée un Claude Skill appelé "medical-research" qui :
+- Prend en charge une question médicale
+- Conçoit des requêtes pour récupérer des résumés PubMed
+- Crée des résumés en langage clair accessibles aux non-scientifiques
+- Inclut le script pubmed_search.py dans le dossier du skill
 ```
 
 Claude crée la structure complète du skill :
@@ -108,7 +108,7 @@ Cela prend 2-3 minutes car Claude écrit une documentation complète.
 Posez une question de recherche en langage naturel :
 
 ```
-Can I lose weight via keto diet?
+Est-ce que je peux perdre du poids avec le régime cétogène ?
 ```
 
 Claude automatiquement :
@@ -125,7 +125,7 @@ La réponse inclut des sections comme "Comment Ça Marche", "Résultats de Reche
 Essayez un autre sujet de recherche :
 
 ```
-Does vaccine cause autism?
+Est-ce que les vaccins causent l'autisme ?
 ```
 
 La réponse explique le consensus scientifique, l'origine du mythe et les conséquences dans le monde réel.
@@ -158,11 +158,11 @@ Anthropic maintient un répertoire de skills pré-construits que vous pouvez ins
 - Pour installer un skill depuis le répertoire, demandez simplement à Claude :
 
   ```
-  Install the document skill from Anthropic's repository
+  Installe le skill document depuis le répertoire d'Anthropic
   ```
 - Essayez ce skill :
   ```
-  Create a PowerPoint presentation on Claude Skills.
+  Crée une présentation PowerPoint sur les Claude Skills.
   ```
 
 
@@ -170,7 +170,7 @@ Le **document skill** vous aide à lire et écrire des fichiers en PDF, Word, Po
 
 **Autres skills disponibles depuis le répertoire d'Anthropic :**
 - Parcourez le catalogue complet sur [github.com/anthropics/claude-skills](https://github.com/anthropics/skills)
-- Demandez à Claude "What skills are available in the Anthropic repository?" pour voir la liste actuelle
+- Demandez à Claude « Quels skills sont disponibles dans le répertoire d'Anthropic ? » pour voir la liste actuelle
 
 ## Prochaines Étapes
 

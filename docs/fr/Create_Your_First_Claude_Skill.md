@@ -65,8 +65,8 @@ Cela permet à Claude de créer et de modifier des fichiers sans demander la per
 
 Tapez cette invite :
 ```
-Convert my stock-report slash command to a Skill called generate-stock-reports.
-The Skill should activate automatically when I ask about companies or stocks.
+Convertis ma commande slash stock-report en une Compétence appelée generate-stock-reports.
+La Compétence devrait s'activer automatiquement quand je pose des questions sur des entreprises ou des actions.
 ```
 
 Claude analyse votre commande slash existante et la convertit en Compétence dans `.claude/skills/stock-report/`.
@@ -97,7 +97,7 @@ Le champ `description` est la clé—il indique à Claude exactement quand activ
 
 Au lieu de taper `/stock-report AAPL`, posez simplement une question naturelle :
 ```
-What's happening with Apple lately?
+Que se passe-t-il avec Apple ces derniers temps ?
 ```
 
 **La différence clé :** Vous n'avez pas tapé de commande. Claude lit votre question, reconnaît que vous posez une question sur une entreprise, vérifie les descriptions des Compétences et décide automatiquement d'utiliser la Compétence stock-report.
@@ -116,15 +116,15 @@ Observez Claude travailler—il devrait générer le même rapport complet que v
 
 **Compétence (Automatique) :**
 ```
-Tell me about Tesla's recent developments
+Parle-moi des récents développements de Tesla
 ```
 ou
 ```
-I'm thinking about investing in Microsoft
+Je pense à investir dans Microsoft
 ```
 ou
 ```
-What's NVIDIA up to?
+Que fait NVIDIA en ce moment ?
 ```
 - Claude décide d'utiliser ou non la Compétence
 - Conversation plus naturelle
@@ -134,14 +134,14 @@ What's NVIDIA up to?
 
 Essayez des questions qui NE devraient PAS déclencher la Compétence de rapport boursier :
 ```
-How do I install Python?
+Comment installer Python ?
 ```
 
 Claude répond normalement sans invoquer la Compétence.
 
 Maintenant essayez une question qui DEVRAIT la déclencher :
 ```
-Compare Google and Meta
+Compare Google et Meta
 ```
 
 Claude devrait utiliser la Compétence deux fois—une fois pour Google, une fois pour Meta.
@@ -150,18 +150,18 @@ Claude devrait utiliser la Compétence deux fois—une fois pour Google, une foi
 
 Rendons la Compétence plus sélective. Demandez à Claude :
 ```
-Update the stock-report Skill to only activate when I explicitly mention
-"analyze" or "report" along with a company name.
+Mets à jour la Compétence stock-report pour qu'elle ne s'active que quand je mentionne explicitement
+« analyser » ou « rapport » avec un nom d'entreprise.
 ```
 
 Claude met à jour le champ `description` dans `SKILL.md`. Testez la différence :
 ```
-What's Apple doing?
+Que fait Apple ?
 ```
 (Pourrait ne pas déclencher la Compétence maintenant)
 
 ```
-Analyze Apple
+Analyse Apple
 ```
 (Devrait déclencher la Compétence)
 

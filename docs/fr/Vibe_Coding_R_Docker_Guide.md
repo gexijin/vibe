@@ -90,7 +90,7 @@ Maintenant, le plaisir commence. Au lieu de consulter la documentation, décrive
 - Dans le terminal Claude Code, tapez :
 
 ```
-Install the hoopR package and load current NBA player statistics. Show me the top 10 players by total points scored this season. Display it as a nice table.
+Installe le package hoopR et charge les statistiques actuelles des joueurs NBA. Montre-moi les 10 meilleurs joueurs par points totaux marqués cette saison. Affiche-le sous forme de tableau bien présenté.
 ```
 
 - Appuyez sur Entrée
@@ -105,7 +105,7 @@ Vous venez d'utiliser le vibe coding ! Pas de recherche dans la documentation, p
 
 **Sauvegardez votre progression :** Demandez à Claude de valider en utilisant Git, ou faites-le vous-même depuis GitHub Desktop :
 ```
-Commit these changes.
+Valide ces modifications.
 ```
 
 ## Étape 6 : Deuxième Vibe - Explorer les Données
@@ -115,7 +115,7 @@ Avant de créer un tableau de bord, comprenez quelles données vous avez.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Show me what columns are available in this NBA data. Then create a summary showing: number of players, number of teams, average points per player, and who has the most assists and rebounds.
+Montre-moi quelles colonnes sont disponibles dans ces données NBA. Ensuite crée un résumé montrant : le nombre de joueurs, le nombre d'équipes, la moyenne de points par joueur, et qui a le plus de passes décisives et de rebonds.
 ```
 
 - Appuyez sur Entrée
@@ -133,7 +133,7 @@ Il est temps de construire le tableau de bord interactif.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Create a Shiny app in a file called app.R that shows an interactive table of NBA player stats. Include columns for player name, team, points, assists, and rebounds. Add a slider to filter players by minimum points scored (from 0 to 1000). Make it look clean and professional.
+Crée une application Shiny dans un fichier appelé app.R qui affiche un tableau interactif des statistiques des joueurs NBA. Inclus des colonnes pour le nom du joueur, l'équipe, les points, les passes décisives et les rebonds. Ajoute un curseur pour filtrer les joueurs par points minimum marqués (de 0 à 1000). Rends-la propre et professionnelle.
 ```
 
 - Appuyez sur Entrée
@@ -163,7 +163,7 @@ Les tableaux sont utiles, mais les visualisations racontent de meilleures histoi
 - De retour dans le terminal Claude Code, tapez :
 
 ```
-Add a bar chart below the table showing the top 15 players by points. Use different colors for each player. Also add a scatter plot showing the relationship between points and assists for all filtered players.
+Ajoute un graphique à barres sous le tableau montrant les 15 meilleurs joueurs par points. Utilise différentes couleurs pour chaque joueur. Ajoute aussi un nuage de points montrant la relation entre les points et les passes décisives pour tous les joueurs filtrés.
 ```
 
 - Appuyez sur Entrée
@@ -182,7 +182,7 @@ Rendez le tableau de bord plus interactif avec la sélection d'équipe.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Add a dropdown menu to filter players by team. Put it at the top. When I select a team, show only players from that team. Include an "All Teams" option to show everyone.
+Ajoute un menu déroulant pour filtrer les joueurs par équipe. Mets-le en haut. Quand je sélectionne une équipe, montre seulement les joueurs de cette équipe. Inclus une option « Toutes les équipes » pour afficher tout le monde.
 ```
 
 - Appuyez sur Entrée
@@ -220,11 +220,11 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 **Exemples de requêtes à Claude :**
 
-- "Add a player search box so I can type a player's name and jump to them"
-- "Show the team logos next to team names in the dropdown"
-- "Add a line chart showing points per game trend for the selected team"
-- "Make the bar chart sortable by clicking column headers"
-- "Add tooltips to the scatter plot showing player names when I hover"
+- « Ajoute une zone de recherche de joueur pour que je puisse taper le nom d'un joueur et accéder directement à lui »
+- « Affiche les logos des équipes à côté des noms d'équipes dans le menu déroulant »
+- « Ajoute un graphique linéaire montrant la tendance des points par match pour l'équipe sélectionnée »
+- « Rends le graphique à barres triable en cliquant sur les en-têtes de colonnes »
+- « Ajoute des infobulles au nuage de points montrant les noms des joueurs quand je survole »
 
 Après chaque fonctionnalité réussie :
 - Testez-la dans le navigateur
@@ -235,7 +235,7 @@ Après chaque fonctionnalité réussie :
 
 **Principes clés :**
 
-- **Décrivez les résultats, pas l'implémentation** - Dites "show top scorers" et non "use arrange() and head()"
+- **Décrivez les résultats, pas l'implémentation** - Dites « montre les meilleurs marqueurs » et non « utilise arrange() et head() »
 - **Itérez rapidement** - Tester → affiner → tester → affiner
 - **Validez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
 - **Acceptez les échecs** - Si le code de Claude ne fonctionne pas, décrivez simplement l'erreur et demandez de la corriger
@@ -247,7 +247,7 @@ Après chaque fonctionnalité réussie :
 
 - **Appliquez à votre domaine** - Utilisez le vibe coding pour vos propres données (recherche, affaires, loisirs)
 - **Essayez d'autres packages** - Demandez à Claude d'utiliser `nflfastR` pour le football américain ou `worldfootballR` pour le football
-- **Apprenez en demandant** - Quand Claude écrit du code, demandez "explain what this function does" pour apprendre R
+- **Apprenez en demandant** - Quand Claude écrit du code, demandez « explique ce que fait cette fonction » pour apprendre R
 - **Partagez votre tableau de bord** - Déployez sur [shinyapps.io](https://www.shinyapps.io/) (demandez à Claude comment faire)
 - **Lisez sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
 
@@ -256,7 +256,7 @@ Après chaque fonctionnalité réussie :
 - **L'installation de hoopR échoue** - Vérifiez votre connexion Internet ; le package télécharge des données depuis le web. Essayez d'exécuter `install.packages("hoopR")` dans un terminal R pour voir les messages d'erreur détaillés.
 - **L'application Shiny ne démarre pas** - Vérifiez que l'extension Shiny est installée (recherchez "Posit.shiny" dans Extensions VS Code). Vérifiez le terminal pour les messages d'erreur et collez-les à Claude.
 - **Aucune donnée ne s'affiche** - Le package hoopR récupère des données en direct ; si la saison NBA n'a pas commencé, il peut y avoir des données limitées. Demandez à Claude d'utiliser des données d'exemple ou une saison précédente.
-- **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites "fix this error." Le vibe coding inclut l'itération et le débogage.
+- **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites « corrige cette erreur ». Le vibe coding inclut l'itération et le débogage.
 - **Impossible de pousser vers GitHub** - Assurez-vous que vous êtes connecté à GitHub Desktop et que vous avez publié le dépôt (Étape 1). Vérifiez votre connexion Internet.
 
 ## Vue d'Ensemble du Flux de Travail
@@ -279,7 +279,7 @@ Après cette configuration initiale, votre routine quotidienne de vibe coding de
 1. **Démarrez Docker Desktop** - Lancez l'application, attendez l'état vert
 2. **Ouvrez VS Code** - Ouvrez votre projet, rouvrez dans le conteneur si nécessaire
 3. **Démarrez Claude Code** - Tapez `claude` dans le terminal
-4. **Décrivez votre objectif** - "Add a feature that..." ou "Fix the bug where..."
+4. **Décrivez votre objectif** - « Ajoute une fonctionnalité qui... » ou « Corrige le bug où... »
 5. **Testez les modifications** - Exécutez votre application, vérifiez si elle fonctionne
 6. **Itérez ou validez** - Si cassée, décrivez la correction ; si fonctionnelle, validez avec GitHub Desktop
 7. **Poussez régulièrement** - Cliquez sur **Push origin** pour sauvegarder sur GitHub

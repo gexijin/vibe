@@ -61,13 +61,13 @@ Claude Code démarre et affiche un message de bienvenue.
 Au lieu de créer manuellement des fichiers, laissez Claude faire le travail. Tapez ce prompt :
 
 ```
-Create a slash command called stock-report that generates
-reports on recent developments of a company identified by name or ticker symbol.
-Include:
-- Product or service news
-- Management team news
-- Recent financial reports
-- Analyst reports
+Crée une commande slash appelée stock-report qui génère
+des rapports sur les développements récents d'une entreprise identifiée par nom ou symbole boursier.
+Inclus :
+- Actualités produits ou services
+- Actualités de l'équipe de direction
+- Rapports financiers récents
+- Rapports d'analystes
 ```
 Lorsqu'on vous le demande, accordez à Claude la permission de créer le fichier.
 Claude créera un prompt détaillé et l'enregistrera sous `stock-report.md` dans le dossier `.claude/commands/`.
@@ -116,7 +116,7 @@ Modifions la commande slash pour enregistrer automatiquement les rapports sous f
 - Ouvrez le fichier `stock-report.md` depuis le dossier `.claude/commands/`
 - Ajoutez ceci à la fin.
   ```
-  Save the report as a markdown file. File name has company name and date.
+  Enregistre le rapport sous forme de fichier markdown. Le nom du fichier contient le nom de l'entreprise et la date.
   ```
 - Enregistrez le fichier.
 
@@ -140,7 +140,7 @@ Claude génère le rapport et l'enregistre sous forme de fichier markdown nommé
 Vous pouvez demander à Claude de modifier les commandes slash :
 
 ```
-Revise the stock-report slash command to save the report as a html file.
+Révise la commande slash stock-report pour enregistrer le rapport sous forme de fichier html.
 ```
 
 Claude met à jour le fichier de commande. Vous pouvez vérifier depuis l'éditeur.
@@ -204,7 +204,7 @@ Maintenant que vous comprenez les commandes slash, créez davantage de commandes
 
 - **Commande non trouvée :** Redémarrez Claude Code pour recharger les commandes depuis `.claude/commands/`
 - **Arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
-- **Rapport incomplet :** Demandez à Claude de "continue" ou "add more detail to the [section name] section"
+- **Rapport incomplet :** Demandez à Claude de « continuer » ou « ajouter plus de détails à la section [nom de la section] »
 
 ## Aperçu du Workflow
 

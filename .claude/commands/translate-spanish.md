@@ -64,7 +64,7 @@ Create the Spanish translation following these guidelines:
 
 ### Formatting Requirements
 
-1. **Home Link** - Change to `[Inicio](./es/)` at the top
+1. **Home Link** - Change to `[Inicio](./)` at the top
 2. **Preserve structure** - Keep the same sections and order as English
 3. **Code blocks** - Copy exactly, do not translate
 4. **Bold/backtick formatting** - Preserve all formatting
@@ -104,4 +104,4 @@ Present to the user:
 - Spanish translations go in `docs/es/`
 - Both should have the same filename
 - When in doubt about a technical term, keep it in English
-- Test that the Spanish home link `./es/` will work in the site structure
+- Test that the Spanish home link `./` will work in the site structure

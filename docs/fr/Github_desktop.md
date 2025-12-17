@@ -122,4 +122,4 @@ Votre code est maintenant sauvegardé en ligne à l'adresse : `https://github.co
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
+Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 7 décembre 2025.

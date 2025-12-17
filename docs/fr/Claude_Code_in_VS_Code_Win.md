@@ -77,7 +77,7 @@ La première fois que vous vous connectez, VS Code installe un petit serveur dan
 
 - Dans Claude Code, tapez :
 ```
-Write a short article explaining why LLMs like to use Markdown format. Save it as article.md
+Écris un court article expliquant pourquoi les LLM aiment utiliser le format Markdown. Enregistre-le sous article.md
 ```
 - Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau Explorateur à gauche
 - Cliquez sur `article.md` dans l'Explorateur pour le visualiser dans l'éditeur
@@ -95,9 +95,9 @@ VS Code se souvient de vos dossiers récents, donc l'Option A avec Open Recent e
 
 ## Prochaines Étapes
 
-- Demandez à Claude Code d'expliquer une base de code existante : « Explain what this project does »
-- Demandez à Claude Code de vous aider à écrire de nouvelles fonctionnalités : « Add a function that calculates the average of a list »
-- Utilisez Claude Code pour corriger des bugs : « This code gives an error, can you fix it? »
+- Demandez à Claude Code d'expliquer une base de code existante : « Explique ce que fait ce projet »
+- Demandez à Claude Code de vous aider à écrire de nouvelles fonctionnalités : « Ajoute une fonction qui calcule la moyenne d'une liste »
+- Utilisez Claude Code pour corriger des bugs : « Ce code donne une erreur, peux-tu le corriger ? »
 - Essayez l'extension VS Code de Claude Code pour une interface visuelle avec des diffs en ligne (recherchez « Claude Code » dans Extensions)
 - Pour gérer des fichiers plus volumineux plus efficacement, créez un dossier dans le système de fichiers WSL (`/home/user/`). Depuis Windows, recherchez l'icône Linux en bas de la barre latérale dans l'Explorateur de fichiers. Ou saisissez `\\wsl.localhost\` dans la barre d'adresse.
 

@@ -54,7 +54,7 @@ Claude Code démarre et affiche un message de bienvenue.
 Avant de construire votre sous-agent, confirmez que le skill est disponible. Tapez :
 
 ```
-List all available skills
+Liste tous les skills disponibles
 ```
 
 Vous devriez voir `generate-stock-reports` dans la sortie. Ce skill fait des recherches sur les entreprises et génère des rapports couvrant les actualités produits, les mises à jour de la direction, les performances financières et les perspectives des analystes.
@@ -95,11 +95,11 @@ Maintenant créez votre sous-agent :
 - Sélectionnez **Generate with Claude (recommended)**
 - Collez ce qui suit pour les instructions :
   ```
-  Create a markdown file for a new subagent called stock-picker:
-  - It takes two or more stocks
-  - Uses the generate-stock-reports skill to do research
-  - Score cards are created based on the categories of data collected
-  - A final recommendation is given.
+  Crée un fichier markdown pour un nouveau sous-agent appelé stock-picker :
+  - Il prend deux actions ou plus
+  - Utilise le skill generate-stock-reports pour faire des recherches
+  - Des fiches de notation sont créées en fonction des catégories de données collectées
+  - Une recommandation finale est donnée.
   ```
 - Appuyez sur **Enter** sur **[Continue]** pour utiliser **All tools**
 - Sélectionnez **Sonnet** pour le modèle
@@ -111,7 +111,7 @@ Pour ouvrir le fichier dans VS Code, cliquez sur **File > Open File...** et navi
 
 Ou vous pouvez demander à Claude :
 ```
-Show me the stock-picker subagent file.
+Montre-moi le fichier du sous-agent stock-picker.
 ```
 Claude affichera le fichier du sous-agent situé dans `.claude/agents/stock-picker.md`. Vous verrez :
 
@@ -140,7 +140,7 @@ Vous pouvez modifier le fichier directement ou demander à Claude de le mettre �
 Maintenant testez votre sous-agent avec une vraie comparaison. Tapez :
 
 ```
-Which is a better investment: Apple or Google?
+Quel est le meilleur investissement : Apple ou Google ?
 ```
 
 Le sous-agent s'activera automatiquement en fonction de votre description.
@@ -168,15 +168,15 @@ Le sous-agent peut afficher cela dans le terminal ou générer un fichier markdo
 
 Maintenant que vous avez un sous-agent de sélection d'actions fonctionnel, essayez ces extensions :
 
-- **Comparer 3+ actions** : "Compare AAPL, MSFT, and GOOGL" pour voir comment le sous-agent gère plus d'options
+- **Comparer 3+ actions** : « Compare AAPL, MSFT et GOOGL » pour voir comment le sous-agent gère plus d'options
 - **Ajuster les pondérations** : Modifiez le fichier du sous-agent pour changer la répartition 40/30/20/10 (par exemple, mettez la croissance à 40% si vous préférez les actions de croissance)
 - **Créer d'autres sous-agents** : Construisez un sous-agent "code-reviewer", "bug-hunter" ou "document-writer" pour différentes tâches
 
 ## Dépannage
 
-- **Le sous-agent ne s'active pas** : Assurez-vous que votre demande mentionne la comparaison d'entreprises ou les décisions d'investissement. Essayez : "Use the stock-picker subagent to compare..."
+- **Le sous-agent ne s'active pas** : Assurez-vous que votre demande mentionne la comparaison d'entreprises ou les décisions d'investissement. Essayez : « Utilise le sous-agent stock-picker pour comparer... »
 - **Skill non trouvé** : Vérifiez que `.claude/skills/generate-stock-reports/SKILL.md` existe. Redémarrez Claude Code si vous venez de l'ajouter.
-- **Scores incomplets** : Demandez au sous-agent de "continue" ou "explain the scores for each category in more detail"
+- **Scores incomplets** : Demandez au sous-agent de « continuer » ou « explique les scores pour chaque catégorie plus en détail »
 - **Erreur lors de la création du sous-agent** : Vérifiez que le dossier `.claude/agents/` existe. Claude Code devrait le créer automatiquement.
 
 ## Vue d'Ensemble du Flux de Travail

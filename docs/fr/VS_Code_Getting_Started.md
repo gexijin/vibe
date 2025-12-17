@@ -125,10 +125,10 @@ VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/
 - Ouvrez le fichier `README.md` (ou tout autre fichier de votre projet)
 - Cliquez sur **Chat** → **Open Chat** dans la barre de titre (ou appuyez sur `Ctrl+Alt+I` sur Windows/Linux, `Ctrl+Cmd+I` sur Mac)
 - Si on vous le demande, connectez-vous avec votre **compte GitHub** (un forfait gratuit est disponible)
-- Dans le panneau de discussion qui s'ouvre, tapez : « Explain this file »
-- Appuyez sur **Enter**
+- Dans le panneau de discussion qui s'ouvre, tapez : « Explique ce fichier »
+- Appuyez sur **Entrée**
 
-GitHub Copilot analysera votre fichier et expliquera ce qu'il fait. Vous pouvez lui demander d'écrire du nouveau code, de corriger des bugs ou de répondre à des questions comme « How do I add more features? »
+GitHub Copilot analysera votre fichier et expliquera ce qu'il fait. Vous pouvez lui demander d'écrire du nouveau code, de corriger des bugs ou de répondre à des questions comme « Comment ajouter plus de fonctionnalités ? »
 
 **Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/copilot/copilot-chat), surlignez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
 
