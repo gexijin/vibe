@@ -1,6 +1,6 @@
 # How Claude Code helped me create these tutorials
 
-In mid December 2025, I spent 2 hours trying to help my research assistant install Claude Code over zoom. I realized that I need some hands-on instructions to help people like her. I set out to create a comprehensive tutorials for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.
+In mid-December 2025, I spent 2 hours trying to help my research assistant install Claude Code over Zoom. I realized that someone like her needs some specific, hands-on instructions, so I set out to create comprehensive tutorials for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.
 
 What started as a few documentation files quickly evolved into a multi-language learning platform with over 100 tutorial documents. The secret? I didn't write them all manually. Instead, I built a set of custom slash commands (reusable prompts, essentially) that transformed Claude Code into an automated documentation factory—one that consistently produces tutorials in my hands-on, step-by-step style.
 
@@ -46,9 +46,9 @@ The command presents findings in a structured report, then applies fixes after a
 
 ### [`/translate-chinese`](./assets/commands/translate-chinese.md) & [`/translate-spanish`](./assets/commands/translate-spanish.md) - The Localization Engine
 
-The Japanese translations came first—and without a slash command. I simply asked Claude Code to translate all the tutorials to Japanese in one prompt. Claude automatically spawned 8 subagents running in parallel, each handling different tutorials simultaneously. 
+The Japanese translations came first—without a slash command. I simply asked Claude Code to translate all the tutorials to Japanese in one prompt. Claude automatically spawned 8 subagents running in parallel, each handling different tutorials simultaneously.
 
-I simply asked Claude to "create a slash command for translating tutorials to Chinese"—no specific guidelines. Claude generated a six-phase workflow with comprehensive rules:
+For subsequent languages, I asked Claude to "create a slash command for translating tutorials to Chinese"—no specific guidelines. Claude generated a six-phase workflow with comprehensive rules:
 
 - **Translation Rules**: Keep code blocks, technical terms (Git, Docker, VS Code), file paths, and URLs in English; translate instructional text, headings, and explanations
 - **Language Guidelines**: Tone and style rules, common technical translations (Click = 点击, Install = 安装), formal address conventions
@@ -57,7 +57,7 @@ I simply asked Claude to "create a slash command for translating tutorials to Ch
 
 With the slash commands ready, I asked Claude Code to translate all 25 tutorials using subagents. The entire translation—50 new files across two languages—took only 15 minutes.
 
-The result: 81 translated tutorial files across Chinese, Spanish, French, Germany, and Japanese directories—all maintaining consistent quality and structure.
+The result: 81 translated tutorial files across Chinese, Spanish, French, German, and Japanese directories—all maintaining consistent quality and structure.
 
 ### [`/review-translation`](./assets/commands/review-translation.md) - The Translation Maintenance Tool
 
@@ -74,7 +74,7 @@ The quality review is thorough—for Japanese, it checks natural phrasing (not w
 
 After syncing translations with English originals, I added a final polish step: editing each translated document on its own for language quality, without comparing to English. This step focuses purely on making the text read naturally to native speakers.
 
-I used prompts in the target language. Instead of asking Claude in English to "polish this Japanese document," I used ChatGPT to write the prompts in Japanese, Chinese, or Spanish. This seem to produce  better results—Claude seemed to think more naturally in that language when the instructions were also in that language.
+I used prompts in the target language. Instead of asking Claude in English to "polish this Japanese document," I used ChatGPT to write the prompts in Japanese, Chinese, or Spanish. This seemed to produce better results—Claude appeared to think more naturally in that language when the instructions were also in that language.
 
 For example, to polish Chinese documents, I used: 
 "修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents." For Spanish: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." For Japanese: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
