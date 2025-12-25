@@ -1,6 +1,6 @@
 # How Claude Code helped me create these tutorials
 
-In December 2025, I set out to create a comprehensive tutorial library for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.
+In mid December 2025, I spent 2 hours trying to help my research assistant install Claude Code over zoom. I realized that I need some hands-on instructions to help people like her. I set out to create a comprehensive tutorials for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.
 
 What started as a few documentation files quickly evolved into a multi-language learning platform with over 100 tutorial documents. The secret? I didn't write them all manually. Instead, I built a set of custom slash commands (reusable prompts, essentially) that transformed Claude Code into an automated documentation factory—one that consistently produces tutorials in my hands-on, step-by-step style.
 
@@ -10,18 +10,13 @@ Creating tutorials is time-consuming. Each one requires research for current bes
 
 ## The Solution: From Manual Process to Automated Slash Commands
 
-The key insight: **automate proven workflows, not theoretical ones**.
-
-I didn't sit down and design slash commands from scratch. Instead, I created the first few tutorials manually through interactive prompting with Claude, refined the process through iteration, then asked Claude to codify the working process into a slash command.
-
-This is exactly the pattern described in my [research paper tutorial](./Writing_Research_Paper_Claude_Code.md): go through the workflow manually, then in the final step, ask Claude to save it as a reusable command.
-
-The result was five specialized slash commands that handled the entire tutorial lifecycle.
+I created five specialized slash commands that handled the entire tutorial lifecycle.
 
 ### [`/tutorial`](./assets/commands/tutorial.md) - The Tutorial Generator
 
-Born from creating several tutorials interactively, this command captures the proven workflow:
+I created the first few tutorials manually through interactive prompting with Claude. Refined the process through iteration, then asked Claude to codify the working process into a slash command.
 
+This is exactly the pattern described in my [research paper tutorial](./Writing_Research_Paper_Claude_Code.md): go through the workflow manually, then in the final step, ask Claude to save it as a reusable command that captures the proven workflow:
 1. **Research**: Claude searches the web for current information—no outdated version numbers or deprecated methods
 2. **Plan**: Claude presents what it learned, recommends an approach, and outlines major steps
 3. **Iterate**: I review the plan, prompt Claude to revise multiple times until satisfied
@@ -39,7 +34,7 @@ The command enforces consistent structure across all tutorials. Every tutorial f
 
 ### [`/review-tutorial`](./assets/commands/review-tutorial.md) - The Quality Control Bot
 
-Here's something remarkable: I simply asked Claude to "create a slash command to review tutorials." No detailed specifications. Claude generated a comprehensive three-phase workflow with 30+ quality criteria organized into categories:
+For this one, I simply asked Claude to "create a slash command to review tutorials." No detailed specifications. Claude generated a comprehensive three-phase workflow with 30+ quality criteria organized into categories:
 
 - **Content Quality**: title, hook, key concepts, prerequisites, step flow, next steps, troubleshooting
 - **Formatting Standards**: home link, step headings, bullet points, bold/backticks, code blocks, paragraphs
@@ -51,9 +46,9 @@ The command presents findings in a structured report, then applies fixes after a
 
 ### [`/translate-chinese`](./assets/commands/translate-chinese.md) & [`/translate-spanish`](./assets/commands/translate-spanish.md) - The Localization Engine
 
-The Japanese translations came first—and without a slash command. I simply asked Claude Code to translate all the tutorials to Japanese in one prompt. Claude automatically spawned 8 subagents running in parallel, each handling different tutorials simultaneously. The results were excellent, which gave me confidence to formalize the process into slash commands for Chinese and Spanish.
+The Japanese translations came first—and without a slash command. I simply asked Claude Code to translate all the tutorials to Japanese in one prompt. Claude automatically spawned 8 subagents running in parallel, each handling different tutorials simultaneously. 
 
-Again, I simply asked Claude to "create a slash command for translating tutorials to Chinese"—no specific guidelines. Claude generated a six-phase workflow with comprehensive rules:
+I simply asked Claude to "create a slash command for translating tutorials to Chinese"—no specific guidelines. Claude generated a six-phase workflow with comprehensive rules:
 
 - **Translation Rules**: Keep code blocks, technical terms (Git, Docker, VS Code), file paths, and URLs in English; translate instructional text, headings, and explanations
 - **Language Guidelines**: Tone and style rules, common technical translations (Click = 点击, Install = 安装), formal address conventions
@@ -62,7 +57,7 @@ Again, I simply asked Claude to "create a slash command for translating tutorial
 
 With the slash commands ready, I asked Claude Code to translate all 25 tutorials using subagents. The entire translation—50 new files across two languages—took only 15 minutes.
 
-The result: 81 translated tutorial files across Chinese, Spanish, and Japanese directories—all maintaining consistent quality and structure.
+The result: 81 translated tutorial files across Chinese, Spanish, French, Germany, and Japanese directories—all maintaining consistent quality and structure.
 
 ### [`/review-translation`](./assets/commands/review-translation.md) - The Translation Maintenance Tool
 
@@ -79,7 +74,7 @@ The quality review is thorough—for Japanese, it checks natural phrasing (not w
 
 After syncing translations with English originals, I added a final polish step: editing each translated document on its own for language quality, without comparing to English. This step focuses purely on making the text read naturally to native speakers.
 
-The key insight: **use prompts in the target language**. Instead of asking Claude in English to "polish this Japanese document," I used ChatGPT to write the prompts in Japanese, Chinese, or Spanish. This produced noticeably better results—Claude seemed to think more naturally in that language when the instructions were also in that language.
+I used prompts in the target language. Instead of asking Claude in English to "polish this Japanese document," I used ChatGPT to write the prompts in Japanese, Chinese, or Spanish. This seem to produce  better results—Claude seemed to think more naturally in that language when the instructions were also in that language.
 
 For example, to polish Chinese documents, I used: 
 "修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents." For Spanish: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." For Japanese: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
