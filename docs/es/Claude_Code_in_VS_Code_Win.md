@@ -70,8 +70,8 @@ La primera vez que se conecta, VS Code instala un pequeño servidor en WSL. Esto
   ```
   claude
   ```
-- Claude Code se inicia y verá la interfaz familiar
-- Ahora está listo para usar Claude Code mientras edita archivos en VS Code
+
+Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 7: Pruebe el Flujo de Trabajo
 

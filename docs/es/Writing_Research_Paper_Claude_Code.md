@@ -69,7 +69,8 @@ Para Mac:
   ```
   claude
   ```
-- Claude Code se inicia y está listo para ayudar con su artículo de investigación
+
+Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 5: Investigación Inicial
 

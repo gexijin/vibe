@@ -1,6 +1,6 @@
 # Cómo automaticé la documentación con prompts reutilizables
 
-En diciembre de 2025, me propuse crear una biblioteca completa de tutoriales para Claude Code. Mi objetivo: tutoriales prácticos y enfocados que guíen a principiantes completos a través de tareas reales paso a paso. Sin volcados de teoría. Sin manuales de referencia exhaustivos. Solo "haz esto, después esto, después esto" hasta lograr algo concreto.
+A mediados de diciembre de 2025, pasé 2 horas tratando de ayudar a mi asistente de investigación a instalar Claude Code por Zoom. Me di cuenta de que alguien como ella necesita instrucciones específicas y prácticas, así que me propuse crear tutoriales completos para Claude Code. Mi objetivo: tutoriales prácticos y enfocados que guíen a principiantes completos a través de tareas reales paso a paso. Sin volcados de teoría. Sin manuales de referencia exhaustivos. Solo "haz esto, después esto, después esto" hasta lograr algo concreto.
 
 Lo que comenzó como unos pocos archivos de documentación rápidamente se convirtió en una plataforma de aprendizaje multilingüe con más de 100 documentos de tutoriales. ¿El secreto? No los escribí todos manualmente. En su lugar, construí un conjunto de comandos slash personalizados (esencialmente, prompts reutilizables) que transformaron Claude Code en una fábrica de documentación automatizada, una que produce consistentemente tutoriales en mi estilo práctico y paso a paso.
 
@@ -10,18 +10,13 @@ Crear tutoriales consume mucho tiempo. Cada uno requiere investigación de las m
 
 ## La solución: De proceso manual a comandos slash automatizados
 
-La idea clave: **automatizar flujos de trabajo probados, no teóricos**.
-
-No me senté a diseñar comandos slash desde cero. En su lugar, creé los primeros tutoriales manualmente a través de prompts interactivos con Claude, refiné el proceso mediante iteración, y luego le pedí a Claude que codificara el proceso funcional en un comando slash.
-
-Este es exactamente el patrón descrito en mi [tutorial de artículo de investigación](./Writing_Research_Paper_Claude_Code.md): recorrer el flujo de trabajo manualmente y, en el paso final, pedirle a Claude que lo guarde como un comando reutilizable.
-
-El resultado fueron cinco comandos slash especializados que manejaron todo el ciclo de vida del tutorial.
+Creé cinco comandos slash especializados que manejaron todo el ciclo de vida del tutorial.
 
 ### [`/tutorial`](../assets/commands/tutorial.md) - El generador de tutoriales
 
-Nacido de crear varios tutoriales interactivamente, este comando captura el flujo de trabajo probado:
+Creé los primeros tutoriales manualmente a través de prompts interactivos con Claude. Refiné el proceso mediante iteración, y luego le pedí a Claude que codificara el proceso funcional en un comando slash.
 
+Este es exactamente el patrón descrito en mi [tutorial de artículo de investigación](./Writing_Research_Paper_Claude_Code.md): recorrer el flujo de trabajo manualmente y, en el paso final, pedirle a Claude que lo guarde como un comando reutilizable que captura el flujo de trabajo probado:
 1. **Investigación**: Claude busca en la web información actual (sin números de versión desactualizados ni métodos obsoletos)
 2. **Planificación**: Claude presenta lo que aprendió, recomienda un enfoque y esboza los pasos principales
 3. **Iteración**: Reviso el plan y le pido a Claude que lo revise varias veces hasta quedar satisfecho
@@ -39,7 +34,7 @@ El comando impone una estructura consistente en todos los tutoriales. Cada tutor
 
 ### [`/review-tutorial`](../assets/commands/review-tutorial.md) - El bot de control de calidad
 
-Aquí hay algo notable: simplemente le pedí a Claude que "creara un comando slash para revisar tutoriales". Sin especificaciones detalladas. Claude generó un flujo de trabajo completo de tres fases con más de 30 criterios de calidad organizados por categorías:
+Para este, simplemente le pedí a Claude que "creara un comando slash para revisar tutoriales". Sin especificaciones detalladas. Claude generó un flujo de trabajo completo de tres fases con más de 30 criterios de calidad organizados por categorías:
 
 - **Calidad del contenido**: título, gancho, conceptos clave, prerrequisitos, flujo de pasos, próximos pasos, solución de problemas
 - **Estándares de formato**: enlace a inicio, encabezados de pasos, viñetas, negrita/comillas invertidas, bloques de código, párrafos
@@ -51,9 +46,9 @@ El comando presenta los hallazgos en un informe estructurado y luego aplica corr
 
 ### [`/translate-chinese`](../assets/commands/translate-chinese.md) & [`/translate-spanish`](../assets/commands/translate-spanish.md) - El motor de localización
 
-Curiosamente, las traducciones al japonés llegaron primero, y sin un comando slash. Simplemente le pedí a Claude Code que tradujera todos los tutoriales al japonés en un solo prompt. Claude automáticamente generó 8 subagentes ejecutándose en paralelo, cada uno manejando diferentes tutoriales simultáneamente. Los resultados fueron excelentes, lo que me dio confianza para formalizar el proceso en comandos slash para chino y español.
+Las traducciones al japonés llegaron primero, sin un comando slash. Simplemente le pedí a Claude Code que tradujera todos los tutoriales al japonés en un solo prompt. Claude automáticamente generó 8 subagentes ejecutándose en paralelo, cada uno manejando diferentes tutoriales simultáneamente.
 
-Nuevamente, simplemente le pedí a Claude que "creara un comando slash para traducir tutoriales al chino", sin pautas específicas. Claude generó un flujo de trabajo de seis fases con reglas completas:
+Para idiomas subsiguientes, le pedí a Claude que "creara un comando slash para traducir tutoriales al chino", sin pautas específicas. Claude generó un flujo de trabajo de seis fases con reglas completas:
 
 - **Reglas de traducción**: Mantener bloques de código, términos técnicos (Git, Docker, VS Code), rutas de archivos y URLs en inglés; traducir texto instructivo, encabezados y explicaciones
 - **Pautas de idioma**: Reglas de tono y estilo, traducciones técnicas comunes (Click = 点击, Install = 安装), convenciones de tratamiento formal
@@ -62,7 +57,7 @@ Nuevamente, simplemente le pedí a Claude que "creara un comando slash para trad
 
 Con los comandos slash listos, le pedí a Claude Code que tradujera los 25 tutoriales usando subagentes. La traducción completa (50 archivos nuevos en dos idiomas) tomó solo 15 minutos.
 
-El resultado: 81 archivos de tutoriales traducidos en los directorios de chino, español y japonés, todos manteniendo calidad y estructura consistentes.
+El resultado: 81 archivos de tutoriales traducidos en los directorios de chino, español, francés, alemán y japonés, todos manteniendo calidad y estructura consistentes.
 
 ### [`/review-translation`](../assets/commands/review-translation.md) - La herramienta de mantenimiento de traducciones
 
@@ -79,7 +74,7 @@ La revisión de calidad es exhaustiva. Para japonés, verifica frases naturales 
 
 Después de sincronizar las traducciones con los originales en inglés, añadí un paso final de pulido: editar cada documento traducido por sí solo para mejorar la calidad del lenguaje, sin comparar con el inglés. Este paso se enfoca puramente en hacer que el texto suene natural para hablantes nativos.
 
-La idea clave: **usa prompts en el idioma de destino**. En lugar de pedirle a Claude en inglés que "pula este documento en japonés", usé ChatGPT para escribir los prompts en japonés, chino o español. Esto produjo resultados notablemente mejores—Claude parecía pensar más naturalmente en ese idioma cuando las instrucciones también estaban en ese idioma.
+Usé prompts en el idioma de destino. En lugar de pedirle a Claude en inglés que "pula este documento en japonés", usé ChatGPT para escribir los prompts en japonés, chino o español. Esto pareció producir mejores resultados—Claude parecía pensar más naturalmente en ese idioma cuando las instrucciones también estaban en ese idioma.
 
 Por ejemplo, para pulir documentos en chino, usé: "修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。Use subagents." Para español: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." Para japonés: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
 

@@ -14,8 +14,8 @@ Aprender a programar con asistencia de IA puede resultar abrumador al principio.
 ## Lo Que Necesitará
 
 - Claude Code instalado desde el tutorial de [Windows](Install_CLAUDE_Code_Win.md) o [Mac](Install_Claude_Code_MacOS.md)
+- WSL instalado si está usando Windows
 - Familiaridad básica con el uso de una terminal o símbolo del sistema
-- Conexión a Internet
 - 15-20 minutos
 
 ## Paso 1: Abra Su Terminal
@@ -25,7 +25,7 @@ Aprender a programar con asistencia de IA puede resultar abrumador al principio.
 
 Se abrirá una ventana de texto donde puede escribir comandos.
 
-## Paso 2: Obtener el Proyecto de Demostración
+## Paso 2: Obtener los Archivos del Proyecto de Demostración
 
 Usaremos un proyecto real de ciencia de datos para explorar las funcionalidades de Claude Code. Puede clonarlo con Git o descargarlo directamente.
 
@@ -41,12 +41,12 @@ cd data_projects
 - Visite [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) en su navegador web
 - Haga clic en el botón verde **Code** cerca de la parte superior derecha
 - Haga clic en **Download ZIP**
-- Extraiga el archivo ZIP a una ubicación que recordará (como su Escritorio o carpeta Documentos)
+- Extraiga el archivo ZIP a una carpeta llamada **data_projects** en la carpeta Descargas.
 - En su terminal, navegue a la carpeta extraída:
-  - **Windows**: `cd C:\Users\SuNombre\Downloads\data_projects-main`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects-main`
+  - **Windows**: `cd /mnt/c/Users/SuNombre/Downloads/data_projects`
+  - **Mac/Linux**: `cd ~/Downloads/data_projects`
 
-Reemplace `SuNombre` con su nombre de usuario real y ajuste la ruta si lo extrajo en otro lugar.
+Reemplace `SuNombre` con su nombre de usuario real y ajuste la ruta si lo extrajo en otro lugar. Para usuarios de Windows, sus archivos de Windows se acceden desde /mnt/c en el sistema Linux.
 
 ## Paso 3: Inicie Claude Code desde la Carpeta
 
@@ -56,7 +56,9 @@ En su terminal (asegúrese de estar dentro de la carpeta data_projects), escriba
 claude
 ```
 
-Verá un mensaje de bienvenida y el prompt de Claude Code.
+Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
+
+Después de iniciar sesión correctamente, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 4: Hacer Preguntas Sobre Su Proyecto
 

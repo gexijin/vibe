@@ -47,7 +47,7 @@ Comparar oportunidades de inversión requiere horas de investigación y análisi
   claude
   ```
 
-Claude Code se inicia y muestra un mensaje de bienvenida.
+Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 2: Verifique que existe el skill de informe bursátil
 

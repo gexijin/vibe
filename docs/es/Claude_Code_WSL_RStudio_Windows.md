@@ -84,9 +84,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code se inicia y muestra un mensaje de bienvenida
-- Es posible que necesite iniciar sesión nuevamente - consulte la guía [Instalar Claude Code en Windows](./Install_CLAUDE_Code_Win) para los pasos de autenticación
-- Ahora está listo para usar la asistencia de IA en su proyecto R
+
+Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 8: Solicitar a Claude un Gráfico de Dispersión
 

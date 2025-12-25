@@ -57,6 +57,9 @@ Ahora tiene un proyecto local y un respaldo en la nube en GitHub.
   ```
   claude
   ```
+
+Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
+
 - Escriba esta solicitud:
   ```
   Crea una aplicación simple de temporizador de cuenta regresiva en un solo archivo llamado timer.html.

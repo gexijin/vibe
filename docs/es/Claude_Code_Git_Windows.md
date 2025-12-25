@@ -88,7 +88,7 @@ Aquí es donde vivirá su proyecto.
   claude
   ```
 
-Claude Code se ejecuta y espera su solicitud.
+Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 7: Solicite a Claude que Inicialice Git
 
@@ -185,7 +185,7 @@ Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona
   ```
   Agrega una notificación de sonido cuando el temporizador llegue a cero
   ```
-- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 0.1 minutos)
+- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 1 minuto)
 - Si funciona, haga commit de los cambios:
   ```
   Guarda estos cambios
@@ -197,7 +197,7 @@ Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona
   ```
   El sonido debe continuar hasta que haga clic en un botón para posponerlo
   ```
-- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 0.1 minutos)
+- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 1 minuto)
 - Si funciona, haga commit de los cambios:
   ```
   Guarda estos cambios
