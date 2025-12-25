@@ -69,7 +69,8 @@ For Mac:
   ```
   claude
   ```
-- Claude Code starts and is ready to help with your research paper
+
+Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 5: Initial Research
 

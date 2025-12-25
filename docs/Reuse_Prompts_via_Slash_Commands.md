@@ -54,7 +54,7 @@ The best part? We use Claude to write the detailed prompt and create the Skill. 
   claude
   ```
 
-Claude Code starts and displays a welcome message.
+Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 3: Ask Claude to Create a Slash Command
 

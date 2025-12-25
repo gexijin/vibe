@@ -84,9 +84,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code starts and shows a welcome message
-- You may need to sign in again - see the [Install Claude Code on Windows](./Install_CLAUDE_Code_Win) guide for authentication steps
-- You're now ready to use AI assistance for your R project
+
+Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 8: Ask Claude for a Scatter Plot
 

@@ -44,7 +44,8 @@
       "SlashCommand(/review-tutorial docs/Claude_Code_Basic_Operations.md)",
       "Bash(xargs:*)",
       "Bash(git log:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git show:*)"
     ],
     "deny": [],
     "ask": []

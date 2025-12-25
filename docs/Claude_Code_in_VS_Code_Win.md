@@ -70,8 +70,8 @@ The first time you connect, VS Code installs a small server in WSL. This takes a
   ```
   claude
   ```
-- Claude Code starts - you'll see the familiar Claude Code interface
-- You're now ready to use Claude Code while editing files in VS Code
+
+Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 7: Test the Workflow
 

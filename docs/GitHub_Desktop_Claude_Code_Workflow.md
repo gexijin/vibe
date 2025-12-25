@@ -57,6 +57,9 @@ You now have a local project and cloud backup on GitHub.
   ```
   claude
   ```
+
+Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
+
 - Type this request:
   ```
   Create a simple countdown timer app in a single file called timer.html.

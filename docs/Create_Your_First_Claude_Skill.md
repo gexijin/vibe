@@ -53,7 +53,7 @@ Type:
 claude
 ```
 
-Claude Code starts and displays the welcome message.
+Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 3: Enable Auto-Approve for Edits
 

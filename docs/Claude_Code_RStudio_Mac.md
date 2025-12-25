@@ -85,9 +85,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code starts and shows a welcome message
-- You may need to authenticate if this is your first session
-- You're now ready to use AI assistance for your R project
+
+Log in with your Claude subscription following the [installation tutorial](Install_Claude_Code_MacOS.md). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 8: Ask Claude for a Scatter Plot
 
