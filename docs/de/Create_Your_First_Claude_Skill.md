@@ -53,7 +53,7 @@ Geben Sie ein:
 claude
 ```
 
-Claude Code startet und zeigt die Willkommensnachricht an.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
 
 ## Schritt 3: Auto-Genehmigung für Bearbeitungen aktivieren
 

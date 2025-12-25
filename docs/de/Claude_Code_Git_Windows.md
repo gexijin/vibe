@@ -88,7 +88,7 @@ Hier wird Ihr Projekt leben.
   claude
   ```
 
-Claude Code startet und wartet auf Ihre Anfrage.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
 
 ## Schritt 7: Claude bitten, Git zu initialisieren
 
@@ -174,7 +174,7 @@ Manchmal funktioniert KI-Code nicht und Sie müssen von Ihrem letzten Speicherpu
   Verwirf diese Änderungen.
   ```
 - Claude wird um Bestätigung bitten
-- Geben Sie `yes` ein und drücken Sie Enter
+- Drücken Sie `1` und dann Enter
 - Aktualisieren Sie Ihren Browser – die 15-Minuten-Schaltfläche verschwindet
 
 Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioniert wieder mit nur den 1- und 5-Minuten-Schaltflächen!
@@ -185,7 +185,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
   ```
   Füge eine Tonbenachrichtigung hinzu, wenn der Timer Null erreicht.
   ```
-- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 0.1 Minuten)
+- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 1 Minute)
 - Wenn es funktioniert, committen Sie die Änderungen:
   ```
   Speichere diese Änderungen.
@@ -197,7 +197,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
   ```
   Der Ton sollte weiterlaufen, bis ich auf eine Schaltfläche klicke, um ihn stummzuschalten.
   ```
-- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 0.1 Minuten)
+- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 1 Minute)
 - Wenn es funktioniert, committen Sie die Änderungen:
   ```
   Speichere diese Änderungen.

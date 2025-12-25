@@ -14,8 +14,8 @@ Das Programmieren mit KI-Unterstützung zu lernen kann anfangs überwältigend w
 ## Was Sie benötigen
 
 - Claude Code installiert aus dem [Windows](Install_CLAUDE_Code_Win.md)- oder [Mac](Install_Claude_Code_MacOS.md)-Tutorial
+- WSL installiert, wenn Sie Windows verwenden
 - Grundlegende Vertrautheit mit der Verwendung eines Terminals oder einer Eingabeaufforderung
-- Internetverbindung
 - 15-20 Minuten
 
 ## Schritt 1: Ihr Terminal öffnen
@@ -25,7 +25,7 @@ Das Programmieren mit KI-Unterstützung zu lernen kann anfangs überwältigend w
 
 Ein Textfenster öffnet sich, in dem Sie Befehle eingeben können.
 
-## Schritt 2: Das Demo-Projekt holen
+## Schritt 2: Die Demo-Projekt-Dateien holen
 
 Wir verwenden ein echtes Data-Science-Projekt, um die Funktionen von Claude Code zu erkunden. Sie können es entweder mit Git klonen oder direkt herunterladen.
 
@@ -41,12 +41,12 @@ cd data_projects
 - Besuchen Sie [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) in Ihrem Webbrowser
 - Klicken Sie auf die grüne **Code**-Schaltfläche oben rechts
 - Klicken Sie auf **Download ZIP**
-- Entpacken Sie die ZIP-Datei an einen Ort, an den Sie sich erinnern werden (wie Ihren Desktop oder Dokumenten-Ordner)
+- Entpacken Sie die ZIP-Datei in einen Ordner namens **data_projects** im Downloads-Ordner.
 - Navigieren Sie in Ihrem Terminal zum entpackten Ordner:
-  - **Windows**: `cd C:\Users\IhrName\Downloads\data_projects-main`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects-main`
+  - **Windows**: `cd /mnt/c/Users/IhrName/Downloads/data_projects`
+  - **Mac/Linux**: `cd ~/Downloads/data_projects`
 
-Ersetzen Sie `IhrName` durch Ihren tatsächlichen Benutzernamen und passen Sie den Pfad an, falls Sie es woanders entpackt haben.
+Ersetzen Sie `IhrName` durch Ihren tatsächlichen Benutzernamen und passen Sie den Pfad an, falls Sie es woanders entpackt haben. Für Windows-Benutzer: Ihre Windows-Dateien werden im Linux-System über /mnt/c zugänglich.
 
 ## Schritt 3: Claude Code aus dem Ordner starten
 
@@ -56,7 +56,10 @@ In Ihrem Terminal (stellen Sie sicher, dass Sie sich im Ordner data_projects bef
 claude
 ```
 
-Sie sehen eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+
+Nach erfolgreicher Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+
 
 ## Schritt 4: Fragen zu Ihrem Projekt stellen
 

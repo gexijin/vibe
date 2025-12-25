@@ -32,7 +32,18 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 - Klicken Sie in der Menüleiste auf **Datei**, dann auf **Neuer Ordner**
 - Nennen Sie den Ordner `test_claude`
 
-## Schritt 3: Den Ordner in VS Code öffnen
+## Schritt 3: Anmelden
+
+Claude Code wird Sie zuerst auffordern, sich anzumelden. Folgen Sie den Anweisungen.
+
+1. Drücken Sie Enter, um ein Browserfenster zu öffnen
+2. Melden Sie sich bei Anthropic an oder erstellen Sie ein Konto
+3. Kopieren Sie den Code und fügen Sie ihn im Terminal ein
+4. Drücken Sie Enter
+
+Sie sind jetzt angemeldet. Dies müssen Sie nur einmal tun.
+
+## Schritt 4: Den Ordner in VS Code öffnen
 
 - Klicken Sie in VS Code in der Menüleiste auf **Datei**, dann auf **Ordner öffnen**
 - Navigieren Sie zu **Dokumente** und wählen Sie den Ordner `test_claude`, den Sie erstellt haben
@@ -41,7 +52,7 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 
 Sie sollten nun `TEST_CLAUDE` im Explorer-Panel auf der linken Seite sehen.
 
-## Schritt 4: Claude Code starten
+## Schritt 5: Claude Code starten
 
 - Öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **Neues Terminal**
 - Ein Terminal-Panel erscheint am unteren Rand von VS Code
@@ -49,10 +60,10 @@ Sie sollten nun `TEST_CLAUDE` im Explorer-Panel auf der linken Seite sehen.
   ```
   claude
   ```
-- Claude Code startet – Sie sehen die vertraute Claude Code-Oberfläche
-- Sie sind nun bereit, Claude Code zu verwenden, während Sie Dateien in VS Code bearbeiten
+- Sie sehen eine Willkommensnachricht und die Claude Code-Eingabeaufforderung
+- Jetzt können Sie Claude Code verwenden, während Sie Dateien in VS Code bearbeiten
 
-## Schritt 5: Den Workflow testen
+## Schritt 6: Den Workflow testen
 
 - Geben Sie in Claude Code ein:
 ```

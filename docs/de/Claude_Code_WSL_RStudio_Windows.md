@@ -84,9 +84,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code startet und zeigt eine Willkommensnachricht
-- Möglicherweise müssen Sie sich erneut anmelden – siehe die Anleitung [Claude Code unter Windows installieren](./Install_CLAUDE_Code_Win) für Authentifizierungsschritte
-- Sie sind nun bereit, KI-Unterstützung für Ihr R-Projekt zu nutzen
+
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
 
 ## Schritt 8: Claude um ein Streudiagramm bitten
 
