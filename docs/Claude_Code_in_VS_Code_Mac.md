@@ -49,8 +49,8 @@ You should now see `TEST_CLAUDE` in the Explorer panel on the left side.
   ```
   claude
   ```
-- Claude Code starts - you'll see the familiar Claude Code interface
-- You're now ready to use Claude Code while editing files in VS Code
+
+Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_MacOS.md). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 5: Test the Workflow
 

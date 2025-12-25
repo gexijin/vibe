@@ -14,8 +14,8 @@ Learning to code with AI assistance can feel overwhelming at first. Think of Cla
 ## What You'll Need
 
 - Claude Code installed from the [Windows](Install_CLAUDE_Code_Win.md) or [Mac](Install_Claude_Code_MacOS.md) tutorial
+- WSL installed if you are using Windows
 - Basic familiarity with using a terminal or command prompt
-- Internet connection
 - 15-20 minutes
 
 ## Step 1: Open Your Terminal
@@ -25,7 +25,7 @@ Learning to code with AI assistance can feel overwhelming at first. Think of Cla
 
 A text window will open where you can type commands.
 
-## Step 2: Get the Demo Project
+## Step 2: Get the Demo Project files
 
 We'll use a real data science project to explore Claude Code's features. You can either clone it with Git or download it directly.
 
@@ -41,12 +41,12 @@ cd data_projects
 - Visit [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) in your web browser
 - Click the green **Code** button near the top right
 - Click **Download ZIP**
-- Extract the ZIP file to a location you'll remember (like your Desktop or Documents folder)
+- Extract the ZIP file to a folder called **data_projects** under the Downloads folder.
 - In your terminal, navigate to the extracted folder:
-  - **Windows**: `cd C:\Users\YourName\Downloads\data_projects-main`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects-main`
+  - **Windows**: `cd /mnt/c/Users/YourName/Downloads/data_projects`
+  - **Mac/Linux**: `cd ~/Downloads/data_projects`
 
-Replace `YourName` with your actual username and adjust the path if you extracted it elsewhere.
+Replace `YourName` with your actual username and adjust the path if you extracted it elsewhere. For Windows users, your windows files are accessed from /mnt/c in the Linux system. 
 
 ## Step 3: Start Claude Code from the folder
 
@@ -56,7 +56,10 @@ In your terminal (make sure you're inside the data_projects folder), type:
 claude
 ```
 
-You'll see a welcome message and the Claude Code prompt.
+Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt.
+
+After successfully loggin in, you'll see a welcome message and the Claude Code prompt.
+
 
 ## Step 4: Ask Questions About Your Project
 
