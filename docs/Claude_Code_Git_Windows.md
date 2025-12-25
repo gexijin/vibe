@@ -174,7 +174,7 @@ Sometimes AI code doesn't work and you need to start over from your last save po
   discard these changes.
   ```
 - Claude will ask for confirmation
-- Type `yes` and press Enter
+- Press `1` and press Enter
 - Refresh your browser—the 15-minute button disappears
 
 Claude throws away the new changes we don't like. The timer works again with just the 1- and 5-minute buttons!
@@ -185,7 +185,7 @@ Claude throws away the new changes we don't like. The timer works again with jus
   ```
   Add a sound notification when the timer reaches zero.
   ```
-- Refresh browser and test after Claude is done (set timer for 0.1 minutes)
+- Refresh browser and test after Claude is done (set timer for 1 minute)
 - If it works, commit the changes:
   ```
   Save these changes.
@@ -197,7 +197,7 @@ Claude throws away the new changes we don't like. The timer works again with jus
   ```
   The sound should continue until I click a button to snooze it. 
   ```
-- Refresh browser and test after Claude is done (set timer for 0.1 minutes)
+- Refresh browser and test after Claude is done (set timer for 1 minute)
 - If it works, commit the changes:
   ```
   Save these changes.
