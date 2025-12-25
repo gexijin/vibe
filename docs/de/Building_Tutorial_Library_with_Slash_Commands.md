@@ -2,7 +2,7 @@
 
 # Wie Claude Code mir half, diese Tutorials zu erstellen
 
-Im Dezember 2025 machte ich mich daran, eine umfassende Tutorial-Bibliothek für Claude Code zu erstellen. Mein Ziel: praxisnahe, fokussierte Tutorials, die komplette Anfänger Schritt für Schritt durch echte Aufgaben führen. Keine Theorieabhandlungen. Keine umfassenden Referenzhandbücher. Einfach nur „tun Sie dies, dann das, dann das", bis Sie etwas Konkretes erreicht haben.
+Mitte Dezember 2025 verbrachte ich 2 Stunden damit, meiner Forschungsassistentin per Zoom bei der Installation von Claude Code zu helfen. Mir wurde klar, dass jemand wie sie spezifische, praxisnahe Anleitungen braucht, also machte ich mich daran, umfassende Tutorials für Claude Code zu erstellen. Mein Ziel: praxisnahe, fokussierte Tutorials, die komplette Anfänger Schritt für Schritt durch echte Aufgaben führen. Keine Theorieabhandlungen. Keine umfassenden Referenzhandbücher. Einfach nur „tun Sie dies, dann das, dann das", bis Sie etwas Konkretes erreicht haben.
 
 Was als ein paar Dokumentationsdateien begann, entwickelte sich schnell zu einer mehrsprachigen Lernplattform mit über 100 Tutorial-Dokumenten. Das Geheimnis? Ich habe sie nicht alle manuell geschrieben. Stattdessen habe ich eine Reihe von benutzerdefinierten Slash-Befehlen (im Wesentlichen wiederverwendbare Prompts) erstellt, die Claude Code in eine automatisierte Dokumentationsfabrik verwandelten – eine, die konsequent Tutorials in meinem praxisnahen, schrittweisen Stil produziert.
 
@@ -12,17 +12,13 @@ Das Erstellen von Tutorials ist zeitaufwändig. Jedes einzelne erfordert Recherc
 
 ## Die Lösung: Von manuellem Prozess zu automatisierten Slash-Befehlen
 
-Die entscheidende Erkenntnis: **Automatisieren Sie bewährte Workflows, nicht theoretische**.
-
-Ich habe mich nicht hingesetzt und Slash-Befehle von Grund auf entworfen. Stattdessen erstellte ich die ersten Tutorials manuell durch interaktives Prompten mit Claude, verfeinerte den Prozess durch Iteration und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
-
-Dies ist genau das Muster, das in meinem [Forschungsarbeit-Tutorial](./Writing_Research_Paper_Claude_Code.md) beschrieben wird: Gehen Sie den Workflow manuell durch, dann bitten Sie im letzten Schritt Claude, ihn als wiederverwendbaren Befehl zu speichern.
-
-Das Ergebnis waren fünf spezialisierte Slash-Befehle, die den gesamten Tutorial-Lebenszyklus abdeckten.
+Ich erstellte fünf spezialisierte Slash-Befehle, die den gesamten Tutorial-Lebenszyklus abdeckten.
 
 ### [`/tutorial`](./assets/commands/tutorial.md) - Der Tutorial-Generator
 
-Entstanden aus der interaktiven Erstellung mehrerer Tutorials, erfasst dieser Befehl den bewährten Workflow:
+Ich erstellte die ersten Tutorials manuell durch interaktives Prompten mit Claude. Verfeinerte den Prozess durch Iteration und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
+
+Dies ist genau das Muster, das in meinem [Forschungsarbeit-Tutorial](./Writing_Research_Paper_Claude_Code.md) beschrieben wird: Gehen Sie den Workflow manuell durch, dann bitten Sie im letzten Schritt Claude, ihn als wiederverwendbaren Befehl zu speichern, der den bewährten Workflow erfasst:
 
 1. **Recherche**: Claude durchsucht das Web nach aktuellen Informationen – keine veralteten Versionsnummern oder veralteten Methoden
 2. **Planung**: Claude präsentiert, was es gelernt hat, empfiehlt einen Ansatz und skizziert die Hauptschritte
@@ -41,7 +37,7 @@ Der Befehl erzwingt eine konsistente Struktur über alle Tutorials hinweg. Jedes
 
 ### [`/review-tutorial`](./assets/commands/review-tutorial.md) - Der Qualitätskontroll-Bot
 
-Hier ist etwas Bemerkenswertes: Ich bat Claude einfach, „einen Slash-Befehl zum Überprüfen von Tutorials zu erstellen". Keine detaillierten Spezifikationen. Claude generierte einen umfassenden dreiphasigen Workflow mit über 30 Qualitätskriterien, organisiert in Kategorien:
+Bei diesem bat ich Claude einfach, „einen Slash-Befehl zum Überprüfen von Tutorials zu erstellen". Keine detaillierten Spezifikationen. Claude generierte einen umfassenden dreiphasigen Workflow mit über 30 Qualitätskriterien, organisiert in Kategorien:
 
 - **Inhaltsqualität**: Titel, Hook, Schlüsselkonzepte, Voraussetzungen, Schrittfluss, nächste Schritte, Fehlerbehebung
 - **Formatierungsstandards**: Home-Link, Schrittüberschriften, Aufzählungspunkte, Fett/Backticks, Codeblöcke, Absätze
@@ -53,9 +49,9 @@ Der Befehl präsentiert Ergebnisse in einem strukturierten Bericht und wendet da
 
 ### [`/translate-chinese`](./assets/commands/translate-chinese.md) & [`/translate-spanish`](./assets/commands/translate-spanish.md) - Die Lokalisierungs-Engine
 
-Die japanischen Übersetzungen kamen zuerst – und ohne Slash-Befehl. Ich bat Claude Code einfach, alle Tutorials in einem einzigen Prompt ins Japanische zu übersetzen. Claude erzeugte automatisch 8 Subagenten, die parallel liefen und jeweils verschiedene Tutorials gleichzeitig bearbeiteten. Die Ergebnisse waren ausgezeichnet, was mir das Vertrauen gab, den Prozess für Chinesisch und Spanisch in Slash-Befehle zu formalisieren.
+Die japanischen Übersetzungen kamen zuerst – ohne Slash-Befehl. Ich bat Claude Code einfach, alle Tutorials in einem einzigen Prompt ins Japanische zu übersetzen. Claude erzeugte automatisch 8 Subagenten, die parallel liefen und jeweils verschiedene Tutorials gleichzeitig bearbeiteten.
 
-Wieder bat ich Claude einfach, „einen Slash-Befehl zum Übersetzen von Tutorials ins Chinesische zu erstellen" – keine spezifischen Richtlinien. Claude generierte einen sechsphasigen Workflow mit umfassenden Regeln:
+Für folgende Sprachen bat ich Claude, „einen Slash-Befehl zum Übersetzen von Tutorials ins Chinesische zu erstellen" – keine spezifischen Richtlinien. Claude generierte einen sechsphasigen Workflow mit umfassenden Regeln:
 
 - **Übersetzungsregeln**: Codeblöcke, technische Begriffe (Git, Docker, VS Code), Dateipfade und URLs in Englisch belassen; Anleitungstext, Überschriften und Erklärungen übersetzen
 - **Sprachrichtlinien**: Ton- und Stilregeln, gängige technische Übersetzungen (Click = 点击, Install = 安装), formelle Anredekonventionen
@@ -64,7 +60,7 @@ Wieder bat ich Claude einfach, „einen Slash-Befehl zum Übersetzen von Tutoria
 
 Mit den fertigen Slash-Befehlen bat ich Claude Code, alle 25 Tutorials mit Subagenten zu übersetzen. Die gesamte Übersetzung – 50 neue Dateien in zwei Sprachen – dauerte nur 15 Minuten.
 
-Das Ergebnis: 81 übersetzte Tutorial-Dateien in chinesischen, spanischen und japanischen Verzeichnissen – alle mit gleichbleibender Qualität und Struktur.
+Das Ergebnis: 81 übersetzte Tutorial-Dateien in chinesischen, spanischen, französischen, deutschen und japanischen Verzeichnissen – alle mit gleichbleibender Qualität und Struktur.
 
 ### [`/review-translation`](./assets/commands/review-translation.md) - Das Übersetzungspflege-Tool
 
@@ -81,7 +77,7 @@ Die Qualitätsüberprüfung ist gründlich – für Japanisch prüft sie natürl
 
 Nach dem Synchronisieren der Übersetzungen mit den englischen Originalen fügte ich einen letzten Polierschritt hinzu: jedes übersetzte Dokument einzeln auf Sprachqualität bearbeiten, ohne mit dem Englischen zu vergleichen. Dieser Schritt konzentriert sich ausschließlich darauf, den Text für Muttersprachler natürlich klingen zu lassen.
 
-Die entscheidende Erkenntnis: **Verwenden Sie Prompts in der Zielsprache**. Anstatt Claude auf Englisch zu bitten, „dieses japanische Dokument zu polieren", verwendete ich ChatGPT, um die Prompts auf Japanisch, Chinesisch oder Spanisch zu schreiben. Dies führte zu merklich besseren Ergebnissen – Claude schien in dieser Sprache natürlicher zu denken, wenn die Anweisungen auch in dieser Sprache waren.
+Ich verwendete Prompts in der Zielsprache. Anstatt Claude auf Englisch zu bitten, „dieses japanische Dokument zu polieren", verwendete ich ChatGPT, um die Prompts auf Japanisch, Chinesisch oder Spanisch zu schreiben. Dies schien bessere Ergebnisse zu liefern – Claude schien in dieser Sprache natürlicher zu denken, wenn die Anweisungen auch in dieser Sprache waren.
 
 Zum Beispiel verwendete ich zum Polieren chinesischer Dokumente:
 "修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents." Für Spanisch: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." Für Japanisch: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
