@@ -95,7 +95,7 @@ Gitはコミットメッセージのために、あなたが誰であるかを�
   claude
   ```
 
-Claude Codeが起動し、リクエストを待機します。
+[インストールチュートリアル](Install_Claude_Code_MacOS.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
 ## ステップ7：ClaudeにGitの初期化を依頼
 

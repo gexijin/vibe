@@ -53,7 +53,7 @@
 claude
 ```
 
-Claude Codeが起動し、ウェルカムメッセージが表示されます。
+インストールチュートリアル（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
 ## ステップ3：編集の自動承認を有効化
 

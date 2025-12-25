@@ -14,8 +14,8 @@ AIアシスタントを使ったコーディングは、最初は圧倒される
 ## 必要なもの
 
 - [Windows](Install_CLAUDE_Code_Win.md)または[Mac](Install_Claude_Code_MacOS.md)のチュートリアルからClaude Codeをインストール済み
+- Windowsを使用している場合はWSLがインストール済み
 - ターミナルまたはコマンドプロンプトの基本的な使い方の知識
-- インターネット接続
 - 15〜20分
 
 ## ステップ1: ターミナルを開く
@@ -25,7 +25,7 @@ AIアシスタントを使ったコーディングは、最初は圧倒される
 
 コマンドを入力できるウィンドウが開きます。
 
-## ステップ2: デモプロジェクトを取得する
+## ステップ2: デモプロジェクトファイルを取得する
 
 実際のデータサイエンスプロジェクトを使用して、Claude Codeの機能を探索します。Gitでクローンするか、直接ダウンロードできます。
 
@@ -41,12 +41,12 @@ cd data_projects
 - Webブラウザで[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)にアクセスします
 - 右上近くの緑色の**Code**ボタンをクリックします
 - **Download ZIP**をクリックします
-- ZIPファイルを覚えやすい場所（デスクトップやドキュメントフォルダなど）に解凍します
+- ZIPファイルをダウンロードフォルダの**data_projects**というフォルダに解凍します
 - ターミナルで、解凍したフォルダに移動します：
-  - **Windows**: `cd C:\Users\YourName\Downloads\data_projects-main`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects-main`
+  - **Windows**: `cd /mnt/c/Users/YourName/Downloads/data_projects`
+  - **Mac/Linux**: `cd ~/Downloads/data_projects`
 
-`YourName`を実際のユーザー名に置き換え、別の場所に解凍した場合はパスを調整してください。
+`YourName`を実際のユーザー名に置き換え、別の場所に解凍した場合はパスを調整してください。Windowsユーザーの場合、WindowsファイルはLinuxシステムから/mnt/cでアクセスできます。
 
 ## ステップ3: フォルダからClaude Codeを起動する
 
@@ -56,7 +56,9 @@ cd data_projects
 claude
 ```
 
-ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
+[インストールチュートリアル](Install_CLAUDE_Code_Win.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
+
+正常にログインすると、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
 ## ステップ4: プロジェクトについて質問する
 

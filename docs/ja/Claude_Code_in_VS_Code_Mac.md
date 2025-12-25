@@ -49,8 +49,8 @@ MacにClaude Codeを入れたら、次は「ファイルを編集しながらCla
   ```
   claude
   ```
-- Claude Codeが起動します - おなじみのClaude Codeインターフェースが表示されます
-- これで、VS Codeでファイルを編集しながらClaude Codeを使用する準備が整いました
+
+[インストールチュートリアル](Install_Claude_Code_MacOS.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
 ## ステップ5：ワークフローをテスト
 

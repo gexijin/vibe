@@ -86,9 +86,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Codeが起動し、ウェルカムメッセージが表示されます
-- 再度サインインが必要な場合があります - 認証手順については[WSL経由でClaude Codeをインストール](./Install_CLAUDE_Code_Win)ガイドを参照してください
-- これでRプロジェクトに対してAI支援を使用する準備ができました
+
+[インストールチュートリアル](Install_CLAUDE_Code_Win.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
 ## ステップ8：散布図コードを追加
 

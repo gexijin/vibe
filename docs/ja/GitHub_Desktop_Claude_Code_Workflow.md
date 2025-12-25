@@ -56,6 +56,9 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
   ```
   claude
   ```
+
+インストールチュートリアル（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
+
 - 次のリクエストを入力：
   ```
   timer.htmlという単一のファイルにシンプルなカウントダウンタイマーアプリを作成してください。

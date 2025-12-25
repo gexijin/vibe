@@ -69,7 +69,8 @@ Macの場合：
   ```
   claude
   ```
-- Claude Codeが起動し、研究論文を手伝う準備ができます
+
+インストールチュートリアル（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
 ## ステップ5：初期研究
 
