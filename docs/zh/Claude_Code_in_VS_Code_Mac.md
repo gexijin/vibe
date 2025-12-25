@@ -49,8 +49,10 @@
   ```
   claude
   ```
-- Claude Code 启动，你会看到熟悉的 Claude Code 界面
-- 现在你可以在 VS Code 中编辑文件的同时使用 Claude Code 了
+
+按照[安装教程](Install_Claude_Code_MacOS.md)使用你的 Claude 订阅登录。登录后，你会看到欢迎消息和 Claude Code 提示符。
+
+现在你可以在 VS Code 中编辑文件的同时使用 Claude Code 了。
 
 ## 步骤 5：测试工作流程
 

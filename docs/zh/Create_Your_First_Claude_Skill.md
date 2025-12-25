@@ -53,7 +53,7 @@
 claude
 ```
 
-Claude Code启动并显示欢迎信息。
+按照安装教程（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤3：启用编辑自动批准
 

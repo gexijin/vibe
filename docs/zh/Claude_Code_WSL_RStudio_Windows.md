@@ -84,9 +84,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code启动并显示欢迎消息
-- 可能需要重新登录——请参阅[在Windows上安装Claude Code](./Install_CLAUDE_Code_Win)指南了解身份验证步骤
-- 现在已准备好为R项目使用AI辅助
+
+按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤8：请求Claude创建散点图
 

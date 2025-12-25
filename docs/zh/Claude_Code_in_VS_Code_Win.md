@@ -70,8 +70,8 @@
   ```
   claude
   ```
-- Claude Code 启动，你会看到熟悉的界面
-- 现在可以在 VS Code 中编辑文件的同时使用 Claude Code
+
+按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的 Claude 订阅登录。登录后，你将看到欢迎消息和 Claude Code 提示符。
 
 ## 步骤 7：测试工作流程
 
@@ -84,7 +84,7 @@
 - 预览格式化后的文章：右键点击 `article.md` 标签，选择 **Open Preview**
 - 你会看到渲染后的 Markdown，包括标题、项目符号等格式
 
-## 稍后在 VS Code 中重新打开 Claude
+## 稍后在 VS Code 中重新打开 Claude Code
 
 关闭 VS Code 后，返回 WSL 项目的方法：
 

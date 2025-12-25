@@ -56,7 +56,7 @@ cd data_projects
 claude
 ```
 
-你将看到欢迎消息和Claude Code提示符。
+按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤4：询问关于项目的问题
 

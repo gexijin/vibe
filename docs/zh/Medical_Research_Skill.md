@@ -51,7 +51,7 @@
 claude
 ```
 
-Claude Code 启动并显示欢迎消息。
+按照安装教程登录你的Claude订阅（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤 3:启用自动编辑模式
 
@@ -151,7 +151,7 @@ Claude 会自动:
 
 **注意:** 该 skill 是完全独立的——所有代码和文档都存放在一个文件夹中。
 
-## 步骤 10:从 Anthropic 的存储库安装 Skill
+## 步骤 11:从 Anthropic 的存储库安装 Skill
 
 Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使用。
 

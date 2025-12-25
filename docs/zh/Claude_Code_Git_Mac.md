@@ -35,7 +35,7 @@ Mac 通常已预装 Git。检查一下：
   git --version
   ```
 
-**如果看到版本号**（如 `git version 2.39.0`），Git 已安装——跳到步骤 3。
+**如果看到版本号**（如 `git version 2.39.0`），Git 已安装——跳到步骤 4。
 
 **如果看到"command not found"** 或弹出窗口要求安装开发者工具：
 - 点击弹出窗口中的 **安装**，或运行：
@@ -95,7 +95,7 @@ Git 需要知道你是谁，以便在提交信息中显示。
   claude
   ```
 
-Claude Code 启动并等待你的请求。
+按照[安装教程](Install_Claude_Code_MacOS.md)使用你的 Claude 订阅登录。登录后，你会看到欢迎消息和 Claude Code 提示符。
 
 ## 步骤 7：让 Claude 初始化 Git
 

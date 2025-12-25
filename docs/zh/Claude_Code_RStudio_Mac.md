@@ -84,9 +84,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code 启动并显示欢迎消息
-- 如果是首次会话，可能需要进行身份验证
-- 现在可以为 R 项目使用 AI 辅助
+
+按照[安装教程](Install_Claude_Code_MacOS.md)使用你的 Claude 订阅登录。登录后，你将看到欢迎消息和 Claude Code 提示符。
 
 ## 步骤 8：请求 Claude 创建散点图
 

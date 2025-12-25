@@ -47,7 +47,7 @@
   claude
   ```
 
-Claude Code启动并显示欢迎消息。
+按照安装教程登录你的Claude订阅（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤2：验证股票报告Skill是否存在
 
@@ -145,7 +145,7 @@ frontmatter下方有一个**系统提示词**，包含你的评分方法。
 
 subagent将根据描述自动激活。
 
-## 步骤7：观察Subagent工作
+## 步骤8：观察Subagent工作
 
 当subagent运行时，会看到它：
 1. **调用skill两次** - 为Apple调用一次generate-stock-reports skill，然后为Google调用一次
@@ -155,7 +155,7 @@ subagent将根据描述自动激活。
 
 这可能需要2-3分钟，因为涉及网络研究。
 
-## 步骤8：查看输出
+## 步骤9：查看输出
 
 subagent返回详细的分析，包括：
 - **单个公司报告** - 每只股票的产品更新、财务指标、管理层变化、分析师情绪
