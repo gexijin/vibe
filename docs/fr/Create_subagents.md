@@ -47,7 +47,7 @@ Vous souhaitez comparer des opportunités d'investissement, mais faire des reche
   claude
   ```
 
-Claude Code démarre et affiche un message de bienvenue.
+Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 2 : Vérifier que le Skill de Rapport Boursier Existe
 

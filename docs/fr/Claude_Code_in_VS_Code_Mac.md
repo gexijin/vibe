@@ -49,8 +49,8 @@ Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le c�
   ```
   claude
   ```
-- Claude Code démarre - vous verrez l'interface familière de Claude Code
-- Vous êtes maintenant prêt à utiliser Claude Code tout en éditant des fichiers dans VS Code
+
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 5 : Tester le Flux de Travail
 

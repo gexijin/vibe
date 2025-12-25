@@ -88,7 +88,7 @@ C'est ici que votre projet vivra.
   claude
   ```
 
-Claude Code se lance et attend votre demande.
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 7 : Demandez à Claude d'Initialiser Git
 

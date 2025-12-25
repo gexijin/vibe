@@ -70,8 +70,8 @@ La première fois que vous vous connectez, VS Code installe un petit serveur dan
   ```
   claude
   ```
-- Claude Code démarre - vous verrez l'interface familière de Claude Code
-- Vous êtes maintenant prêt à utiliser Claude Code tout en éditant des fichiers dans VS Code
+
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 7 : Tester le Flux de Travail
 

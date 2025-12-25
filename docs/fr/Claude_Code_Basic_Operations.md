@@ -14,8 +14,8 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 ## Ce Dont Vous Aurez Besoin
 
 - Claude Code installé depuis le tutoriel [Windows](Install_CLAUDE_Code_Win.md) ou [Mac](Install_Claude_Code_MacOS.md)
+- WSL installé si vous utilisez Windows
 - Familiarité de base avec l'utilisation d'un terminal ou d'une invite de commande
-- Connexion Internet
 - 15-20 minutes
 
 ## Étape 1 : Ouvrez Votre Terminal
@@ -25,7 +25,7 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 
 Une fenêtre de texte s'ouvrira où vous pourrez taper des commandes.
 
-## Étape 2 : Obtenez le Projet de Démonstration
+## Étape 2 : Obtenez les Fichiers du Projet de Démonstration
 
 Nous utiliserons un véritable projet de science des données pour explorer les fonctionnalités de Claude Code. Vous pouvez soit le cloner avec Git, soit le télécharger directement.
 
@@ -41,12 +41,12 @@ cd data_projects
 - Visitez [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) dans votre navigateur web
 - Cliquez sur le bouton vert **Code** près du coin supérieur droit
 - Cliquez sur **Download ZIP**
-- Extrayez le fichier ZIP dans un emplacement dont vous vous souviendrez (comme votre Bureau ou votre dossier Documents)
+- Extrayez le fichier ZIP dans un dossier appelé **data_projects** dans le dossier Téléchargements.
 - Dans votre terminal, naviguez vers le dossier extrait :
-  - **Windows** : `cd C:\Users\VotreNom\Downloads\data_projects-main`
-  - **Mac/Linux** : `cd ~/Downloads/data_projects-main`
+  - **Windows** : `cd /mnt/c/Users/VotreNom/Downloads/data_projects`
+  - **Mac/Linux** : `cd ~/Downloads/data_projects`
 
-Remplacez `VotreNom` par votre nom d'utilisateur réel et ajustez le chemin si vous l'avez extrait ailleurs.
+Remplacez `VotreNom` par votre nom d'utilisateur réel et ajustez le chemin si vous l'avez extrait ailleurs. Pour les utilisateurs Windows, vos fichiers Windows sont accessibles depuis /mnt/c dans le système Linux.
 
 ## Étape 3 : Démarrez Claude Code depuis le Dossier
 
@@ -56,7 +56,10 @@ Dans votre terminal (assurez-vous d'être dans le dossier data_projects), tapez 
 claude
 ```
 
-Vous verrez un message de bienvenue et l'invite Claude Code.
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
+
+Après vous être connecté avec succès, vous verrez un message de bienvenue et l'invite Claude Code.
+
 
 ## Étape 4 : Posez des Questions sur Votre Projet
 

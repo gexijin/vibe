@@ -84,9 +84,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code démarre et affiche un message de bienvenue
-- Vous devrez peut-être vous reconnecter - consultez le guide [Installer Claude Code sur Windows](./Install_CLAUDE_Code_Win) pour les étapes d'authentification
-- Vous êtes maintenant prêt à utiliser l'assistance IA pour votre projet R
+
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 8 : Demander à Claude un Nuage de Points
 

@@ -54,7 +54,7 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
   claude
   ```
 
-Claude Code démarre et affiche un message de bienvenue.
+Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 3 : Demander à Claude de Créer une Commande Slash
 

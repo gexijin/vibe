@@ -85,9 +85,8 @@ summary(iris)
   ```
   claude
   ```
-- Claude Code démarre et affiche un message de bienvenue
-- Vous devrez peut-être vous authentifier si c'est votre première session
-- Vous êtes maintenant prêt à utiliser l'assistance IA pour votre projet R
+
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 8 : Demander à Claude un Graphique de Dispersion
 

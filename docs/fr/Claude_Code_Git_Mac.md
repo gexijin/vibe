@@ -95,7 +95,7 @@ C'est là que votre projet va résider.
   claude
   ```
 
-Claude Code se lance et attend votre demande.
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 7 : Demander à Claude d'Initialiser Git
 
