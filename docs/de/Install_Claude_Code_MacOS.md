@@ -147,7 +147,40 @@ Wenn Sie einen Anthropic-API-Schlüssel anstelle eines Claude-Abonnements haben:
 
 **Hinweis:** Wenn Sie einen älteren Mac mit bash anstelle von zsh verwenden, ersetzen Sie `~/.zshrc` durch `~/.bash_profile` im obigen Befehl.
 
-### Option C. Anthropic API über Azure Foundry verwenden
+### Option C. OpenRouter API verwenden (kostenlos starten!)
+
+OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sprachmodellen über einen einzigen API-Schlüssel bietet. Dies kann eine wirtschaftliche Möglichkeit sein, Claude Code zu nutzen, da Sie nur für die Nutzung bezahlen und aus Modellen verschiedener Preisklassen wählen können.
+
+- Registrieren Sie sich auf [openrouter.ai](https://openrouter.ai) und melden Sie sich an
+- Klicken Sie auf **Get API key** und kopieren Sie den Schlüssel an einen sicheren Ort
+- Setzen Sie die erforderlichen Umgebungsvariablen, bevor Sie Claude Code starten:
+  ```
+  export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+  export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+  export ANTHROPIC_API_KEY=""
+  export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+  export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+  export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+  ```
+- Starten Sie Claude Code:
+  ```
+  claude
+  ```
+- Überprüfen Sie die Verbindung, indem Sie `/status` in Claude Code eingeben
+
+**Hinweise:**
+- Ersetzen Sie `your-openrouter-api-key` durch Ihren tatsächlichen OpenRouter-API-Schlüssel
+- `ANTHROPIC_API_KEY` muss explizit auf leer gesetzt werden
+- Um alternative Modelle zu verwenden, müssen diese **Tool-Nutzungsfähigkeiten** unterstützen. Sie können Modelle überschreiben mit:
+  ```
+  export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+  ```
+- Durchsuchen Sie verfügbare Modelle auf [openrouter.ai/models](https://openrouter.ai/models)
+- Das kostenlose Kontingent gibt Ihnen 50 API-Anfragen pro Tag
+- Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/guides/claude-code-integration)
+
+
+### Option D. Anthropic API über Azure Foundry verwenden
 
 Diese Option ist für Organisationen gedacht, die Azure-gehostete Claude-Modelle verwenden. Fügen Sie im Terminal-Fenster diesen Code ein, um Umgebungsvariablen zu definieren (vor dem Starten von Claude):
 ```

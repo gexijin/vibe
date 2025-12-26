@@ -143,7 +143,40 @@ Claudeサブスクリプションの代わりにAnthropic APIキーを使用す�
 
 **注意：** bashを使用している古いMacの場合は、上記のコマンドで`~/.zshrc`を`~/.bash_profile`に置き換えてください。
 
-### オプションC. Azure Foundry経由でAnthropic APIを使用
+### オプションC. OpenRouter APIを使用（無料で始められます！）
+
+OpenRouterは、500以上の大規模言語モデルに単一のAPIキーでアクセスできる統合APIゲートウェイです。使用量に応じた課金で、さまざまな価格帯のモデルから選択できるため、Claude Codeを経済的に使用する方法となります。
+
+- [openrouter.ai](https://openrouter.ai)でサインアップしてログイン
+- **Get API key**をクリックしてキーを安全な場所にコピー
+- Claude Codeを起動する前に、必要な環境変数を設定：
+  ```
+  export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+  export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+  export ANTHROPIC_API_KEY=""
+  export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+  export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+  export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+  ```
+- Claude Codeを起動：
+  ```
+  claude
+  ```
+- Claude Codeで`/status`と入力して接続を確認
+
+**注意：**
+- `your-openrouter-api-key`を実際のOpenRouter APIキーに置き換えてください
+- `ANTHROPIC_API_KEY`は明示的に空に設定する必要があります
+- 代替モデルを使用する場合は、**ツール使用機能**をサポートしている必要があります。モデルは以下で上書きできます：
+  ```
+  export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+  ```
+- 利用可能なモデルは[openrouter.ai/models](https://openrouter.ai/models)で確認できます
+- 無料プランでは1日50回のAPIリクエストが可能です
+- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/guides/claude-code-integration)を参照してください
+
+
+### オプションD. Azure Foundry経由でAnthropic APIを使用
 
 このオプションは、Azure上でClaudeモデルをホストしている組織向けです。Claudeを起動する前に、ターミナルウィンドウで以下のコードを貼り付けて環境変数を定義します：
 ```

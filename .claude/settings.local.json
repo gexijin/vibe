@@ -46,7 +46,12 @@
       "Bash(git log:*)",
       "Bash(grep:*)",
       "Bash(git show:*)",
-      "WebFetch(domain:openrouter.ai)"
+      "WebFetch(domain:openrouter.ai)",
+      "Skill(translate-general)",
+      "Skill(translate-chinese)",
+      "Skill(translate-spanish)",
+      "Skill(translate-german)",
+      "Skill(translate-french)"
     ],
     "deny": [],
     "ask": []
