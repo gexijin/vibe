@@ -187,7 +187,39 @@ If you have an Anthropic API key instead of a Claude subscription:
 - Close and reopen the Ubuntu terminal for the changes to take effect
 - You should now be able to use Claude Code with your API key
 
-### Option C. Use Anthropic API via Azure Foundry
+### Option C. Use OpenRouter API (starts for free!)
+
+OpenRouter is a unified API gateway that provides access to 500+ large language models through a single API key. This can be an economical way to use Claude Code, as you pay only for usage and can choose from models at various price points.
+
+- Sign up at [openrouter.ai](https://openrouter.ai) and log in
+- Click **Get API key** and copy the key to a safe location
+- Set the required environment variables before starting Claude Code:
+   ```
+   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+   export ANTHROPIC_API_KEY=""
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   ```
+- Start Claude Code:
+   ```
+   claude
+   ```
+- Verify the connection by typing `/status` in Claude Code
+
+**Important notes:**
+- Replace `your-openrouter-api-key` with your actual OpenRouter API key
+- `ANTHROPIC_API_KEY` must be explicitly set to empty
+- To use alternative models, they must support **tool use capabilities**. You can override models with:
+   ```
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+   ```
+- Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
+- See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details 
+
+
+### Option D. Use Anthropic API via Azure Foundry
 
 Before starting Claude Code, in the Ubuntu terminal window, paste this code to define environment variables:
 ```
@@ -198,6 +230,7 @@ export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 

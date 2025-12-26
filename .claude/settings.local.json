@@ -45,7 +45,8 @@
       "Bash(xargs:*)",
       "Bash(git log:*)",
       "Bash(grep:*)",
-      "Bash(git show:*)"
+      "Bash(git show:*)",
+      "WebFetch(domain:openrouter.ai)"
     ],
     "deny": [],
     "ask": []
