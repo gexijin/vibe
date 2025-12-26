@@ -208,7 +208,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    ```
 - Verify the connection by typing `/status` in Claude Code
 
-**Important notes:**
+**Notes:**
 - Replace `your-openrouter-api-key` with your actual OpenRouter API key
 - `ANTHROPIC_API_KEY` must be explicitly set to empty
 - To use alternative models, they must support **tool use capabilities**. You can override models with:
@@ -216,6 +216,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
+- Free tier give you 50 API requests per day
 - See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details 
 
 
