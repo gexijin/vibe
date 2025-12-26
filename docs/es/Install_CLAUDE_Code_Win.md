@@ -187,7 +187,40 @@ Si tiene una clave API de Anthropic en lugar de una suscripción a Claude:
 - Cierre y vuelva a abrir la terminal de Ubuntu para que los cambios surtan efecto
 - Ahora debería poder usar Claude Code con su clave API
 
-### Opción C. Usar API de Anthropic a través de Azure Foundry
+### Opción C. Usar API de OpenRouter (¡comienza gratis!)
+
+OpenRouter es una puerta de enlace API unificada que proporciona acceso a más de 500 modelos de lenguaje grandes a través de una sola clave API. Esta puede ser una forma económica de usar Claude Code, ya que solo paga por uso y puede elegir entre modelos de diferentes precios.
+
+- Regístrese en [openrouter.ai](https://openrouter.ai) e inicie sesión
+- Haga clic en **Get API key** y copie la clave en un lugar seguro
+- Configure las variables de entorno requeridas antes de iniciar Claude Code:
+   ```
+   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+   export ANTHROPIC_API_KEY=""
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   ```
+- Inicie Claude Code:
+   ```
+   claude
+   ```
+- Verifique la conexión escribiendo `/status` en Claude Code
+
+**Notas:**
+- Reemplace `your-openrouter-api-key` con su clave API real de OpenRouter
+- `ANTHROPIC_API_KEY` debe establecerse explícitamente como vacío
+- Para usar modelos alternativos, deben soportar **capacidades de uso de herramientas**. Puede sobrescribir modelos con:
+   ```
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+   ```
+- Explore los modelos disponibles en [openrouter.ai/models](https://openrouter.ai/models)
+- El nivel gratuito le da 50 solicitudes API por día
+- Consulte la [guía oficial de OpenRouter](https://openrouter.ai/docs/guides/claude-code-integration) para más detalles
+
+
+### Opción D. Usar API de Anthropic a través de Azure Foundry
 
 Antes de iniciar Claude Code, en la terminal de Ubuntu, pegue este código para definir las variables de entorno:
 ```
@@ -198,6 +231,7 @@ export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Configurar modelos según los nombres de implementación de su recurso
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=su_clave_api
 ```
 

@@ -187,7 +187,40 @@ Claude Code 需要 Node.js 版本 18 或更高。按以下步骤操作:
 - 关闭并重新打开 Ubuntu 终端使更改生效
 - 现在应该能使用 API 密钥使用 Claude Code
 
-### 选项 C. 通过 Azure Foundry 使用 Anthropic API
+### 选项 C. 使用 OpenRouter API（可免费开始！）
+
+OpenRouter 是一个统一的 API 网关，通过单个 API 密钥可访问 500 多个大型语言模型。这是一种经济的 Claude Code 使用方式，因为您只需按使用量付费，并可从不同价位的模型中选择。
+
+- 在 [openrouter.ai](https://openrouter.ai) 注册并登录
+- 点击 **Get API key** 并将密钥复制到安全位置
+- 启动 Claude Code 前设置所需的环境变量:
+   ```
+   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+   export ANTHROPIC_API_KEY=""
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   ```
+- 启动 Claude Code:
+   ```
+   claude
+   ```
+- 在 Claude Code 中输入 `/status` 验证连接
+
+**注意:**
+- 将 `your-openrouter-api-key` 替换为您的实际 OpenRouter API 密钥
+- `ANTHROPIC_API_KEY` 必须显式设置为空
+- 要使用替代模型，它们必须支持**工具使用功能**。您可以通过以下方式覆盖模型:
+   ```
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+   ```
+- 在 [openrouter.ai/models](https://openrouter.ai/models) 浏览可用模型
+- 免费层每天提供 50 次 API 请求
+- 详情请参阅[官方 OpenRouter 指南](https://openrouter.ai/docs/guides/claude-code-integration)
+
+
+### 选项 D. 通过 Azure Foundry 使用 Anthropic API
 
 启动 Claude Code 前,在 Ubuntu 终端窗口中粘贴以下代码定义环境变量:
 ```
@@ -198,6 +231,7 @@ export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
