@@ -17,7 +17,7 @@ Claude Code is an AI assistant that lives in your terminal and helps you write, 
 - Claude Pro/Max subscription or API key through Azure Foundry
 - 10 - 15 minutes
 
-## Step 1: Install Claude Code Natively on Windows
+## Step 1: Install Claude Code Natively on Windows (works but not recommended)
 
 - Click the **Windows Start button**
 - Type `PowerShell` and click on **Windows PowerShell**
