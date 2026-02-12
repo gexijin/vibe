@@ -2,20 +2,13 @@
 
 # Install Claude Code on Windows
 
-Claude Code is an AI assistant that lives in your terminal and helps you write, debug, and understand code. On Windows, you have two installation paths:
-
-- **Part A: Native Install** — Quick setup using Git Bash or PowerShell. Get started in minutes.
-- **Part B: WSL2 Install** — Recommended for the full experience, with Bash tool sandboxing and a complete Linux environment.
-
-You can start with the native install and add WSL2 later, or go straight to WSL2 if you prefer.
+Claude Code is an AI assistant that lives in your terminal and helps you write, debug, and understand code. This guide walks you through the complete setup: a quick native install via PowerShell, then WSL2 for the full Linux-powered experience.
 
 ## Key Concepts
 
-- **Git Bash** - A terminal that comes with Git for Windows, used to run Claude Code natively
 - **WSL (Windows Subsystem for Linux)** - A Windows feature that runs a real Linux system alongside Windows
 - **Ubuntu** - A popular, beginner-friendly Linux distribution you can install through WSL
-- **PowerShell** - Windows' built-in command-line tool, used here to install WSL
-- **Terminal** - A text-based interface for running commands (like Git Bash or Ubuntu's command line)
+- **PowerShell** - Windows' built-in command-line tool, used here to install Claude Code and WSL
 
 ## What You'll Need
 
@@ -24,36 +17,7 @@ You can start with the native install and add WSL2 later, or go straight to WSL2
 - Claude Pro/Max subscription or API key through Azure Foundry
 - 10 - 15 minutes
 
----
-
-## Part A: Install Claude Code (Native Windows)
-
-### Step 1: Install Git for Windows
-
-Claude Code's native installer requires Git Bash. If you already have Git installed, skip to Step 2.
-
-- Download Git for Windows from [git-scm.com](https://git-scm.com/download/win)
-- Run the installer and accept the default settings
-- When installation is complete, you should be able to find **Git Bash** in your Start menu
-
-### Step 2: Install Claude Code
-
-**Option 1: Using Git Bash (Recommended)**
-
-- Click the **Windows Start button**
-- Type `Git Bash` and click on **Git Bash** to open it
-- In the Git Bash window, type:
-   ```
-   curl -fsSL https://claude.ai/install.sh | bash
-   ```
-- Wait for the installation to complete
-- Close and reopen Git Bash, then verify by typing:
-   ```
-   claude --version
-   ```
-- You should see the version number of Claude Code
-
-**Option 2: Using PowerShell**
+## Step 1: Install Claude Code Natively on Windows
 
 - Click the **Windows Start button**
 - Type `PowerShell` and click on **Windows PowerShell**
@@ -66,115 +30,15 @@ Claude Code's native installer requires Git Bash. If you already have Git instal
    ```
    claude --version
    ```
-
-### Step 3: Connect to Your Anthropic Account
-
-#### Option A. Use your Claude Pro or Max subscription
-
-- In your terminal (Git Bash or PowerShell), type:
-   ```
-   claude
-   ```
-- Claude tries to open a browser. If it cannot open automatically, hold **Ctrl** and click on the long URL to open it in a browser. Alternatively, copy the URL and paste it into an external browser.
-- Log in to your Claude.ai account (this may happen automatically if you're using Chrome)
-- Click **Authorize**
-- Click **Copy Code** when a long code appears
-- Go back to the terminal window
-- To paste in the terminal: **Right-click** and select **Paste** (or press **Ctrl+Shift+V**)
-- You should see a success message
-- Follow the instructions to complete the setup
-
-#### Option B. Use Anthropic API key
-
-If you have an Anthropic API key instead of a Claude subscription:
-
-- First, get your API key from the [Anthropic Console](https://console.anthropic.com/)
-- In your terminal, type:
-   ```
-   export ANTHROPIC_API_KEY="your-api-key-here"
-   ```
-   Replace `your-api-key-here` with your actual API key
-- To make this permanent (so you don't have to set it every time), add it to your shell profile:
-   ```
-   echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc
-   ```
-   Replace `your-api-key-here` with your actual API key
-- Close and reopen your terminal for the changes to take effect
-- You should now be able to use Claude Code with your API key
-
-#### Option C. Use OpenRouter API (starts for free!)
-
-OpenRouter is a unified API gateway that provides access to 500+ large language models through a single API key. This can be an economical way to use Claude Code, as you pay only for usage and can choose from models at various price points.
-
-- Sign up at [openrouter.ai](https://openrouter.ai) and log in
-- Click **Get API key** and copy the key to a safe location
-- Set the required environment variables before starting Claude Code:
-   ```
-   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
-   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
-   export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
-   ```
-- Start Claude Code:
-   ```
-   claude
-   ```
-- Verify the connection by typing `/status` in Claude Code
-
-**Notes:**
-- Replace `your-openrouter-api-key` with your actual OpenRouter API key
-- `ANTHROPIC_API_KEY` must be explicitly set to empty
-- To use alternative models, they must support **tool use capabilities**. You can override models with:
-   ```
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
-   ```
-- Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
-- Free tier give you 50 API requests per day
-- See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details
-
-
-#### Option D. Use Anthropic API via Azure Foundry
-
-Before starting Claude Code, in your terminal, paste this code to define environment variables:
-```
-# Enable Microsoft Foundry integration
-export CLAUDE_CODE_USE_FOUNDRY=1
-# Azure resource name
-export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
-# Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
-export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
-export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
-```
-
-**Note:** Replace `xxxx-eastus2` with your Foundry Resource name (do not use the entire base URL). Replace `your_api_key` with your complete API key from your Azure portal.
-
-Then start Claude Code:
-```
-claude
-```
-
-You should now be able to use Claude Code with Azure-deployed Claude models.
-
-### Windows Limitations
+- You should see the version number of Claude Code
 
 > **Note:** The native Windows install has some limitations:
 > - No Bash tool sandboxing (a security feature only available in WSL2/macOS)
 > - Some tools and workflows work better in a Linux environment
 >
-> For the full experience, continue with **Part B** below to install WSL2.
-> Otherwise, skip to **Step 7** to start using Claude Code right away.
+> Continue with the steps below to install WSL2 for the full experience.
 
----
-
-## Part B: Install WSL2 (Recommended)
-
-WSL2 gives Claude Code access to a full Linux environment with Bash tool sandboxing. If you only installed the native version above, follow these steps to add WSL2.
-
-### Step 4: Check Virtualization and Install WSL
+## Step 2: Check Virtualization and Install WSL
 
 **First, check if virtualization is enabled:**
 
@@ -209,7 +73,7 @@ WSL2 gives Claude Code access to a full Linux environment with Bash tool sandbox
    ```
    wsl --list --verbose
    ```
-- **If you see "Ubuntu" listed:** WSL is already installed! Skip to Step 5.
+- **If you see "Ubuntu" listed:** WSL is already installed! Skip to Step 3.
 - **If you see an error message:** Continue with the installation below.
 
 **To install WSL and Ubuntu:**
@@ -225,7 +89,7 @@ WSL2 gives Claude Code access to a full Linux environment with Bash tool sandbox
 
 **Note:** If you get an error saying the command is not recognized, your Windows version might be too old. Make sure you have Windows 10 version 2004 or higher, or Windows 11.
 
-### Step 5: Set Up Ubuntu
+## Step 3: Set Up Ubuntu
 
 After your computer restarts, a terminal window with "Ubuntu" in the title should open automatically within 2-5 minutes.
 
@@ -239,7 +103,7 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
 
 - Wait for the message: `Enter new UNIX username:`
 - Type a username (use lowercase letters and numbers only, no spaces)
-   - Example:  `john`
+   - Example: `john`
 - You'll see: `New password:`
 - Type a simple password (even the same as the user name `john`)
 - You won't see the characters as you type - this is normal
@@ -247,7 +111,7 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
 
 **Important:** Remember this username and password — you'll need them later.
 
-### Step 6: Install Claude Code in WSL
+## Step 4: Install Claude Code in WSL
 
 - In the Ubuntu terminal, type:
    ```
@@ -259,18 +123,106 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
    claude --version
    ```
 - You should see the version number of Claude Code
-- Connect to your Anthropic account using the same options from **Step 3** (Options A–D above)
 
----
+## Step 5: Connect to Your Anthropic Account
 
-## Step 7: Test Claude Code
+### Option A. Use your Claude Pro or Max subscription
 
-You're all set! To see if it works, ask a general question such as "Explain quantum computing."
+- In the Ubuntu terminal, type:
+   ```
+   claude
+   ```
+- Claude tries to open a browser. If it cannot open automatically, hold **Ctrl** and click on the long URL to open it in a browser. Alternatively, copy the URL and paste it into an external browser.
+- Log in to your Claude.ai account (this may happen automatically if you're using Chrome)
+- Click **Authorize**
+- Click **Copy Code** when a long code appears
+- Go back to the terminal window
+- To paste in the terminal: **Right-click** and select **Paste** (or press **Ctrl+Shift+V**)
+- You should see a success message
+- Follow the instructions to complete the setup
 
-## Step 8: Access Your Projects
+### Option B. Use Anthropic API key
 
-**Native Windows (Git Bash or PowerShell):**
-- Navigate to your project folder:
+If you have an Anthropic API key instead of a Claude subscription:
+
+- First, get your API key from the [Anthropic Console](https://console.anthropic.com/)
+- In the Ubuntu terminal, type:
+   ```
+   export ANTHROPIC_API_KEY="your-api-key-here"
+   ```
+   Replace `your-api-key-here` with your actual API key
+- To make this permanent (so you don't have to set it every time), add it to your shell profile:
+   ```
+   echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc
+   ```
+   Replace `your-api-key-here` with your actual API key
+- Close and reopen the Ubuntu terminal for the changes to take effect
+- You should now be able to use Claude Code with your API key
+
+### Option C. Use OpenRouter API (starts for free!)
+
+OpenRouter is a unified API gateway that provides access to 500+ large language models through a single API key. This can be an economical way to use Claude Code, as you pay only for usage and can choose from models at various price points.
+
+- Sign up at [openrouter.ai](https://openrouter.ai) and log in
+- Click **Get API key** and copy the key to a safe location
+- Set the required environment variables before starting Claude Code:
+   ```
+   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+   export ANTHROPIC_API_KEY=""
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   ```
+- Start Claude Code:
+   ```
+   claude
+   ```
+- Verify the connection by typing `/status` in Claude Code
+
+**Notes:**
+- Replace `your-openrouter-api-key` with your actual OpenRouter API key
+- `ANTHROPIC_API_KEY` must be explicitly set to empty
+- To use alternative models, they must support **tool use capabilities**. You can override models with:
+   ```
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+   ```
+- Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
+- Free tier gives you 50 API requests per day
+- See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details
+
+### Option D. Use Anthropic API via Azure Foundry
+
+Before starting Claude Code, in the Ubuntu terminal, paste this code to define environment variables:
+```
+# Enable Microsoft Foundry integration
+export CLAUDE_CODE_USE_FOUNDRY=1
+# Azure resource name
+export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
+# Set models to your resource's deployment names
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
+export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
+```
+
+**Note:** Replace `xxxx-eastus2` with your Foundry Resource name (do not use the entire base URL). Replace `your_api_key` with your complete API key from your Azure portal.
+
+Then start Claude Code:
+```
+claude
+```
+
+You should now be able to use Claude Code with Azure-deployed Claude models.
+
+## Step 6: Test Claude Code
+
+You're all set! Type `claude` in the Ubuntu terminal and ask a general question such as "Explain quantum computing."
+
+## Step 7: Access Your Projects
+
+**Native Windows (PowerShell):**
+- If you have a project folder, navigate to it:
    ```
    cd ~/Documents/test_claude
    ```
@@ -296,7 +248,7 @@ You're all set! To see if it works, ask a general question such as "Explain quan
 
 **Note:** Claude operates inside a project folder. It saves settings in that folder. It's Claude's workspace.
 
-## Step 9: Update Claude Code
+## Step 8: Update Claude Code
 
 Claude Code updates automatically, but you can manually update at any time:
 
@@ -305,7 +257,7 @@ Claude Code updates automatically, but you can manually update at any time:
 sudo claude update
 ```
 
-**Native Windows (Git Bash or PowerShell — run as administrator):**
+**Native Windows (PowerShell — run as administrator):**
 ```
 claude update
 ```
@@ -326,25 +278,19 @@ claude doctor
 ```
 This built-in diagnostic tool checks your installation and reports common issues.
 
-### Git Bash not found
-
-- Make sure you installed Git for Windows from [git-scm.com](https://git-scm.com/download/win)
-- Try searching for "Git Bash" in the Windows Start menu
-- If not found, re-run the Git installer and make sure "Git Bash Here" is selected
-
 ### Claude command not found (native Windows)
 
-- Close and reopen your terminal (Git Bash or PowerShell)
+- Close and reopen PowerShell
 - Try running the installation command again:
    ```
-   curl -fsSL https://claude.ai/install.sh | bash
+   irm https://claude.ai/install.ps1 | iex
    ```
-- Make sure your terminal's PATH includes the Claude installation directory
+- Make sure your PATH includes the Claude installation directory
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 This error means virtualization is not enabled:
-- Go back to Step 4 and check Task Manager to see if virtualization is enabled
-- If disabled, you need to enable it in your computer's BIOS (see Step 4 for instructions)
+- Go back to Step 2 and check Task Manager to see if virtualization is enabled
+- If disabled, you need to enable it in your computer's BIOS (see Step 2 for instructions)
 - After enabling virtualization, restart your computer and try `wsl --install` again
 
 ### "wsl --install" doesn't work
