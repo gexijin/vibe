@@ -8,110 +8,58 @@ Diese Anleitung führt Sie Schritt für Schritt durch die Installation, mit deta
 
 ## Überblick
 
-- Node.js herunterladen und installieren
-- Claude Code mit npm installieren
-- Ihren API-Schlüssel konfigurieren
+- Terminal öffnen
+- Claude Code installieren
+- Ihre API-Verbindung konfigurieren
 - Mit Claude Code beginnen
 
 ## Wichtige Konzepte
 
 - **Terminal**: Eine integrierte Mac-App, in der Sie Befehle eingeben statt auf Schaltflächen zu klicken. So interagieren Sie mit Claude Code.
-- **Node.js**: Software, die Claude Code zum Laufen benötigt. Betrachten Sie es als den Motor, der Claude Code antreibt.
 - **Claude Code**: Ein KI-Programmierassistent, den Sie im Terminal ausführen. Er kann Fragen beantworten, Code schreiben und Ihnen helfen, bestehende Projekte zu verstehen.
 
 ## Was Sie benötigen
 
-- Einen Mac-Computer (macOS 10.15 Catalina oder neuer empfohlen)
+- Einen Mac-Computer (macOS 13.0 Ventura oder neuer)
 - Internetverbindung
 - Administratorzugang auf Ihrem Computer
 - Claude Pro/Max-Abonnement oder API-Schlüssel
-- 15 - 20 Minuten
+- 5 - 10 Minuten
 
-## Schritt 1: Node.js herunterladen
-
-Claude Code erfordert Node.js Version 18 oder höher.
-
-**Prüfen Sie zunächst, ob Node.js bereits installiert ist:**
+## Schritt 1: Terminal öffnen
 
 - Klicken Sie auf das **Launchpad**-Symbol in Ihrem Dock (das Symbol mit den bunten Quadraten)
 - Geben Sie `Terminal` in das Suchfeld oben ein
 - Klicken Sie auf **Terminal** (ein schwarzes quadratisches Symbol)
-- Geben Sie im Terminal ein:
-   ```
-   node --version
-   ```
-- Schauen Sie sich das Ergebnis an:
-   - **Wenn Sie eine Versionsnummer wie `v18.x.x` oder höher sehen**: Node.js ist bereits installiert! Fahren Sie mit Schritt 4 fort.
-   - **Wenn Sie „command not found" sehen**: Fahren Sie mit der Installation unten fort.
-
-**Um Node.js herunterzuladen:**
-
-- Öffnen Sie Ihren Webbrowser (Safari, Chrome, Firefox usw.)
-- Gehen Sie zu dieser Website:
-   ```
-   https://nodejs.org/
-   ```
-- Klicken Sie auf die grüne Schaltfläche **Get Node.js**
-- Klicken Sie auf die grüne Schaltfläche **macOS Installer (.pkg)** in der Mitte des Bildschirms
-- Eine Datei wird in Ihren Downloads-Ordner heruntergeladen (dauert normalerweise 30-60 Sekunden)
-   - Die Datei heißt etwa `node-v24.x.x.pkg`
-
-## Schritt 2: Node.js installieren
-
-- Öffnen Sie den **Finder** (klicken Sie auf das blaue lächelnde Gesicht-Symbol in Ihrem Dock)
-- Klicken Sie auf **Downloads** in der linken Seitenleiste
-- Suchen Sie die gerade heruntergeladene Datei (sieht aus wie `node-v24.x.x.pkg`)
-- Doppelklicken Sie auf die Datei, um sie zu öffnen
-- Ein Installationsfenster erscheint - klicken Sie auf **Fortfahren**
-- Klicken Sie erneut auf **Fortfahren** beim Lizenz-Bildschirm
-- Klicken Sie auf **Akzeptieren**, um die Lizenz anzunehmen
-- Klicken Sie auf **Installieren**
-- Sie werden nach Ihrem Mac-Passwort gefragt (das, mit dem Sie sich anmelden)
-- Geben Sie Ihr Passwort ein und klicken Sie auf **Software installieren**
-- Warten Sie, bis die Installation abgeschlossen ist (1-2 Minuten)
-- Klicken Sie auf **Schließen**, wenn Sie „Die Installation war erfolgreich" sehen
-- Sie können das Installationsprogramm in den Papierkorb verschieben, wenn Sie gefragt werden
-
-## Schritt 3: Node.js-Installation überprüfen
-
-- Klicken Sie auf das **Launchpad**-Symbol in Ihrem Dock (das Symbol mit den bunten Quadraten)
-- Geben Sie `Terminal` in das Suchfeld oben ein
-- Klicken Sie auf **Terminal** (ein schwarzes quadratisches Symbol)
-- Ein Terminal-Fenster öffnet sich
-- Geben Sie im Terminal ein:
-   ```
-   node --version
-   ```
-- Sie sollten etwas wie `v24.x.x` sehen (die genauen Zahlen können variieren)
-- Wenn Sie eine Versionsnummer sehen: Ausgezeichnet! Node.js ist korrekt installiert
-
-**Wenn Sie „command not found" sehen:**
-- Schließen Sie Terminal vollständig (klicken Sie auf **Terminal** in der Menüleiste, dann auf **Terminal beenden**)
-- Öffnen Sie Terminal erneut
-- Versuchen Sie den Befehl noch einmal
+- Ein Terminal-Fenster öffnet sich mit einem blinkenden Cursor
 
 **Tipp:** Lassen Sie Terminal für die nächsten Schritte geöffnet.
 
-## Schritt 4: Claude Code installieren
+## Schritt 2: Claude Code installieren
 
-- Geben Sie im Terminal ein:
-   ```
-   npm install -g @anthropic-ai/claude-code
-   ```
-- Warten Sie, bis Claude Code installiert ist (2-5 Minuten)
-- Wenn Sie einen „permission denied"-Fehler sehen, versuchen Sie es mit `sudo`:
-   ```
-   sudo npm install -g @anthropic-ai/claude-code
-   ```
-   Geben Sie dann Ihr Mac-Passwort ein, wenn Sie dazu aufgefordert werden (Sie sehen es nicht beim Tippen)
-- Sie sehen möglicherweise einige Warnungen in gelbem oder rotem Text - das ist normalerweise normal
-- Wenn die Installation abgeschlossen ist, überprüfen Sie durch Eingabe von:
+Kopieren Sie im Terminal den folgenden Befehl, fügen Sie ihn ein und drücken Sie **Return**:
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+- Warten Sie, bis Claude Code installiert ist (1-2 Minuten)
+- Möglicherweise sehen Sie einige Fortschrittsmeldungen – das ist normal
+- Wenn die Installation abgeschlossen ist, schließen Sie Terminal und öffnen Sie es erneut. Überprüfen Sie dann durch Eingabe von:
    ```
    claude --version
    ```
 - Sie sollten die Versionsnummer von Claude Code sehen
 
-## Schritt 5: Mit Ihrem Anthropic-Konto verbinden
+**Alternative: Installation mit Homebrew**
+
+Wenn Sie Homebrew verwenden, können Sie Claude Code damit installieren:
+```
+brew install --cask claude-code
+```
+
+**Tipp:** Führen Sie `claude doctor` nach der Installation aus, um zu prüfen, ob alles korrekt eingerichtet ist.
+
+## Schritt 3: Mit Ihrem Anthropic-Konto verbinden
 
 ### Option A. Ihr Claude Pro- oder Max-Abonnement verwenden
 
@@ -121,8 +69,8 @@ Claude Code erfordert Node.js Version 18 oder höher.
    ```
 - Claude versucht, einen Browser zu öffnen. Wenn er sich nicht automatisch öffnet, kopieren Sie die im Terminal angezeigte URL und fügen Sie sie in Ihren Browser ein.
 - Melden Sie sich bei Ihrem Claude.ai-Konto an (dies kann automatisch geschehen)
-- Klicken Sie auf **Autorisieren**
-- Klicken Sie auf **Code kopieren**, wenn ein langer Code erscheint
+- Klicken Sie auf **Authorize**
+- Klicken Sie auf **Copy Code**, wenn ein langer Code erscheint
 - Gehen Sie zurück zum Terminal-Fenster
 - Zum Einfügen im Terminal: Klicken Sie auf **Bearbeiten** in der Menüleiste, dann auf **Einfügen**
 - Sie sollten eine Erfolgsmeldung sehen
@@ -154,27 +102,27 @@ OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sp
 - Registrieren Sie sich auf [openrouter.ai](https://openrouter.ai) und melden Sie sich an
 - Klicken Sie auf **Get API key** und kopieren Sie den Schlüssel an einen sicheren Ort
 - Setzen Sie die erforderlichen Umgebungsvariablen, bevor Sie Claude Code starten:
-  ```
-  export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
-  export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
-  export ANTHROPIC_API_KEY=""
-  export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-  export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-  export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
-  ```
+   ```
+   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
+   export ANTHROPIC_API_KEY=""
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   ```
 - Starten Sie Claude Code:
-  ```
-  claude
-  ```
+   ```
+   claude
+   ```
 - Überprüfen Sie die Verbindung, indem Sie `/status` in Claude Code eingeben
 
 **Hinweise:**
 - Ersetzen Sie `your-openrouter-api-key` durch Ihren tatsächlichen OpenRouter-API-Schlüssel
 - `ANTHROPIC_API_KEY` muss explizit auf leer gesetzt werden
 - Um alternative Modelle zu verwenden, müssen diese **Tool-Nutzungsfähigkeiten** unterstützen. Sie können Modelle überschreiben mit:
-  ```
-  export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
-  ```
+   ```
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+   ```
 - Durchsuchen Sie verfügbare Modelle auf [openrouter.ai/models](https://openrouter.ai/models)
 - Das kostenlose Kontingent gibt Ihnen 50 API-Anfragen pro Tag
 - Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/guides/claude-code-integration)
@@ -196,7 +144,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 **Hinweis:** Ersetzen Sie `xxxx-eastus2` durch Ihren Foundry-Ressourcennamen (verwenden Sie nicht die gesamte Basis-URL). Ersetzen Sie `your_api_key` durch Ihren vollständigen API-Schlüssel aus Ihrem Azure-Portal.
 
-## Schritt 6: Mit Claude Code beginnen
+## Schritt 4: Claude Code testen
 
 Sie sind fertig! So verwenden Sie Claude Code:
 
@@ -207,7 +155,7 @@ Sie sind fertig! So verwenden Sie Claude Code:
 - Es stellt Ihnen einige Fragen, bevor es bereit ist zum Chatten
 - Um zu testen, ob es funktioniert, stellen Sie eine allgemeine Frage wie „Erkläre mir Quantencomputing."
 
-## Schritt 7: Zu Ihrem Projekt navigieren
+## Schritt 5: Zu Ihrem Projekt navigieren
 
 - Wenn Sie ein Projekt in Ihren Mac-Ordnern haben, können Sie dorthin navigieren:
    ```
@@ -225,6 +173,18 @@ Sie sind fertig! So verwenden Sie Claude Code:
 
 **Hinweis:** Claude arbeitet innerhalb eines Projektordners. Es definiert Schreibrechte im Ordner und speichert Einstellungen in diesem Ordner. Es ist Claudes Arbeitsbereich.
 
+## Schritt 6: Claude Code aktualisieren
+
+Claude Code, das über den nativen Installer installiert wurde, aktualisiert sich automatisch im Hintergrund. Sie können ein Update auch manuell auslösen:
+
+- Geben Sie im Terminal ein:
+   ```
+   sudo claude
+   ```
+- Claude Code prüft auf Updates und installiert die neueste Version
+
+**Hinweis:** Homebrew-Installationen aktualisieren sich nicht automatisch. Führen Sie regelmäßig `brew upgrade claude-code` aus, um die neueste Version zu erhalten.
+
 ## Nächste Schritte
 - [VS Code Erste Schritte](./VS_Code_Getting_Started.md) - Lernen Sie VS Code kennen, einen beliebten Code-Editor
 - [Claude Code in VS Code (Mac)](./Claude_Code_in_VS_Code_Mac.md) - Führen Sie Claude Code innerhalb von VS Code aus
@@ -241,33 +201,28 @@ Nach dem Schließen von Terminal können Sie es so wieder öffnen:
 
 ## Fehlerbehebung
 
-### Node.js-Installer lässt sich nicht öffnen
-- Stellen Sie sicher, dass Sie die `.pkg`-Datei von nodejs.org heruntergeladen haben
-- Versuchen Sie, mit der rechten Maustaste auf die Datei zu klicken und **Öffnen** auszuwählen, anstatt doppelt zu klicken
-- Gehen Sie zu **Systemeinstellungen** > **Datenschutz & Sicherheit** und klicken Sie auf **Trotzdem öffnen**
+### Erster Schritt: Claude Doctor ausführen
+Wenn etwas nicht funktioniert, führen Sie zuerst diesen Befehl aus:
+```
+claude doctor
+```
+Er überprüft Ihre Installation und meldet eventuelle Probleme.
 
-### „node: command not found" nach der Installation
-- Schließen Sie Terminal vollständig (klicken Sie auf **Terminal** in der Menüleiste, dann auf **Terminal beenden**)
-- Öffnen Sie Terminal erneut
-- Versuchen Sie `node --version` erneut
-- Wenn es immer noch nicht funktioniert, starten Sie Ihren Mac neu und versuchen Sie es noch einmal
-
-### npm-Installation schlägt mit Berechtigungsfehlern fehl
-- Fügen Sie `sudo` vor dem npm-Befehl hinzu:
-  ```
-  sudo npm install -g @anthropic-ai/claude-code
-  ```
-- Geben Sie Ihr Mac-Passwort ein, wenn Sie dazu aufgefordert werden (Sie sehen es nicht beim Tippen)
+### Installationsskript schlägt fehl
+- Stellen Sie sicher, dass Sie macOS 13.0 oder neuer verwenden
+- Versuchen Sie die Homebrew-Alternative: `brew install --cask claude-code`
+- Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut
 
 ### Claude Code-Befehle werden nicht gefunden
-- Stellen Sie sicher, dass die npm-Installation erfolgreich abgeschlossen wurde
-- Versuchen Sie, Terminal zu schließen und erneut zu öffnen
-- Prüfen Sie, ob Claude Code installiert ist: `npm list -g @anthropic/claude-code`
-- Versuchen Sie es erneut zu installieren: `npm install -g @anthropic-ai/claude-code`
+- Schließen Sie Terminal vollständig (klicken Sie auf **Terminal** in der Menüleiste, dann auf **Terminal beenden**)
+- Öffnen Sie Terminal erneut
+- Versuchen Sie `claude --version`, um zu prüfen, ob es installiert ist
+- Versuchen Sie, den Installationsbefehl erneut auszuführen: `curl -fsSL https://claude.ai/install.sh | bash`
 
-### „Cannot find module"-Fehler
-- Stellen Sie sicher, dass Node.js richtig installiert ist: `node --version`
-- Versuchen Sie, Claude Code neu zu installieren: `npm uninstall -g @anthropic/claude-code` dann `npm install -g @anthropic-ai/claude-code`
+### Authentifizierung schlägt fehl
+- Stellen Sie sicher, dass Sie ein aktives Claude Pro/Max-Abonnement oder einen gültigen API-Schlüssel haben
+- Versuchen Sie, `claude` erneut auszuführen und den Anmeldevorgang abzuschließen
+- Überprüfen Sie, ob Ihr Browser die richtige Autorisierungsseite geöffnet hat
 
 ## Tipps für Mac-Benutzer
 
@@ -275,7 +230,7 @@ Nach dem Schließen von Terminal können Sie es so wieder öffnen:
 Um den Pfad zu einem Ordner zu finden:
 - Öffnen Sie den Finder
 - Navigieren Sie zu Ihrem Projektordner
-- Ziehen Sie den Ordner per Drag & Drop ins Terminal - der vollständige Pfad erscheint!
+- Ziehen Sie den Ordner per Drag & Drop ins Terminal – der vollständige Pfad erscheint!
 
 ### Verschiedene Terminal-Apps verwenden
 Sie können auch andere Terminal-Apps verwenden wie:
@@ -287,11 +242,9 @@ Claude Code funktioniert mit allen!
 
 ## Benötigen Sie Hilfe?
 
-- Für Node.js-Download: [Node.js Offizielle Website](https://nodejs.org/)
-- Für Node.js-Probleme: [Node.js Dokumentation](https://nodejs.org/docs/)
-- Für npm-Probleme: [npm Dokumentation](https://docs.npmjs.com/)
 - Für Claude Code-Probleme: [Claude Code GitHub](https://github.com/anthropics/claude-code)
+- Für die offizielle Einrichtungsdokumentation: [Claude Code Setup-Anleitung](https://code.claude.com/docs/en/setup)
 
 ---
 
-*Zuletzt aktualisiert: Dezember 2025*
+*Zuletzt aktualisiert: Februar 2026*

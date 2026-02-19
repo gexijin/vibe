@@ -1,27 +1,46 @@
 [Startseite](./)
 
-# Claude Code unter Windows mit WSL installieren
+# Claude Code unter Windows installieren
 
-Claude Code ist ein leistungsstarker KI-Programmierassistent, aber Windows-Benutzer stehen vor einer Herausforderung: Viele Entwicklertools funktionieren unter Linux besser. Die Lösung? WSL (Windows Subsystem for Linux) ermöglicht es Ihnen, eine vollständige Linux-Umgebung innerhalb von Windows auszuführen – wie zwei Computer in einem. Diese Anleitung führt Sie durch die komplette Einrichtung, sodass Sie in etwa 20 Minuten mit Claude programmieren können.
+Claude Code ist ein KI-Assistent, der in Ihrem Terminal lebt und Ihnen beim Schreiben, Debuggen und Verstehen von Code hilft. Diese Anleitung führt Sie durch die komplette Einrichtung: eine schnelle native Installation über PowerShell, dann WSL2 für die vollständige Linux-basierte Erfahrung.
 
 ## Wichtige Konzepte
 
 - **WSL (Windows Subsystem for Linux)** - Eine Windows-Funktion, die ein echtes Linux-System neben Windows ausführt
-- **Ubuntu** - Eine beliebte, einsteigerfreundliche Linux-Distribution, die wir über WSL installieren
-- **PowerShell** - Das integrierte Befehlszeilentool von Windows, das hier zur Installation von WSL verwendet wird
-- **Node.js** - Eine JavaScript-Laufzeitumgebung, die Claude Code zum Ausführen benötigt
-- **Terminal** - Eine textbasierte Schnittstelle zum Ausführen von Befehlen (wie Ubuntus Befehlszeile)
+- **Ubuntu** - Eine beliebte, einsteigerfreundliche Linux-Distribution, die Sie über WSL installieren können
+- **PowerShell** - Das integrierte Befehlszeilentool von Windows, das hier zur Installation von Claude Code und WSL verwendet wird
 
 ## Was Sie benötigen
 
 - Einen Windows 10 (Version 2004 oder höher) oder Windows 11 Computer
 - Administratorzugang auf Ihrem Computer
 - Claude Pro/Max-Abonnement oder API-Schlüssel über Azure Foundry
-- 15 - 20 Minuten
+- 10 - 15 Minuten
 
-## Schritt 1: Prüfen, ob Virtualisierung aktiviert ist
+## Schritt 1: Claude Code nativ unter Windows installieren (funktioniert, aber nicht empfohlen)
 
-Bevor Sie WSL installieren, müssen Sie überprüfen, ob die Virtualisierung auf Ihrem Computer aktiviert ist. Dies ist erforderlich, damit WSL funktioniert.
+- Klicken Sie auf die **Windows-Starttaste**
+- Geben Sie `PowerShell` ein und klicken Sie auf **Windows PowerShell**
+- Geben Sie im PowerShell-Fenster ein:
+   ```
+   irm https://claude.ai/install.ps1 | iex
+   ```
+- Warten Sie, bis die Installation abgeschlossen ist
+- Schließen Sie PowerShell und öffnen Sie es erneut, dann überprüfen Sie durch Eingabe von:
+   ```
+   claude --version
+   ```
+- Sie sollten die Versionsnummer von Claude Code sehen
+
+> **Hinweis:** Die native Windows-Installation hat einige Einschränkungen:
+> - Kein Bash Tool Sandboxing (eine Sicherheitsfunktion, die nur in WSL2/macOS verfügbar ist)
+> - Einige Tools und Workflows funktionieren in einer Linux-Umgebung besser
+>
+> Fahren Sie mit den folgenden Schritten fort, um WSL2 für die vollständige Erfahrung zu installieren.
+
+## Schritt 2: Virtualisierung prüfen und WSL installieren
+
+**Prüfen Sie zunächst, ob die Virtualisierung aktiviert ist:**
 
 - **Klicken Sie mit der rechten Maustaste** auf die Taskleiste (die Leiste am unteren Bildschirmrand)
 - Klicken Sie im Menü auf **Task-Manager**
@@ -31,7 +50,7 @@ Bevor Sie WSL installieren, müssen Sie überprüfen, ob die Virtualisierung auf
 - Schauen Sie auf den unteren rechten Bereich des Fensters
 - Suchen Sie die Zeile **Virtualisierung:** und prüfen Sie, ob dort **Aktiviert** steht
 
-**Wenn dort „Aktiviert" steht:** Ausgezeichnet! Fahren Sie mit Schritt 2 fort.
+**Wenn dort „Aktiviert" steht:** Ausgezeichnet! Fahren Sie unten fort.
 
 **Wenn dort „Deaktiviert" steht:** Sie müssen die Virtualisierung in den BIOS-Einstellungen Ihres Computers aktivieren:
 - Starten Sie Ihren Computer neu
@@ -41,29 +60,21 @@ Bevor Sie WSL installieren, müssen Sie überprüfen, ob die Virtualisierung auf
 - Speichern und verlassen Sie das BIOS (normalerweise **F10**)
 - Ihr Computer startet normal neu
 
-## Schritt 2: PowerShell als Administrator öffnen
+**Jetzt WSL installieren:**
 
-- Klicken Sie auf die **Windows-Starttaste** (Windows-Symbol in der unteren linken Ecke)
+- Klicken Sie auf die **Windows-Starttaste**
 - Geben Sie `PowerShell` in das Suchfeld ein
-- In den Suchergebnissen sehen Sie **Windows PowerShell**
-- **Klicken Sie mit der rechten Maustaste** auf **Windows PowerShell**
-- Klicken Sie im Menü auf **Als Administrator ausführen**
-- Ein Fenster erscheint mit der Frage „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?"
-- Klicken Sie auf **Ja**
+- **Klicken Sie mit der rechten Maustaste** auf **Windows PowerShell** und klicken Sie auf **Als Administrator ausführen**
+- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?"
 
-Ein blaues Fenster mit weißem Text öffnet sich - das ist PowerShell mit Administratorrechten.
-
-## Schritt 3: WSL installieren
-
-**Prüfen Sie zunächst, ob WSL und Ubuntu bereits installiert sind:**
+**Prüfen Sie, ob WSL und Ubuntu bereits installiert sind:**
 
 - Geben Sie im PowerShell-Fenster ein:
    ```
    wsl --list --verbose
    ```
-- Schauen Sie sich das Ergebnis an:
-   - **Wenn Sie „Ubuntu" aufgelistet sehen** mit einem STATUS „Running" oder „Stopped": WSL und Ubuntu sind bereits installiert! Fahren Sie mit Schritt 4 fort.
-   - **Wenn Sie eine Fehlermeldung sehen** oder „Windows-Subsystem für Linux hat keine installierten Distributionen": Fahren Sie mit der Installation unten fort.
+- **Wenn Sie „Ubuntu" aufgelistet sehen:** WSL ist bereits installiert! Fahren Sie mit Schritt 3 fort.
+- **Wenn Sie eine Fehlermeldung sehen:** Fahren Sie mit der Installation unten fort.
 
 **Um WSL und Ubuntu zu installieren:**
 
@@ -71,18 +82,14 @@ Ein blaues Fenster mit weißem Text öffnet sich - das ist PowerShell mit Admini
    ```
    wsl --install
    ```
-- Möglicherweise sehen Sie Meldungen wie „Installiere: Windows-Subsystem für Linux" und „Installiere: Ubuntu"
-- Wenn Sie eine Meldung sehen, dass die Installation abgeschlossen ist, müssen Sie Ihren Computer neu starten:
-   - Klicken Sie auf die **Windows-Starttaste**
-   - Klicken Sie auf das **Ein/Aus-Symbol**
-   - Klicken Sie auf **Neu starten**
+- Möglicherweise sehen Sie Meldungen wie „Installing: Windows Subsystem for Linux" und „Installing: Ubuntu"
+- Wenn die Installation abgeschlossen ist, starten Sie Ihren Computer neu:
+   - Klicken Sie auf die **Windows-Starttaste** → **Ein/Aus-Symbol** → **Neu starten**
 - Ihr Computer wird neu gestartet - das dauert etwa 1-2 Minuten
 
-**Warum ein Neustart erforderlich ist:** Der Neustart ermöglicht Windows, die gerade installierten WSL- und Virtual Machine Platform-Funktionen zu aktivieren.
+**Hinweis:** Wenn Sie einen Fehler erhalten, dass der Befehl nicht erkannt wird, ist Ihre Windows-Version möglicherweise zu alt. Stellen Sie sicher, dass Sie Windows 10 Version 2004 oder höher oder Windows 11 haben.
 
-**Hinweis:** Wenn Sie einen Fehler erhalten, dass der Befehl nicht erkannt wird, ist Ihre Windows-Version möglicherweise zu alt. Stellen Sie sicher, dass Sie Windows 10 Version 2004 oder höher oder Windows 11 haben. Führen Sie Windows Update aus, um die neueste Version zu erhalten.
-
-## Schritt 4: Ubuntu einrichten (nur beim ersten Mal)
+## Schritt 3: Ubuntu einrichten
 
 Nach dem Neustart Ihres Computers sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu" im Titel erscheinen.
 
@@ -102,57 +109,22 @@ Nach dem Neustart Ihres Computers sollte innerhalb von 2-5 Minuten automatisch e
 - Sie sehen die Zeichen beim Tippen nicht - das ist normal
 - Geben Sie dasselbe Passwort erneut ein, wenn Sie dazu aufgefordert werden
 
-**Wichtig:** Merken Sie sich diesen Benutzernamen und das Passwort - Sie werden sie später brauchen.
+**Wichtig:** Merken Sie sich diesen Benutzernamen und das Passwort — Sie werden sie später brauchen.
 
-## Schritt 5: Ubuntu aktualisieren
-
-- Geben Sie im Ubuntu-Terminalfenster ein:
-   ```
-   sudo apt update
-   ```
-- Geben Sie Ihr Passwort ein (das, das Sie gerade erstellt haben), wenn Sie dazu aufgefordert werden
-- Geben Sie dann ein:
-   ```
-   sudo apt upgrade -y
-   ```
-- Warten Sie, bis alle Pakete aktualisiert sind (das kann 5 Minuten dauern)
-
-## Schritt 6: Node.js installieren
-
-Claude Code erfordert Node.js Version 18 oder höher. Folgen Sie diesen Schritten:
-
-- Kopieren und fügen Sie im Ubuntu-Terminal diese Befehle ein:
-
-   Laden Sie zuerst den nvm-Installer herunter:
-   ```
-   wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh --no-check-certificate
-   cat install.sh | bash
-   \. "$HOME/.nvm/nvm.sh"
-   nvm install 24
-   ```
-   Dies lädt zuerst den nvm-Installer herunter, installiert ihn und verwendet ihn dann, um Node.js v24.0 zu installieren
-- Warten Sie, bis Node.js installiert ist (2-5 Minuten)
-- Überprüfen Sie die Installation durch Eingabe von:
-   ```
-   node --version
-   ```
-- Sie sollten etwas wie `v24.x.x` sehen (die genauen Zahlen können variieren)
-
-## Schritt 7: Claude Code installieren
+## Schritt 4: Claude Code in WSL installieren
 
 - Geben Sie im Ubuntu-Terminal ein:
    ```
    curl -fsSL https://claude.ai/install.sh | bash
    ```
-- Warten Sie, bis Claude Code installiert ist (2-5 Minuten)
-- Sie sehen möglicherweise einige Warnungen in gelbem oder rotem Text - das ist normalerweise normal
+- Warten Sie, bis Claude Code installiert ist
 - Wenn die Installation abgeschlossen ist, überprüfen Sie durch Eingabe von:
    ```
    claude --version
    ```
 - Sie sollten die Versionsnummer von Claude Code sehen
 
-## Schritt 8: Ihre Anthropic-API-Verbindung konfigurieren
+## Schritt 5: Mit Ihrem Anthropic-Konto verbinden
 
 ### Option A. Ihr Claude Pro- oder Max-Abonnement verwenden
 
@@ -162,8 +134,8 @@ Claude Code erfordert Node.js Version 18 oder höher. Folgen Sie diesen Schritte
    ```
 - Claude versucht, einen Browser zu öffnen. Wenn er sich nicht automatisch öffnet, halten Sie **Strg** gedrückt und klicken Sie auf die lange URL, um sie in einem Browser zu öffnen. Alternativ kopieren Sie die URL und fügen Sie sie in einen externen Browser ein.
 - Melden Sie sich bei Ihrem Claude.ai-Konto an (dies kann automatisch geschehen, wenn Sie Chrome verwenden)
-- Klicken Sie auf **Autorisieren**
-- Klicken Sie auf **Code kopieren**, wenn ein langer Code erscheint
+- Klicken Sie auf **Authorize**
+- Klicken Sie auf **Copy Code**, wenn ein langer Code erscheint
 - Gehen Sie zurück zum Terminal-Fenster
 - Zum Einfügen im Terminal: **Rechtsklick** und **Einfügen** wählen (oder **Strg+Umschalt+V** drücken)
 - Sie sollten eine Erfolgsmeldung sehen
@@ -219,10 +191,9 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
 - Die kostenlose Stufe bietet 50 API-Anfragen pro Tag
 - Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/guides/claude-code-integration)
 
-
 ### Option D. Anthropic API über Azure Foundry verwenden
 
-Fügen Sie vor dem Starten von Claude Code im Ubuntu-Terminalfenster diesen Code ein, um Umgebungsvariablen zu definieren:
+Fügen Sie vor dem Starten von Claude Code im Ubuntu-Terminal diesen Code ein, um Umgebungsvariablen zu definieren:
 ```
 # Enable Microsoft Foundry integration
 export CLAUDE_CODE_USE_FOUNDRY=1
@@ -244,13 +215,24 @@ claude
 
 Sie sollten nun Claude Code mit Azure-bereitgestellten Claude-Modellen verwenden können.
 
+## Schritt 6: Claude Code testen
 
-## Schritt 9: Claude Code testen
+Sie sind fertig! Geben Sie `claude` im Ubuntu-Terminal ein und stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing."
 
-Sie sind fertig! Um zu testen, ob es funktioniert, stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing."
+## Schritt 7: Auf Ihre Projekte zugreifen
 
-## Schritt 10: Auf Ihre Windows-Projekte zugreifen
-- Wenn Sie einen Windows-Ordner namens `test_claude` haben, der die Dateien eines Projekts enthält, können Sie darauf zugreifen:
+**Natives Windows (PowerShell):**
+- Wenn Sie einen Projektordner haben, navigieren Sie dorthin:
+   ```
+   cd ~/Documents/test_claude
+   ```
+- Starten Sie dann Claude:
+   ```
+   claude
+   ```
+
+**WSL (Ubuntu):**
+- Wenn Sie einen Windows-Ordner namens `test_claude` haben, können Sie darauf zugreifen:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
    ```
@@ -259,11 +241,26 @@ Sie sind fertig! Um zu testen, ob es funktioniert, stellen Sie eine allgemeine F
    ```
    claude
    ```
+
 - Beginnen Sie damit, Claude zu bitten, Ihnen die Codebasis zu erklären.
 - Sie können Claude bitten, Änderungen vorzunehmen.
 - Testen Sie Ihren Code in Ihrer bevorzugten IDE.
 
 **Hinweis:** Claude arbeitet innerhalb eines Projektordners. Es speichert Einstellungen in diesem Ordner. Es ist Claudes Arbeitsbereich.
+
+## Schritt 8: Claude Code aktualisieren
+
+Claude Code aktualisiert sich automatisch, aber Sie können jederzeit manuell aktualisieren:
+
+**WSL (Ubuntu):**
+```
+sudo claude update
+```
+
+**Natives Windows (PowerShell — als Administrator ausführen):**
+```
+claude update
+```
 
 ## Nächste Schritte
 
@@ -273,13 +270,27 @@ Sie sind fertig! Um zu testen, ob es funktioniert, stellen Sie eine allgemeine F
 
 ## Fehlerbehebung
 
-### Ubuntu-Terminal nach dem Schließen wieder öffnen
-- Klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol)
+### Erster Schritt: Claude Doctor ausführen
+
+Wenn etwas nicht funktioniert, versuchen Sie zuerst diesen Befehl:
+```
+claude doctor
+```
+Dieses integrierte Diagnosetool überprüft Ihre Installation und meldet häufige Probleme.
+
+### Claude-Befehl nicht gefunden (natives Windows)
+
+- Schließen Sie PowerShell und öffnen Sie es erneut
+- Versuchen Sie, den Installationsbefehl erneut auszuführen:
+   ```
+   irm https://claude.ai/install.ps1 | iex
+   ```
+- Stellen Sie sicher, dass Ihr PATH das Claude-Installationsverzeichnis enthält
 
 ### „Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 Dieser Fehler bedeutet, dass die Virtualisierung nicht aktiviert ist:
-- Gehen Sie zurück zu Schritt 1 und prüfen Sie im Task-Manager, ob die Virtualisierung aktiviert ist
-- Wenn deaktiviert, müssen Sie sie im BIOS Ihres Computers aktivieren (siehe Schritt 1 für Anweisungen)
+- Gehen Sie zurück zu Schritt 2 und prüfen Sie im Task-Manager, ob die Virtualisierung aktiviert ist
+- Wenn deaktiviert, müssen Sie sie im BIOS Ihres Computers aktivieren (siehe Schritt 2 für Anweisungen)
 - Nach dem Aktivieren der Virtualisierung starten Sie Ihren Computer neu und versuchen Sie `wsl --install` erneut
 
 ### „wsl --install" funktioniert nicht
@@ -292,25 +303,19 @@ Dieser Fehler bedeutet, dass die Virtualisierung nicht aktiviert ist:
 - Geben Sie `Ubuntu` ein
 - Klicken Sie auf die Ubuntu-App, um sie manuell zu starten
 
-### „sudo: apt: command not found"
-- Ihr WSL wurde möglicherweise nicht korrekt installiert
-- In PowerShell (als Administrator), geben Sie ein: `wsl --unregister Ubuntu`
-- Führen Sie dann `wsl --install` erneut aus
+### Ubuntu-Terminal nach dem Schließen wieder öffnen
+- Klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol)
 
-### Node.js-Installation schlägt fehl
-- Stellen Sie sicher, dass Sie zuerst `sudo apt update` ausgeführt haben
-- Versuchen Sie den Installationsbefehl erneut
-
-### Claude Code-Befehle werden nicht gefunden
+### Claude Code-Befehle werden nicht gefunden (WSL)
 - Stellen Sie sicher, dass die Installation erfolgreich abgeschlossen wurde
 - Versuchen Sie, das Ubuntu-Terminal zu schließen und erneut zu öffnen
 - Versuchen Sie, den Installationsbefehl erneut auszuführen: `curl -fsSL https://claude.ai/install.sh | bash`
 
 ## Benötigen Sie Hilfe?
 
-- Für WSL-Probleme: [Microsoft WSL-Dokumentation](https://docs.microsoft.com/de-de/windows/wsl/)
+- Für WSL-Probleme: [Microsoft WSL-Dokumentation](https://docs.microsoft.com/en-us/windows/wsl/)
 - Für Claude Code-Probleme: [Claude Code GitHub](https://github.com/anthropics/claude-code)
 
 ---
 
-Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 11. Dezember 2025.
+Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 11. Dezember 2025. Aktualisiert Februar 2026.
