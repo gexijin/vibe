@@ -4,20 +4,20 @@
 
 Claude Code est un assistant IA qui vit dans votre terminal et vous aide à écrire, déboguer et comprendre du code. Ce guide vous accompagne dans la configuration complète : une installation native rapide via PowerShell, puis WSL2 pour l'expérience complète sous Linux.
 
-## Concepts Clés
+## Concepts clés
 
 - **WSL (Windows Subsystem for Linux)** - Une fonctionnalité Windows qui exécute un véritable système Linux parallèlement à Windows
 - **Ubuntu** - Une distribution Linux populaire et conviviale pour les débutants que vous pouvez installer via WSL
 - **PowerShell** - L'outil de ligne de commande intégré de Windows, utilisé ici pour installer Claude Code et WSL
 
-## Ce Dont Vous Aurez Besoin
+## Ce dont vous aurez besoin
 
 - Un ordinateur Windows 10 (version 2004 ou supérieure) ou Windows 11
 - Un accès administrateur sur votre ordinateur
 - Un abonnement Claude Pro/Max ou une clé API via Azure Foundry
 - 10 à 15 minutes
 
-## Étape 1 : Installer Claude Code en Natif sur Windows (fonctionne mais non recommandé)
+## Étape 1 : Installer Claude Code en natif sur Windows (fonctionne mais non recommandé)
 
 - Cliquez sur le **bouton Démarrer de Windows**
 - Tapez `PowerShell` et cliquez sur **Windows PowerShell**
@@ -38,7 +38,7 @@ Claude Code est un assistant IA qui vit dans votre terminal et vous aide à écr
 >
 > Continuez avec les étapes ci-dessous pour installer WSL2 et bénéficier de l'expérience complète.
 
-## Étape 2 : Vérifier la Virtualisation et Installer WSL
+## Étape 2 : Vérifier la virtualisation et installer WSL
 
 **Tout d'abord, vérifiez si la virtualisation est activée :**
 
@@ -124,9 +124,9 @@ Après le redémarrage de votre ordinateur, une fenêtre de terminal avec "Ubunt
    ```
 - Vous devriez voir le numéro de version de Claude Code
 
-## Étape 5 : Se Connecter à Votre Compte Anthropic
+## Étape 5 : Se connecter à votre compte Anthropic
 
-### Option A. Utiliser votre abonnement Claude Pro ou Max
+### Option A. Utilisez votre abonnement Claude Pro ou Max
 
 - Dans le terminal Ubuntu, tapez :
    ```
@@ -141,7 +141,7 @@ Après le redémarrage de votre ordinateur, une fenêtre de terminal avec "Ubunt
 - Vous devriez voir un message de succès
 - Suivez les instructions pour terminer la configuration
 
-### Option B. Utiliser une clé API Anthropic
+### Option B. Utilisez la clé API Anthropic
 
 Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
 
@@ -159,7 +159,7 @@ Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
 - Fermez et rouvrez le terminal Ubuntu pour que les modifications prennent effet
 - Vous devriez maintenant pouvoir utiliser Claude Code avec votre clé API
 
-### Option C. Utiliser l'API OpenRouter (commencez gratuitement !)
+### Option C. Utilisez l'API OpenRouter (commencez gratuitement !)
 
 OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. C'est une façon économique d'utiliser Claude Code, car vous ne payez que pour l'utilisation et pouvez choisir parmi des modèles de différentes gammes de prix.
 
@@ -191,7 +191,7 @@ OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grand
 - Le niveau gratuit vous donne 50 requêtes API par jour
 - Consultez le [guide officiel OpenRouter](https://openrouter.ai/docs/guides/claude-code-integration) pour plus de détails
 
-### Option D. Utiliser l'API Anthropic via Azure Foundry
+### Option D. Utilisez l'API Anthropic via Azure Foundry
 
 Avant de démarrer Claude Code, dans le terminal Ubuntu, collez ce code pour définir les variables d'environnement :
 ```
@@ -219,7 +219,7 @@ Vous devriez maintenant pouvoir utiliser Claude Code avec les modèles Claude d�
 
 Vous êtes prêt ! Tapez `claude` dans le terminal Ubuntu et posez une question générale comme "Explain quantum computing."
 
-## Étape 7 : Accéder à Vos Projets
+## Étape 7 : Accéder à vos projets
 
 **Windows natif (PowerShell) :**
 - Si vous avez un dossier de projet, naviguez vers celui-ci :
@@ -248,7 +248,7 @@ Vous êtes prêt ! Tapez `claude` dans le terminal Ubuntu et posez une question 
 
 **Remarque :** Claude fonctionne dans un dossier de projet. Il enregistre les paramètres dans ce dossier. C'est l'espace de travail de Claude.
 
-## Étape 8 : Mettre à Jour Claude Code
+## Étape 8 : Mettre à jour Claude Code
 
 Claude Code se met à jour automatiquement, mais vous pouvez le mettre à jour manuellement à tout moment :
 
@@ -262,7 +262,7 @@ sudo claude update
 claude update
 ```
 
-## Prochaines Étapes
+## Prochaines étapes
 
 - **Configurer VS Code :** Suivez le guide [VS Code Getting Started](VS_Code_Getting_Started), puis connectez-le à Claude Code avec [Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win)
 - **Apprendre les bases de Git :** Ajoutez le contrôle de version à vos projets avec [Claude Code Git on Windows](Claude_Code_Git_Windows)
@@ -311,7 +311,7 @@ Cette erreur signifie que la virtualisation n'est pas activée :
 - Essayez de fermer et de rouvrir le terminal Ubuntu
 - Essayez d'exécuter à nouveau la commande d'installation : `curl -fsSL https://claude.ai/install.sh | bash`
 
-## Besoin d'Aide ?
+## Besoin d'aide ?
 
 - Pour les problèmes WSL : [Documentation WSL de Microsoft](https://docs.microsoft.com/en-us/windows/wsl/)
 - Pour les problèmes Claude Code : [Claude Code GitHub](https://github.com/anthropics/claude-code)

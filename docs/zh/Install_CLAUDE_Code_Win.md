@@ -188,7 +188,7 @@ OpenRouter 是一个统一的 API 网关，通过单个 API 密钥可访问 500 
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - 在 [openrouter.ai/models](https://openrouter.ai/models) 浏览可用模型
-- 免费层每天提供 50 次 API 请求
+- 免费套餐每天提供 50 次 API 请求
 - 详情请参阅[官方 OpenRouter 指南](https://openrouter.ai/docs/guides/claude-code-integration)
 
 ### 选项 D. 通过 Azure Foundry 使用 Anthropic API
@@ -217,7 +217,7 @@ claude
 
 ## 步骤 6：测试 Claude Code
 
-一切就绪！在 Ubuntu 终端中输入 `claude`，然后问一个一般性问题，例如"Explain quantum computing."
+一切就绪！在 Ubuntu 终端中输入 `claude`，然后问一个一般性问题，例如"解释量子计算。"
 
 ## 步骤 7：访问项目
 

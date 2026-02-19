@@ -2,38 +2,38 @@
 
 # Instalar Claude Code en Mac
 
-Claude Code es un asistente de IA que funciona en su Terminal y lo ayuda a escribir, depurar y comprender codigo. Pienselo como un companero de programacion experto disponible cuando lo necesite. Ya sea principiante o desarrollador experimentado, Claude Code puede acelerar su trabajo y ayudarlo a aprender.
+Claude Code es un asistente de IA que funciona en su Terminal y lo ayuda a escribir, depurar y comprender código. Piénselo como un compañero de programación experto disponible cuando lo necesite. Ya sea principiante o desarrollador experimentado, Claude Code puede acelerar su trabajo y ayudarlo a aprender.
 
-Esta guia lo acompana paso a paso durante la instalacion, con instrucciones detalladas para principiantes.
+Esta guía lo acompaña paso a paso durante la instalación, con instrucciones detalladas para principiantes.
 
-## Descripcion General
+## Descripción General
 
 - Abrir Terminal
 - Instalar Claude Code
-- Configurar su conexion API
+- Configurar su conexión API
 - Comenzar a usar Claude Code
 
 ## Conceptos Clave
 
-- **Terminal**: Aplicacion integrada de Mac donde escribe comandos en lugar de hacer clic en botones. Es la forma de interactuar con Claude Code.
-- **Claude Code**: Asistente de programacion con IA que se ejecuta en Terminal. Puede responder preguntas, escribir codigo y ayudarlo a comprender proyectos existentes.
+- **Terminal**: Aplicación integrada de Mac donde escribe comandos en lugar de hacer clic en botones. Es la forma de interactuar con Claude Code.
+- **Claude Code**: Asistente de programación con IA que se ejecuta en Terminal. Puede responder preguntas, escribir código y ayudarlo a comprender proyectos existentes.
 
-## Lo Que Necesitara
+## Lo Que Necesitará
 
 - Computadora Mac (macOS 13.0 Ventura o posterior)
-- Conexion a Internet
+- Conexión a Internet
 - Acceso de administrador en su computadora
-- Suscripcion a Claude Pro/Max o clave API
+- Suscripción a Claude Pro/Max o clave API
 - 5 - 10 minutos
 
 ## Paso 1: Abrir Terminal
 
-- Haga clic en el icono **Launchpad** en su Dock (el icono con cuadrados de colores)
-- Escriba `Terminal` en el cuadro de busqueda en la parte superior
-- Haga clic en **Terminal** (un icono de cuadrado negro)
-- Se abrira una ventana de Terminal con un cursor parpadeante
+- Haga clic en el ícono **Launchpad** en su Dock (el ícono con cuadrados de colores)
+- Escriba `Terminal` en el cuadro de búsqueda en la parte superior
+- Haga clic en **Terminal** (un ícono de cuadrado negro)
+- Se abrirá una ventana de Terminal con un cursor parpadeante
 
-**Consejo:** Mantenga Terminal abierto para los proximos pasos.
+**Consejo:** Mantenga Terminal abierto para los próximos pasos.
 
 ## Paso 2: Instalar Claude Code
 
@@ -44,11 +44,11 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 - Espere a que Claude Code se instale (1-2 minutos)
 - Puede ver algunos mensajes de progreso: esto es normal
-- Cuando se complete la instalacion, cierre y vuelva a abrir Terminal, luego verifique escribiendo:
+- Cuando se complete la instalación, cierre y vuelva a abrir Terminal, luego verifique escribiendo:
    ```
    claude --version
    ```
-- Deberia ver el numero de version de Claude Code
+- Debería ver el número de versión de Claude Code
 
 **Alternativa: Instalar con Homebrew**
 
@@ -57,28 +57,28 @@ Si usa Homebrew, puede instalar Claude Code con:
 brew install --cask claude-code
 ```
 
-**Consejo:** Ejecute `claude doctor` despues de la instalacion para verificar que todo este configurado correctamente.
+**Consejo:** Ejecute `claude doctor` después de la instalación para verificar que todo esté configurado correctamente.
 
 ## Paso 3: Conectarse a Su Cuenta de Anthropic
 
-### Opcion A. Usar su suscripcion a Claude Pro o Max
+### Opción A. Usar su suscripción a Claude Pro o Max
 
 - En Terminal, escriba:
    ```
    claude
    ```
-- Claude intentara abrir un navegador. Si no se abre automaticamente, copie la URL mostrada en Terminal y peguela en su navegador.
-- Inicie sesion en su cuenta de Claude.ai (esto puede ocurrir automaticamente)
+- Claude intentará abrir un navegador. Si no se abre automáticamente, copie la URL mostrada en Terminal y péguela en su navegador.
+- Inicie sesión en su cuenta de Claude.ai (esto puede ocurrir automáticamente)
 - Haga clic en **Authorize**
-- Haga clic en **Copy Code** cuando aparezca un codigo largo
+- Haga clic en **Copy Code** cuando aparezca un código largo
 - Regrese a la ventana de Terminal
-- Para pegar en Terminal: Haga clic en **Edit** en la barra de menu, luego haga clic en **Paste**
-- Deberia ver un mensaje de exito
-- Siga las instrucciones para completar la configuracion
+- Para pegar en Terminal: Haga clic en **Edit** en la barra de menú, luego haga clic en **Paste**
+- Debería ver un mensaje de éxito
+- Siga las instrucciones para completar la configuración
 
-### Opcion B. Usar la clave API de Anthropic
+### Opción B. Usar la clave API de Anthropic
 
-Si tiene una clave API de Anthropic en lugar de una suscripcion a Claude:
+Si tiene una clave API de Anthropic en lugar de una suscripción a Claude:
 
 - Primero, obtenga su clave API de la [Consola de Anthropic](https://console.anthropic.com/)
 - En Terminal, escriba:
@@ -86,20 +86,20 @@ Si tiene una clave API de Anthropic en lugar de una suscripcion a Claude:
    export ANTHROPIC_API_KEY="your-api-key-here"
    ```
    Reemplace `your-api-key-here` con su clave API real
-- Para hacerlo permanente (no tener que configurarlo cada vez), agreguelo a su perfil de shell:
+- Para hacerlo permanente (no tener que configurarlo cada vez), agréguelo a su perfil de shell:
    ```
    echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.zshrc
    ```
    Reemplace `your-api-key-here` con su clave API real
 - Cierre y vuelva a abrir Terminal para que los cambios surtan efecto
 
-**Nota:** Si usa una Mac mas antigua con bash en lugar de zsh, reemplace `~/.zshrc` con `~/.bash_profile` en el comando anterior.
+**Nota:** Si usa una Mac más antigua con bash en lugar de zsh, reemplace `~/.zshrc` con `~/.bash_profile` en el comando anterior.
 
-### Opcion C. Usar la API de OpenRouter (¡comienza gratis!)
+### Opción C. Usar la API de OpenRouter (¡comienza gratis!)
 
-OpenRouter es una pasarela de API unificada que proporciona acceso a mas de 500 modelos de lenguaje de gran tamano a traves de una unica clave API. Esta puede ser una forma economica de usar Claude Code, ya que solo paga por uso y puede elegir entre modelos de varios puntos de precio.
+OpenRouter es una pasarela de API unificada que proporciona acceso a más de 500 modelos de lenguaje de gran tamaño a través de una única clave API. Esta puede ser una forma económica de usar Claude Code, ya que solo paga por uso y puede elegir entre modelos de varios puntos de precio.
 
-- Registrese en [openrouter.ai](https://openrouter.ai) e inicie sesion
+- Regístrese en [openrouter.ai](https://openrouter.ai) e inicie sesión
 - Haga clic en **Get API key** y copie la clave en un lugar seguro
 - Configure las variables de entorno requeridas antes de iniciar Claude Code:
    ```
@@ -114,23 +114,23 @@ OpenRouter es una pasarela de API unificada que proporciona acceso a mas de 500 
    ```
    claude
    ```
-- Verifique la conexion escribiendo `/status` en Claude Code
+- Verifique la conexión escribiendo `/status` en Claude Code
 
 **Notas:**
 - Reemplace `your-openrouter-api-key` con su clave API real de OpenRouter
-- `ANTHROPIC_API_KEY` debe establecerse explicitamente como vacio
+- `ANTHROPIC_API_KEY` debe establecerse explícitamente como vacío
 - Para usar modelos alternativos, deben admitir **capacidades de uso de herramientas**. Puede anular modelos con:
    ```
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - Explore los modelos disponibles en [openrouter.ai/models](https://openrouter.ai/models)
-- El nivel gratuito le da 50 solicitudes de API por dia
-- Consulte la [guia oficial de OpenRouter](https://openrouter.ai/docs/guides/claude-code-integration) para mas detalles
+- El nivel gratuito le da 50 solicitudes de API por día
+- Consulte la [guía oficial de OpenRouter](https://openrouter.ai/docs/guides/claude-code-integration) para más detalles
 
 
-### Opcion D. Usar la API de Anthropic a traves de Azure Foundry
+### Opción D. Usar la API de Anthropic a través de Azure Foundry
 
-Esta opcion es para organizaciones que usan modelos Claude alojados en Azure. En la ventana de Terminal, pegue este codigo para definir variables de entorno (antes de iniciar Claude):
+Esta opción es para organizaciones que usan modelos Claude alojados en Azure. En la ventana de Terminal, pegue este código para definir variables de entorno (antes de iniciar Claude):
 ```
 # Enable Microsoft Foundry integration
 export CLAUDE_CODE_USE_FOUNDRY=1
@@ -146,18 +146,18 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 ## Paso 4: Probar Claude Code
 
-¡Ya esta listo! Asi se usa Claude Code:
+¡Ya está listo! Así se usa Claude Code:
 
 - En Terminal, escriba:
    ```
    claude
    ```
-- Le hara algunas preguntas antes de estar listo para conversar
+- Le hará algunas preguntas antes de estar listo para conversar
 - Para probar que funciona, haga una pregunta general como "Explain quantum computing."
 
 ## Paso 5: Navegar a Su Proyecto
 
-- Si tiene un proyecto en las carpetas de su Mac, puede navegar a el:
+- Si tiene un proyecto en las carpetas de su Mac, puede navegar a él:
    ```
    cd ~/Documents/test_claude
    ```
@@ -167,62 +167,62 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
    ```
    claude
    ```
-- Comience pidiendole a Claude que explique la base de codigo.
+- Comience pidiéndole a Claude que explique la base de código.
 - Puede pedirle a Claude que haga cambios.
-- Pruebe su codigo en su IDE preferido.
+- Pruebe su código en su IDE preferido.
 
-**Nota:** Claude opera dentro de una carpeta de proyecto. Define permisos de escritura en la carpeta y guarda la configuracion ahi. Es el espacio de trabajo de Claude.
+**Nota:** Claude opera dentro de una carpeta de proyecto. Define permisos de escritura en la carpeta y guarda la configuración ahí. Es el espacio de trabajo de Claude.
 
 ## Paso 6: Actualizar Claude Code
 
-Claude Code instalado mediante el instalador nativo se actualiza automaticamente en segundo plano. Tambien puede activar una actualizacion manualmente:
+Claude Code instalado mediante el instalador nativo se actualiza automáticamente en segundo plano. También puede activar una actualización manualmente:
 
 - En Terminal, escriba:
    ```
    sudo claude
    ```
-- Claude Code buscara actualizaciones e instalara la version mas reciente
+- Claude Code buscará actualizaciones e instalará la versión más reciente
 
-**Nota:** Las instalaciones de Homebrew no se actualizan automaticamente. Ejecute `brew upgrade claude-code` periodicamente para obtener la version mas reciente.
+**Nota:** Las instalaciones de Homebrew no se actualizan automáticamente. Ejecute `brew upgrade claude-code` periódicamente para obtener la versión más reciente.
 
-## Proximos Pasos
-- [Primeros Pasos con VS Code](./VS_Code_Getting_Started.md) - Aprenda a usar VS Code, un editor de codigo popular
+## Próximos Pasos
+- [Primeros Pasos con VS Code](./VS_Code_Getting_Started.md) - Aprenda a usar VS Code, un editor de código popular
 - [Claude Code en VS Code (Mac)](./Claude_Code_in_VS_Code_Mac.md) - Ejecute Claude Code dentro de VS Code
-- [Escribir un Trabajo de Investigacion con Claude Code](./Writing_Research_Paper_Claude_Code.md) - Use Claude Code para escritura academica
+- [Escribir un Trabajo de Investigación con Claude Code](./Writing_Research_Paper_Claude_Code.md) - Use Claude Code para escritura académica
 
-## Como Abrir Terminal Nuevamente
+## Cómo Abrir Terminal Nuevamente
 
-Despues de cerrar Terminal, asi se abre de nuevo:
+Después de cerrar Terminal, así se abre de nuevo:
 
-- Haga clic en el icono **Launchpad** en su Dock (el icono con cuadrados de colores)
-- Escriba `Terminal` en el cuadro de busqueda en la parte superior
+- Haga clic en el ícono **Launchpad** en su Dock (el ícono con cuadrados de colores)
+- Escriba `Terminal` en el cuadro de búsqueda en la parte superior
 - Haga clic en **Terminal**
-- Se abrira una ventana de Terminal
+- Se abrirá una ventana de Terminal
 
-## Solucion de Problemas
+## Solución de Problemas
 
 ### Primer paso: Ejecutar Claude Doctor
 Si algo no funciona, ejecute este comando primero:
 ```
 claude doctor
 ```
-Verifica su instalacion e informa cualquier problema.
+Verifica su instalación e informa cualquier problema.
 
-### El script de instalacion falla
-- Asegurese de tener macOS 13.0 o posterior
+### El script de instalación falla
+- Asegúrese de tener macOS 13.0 o posterior
 - Intente la alternativa con Homebrew: `brew install --cask claude-code`
-- Verifique su conexion a Internet e intente nuevamente
+- Verifique su conexión a Internet e intente nuevamente
 
 ### Comandos de Claude Code no encontrados
-- Cierre Terminal completamente (haga clic en **Terminal** en la barra de menu, luego **Quit Terminal**)
+- Cierre Terminal completamente (haga clic en **Terminal** en la barra de menú, luego **Quit Terminal**)
 - Abra Terminal nuevamente
-- Intente `claude --version` para verificar si esta instalado
-- Intente ejecutar el comando de instalacion nuevamente: `curl -fsSL https://claude.ai/install.sh | bash`
+- Intente `claude --version` para verificar si está instalado
+- Intente ejecutar el comando de instalación nuevamente: `curl -fsSL https://claude.ai/install.sh | bash`
 
-### La autenticacion falla
-- Asegurese de tener una suscripcion activa a Claude Pro/Max o una clave API valida
-- Intente ejecutar `claude` nuevamente y complete el proceso de inicio de sesion
-- Verifique que su navegador abrio la pagina de autorizacion correcta
+### La autenticación falla
+- Asegúrese de tener una suscripción activa a Claude Pro/Max o una clave API válida
+- Intente ejecutar `claude` nuevamente y complete el proceso de inicio de sesión
+- Verifique que su navegador abrió la página de autorización correcta
 
 ## Consejos para Usuarios de Mac
 
@@ -230,11 +230,11 @@ Verifica su instalacion e informa cualquier problema.
 Para encontrar la ruta de una carpeta:
 - Abra Finder
 - Navegue a su carpeta de proyecto
-- Arrastre y suelte la carpeta en Terminal: ¡la ruta completa aparecera!
+- Arrastre y suelte la carpeta en Terminal: ¡la ruta completa aparecerá!
 
 ### Usar Diferentes Aplicaciones de Terminal
-Tambien puede usar otras aplicaciones de terminal:
-- iTerm2 (alternativa popular con mas funciones)
+También puede usar otras aplicaciones de terminal:
+- iTerm2 (alternativa popular con más funciones)
 - Warp (terminal moderna con funciones de IA)
 - Hyper (terminal multiplataforma)
 
@@ -243,8 +243,8 @@ Tambien puede usar otras aplicaciones de terminal:
 ## ¿Necesita Ayuda?
 
 - Para problemas con Claude Code: [Claude Code GitHub](https://github.com/anthropics/claude-code)
-- Para documentacion oficial de configuracion: [Guia de Configuracion de Claude Code](https://code.claude.com/docs/en/setup)
+- Para documentación oficial de configuración: [Guía de Configuración de Claude Code](https://code.claude.com/docs/en/setup)
 
 ---
 
-*Ultima actualizacion: Febrero 2026*
+*Última actualización: Febrero 2026*

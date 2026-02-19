@@ -182,7 +182,7 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
 
 **Hinweise:**
 - Ersetzen Sie `your-openrouter-api-key` durch Ihren tatsächlichen OpenRouter API-Schlüssel
-- `ANTHROPIC_API_KEY` muss explizit leer gesetzt werden
+- `ANTHROPIC_API_KEY` muss explizit auf leer gesetzt werden
 - Um alternative Modelle zu verwenden, müssen diese **Tool-Nutzungsfähigkeiten** unterstützen. Sie können Modelle überschreiben mit:
    ```
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"

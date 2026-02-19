@@ -124,7 +124,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
-- Free tier give you 50 API requests per day
+- Free tier gives you 50 API requests per day
 - See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details
 
 
