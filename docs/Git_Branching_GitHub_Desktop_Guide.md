@@ -2,7 +2,7 @@
 
 # Version Control with GitHub Desktop: Build a Data Dashboard and Branch Safely
 
-You ask an AI to build you a working app, then change one thing and the whole thing breaks—with no way back. Version control fixes this: every "commit" is a save point like in a video game, and a "branch" is a parallel copy where you can try new ideas without touching the version that works. In this hands-on tutorial you'll build a simple dashboard from a real heart-attack dataset with ChatGPT, save your progress with GitHub Desktop, and branch off to add a chart—safely.
+You ask an AI to build you a working app, then change one thing and the whole thing breaks—with no way back. Version control fixes this: every "commit" is a save point like in a video game, and a "branch" is a parallel copy where you can try new ideas without touching the version that works. In this hands-on tutorial you'll build a simple dashboard from a real heart-attack dataset with ChatGPT, edit it in VS Code, save your progress with GitHub Desktop, and branch off to add a chart—safely.
 
 ## Key Concepts
 
@@ -14,6 +14,7 @@ You ask an AI to build you a working app, then change one thing and the whole th
 ## What You'll Need
 
 - [GitHub Desktop](https://desktop.github.com/download/) installed and signed in — see [Get Started with Version Control](./Github_desktop.md) if you haven't
+- [VS Code](https://code.visualstudio.com/) installed — see [Getting Started with VS Code](./VS_Code_Getting_Started.md) if you're new to it
 - A free [ChatGPT](https://chat.openai.com) account
 - A web browser (Chrome, Edge, or Safari) and an internet connection
 - 30 minutes
@@ -28,15 +29,27 @@ You ask an AI to build you a working app, then change one thing and the whole th
   - Check **Initialize this repository with a README**
 - Click **Create Repository**
 
-## Step 2: Download the Data
+## Step 2: Open the Folder in VS Code
+
+You'll create and edit all your files in VS Code. Open your project folder once, and every file shows up in a sidebar—no hunting for files later.
+
+- Open **VS Code**
+- Click **File** → **Open Folder**
+- Browse to your `heart-dashboard` folder and click **Open** (on Mac, **Select Folder**)
+- If VS Code asks "Do you trust the authors?", click **Yes, I trust the authors**
+- On the left you'll see the **Explorer** panel listing your folder, with the `README.md` file inside it
+
+Keep VS Code open—you'll come back to it throughout.
+
+## Step 3: Download the Data
 
 - Open this link in your browser: [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
 - You'll see rows of hospital records—one heart-attack patient per row
 - **Right-click** the page and choose **Save as** (or **Save Page As**)
 - Save it into your `heart-dashboard` folder, named `heartatk4R.txt`
-- *Optional:* open it in **Excel** (**File** → **Open** → pick the file → choose **Tab** as the separator) to see the columns: `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), `AGE`
+- Back in VS Code, `heartatk4R.txt` now appears in the Explorer panel—click it to peek at the columns: `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), `AGE`
 
-## Step 3: Get the Dashboard from ChatGPT
+## Step 4: Get the Dashboard from ChatGPT
 
 - Go to [chat.openai.com](https://chat.openai.com)
 - Type this prompt:
@@ -48,38 +61,26 @@ You ask an AI to build you a working app, then change one thing and the whole th
   ```
 - Click the **Copy** button on the code block ChatGPT provides
 
-## Step 4: Save the Dashboard to Your Project
+## Step 5: Save the Dashboard to Your Project
 
-Use a plain text editor—**Notepad** on Windows or **TextEdit** on Mac. Don't use Microsoft Word.
+- In VS Code, hover over the **HEART-DASHBOARD** folder name in the Explorer panel
+- Click the **New File** icon that appears (or right-click the folder → **New File**)
+- Type `index.html` and press **Enter**
+- The empty file opens on the right—click inside it and paste the copied code (**Ctrl+V** on Windows, **Cmd+V** on Mac)
+- Save the file: **Ctrl+S** (Windows) or **Cmd+S** (Mac)
 
-**On Windows:**
-- Open the **Start menu**, type `Notepad`, and open it
-- Paste the copied code into the empty window
-- Click **File** → **Save As**
-- In the **Save as type** dropdown, choose **All Files**
-- Name the file `index.html`
-- Browse to your `heart-dashboard` folder and click **Save**
+Because you typed the real name `index.html`, VS Code saves it correctly—no extra steps, and the code is color-highlighted so it's easy to read.
 
-**On Mac:**
-- Open **TextEdit**
-- Click **Format** → **Make Plain Text** (important—do this before pasting)
-- Paste the copied code into the window
-- Click **File** → **Save**
-- Name the file `index.html`; if asked about the extension, click **Use .html**
-- Browse to your `heart-dashboard` folder and click **Save**
+## Step 6: Test the Dashboard in Your Browser
 
-Keep this editor open—you'll come back to it.
-
-## Step 5: Test the Dashboard in Your Browser
-
-- In the `heart-dashboard` folder, double-click `index.html`
+- In your `heart-dashboard` folder, double-click `index.html`
 - It opens in your web browser
 - Click the **Choose File** button (or similar) and pick `heartatk4R.txt` from your folder
 - The cards fill in with numbers from the data
 
 **Note:** After every refresh, click the button and pick the file again—browsers can't auto-load files from your computer.
 
-## Step 6: Make Your First Commit (Save Point)
+## Step 7: Make Your First Commit (Save Point)
 
 - Return to **GitHub Desktop**
 - You'll see **two** files listed on the left: `index.html` and `heartatk4R.txt`
@@ -88,7 +89,7 @@ Keep this editor open—you'll come back to it.
 
 Git now tracks both your code and your data.
 
-## Step 7: Add a Filter and Commit Again
+## Step 8: Add a Filter and Commit Again
 
 - Go back to ChatGPT and ask for one improvement:
   ```
@@ -96,21 +97,20 @@ Git now tracks both your code and your data.
   Give me the full HTML file.
   ```
 - Copy the new code
-- Switch to your text editor where `index.html` is open
-  - If you closed it, reopen the file: in the editor click **File** → **Open**, then pick `index.html` from your `heart-dashboard` folder
-- Select all the old text (**Edit** → **Select All**), delete it, then paste the new code
-- Save the file (**File** → **Save**)
+- Switch to VS Code and click `index.html` in the Explorer panel to open it
+- Select all the old text (**Ctrl+A** on Windows, **Cmd+A** on Mac), then paste the new code over it
+- Save the file (**Ctrl+S** or **Cmd+S**)
 - Refresh the browser, load `heartatk4R.txt` again, and try the dropdown
 - In GitHub Desktop, type a commit message: `Add sex filter`
 - Click **Commit to main**
 
-## Step 8: View Your History
+## Step 9: View Your History
 
 - In GitHub Desktop, click the **History** tab (top left)
 - You'll see your commits listed, newest first
 - Click any commit to see exactly what changed—your safety net
 
-## Step 9: Split the App into Separate Files
+## Step 10: Split the App into Separate Files
 
 Separate files keep the project organized—and it's how real apps (including React) are built.
 
@@ -119,16 +119,16 @@ Separate files keep the project organized—and it's how real apps (including Re
   Split this dashboard into three files: index.html, style.css,
   and app.js. Show each file in its own code block.
   ```
-- ChatGPT returns three code blocks. Save each into your `heart-dashboard` folder:
-  - **index.html** — open it in your editor, replace all the contents with the new `index.html` block, and save
-  - **style.css** — in your editor click **File** → **New**, paste the `style.css` block, then **Save As** `style.css` (Notepad: set **Save as type** to **All Files**)
-  - **app.js** — make another new file, paste the `app.js` block, then **Save As** `app.js`
+- ChatGPT returns three code blocks. Save each into your `heart-dashboard` folder using VS Code:
+  - **index.html** — click it in the Explorer, select all (**Ctrl+A**/**Cmd+A**), paste the new `index.html` block over it, and save
+  - **style.css** — hover the folder name, click the **New File** icon, type `style.css`, paste the `style.css` block, and save
+  - **app.js** — click **New File** again, type `app.js`, paste the `app.js` block, and save
 - Refresh the browser and load `heartatk4R.txt`—the dashboard should look exactly the same as before
 - In GitHub Desktop, you'll see `index.html` changed plus two new files (`style.css` and `app.js`)
 - Type a commit message: `Split into separate files`
 - Click **Commit to main**
 
-## Step 10: Create a Branch to Experiment
+## Step 11: Create a Branch to Experiment
 
 - Click the **Current Branch** button at the top (it says **main**)
 - Click **New Branch**
@@ -137,7 +137,7 @@ Separate files keep the project organized—and it's how real apps (including Re
 
 You're now working on a copy. Anything you do here won't affect `main`.
 
-## Step 11: Add a Chart on the Branch
+## Step 12: Add a Chart on the Branch
 
 - Ask ChatGPT for a bigger change:
   ```
@@ -146,20 +146,21 @@ You're now working on a copy. Anything you do here won't affect `main`.
   style.css, and app.js. Give me the updated files.
   ```
 - ChatGPT will return one or more updated files (likely `index.html` and `app.js`)
-- For each file it gives you: open that file in your editor, replace all the contents with the new version, and save
+- For each file it gives you: click that file in VS Code's Explorer, select all (**Ctrl+A**/**Cmd+A**), paste the new version over it, and save
 - Refresh the browser and load `heartatk4R.txt` again to see the chart
 - In GitHub Desktop, commit with the message: `Add death rate chart`
 - Click **Commit to add-chart**
 
-## Step 12: Switch Back to main and See the Difference
+## Step 13: Switch Back to main and See the Difference
 
 - Click the **Current Branch** button → select **main**
+- Look at VS Code—the files change back automatically
 - Refresh the browser and load `heartatk4R.txt` again
 - The chart is **gone**—`main` is exactly as you left it, cards and filter still working
 
 This is the magic of branches: your experiment is safely tucked away while `main` stays stable.
 
-## Step 13: Merge Your Chart into main
+## Step 14: Merge Your Chart into main
 
 If you like the chart and want to keep it:
 
@@ -177,16 +178,17 @@ If you like the chart and want to keep it:
 
 ## Troubleshooting
 
-- **`index.html` shows raw code instead of a dashboard** - The file was saved as `index.html.txt`. In Notepad, use **File** → **Save As** with **Save as type** set to **All Files** and re-save as `index.html`.
+- **I don't see my files in VS Code** - Make sure you opened the *folder*, not a single file: **File** → **Open Folder** → pick `heart-dashboard`. The Explorer panel should show the folder name with your files inside.
 - **Cards are empty or blank** - You need to load the data: click **Choose File** and pick `heartatk4R.txt` after every refresh.
-- **Dashboard looks plain or broken after splitting files** - Make sure `style.css` and `app.js` are in the same folder as `index.html` and named exactly (not `style.css.txt`). Re-save with **Save as type** set to **All Files**.
+- **Dashboard looks plain or broken after splitting files** - Make sure `style.css` and `app.js` are in the same folder as `index.html`, named exactly, and that you saved all three (an unsaved file shows a dot ● next to its name in the VS Code tab).
 - **Numbers show `NaN`** - Tell ChatGPT: "Some values are NA and some numbers have leading zeros—skip NA and convert text to numbers."
-- **Double-clicking `index.html` won't let me edit** - Double-click opens it in the browser. To edit, open your text editor first, then use **File** → **Open** to load the file.
+- **Double-clicking `index.html` opens the browser, not the editor** - That's expected—double-click is for testing. To edit, click the file in VS Code's Explorer panel instead.
 - **Switching branches asks about my changes** - Commit your changes first. If GitHub Desktop prompts when switching, choose **Leave my changes on the current branch**.
 
 ## Workflow Overview
 
 - Build or change your code (with help from ChatGPT)
+- Edit and save the files in VS Code
 - Test it in your browser
 - Commit each working version as a save point on `main`
 - Create a **branch** before trying something risky

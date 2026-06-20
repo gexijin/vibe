@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Git_Branching_GitHub_Desktop_Guide.md",
+                "file": "docs/React_First_App_Windows.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git_Branching_GitHub_Desktop_Guide"
+              "title": "React_First_App_Windows"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 287.5
   },
   "right": {
     "id": "43a9d953d36f03b1",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Git_Branching_GitHub_Desktop_Guide.md",
+                "file": "docs/React_First_App_Windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Git_Branching_GitHub_Desktop_Guide"
+              "title": "Backlinks for React_First_App_Windows"
             }
           },
           {
@@ -114,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Git_Branching_GitHub_Desktop_Guide.md",
+                "file": "docs/React_First_App_Windows.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Git_Branching_GitHub_Desktop_Guide"
+              "title": "Outgoing links from React_First_App_Windows"
             }
           },
           {
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Git_Branching_GitHub_Desktop_Guide.md",
+                "file": "docs/React_First_App_Windows.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Git_Branching_GitHub_Desktop_Guide"
+              "title": "Outline of React_First_App_Windows"
             }
           }
         ]
@@ -185,5 +184,8 @@
     }
   },
   "active": "ed25a579079c4d0a",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "docs/Git_Branching_GitHub_Desktop_Guide.md",
+    "docs/React_First_App_Windows.md"
+  ]
 }
