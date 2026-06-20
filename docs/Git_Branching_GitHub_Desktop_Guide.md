@@ -43,11 +43,12 @@ Keep VS Code open—you'll come back to it throughout.
 
 ## Step 3: Download the Data
 
-- Open this link in your browser: [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
-- You'll see rows of hospital records—one heart-attack patient per row
-- **Right-click** the page and choose **Save as** (or **Save Page As**)
+- **Right-click** this link and choose **Save Link As** (or **Save Target As**): [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
 - Save it into your `heart-dashboard` folder, named `heartatk4R.txt`
-- Back in VS Code, `heartatk4R.txt` now appears in the Explorer panel—click it to peek at the columns: `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), `AGE`
+- Peek at the data in **Excel**: open Excel first, click **File** → **Open** → **Browse**, set the file-type dropdown to **All Files**, then pick `heartatk4R.txt` from your `heart-dashboard` folder
+- Excel shows one heart-attack patient per row, with columns: `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), `AGE`
+- Close Excel without saving—you only opened it to look
+- Back in VS Code, `heartatk4R.txt` now appears in the Explorer panel too
 
 ## Step 4: Get the Dashboard from ChatGPT
 
@@ -60,6 +61,9 @@ Keep VS Code open—you'll come back to it throughout.
   died, and average age, charges, and stay as cards. Ignore NA.
   ```
 - Click the **Copy** button on the code block ChatGPT provides
+- We are describing our data so that ChatGPT can write code. It's essential to get the column names exactly as they are.
+
+**Note:** Sometimes, the pasted code starts or ends with a line of three backticks (```` ``` ````), delete those lines. 
 
 ## Step 5: Save the Dashboard to Your Project
 
@@ -102,7 +106,7 @@ Git now tracks both your code and your data.
 - Save the file (**Ctrl+S** or **Cmd+S**)
 - Refresh the browser, load `heartatk4R.txt` again, and try the dropdown
 - In GitHub Desktop, type a commit message: `Add sex filter`
-- Click **Commit to main**
+- If it works, click **Commit to main**
 
 ## Step 9: View Your History
 
@@ -116,8 +120,7 @@ Separate files keep the project organized—and it's how real apps (including Re
 
 - Go back to ChatGPT and ask:
   ```
-  Split this dashboard into three files: index.html, style.css,
-  and app.js. Show each file in its own code block.
+  Split this dashboard into multiple files. 
   ```
 - ChatGPT returns three code blocks. Save each into your `heart-dashboard` folder using VS Code:
   - **index.html** — click it in the Explorer, select all (**Ctrl+A**/**Cmd+A**), paste the new `index.html` block over it, and save
@@ -142,8 +145,7 @@ You're now working on a copy. Anything you do here won't affect `main`.
 - Ask ChatGPT for a bigger change:
   ```
   Add a Chart.js bar chart (from a CDN) showing death rate by age
-  group: under 50, 50-69, and 70+. My app is in index.html,
-  style.css, and app.js. Give me the updated files.
+  group: under 50, 50-69, and 70+. Give me the updated files.
   ```
 - ChatGPT will return one or more updated files (likely `index.html` and `app.js`)
 - For each file it gives you: click that file in VS Code's Explorer, select all (**Ctrl+A**/**Cmd+A**), paste the new version over it, and save

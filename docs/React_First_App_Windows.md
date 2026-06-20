@@ -39,22 +39,36 @@ PowerShell is a window where you type commands instead of clicking. You'll only 
 - Click **Windows PowerShell** in the results
 - A window opens with a blinking cursor—you type a command there and press **Enter**
 
-## Step 3: Create Your React App
+## Step 3:  Change folder via command line
 
-Type these commands one at a time, pressing **Enter** after each:
+Before creating the app, you'll move into your **Documents** folder—the same folder you open in File Explorer (Windows) or Finder (Mac). This is where your project will be saved, so it's easy to find later.
 
-```
-cd Documents
-```
+The command below is `cd`, short for "change directory." It simply moves you into a folder, the way double-clicking a folder opens it.
+
+- **On Windows (PowerShell):** type this and press **Enter** (replace John.Smith with your own user name on Windows):
+  ```
+  cd C:/Users/John.Smith/Documents
+  ```
+- **On Mac (Terminal):** type this and press **Enter**:
+  ```
+  cd ~/Documents
+  ```
+
+You won't see much happen—that's normal. The text to the left of the blinking cursor changes to show you're now inside Documents.
+
+## Step 4: Create Your React App
+
+Type this command and press **Enter**:
+
 ```
 npm create vite@latest heart-react -- --template react
 ```
 
 - If it asks **Ok to proceed? (y)**, type `y` and press **Enter**
 
-This makes a new folder called `heart-react` inside Documents, with your project inside.
+This creates a new folder called heart-react inside Documents, with your project inside it.
 
-## Step 4: Install and Start the App
+## Step 5: Install and Start the App
 
 Type these commands one at a time, pressing **Enter** after each and waiting for it to finish:
 
@@ -75,21 +89,21 @@ npm run dev
 
 **Leave this PowerShell window open**—it's your app's engine. Don't type anything else here.
 
-## Step 5: Add the Data File
+## Step 6: Add the Data File
 
 - In your browser, open [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
 - **Right-click** the page and choose **Save as**
 - In the Save window, browse into your `heart-react` folder (in Documents), then into the `public` folder inside it
 - Name the file `heartatk4R.txt` and click **Save**
 
-## Step 6: Open the Project in VS Code
+## Step 7: Open the Project in VS Code
 
 - Open **VS Code**
 - Click **File** → **Open Folder**
 - Open your `heart-react` folder (in Documents) and click **Select Folder** (click **Yes** if asked whether you trust the folder)
 - The **Explorer** on the left shows your project, including the `src` and `public` folders
 
-## Step 7: Build the Dashboard with ChatGPT
+## Step 8: Build the Dashboard with ChatGPT
 
 - Go to [chat.openai.com](https://chat.openai.com) and type:
   ```
@@ -104,7 +118,9 @@ npm run dev
 - Click **File** → **Save**
 - Look at your browser—it updates by itself with your dashboard. No refresh, no picking a file!
 
-## Step 8: Add a Filter with useState
+**Note:** Sometimes, the pasted code starts or ends with a line of three backticks (```` ``` ````), delete those lines. 
+
+## Step 9: Add a Filter with useState
 
 - Back in ChatGPT, type:
   ```
@@ -117,7 +133,7 @@ npm run dev
 
 That instant update is what React is all about: you change a value, React updates the screen for you.
 
-## Step 9: Save Your Work with GitHub Desktop *(optional)*
+## Step 10: Save Your Work with GitHub Desktop
 
 - Open **GitHub Desktop**
 - Click **File** → **Add Local Repository**
