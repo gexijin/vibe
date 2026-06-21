@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/React_First_App_Windows.md",
+                "file": "docs/Install_CLAUDE_Code_Win.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React_First_App_Windows"
+              "title": "Install_CLAUDE_Code_Win"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 613.5
   },
   "right": {
     "id": "43a9d953d36f03b1",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/React_First_App_Windows.md",
+                "file": "docs/Install_CLAUDE_Code_Win.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for React_First_App_Windows"
+              "title": "Backlinks for Install_CLAUDE_Code_Win"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/React_First_App_Windows.md",
+                "file": "docs/Install_CLAUDE_Code_Win.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from React_First_App_Windows"
+              "title": "Outgoing links from Install_CLAUDE_Code_Win"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/React_First_App_Windows.md",
+                "file": "docs/Install_CLAUDE_Code_Win.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of React_First_App_Windows"
+              "title": "Outline of Install_CLAUDE_Code_Win"
             }
           }
         ]
@@ -185,7 +185,9 @@
   },
   "active": "ed25a579079c4d0a",
   "lastOpenFiles": [
-    "docs/Git_Branching_GitHub_Desktop_Guide.md",
-    "docs/React_First_App_Windows.md"
+    "docs/Install_Claude_Code_MacOS.md",
+    "docs/Install_CLAUDE_Code_Win.md",
+    "docs/React_First_App_Windows.md",
+    "docs/Git_Branching_GitHub_Desktop_Guide.md"
   ]
 }

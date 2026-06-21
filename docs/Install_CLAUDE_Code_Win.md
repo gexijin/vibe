@@ -2,22 +2,32 @@
 
 # Install Claude Code on Windows
 
-Claude Code is an AI assistant that lives in your terminal and helps you write, debug, and understand code. This guide walks you through the complete setup: a quick native install via PowerShell, then WSL2 for the full Linux-powered experience.
+Claude Code is an AI assistant that lives in your terminal and helps you write, debug, and understand code. This guide gets you running natively on Windows in just a few minutes. WSL2 is also available at the end as an optional, more advanced setup.
 
 ## Key Concepts
 
-- **WSL (Windows Subsystem for Linux)** - A Windows feature that runs a real Linux system alongside Windows
-- **Ubuntu** - A popular, beginner-friendly Linux distribution you can install through WSL
-- **PowerShell** - Windows' built-in command-line tool, used here to install Claude Code and WSL
+- **PowerShell** - Windows' built-in command-line tool, used here to install and run Claude Code
+- **Git for Windows** - A free download that adds **Git Bash**, the shell Claude Code uses to run commands
+- **WSL (Windows Subsystem for Linux)** - An optional Windows feature that runs a real Linux system alongside Windows, used for the advanced setup at the end
 
 ## What You'll Need
 
-- A Windows 10 (version 2004 or higher) or Windows 11 computer
-- Administrator access on your computer
-- Claude Pro/Max subscription or API key through Azure Foundry
-- 10 - 15 minutes
+- A Windows 10 or Windows 11 computer
+- Claude Pro/Max subscription, or an API key
+- 5 - 10 minutes
 
-## Step 1: Install Claude Code Natively on Windows (works but not recommended)
+## Step 1: Install Git for Windows
+
+Git for Windows adds **Git Bash**, the shell Claude Code uses to run commands. Without it, some features are limited.
+
+- Go to [git-scm.com/download/win](https://git-scm.com/download/win)
+- The download should start automatically — open the installer when it finishes
+- Click **Next** through the installer, accepting the default options
+- Click **Install**, then **Finish**
+
+That's it — Claude Code will detect Git Bash automatically when it starts.
+
+## Step 2: Install Claude Code
 
 - Click the **Windows Start button**
 - Type `PowerShell` and click on **Windows PowerShell**
@@ -32,103 +42,11 @@ Claude Code is an AI assistant that lives in your terminal and helps you write, 
    ```
 - You should see the version number of Claude Code
 
-> **Note:** The native Windows install has some limitations:
-> - No Bash tool sandboxing (a security feature only available in WSL2/macOS)
-> - Some tools and workflows work better in a Linux environment
->
-> Continue with the steps below to install WSL2 for the full experience.
-
-## Step 2: Check Virtualization and Install WSL
-
-**First, check if virtualization is enabled:**
-
-- **Right-click** on the taskbar (the bar at the bottom of your screen)
-- Click on **Task Manager** from the menu
-- If Task Manager opens in a small window, click **More details** at the bottom
-- Click on the **Performance** tab at the top
-- Click on **CPU** in the left sidebar
-- Look at the bottom-right section of the window
-- Find the line that says **Virtualization:** and check if it says **Enabled**
-
-**If it says "Enabled":** Great! Continue below.
-
-**If it says "Disabled":** You need to enable virtualization in your computer's BIOS settings:
-- Restart your computer
-- During startup, press the BIOS key (usually **F2**, **F10**, **Del**, or **Esc** - it depends on your computer manufacturer)
-- Look for settings related to "Virtualization Technology", "Intel VT-x", "AMD-V", or "SVM Mode"
-- Enable these settings
-- Save and exit BIOS (usually **F10**)
-- Your computer will restart normally
-
-**Now install WSL:**
-
-- Click the **Windows Start button**
-- Type `PowerShell` in the search box
-- **Right-click** on **Windows PowerShell** and click **Run as administrator**
-- Click **Yes** when asked "Do you want to allow this app to make changes to your device?"
-
-**Check if WSL and Ubuntu are already installed:**
-
-- In the PowerShell window, type:
-   ```
-   wsl --list --verbose
-   ```
-- **If you see "Ubuntu" listed:** WSL is already installed! Skip to Step 3.
-- **If you see an error message:** Continue with the installation below.
-
-**To install WSL and Ubuntu:**
-
-- In the PowerShell window, type:
-   ```
-   wsl --install
-   ```
-- You might see messages like "Installing: Windows Subsystem for Linux" and "Installing: Ubuntu"
-- When installation is complete, restart your computer:
-   - Click the **Windows Start button** → **Power icon** → **Restart**
-- Your computer will restart — this takes about 1-2 minutes
-
-**Note:** If you get an error saying the command is not recognized, your Windows version might be too old. Make sure you have Windows 10 version 2004 or higher, or Windows 11.
-
-## Step 3: Set Up Ubuntu
-
-After your computer restarts, a terminal window with "Ubuntu" in the title should open automatically within 2-5 minutes.
-
-**If the Ubuntu window did NOT open automatically:**
-- Click the **Windows Start button**
-- Type `Ubuntu` in the search box
-- Click on **Ubuntu** (you'll see a circular orange icon)
-- The Ubuntu terminal will open and continue the setup
-
-**Now complete the first-time setup:**
-
-- Wait for the message: `Enter new UNIX username:`
-- Type a username (use lowercase letters and numbers only, no spaces)
-   - Example: `john`
-- You'll see: `New password:`
-- Type a simple password (even the same as the user name `john`)
-- You won't see the characters as you type - this is normal
-- Type the same password again when prompted
-
-**Important:** Remember this username and password — you'll need them later.
-
-## Step 4: Install Claude Code in WSL
-
-- In the Ubuntu terminal, type:
-   ```
-   curl -fsSL https://claude.ai/install.sh | bash
-   ```
-- Wait for Claude Code to install
-- When installation is complete, verify by typing:
-   ```
-   claude --version
-   ```
-- You should see the version number of Claude Code
-
-## Step 5: Connect to Your Anthropic Account
+## Step 3: Connect to Your Anthropic Account
 
 ### Option A. Use your Claude Pro or Max subscription
 
-- In the Ubuntu terminal, type:
+- In the PowerShell window, type:
    ```
    claude
    ```
@@ -141,12 +59,15 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
 - You should see a success message
 - Follow the instructions to complete the setup
 
+The API-based options below all run in **Git Bash**, the shell installed in Step 1. To open it, click the **Windows Start button**, type `Git Bash`, and click the **Git Bash** app. Set the variables **and** start `claude` in the same Git Bash window — Claude Code only sees variables set in the terminal it was launched from.
+
 ### Option B. Use Anthropic API key
 
 If you have an Anthropic API key instead of a Claude subscription:
 
-- First, get your API key from the [Anthropic Console](https://console.anthropic.com/)
-- In the Ubuntu terminal, type:
+- Get your API key from the [Anthropic Console](https://console.anthropic.com/)
+- Open **Git Bash**: click the **Windows Start button**, type `Git Bash`, and click the **Git Bash** app
+- In Git Bash, type:
    ```
    export ANTHROPIC_API_KEY="your-api-key-here"
    ```
@@ -156,8 +77,11 @@ If you have an Anthropic API key instead of a Claude subscription:
    echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc
    ```
    Replace `your-api-key-here` with your actual API key
-- Close and reopen the Ubuntu terminal for the changes to take effect
-- You should now be able to use Claude Code with your API key
+- Close and reopen Git Bash for the changes to take effect
+- Start Claude Code from Git Bash:
+   ```
+   claude
+   ```
 
 ### Option C. Use OpenRouter API (starts for free!)
 
@@ -165,7 +89,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 
 - Sign up at [openrouter.ai](https://openrouter.ai) and log in
 - Click **Get API key** and copy the key to a safe location
-- Set the required environment variables before starting Claude Code:
+- In Git Bash, set the required environment variables before starting Claude Code:
    ```
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
@@ -193,7 +117,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 
 ### Option D. Use Anthropic API via Azure Foundry
 
-Before starting Claude Code, in the Ubuntu terminal, paste this code to define environment variables:
+In Git Bash, paste this code to define environment variables before starting Claude Code:
 ```
 # Enable Microsoft Foundry integration
 export CLAUDE_CODE_USE_FOUNDRY=1
@@ -215,14 +139,13 @@ claude
 
 You should now be able to use Claude Code with Azure-deployed Claude models.
 
-## Step 6: Test Claude Code
+## Step 4: Test Claude Code
 
-You're all set! Type `claude` in the Ubuntu terminal and ask a general question such as "Explain quantum computing."
+You're all set! Type `claude` in PowerShell and ask a general question such as "Explain quantum computing."
 
-## Step 7: Access Your Projects
+## Step 5: Access Your Projects
 
-**Native Windows (PowerShell):**
-- If you have a project folder, navigate to it:
+- If you have a project folder, navigate to it in PowerShell:
    ```
    cd ~/Documents/test_claude
    ```
@@ -230,37 +153,76 @@ You're all set! Type `claude` in the Ubuntu terminal and ask a general question 
    ```
    claude
    ```
-
-**WSL (Ubuntu):**
-- If you have a Windows folder called `test_claude`, you can access it:
-   ```
-   cd /mnt/c/Users/Username/Documents/test_claude
-   ```
-   Replace `Username` with your actual Windows username.
-- Then start Claude:
-   ```
-   claude
-   ```
-
 - Start by asking Claude to explain the codebase to you.
 - You can ask Claude to make changes.
 - Test your code in your preferred IDE.
 
 **Note:** Claude operates inside a project folder. It saves settings in that folder. It's Claude's workspace.
 
-## Step 8: Update Claude Code
+## Optional: Install WSL2 for the Full Linux Experience
 
-Claude Code updates automatically, but you can manually update at any time:
+The native setup above is all most people need. WSL2 runs a real Linux system inside Windows and adds **Bash tool sandboxing** (a security feature) plus better compatibility with Linux toolchains. It takes longer to set up and requires a restart, so only do this if you want the full Linux experience.
 
-**WSL (Ubuntu):**
-```
-sudo claude update
-```
+### Check virtualization and install WSL
 
-**Native Windows (PowerShell — run as administrator):**
-```
-claude update
-```
+**First, check if virtualization is enabled:**
+
+- **Right-click** on the taskbar (the bar at the bottom of your screen)
+- Click on **Task Manager** from the menu
+- If Task Manager opens in a small window, click **More details** at the bottom
+- Click on the **Performance** tab at the top
+- Click on **CPU** in the left sidebar
+- Find the line that says **Virtualization:** and check if it says **Enabled**
+
+**If it says "Disabled":** You need to enable virtualization in your computer's BIOS settings:
+- Restart your computer
+- During startup, press the BIOS key (usually **F2**, **F10**, **Del**, or **Esc** - it depends on your computer manufacturer)
+- Look for settings related to "Virtualization Technology", "Intel VT-x", "AMD-V", or "SVM Mode"
+- Enable these settings
+- Save and exit BIOS (usually **F10**)
+
+**Now install WSL:**
+
+- Click the **Windows Start button**, type `PowerShell`
+- **Right-click** on **Windows PowerShell** and click **Run as administrator**
+- Click **Yes** when asked "Do you want to allow this app to make changes to your device?"
+- In the PowerShell window, type:
+   ```
+   wsl --install
+   ```
+- You might see messages like "Installing: Windows Subsystem for Linux" and "Installing: Ubuntu"
+- When installation is complete, restart your computer
+
+**Note:** `wsl --install` requires Windows 10 version 2004 or higher, or Windows 11. If the command is not recognized, your Windows version may be too old.
+
+### Set up Ubuntu
+
+After your computer restarts, a terminal window with "Ubuntu" in the title should open automatically within 2-5 minutes. If it doesn't, click the **Windows Start button**, type `Ubuntu`, and click the **Ubuntu** app (orange circle icon).
+
+- Wait for the message: `Enter new UNIX username:`
+- Type a username (lowercase letters and numbers only, no spaces) — for example `john`
+- You'll see: `New password:`
+- Type a simple password (you won't see the characters as you type — this is normal)
+- Type the same password again when prompted
+
+**Important:** Remember this username and password — you'll need them later.
+
+### Install Claude Code in WSL
+
+- In the Ubuntu terminal, type:
+   ```
+   curl -fsSL https://claude.ai/install.sh | bash
+   ```
+- Verify by typing:
+   ```
+   claude --version
+   ```
+- Connect your account using the same options as in Step 3 (run the commands in the Ubuntu terminal)
+- To open a Windows project folder from WSL:
+   ```
+   cd /mnt/c/Users/Username/Documents/test_claude
+   ```
+   Replace `Username` with your actual Windows username.
 
 ## Next Steps
 
@@ -289,8 +251,8 @@ This built-in diagnostic tool checks your installation and reports common issues
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 This error means virtualization is not enabled:
-- Go back to Step 2 and check Task Manager to see if virtualization is enabled
-- If disabled, you need to enable it in your computer's BIOS (see Step 2 for instructions)
+- Check Task Manager to see if virtualization is enabled (see the optional WSL section above)
+- If disabled, enable it in your computer's BIOS
 - After enabling virtualization, restart your computer and try `wsl --install` again
 
 ### "wsl --install" doesn't work
@@ -299,17 +261,7 @@ This error means virtualization is not enabled:
 - Try running: `wsl --update` first, then try `wsl --install` again
 
 ### Ubuntu window doesn't open after restart
-- Click Windows Start
-- Type `Ubuntu`
-- Click on the Ubuntu app to launch it manually
-
-### How to open Ubuntu terminal after closing it
-- Click the **Windows Start button**, type `Ubuntu`, and click the **Ubuntu** app (orange circle icon)
-
-### Claude Code commands not found (WSL)
-- Make sure the installation completed successfully
-- Try closing and reopening the Ubuntu terminal
-- Try running the installation command again: `curl -fsSL https://claude.ai/install.sh | bash`
+- Click the **Windows Start button**, type `Ubuntu`, and click the **Ubuntu** app to launch it manually
 
 ## Need Help?
 
@@ -318,4 +270,4 @@ This error means virtualization is not enabled:
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025. Updated February 2026.
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025. Updated June 2026.
