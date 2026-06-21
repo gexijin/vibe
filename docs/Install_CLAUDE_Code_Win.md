@@ -59,26 +59,20 @@ That's it — Claude Code will detect Git Bash automatically when it starts.
 - You should see a success message
 - Follow the instructions to complete the setup
 
-The API-based options below all run in **Git Bash**, the shell installed in Step 1. To open it, click the **Windows Start button**, type `Git Bash`, and click the **Git Bash** app. Set the variables **and** start `claude` in the same Git Bash window — Claude Code only sees variables set in the terminal it was launched from.
+The API-based options below stay in **PowerShell** and use the `setx` command, which saves a setting permanently. After running `setx`, **close and reopen PowerShell** so the change takes effect, then start `claude`.
 
 ### Option B. Use Anthropic API key
 
 If you have an Anthropic API key instead of a Claude subscription:
 
 - Get your API key from the [Anthropic Console](https://console.anthropic.com/)
-- Open **Git Bash**: click the **Windows Start button**, type `Git Bash`, and click the **Git Bash** app
-- In Git Bash, type:
+- In PowerShell, type:
    ```
-   export ANTHROPIC_API_KEY="your-api-key-here"
-   ```
-   Replace `your-api-key-here` with your actual API key
-- To make this permanent (so you don't have to set it every time), add it to your shell profile:
-   ```
-   echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc
+   setx ANTHROPIC_API_KEY "your-api-key-here"
    ```
    Replace `your-api-key-here` with your actual API key
-- Close and reopen Git Bash for the changes to take effect
-- Start Claude Code from Git Bash:
+- Close and reopen PowerShell for the change to take effect
+- Start Claude Code:
    ```
    claude
    ```
@@ -89,16 +83,16 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 
 - Sign up at [openrouter.ai](https://openrouter.ai) and log in
 - Click **Get API key** and copy the key to a safe location
-- In Git Bash, set the required environment variables before starting Claude Code:
+- In PowerShell, set the required environment variables:
    ```
-   export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
-   export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
-   export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
+   setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
+   setx ANTHROPIC_API_KEY ""
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
    ```
-- Start Claude Code:
+- Close and reopen PowerShell, then start Claude Code:
    ```
    claude
    ```
@@ -109,7 +103,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 - `ANTHROPIC_API_KEY` must be explicitly set to empty
 - To use alternative models, they must support **tool use capabilities**. You can override models with:
    ```
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
    ```
 - Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
 - Free tier gives you 50 API requests per day
@@ -117,22 +111,22 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 
 ### Option D. Use Anthropic API via Azure Foundry
 
-In Git Bash, paste this code to define environment variables before starting Claude Code:
+In PowerShell, paste this code to define the environment variables:
 ```
 # Enable Microsoft Foundry integration
-export CLAUDE_CODE_USE_FOUNDRY=1
+setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure resource name
-export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
+setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
-export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
-export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
+setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
 
 **Note:** Replace `xxxx-eastus2` with your Foundry Resource name (do not use the entire base URL). Replace `your_api_key` with your complete API key from your Azure portal.
 
-Then start Claude Code:
+Then close and reopen PowerShell, and start Claude Code:
 ```
 claude
 ```
@@ -159,11 +153,11 @@ You're all set! Type `claude` in PowerShell and ask a general question such as "
 
 **Note:** Claude operates inside a project folder. It saves settings in that folder. It's Claude's workspace.
 
-## Optional: Install WSL2 for the Full Linux Experience
+## Step 6: (Optional) Install WSL2 for the Full Linux Experience
 
-The native setup above is all most people need. WSL2 runs a real Linux system inside Windows and adds **Bash tool sandboxing** (a security feature) plus better compatibility with Linux toolchains. It takes longer to set up and requires a restart, so only do this if you want the full Linux experience.
+The native setup above is almost all that most people need. But Claude Code performs better under Linux. WSL2 runs a real Linux system inside Windows and adds **Bash tool sandboxing** (a security feature) plus better compatibility with Linux toolchains. It takes longer to set up and requires a restart, so only do this if you want the full Linux experience.
 
-### Check virtualization and install WSL
+### a) Check virtualization and install WSL
 
 **First, check if virtualization is enabled:**
 
@@ -195,7 +189,7 @@ The native setup above is all most people need. WSL2 runs a real Linux system in
 
 **Note:** `wsl --install` requires Windows 10 version 2004 or higher, or Windows 11. If the command is not recognized, your Windows version may be too old.
 
-### Set up Ubuntu
+### b) Set up Ubuntu
 
 After your computer restarts, a terminal window with "Ubuntu" in the title should open automatically within 2-5 minutes. If it doesn't, click the **Windows Start button**, type `Ubuntu`, and click the **Ubuntu** app (orange circle icon).
 
@@ -207,7 +201,7 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
 
 **Important:** Remember this username and password — you'll need them later.
 
-### Install Claude Code in WSL
+### c) Install Claude Code in WSL
 
 - In the Ubuntu terminal, type:
    ```
@@ -217,7 +211,7 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
    ```
    claude --version
    ```
-- Connect your account using the same options as in Step 3 (run the commands in the Ubuntu terminal)
+- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 3, Option A). If you use an API key instead, set it with `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL uses Linux commands, not `setx`)
 - To open a Windows project folder from WSL:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
