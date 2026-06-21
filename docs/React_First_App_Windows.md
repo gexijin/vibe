@@ -1,6 +1,6 @@
 [Home](./)
 
-# Build Your First React App on Windows
+# Build Your First Dashboard with React
 
 You built a dashboard by hand, re-picking your data file after every refresh and re-running the filter yourself. React—the tool behind much of the modern web—lets the page update itself when something changes, and a real project setup loads your data automatically. In this tutorial you'll create your first React app on Windows and rebuild your heart-attack dashboard so it reacts to you.
 

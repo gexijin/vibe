@@ -1,6 +1,6 @@
 [Home](./)
 
-# Version Control with GitHub Desktop: Build a Data Dashboard and Branch Safely
+# Version Control with GitHub Desktop: Build a Data Dashboard
 
 You ask an AI to build you a working app, then change one thing and the whole thing breaks—with no way back. Version control fixes this: every "commit" is a save point like in a video game, and a "branch" is a parallel copy where you can try new ideas without touching the version that works. In this hands-on tutorial you'll build a simple dashboard from a real heart-attack dataset with ChatGPT, edit it in VS Code, save your progress with GitHub Desktop, and branch off to add a chart—safely.
 
