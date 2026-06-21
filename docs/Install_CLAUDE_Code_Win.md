@@ -16,7 +16,7 @@ Claude Code is an AI assistant that lives in your terminal and helps you write, 
 - Claude Pro/Max subscription, or an API key
 - 5 - 10 minutes
 
-## Step 1: Install Git for Windows (recommended, optional)
+## Step 1: Install Git for Windows (optional, recommended)
 
 Git for Windows is **recommended but optional**. It adds **Git Bash**, the shell Claude Code uses to run commands. If you skip this step, Claude Code falls back to PowerShell instead — so you can move straight to Step 2 and install Git later if you prefer.
 
