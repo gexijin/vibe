@@ -1,3 +1,6 @@
+---
+title: "Get Started with Version Control"
+---
 [Home](./)
 
 # Get Started with Version Control

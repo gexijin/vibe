@@ -1,3 +1,6 @@
+---
+title: "Use Claude Code for R in VS Code on Mac"
+---
 [Home](./)
 
 # Use Claude Code for R in VS Code on Mac

@@ -1,3 +1,6 @@
+---
+title: "Version Control with GitHub Desktop: Build a Data Dashboard"
+---
 [Home](./)
 
 # Version Control with GitHub Desktop: Build a Data Dashboard

@@ -1,3 +1,6 @@
+---
+title: "Claude Code with local version control for Mac"
+---
 [Home](./)
 
 # Claude Code with local version control for Mac

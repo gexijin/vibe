@@ -1,3 +1,6 @@
+---
+title: "Using Claude Code with RStudio on Mac"
+---
 [Home](./)
 
 # Using Claude Code with RStudio on Mac

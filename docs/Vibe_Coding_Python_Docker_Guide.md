@@ -1,3 +1,6 @@
+---
+title: "Vibe Coding in Python with Claude Code and Docker"
+---
 [Home](./)
 
 # Vibe Coding in Python with Claude Code and Docker

@@ -1,3 +1,6 @@
+---
+title: "Write a Research Paper with Claude Code"
+---
 [Home](./)
 
 # Write a Research Paper with Claude Code

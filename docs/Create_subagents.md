@@ -1,3 +1,6 @@
+---
+title: "Create a Subagent in Claude Code"
+---
 [Home](./)
 
 # Create a Subagent in Claude Code

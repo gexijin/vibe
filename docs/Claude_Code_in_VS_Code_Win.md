@@ -1,3 +1,6 @@
+---
+title: "Set Up VS Code for Claude Code on WSL"
+---
 [Home](./)
 
 # Set Up VS Code for Claude Code on WSL

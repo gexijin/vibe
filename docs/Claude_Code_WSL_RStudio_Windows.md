@@ -1,3 +1,6 @@
+---
+title: "Using Claude Code from WSL with RStudio on Windows"
+---
 [Home](./)
 
 # Using Claude Code from WSL with RStudio on Windows

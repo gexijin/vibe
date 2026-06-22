@@ -1,3 +1,6 @@
+---
+title: "Create Your First Claude Skill"
+---
 [Home](./)
 
 # Create Your First Claude Skill

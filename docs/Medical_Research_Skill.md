@@ -1,3 +1,6 @@
+---
+title: "Create a Claude Skill for Medical Research"
+---
 [Home](./)
 
 # Create a Claude Skill for Medical Research

@@ -1,3 +1,6 @@
+---
+title: "Python Coding in VS Code"
+---
 [Home](./)
 
 # Python Coding in VS Code

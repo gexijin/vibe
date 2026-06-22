@@ -1,3 +1,6 @@
+---
+title: "Claude Code: Basic Operations"
+---
 [Home](./)
 
 # Claude Code: Basic Operations

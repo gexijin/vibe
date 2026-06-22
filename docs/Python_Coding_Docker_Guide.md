@@ -1,3 +1,6 @@
+---
+title: "Python Coding in VS Code via Docker Container"
+---
 [Home](./)
 
 # Python Coding in VS Code via Docker Container

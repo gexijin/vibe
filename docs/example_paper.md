@@ -1,3 +1,6 @@
+---
+title: "AI Doesn't Democratize—It Stratifies"
+---
 # AI Doesn't Democratize—It Stratifies
 
 ## Abstract

@@ -1,5 +1,5 @@
 ---
-title: Hands-on tutorial for beginners
+title: "Install Claude Code on Windows"
 ---
 [Home](./)
 

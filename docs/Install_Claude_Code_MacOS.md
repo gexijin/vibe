@@ -1,3 +1,6 @@
+---
+title: "Install Claude Code on Mac"
+---
 [Home](./)
 
 # Install Claude Code on Mac

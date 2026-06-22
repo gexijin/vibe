@@ -1,3 +1,6 @@
+---
+title: "Build Your First Dashboard with React"
+---
 [Home](./)
 
 # Build Your First Dashboard with React

@@ -1,3 +1,6 @@
+---
+title: "Use GitHub Desktop with Claude Code"
+---
 [Home](./)
 
 # Use GitHub Desktop with Claude Code

@@ -1,3 +1,6 @@
+---
+title: "Claude Code with version control for Windows"
+---
 [Home](./)
 
 # Claude Code with version control for Windows

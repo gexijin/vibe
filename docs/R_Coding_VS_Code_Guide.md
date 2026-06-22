@@ -1,3 +1,6 @@
+---
+title: "Run R in VS Code"
+---
 [Home](./)
 
 # Run R in VS Code

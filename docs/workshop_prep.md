@@ -1,3 +1,6 @@
+---
+title: "Workshop Prep: Windows Setup"
+---
 [Home](./)
 
 # Workshop Prep: Windows Setup

@@ -1,3 +1,6 @@
+---
+title: "Create Custom Slash Commands"
+---
 [Home](./)
 
 # Create Custom Slash Commands 

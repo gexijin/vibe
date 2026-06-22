@@ -1,3 +1,6 @@
+---
+title: "Workshop Prep: Linux Setup (Ubuntu)"
+---
 [Home](./)
 
 # Workshop Prep: Linux Setup (Ubuntu)

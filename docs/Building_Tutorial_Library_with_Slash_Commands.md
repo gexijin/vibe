@@ -1,3 +1,6 @@
+---
+title: "How Claude Code helped me create these tutorials"
+---
 # How Claude Code helped me create these tutorials
 
 In mid-December 2025, I spent 2 hours trying to help my research assistant install Claude Code over Zoom. I realized that someone like her needs some specific, hands-on instructions, so I set out to create comprehensive tutorials for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.

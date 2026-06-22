@@ -1,3 +1,6 @@
+---
+title: "Get Started with VS Code"
+---
 [Home](./)
 
 # Get Started with VS Code
