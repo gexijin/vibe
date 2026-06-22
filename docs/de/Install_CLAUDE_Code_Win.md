@@ -18,7 +18,7 @@ Claude Code ist ein KI-Assistent, der in Ihrem Terminal lebt und Ihnen beim Schr
 
 ## Schritt 1: Git for Windows installieren (optional, empfohlen)
 
-Git for Windows ist **empfohlen, aber optional**. Es fügt **Git Bash** hinzu, die Shell, die Claude Code zum Ausführen von Befehlen verwendet. Wenn Sie ihn überspringen, greift Claude Code stattdessen auf PowerShell zurück – Sie können also direkt zu Schritt 2 wechseln und Git später installieren.
+Git for Windows ist **empfohlen, aber optional**. Es fügt **Git Bash** hinzu, die Shell, die Claude Code zum Ausführen von Befehlen verwendet. Wenn Sie ihn überspringen, greift Claude Code stattdessen auf PowerShell zurück – Sie können also direkt zu Schritt 2 wechseln und Git bei Bedarf später installieren.
 
 - Gehen Sie zu [git-scm.com/download/win](https://git-scm.com/download/win)
 - Der Download sollte automatisch starten – öffnen Sie das Installationsprogramm, wenn er fertig ist
