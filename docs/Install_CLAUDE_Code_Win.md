@@ -1,3 +1,6 @@
+---
+title: Hands-on tutorial for beginners
+---
 [Home](./)
 
 # Install Claude Code on Windows

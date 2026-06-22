@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Install_CLAUDE_Code_Win.md",
+                "file": "docs/ja/Install_CLAUDE_Code_Win.md",
                 "mode": "source",
                 "source": false
               },
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 613.5
+    "width": 427.5
   },
   "right": {
     "id": "43a9d953d36f03b1",
@@ -185,8 +185,9 @@
   },
   "active": "ed25a579079c4d0a",
   "lastOpenFiles": [
-    "docs/Install_Claude_Code_MacOS.md",
+    "docs/zh/Install_CLAUDE_Code_Win.md",
     "docs/Install_CLAUDE_Code_Win.md",
+    "docs/Install_Claude_Code_MacOS.md",
     "docs/React_First_App_Windows.md",
     "docs/Git_Branching_GitHub_Desktop_Guide.md"
   ]
