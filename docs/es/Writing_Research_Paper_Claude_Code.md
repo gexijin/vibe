@@ -1,3 +1,7 @@
+---
+title: "Escribir Artículos de Investigación con Claude Code"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Escribir Artículos de Investigación con Claude Code

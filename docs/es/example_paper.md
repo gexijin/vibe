@@ -1,3 +1,7 @@
+---
+title: "La IA no democratiza: estratifica"
+lang: "es"
+---
 [Inicio](index.html)
 
 # La IA no democratiza: estratifica

@@ -1,3 +1,7 @@
+---
+title: "VS CodeでPythonを書く"
+lang: "ja"
+---
 [ホーム](./)
 
 # VS CodeでPythonを書く

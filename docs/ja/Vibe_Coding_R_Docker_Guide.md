@@ -1,3 +1,7 @@
+---
+title: "Claude CodeとDockerでRのVibe Coding"
+lang: "ja"
+---
 [ホーム](./)
 
 # Claude CodeとDockerでRのVibe Coding

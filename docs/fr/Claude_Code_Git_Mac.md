@@ -1,3 +1,7 @@
+---
+title: "Claude Code avec le contrôle de version local pour Mac"
+lang: "fr"
+---
 [Accueil](./)
 
 # Claude Code avec le contrôle de version local pour Mac

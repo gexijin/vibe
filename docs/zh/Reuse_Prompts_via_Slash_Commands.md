@@ -1,3 +1,7 @@
+---
+title: "创建自定义 Slash Command"
+lang: "zh"
+---
 [首页](./)
 
 # 创建自定义 Slash Command

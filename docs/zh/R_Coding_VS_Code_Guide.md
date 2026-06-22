@@ -1,3 +1,7 @@
+---
+title: "在 VS Code 中运行 R"
+lang: "zh"
+---
 [首页](./)
 
 # 在 VS Code 中运行 R

@@ -1,3 +1,7 @@
+---
+title: "在 Mac 上安装 Claude Code"
+lang: "zh"
+---
 [首页](./)
 
 # 在 Mac 上安装 Claude Code

@@ -1,3 +1,7 @@
+---
+title: "Crear Comandos Slash Personalizados"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Crear Comandos Slash Personalizados

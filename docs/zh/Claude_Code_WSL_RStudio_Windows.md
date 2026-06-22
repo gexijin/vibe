@@ -1,3 +1,7 @@
+---
+title: "在Windows上通过WSL使用Claude Code与RStudio"
+lang: "zh"
+---
 [首页](./)
 
 # 在Windows上通过WSL使用Claude Code与RStudio

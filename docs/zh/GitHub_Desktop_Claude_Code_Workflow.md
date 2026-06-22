@@ -1,3 +1,7 @@
+---
+title: "将 GitHub Desktop 与 Claude Code 结合使用"
+lang: "zh"
+---
 [首页](./)
 
 # 将 GitHub Desktop 与 Claude Code 结合使用

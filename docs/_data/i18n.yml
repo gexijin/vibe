@@ -1,0 +1,9 @@
+# Per-language brand suffix appended to page titles.
+# Each value matches the <title> of that language's index.html.
+# English (no page.lang) falls back to site.title in _config.yml.
+brand:
+  es: "Claude Code para Todos"
+  fr: "Claude Code pour Tous"
+  de: "Claude Code für Alle"
+  ja: "みんなのClaude Code"
+  zh: "Claude Code 入门教程"

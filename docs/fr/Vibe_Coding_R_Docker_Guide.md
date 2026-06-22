@@ -1,3 +1,7 @@
+---
+title: "Vibe Coding en R avec Claude Code et Docker"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Vibe Coding en R avec Claude Code et Docker

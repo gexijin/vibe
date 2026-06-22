@@ -1,3 +1,7 @@
+---
+title: "Créer des Commandes Slash Personnalisées"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Créer des Commandes Slash Personnalisées

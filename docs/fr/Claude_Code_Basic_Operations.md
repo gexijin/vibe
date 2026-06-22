@@ -1,3 +1,7 @@
+---
+title: "Claude Code : Opérations de Base"
+lang: "fr"
+---
 [Accueil](./)
 
 # Claude Code : Opérations de Base

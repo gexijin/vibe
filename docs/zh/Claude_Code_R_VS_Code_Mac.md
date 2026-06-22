@@ -1,3 +1,7 @@
+---
+title: "在Mac上的VS Code中使用Claude Code进行R编程"
+lang: "zh"
+---
 [首页](./)
 
 # 在Mac上的VS Code中使用Claude Code进行R编程

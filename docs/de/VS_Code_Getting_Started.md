@@ -1,3 +1,7 @@
+---
+title: "Erste Schritte mit VS Code"
+lang: "de"
+---
 [Startseite](./)
 
 # Erste Schritte mit VS Code

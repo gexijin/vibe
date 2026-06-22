@@ -1,3 +1,7 @@
+---
+title: "Premiers Pas avec VS Code"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Premiers Pas avec VS Code

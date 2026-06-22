@@ -1,3 +1,7 @@
+---
+title: "Cree un subagente en Claude Code"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Cree un subagente en Claude Code

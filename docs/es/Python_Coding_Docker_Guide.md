@@ -1,3 +1,7 @@
+---
+title: "Codificación en Python con VS Code mediante Contenedor Docker"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Codificación en Python con VS Code mediante Contenedor Docker

@@ -1,3 +1,7 @@
+---
+title: "Claude Code con control de versiones local para Mac"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Claude Code con control de versiones local para Mac

@@ -1,3 +1,7 @@
+---
+title: "Erste Schritte mit Versionskontrolle"
+lang: "de"
+---
 [Startseite](./)
 
 # Erste Schritte mit Versionskontrolle

@@ -1,3 +1,7 @@
+---
+title: "Configure VS Code para Claude Code en WSL"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Configure VS Code para Claude Code en WSL

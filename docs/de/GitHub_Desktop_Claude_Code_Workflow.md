@@ -1,3 +1,7 @@
+---
+title: "GitHub Desktop mit Claude Code verwenden"
+lang: "de"
+---
 [Startseite](./)
 
 # GitHub Desktop mit Claude Code verwenden

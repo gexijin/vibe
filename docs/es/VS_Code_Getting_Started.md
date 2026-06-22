@@ -1,3 +1,7 @@
+---
+title: "Primeros Pasos con VS Code"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Primeros Pasos con VS Code

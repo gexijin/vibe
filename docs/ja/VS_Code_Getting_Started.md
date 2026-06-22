@@ -1,3 +1,7 @@
+---
+title: "VS Codeを始めよう"
+lang: "ja"
+---
 [ホーム](./)
 
 # VS Codeを始めよう

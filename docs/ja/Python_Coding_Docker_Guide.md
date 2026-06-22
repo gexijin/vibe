@@ -1,3 +1,7 @@
+---
+title: "DockerコンテナによるVS CodeでのPythonコーディング"
+lang: "ja"
+---
 [ホーム](./)
 
 # DockerコンテナによるVS CodeでのPythonコーディング

@@ -1,3 +1,7 @@
+---
+title: "Créer un Sous-Agent dans Claude Code"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Créer un Sous-Agent dans Claude Code

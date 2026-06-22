@@ -1,3 +1,7 @@
+---
+title: "Claude Code: Operaciones Básicas"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Claude Code: Operaciones Básicas

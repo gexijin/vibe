@@ -1,3 +1,7 @@
+---
+title: "Claude Code con control de versiones para Windows"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Claude Code con control de versiones para Windows

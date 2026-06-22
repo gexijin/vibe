@@ -1,3 +1,7 @@
+---
+title: "GitHub DesktopとClaude Codeを組み合わせて使う"
+lang: "ja"
+---
 [ホーム](./)
 
 # GitHub DesktopとClaude Codeを組み合わせて使う

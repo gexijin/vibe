@@ -1,3 +1,7 @@
+---
+title: "Claude Code: 基本操作"
+lang: "ja"
+---
 [ホーム](./)
 
 # Claude Code: 基本操作

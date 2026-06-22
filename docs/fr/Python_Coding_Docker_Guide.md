@@ -1,3 +1,7 @@
+---
+title: "Programmation Python dans VS Code via un Conteneur Docker"
+lang: "fr"
+---
 [Accueil](./)
 
 # Programmation Python dans VS Code via un Conteneur Docker

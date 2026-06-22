@@ -1,3 +1,7 @@
+---
+title: "Cree un Claude Skill para investigación médica"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Cree un Claude Skill para investigación médica

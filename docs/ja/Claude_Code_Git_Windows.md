@@ -1,3 +1,7 @@
+---
+title: "Windows版Claude Codeとバージョン管理"
+lang: "ja"
+---
 [ホーム](./)
 
 # Windows版Claude Codeとバージョン管理

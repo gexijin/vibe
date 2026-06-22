@@ -1,3 +1,7 @@
+---
+title: "创建你的第一个Claude Skill"
+lang: "zh"
+---
 [首页](./)
 
 # 创建你的第一个Claude Skill

@@ -1,3 +1,7 @@
+---
+title: "WindowsにClaude Codeをインストール"
+lang: "ja"
+---
 [ホーム](./)
 
 # WindowsにClaude Codeをインストール

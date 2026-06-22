@@ -1,3 +1,7 @@
+---
+title: "Premiers Pas avec le Contrôle de Version"
+lang: "fr"
+---
 [Accueil](./)
 
 # Premiers Pas avec le Contrôle de Version

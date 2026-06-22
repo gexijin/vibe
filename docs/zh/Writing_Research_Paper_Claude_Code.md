@@ -1,3 +1,7 @@
+---
+title: "使用 Claude Code 撰写研究论文"
+lang: "zh"
+---
 [首页](./)
 
 # 使用 Claude Code 撰写研究论文

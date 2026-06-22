@@ -1,3 +1,7 @@
+---
+title: "Claude CodeとDockerでPythonのVibe Coding"
+lang: "ja"
+---
 [ホーム](./)
 
 # Claude CodeとDockerでPythonのVibe Coding

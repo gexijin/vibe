@@ -1,3 +1,7 @@
+---
+title: "Cree su primera Claude Skill"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Cree su primera Claude Skill

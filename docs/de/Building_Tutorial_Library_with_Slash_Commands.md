@@ -1,3 +1,7 @@
+---
+title: "Wie Claude Code mir half, diese Tutorials zu erstellen"
+lang: "de"
+---
 [Startseite](./index.html)
 
 # Wie Claude Code mir half, diese Tutorials zu erstellen

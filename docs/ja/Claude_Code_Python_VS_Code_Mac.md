@@ -1,3 +1,7 @@
+---
+title: "MacのVS CodeでPythonにClaude Codeを使う"
+lang: "ja"
+---
 [ホーム](./)
 
 # MacのVS CodeでPythonにClaude Codeを使う

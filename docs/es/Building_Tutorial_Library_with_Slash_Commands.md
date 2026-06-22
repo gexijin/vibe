@@ -1,3 +1,7 @@
+---
+title: "Cómo automaticé la documentación con prompts reutilizables"
+lang: "es"
+---
 # Cómo automaticé la documentación con prompts reutilizables
 
 A mediados de diciembre de 2025, pasé 2 horas tratando de ayudar a mi asistente de investigación a instalar Claude Code por Zoom. Me di cuenta de que alguien como ella necesita instrucciones específicas y prácticas, así que me propuse crear tutoriales completos para Claude Code. Mi objetivo: tutoriales prácticos y enfocados que guíen a principiantes completos a través de tareas reales paso a paso. Sin volcados de teoría. Sin manuales de referencia exhaustivos. Solo "haz esto, después esto, después esto" hasta lograr algo concreto.

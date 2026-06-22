@@ -1,3 +1,7 @@
+---
+title: "Créer un Claude Skill pour la Recherche Médicale"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Créer un Claude Skill pour la Recherche Médicale

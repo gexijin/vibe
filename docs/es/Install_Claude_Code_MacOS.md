@@ -1,3 +1,7 @@
+---
+title: "Instalar Claude Code en Mac"
+lang: "es"
+---
 [Inicio](./)
 
 # Instalar Claude Code en Mac

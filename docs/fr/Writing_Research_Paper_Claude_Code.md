@@ -1,3 +1,7 @@
+---
+title: "Rédiger un article de recherche avec Claude Code"
+lang: "fr"
+---
 [Accueil](./)
 
 # Rédiger un article de recherche avec Claude Code

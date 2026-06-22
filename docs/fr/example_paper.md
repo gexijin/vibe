@@ -1,3 +1,7 @@
+---
+title: "L'IA ne démocratise pas—elle stratifie"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # L'IA ne démocratise pas—elle stratifie

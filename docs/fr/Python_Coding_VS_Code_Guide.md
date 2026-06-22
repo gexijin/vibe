@@ -1,3 +1,7 @@
+---
+title: "Programmation Python dans VS Code"
+lang: "fr"
+---
 [Accueil](./)
 
 # Programmation Python dans VS Code

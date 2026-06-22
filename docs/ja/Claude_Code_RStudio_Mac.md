@@ -1,3 +1,7 @@
+---
+title: "MacでRStudioとClaude Codeを使用する"
+lang: "ja"
+---
 [ホーム](./)
 
 # MacでRStudioとClaude Codeを使用する

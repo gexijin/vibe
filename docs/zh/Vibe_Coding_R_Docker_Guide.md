@@ -1,3 +1,7 @@
+---
+title: "使用 Claude Code 和 Docker 在 R 中进行 Vibe 编程"
+lang: "zh"
+---
 [首页](./)
 
 # 使用 Claude Code 和 Docker 在 R 中进行 Vibe 编程

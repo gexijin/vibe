@@ -1,3 +1,7 @@
+---
+title: "在 Mac 的 VS Code 中使用 Claude Code"
+lang: "zh"
+---
 [首页](./)
 
 # 在 Mac 的 VS Code 中使用 Claude Code

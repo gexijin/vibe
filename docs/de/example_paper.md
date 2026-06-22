@@ -1,3 +1,7 @@
+---
+title: "KI demokratisiert nicht – sie stratifiziert"
+lang: "de"
+---
 # KI demokratisiert nicht – sie stratifiziert
 
 ## Abstract

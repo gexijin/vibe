@@ -1,3 +1,7 @@
+---
+title: "Codage R dans VS Code via un conteneur Docker"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Codage R dans VS Code via un conteneur Docker

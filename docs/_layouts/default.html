@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ page.lang | default: 'en-US' }}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,8 @@
 
     gtag('config', 'G-4W28447R3P');
   </script>
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title | default: site.github.repository_name }}{% endif %}</title>
+  {% assign brand = site.data.i18n.brand[page.lang] | default: site.title | default: site.github.repository_name %}
+  <title>{% if page.title %}{{ page.title }} | {{ brand }}{% else %}{{ brand }}{% endif %}</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;

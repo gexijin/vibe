@@ -1,3 +1,7 @@
+---
+title: "Eine Forschungsarbeit mit Claude Code schreiben"
+lang: "de"
+---
 [Startseite](./)
 
 # Eine Forschungsarbeit mit Claude Code schreiben

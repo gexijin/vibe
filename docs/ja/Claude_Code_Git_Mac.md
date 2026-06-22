@@ -1,3 +1,7 @@
+---
+title: "Mac版Claude Codeでローカルバージョン管理"
+lang: "ja"
+---
 [ホーム](./)
 
 # Mac版Claude Codeでローカルバージョン管理

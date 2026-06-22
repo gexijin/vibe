@@ -1,3 +1,7 @@
+---
+title: "在 VS Code 中进行 Python 编程"
+lang: "zh"
+---
 [首页](./)
 
 # 在 VS Code 中进行 Python 编程

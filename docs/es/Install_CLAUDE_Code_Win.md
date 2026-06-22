@@ -1,3 +1,7 @@
+---
+title: "Instalar Claude Code en Windows"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Instalar Claude Code en Windows

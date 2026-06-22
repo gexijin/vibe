@@ -1,3 +1,7 @@
+---
+title: "Claude Code aus WSL mit RStudio unter Windows verwenden"
+lang: "de"
+---
 [Startseite](./)
 
 # Claude Code aus WSL mit RStudio unter Windows verwenden

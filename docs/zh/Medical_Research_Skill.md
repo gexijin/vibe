@@ -1,3 +1,7 @@
+---
+title: "创建用于医学研究的 Claude Skill"
+lang: "zh"
+---
 [首页](./)
 
 # 创建用于医学研究的 Claude Skill

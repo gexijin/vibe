@@ -1,3 +1,7 @@
+---
+title: "Einen Subagenten in Claude Code erstellen"
+lang: "de"
+---
 [Startseite](./)
 
 # Einen Subagenten in Claude Code erstellen

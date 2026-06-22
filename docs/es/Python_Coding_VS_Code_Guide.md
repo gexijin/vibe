@@ -1,3 +1,7 @@
+---
+title: "Programación en Python con VS Code"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Programación en Python con VS Code

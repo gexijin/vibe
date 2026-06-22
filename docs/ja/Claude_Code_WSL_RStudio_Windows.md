@@ -1,3 +1,7 @@
+---
+title: "WindowsでClaude Code（WSL）とRStudioを使用する"
+lang: "ja"
+---
 [ホーム](./)
 
 # WindowsでClaude Code（WSL）とRStudioを使用する

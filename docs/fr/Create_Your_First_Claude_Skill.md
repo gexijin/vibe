@@ -1,3 +1,7 @@
+---
+title: "Créez Votre Première Compétence Claude"
+lang: "fr"
+---
 [Accueil](./)
 
 # Créez Votre Première Compétence Claude

@@ -1,3 +1,7 @@
+---
+title: "Einen Claude Skill für medizinische Forschung erstellen"
+lang: "de"
+---
 [Startseite](./)
 
 # Einen Claude Skill für medizinische Forschung erstellen

@@ -1,3 +1,7 @@
+---
+title: "Introducción al Control de Versiones"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Introducción al Control de Versiones

@@ -1,3 +1,7 @@
+---
+title: "Ejecutar R en VS Code"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Ejecutar R en VS Code

@@ -1,3 +1,7 @@
+---
+title: "VS Code 入门指南"
+lang: "zh"
+---
 [首页](./)
 
 # VS Code 入门指南

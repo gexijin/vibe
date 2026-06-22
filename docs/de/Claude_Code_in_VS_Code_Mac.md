@@ -1,3 +1,7 @@
+---
+title: "Claude Code aus VS Code auf dem Mac verwenden"
+lang: "de"
+---
 [Startseite](./)
 
 # Claude Code aus VS Code auf dem Mac verwenden

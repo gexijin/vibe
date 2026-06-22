@@ -1,3 +1,7 @@
+---
+title: "Utiliser Claude Code pour Python dans VS Code sur Mac"
+lang: "fr"
+---
 [Accueil](./)
 
 # Utiliser Claude Code pour Python dans VS Code sur Mac

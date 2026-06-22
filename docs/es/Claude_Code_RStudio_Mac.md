@@ -1,3 +1,7 @@
+---
+title: "Uso de Claude Code con RStudio en Mac"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Uso de Claude Code con RStudio en Mac

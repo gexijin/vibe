@@ -1,3 +1,7 @@
+---
+title: "Utiliser GitHub Desktop avec Claude Code"
+lang: "fr"
+---
 [Accueil](../fr/)
 
 # Utiliser GitHub Desktop avec Claude Code

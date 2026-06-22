@@ -1,3 +1,7 @@
+---
+title: "Ihren ersten Claude Skill erstellen"
+lang: "de"
+---
 [Startseite](./)
 
 # Ihren ersten Claude Skill erstellen

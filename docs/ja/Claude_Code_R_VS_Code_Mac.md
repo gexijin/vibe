@@ -1,3 +1,7 @@
+---
+title: "MacのVS CodeでRにClaude Codeを使う方法"
+lang: "ja"
+---
 [ホーム](./)
 
 # MacのVS CodeでRにClaude Codeを使う方法

@@ -1,3 +1,7 @@
+---
+title: "Mac 上的 Claude Code 本地版本控制"
+lang: "zh"
+---
 [首页](./)
 
 # Mac 上的 Claude Code 本地版本控制

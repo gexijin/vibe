@@ -1,3 +1,7 @@
+---
+title: "Claude Code：基本操作"
+lang: "zh"
+---
 [首页](./)
 
 # Claude Code：基本操作

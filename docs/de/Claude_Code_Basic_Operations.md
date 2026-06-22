@@ -1,3 +1,7 @@
+---
+title: "Claude Code: Grundlegende Operationen"
+lang: "de"
+---
 [Startseite](./)
 
 # Claude Code: Grundlegende Operationen

@@ -1,3 +1,7 @@
+---
+title: "Vibe Coding in Python mit Claude Code und Docker"
+lang: "de"
+---
 [Startseite](./)
 
 # Vibe Coding in Python mit Claude Code und Docker

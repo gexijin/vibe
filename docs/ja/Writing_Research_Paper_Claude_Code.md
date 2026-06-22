@@ -1,3 +1,7 @@
+---
+title: "Claude Codeで研究論文を書く"
+lang: "ja"
+---
 [ホーム](./)
 
 # Claude Codeで研究論文を書く

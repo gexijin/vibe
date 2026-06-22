@@ -1,3 +1,7 @@
+---
+title: "WSLでClaude Code用にVS Codeをセットアップ"
+lang: "ja"
+---
 [ホーム](./)
 
 # WSLでClaude Code用にVS Codeをセットアップ

@@ -1,3 +1,7 @@
+---
+title: "Programación en R en VS Code a través de Docker Container"
+lang: "es"
+---
 [Inicio](index.html)
 
 # Programación en R en VS Code a través de Docker Container

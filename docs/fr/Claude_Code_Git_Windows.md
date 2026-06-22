@@ -1,3 +1,7 @@
+---
+title: "Claude Code avec contrôle de version pour Windows"
+lang: "fr"
+---
 [Accueil](./)
 
 # Claude Code avec contrôle de version pour Windows

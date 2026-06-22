@@ -1,3 +1,7 @@
+---
+title: "VS CodeでRを実行"
+lang: "ja"
+---
 [ホーム](./)
 
 # VS CodeでRを実行

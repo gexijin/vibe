@@ -1,3 +1,7 @@
+---
+title: "Comment Claude Code m'a aidé à créer ces tutoriels"
+lang: "fr"
+---
 # Comment Claude Code m'a aidé à créer ces tutoriels
 
 En décembre 2025, je me suis lancé dans la création d'une bibliothèque de tutoriels complète pour Claude Code. Mon objectif : des tutoriels pratiques et ciblés qui guident les débutants complets à travers des tâches réelles, étape par étape. Pas de théorie en masse. Pas de manuels de référence exhaustifs. Juste « faites ceci, puis cela, puis ceci » jusqu'à ce que vous ayez accompli quelque chose de concret.

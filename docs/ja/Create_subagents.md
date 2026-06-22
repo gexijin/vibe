@@ -1,3 +1,7 @@
+---
+title: "Claude Codeでサブエージェントを作成"
+lang: "ja"
+---
 [ホーム](./)
 
 # Claude Codeでサブエージェントを作成

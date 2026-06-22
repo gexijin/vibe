@@ -1,3 +1,7 @@
+---
+title: "Benutzerdefinierte Slash-Befehle erstellen"
+lang: "de"
+---
 [Startseite](./)
 
 # Benutzerdefinierte Slash-Befehle erstellen
