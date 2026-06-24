@@ -1,94 +1,96 @@
-# Review and Update Japanese Translation
+# Review and Update a Translation
 
-Review and update the Japanese translation for: $ARGUMENTS
+Review and update a translated tutorial to match the current English original.
+
+`$ARGUMENTS` is `[language] [filename]`, where **language** is the translation
+folder (`es`, `fr`, `de`, `ja`, or `zh`) and **filename** is the tutorial's
+shared filename — e.g. `/review-translation fr Install_CLAUDE_Code_Win.md`.
+
+- English original: `docs/<filename>`
+- Translation: `docs/<language>/<filename>`
+
+If the language is missing or unrecognized, ask the user which language to
+review. If either file doesn't exist, report the error and stop.
+
+Throughout, refer to the target language's existing files for conventions —
+the project's per-language translation guides (`.claude/commands/translate-*.md`)
+and the sibling tutorials already in `docs/<language>/`.
 
 ## Phase 1: Read Both Versions
 
-1. **Read the English tutorial** at `docs/$ARGUMENTS`
-2. **Read the Japanese translation** at `docs/ja/$ARGUMENTS`
+1. **Read the English tutorial** at `docs/<filename>`.
+2. **Read the translation** at `docs/<language>/<filename>`.
+3. **Skim 1–2 sibling files** in `docs/<language>/` to absorb house conventions:
+   register (e.g. usted / vous / Sie / です・ます), heading capitalization,
+   recurring terminology, and the localized Home-link format.
 
-If either file doesn't exist, report the error and stop.
+## Phase 2: Compare and Sync Structure
 
-## Phase 2: Compare and Update
+Compare the English original with the translation:
 
-Compare the English original with the Japanese translation:
+1. **Structural differences:** missing sections, extra/outdated sections,
+   different step ordering or numbering.
+2. **Content differences:** updated instructions, changed commands, URLs,
+   version numbers, or notes present in English but not the translation.
+3. **Report findings** and ask: "Would you like me to update the
+   `<language>` translation to match the current English version?"
+4. **After approval, update:**
+   - If the English was **restructured** (sections reordered, added, removed),
+     prefer a **full rewrite** that mirrors the new structure rather than
+     patching around the old shape.
+   - If the change is minor, make targeted edits.
+   - Translate new/changed content; remove outdated content; keep the section
+     order identical to the English version.
 
-1. **Identify structural differences:**
-   - Missing sections in Japanese version
-   - Extra/outdated sections in Japanese version
-   - Different step ordering
+## Phase 3: Naturalness Pass
 
-2. **Identify content differences:**
-   - Updated instructions in English not reflected in Japanese
-   - Changed commands, URLs, or version numbers
-   - Added or removed content
+Make it read like it was written by a native speaker, not translated.
 
-3. **Report findings to user:**
-   - List sections that need updating
-   - Note any major structural changes required
-   - Ask: "Would you like me to update the Japanese translation to match the current English version?"
+- Hunt and remove calques / translationese (word-for-word constructions that
+  are grammatical but unidiomatic).
+- Use the **consistent register** the locale's sibling files use.
+- Keep terminology consistent with the other translated tutorials.
 
-4. **After user approval, update the Japanese translation:**
-   - Translate new/changed content into Japanese
-   - Remove outdated content
-   - Maintain consistent structure with the English version
+## Phase 4: Succinctness Pass
 
-## Phase 3: Review Japanese Quality
+Tighten the prose **without losing meaning**.
 
-Review the Japanese translation for quality, regardless of whether updates were needed:
+- Collapse wordy clauses, merge choppy short sentences, cut filler.
+- This is a deliberate, separate pass from Phase 3 — read the whole file again
+  with concision as the only goal.
 
-### Translation Accuracy
-- [ ] Technical terms translated correctly or appropriately kept in English
-- [ ] Commands and code blocks unchanged (not translated)
-- [ ] UI element names match actual Japanese UI (if localized) or kept in English
-- [ ] URLs and links are correct
+## Phase 5: Anti-Over-Simplification Check
 
+Confirm the tightening in Phase 4 didn't drop anything substantive.
 
-### Language Quality
-- [ ] Natural, fluent Japanese (not word-for-word translation)
-- [ ] Consistent terminology throughout
-- [ ] Appropriate politeness level (です/ます form for tutorials)
-- [ ] No unnatural katakana overuse
-- [ ] Clear, concise sentences
+- Diff the result back against the **English original**: every step, option,
+  command, code block, note, warning, and nuance must still be present.
+- Restore any lost detail (e.g. an "if you prefer" caveat, a troubleshooting
+  bullet, an optional flag). Concise ≠ fewer facts.
 
-### Formatting Consistency
-- [ ] Same structure as English version
-- [ ] `[ホーム](./ja/)` link at the top (Japanese home page)
-- [ ] Step headings follow same pattern
-- [ ] Code blocks preserved exactly
-- [ ] Bold/backtick formatting preserved
+## Invariants (must hold in every phase)
 
-### Common Issues to Check
-- [ ] Particles used correctly (は/が, を, に, で, etc.)
-- [ ] No mixed formal/informal language
-- [ ] Numbers and measurements in appropriate format
-- [ ] Dates in Japanese format if applicable
-- [ ] Prompts are in Japanese
+- [ ] Same filename as the English source; lives under `docs/<language>/`.
+- [ ] Localized Home link at the top, matching sibling files' format.
+- [ ] Same structure and section order as the English version.
+- [ ] Commands, code blocks, and inline `code` are **never** translated.
+- [ ] Technical terms (Git, Docker, VS Code, WSL, PowerShell) kept in English.
+- [ ] UI button labels kept in English unless the project localizes them
+      (**Authorize**, **Copy Code**, **Next**, **Install**).
+- [ ] URLs and links unchanged and correct.
+- [ ] Bold/backtick/heading formatting preserved.
+- [ ] If the file has `title:`/`lang:` front matter, the `title` is the
+      translated H1 and `lang` matches the folder.
 
-## Phase 4: Report and Fix
+## Phase 6: Report and Fix
 
 Present findings to the user:
 
-1. **Translation Status** - Up-to-date or updates needed
-2. **Quality Issues Found:**
-   - Translation errors
-   - Awkward phrasing
-   - Inconsistencies
-   - Formatting problems
-3. **Recommended Changes** - Specific fixes with context
+1. **Status** — up-to-date, or what was synced.
+2. **Changes made** — structure, naturalness, succinctness, restored detail.
+3. Apply remaining fixes with the Edit tool, preserving translation style.
+4. Report completed changes.
 
-Ask: "Would you like me to apply these quality improvements?"
-
-After user approval:
-1. Apply fixes using the Edit tool
-2. Maintain the translation style and tone
-3. Keep changes minimal - fix issues without rewriting entire sections
-4. Report completed changes
-
-## Notes
-
-- English tutorials are in `docs/`
-- Japanese translations are in `docs/ja/`
-- Both should have the same filename
-- Technical terms (Git, Docker, VS Code, etc.) are usually kept in English
-- Command-line instructions should never be translated
+Commit only when the user asks. Commit **one language per commit** (the single
+translated file), and leave unrelated working-tree changes (e.g.
+`.obsidian/workspace.json`) out of the commit.
