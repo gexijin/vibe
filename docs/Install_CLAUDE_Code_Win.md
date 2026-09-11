@@ -45,7 +45,53 @@ That's it — Claude Code will detect Git Bash automatically when it starts.
    ```
 - You should see the version number of Claude Code
 
-## Step 3: Connect to Your Anthropic Account
+## Step 3: Open Claude Code in VS Code
+
+Now that Claude Code is installed, you can use it inside VS Code instead of only in the terminal. This is often the easiest way to work because you can read files, edit code, and ask for help without leaving your editor.
+
+Think of the Claude Code sidebar as a chat window inside VS Code. It lets you ask questions, explain code, and get help while you work in the same screen.
+
+### How to open the Claude Code sidebar
+
+1. Open VS Code
+2. Look at the far left side of the window
+3. Click the Extensions icon if you do not already see the Claude Code panel
+4. Search for Claude Code in the Extensions marketplace
+5. Click Install if it is not already installed
+6. After installation, look for the Claude Code icon in the left sidebar
+
+If you do not see the Claude Code icon, try this:
+
+1. Press Ctrl + Shift + P
+2. Type: Claude Code: Open Sidebar
+3. Click the matching option in the list
+
+If it still does not appear, close VS Code and reopen it. Sometimes the extension needs a fresh start before the sidebar shows up.
+
+### What the sidebar is for
+
+The Claude Code sidebar is where you can:
+
+- ask questions about your project
+- get help fixing errors
+- explain code you do not understand
+- create or update files
+- work in a more visual way while staying inside VS Code
+
+This is useful because you can keep your code open in the editor and ask Claude for help in the same window.
+
+### Quick test
+
+After the sidebar opens:
+
+- type: Explain this project to me
+- press Enter
+
+If Claude responds, you are ready to use it.
+
+> Tip: If the sidebar is still missing, make sure the Claude Code extension is installed and that VS Code has been restarted.
+
+## Step 4: Connect to Your Anthropic Account
 
 ### Option A. Use your Claude Pro or Max subscription
 
@@ -136,11 +182,11 @@ claude
 
 You should now be able to use Claude Code with Azure-deployed Claude models.
 
-## Step 4: Test Claude Code
+## Step 5: Test Claude Code
 
 You're all set! Type `claude` in PowerShell and ask a general question such as "Explain quantum computing."
 
-## Step 5: Access Your Projects
+## Step 6: Access Your Projects
 
 - If you have a project folder, navigate to it in PowerShell:
    ```
@@ -156,7 +202,7 @@ You're all set! Type `claude` in PowerShell and ask a general question such as "
 
 **Note:** Claude operates inside a project folder. It saves settings in that folder. It's Claude's workspace.
 
-## Step 6: (Optional) Install WSL2 for the Full Linux Experience
+## Step 7: (Optional) Install WSL2 for the Full Linux Experience
 
 The native setup above is almost all that most people need. But Claude Code performs better under Linux. WSL2 runs a real Linux system inside Windows and adds **Bash tool sandboxing** (a security feature) plus better compatibility with Linux toolchains. It takes longer to set up and requires a restart, so only do this if you want the full Linux experience.
 
