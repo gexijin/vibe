@@ -23,15 +23,14 @@ You want to compare investment opportunities, but researching multiple companies
 
 ## Step 1: Create a Project Folder and Start Claude Code
 
-**Windows (WSL):**
-- Open **Ubuntu** from the Start menu
+**Windows (PowerShell):**
+- Click the **Windows Start button**, type `PowerShell`, and open it
 - Type these commands:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```powershell
+  cd ~/Documents
   mkdir stock_picker_test
   cd stock_picker_test
   ```
-  Replace `YOUR_USERNAME` with your Windows username
 - Start Claude Code:
   ```
   claude
