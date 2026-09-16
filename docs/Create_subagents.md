@@ -10,6 +10,7 @@ You want to compare investment opportunities, but researching multiple companies
 ## Key Concepts
 
 - **Subagent** - A specialized AI worker with its own goal, system prompt, and tools that autonomously completes tasks
+- **Isolated Context** - A subagent works in its own separate workspace, so its research doesn't clutter your main conversation—only the final result comes back
 - **Skill** - A reusable capability (like generating stock reports) that subagents can invoke to accomplish their goals
 - **System Prompt** - Instructions that define what the subagent does, how it scores companies, and what format it returns
 - **Separation of Concerns** - Skills gather data; subagents use that data to make decisions
@@ -106,6 +107,8 @@ Now create your subagent:
 - Select **Sonnet** for model
 - Press **Enter** to randomly pick a color
 
+**What "All tools" means:** A subagent can be limited to only the tools it needs—for example, a research-only agent with just web search. This tutorial uses **All tools** since the stock-picker needs to research online and may write files. You can restrict this later by editing the subagent's file.
+
 ## Step 5: Review What You Built (Reflection Checkpoint)
 
 To open the file in VS Code, click **File > Open File...** and navigate to `.claude/agents/stock-picker.md`.
@@ -155,6 +158,8 @@ As the subagent runs, you'll see it:
 4. **Generate output** - Creates comparison table and recommendation
 
 This may take 2-3 minutes since web research is involved.
+
+Notice that your main conversation doesn't fill up with all the search results and intermediate steps—that's the isolated context at work. The subagent does its research in its own separate workspace and only reports back what you see here.
 
 ## Step 8: Review the Output
 
