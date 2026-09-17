@@ -7,6 +7,7 @@ This repository contains comprehensive beginner-friendly tutorials for using Cla
 The tutorials follow a progression shown in the interactive graph on `index.html`. Here are the recommended sequences:
 
 ### Windows - Basic Path (Research & Writing)
+0. `What_Is_Anthropic_And_Claude.md` - Intro to Anthropic and Claude (no install required)
 1. `Install_CLAUDE_Code_Win.md` - Install Claude Code via WSL
 2. `Claude_Code_Basic_Operations.md` - Essential Claude Code operations
 3. `VS_Code_Getting_Started.md` - VS Code basics for beginners
@@ -22,6 +23,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 - `Claude_Code_WSL_RStudio_Windows.md` - Use RStudio with Claude Code (branch from step 1)
 
 ### Mac - Basic Path (Research & Writing)
+0. `What_Is_Anthropic_And_Claude.md` - Intro to Anthropic and Claude (no install required)
 1. `Install_Claude_Code_MacOS.md` - Install Claude Code on macOS
 2. `Claude_Code_Basic_Operations.md` - Essential Claude Code operations
 3. `VS_Code_Getting_Started.md` - VS Code basics for beginners
@@ -69,6 +71,9 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 - **Claude Code + Python (Mac only):** Python in VS Code → `Claude_Code_Python_VS_Code_Mac.md`
 
 ## Content Overview
+
+### Introduction
+- `What_Is_Anthropic_And_Claude.md` - What Anthropic and Claude are, with a first hands-on chat
 
 ### Installation Guides
 - `Install_CLAUDE_Code_Win.md` - Windows installation via WSL2 with Ubuntu
@@ -219,6 +224,7 @@ docs/
 │   ├── index.html
 │   └── [all tutorials in Chinese]
 │
+├── What_Is_Anthropic_And_Claude.md
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md
 ├── VS_Code_Getting_Started.md

@@ -26,13 +26,15 @@ You want to compare investment opportunities, but researching multiple companies
 
 Your `stock-report` Skill lives in the same project folder you used for the Skill tutorial — reopen that folder rather than starting a new one.
 
-**Windows (WSL):**
-- Open **Ubuntu** from the Start menu
-- Type this command:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+**Windows (PowerShell):**
+- Click the **Windows Start button**, type `PowerShell`, and open it
+- Type these commands:
+  ```powershell
+  cd ~/Documents
+  mkdir stock_picker_test
+  cd stock_picker_test
+
   ```
-  Replace `YOUR_USERNAME` with your Windows username
 - Start Claude Code:
   ```
   claude
