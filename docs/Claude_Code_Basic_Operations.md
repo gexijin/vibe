@@ -9,7 +9,7 @@ Learning to code with AI assistance can feel overwhelming at first. Think of Cla
 
 ## Key Concepts
 
-- **Workspace** - If you start Claude Code from a folder, that's the sessions workspace. 
+- **Workspace** - The folder you start Claude Code from; Claude reads and edits files within it for that session
 - **REPL (Read-Eval-Print Loop)** - An interactive session where you type commands, Claude responds, and the conversation continues until you exit
 - **Context** - The amount of code and conversation history Claude remembers; like working memory that fills up over time
 - **Slash Commands** - Built-in shortcuts starting with `/` that perform specific actions like clearing history or showing help
@@ -59,10 +59,7 @@ In your terminal (make sure you're inside the data_projects folder), type:
 claude
 ```
 
-Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt.
-
-After successfully loggin in, you'll see a welcome message and the Claude Code prompt.
-
+Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 4: Ask Questions About Your Project
 
@@ -135,15 +132,16 @@ Wipes the current conversation and starts fresh. Use this when you want to chang
 
 Ends your session and returns to your normal terminal prompt. You can also hit **Ctrl + C** twice.
 
-## Step 6: Keyboard Shortcuts
+## Step 6: Approve Changes and Use Shortcuts
 
-These shortcuts make working with Claude Code faster:
+When Claude wants to edit a file or run a command, it shows a small menu with options like **Yes** and **No**. Use the arrow keys to highlight your choice and press **Enter**.
 
-- **Shift+Tab** - Switch between, plan, edit, or normal mode - Plan first for complex tasks
-- **Alt+Enter** (Windows/Linux) or **Option+Return** (Mac) - Add a new line in your message without sending it
+A few keyboard shortcuts also make working with Claude Code faster:
+
+- **Shift+Tab** - Cycle through modes (Manual, Accept Edits, Plan) - Plan mode is useful for reviewing a complex task before Claude makes any changes
 - **Ctrl+C** - Cancel the current operation or Claude's response
-- **Ctrl+D** - Approve file changes when Claude asks for permission
-- **Esc** - Close menus or cancel the current input
+- **Esc** - Stop Claude mid-response, or close a menu
+- **`\` then Enter** (or **Ctrl+J**) - Add a new line in your message without sending it
 
 ## Step 7: Always Create a CLAUDE.md File
 
@@ -169,7 +167,7 @@ Explain the code in @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude will read the notebook and explain what it does, how it works, and what the code accomplishes. This effectively brings the file to the context. 
 
-If you working with Claude Code from VS Code and has the Claude Code extension installed, you can add the file to context simply by opening it. You will see in the lower right of the command windows that reads `In Nested_Pie_Chart.ipynb`. Then Claude knows you are talking about this file.
+If you're working with Claude Code from VS Code and have the Claude Code extension installed, you can add the file to context simply by opening it. You will see in the lower right of the command windows that reads `In Nested_Pie_Chart.ipynb`. Then Claude knows you are talking about this file.
 
 Furthermore, you can select a few lines of code and Claude will show **3 lines selected**. You can ask Claude to make quick changes to these lines or ask questions. Therefore, I highly recommend using Claude Code from VS Code. 
 
@@ -202,7 +200,7 @@ Claude can take actions by running Linux commands in many forms.
   Run it and save the new code and plots in the same folder.
   ```
 
-We can ask this vague question because we just asked it to explain the code. Lots of things happen after this. Claude installs software, troubleshoots errors, solves environments - all on its own.
+Claude installs software, troubleshoots errors, and manages environments—all on its own.
 
 
 
@@ -219,9 +217,9 @@ Now that you know the basics, try these on your own:
 
 ## Troubleshooting
 
-- **"Command not found" error** - Claude Code isn't installed or not in your PATH. Run `npm install -g @anthropic-ai/claude-code` to install it.
+- **"Command not found" error** - Claude Code isn't installed or not in your PATH. Follow the [Windows](Install_CLAUDE_Code_Win.md) or [Mac](Install_Claude_Code_MacOS.md) installation tutorial again, or rerun the installer directly: `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) or `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude gives outdated information** - Clear the context with `/clear` and ask again. Long conversations can fill up Claude's memory.
-- **File changes not working** - Make sure you have write permissions in your project folder. Claude will ask for approval before modifying files—press Ctrl+D to approve.
+- **File changes not working** - Make sure you have write permissions in your project folder. Claude will ask for approval before modifying files—select **Yes** from the menu that appears.
 - **Context filling up quickly** - Use `/context` to check usage. When it's nearly full, use `/clear` to start a fresh conversation with a clean slate.
 
 ## Workflow Overview
