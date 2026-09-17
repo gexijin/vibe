@@ -255,6 +255,43 @@ Once everything is set up, here's your daily routine:
 5. **Save your work** - Your code files (`.R`, `.Rmd`) are saved to your computer and persist across sessions
 6. **Commit and push** - Use GitHub Desktop to commit your changes and push to the repository
 
+## What Is Docker Desktop?
+
+Docker Desktop is an application that makes Docker easier to use on your computer. It provides the background services that Docker needs, along with a visual window where you can see and manage your containers, images, storage, and other Docker resources.
+
+You can think of Docker Desktop as the control center for your containers. When you open Docker Desktop, it starts the Docker engine. The Docker engine is the part of Docker that actually creates and runs containers. You usually do not need to interact with the engine directly because Docker Desktop manages it for you.
+
+### What Does Docker Desktop Do?
+
+Docker Desktop performs several important jobs:
+
+- **Runs the Docker engine** - The engine creates and runs the containers that hold your software.
+- **Downloads images** - An image is a ready-made starting package, such as a Linux system with R and common R packages. In this tutorial, the project uses an image from the Rocker project.
+- **Builds containers** - Docker uses the Dockerfile and Dev Container settings in this project to create a container prepared for R development.
+- **Starts and stops containers** - You can open, pause, restart, or stop the container when needed.
+- **Connects containers to your files** - Your project folder is made available inside the container, so you can edit files in VS Code while the code runs in the container.
+- **Connects containers to your browser** - When the Shiny app uses port 3838, Docker Desktop and VS Code work together to make that app available in your web browser.
+
+### How Docker Desktop Fits This Tutorial
+
+There are three pieces working together:
+
+1. **Docker Desktop** runs the Docker engine on your computer.
+2. **VS Code** gives you the editor where you write and run R code.
+3. **The Dev Container** provides a prepared Linux environment containing R, R packages, and the tools used by this project.
+
+When you choose **Reopen in Container**, VS Code asks Docker Desktop to build or start the project's container. Your computer is still running the application, but the R environment is inside the container. This keeps the R version, packages, and system tools separate from the rest of your computer.
+
+Docker Desktop does not replace VS Code, R, or your web browser. It provides the environment that runs the container. VS Code is where you work, R is the language you use, and your browser is where you view the Shiny app.
+
+### Why Use Docker Desktop?
+
+Installing R and every required package directly on your computer can sometimes lead to version conflicts. One project may need a different package version from another project. Docker Desktop helps avoid these conflicts by giving each project its own controlled environment.
+
+For example, if a classmate uses the same project files and Docker settings, Docker can build an environment that closely matches yours. This makes it less likely that you will see an error caused only by different software versions. Your R code and project files remain on your computer, while the tools needed to run them are organized inside the container.
+
+Docker Desktop must be open and running before you build or reopen this project in a container. If Docker Desktop is closed, VS Code cannot start the container, and you may see an error saying that Docker is not running.
+
 ---
 
 Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
