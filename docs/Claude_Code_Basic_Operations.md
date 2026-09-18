@@ -44,7 +44,7 @@ cd data_projects
 - Visit [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) in your web browser
 - Click the green **Code** button near the top right
 - Click **Download ZIP**
-- Extract the ZIP file to a folder called **data_projects** under the Downloads folder.
+- Extract the ZIP file under your Downloads folder. GitHub names the extracted folder **data_projects-main** — rename it to **data_projects** so it matches the rest of this tutorial.
 - In your terminal, navigate to the extracted folder:
   - **Windows**: `cd /mnt/c/Users/YourName/Downloads/data_projects`
   - **Mac/Linux**: `cd ~/Downloads/data_projects`
