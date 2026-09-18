@@ -21,6 +21,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 **Alternative Windows paths:**
 - `Claude_Code_Git_Windows.md` - Local version control (branch from step 1)
 - `Claude_Code_WSL_RStudio_Windows.md` - Use RStudio with Claude Code (branch from step 1)
+- `Install_Claude_Desktop_App.md` - Optional: install the Claude Desktop chat app (not required for coding)
 
 ### Mac - Basic Path (Research & Writing)
 0. `What_Is_Anthropic_And_Claude.md` - Intro to Anthropic and Claude (no install required)
@@ -37,6 +38,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 **Alternative Mac paths:**
 - `Claude_Code_Git_Mac.md` - Local version control (branch from step 1)
 - `Claude_Code_RStudio_Mac.md` - Use RStudio with Claude Code (branch from step 1)
+- `Install_Claude_Desktop_App.md` - Optional: install the Claude Desktop chat app (not required for coding)
 
 ### R Coding Path
 **Main Path (Docker + VS Code):**
@@ -78,6 +80,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 ### Installation Guides
 - `Install_CLAUDE_Code_Win.md` - Windows installation via WSL2 with Ubuntu
 - `Install_Claude_Code_MacOS.md` - macOS installation with Terminal
+- `Install_Claude_Desktop_App.md` - Installing the Claude Desktop chat app (Windows and Mac, optional alternative to Claude Code)
 
 ### VS Code Setup
 - `VS_Code_Getting_Started.md` - Complete VS Code basics for beginners
@@ -227,6 +230,7 @@ docs/
 ├── What_Is_Anthropic_And_Claude.md
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md
+├── Install_Claude_Desktop_App.md
 ├── VS_Code_Getting_Started.md
 ├── Claude_Code_in_VS_Code_Win.md
 ├── Claude_Code_in_VS_Code_Mac.md
