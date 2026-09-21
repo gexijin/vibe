@@ -24,15 +24,14 @@ The best part? We use Claude to write the detailed prompt and create the Skill. 
 
 ## Step 1: Create a Project Folder
 
-**Windows (WSL):**
-- Open **Ubuntu** from the Start menu
+**Windows (PowerShell):**
+- Open **PowerShell** from the Start menu
 - Type these commands:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  Replace `YOUR_USERNAME` with your Windows username
+  ```
 
 **Mac:**
 - Open **Terminal** (find it in Applications > Utilities)
@@ -45,8 +44,8 @@ The best part? We use Claude to write the detailed prompt and create the Skill. 
 
 ## Step 2: Start Claude Code
 
-**Windows (WSL):**
-- Still in the Ubuntu terminal, type:
+**Windows (PowerShell):**
+- Still in PowerShell, type:
   ```
   claude
   ```

@@ -22,18 +22,17 @@ You've been manually typing `/stock-report AAPL` to generate reports. What if Cl
 
 ## Step 1: Navigate to Project Folder
 
-**Windows (WSL):**
-- Open **Ubuntu** from the Start menu
+**Windows (PowerShell):**
+- Open **PowerShell** from the Start menu
 - Type:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  Replace `YOUR_USERNAME` with your Windows username
+  cd ~\Documents\test_claude
+  ```
 
   If the folder doesn't exist, create it first:
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac:**
@@ -60,7 +59,7 @@ Log in with your Claude subscription following the installation tutorial ([Windo
 
 ## Step 3: Enable Auto-Approve for Edits
 
-Press `Ctrl+E` (Windows/Linux) or `Cmd+E` (Mac) to enable auto-approve mode for edits.
+Press **Shift+Tab** to enable auto-approve mode for edits.
 
 This allows Claude to create and modify files without asking permission each time.
 

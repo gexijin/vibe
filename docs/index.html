@@ -467,8 +467,8 @@
              check the results.</p>
 
         <p> &nbsp;&nbsp;&nbsp; Through hands-on activities, I introduce the core concepts and tools that unlock Claude Code’s full potential,
-            including Git for version control, Visual Studio Code for coding and editing, WSL 
-            (Windows Subsystem for Linux) for running on Windows, and Docker for isolated 
+            including Git for version control, Visual Studio Code for coding and editing, PowerShell
+            for running on Windows, and Docker for isolated
             development environments. </p>
         <p> &nbsp;&nbsp;&nbsp; To use Claude Code, you need a paid <a href="https://claude.com/pricing">Claude subscription</a>.
             Alternatively, <a href="https://openrouter.ai/docs/guides/claude-code-integration">OpenRouter</a> offers a more economical option by providing access to 500+ models through a unified API, including affordable alternatives like ChatGPT.
@@ -485,7 +485,7 @@
                 <li><a href="Claude_Code_Git_Windows">Claude Code with local version control for Windows</a></li>
                 <li><a href="Claude_Code_Git_Mac">Claude Code with local version control for Mac</a></li>
                 <li><a href="Claude_Code_RStudio_Mac">Using Claude Code with RStudio on Mac</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">Using Claude Code from WSL with RStudio on Windows</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">Using Claude Code with RStudio on Windows</a></li>
             </ol>
 
             <h2>Building Skills</h2>
@@ -644,8 +644,8 @@
 
         // Tutorial data
         const tutorials = {
-            1: { label: 'Install Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code on Windows using WSL, Ubuntu, and Node.js', level: 0 },
-            14: { label: 'Claude Code\nin VS Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Set up VS Code to work with Claude Code on Windows WSL—edit files visually while running AI in the terminal', level: 1 },
+            1: { label: 'Install Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Step-by-step guide to install Claude Code natively on Windows using PowerShell (WSL optional)', level: 0 },
+            14: { label: 'Claude Code\nin VS Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Set up VS Code to work with Claude Code on Windows—edit files visually while running AI in the terminal', level: 1 },
             11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Learn version control basics using Git locally with Claude Code—no GitHub account needed', level: 1 },
             2: { label: 'Install Claude\nCode (Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Quick setup guide for Claude Code on macOS with Node.js and npm', level: 0 },
             15: { label: 'Claude Code\nin VS Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'Set up VS Code to work with Claude Code on Mac—edit files visually while running AI in the terminal', level: 1 },
@@ -661,7 +661,7 @@
             13: { label: 'Research Paper\nwith Claude', url: 'Writing_Research_Paper_Claude_Code', desc: 'Write research papers faster using Claude Code for research and drafting while Git tracks every version', level: 2 },
             16: { label: 'Vibe Coding\nin Python', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'Analyze the Iris dataset using natural language requests—describe visualizations and watch them appear', level: 3 },
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Use Claude Code with RStudio on Mac—create R projects and enhance them with AI while RStudio runs your code', level: 2 },
-            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Use Claude Code from WSL with RStudio on Windows—bridge the gap between Windows RStudio and Linux-based AI assistance', level: 2 },
+            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Use Claude Code with RStudio on Windows—edit R code manually in RStudio while Claude Code helps from PowerShell', level: 2 },
             19: { label: 'Claude Code\nfor R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve R code in VS Code—ask for plots, analysis, and code improvements', level: 3 },
             20: { label: 'Claude Code\nfor Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Use Claude Code AI assistant to write and improve Python code in VS Code—ask for plots, analysis, and code improvements', level: 3 },
             21: { label: 'Slash Commands', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Create reusable shortcuts for complex prompts—turn lengthy instructions into simple commands like /stock-report', level: 3 },

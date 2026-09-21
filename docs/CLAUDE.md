@@ -8,7 +8,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 
 ### Windows - Basic Path (Research & Writing)
 0. `What_Is_Anthropic_And_Claude.md` - Intro to Anthropic and Claude (no install required)
-1. `Install_CLAUDE_Code_Win.md` - Install Claude Code via WSL
+1. `Install_CLAUDE_Code_Win.md` - Install Claude Code natively via PowerShell (WSL optional)
 2. `Claude_Code_Basic_Operations.md` - Essential Claude Code operations
 3. `VS_Code_Getting_Started.md` - VS Code basics for beginners
 4. `Claude_Code_in_VS_Code_Win.md` - Connect VS Code to Claude Code
@@ -76,7 +76,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 - `What_Is_Anthropic_And_Claude.md` - What Anthropic and Claude are, with a first hands-on chat
 
 ### Installation Guides
-- `Install_CLAUDE_Code_Win.md` - Windows installation via WSL2 with Ubuntu
+- `Install_CLAUDE_Code_Win.md` - Windows installation via native PowerShell (WSL2 optional)
 - `Install_Claude_Code_MacOS.md` - macOS installation with Terminal
 
 ### VS Code Setup
@@ -98,7 +98,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 - `R_Coding_Docker_Guide.md` - R in Docker containers for reproducibility
 - `Vibe_Coding_R_Docker_Guide.md` - Building an NBA dashboard with Shiny
 - `Claude_Code_RStudio_Mac.md` - Claude Code integration with RStudio on Mac
-- `Claude_Code_WSL_RStudio_Windows.md` - Claude Code with RStudio on Windows via WSL
+- `Claude_Code_WSL_RStudio_Windows.md` - Claude Code with RStudio on Windows (PowerShell, WSL optional)
 - `Claude_Code_R_VS_Code_Mac.md` - Streamlined R coding in VS Code on Mac
 
 ### Python Coding Guides

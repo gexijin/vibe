@@ -9,7 +9,7 @@ You're working with AI assistance. It makes changes to your files. Sometimes the
 
 ## Key Concepts
 
-- **WSL (Windows Subsystem for Linux)** - Runs Linux tools like Git natively on Windows
+- **PowerShell** - Windows' built-in command-line tool, used here to run Git and Claude Code
 - **Git** - Tracks every change to your files on your computer, creating restore points you can return to anytime
 - **Commit** - A snapshot of your project at a specific point in time with a description of what changed
 - **Claude Code** - AI coding assistant that writes code, fixes bugs, and handles Git operations through simple requests
@@ -17,31 +17,29 @@ You're working with AI assistance. It makes changes to your files. Sometimes the
 ## What You'll Need
 
 - Finished [Installing Claude Code on Windows](./Install_CLAUDE_Code_Win)
-- WSL and Ubuntu installed
 - 20 minutes
 
-## Step 1: Open Ubuntu Terminal
+## Step 1: Open PowerShell
 
 - Click the **Start** menu
-- Type `Ubuntu`
-- Click **Ubuntu** to open the terminal
+- Type `PowerShell`
+- Click **Windows PowerShell** to open it
 
-You'll see a command prompt ending with `$`.
+**Note:** If you set up the optional WSL/Ubuntu path instead of the native install, open the **Ubuntu** app instead — Git and Claude Code work the same way there, just with Linux-style paths (`/mnt/c/Users/...`) instead of `~\Documents\...`.
 
 ## Step 2: Install Git
 
-- Type this command and press Enter:
-  ```
-  sudo apt-get install git
-  ```
-- When prompted, type your password and press Enter
-- Wait for installation to complete (10-30 seconds)
-- Verify Git is installed:
+- Verify whether Git is already installed:
   ```
   git --version
   ```
-
-You should see something like `git version 2.34.1`.
+- If you see a version number like `git version 2.45.0`, skip to Step 3
+- If you see an error, install Git for Windows:
+  - Go to [git-scm.com/download/win](https://git-scm.com/download/win)
+  - The download should start automatically — open the installer when it finishes
+  - Click **Next** through the installer, accepting the default options
+  - Click **Install**, then **Finish**
+  - Close and reopen PowerShell, then verify again with `git --version`
 
 ## Step 3: Configure Git with Your Identity
 
@@ -55,21 +53,18 @@ Git needs to know who you are for commit messages.
 
 Using your name and email helps you identify who made changes when multiple persons work on this.
 
-## Step 4: Navigate to a Windows Folder
+## Step 4: Navigate to Your Documents Folder
 
-WSL can access your Windows files through `/mnt/c/`.
-
-- Navigate to your Windows user folder:
+- Navigate to your Documents folder:
   ```
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  cd ~\Documents
   ```
-  Replace `YOUR_USERNAME` with your actual Windows username.
 - Verify you're in the right place:
   ```
   pwd
   ```
 
-You should see `/mnt/c/Users/YOUR_USERNAME/Documents`.
+You should see a path ending in `\Documents`.
 
 ## Step 5: Create Project Folder
 
@@ -254,9 +249,9 @@ Remember: Test after each feature, commit after each success, discard failures.
 
 ## Troubleshooting
 
-- **"not a git repository" error:** Make sure you're in the test_claude folder (`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
+- **"not a git repository" error:** Make sure you're in the test_claude folder (`cd ~\Documents\test_claude`)
 - **Can't find timer.html in Windows:** The file is at `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
-- **Git asks for password:** You mistyped the `sudo` password—try again carefully
+- **`git` command not found:** Close and reopen PowerShell after installing Git for Windows so the PATH updates, then run `git --version` again
 - **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, click **Console** tab), copy any red error messages, paste them to Claude
 
 ## What You Can Ask Claude

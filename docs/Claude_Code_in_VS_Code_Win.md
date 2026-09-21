@@ -1,18 +1,17 @@
 ---
-title: "Set Up VS Code for Claude Code on WSL"
+title: "Set Up VS Code for Claude Code on Windows"
 ---
 [Home](./)
 
-# Set Up VS Code for Claude Code on WSL
+# Set Up VS Code for Claude Code on Windows
 
-You've installed WSL and Claude Code on your Windows machine - now you want a visual editor to work with your code. VS Code bridges the gap between Windows and your Linux environment, letting you edit files visually while running Claude Code in the integrated terminal. Think of VS Code as a window into your Linux world.
+You've installed Claude Code on your Windows machine - now you want a visual editor to work with your code. VS Code lets you edit files visually while running Claude Code in the integrated terminal, right next to each other in the same window.
 
 ## Key Concepts
 
-- **VS Code** - A free code editor from Microsoft that runs on Windows but can connect to WSL
-- **WSL Extension** - Connects VS Code to your Linux environment so you can run Linux tools like Claude Code
-- **Integrated Terminal** - A terminal panel inside VS Code that runs in your WSL (Linux) environment
-- **/mnt/c/** - How WSL accesses your Windows files (e.g., `/mnt/c/Users/...` = `C:\Users\...`)
+- **VS Code** - A free code editor from Microsoft with a built-in terminal
+- **Integrated Terminal** - A PowerShell terminal panel inside VS Code, so you don't need to switch windows to run Claude Code
+- **Workspace folder** - The folder you open in VS Code; Claude Code reads and edits files within it
 
 ## What You'll Need
 
@@ -35,38 +34,15 @@ You've installed WSL and Claude Code on your Windows machine - now you want a vi
 - VS Code opens with a Welcome tab - you can close this tab
 
 
-## Step 3: Install the WSL Extension
+## Step 3: Open the Folder in VS Code
 
-- In VS Code, click the **Extensions** icon in the left sidebar (it looks like four squares)
-- Type `WSL` in the search box
-- Find **WSL** by Microsoft (it should be the first result)
-- Click the blue **Install** button
-- Wait for installation to complete (a few seconds)
-
-## Step 4: Connect VS Code to WSL
-
-- Look at the bottom-left corner of VS Code - you'll see a blue or green icon
-- Click this icon to open the remote connection menu
-- Select **Connect to WSL** from the menu
-- VS Code will reload and connect to your Ubuntu installation
-- The bottom-left corner should now show **WSL: Ubuntu**
-
-The first time you connect, VS Code installs a small server in WSL. This takes about 30 seconds.
-
-## Step 5: Open the Folder in VS Code
-
-- In VS Code (still connected to WSL), click **File** in the menu bar, then **Open Folder**
-- A **Open Folder** dropdown appears in the top center. 
-- Find your folder by typing:
-  ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  ```
-  Replace `YOUR_USERNAME` with your Windows username (e.g., `John.Smith`)
-- Click **OK**. VS Code reloads with your `test_claude` folder 
+- In VS Code, click **File** in the menu bar, then **Open Folder**
+- Navigate to **Documents**, select the `test_claude` folder
+- Click **Select Folder**. VS Code reloads with your `test_claude` folder
 - If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 
-## Step 6: Start Claude Code
+## Step 4: Start Claude Code
 
 - After VS Code reloads, open a new terminal: click **Terminal** in the menu bar, then **New Terminal**
 - In the terminal panel, type:
@@ -76,7 +52,7 @@ The first time you connect, VS Code installs a small server in WSL. This takes a
 
 Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt.
 
-## Step 7: Test the Workflow
+## Step 5: Test the Workflow
 
 - In Claude Code, type: 
 ```
@@ -89,12 +65,10 @@ Write a short article explaining why LLMs like to use Markdown format. Save it a
 
 ## Reopening Claude in VS Code Later
 
-After closing VS Code, here's how to get back to your WSL projects:
+After closing VS Code, here's how to get back to your project:
 
-- **Option A:** Open VS Code, click the bottom-left corner, select **Connect to WSL**, then **File > Open Recent**. Select `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude [WSL: Ubuntu]`
-- **Option B:** Open Ubuntu App from Windows, navigate to your project in the terminal, and type `code .`
-
-VS Code remembers your recent folders, so Option A with Open Recent is usually the quickest.
+- **Option A:** Open VS Code, click **File > Open Recent**, and select `test_claude`
+- **Option B:** Open **File Explorer**, right-click the `test_claude` folder, and select **Open with Code**
 
 ## Next Steps
 
@@ -102,20 +76,16 @@ VS Code remembers your recent folders, so Option A with Open Recent is usually t
 - Have Claude Code help you write new features: "Add a function that calculates the average of a list"
 - Use Claude Code to fix bugs: "This code gives an error, can you fix it?"
 - Try the Claude Code VS Code extension for a visual interface with inline diffs (search "Claude Code" in Extensions)
-- To handle bigger files more efficiently, create a folder in the WSL file system (`/home/user/`). From Windows, look for the Linux icon at the bottom of the sidebar in File Explorer. Or enter `\\wsl.localhost\` in the address bar.
 
 ## Troubleshooting
 
-- **"WSL: Ubuntu" not showing in bottom-left** - Make sure WSL is installed correctly; try opening Ubuntu terminal first to verify it works
-- **Terminal shows PowerShell instead of Linux** - Click the dropdown arrow next to the **+** in the terminal panel and select **Ubuntu (WSL)**
-- **`claude` command not found** - Run `claude --version` to check if Claude Code is installed; if not, follow the WSL installation tutorial first
+- **`claude` command not found** - Run `claude --version` in the VS Code terminal to check if Claude Code is installed; if not, follow the [installation tutorial](Install_CLAUDE_Code_Win.md) first
+- **Using WSL instead?** - If you set up the optional WSL/Ubuntu path, install the **WSL** extension from the Extensions sidebar, click the blue/green icon in the bottom-left corner, and select **Connect to WSL** before opening your project folder (accessed at `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
 
 ## Workflow Overview
 
 - **VS Code** runs on Windows and provides the visual editor interface
-- **WSL Extension** connects VS Code to Ubuntu so you can run Linux tools
-- **Integrated Terminal** runs Claude Code inside WSL
-- Your files stay in Windows (Documents folder) - WSL accesses them via `/mnt/c/`
+- **Integrated Terminal** runs Claude Code right inside VS Code
 - Edit files in the editor, chat with Claude Code in the terminal - best of both worlds
 
 ---
