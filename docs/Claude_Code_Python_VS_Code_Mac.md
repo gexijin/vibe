@@ -68,6 +68,10 @@ print(iris_df.describe())
 
 - Save the file by clicking **File > Save**
 - Open Python terminal: click **View** in menu bar, then **Terminal**
+- Install the packages this script needs:
+  ```
+  pip install scikit-learn pandas
+  ```
 - In the terminal, run: `python iris_analysis.py`
 - You should see dataset structure and summary statistics in the terminal
 
