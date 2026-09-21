@@ -41,7 +41,7 @@ You've set up R in VS Code and can write code manually. Now you want AI to help 
 - Choose your authentication method:
   - **Claude Pro/Max users**: Click **Sign in with Claude.ai**, authorize in browser, and copy the code back to VS Code
   - **API key users**: Click **Use API Key** and paste your Anthropic API key
-- For detailed authentication steps, see the [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) guide (Step 5)
+- For detailed authentication steps, see the [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) guide (Step 3)
 - Once signed in, you'll see "Ready to help" in the chat panel
 
 ## Step 3: Create Initial R Script Manually
