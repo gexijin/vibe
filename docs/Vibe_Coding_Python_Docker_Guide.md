@@ -38,10 +38,10 @@ You now have a local Git repository and a backup on GitHub.
 
 ## Step 2: Copy Docker Configuration
 
-You need the `.devcontainer` folder from the vibe project to set up your Docker environment.
+You need a `.devcontainer` folder with Python, pandas, matplotlib, and scikit-learn pre-installed. Reuse the one from your `python-docker-demo` project (built in the [Python Coding in VS Code via Docker](./Python_Coding_Docker_Guide) tutorial) — it already has everything this tutorial needs.
 
 - Open File Explorer (Windows) or Finder (Mac)
-- Navigate to your vibe project folder (e.g., `Documents/vibe`)
+- Navigate to your `python-docker-demo` project folder
 - Find the `.devcontainer` folder
 - Copy the entire folder (it contains `Dockerfile` and `devcontainer.json`)
 - Navigate to your new `iris-analysis` folder
