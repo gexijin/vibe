@@ -28,12 +28,9 @@ Your `stock-report` Skill lives in the same project folder you used for the Skil
 
 **Windows (PowerShell):**
 - Click the **Windows Start button**, type `PowerShell`, and open it
-- Type these commands:
+- Type this command:
   ```powershell
-  cd ~/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
-
+  cd ~/Documents/test_claude
   ```
 - Start Claude Code:
   ```
