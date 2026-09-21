@@ -66,7 +66,7 @@ Your `nba-dashboard` folder should now contain:
 - If you don't see the notification, click the green icon in bottom-left corner and select **Reopen in Container**
 - VS Code builds the Docker container (takes 3-5 minutes first time)
 - Watch the progress notification showing build steps
-- When complete, the green icon shows **Dev Container: R in Docker**
+- When complete, the green icon shows **Dev Container: R in Docker (AMD64)**
 
 ## Step 4: Start Claude Code
 
