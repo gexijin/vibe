@@ -189,6 +189,9 @@ All English tutorials have corresponding Simplified Chinese versions with the sa
 ### Spanish (`es/`)
 All English tutorials have corresponding Spanish versions with the same filename structure.
 
+### Hindi (`hi/`)
+All English tutorials have corresponding Hindi versions with the same filename structure.
+
 Each translation folder includes:
 - All installation guides
 - All VS Code setup guides
