@@ -96,13 +96,17 @@ Docker runs your code in isolated containers that work the same on every machine
 
 **Install Docker Desktop:**
 
-- Update the package list and install:
+Docker Desktop itself isn't in the apt repository you just added — it's distributed as a standalone `.deb` file that you install with apt.
+
+- Go to the [Docker Desktop for Linux download page](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
+- Click the download button for Ubuntu and save the `.deb` file (it goes to your Downloads folder by default)
+- In your terminal, navigate to your Downloads folder and install it:
   ```
+  cd ~/Downloads
   sudo apt-get update
+  sudo apt install ./docker-desktop-amd64.deb
   ```
-  ```
-  sudo apt-get install docker-desktop
-  ```
+- If apt prints an error at the very end about installing a local package, you can ignore it — that's expected
 - Launch **Docker Desktop** from the app menu
 - Wait for the Docker engine to start (you'll see a green status indicator in the bottom left)
 
@@ -228,6 +232,10 @@ All four tools working? You're ready for the workshop!
 ### dpkg dependency errors during installation
 - Run `sudo apt-get install -f` to automatically install missing dependencies
 - Then retry the `dpkg -i` command
+
+### Docker Desktop tray icon missing (GNOME)
+- Docker Desktop needs the AppIndicator/KStatusNotifierItem GNOME extension to show its tray icon
+- On Ubuntu this is included by default; on other GNOME distros, install it from your distro's extension manager or [extensions.gnome.org](https://extensions.gnome.org/)
 
 ### Docker permission denied
 - Make sure you added your user to the docker group:
