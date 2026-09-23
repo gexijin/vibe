@@ -432,10 +432,11 @@
                 <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="Recherche und Schreiben. Hier starten.">Grundlagen</button>
                 <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="R-Programmier-Tutorials">📊 R</button>
                 <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Python-Programmier-Tutorials">🐍 Python</button>
+                <button class="filter-btn" id="filter-excel" data-language="excel" data-tooltip="Excel-Tabellen-Tutorials">📈 Excel</button>
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
-            <p class="learning-path-hint" id="learning-path-hint">Klicken Sie auf ein Thema, um zu starten. Wählen Sie Windows oder Mac.<br>Beginnen Sie mit Grundlagen, dann wählen Sie R oder Python.</p>
+            <p class="learning-path-hint" id="learning-path-hint">Klicken Sie auf ein Thema, um zu starten. Wählen Sie Windows oder Mac.<br>Beginnen Sie mit Grundlagen, dann wählen Sie R, Python oder Excel.</p>
         </div>
 
         <section class="section">
@@ -468,6 +469,7 @@
                 <li><a href="Github_desktop">Erste Schritte mit Versionskontrolle</a></li>
                 <li><a href="R_Coding_VS_Code_Guide">R in VS Code ausführen</a></li>
                 <li><a href="Python_Coding_VS_Code_Guide">Python in VS Code ausführen</a></li>
+                <li><a href="Excel_Coding_VS_Code_Guide">Claude Code mit Excel in VS Code verwenden</a></li>
                 <li><a href="Claude_Code_R_VS_Code_Mac">Claude Code für R in VS Code auf dem Mac verwenden</a></li>
                 <li><a href="Claude_Code_Python_VS_Code_Mac">Claude Code für Python in VS Code auf dem Mac verwenden</a></li>
                 <li><a href="GitHub_Desktop_Claude_Code_Workflow">GitHub Desktop mit Claude Code verwenden</a></li>
@@ -475,11 +477,12 @@
             </ol>
 
             <h2>Fortgeschrittene Themen</h2>
-            <ol class="tutorial-list" start="18">
+            <ol class="tutorial-list" start="19">
                 <li><a href="R_Coding_Docker_Guide">R-Programmierung in VS Code über Docker</a></li>
                 <li><a href="Python_Coding_Docker_Guide">Python-Programmierung in VS Code über Docker</a></li>
                 <li><a href="Vibe_Coding_R_Docker_Guide">Vibe Coding in R mit Claude Code</a></li>
                 <li><a href="Vibe_Coding_Python_Docker_Guide">Vibe Coding in Python mit Claude Code</a></li>
+                <li><a href="Vibe_Coding_Excel_Guide">Vibe Coding eines Budget-Trackers in Excel</a></li>
                 <li><a href="Reuse_Prompts_via_Slash_Commands">Benutzerdefinierte Slash-Befehle erstellen</a></li>
                 <li><a href="Create_Your_First_Claude_Skill">Ihren ersten Claude Skill erstellen</a></li>
                 <li><a href="Medical_Research_Skill">Einen Claude Skill für medizinische Forschung erstellen</a></li>
@@ -642,7 +645,9 @@
             22: { label: 'Claude\nSkill', url: 'Create_Your_First_Claude_Skill', desc: 'Erstellen Sie einen Claude Skill, der automatisch basierend auf dem Kontext aktiviert wird – upgraden Sie von manuellen Slash-Befehlen zu KI-aktivierten Fähigkeiten', level: 3 },
             23: { label: 'Medizinische\nForschung Skill', url: 'Medical_Research_Skill', desc: 'Erstellen Sie einen spezialisierten Skill, der PubMed durchsucht und medizinische Forschungsartikel in einfachem Deutsch zusammenfasst', level: 3 },
             24: { label: 'Subagenten\nerstellen', url: 'Create_subagents', desc: 'Erstellen Sie einen autonomen Agenten, der Skills verwendet, um komplexe Aufgaben zu erledigen – erstellen Sie einen Stock-Picker, der recherchiert, bewertet und Investitionen empfiehlt', level: 3 },
-            25: { label: 'Grundlegende\nOperationen', url: 'Claude_Code_Basic_Operations', desc: 'Lernen Sie die wesentlichen Claude Code-Operationen – Konversationen starten, Kontext verwalten, Slash-Befehle verwenden und mit Dateien arbeiten', level: 0 }
+            25: { label: 'Grundlegende\nOperationen', url: 'Claude_Code_Basic_Operations', desc: 'Lernen Sie die wesentlichen Claude Code-Operationen – Konversationen starten, Kontext verwalten, Slash-Befehle verwenden und mit Dateien arbeiten', level: 0 },
+            26: { label: 'Excel in\nVS Code', url: 'Excel_Coding_VS_Code_Guide', desc: 'Erstellen und bearbeiten Sie Excel-Tabellen mit Claude Code – mit echten Formeln, Formatierung und Diagrammen', level: 1 },
+            27: { label: 'Vibe Coding\nin Excel', url: 'Vibe_Coding_Excel_Guide', desc: 'Erstellen Sie einen echten Budget-Tracker mit mehreren Tabellenblättern und Diagrammen – nur mit natürlichsprachlichen Anfragen', level: 3 }
         };
 
         // Color scheme by level
@@ -688,7 +693,9 @@
             24: { x: 500, y: 80 },    // Creating an Agent
             7: { x: 480, y: 40 },   // R via Docker
             8: { x: 480, y: 40 },   // Python via Docker
-            10: { x: 500, y: -30 }   // Vibe Coding in R
+            10: { x: 500, y: -30 },  // Vibe Coding in R
+            26: { x: 240, y: 150 },  // Excel in VS Code
+            27: { x: 560, y: -30 }   // Vibe Coding in Excel
 
         };
 
@@ -802,7 +809,10 @@
             { id: 'e27', from: 22, to: 23 },   // Create Your First Skill → Medical Research Skill
             { id: 'e28', from: 23, to: 24 },   // Medical Research Skill → Creating an Agent
             { id: 'e29', from: 1, to: 25 },    // Install Win → Claude Code Basics
-            { id: 'e30', from: 2, to: 25 }     // Install Mac → Claude Code Basics
+            { id: 'e30', from: 2, to: 25 },    // Install Mac → Claude Code Basics
+            { id: 'e31', from: 3, to: 26 },    // VS Code Basics → Excel in VS Code
+            { id: 'e32', from: 26, to: 27 },   // Excel in VS Code → Vibe Coding in Excel
+            { id: 'e33', from: 9, to: 27 }     // GitHub + Claude → Vibe Coding in Excel
 
         ];
 
@@ -913,8 +923,9 @@
             claude_code_r_mac: [19],   // Claude Code for R (Mac only)
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
+            excel: [26, 27],           // Excel in VS Code, Vibe Coding in Excel
             shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24] // All coding tutorials
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -943,6 +954,13 @@
                     tutorialCategories[currentPlatform][0], // Install only (first item)
                     ...tutorialCategories.python,
                     ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
+                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
+                ];
+            } else if (currentLanguage === 'excel') {
+                // Excel mode: show platform install + Excel tutorials + coding shared (no git, no research paper, no skills)
+                visibleNodes = [
+                    tutorialCategories[currentPlatform][0], // Install only (first item)
+                    ...tutorialCategories.excel,
                     3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
                 ];
             } else {
@@ -993,6 +1011,7 @@
         const filterMac = document.getElementById('filter-mac');
         const filterR = document.getElementById('filter-r');
         const filterPython = document.getElementById('filter-python');
+        const filterExcel = document.getElementById('filter-excel');
         const filterBasics = document.getElementById('filter-basics');
 
         // Platform filter buttons
@@ -1020,6 +1039,7 @@
                 currentLanguage = 'r';
                 filterR.classList.add('active');
                 filterPython.classList.remove('active');
+                filterExcel.classList.remove('active');
                 filterBasics.classList.remove('active');
             } else {
                 // Toggle off - show all
@@ -1034,11 +1054,27 @@
                 currentLanguage = 'python';
                 filterPython.classList.add('active');
                 filterR.classList.remove('active');
+                filterExcel.classList.remove('active');
                 filterBasics.classList.remove('active');
             } else {
                 // Toggle off - show all
                 currentLanguage = null;
                 filterPython.classList.remove('active');
+            }
+            applyFilters();
+        });
+
+        filterExcel.addEventListener('click', () => {
+            if (currentLanguage !== 'excel') {
+                currentLanguage = 'excel';
+                filterExcel.classList.add('active');
+                filterR.classList.remove('active');
+                filterPython.classList.remove('active');
+                filterBasics.classList.remove('active');
+            } else {
+                // Toggle off - show all
+                currentLanguage = null;
+                filterExcel.classList.remove('active');
             }
             applyFilters();
         });
@@ -1049,6 +1085,7 @@
                 filterBasics.classList.add('active');
                 filterR.classList.remove('active');
                 filterPython.classList.remove('active');
+                filterExcel.classList.remove('active');
             } else {
                 // Toggle off - show all
                 currentLanguage = null;
