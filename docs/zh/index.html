@@ -427,10 +427,11 @@
                 <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="研究与写作，从这里开始">基础</button>
                 <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="R 编程教程">📊 R</button>
                 <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Python 编程教程">🐍 Python</button>
+                <button class="filter-btn" id="filter-excel" data-language="excel" data-tooltip="Excel 表格教程">📈 Excel</button>
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
-            <p class="learning-path-hint" id="learning-path-hint">点击主题开始学习。选择 Windows 或 Mac。<br>先学基础，再选 R 或 Python 路线。</p>
+            <p class="learning-path-hint" id="learning-path-hint">点击主题开始学习。选择 Windows 或 Mac。<br>先学基础，再选 R、Python 或 Excel 路线。</p>
         </div>
 
         <section class="section">
@@ -460,6 +461,7 @@
                 <li><a href="Github_desktop">Git 与 GitHub Desktop 入门</a></li>
                 <li><a href="R_Coding_VS_Code_Guide">在 VS Code 中运行 R</a></li>
                 <li><a href="Python_Coding_VS_Code_Guide">在 VS Code 中运行 Python</a></li>
+                <li><a href="Excel_Coding_VS_Code_Guide">在 VS Code 中用 Claude Code 处理 Excel</a></li>
                 <li><a href="Claude_Code_R_VS_Code_Mac">Mac：Claude Code 辅助 R 开发</a></li>
                 <li><a href="Claude_Code_Python_VS_Code_Mac">Mac：Claude Code 辅助 Python 开发</a></li>
                 <li><a href="GitHub_Desktop_Claude_Code_Workflow">GitHub Desktop 与 Claude Code 协作</a></li>
@@ -467,11 +469,12 @@
             </ol>
 
             <h2>高级主题</h2>
-            <ol class="tutorial-list" start="18">
+            <ol class="tutorial-list" start="19">
                 <li><a href="R_Coding_Docker_Guide">Docker 环境下的 R 编程</a></li>
                 <li><a href="Python_Coding_Docker_Guide">Docker 环境下的 Python 编程</a></li>
                 <li><a href="Vibe_Coding_R_Docker_Guide">R 语言 Vibe 编程</a></li>
                 <li><a href="Vibe_Coding_Python_Docker_Guide">Python Vibe 编程</a></li>
+                <li><a href="Vibe_Coding_Excel_Guide">Excel Vibe 编程：预算追踪表</a></li>
                 <li><a href="Reuse_Prompts_via_Slash_Commands">自定义斜杠命令</a></li>
                 <li><a href="Create_Your_First_Claude_Skill">创建你的第一个 Claude Skill</a></li>
                 <li><a href="Medical_Research_Skill">医学研究 Claude Skill</a></li>
@@ -634,7 +637,9 @@
             22: { label: 'Claude\n技能', url: 'Create_Your_First_Claude_Skill', desc: '构建根据上下文自动激活的 Claude 技能', level: 3 },
             23: { label: '医学研究\nClaude 技能', url: 'Medical_Research_Skill', desc: '创建自动搜索 PubMed 并总结论文的技能', level: 3 },
             24: { label: '创建\n子代理', url: 'Create_subagents', desc: '构建能完成复杂任务的自主代理', level: 3 },
-            25: { label: 'Claude Code\n基本操作', url: 'Claude_Code_Basic_Operations', desc: '掌握对话、上下文管理、斜杠命令等基本操作', level: 0 }
+            25: { label: 'Claude Code\n基本操作', url: 'Claude_Code_Basic_Operations', desc: '掌握对话、上下文管理、斜杠命令等基本操作', level: 0 },
+            26: { label: 'VS Code 中\n的 Excel', url: 'Excel_Coding_VS_Code_Guide', desc: '用 Claude Code 创建和编辑 Excel 表格，包含真实公式、格式和图表', level: 1 },
+            27: { label: 'Excel 的\nVibe 编程', url: 'Vibe_Coding_Excel_Guide', desc: '用自然语言构建带图表的多工作表预算追踪表', level: 3 }
         };
 
         // Color scheme by level
@@ -680,7 +685,9 @@
             24: { x: 500, y: 80 },    // Creating an Agent
             7: { x: 480, y: 40 },   // R via Docker
             8: { x: 480, y: 40 },   // Python via Docker
-            10: { x: 500, y: -30 }   // Vibe Coding in R
+            10: { x: 500, y: -30 },  // Vibe Coding in R
+            26: { x: 240, y: 150 },  // Excel in VS Code
+            27: { x: 560, y: -30 }   // Vibe Coding in Excel
 
         };
 
@@ -794,7 +801,10 @@
             { id: 'e27', from: 22, to: 23 },   // Create Your First Skill → Medical Research Skill
             { id: 'e28', from: 23, to: 24 },   // Medical Research Skill → Creating an Agent
             { id: 'e29', from: 1, to: 25 },    // Install Win → Claude Code Basics
-            { id: 'e30', from: 2, to: 25 }     // Install Mac → Claude Code Basics
+            { id: 'e30', from: 2, to: 25 },    // Install Mac → Claude Code Basics
+            { id: 'e31', from: 3, to: 26 },    // VS Code Basics → Excel in VS Code
+            { id: 'e32', from: 26, to: 27 },   // Excel in VS Code → Vibe Coding in Excel
+            { id: 'e33', from: 9, to: 27 }     // GitHub + Claude → Vibe Coding in Excel
 
         ];
 
@@ -905,8 +915,9 @@
             claude_code_r_mac: [19],   // Claude Code for R (Mac only)
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
+            excel: [26, 27],           // Excel in VS Code, Vibe Coding in Excel
             shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24] // All coding tutorials
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -935,6 +946,13 @@
                     tutorialCategories[currentPlatform][0], // Install only (first item)
                     ...tutorialCategories.python,
                     ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
+                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
+                ];
+            } else if (currentLanguage === 'excel') {
+                // Excel mode: show platform install + Excel tutorials + coding shared (no git, no research paper, no skills)
+                visibleNodes = [
+                    tutorialCategories[currentPlatform][0], // Install only (first item)
+                    ...tutorialCategories.excel,
                     3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
                 ];
             } else {
@@ -985,6 +1003,7 @@
         const filterMac = document.getElementById('filter-mac');
         const filterR = document.getElementById('filter-r');
         const filterPython = document.getElementById('filter-python');
+        const filterExcel = document.getElementById('filter-excel');
         const filterBasics = document.getElementById('filter-basics');
 
         // Platform filter buttons
@@ -1012,6 +1031,7 @@
                 currentLanguage = 'r';
                 filterR.classList.add('active');
                 filterPython.classList.remove('active');
+                filterExcel.classList.remove('active');
                 filterBasics.classList.remove('active');
             } else {
                 // Toggle off - show all
@@ -1026,11 +1046,27 @@
                 currentLanguage = 'python';
                 filterPython.classList.add('active');
                 filterR.classList.remove('active');
+                filterExcel.classList.remove('active');
                 filterBasics.classList.remove('active');
             } else {
                 // Toggle off - show all
                 currentLanguage = null;
                 filterPython.classList.remove('active');
+            }
+            applyFilters();
+        });
+
+        filterExcel.addEventListener('click', () => {
+            if (currentLanguage !== 'excel') {
+                currentLanguage = 'excel';
+                filterExcel.classList.add('active');
+                filterR.classList.remove('active');
+                filterPython.classList.remove('active');
+                filterBasics.classList.remove('active');
+            } else {
+                // Toggle off - show all
+                currentLanguage = null;
+                filterExcel.classList.remove('active');
             }
             applyFilters();
         });
@@ -1041,6 +1077,7 @@
                 filterBasics.classList.add('active');
                 filterR.classList.remove('active');
                 filterPython.classList.remove('active');
+                filterExcel.classList.remove('active');
             } else {
                 // Toggle off - show all
                 currentLanguage = null;

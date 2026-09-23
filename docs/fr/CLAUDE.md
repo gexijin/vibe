@@ -68,6 +68,17 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 **Parcours Python Alternatif :**
 - **Claude Code + Python (Mac uniquement) :** Python dans VS Code → `Claude_Code_Python_VS_Code_Mac.md`
 
+### Parcours Codage Excel
+**Parcours Principal (VS Code, sans Docker - la compétence xlsx de Claude Code s'exécute directement) :**
+1. Installez Claude Code (`Install_CLAUDE_Code_Win.md` ou `Install_Claude_Code_MacOS.md`)
+2. `VS_Code_Getting_Started.md` - Bases de VS Code
+3. `Excel_Coding_VS_Code_Guide.md` - Utilisez Claude Code pour créer et modifier des feuilles de calcul dans VS Code
+4. `Vibe_Coding_Excel_Guide.md` - Vibe coding d'un suivi de budget multi-feuilles avec graphiques
+
+**Compétences de Support (branche depuis l'étape 1) :**
+- `Github_desktop.md` - Bases du contrôle de version avec GitHub Desktop
+- `GitHub_Desktop_Claude_Code_Workflow.md` - Flux de travail de développement intégré
+
 ## Vue d'Ensemble du Contenu
 
 ### Guides d'Installation
@@ -101,6 +112,10 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `Python_Coding_Docker_Guide.md` - Python dans les conteneurs Docker
 - `Vibe_Coding_Python_Docker_Guide.md` - Construction d'un tableau de bord Streamlit avec vibe coding
 - `Claude_Code_Python_VS_Code_Mac.md` - Codage Python simplifié dans VS Code sur Mac
+
+### Guides de Codage Excel
+- `Excel_Coding_VS_Code_Guide.md` - Création et modification de feuilles de calcul Excel avec Claude Code dans VS Code
+- `Vibe_Coding_Excel_Guide.md` - Construction d'un suivi de budget multi-feuilles avec graphiques grâce au vibe coding
 
 ### Tutoriels Avancés
 - `Create_Your_First_Claude_Skill.md` - Création de compétences Claude Code personnalisées
@@ -241,6 +256,9 @@ docs/
 ├── Python_Coding_Docker_Guide.md
 ├── Vibe_Coding_Python_Docker_Guide.md
 ├── Claude_Code_Python_VS_Code_Mac.md
+│
+├── Excel_Coding_VS_Code_Guide.md
+├── Vibe_Coding_Excel_Guide.md
 │
 ├── Create_Your_First_Claude_Skill.md
 ├── Create_subagents.md
