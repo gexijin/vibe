@@ -10,24 +10,26 @@ You want a spreadsheet built - formulas, formatting, maybe a chart - but you don
 ## Key Concepts
 
 - **xlsx skill** - Built-in Claude Code capability for creating and editing `.xlsx` spreadsheets with real formulas, formatting, and charts
-- **[Excel Viewer extension](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)** - VS Code extension that lets you preview and edit spreadsheet files without leaving the editor
+- **[Spreadsheet Viewer extension](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)** (formerly Excel Viewer) - VS Code extension that lets you preview and edit spreadsheet files without leaving the editor
 - **Formulas vs. hardcoded numbers** - Claude Code writes actual Excel formulas (like `=SUM(B2:B9)`) so your sheet recalculates when you change the data
 
 ## What You'll Need
 
 - Finished [VS Code Basics](./VS_Code_Getting_Started)
 - Claude Code installed and working (see [Install Claude Code on Windows](./Install_CLAUDE_Code_Win) or [Install Claude Code on Mac](./Install_Claude_Code_MacOS))
-- Microsoft Excel, LibreOffice Calc, or Google Sheets to open the finished file (optional - the Excel Viewer extension works without any of these)
+- Microsoft Excel, LibreOffice Calc, or Google Sheets to open the finished file (optional - the Spreadsheet Viewer extension works without any of these)
 - 15-20 minutes
 
-## Step 1: Install the Excel Viewer Extension in VS Code
+## Step 1: Install the Spreadsheet Viewer Extension in VS Code
 
 - Open VS Code
 - Click the **Extensions** icon in the left sidebar (or click **View > Extensions**)
 - Search for `GrapeCity.gc-excelviewer`
-- Click **Install** on **Excel Viewer** (also listed as **Spreadsheet Viewer**) by GrapeCity
+- Click **Install** on **Spreadsheet Viewer** by **MESCIUS**
 
-This lets you double-click any `.xlsx` file and see it rendered as a spreadsheet right inside VS Code, with no need to switch to another app.
+**Note:** This extension used to be called **Excel Viewer** by **GrapeCity**, and older guides and videos may still use that name. Searching for "Excel Viewer" now shows several other extensions, so search by the ID above to get the right one. The ID still starts with `GrapeCity` - that's expected.
+
+This lets you click any `.xlsx` file and see it rendered as a spreadsheet right inside VS Code, with no need to switch to another app.
 
 ## Step 2: Create Your Project Folder
 
@@ -62,7 +64,8 @@ Create a spreadsheet called budget.xlsx with columns for Category, Monthly Amoun
 ## Step 5: Preview the Result
 
 - In VS Code's Explorer panel (left side), click `budget.xlsx`
-- The Excel Viewer extension opens the file as a spreadsheet
+- The Spreadsheet Viewer extension opens the file as a spreadsheet
+- If you see scrambled text and symbols instead, VS Code opened the file as plain text - see Troubleshooting below
 - Click the **Total** cell at the bottom - notice it's a formula, not a typed-in number
 - If you have Excel or LibreOffice Calc installed, you can also double-click the file in File Explorer (Windows) or Finder (Mac) to open it there instead
 
@@ -75,11 +78,11 @@ Add a pie chart to budget.xlsx showing each category's share of the total monthl
 ```
 
 - Press Enter
-- Reopen `budget.xlsx` in the Excel Viewer tab (click the refresh icon, or close and reopen the file) to see the new chart
+- Reopen `budget.xlsx` in the Spreadsheet Viewer tab (click the refresh icon, or close and reopen the file) to see the new chart
 
 ## Step 7: Edit the Data and Ask Claude to Update It
 
-- In the Excel Viewer, or in Excel/LibreOffice if you have it open, change one of the amounts (for example, double the Rent value)
+- In the Spreadsheet Viewer, or in Excel/LibreOffice if you have it open, change one of the amounts (for example, double the Rent value)
 - Save the file
 - In the Claude Code terminal, type:
 
@@ -116,14 +119,15 @@ Create a messy_sales.csv file with 15 rows of sales data that has some issues: a
 
 ## Troubleshooting
 
-- **Excel Viewer shows a blank or broken preview**: Close the tab and reopen the file. If it still fails, open the file in Excel, LibreOffice Calc, or Google Sheets instead - the file itself is fine, it's just a preview glitch.
+- **`budget.xlsx` opens as scrambled text and symbols (starting with `PK`)**: VS Code is showing the raw file because no spreadsheet viewer handled it. The file itself is fine - an `.xlsx` is a compressed bundle, not plain text. Check that **Spreadsheet Viewer** by MESCIUS (`GrapeCity.gc-excelviewer`) is installed and enabled, then close the tab, right-click `budget.xlsx` in the Explorer panel, choose **Open With...**, and pick **Excel Editor** (Spreadsheet Viewer's editor for `.xlsx` files). If another spreadsheet extension is also installed, choose **Configure default editor for '*.xlsx'...** in the same list and pick **Excel Editor** so single-clicking the file uses it from now on.
+- **Spreadsheet Viewer shows a blank or broken preview**: Close the tab and reopen the file. If it still fails, open the file in Excel, LibreOffice Calc, or Google Sheets instead - the file itself is fine, it's just a preview glitch.
 - **Formula cells show blank instead of a number**: This usually means the file wasn't recalculated after being written. Ask Claude: "Recalculate budget.xlsx and confirm there are no formula errors."
 - **Claude's changes don't show up**: Make sure you're looking at the same file Claude edited (check the filename it mentions). Close and reopen the tab in VS Code to force a refresh.
 - **"claude is not recognized" in the terminal**: Claude Code isn't installed correctly. Revisit the [installation guide](./Install_CLAUDE_Code_Win) for your platform.
 
 ## Workflow Summary
 
-- **VS Code** - Your project folder and a place to preview spreadsheets with the Excel Viewer extension
+- **VS Code** - Your project folder and a place to preview spreadsheets with the Spreadsheet Viewer extension
 - **Claude Code** - Writes and edits real `.xlsx` files with working formulas, based on your plain-English requests
 - **Excel / LibreOffice / Google Sheets** - Optional, for opening and manually tweaking the files Claude creates
 - **Iterate** - Describe what you want, check the result, describe the next change
