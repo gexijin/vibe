@@ -41,7 +41,7 @@ You now have a local Git repository and a backup on GitHub.
 - Click **File > Open Folder**
 - Select your `budget-dashboard` folder
 - Click **Select Folder** (Windows) or **Open** (Mac)
-- If you haven't already, install the **Excel Viewer** extension (`GrapeCity.gc-excelviewer`) so you can preview spreadsheets without leaving VS Code
+- If you haven't already, install the **Spreadsheet Viewer** extension by MESCIUS (formerly **Excel Viewer** by GrapeCity) so you can preview spreadsheets without leaving VS Code. Search the Extensions panel for its ID, `GrapeCity.gc-excelviewer`, to find the right one
 
 ## Step 3: Start Claude Code
 
@@ -68,7 +68,7 @@ Create a spreadsheet called budget.xlsx with two sheets: "Income" and "Expenses"
 
 - Press Enter
 - Watch Claude write and run a Python script that builds the workbook, then recalculates it so the totals show real numbers
-- Open `budget.xlsx` in the Excel Viewer tab and click through both sheets
+- Open `budget.xlsx` in the Spreadsheet Viewer tab and click through both sheets
 
 **Save your progress:** Ask Claude to commit using Git, or do this yourself from GitHub Desktop:
 ```
@@ -103,7 +103,7 @@ Add a pie chart to the Expenses sheet showing each category's total share of spe
 
 - Press Enter
 - Claude adds both charts and recalculates the file
-- Reopen `budget.xlsx` in the Excel Viewer (or refresh the tab) and check both sheets for the new charts
+- Reopen `budget.xlsx` in the Spreadsheet Viewer (or refresh the tab) and check both sheets for the new charts
 
 ## Step 7: Fourth Vibe - Highlight Over-Budget Categories
 
@@ -137,7 +137,7 @@ Add data validation to the Category column in the Expenses sheet so it only acce
 
 Before committing, review what Claude built.
 
-- In the Excel Viewer, click through all three sheets - Income, Expenses, Summary
+- In the Spreadsheet Viewer, click through all three sheets - Income, Expenses, Summary
 - You don't need to understand every formula, but get a sense of the structure
 - Open GitHub Desktop
 - You'll see `budget.xlsx` listed as a changed file
@@ -165,7 +165,7 @@ Vibe coding shines when you iterate. Try adding features by describing them:
 - "Create a second workbook called household_budget.xlsx for a family of four with more categories"
 
 After each successful feature:
-- Open the file and check it in the Excel Viewer
+- Open the file and check it in the Spreadsheet Viewer
 - If it works, commit with GitHub Desktop
 - If something looks wrong, describe it to Claude and ask to fix it
 - When fixed, commit the working version
@@ -191,7 +191,7 @@ Each time, follow the pattern: describe → check the file → iterate → commi
 ## Troubleshooting
 
 - **A formula cell shows blank or `None`** - The file needs to be recalculated after edits. Ask Claude: "Recalculate budget.xlsx and confirm there are no formula errors."
-- **Chart doesn't update after changing data** - Reopen the tab in VS Code (close it and click the file again) to force the Excel Viewer to refresh.
+- **Chart doesn't update after changing data** - Reopen the tab in VS Code (close it and click the file again) to force the Spreadsheet Viewer to refresh.
 - **Claude makes a mistake** - Normal! Describe what looks wrong and ask Claude to fix it. Vibe coding includes iteration and debugging.
 - **Can't push to GitHub** - Make sure you're logged into GitHub Desktop and published the repository (Step 1). Check your internet connection.
 - **Dropdown list doesn't appear** - Data validation only shows in real spreadsheet apps (Excel, LibreOffice, Google Sheets), not always in lightweight previewers. Open the file in Excel or LibreOffice Calc to test it.
@@ -201,7 +201,7 @@ Each time, follow the pattern: describe → check the file → iterate → commi
 This tutorial combined several tools into one workflow:
 
 - **GitHub Desktop** - Version control with visual interface (create repos, commit, push)
-- **VS Code** - Editor with an Excel Viewer extension for quick previews
+- **VS Code** - Editor with the Spreadsheet Viewer extension for quick previews
 - **Claude Code** - AI assistant that builds and edits real `.xlsx` files from your descriptions
 - **openpyxl (behind the scenes)** - The engine Claude uses to write formulas, formatting, and charts into the file
 
@@ -214,7 +214,7 @@ After this initial setup, your daily vibe coding routine becomes:
 1. **Open VS Code** - Open your project folder
 2. **Start Claude Code** - Type `claude` in the terminal
 3. **Describe your goal** - "Add a feature that..." or "Fix the row where..."
-4. **Check the file** - Open it in the Excel Viewer or in Excel/LibreOffice
+4. **Check the file** - Open it in the Spreadsheet Viewer or in Excel/LibreOffice
 5. **Iterate or commit** - If something's off, describe the fix; if it works, commit with GitHub Desktop
 6. **Push regularly** - Click **Push origin** to back up to GitHub
 
