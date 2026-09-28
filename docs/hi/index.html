@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 
       gtag('config', 'G-4W28447R3P');
     </script>
-    <title>Claude Code pour Tous</title>
+    <title>सभी के लिए Claude Code</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -411,91 +411,93 @@
 <body>
     <div class="lang-switch">
         <a href="../">English</a>
-        <a href="../hi/">हिन्दी</a>
+        <a href="../zh/">中文</a>
+        <a href="../ja/">日本語</a>
+        <a href="../es/">Español</a>
+        <a href="../fr/">Français</a>
+        <a href="../de/">Deutsch</a>
+        <a class="active">हिन्दी</a>
     </div>
     <div class="container">
         <header>
-            <h1>Claude Code pour Tous</h1>
-            <p class="subtitle">Tutoriels pas à pas pour mettre l'IA au service de votre travail</p>
+            <h1>सभी के लिए Claude Code</h1>
+            <p class="subtitle">आपके लिए काम करवाने के लिए AI का उपयोग करना सिखाने वाले चरण-दर-चरण ट्यूटोरियल</p>
         </header>
 
         <div class="graph-container">
             <div class="filter-controls">
-                <button class="filter-btn active" id="filter-windows" data-platform="windows" data-tooltip="Afficher les tutoriels Windows">🪟 Windows</button>
-                <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="Afficher les tutoriels Mac">🍎 Mac</button>
+                <button class="filter-btn active" id="filter-windows" data-platform="windows" data-tooltip="Windows ट्यूटोरियल दिखाएँ">🪟 Windows</button>
+                <button class="filter-btn" id="filter-mac" data-platform="mac" data-tooltip="Mac ट्यूटोरियल दिखाएँ">🍎 Mac</button>
             </div>
             <div class="filter-controls-right">
-                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="Recherche et Rédaction. Commencez ici.">Base</button>
-                <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="Tutoriels de programmation R">📊 R</button>
-                <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Tutoriels de programmation Python">🐍 Python</button>
-                <button class="filter-btn" id="filter-excel" data-language="excel" data-tooltip="Tutoriels de tableurs Excel">📈 Excel</button>
+                <button class="filter-btn active" id="filter-basics" data-type="basics" data-tooltip="शोध और लेखन। यहाँ से शुरू करें।">बुनियादी बातें</button>
+                <button class="filter-btn" id="filter-r" data-language="r" data-tooltip="R प्रोग्रामिंग ट्यूटोरियल">📊 R</button>
+                <button class="filter-btn" id="filter-python" data-language="python" data-tooltip="Python प्रोग्रामिंग ट्यूटोरियल">🐍 Python</button>
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
-            <p class="learning-path-hint" id="learning-path-hint">Cliquez sur un sujet pour commencer. Choisissez Windows ou Mac.<br>Commencez par Base, puis choisissez R, Python ou Excel.</p>
+            <p class="learning-path-hint" id="learning-path-hint">शुरू करने के लिए किसी विषय पर क्लिक करें। Windows या Mac चुनें।<br>पहले बुनियादी बातों से शुरू करें, फिर R या Python चुनें।</p>
         </div>
 
         <section class="section">
-        <p>&nbsp;&nbsp;&nbsp; Claude Code est un puissant assistant de programmation IA qui peut également automatiser la recherche, la rédaction, l'édition et bien plus encore.
-             Il s'exécute localement sur votre ordinateur dans un répertoire de travail, agissant comme un assistant utile sous votre direction.
-             Pour une tâche donnée, il utilise Claude, le grand modèle de langage, plusieurs fois pour planifier le travail, l'exécuter et
-             vérifier les résultats.</p>
+        <p>&nbsp;&nbsp;&nbsp; Claude Code एक शक्तिशाली AI कोडिंग सहायक है, जो शोध, लेखन, संपादन और भी बहुत कुछ स्वचालित कर सकता है।
+             यह आपके कंप्यूटर पर स्थानीय रूप से एक वर्किंग डायरेक्टरी में चलता है, और आपके मार्गदर्शन में एक सहायक साथी की तरह काम करता है।
+             कोई भी काम पूरा करने के लिए, यह बड़े भाषा मॉडल Claude का बार-बार उपयोग करके काम की योजना बनाता है, उसे अंजाम देता है, और
+             परिणामों की जाँच करता है।</p>
 
-        <p>&nbsp;&nbsp;&nbsp; À travers des activités pratiques, je présente les concepts et outils fondamentaux qui libèrent tout le potentiel de Claude Code, notamment Git pour le contrôle de version, Visual Studio Code pour la programmation et l'édition, WSL (Sous-système Windows pour Linux) pour l'exécution sur Windows, et Docker pour les environnements de développement isolés.</p>
-        <p>&nbsp;&nbsp;&nbsp; Pour utiliser Claude Code, vous avez besoin d'un <a href="https://claude.com/pricing">abonnement Claude</a> payant.
-            Alternativement, <a href="https://openrouter.ai/docs/guides/claude-code-integration">OpenRouter</a> offre une option plus économique en fournissant un accès à plus de 500 modèles via une API unifiée, y compris des alternatives abordables comme ChatGPT.
+        <p>&nbsp;&nbsp;&nbsp; व्यावहारिक गतिविधियों के ज़रिए, मैं उन बुनियादी अवधारणाओं और उपकरणों से परिचय कराता हूँ जो Claude Code की पूरी क्षमता को खोलते हैं, जिनमें वर्शन कंट्रोल के लिए Git, कोडिंग और संपादन के लिए Visual Studio Code, Windows पर चलाने के लिए WSL (Windows Subsystem for Linux), और अलग-थलग (isolated) डेवलपमेंट एनवायरनमेंट के लिए Docker शामिल हैं।</p>
+        <p>&nbsp;&nbsp;&nbsp; Claude Code का उपयोग करने के लिए आपको एक सशुल्क <a href="https://claude.com/pricing">Claude सदस्यता</a> चाहिए।
+            वैकल्पिक रूप से, <a href="https://openrouter.ai/docs/guides/claude-code-integration">OpenRouter</a> एक ही API के ज़रिए 500 से अधिक मॉडलों तक पहुँच देकर, ChatGPT जैसे किफ़ायती विकल्पों सहित, एक अधिक किफ़ायती विकल्प प्रदान करता है।
         </p>
         <br>
-            <h2>Pour Commencer</h2>
+            <h2>शुरुआत करें</h2>
             <ol class="tutorial-list">
-                <li><a href="Install_CLAUDE_Code_Win">Installer Claude Code sur Windows</a></li>
-                <li><a href="Install_Claude_Code_MacOS">Installer Claude Code sur Mac</a></li>
-                <li><a href="VS_Code_Getting_Started">Débuter avec VS Code</a></li>
-                <li><a href="Claude_Code_Basic_Operations">Claude Code : Opérations de Base</a></li>
-                <li><a href="Claude_Code_in_VS_Code_Win">Configurer VS Code pour Claude Code sur Windows</a></li>
-                <li><a href="Claude_Code_in_VS_Code_Mac">Utiliser Claude Code depuis VS Code sur Mac</a></li>
-                <li><a href="Claude_Code_Git_Windows">Claude Code avec contrôle de version local pour Windows</a></li>
-                <li><a href="Claude_Code_Git_Mac">Claude Code avec contrôle de version local pour Mac</a></li>
-                <li><a href="Claude_Code_RStudio_Mac">Utiliser Claude Code avec RStudio sur Mac</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">Utiliser Claude Code depuis WSL avec RStudio sur Windows</a></li>
+                <li><a href="Install_CLAUDE_Code_Win">Windows पर Claude Code इंस्टॉल करें</a></li>
+                <li><a href="Install_Claude_Code_MacOS">Mac पर Claude Code इंस्टॉल करें</a></li>
+                <li><a href="VS_Code_Getting_Started">VS Code के साथ शुरुआत करें</a></li>
+                <li><a href="Claude_Code_Basic_Operations">Claude Code: बुनियादी संचालन</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Win">Windows पर Claude Code के लिए VS Code सेट करें</a></li>
+                <li><a href="Claude_Code_in_VS_Code_Mac">Mac पर VS Code से Claude Code का उपयोग करें</a></li>
+                <li><a href="Claude_Code_Git_Windows">Windows के लिए स्थानीय वर्शन कंट्रोल के साथ Claude Code</a></li>
+                <li><a href="Claude_Code_Git_Mac">Mac के लिए स्थानीय वर्शन कंट्रोल के साथ Claude Code</a></li>
+                <li><a href="Claude_Code_RStudio_Mac">Mac पर RStudio के साथ Claude Code का उपयोग</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">Windows पर WSL से RStudio के साथ Claude Code का उपयोग</a></li>
             </ol>
 
-            <h2>Développement des Compétences</h2>
+            <h2>कौशल विकास</h2>
             <ol class="tutorial-list" start="11">
-                <li><a href="Github_desktop">Débuter avec le Contrôle de Version</a></li>
-                <li><a href="R_Coding_VS_Code_Guide">Exécuter R dans VS Code</a></li>
-                <li><a href="Python_Coding_VS_Code_Guide">Exécuter Python dans VS Code</a></li>
-                <li><a href="Excel_Coding_VS_Code_Guide">Utiliser Claude Code avec Excel dans VS Code</a></li>
-                <li><a href="Claude_Code_R_VS_Code_Mac">Utiliser Claude Code pour R dans VS Code sur Mac</a></li>
-                <li><a href="Claude_Code_Python_VS_Code_Mac">Utiliser Claude Code pour Python dans VS Code sur Mac</a></li>
-                <li><a href="GitHub_Desktop_Claude_Code_Workflow">Utiliser GitHub Desktop avec Claude Code</a></li>
-                <li><a href="Writing_Research_Paper_Claude_Code">Rédiger un Article de Recherche avec Claude Code</a></li>
+                <li><a href="Github_desktop">वर्शन कंट्रोल के साथ शुरुआत करें</a></li>
+                <li><a href="R_Coding_VS_Code_Guide">VS Code में R चलाएँ</a></li>
+                <li><a href="Python_Coding_VS_Code_Guide">VS Code में Python चलाएँ</a></li>
+                <li><a href="Claude_Code_R_VS_Code_Mac">Mac पर VS Code में R के लिए Claude Code का उपयोग करें</a></li>
+                <li><a href="Claude_Code_Python_VS_Code_Mac">Mac पर VS Code में Python के लिए Claude Code का उपयोग करें</a></li>
+                <li><a href="GitHub_Desktop_Claude_Code_Workflow">Claude Code के साथ GitHub Desktop का उपयोग करें</a></li>
+                <li><a href="Writing_Research_Paper_Claude_Code">Claude Code के साथ एक शोध पत्र लिखें</a></li>
             </ol>
 
-            <h2>Sujets Avancés</h2>
-            <ol class="tutorial-list" start="19">
-                <li><a href="R_Coding_Docker_Guide">Programmation R dans VS Code via Docker</a></li>
-                <li><a href="Python_Coding_Docker_Guide">Programmation Python dans VS Code via Docker</a></li>
-                <li><a href="Vibe_Coding_R_Docker_Guide">Vibe Coding en R avec Claude Code</a></li>
-                <li><a href="Vibe_Coding_Python_Docker_Guide">Vibe Coding en Python avec Claude Code</a></li>
-                <li><a href="Vibe_Coding_Excel_Guide">Vibe Coding d'un suivi de budget dans Excel</a></li>
-                <li><a href="Reuse_Prompts_via_Slash_Commands">Créer des Commandes Slash Personnalisées</a></li>
-                <li><a href="Create_Your_First_Claude_Skill">Créer Votre Première Compétence Claude</a></li>
-                <li><a href="Medical_Research_Skill">Créer une Compétence Claude pour la Recherche Médicale</a></li>
-                <li><a href="Create_subagents">Créer un Sous-agent dans Claude Code</a></li>
+            <h2>उन्नत विषय</h2>
+            <ol class="tutorial-list" start="18">
+                <li><a href="R_Coding_Docker_Guide">Docker के ज़रिए VS Code में R कोडिंग</a></li>
+                <li><a href="Python_Coding_Docker_Guide">Docker के ज़रिए VS Code में Python कोडिंग</a></li>
+                <li><a href="Vibe_Coding_R_Docker_Guide">Claude Code के साथ R में Vibe Coding</a></li>
+                <li><a href="Vibe_Coding_Python_Docker_Guide">Claude Code के साथ Python में Vibe Coding</a></li>
+                <li><a href="Reuse_Prompts_via_Slash_Commands">कस्टम स्लैश कमांड बनाएँ</a></li>
+                <li><a href="Create_Your_First_Claude_Skill">अपना पहला Claude Skill बनाएँ</a></li>
+                <li><a href="Medical_Research_Skill">मेडिकल रिसर्च के लिए एक Claude Skill बनाएँ</a></li>
+                <li><a href="Create_subagents">Claude Code में एक सबएजेंट बनाएँ</a></li>
             </ol>
 
             <br>
-            <p><a href="Building_Tutorial_Library_with_Slash_Commands">Comment Claude Code m'a aidé à créer ces tutoriels</a></p>
+            <p><a href="Building_Tutorial_Library_with_Slash_Commands">Claude Code ने मुझे ये ट्यूटोरियल बनाने में कैसे मदद की</a></p>
         </section>
 
         <div style="text-align: center; margin: 2rem 0;">
-            <img src="../assets/robot2.jpg" alt="Claude Code Robot" style="max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+            <img src="../assets/robot2.jpg" alt="Claude Code रोबोट" style="max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
         </div>
 
         <footer>
-            <p>Vibe-créé par <a href="https://www.linkedin.com/in/steven-ge-ab016947/">Steven Ge</a>, <a href="https://orditus.com">Orditus LLC</a>. Commentaires et code source sur <a href="https://github.com/gexijin/vibe">GitHub.</a> Dernière mise à jour : 18/02/2026.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">Traduit par Claude avec révision éditoriale.</p>
+            <p>Steven Ge, <a href="https://www.linkedin.com/in/steven-ge-ab016947/">Orditus LLC</a> द्वारा वाइब-निर्मित। फ़ीडबैक और सोर्स कोड <a href="https://github.com/gexijin/vibe">GitHub पर।</a> अंतिम अद्यतन: 18.02.2026।</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">Claude द्वारा अनुवादित, बिना मानव समीक्षा के।</p>
         </footer>
     </div>
 
@@ -509,15 +511,15 @@
             <h3 id="modal-title"></h3>
             <p id="modal-desc"></p>
             <div class="modal-buttons">
-                <a id="modal-link" class="modal-btn">Commencer</a>
-                <button id="modal-complete" class="modal-btn-secondary">Marquer Terminé</button>
+                <a id="modal-link" class="modal-btn">शुरू करें</a>
+                <button id="modal-complete" class="modal-btn-secondary">पूर्ण के रूप में चिह्नित करें</button>
             </div>
         </div>
     </div>
 
     <script>
         // Language identifier for completion tracking
-        const LANG = 'fr';
+        const LANG = 'hi';
         const STORAGE_KEY = `completedTutorials-${LANG}`;
 
         // Load completed tutorials from localStorage
@@ -615,35 +617,33 @@
             drawConfetti();
         }
 
-        // Tutorial data (French)
+        // Tutorial data (Hindi)
         const tutorials = {
-            1: { label: 'Installer Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Guide pas à pas pour installer Claude Code sur Windows avec WSL, Ubuntu et Node.js', level: 0 },
-            14: { label: 'Claude Code dans\nVS Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Configurez VS Code pour travailler avec Claude Code sur Windows WSL—éditez des fichiers visuellement tout en exécutant l\'IA dans le terminal', level: 1 },
-            11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Apprenez les bases du contrôle de version avec Git localement et Claude Code—pas besoin de compte GitHub', level: 1 },
-            2: { label: 'Installer Claude\nCode (Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Guide de configuration rapide pour Claude Code sur macOS avec Node.js et npm', level: 0 },
-            15: { label: 'Claude Code dans\nVS Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'Configurez VS Code pour travailler avec Claude Code sur Mac—éditez des fichiers visuellement tout en exécutant l\'IA dans le terminal', level: 1 },
-            12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: 'Apprenez les bases du contrôle de version avec Git localement et Claude Code sur Mac—pas besoin de compte GitHub', level: 1 },
-            3: { label: 'Bases de\nVS Code', url: 'VS_Code_Getting_Started', desc: 'Apprenez les fondamentaux de Visual Studio Code—installation, navigation de l\'interface, extensions et programmation assistée par IA avec GitHub Copilot', level: 0 },
-            4: { label: 'Contrôle de\nVersion', url: 'Github_desktop', desc: 'Introduction à Git et GitHub Desktop pour gérer votre code', level: 0 },
-            5: { label: 'R dans\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Configurez R avec l\'autocomplétion, les graphiques et le support des applications Shiny dans VS Code', level: 1 },
-            6: { label: 'Python dans\nVS Code', url: 'Python_Coding_VS_Code_Guide', desc: 'Configurez Python avec l\'autocomplétion, le débogage et les applications web Streamlit', level: 1 },
-            7: { label: 'R via\nDocker', url: 'R_Coding_Docker_Guide', desc: 'Exécutez R dans des conteneurs isolés et reproductibles avec des images Docker préconstruites', level: 3 },
-            8: { label: 'Python via\nDocker', url: 'Python_Coding_Docker_Guide', desc: 'Exécutez Python dans des conteneurs isolés et reproductibles avec des images Docker préconstruites', level: 3 },
-            9: { label: 'Claude Code +\nGitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Combinez la programmation assistée par IA avec des flux de travail professionnels de contrôle de version', level: 2 },
-            10: { label: 'Vibe Coding\nen R', url: 'Vibe_Coding_R_Docker_Guide', desc: 'Construisez un vrai tableau de bord de statistiques NBA en utilisant des requêtes en langage naturel—l\'expérience complète du vibe coding', level: 3 },
-            13: { label: 'Article de\nRecherche', url: 'Writing_Research_Paper_Claude_Code', desc: 'Rédigez des articles de recherche plus rapidement avec Claude Code pour la recherche et la rédaction tandis que Git suit chaque version', level: 2 },
-            16: { label: 'Vibe Coding\nen Python', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'Analysez le jeu de données Iris en utilisant des requêtes en langage naturel—décrivez des visualisations et regardez-les apparaître', level: 3 },
-            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Utilisez Claude Code avec RStudio sur Mac—créez des projets R et améliorez-les avec l\'IA pendant que RStudio exécute votre code', level: 2 },
-            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Utilisez Claude Code depuis WSL avec RStudio sur Windows—faites le pont entre Windows RStudio et l\'assistance IA basée sur Linux', level: 2 },
-            19: { label: 'Claude Code\npour R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Utilisez l\'assistant IA Claude Code pour écrire et améliorer du code R dans VS Code—demandez des graphiques, des analyses et des améliorations de code', level: 3 },
-            20: { label: 'Claude Code\npour Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Utilisez l\'assistant IA Claude Code pour écrire et améliorer du code Python dans VS Code—demandez des graphiques, des analyses et des améliorations de code', level: 3 },
-            21: { label: 'Commandes\nSlash', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Créez des raccourcis réutilisables pour des prompts complexes—transformez de longues instructions en commandes simples comme /stock-report', level: 3 },
-            22: { label: 'Compétence\nClaude', url: 'Create_Your_First_Claude_Skill', desc: 'Construisez une Compétence Claude qui s\'active automatiquement selon le contexte—passez des commandes slash manuelles aux capacités déclenchées par l\'IA', level: 3 },
-            23: { label: 'Compétence pour\nRecherche Médicale', url: 'Medical_Research_Skill', desc: 'Créez une compétence spécialisée qui recherche sur PubMed et résume des articles de recherche médicale en français simple', level: 3 },
-            24: { label: 'Créer un\nSous-agent', url: 'Create_subagents', desc: 'Construisez un agent autonome qui utilise des compétences pour accomplir des tâches complexes—créez un sélecteur d\'actions qui recherche, note et recommande des investissements', level: 3 },
-            25: { label: 'Opérations\nde Base', url: 'Claude_Code_Basic_Operations', desc: 'Apprenez les opérations essentielles de Claude Code—démarrer des conversations, gérer le contexte, utiliser les commandes slash et travailler avec des fichiers', level: 0 },
-            26: { label: 'Excel dans\nVS Code', url: 'Excel_Coding_VS_Code_Guide', desc: 'Utilisez Claude Code pour créer et modifier des feuilles de calcul Excel avec de vraies formules, une mise en forme et des graphiques', level: 1 },
-            27: { label: 'Vibe Coding\nen Excel', url: 'Vibe_Coding_Excel_Guide', desc: 'Construisez un vrai suivi de budget multi-feuilles avec des graphiques grâce à des requêtes en langage naturel—l\'expérience complète du vibe coding', level: 3 }
+            1: { label: 'Claude Code\nइंस्टॉल करें (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'WSL, Ubuntu और Node.js का उपयोग करके Windows पर Claude Code इंस्टॉल करने की चरण-दर-चरण मार्गदर्शिका', level: 0 },
+            14: { label: 'Claude Code\nVS Code में (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Windows WSL पर Claude Code के साथ काम करने के लिए VS Code सेट करें—टर्मिनल में AI चलाते हुए फ़ाइलों को विज़ुअली संपादित करें', level: 1 },
+            11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Claude Code के साथ स्थानीय रूप से Git का उपयोग करके वर्शन कंट्रोल की बुनियादी बातें सीखें—GitHub खाते की ज़रूरत नहीं', level: 1 },
+            2: { label: 'Claude Code\nइंस्टॉल करें (Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Node.js और npm के साथ macOS पर Claude Code के लिए त्वरित सेटअप मार्गदर्शिका', level: 0 },
+            15: { label: 'Claude Code\nVS Code में (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'Mac पर Claude Code के साथ काम करने के लिए VS Code सेट करें—टर्मिनल में AI चलाते हुए फ़ाइलों को विज़ुअली संपादित करें', level: 1 },
+            12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: 'Mac पर Claude Code के साथ स्थानीय रूप से Git का उपयोग करके वर्शन कंट्रोल की बुनियादी बातें सीखें—GitHub खाते की ज़रूरत नहीं', level: 1 },
+            3: { label: 'VS Code\nबुनियादी बातें', url: 'VS_Code_Getting_Started', desc: 'Visual Studio Code की बुनियादी बातें सीखें—इंस्टॉलेशन, इंटरफ़ेस नेविगेशन, एक्सटेंशन, और GitHub Copilot के साथ AI-संचालित कोडिंग', level: 0 },
+            4: { label: 'वर्शन\nकंट्रोल', url: 'Github_desktop', desc: 'अपने कोड को प्रबंधित करने के लिए Git और GitHub Desktop का परिचय', level: 0 },
+            5: { label: 'R\nVS Code में', url: 'R_Coding_VS_Code_Guide', desc: 'VS Code में कोड कम्प्लीशन, प्लॉट्स, और Shiny ऐप सपोर्ट के साथ R सेट करें', level: 1 },
+            6: { label: 'Python\nVS Code में', url: 'Python_Coding_VS_Code_Guide', desc: 'कोड कम्प्लीशन, डीबगिंग, और Streamlit वेब ऐप्स के साथ Python सेट करें', level: 1 },
+            7: { label: 'R\nDocker के ज़रिए', url: 'R_Coding_Docker_Guide', desc: 'पहले से बने Docker इमेज के साथ अलग-थलग, पुनरुत्पादनीय कंटेनरों में R चलाएँ', level: 3 },
+            8: { label: 'Python\nDocker के ज़रिए', url: 'Python_Coding_Docker_Guide', desc: 'पहले से बने Docker इमेज के साथ अलग-थलग, पुनरुत्पादनीय कंटेनरों में Python चलाएँ', level: 3 },
+            9: { label: 'Claude Code\n+ GitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'AI-सहायता प्राप्त कोडिंग को पेशेवर वर्शन कंट्रोल वर्कफ़्लो के साथ जोड़ें', level: 2 },
+            10: { label: 'Vibe Coding\nR में', url: 'Vibe_Coding_R_Docker_Guide', desc: 'प्राकृतिक भाषा अनुरोधों का उपयोग करके एक असली NBA आँकड़ा डैशबोर्ड बनाएँ—संपूर्ण वाइब कोडिंग अनुभव', level: 3 },
+            13: { label: 'शोध पत्र\nClaude के साथ', url: 'Writing_Research_Paper_Claude_Code', desc: 'शोध और मसौदा तैयार करने के लिए Claude Code का उपयोग करके शोध पत्र तेज़ी से लिखें, जबकि Git हर वर्शन को ट्रैक करता है', level: 2 },
+            16: { label: 'Vibe Coding\nPython में', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'प्राकृतिक भाषा अनुरोधों का उपयोग करके Iris डेटासेट का विश्लेषण करें—विज़ुअलाइज़ेशन का वर्णन करें और उन्हें बनते हुए देखें', level: 3 },
+            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Mac पर RStudio के साथ Claude Code का उपयोग करें—R प्रोजेक्ट बनाएँ और उन्हें AI से बेहतर करें जबकि RStudio आपका कोड चलाता है', level: 2 },
+            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Windows पर RStudio के साथ WSL से Claude Code का उपयोग करें—Windows के RStudio और Linux-आधारित AI सहायता के बीच की खाई को पाटें', level: 2 },
+            19: { label: 'Claude Code\nR के लिए (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'VS Code में R कोड लिखने और सुधारने के लिए Claude Code AI सहायक का उपयोग करें—प्लॉट, विश्लेषण, और कोड सुधार माँगें', level: 3 },
+            20: { label: 'Claude Code\nPython के लिए (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'VS Code में Python कोड लिखने और सुधारने के लिए Claude Code AI सहायक का उपयोग करें—प्लॉट, विश्लेषण, और कोड सुधार माँगें', level: 3 },
+            21: { label: 'स्लैश\nकमांड', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'जटिल प्रॉम्प्ट के लिए पुन: उपयोग करने योग्य शॉर्टकट बनाएँ—लंबे निर्देशों को /stock-report जैसे सरल कमांड में बदलें', level: 3 },
+            22: { label: 'Claude\nSkill', url: 'Create_Your_First_Claude_Skill', desc: 'एक Claude Skill बनाएँ जो संदर्भ के आधार पर अपने-आप सक्रिय हो जाए—मैन्युअल स्लैश कमांड से AI-सक्रिय क्षमताओं की ओर अपग्रेड करें', level: 3 },
+            23: { label: 'मेडिकल रिसर्च\nके लिए Claude Skill', url: 'Medical_Research_Skill', desc: 'एक विशेष स्किल बनाएँ जो PubMed खोजे और मेडिकल शोध लेखों को सरल भाषा में संक्षेप में बताए', level: 3 },
+            24: { label: 'सबएजेंट\nबनाएँ', url: 'Create_subagents', desc: 'एक स्वायत्त एजेंट बनाएँ जो जटिल कार्यों को पूरा करने के लिए स्किल्स का उपयोग करे—एक स्टॉक-पिकर बनाएँ जो शोध करे, स्कोर दे, और निवेश की सिफ़ारिश करे', level: 3 },
+            25: { label: 'Claude Code\nबुनियादी बातें', url: 'Claude_Code_Basic_Operations', desc: 'आवश्यक Claude Code संचालन सीखें—बातचीत शुरू करना, संदर्भ प्रबंधित करना, स्लैश कमांड का उपयोग करना, और फ़ाइलों के साथ काम करना', level: 0 }
         };
 
         // Color scheme by level
@@ -689,9 +689,7 @@
             24: { x: 500, y: 80 },    // Creating an Agent
             7: { x: 480, y: 40 },   // R via Docker
             8: { x: 480, y: 40 },   // Python via Docker
-            10: { x: 500, y: -30 },  // Vibe Coding in R
-            26: { x: 240, y: 150 },  // Excel in VS Code
-            27: { x: 560, y: -30 }   // Vibe Coding in Excel
+            10: { x: 500, y: -30 }   // Vibe Coding in R
 
         };
 
@@ -723,7 +721,7 @@
             Object.entries(tutorials).map(([id, t]) => ({
                 id: parseInt(id),
                 label: getNodeLabel(parseInt(id), t.label),
-                title: 'Cliquez pour commencer à apprendre',
+                title: 'सीखने के लिए क्लिक करें',
                 color: getNodeColor(parseInt(id), t.level),
                 font: { color: isCompleted(parseInt(id)) ? '#e6edf3' : '#0d1117', size: 12, face: 'system-ui' },
                 shape: 'box',
@@ -750,9 +748,9 @@
             ).length;
 
             if (visibleCompleted > 0) {
-                counter.textContent = `${visibleCompleted}/${visibleTotal} terminés`;
+                counter.textContent = `${visibleCompleted}/${visibleTotal} पूर्ण`;
             } else if (visibleTotal < Object.keys(tutorials).length) {
-                counter.textContent = `0/${visibleTotal} terminés`;
+                counter.textContent = `0/${visibleTotal} पूर्ण`;
             } else {
                 counter.textContent = '';
             }
@@ -765,7 +763,7 @@
             nodes.update({
                 id: id,
                 label: getNodeLabel(id, tutorial.label),
-                title: 'Cliquez pour commencer à apprendre',
+                title: 'सीखने के लिए क्लिक करें',
                 color: getNodeColor(id, tutorial.level),
                 font: { color: completed ? '#e6edf3' : '#0d1117', size: 12, face: 'system-ui' }
             });
@@ -805,10 +803,7 @@
             { id: 'e27', from: 22, to: 23 },   // Create Your First Skill → Medical Research Skill
             { id: 'e28', from: 23, to: 24 },   // Medical Research Skill → Creating an Agent
             { id: 'e29', from: 1, to: 25 },    // Install Win → Claude Code Basics
-            { id: 'e30', from: 2, to: 25 },    // Install Mac → Claude Code Basics
-            { id: 'e31', from: 3, to: 26 },    // VS Code Basics → Excel in VS Code
-            { id: 'e32', from: 26, to: 27 },   // Excel in VS Code → Vibe Coding in Excel
-            { id: 'e33', from: 9, to: 27 }     // GitHub + Claude → Vibe Coding in Excel
+            { id: 'e30', from: 2, to: 25 }     // Install Mac → Claude Code Basics
 
         ];
 
@@ -919,9 +914,8 @@
             claude_code_r_mac: [19],   // Claude Code for R (Mac only)
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
-            excel: [26, 27],           // Excel in VS Code, Vibe Coding in Excel
             shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27] // All coding tutorials
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -952,13 +946,6 @@
                     ...claudeCodePythonTutorial, // Add Claude Code for Python (Mac only)
                     3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
                 ];
-            } else if (currentLanguage === 'excel') {
-                // Excel mode: show platform install + Excel tutorials + coding shared (no git, no research paper, no skills)
-                visibleNodes = [
-                    tutorialCategories[currentPlatform][0], // Install only (first item)
-                    ...tutorialCategories.excel,
-                    3, 4, 9 // VS Code Basics, Version Control, GitHub Desktop (exclude Research Paper 13, Slash Commands 21, Skills 22, 23)
-                ];
             } else {
                 // All mode: show platform-specific basics + all coding tutorials
                 visibleNodes = [
@@ -978,7 +965,7 @@
                         id: id,
                         hidden: false,
                         physics: false,
-                        title: 'Cliquez pour commencer à apprendre'
+                        title: 'सीखने के लिए क्लिक करें'
                     });
                 } else {
                     // Hide node
@@ -1007,7 +994,6 @@
         const filterMac = document.getElementById('filter-mac');
         const filterR = document.getElementById('filter-r');
         const filterPython = document.getElementById('filter-python');
-        const filterExcel = document.getElementById('filter-excel');
         const filterBasics = document.getElementById('filter-basics');
 
         // Platform filter buttons
@@ -1035,7 +1021,6 @@
                 currentLanguage = 'r';
                 filterR.classList.add('active');
                 filterPython.classList.remove('active');
-                filterExcel.classList.remove('active');
                 filterBasics.classList.remove('active');
             } else {
                 // Toggle off - show all
@@ -1050,27 +1035,11 @@
                 currentLanguage = 'python';
                 filterPython.classList.add('active');
                 filterR.classList.remove('active');
-                filterExcel.classList.remove('active');
                 filterBasics.classList.remove('active');
             } else {
                 // Toggle off - show all
                 currentLanguage = null;
                 filterPython.classList.remove('active');
-            }
-            applyFilters();
-        });
-
-        filterExcel.addEventListener('click', () => {
-            if (currentLanguage !== 'excel') {
-                currentLanguage = 'excel';
-                filterExcel.classList.add('active');
-                filterR.classList.remove('active');
-                filterPython.classList.remove('active');
-                filterBasics.classList.remove('active');
-            } else {
-                // Toggle off - show all
-                currentLanguage = null;
-                filterExcel.classList.remove('active');
             }
             applyFilters();
         });
@@ -1081,7 +1050,6 @@
                 filterBasics.classList.add('active');
                 filterR.classList.remove('active');
                 filterPython.classList.remove('active');
-                filterExcel.classList.remove('active');
             } else {
                 // Toggle off - show all
                 currentLanguage = null;
@@ -1118,7 +1086,7 @@
         // Update complete button state
         function updateCompleteButton() {
             const completed = isCompleted(currentNodeId);
-            modalComplete.textContent = completed ? '✓ Terminé' : 'Marquer Terminé';
+            modalComplete.textContent = completed ? '✓ पूर्ण' : 'पूर्ण के रूप में चिह्नित करें';
             modalComplete.classList.toggle('completed', completed);
         }
 
