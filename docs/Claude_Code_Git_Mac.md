@@ -182,8 +182,7 @@ Sometimes AI code doesn't work and you need to start over from your last save po
   ```
   discard these changes.
   ```
-- Claude will ask for confirmation
-- Type `yes` and press Enter
+- Claude shows a menu with options like **Yes** and **No** — use the arrow keys (or press the number next to **Yes**) to select it, then press **Enter**
 - Refresh your browser—the 15-minute button disappears
 
 Claude throws away the new changes we don't like. The timer works again with just the 1- and 5-minute buttons!
