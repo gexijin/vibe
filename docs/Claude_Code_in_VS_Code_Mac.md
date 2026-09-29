@@ -35,18 +35,7 @@ You've installed Claude Code on your Mac - now you want a visual editor to work 
 - Click **File** in the menu bar, then **New Folder**
 - Name the folder `test_claude`
 
-## Step 3: Log In
-
-Claude Code will first ask you to log in. Follow the instructions.
-
-1. Press Enter to open a browser window
-2. Log in or create an account with Anthropic
-3. Copy the code and paste it back in the terminal
-4. Press Enter
-
-You are now logged in. You only need to do this once.
-
-## Step 4: Open the Folder in VS Code
+## Step 3: Open the Folder in VS Code
 
 - In VS Code, click **File** in the menu bar, then **Open Folder**
 - Navigate to **Documents** and select the `test_claude` folder you created
@@ -55,7 +44,7 @@ You are now logged in. You only need to do this once.
 
 You should now see `TEST_CLAUDE` in the Explorer panel on the left side.
 
-## Step 5: Start Claude Code
+## Step 4: Start Claude Code and Log In
 
 - Open a new terminal: click **Terminal** in the menu bar, then **New Terminal**
 - A terminal panel appears at the bottom of VS Code
@@ -63,10 +52,17 @@ You should now see `TEST_CLAUDE` in the Explorer panel on the left side.
   ```
   claude
   ```
+- The first time you do this, Claude Code asks you to log in:
+  1. Press Enter to open a browser window
+  2. Log in or create an account with Anthropic
+  3. Copy the code and paste it back in the terminal
+  4. Press Enter
 - You'll see a welcome message and the Claude Code prompt
 - Now you can use Claude Code while editing files in VS Code
 
-## Step 6: Test the Workflow
+**Note:** You only need to log in once — future sessions skip straight to the welcome message.
+
+## Step 5: Test the Workflow
 
 - In Claude Code, type:
 ```
