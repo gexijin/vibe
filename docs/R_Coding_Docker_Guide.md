@@ -62,7 +62,7 @@ Ever tried to share your R code with a colleague, only to spend hours debugging 
 - Select **Reopen in Container** from the menu
 - VS Code will build the container (this takes 5-10 minutes the first time)
 - You'll see a progress notification showing the build steps
-- When complete, the green icon will show **Dev Container: R in Docker**
+- When complete, the green icon will show **Dev Container: R in Docker (AMD64)**
 
 **Note:** The container automatically includes the R extension and languageserver package. The Dockerfile and devcontainer.json handle this for you.
 
@@ -158,7 +158,7 @@ titlePanel("My First R Docker App")
 - You'll see the complete configuration:
 
 ```dockerfile
-# choose a Dockerhub base image
+# choose a Dockerhub base image with R, Shiny Server, and tidyverse packages
 FROM rocker/shiny-verse:latest
 
 # 1. System deps commonly needed by R packages
@@ -177,7 +177,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 # 4. Install Claude Code globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# 5. Expose Shiny server port
+# 5. Give shiny passwordless sudo for updating Claude Code from VS Code
+RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    rm -rf /var/lib/apt/lists/*
+
+# Expose Shiny server port
 EXPOSE 3838
 ```
 
@@ -188,6 +192,7 @@ EXPOSE 3838
 - `RUN R -q -e 'install.packages(...)'` - Permanently installs R packages
 - `RUN curl... && apt-get install -y nodejs` - Installs Node.js, required to run Claude Code
 - `RUN npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance
+- `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - Lets the container's user run `sudo claude update` without a password prompt
 - `EXPOSE 3838` - Opens port 3838 for Shiny apps
 
 **Other Rocker images you can use:**
