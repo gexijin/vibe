@@ -17,14 +17,15 @@ Learning to code with AI assistance can feel overwhelming at first. Think of Cla
 ## What You'll Need
 
 - Claude Code installed from the [Windows](Install_CLAUDE_Code_Win.md) or [Mac](Install_Claude_Code_MacOS.md) tutorial
-- WSL installed if you are using Windows
 - Basic familiarity with using a terminal or command prompt
 - 15-20 minutes
 
 ## Step 1: Open Your Terminal
 
-- **Windows**: Press the Windows key, type `Ubuntu`, and press Enter to open the WSL terminal
+- **Windows**: Press the Windows key, type `PowerShell`, and press Enter to open PowerShell
 - **Mac**: Press `Cmd+Space`, type `Terminal`, and press Enter
+
+**Note:** If you set up the optional WSL/Ubuntu path in the Windows install tutorial instead of the native install, open the **Ubuntu** app instead and use Linux-style paths (e.g. `/mnt/c/Users/YourName/...`) in the steps below.
 
 A text window will open where you can type commands.
 
@@ -44,12 +45,13 @@ cd data_projects
 - Visit [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) in your web browser
 - Click the green **Code** button near the top right
 - Click **Download ZIP**
-- Extract the ZIP file to a folder called **data_projects** under the Downloads folder.
+- Extract the ZIP file under your Downloads folder. GitHub names the extracted folder **data_projects-main** — rename it to **data_projects** so it matches the rest of this tutorial.
 - In your terminal, navigate to the extracted folder:
-  - **Windows**: `cd /mnt/c/Users/YourName/Downloads/data_projects`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-Replace `YourName` with your actual username and adjust the path if you extracted it elsewhere. For Windows users, your windows files are accessed from /mnt/c in the Linux system. 
+Adjust the path if you extracted it elsewhere.
 
 ## Step 3: Start Claude Code from the folder
 

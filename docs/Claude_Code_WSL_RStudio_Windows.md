@@ -1,17 +1,17 @@
 ---
-title: "Using Claude Code from WSL with RStudio on Windows"
+title: "Using Claude Code with RStudio on Windows"
 ---
 [Home](./)
 
-# Using Claude Code from WSL with RStudio on Windows
+# Using Claude Code with RStudio on Windows
 
-You have RStudio on Windows for running R code and Claude Code in WSL for AI-powered coding assistance. This tutorial shows you how to use both tools together on the same project files. You'll create an R project in Windows, write some code manually, then use Claude Code from the Ubuntu terminal to enhance it with visualizations and analysis—all while RStudio stays open to run and test your code.
+You have RStudio on Windows for running R code and Claude Code for AI-powered coding assistance. This tutorial shows you how to use both tools together on the same project files. You'll create an R project, write some code manually, then use Claude Code from PowerShell to enhance it with visualizations and analysis—all while RStudio stays open to run and test your code.
 
 ## Key Concepts
 
-- **WSL (Windows Subsystem for Linux)** - Runs Ubuntu Linux inside Windows, where Claude Code is installed
-- **File path translation** - Windows paths like `C:\Users\YourName\Documents` become `/mnt/c/Users/YourName/Documents` in WSL
-- **Hybrid workflow** - RStudio (Windows) runs code; Claude Code (WSL) writes and improves it
+- **PowerShell** - Windows' built-in command-line tool, used here to run Claude Code alongside RStudio
+- **Hybrid workflow** - RStudio runs and displays code; Claude Code writes and improves it
+- **Shared files** - Both tools work on the exact same project folder, so changes from one show up in the other
 
 ## What You'll Need
 
@@ -61,29 +61,27 @@ summary(iris)
 - To run the code: highlight all lines, then click **Run** button (top-right of script pane)
 - You should see output in the Console pane showing dataset structure and statistics
 
-## Step 5: Open Ubuntu Terminal
+## Step 5: Open PowerShell
 
 - Click the **Windows Start button**
-- Type `Ubuntu` in the search box
-- Click on **Ubuntu** (orange circular icon)
-- The Ubuntu terminal opens
+- Type `PowerShell` in the search box
+- Click on **Windows PowerShell** to open it
 
 ## Step 6: Navigate to Your Project Folder
 
-- In the Ubuntu terminal, type this command (replace `YourUsername` with your actual Windows username):
+- In PowerShell, type:
   ```
-  cd /mnt/c/Users/YourUsername/Documents/test_claude
+  cd ~\Documents\test_claude
   ```
-- To find your username, you can type: `ls /mnt/c/Users/` and look for your folder name
 - Verify you're in the right location by typing:
   ```
-  ls
+  dir
   ```
 - You should see `iris.R` and `test_claude.Rproj` listed
 
 ## Step 7: Launch Claude Code
 
-- In the Ubuntu terminal, type:
+- In PowerShell, type:
   ```
   claude
   ```
@@ -113,7 +111,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## Step 10: Refine the Scatter Plot
 
-- Switch to Ubuntu terminal
+- Switch to PowerShell
 - Type this request:
   ```
   Remove title. Change marker type by species. Change to the classic theme.
@@ -129,7 +127,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## Step 12: Ask Claude for PCA Plot
 
-- Switch to Ubuntu terminal
+- Switch to PowerShell
 - Type this request:
   ```
   Add code to perform PCA on the numeric variables and plot the samples using the first two principal components.
@@ -144,7 +142,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## Step 14: Ask Claude to Review and Comment
 
-- Switch to Ubuntu terminal
+- Switch to PowerShell
 - Type this request:
   ```
   Review the entire script for correctness. Add comments when necessary. 
@@ -153,7 +151,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## Step 15: Ask Claude to Create R Markdown
 
-- Switch to Ubuntu terminal
+- Switch to PowerShell
 - Type this request:
   ```
   Create a new R Markdown file for this analysis. Save as iris_report.Rmd
@@ -174,12 +172,12 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 ## Troubleshooting
 
-- **"Permission denied" when accessing Windows files from WSL** - Make sure you're using `/mnt/c/` not `C:/`. Check your username is correct in the path.
 - **RStudio doesn't show file changes** - Click **File > Reopen with Encoding > UTF-8** to manually reload the file.
-- **"claude: command not found"** - Make sure you completed the installation guide. Try opening a fresh Ubuntu terminal window.
+- **"claude: command not found"** - Make sure you completed the installation guide. Try opening a fresh PowerShell window.
 - **Plots not appearing** - Make sure ggplot2 is installed. Run `install.packages("ggplot2")` in RStudio Console if needed.
-- **Error: "cannot change working directory"** - Your Windows path contains spaces. In Step 6, wrap the path in quotes: `cd "/mnt/c/Users/Your Name/Documents/test_claude"`
+- **Error: "cannot change working directory"** - Your Windows path contains spaces. In Step 6, wrap the path in quotes: `cd "~\Documents\Your Name\test_claude"`
 - **Claude Code is slow on first request** - Wait 30-60 seconds for Claude to initialize. Subsequent requests will be faster.
+- **Using WSL instead?** - If you set up the optional WSL/Ubuntu path, open the **Ubuntu** app instead of PowerShell in Steps 5-16, and navigate to your project with `cd /mnt/c/Users/YourUsername/Documents/test_claude`
 
 ## Next Steps
 
@@ -193,13 +191,13 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 This hybrid setup combines the best of both worlds:
 
-- **RStudio (Windows)** - Interactive R console, immediate plot viewing, familiar GUI for running code
-- **Claude Code (WSL)** - AI-powered code generation, review, and improvement
-- **Shared files** - Both tools work on the same files through WSL's `/mnt/c/` mount point
+- **RStudio** - Interactive R console, immediate plot viewing, familiar GUI for running code
+- **Claude Code (PowerShell)** - AI-powered code generation, review, and improvement
+- **Shared files** - Both tools work directly on the same project folder
 - **Iterative refinement** - Start with manual code, enhance with Claude, test in RStudio, then refine further
 - **Documentation** - Claude can generate comprehensive reports and comments for your analysis
 
-The workflow is simple: write or edit code with Claude in the Ubuntu terminal, then immediately test and run it in RStudio. No file copying or manual syncing needed—WSL and Windows share the same files seamlessly.
+The workflow is simple: write or edit code with Claude in PowerShell, then immediately test and run it in RStudio. No file copying or manual syncing needed—both tools share the same files.
 
 ---
 

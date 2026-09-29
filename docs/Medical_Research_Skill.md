@@ -26,15 +26,14 @@ In this tutorial, you'll create a Claude Skill that searches peer-reviewed medic
 
 If you completed the [slash commands tutorial](./Reuse_Prompts_via_Slash_Commands.md), the `test_claude` folder already exists. These commands work either way.
 
-**Windows (WSL):**
-- Open **Ubuntu** from the Start menu
+**Windows (PowerShell):**
+- Open **PowerShell** from the Start menu
 - Type these commands:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  Replace `YOUR_USERNAME` with your Windows username
 
 **Mac:**
 - Open **Terminal** (find it in Applications > Utilities)
@@ -45,7 +44,7 @@ If you completed the [slash commands tutorial](./Reuse_Prompts_via_Slash_Command
   cd test_claude
   ```
 
-The `-p` flag creates the folder if it doesn't exist, or simply does nothing if it already exists.
+The `-p` (Mac) and `-Force` (Windows) flags create the folder if it doesn't exist, or simply do nothing if it already exists.
 
 ## Step 2: Start Claude Code
 
