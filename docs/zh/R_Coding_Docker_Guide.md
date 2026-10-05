@@ -63,7 +63,7 @@ lang: "zh"
 - 从菜单选择 **Reopen in Container**
 - VS Code 会构建容器(首次需 5-10 分钟)
 - 会显示构建步骤的进度通知
-- 完成后,绿色图标会显示 **Dev Container: R in Docker**
+- 完成后,绿色图标会显示 **Dev Container: R in Docker (AMD64)**
 
 **注意:**容器自动包含 R 扩展和 languageserver 包。Dockerfile 和 devcontainer.json 会处理这些。
 
@@ -159,7 +159,7 @@ titlePanel("My First R Docker App")
 - 会看到完整配置:
 
 ```dockerfile
-# choose a Dockerhub base image
+# choose a Dockerhub base image with R, Shiny Server, and tidyverse packages
 FROM rocker/shiny-verse:latest
 
 # 1. System deps commonly needed by R packages
@@ -178,7 +178,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 # 4. Install Claude Code globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# 5. Expose Shiny server port
+# 5. Give shiny passwordless sudo for updating Claude Code from VS Code
+RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    rm -rf /var/lib/apt/lists/*
+
+# Expose Shiny server port
 EXPOSE 3838
 ```
 
@@ -189,6 +193,7 @@ EXPOSE 3838
 - `RUN R -q -e 'install.packages(...)'` - 永久安装 R 包
 - `RUN curl... && apt-get install -y nodejs` - 安装 Node.js,运行 Claude Code 所需
 - `RUN npm install -g @anthropic-ai/claude-code` - 全局安装 Claude Code 获取 AI 辅助
+- `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - 让容器的用户无需输入密码即可运行 `sudo claude update`
 - `EXPOSE 3838` - 为 Shiny 应用打开端口 3838
 
 **可用的其他 Rocker 镜像:**
@@ -255,6 +260,43 @@ library(data.table)
 4. **编写和运行代码** - 编辑 `.R` 文件,用 `Ctrl+Enter`/`Cmd+Enter` 逐行运行,或用 **▶ Run Shiny App** 按钮运行 Shiny 应用
 5. **保存工作** - 代码文件(`.R`、`.Rmd`)保存到计算机,在会话之间持久存在
 6. **提交和推送** - 使用 GitHub Desktop 提交更改并推送到仓库
+
+## 什么是 Docker Desktop?
+
+Docker Desktop 是一个让你在计算机上更轻松使用 Docker 的应用。它提供 Docker 所需的后台服务,还有一个可视化窗口,让你查看和管理容器、镜像、存储以及其他 Docker 资源。
+
+可以把 Docker Desktop 看作容器的控制中心。打开 Docker Desktop 时,它会启动 Docker 引擎。Docker 引擎是 Docker 中真正创建和运行容器的部分。通常你不需要直接操作引擎,因为 Docker Desktop 会替你管理它。
+
+### Docker Desktop 做什么?
+
+Docker Desktop 承担几项重要工作:
+
+- **运行 Docker 引擎** - 引擎负责创建和运行装有你的软件的容器。
+- **下载镜像** - 镜像是一个现成的起步包,例如装有 R 和常用 R 包的 Linux 系统。在本教程中,项目使用的是 Rocker 项目提供的镜像。
+- **构建容器** - Docker 根据本项目中的 Dockerfile 和 Dev Container 设置,创建一个为 R 开发准备好的容器。
+- **启动和停止容器** - 需要时,你可以打开、暂停、重启或停止容器。
+- **将容器连接到你的文件** - 项目文件夹可以在容器内访问,因此你可以在 VS Code 中编辑文件,而代码在容器中运行。
+- **将容器连接到你的浏览器** - 当 Shiny 应用使用端口 3838 时,Docker Desktop 和 VS Code 协同工作,让你能在 Web 浏览器中打开该应用。
+
+### Docker Desktop 在本教程中的作用
+
+有三个部分协同工作:
+
+1. **Docker Desktop** 在你的计算机上运行 Docker 引擎。
+2. **VS Code** 提供编辑器,你在其中编写和运行 R 代码。
+3. **Dev Container** 提供一个准备好的 Linux 环境,包含 R、R 包以及本项目使用的工具。
+
+当你选择 **Reopen in Container** 时,VS Code 会请 Docker Desktop 构建或启动项目的容器。应用仍然在你的计算机上运行,但 R 环境位于容器内。这样可以让 R 版本、包和系统工具与计算机的其他部分分开。
+
+Docker Desktop 不会取代 VS Code、R 或 Web 浏览器。它提供运行容器的环境。VS Code 是你工作的地方,R 是你使用的语言,浏览器则是你查看 Shiny 应用的地方。
+
+### 为什么使用 Docker Desktop?
+
+直接在计算机上安装 R 和所有需要的包,有时会导致版本冲突。一个项目可能需要与另一个项目不同版本的包。Docker Desktop 为每个项目提供独立、可控的环境,帮助避免这些冲突。
+
+例如,如果同学使用相同的项目文件和 Docker 设置,Docker 可以构建一个与你非常接近的环境。这样就不太容易遇到仅仅因为软件版本不同而导致的错误。你的 R 代码和项目文件仍保存在计算机上,而运行它们所需的工具则整理在容器内。
+
+在构建项目或在容器中重新打开项目之前,Docker Desktop 必须已打开并正在运行。如果 Docker Desktop 已关闭,VS Code 将无法启动容器,你可能会看到提示 Docker 未运行的错误。
 
 ---
 
