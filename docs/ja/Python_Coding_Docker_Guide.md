@@ -261,7 +261,7 @@ streamlit run app.py
 
 - アプリを実行したまま
 - VS Codeで`python/app.py`を編集
-- `st.title("オールドフェイスフル間欠泉データ")`の行を見つけます
+- 5行目を見つけます：`st.title("オールドフェイスフル間欠泉データ")`
 - 以下に変更：
 
 ```python
@@ -303,7 +303,7 @@ st.title("私の初めてのPython Dockerアプリ")
 
 - VS Codeエクスプローラーで`.devcontainer/Dockerfile`に移動
 - クリックしてファイルを開く
-- 9行目を見つけます：`RUN pip install --no-cache-dir ...`
+- 10行目を見つけます：`RUN pip install --no-cache-dir ...`
 - リストに`scikit-learn`を追加します：
 
 ```dockerfile
