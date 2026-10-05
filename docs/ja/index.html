@@ -462,7 +462,7 @@
              コンピュータの作業ディレクトリ内でローカルに動作し、あなたの指示のもとで頼れる相棒として機能します。
              タスクが与えられると、大規模言語モデルのClaudeを複数回呼び出して作業を計画し、実行し、結果を確認します。</p>
 
-        <p>&nbsp;&nbsp;&nbsp; 実践的なアクティビティを通じて、Claude Codeの潜在能力を最大限に引き出すための中核となる概念とツールを紹介します。バージョン管理用のGit、コーディングと編集用のVisual Studio Code、Windows上でLinux環境を提供するWSL（Windows Subsystem for Linux）、隔離された開発環境用のDockerなどが含まれます。</p>
+        <p>&nbsp;&nbsp;&nbsp; 実践的なアクティビティを通じて、Claude Codeの潜在能力を最大限に引き出すための中核となる概念とツールを紹介します。バージョン管理用のGit、コーディングと編集用のVisual Studio Code、Windows上で実行するためのPowerShell、隔離された開発環境用のDockerなどが含まれます。</p>
         <p>&nbsp;&nbsp;&nbsp; Claude Codeを使用するには、有料の<a href="https://claude.com/pricing">Claudeサブスクリプション</a>が必要です。
             または、<a href="https://openrouter.ai/docs/guides/claude-code-integration">OpenRouter</a>が統合APIを通じて500以上のモデル（ChatGPTなどの手頃な代替を含む）へのアクセスを提供し、より経済的な選択肢となります。
         </p>
@@ -479,7 +479,7 @@
                 <li><a href="Claude_Code_Git_Windows">Windows版Claude Codeでローカルバージョン管理</a></li>
                 <li><a href="Claude_Code_Git_Mac">Mac版Claude Codeでローカルバージョン管理</a></li>
                 <li><a href="Claude_Code_RStudio_Mac">MacでRStudioとClaude Codeを併用</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">WindowsでWSL経由でRStudioとClaude Codeを併用</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">WindowsでRStudioとClaude Codeを併用</a></li>
             </ol>
 
             <h2>スキル構築</h2>
@@ -639,8 +639,8 @@
 
         // Tutorial data (Japanese)
         const tutorials = {
-            1: { label: 'Claude Codeを\nインストール(Win)', url: 'Install_CLAUDE_Code_Win', desc: 'WSL、Ubuntu、Node.jsを使ってWindowsにClaude Codeをインストールするステップバイステップガイド', level: 0 },
-            14: { label: 'VS CodeでClaude\nCode (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Windows WSLでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
+            1: { label: 'Claude Codeを\nインストール(Win)', url: 'Install_CLAUDE_Code_Win', desc: 'PowerShellを使ってWindowsにClaude Codeをネイティブインストールするステップバイステップガイド（WSLはオプション）', level: 0 },
+            14: { label: 'VS CodeでClaude\nCode (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'WindowsでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
             11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Claude CodeでGitを使ったバージョン管理の基本を学ぶ - GitHubアカウント不要', level: 1 },
             2: { label: 'Claude Codeを\nインストール(Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Node.jsとnpmを使ったmacOSでのClaude Codeクイックセットアップガイド', level: 0 },
             15: { label: 'VS CodeでClaude\nCode (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'MacでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
@@ -656,7 +656,7 @@
             13: { label: 'Claudeで\n研究論文', url: 'Writing_Research_Paper_Claude_Code', desc: 'Claude Codeを使って研究論文を素早く作成 - Gitで全バージョンを追跡しながら研究とドラフト作成', level: 2 },
             16: { label: 'Pythonで\nVibe Coding', url: 'Vibe_Coding_Python_Docker_Guide', desc: '自然言語リクエストでIrisデータセットを分析 - 可視化を説明するとそれが現れる', level: 3 },
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'MacでRStudioとClaude Codeを組み合わせ、RプロジェクトをAIで強化しながらRStudioでコードを実行', level: 2 },
-            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'WSLのClaude CodeでWindows上のRStudioプロジェクトを強化し、WindowsとLinuxのAI環境をつなぐ', level: 2 },
+            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'WindowsでRStudioとClaude Codeを併用 - RStudioでRコードを手動編集しながら、PowerShellのClaude Codeがサポート', level: 2 },
             19: { label: 'RにClaude\nCode (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'VS CodeでRコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
             20: { label: 'Pythonに\nClaude Code (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'VS CodeでPythonコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
             21: { label: 'スラッシュ\nコマンド', url: 'Reuse_Prompts_via_Slash_Commands', desc: '複雑なプロンプトを再利用可能なショートカットに - /stock-reportのような簡単なコマンドに長い指示を変換', level: 3 },

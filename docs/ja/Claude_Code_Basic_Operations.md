@@ -18,14 +18,15 @@ AIアシスタントを使ったコーディングは、最初は圧倒される
 ## 必要なもの
 
 - [Windows](Install_CLAUDE_Code_Win.md)または[Mac](Install_Claude_Code_MacOS.md)のチュートリアルからClaude Codeをインストール済み
-- Windowsを使用している場合はWSLがインストール済み
 - ターミナルまたはコマンドプロンプトの基本的な使い方の知識
 - 15〜20分
 
 ## ステップ1: ターミナルを開く
 
-- **Windows**: Windowsキーを押し、`Ubuntu`と入力してEnterを押し、WSLターミナルを開きます
+- **Windows**: Windowsキーを押し、`PowerShell`と入力してEnterを押し、PowerShellを開きます
 - **Mac**: `Cmd+Space`を押し、`Terminal`と入力してEnterを押します
+
+**注意:** Windowsインストールチュートリアルでネイティブインストールではなく、オプションのWSL/Ubuntuの方法を設定した場合は、代わりに**Ubuntu**アプリを開き、以下のステップではLinux形式のパス（例: `/mnt/c/Users/YourName/...`）を使用してください。
 
 コマンドを入力できるウィンドウが開きます。
 
@@ -45,12 +46,13 @@ cd data_projects
 - Webブラウザで[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)にアクセスします
 - 右上近くの緑色の**Code**ボタンをクリックします
 - **Download ZIP**をクリックします
-- ZIPファイルをダウンロードフォルダの**data_projects**というフォルダに解凍します
+- ZIPファイルをダウンロードフォルダに解凍します。GitHubは解凍したフォルダに**data_projects-main**という名前を付けます。このチュートリアルの他の部分と一致させるため、**data_projects**に名前を変更してください。
 - ターミナルで、解凍したフォルダに移動します：
-  - **Windows**: `cd /mnt/c/Users/YourName/Downloads/data_projects`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-`YourName`を実際のユーザー名に置き換え、別の場所に解凍した場合はパスを調整してください。Windowsユーザーの場合、WindowsファイルはLinuxシステムから/mnt/cでアクセスできます。
+別の場所に解凍した場合はパスを調整してください。
 
 ## ステップ3: フォルダからClaude Codeを起動する
 

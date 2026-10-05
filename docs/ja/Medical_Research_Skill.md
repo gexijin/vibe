@@ -27,15 +27,14 @@ lang: "ja"
 
 [スラッシュコマンドチュートリアル](./Reuse_Prompts_via_Slash_Commands.md)を完了している場合、`test_claude`フォルダはすでに存在します。これらのコマンドはどちらの場合でも機能します。
 
-**Windows（WSL）：**
-- スタートメニューから**Ubuntu**を開く
+**Windows（PowerShell）：**
+- スタートメニューから**PowerShell**を開く
 - 次のコマンドを入力：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  `YOUR_USERNAME`をWindowsのユーザー名に置き換えてください
 
 **Mac：**
 - **ターミナル**を開く（アプリケーション > ユーティリティにあります）
@@ -46,7 +45,7 @@ lang: "ja"
   cd test_claude
   ```
 
-`-p`フラグは、フォルダが存在しない場合は作成し、すでに存在する場合は何もしません。
+`-p`（Mac）および`-Force`（Windows）フラグは、フォルダが存在しない場合は作成し、すでに存在する場合は何もしません。
 
 ## ステップ2：Claude Codeを起動
 

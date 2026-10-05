@@ -25,15 +25,14 @@ lang: "ja"
 
 ## ステップ1：プロジェクトフォルダを作成
 
-**Windows（WSL）：**
-- スタートメニューから**Ubuntu**を開く
+**Windows（PowerShell）：**
+- スタートメニューから**PowerShell**を開く
 - 次のコマンドを入力：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  `YOUR_USERNAME`をWindowsのユーザー名に置き換えてください
+  ```
 
 **Mac：**
 - **ターミナル**を開く（アプリケーション > ユーティリティにあります）
@@ -46,8 +45,8 @@ lang: "ja"
 
 ## ステップ2：Claude Codeを起動
 
-**Windows（WSL）：**
-- Ubuntuターミナルで次を入力：
+**Windows（PowerShell）：**
+- PowerShellで次を入力：
   ```
   claude
   ```
