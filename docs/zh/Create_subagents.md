@@ -11,28 +11,28 @@ lang: "zh"
 ## 关键概念
 
 - **Subagent** - 专门的AI工作者，拥有自己的目标、系统提示词和工具，能够自主完成任务
+- **Isolated Context（隔离上下文）** - subagent在自己独立的工作空间中运行，因此它的研究过程不会让你的主对话变得杂乱——只有最终结果会返回给你
 - **Skill** - 可重用的能力（如生成股票报告），subagent可以调用它来完成目标
 - **System Prompt** - 定义subagent做什么、如何为公司评分以及返回什么格式的指令
 - **关注点分离** - Skill收集数据；subagent使用这些数据做出决策
 
 ## 你需要准备什么
 
-- 完成[Windows上VS Code中的Claude Code](./Claude_Code_in_VS_Code_Win.md)或[Mac上VS Code中的Claude Code](./Claude_Code_in_VS_Code_Mac.md)
-- 已安装的股票报告skill（在`.claude/skills/generate-stock-reports/`中）
+- 完成[创建你的第一个Claude Skill](./Create_Your_First_Claude_Skill.md)教程
+- 已通过该教程安装好的`stock-report` Skill（在`.claude/skills/stock-report/`中）
 - VS Code或其他文本编辑器
 - 20-25分钟
 
-## 步骤1：创建项目文件夹并启动Claude Code
+## 步骤1：打开项目文件夹并启动Claude Code
 
-**Windows (WSL)：**
-- 从开始菜单打开**Ubuntu**
-- 输入以下命令：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
+你的`stock-report` Skill位于你在Skill教程中使用的同一个项目文件夹中——请重新打开那个文件夹，而不是新建一个。
+
+**Windows (PowerShell)：**
+- 点击 **Windows 开始按钮**，输入 `PowerShell` 并打开它
+- 输入此命令：
+  ```powershell
+  cd ~/Documents/test_claude
   ```
-  将`YOUR_USERNAME`替换为你的Windows用户名
 - 启动Claude Code：
   ```
   claude
@@ -42,9 +42,7 @@ lang: "zh"
 - 打开**Terminal**（在"应用程序 > 实用工具"中找到它）
 - 输入以下命令：
   ```bash
-  cd ~/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
+  cd ~/Documents/test_claude
   ```
 - 启动Claude Code：
   ```
@@ -61,9 +59,9 @@ lang: "zh"
 列出所有可用的 skill
 ```
 
-应该在输出中看到`generate-stock-reports`。这个skill研究公司并生成涵盖产品新闻、管理层更新、财务绩效和分析师见解的报告。
+应该在输出中看到`stock-report`。这个skill研究公司并生成涵盖产品新闻、管理层更新、财务绩效和分析师见解的报告。
 
-如果没有看到它，skill文件应该在`.claude/skills/generate-stock-reports/`（项目级别）中。
+如果没有看到它，skill文件应该在`.claude/skills/stock-report/`（项目级别）中。如果这个文件夹完全不存在，请先回到同一个项目文件夹中完成[创建你的第一个Claude Skill](./Create_Your_First_Claude_Skill.md)教程。
 
 ## 步骤3：理解Subagent与Skill架构
 
@@ -101,13 +99,15 @@ lang: "zh"
   ```
   为名为 stock-picker 的新 subagent 创建一个 markdown 文件：
   - 它接受两只或更多股票
-  - 使用 generate-stock-reports skill 进行研究
+  - 使用 stock-report skill 进行研究
   - 根据收集的数据类别创建评分卡
   - 给出最终推荐。
   ```
 - 在**[Continue]**上按**Enter**以使用**All tools**
 - 选择**Sonnet**作为模型
 - 按**Enter**随机选择一种颜色
+
+**"All tools"是什么意思：**subagent可以被限制为只使用它需要的工具——例如，一个只做研究的agent只需要网络搜索。本教程使用**All tools**，因为stock-picker需要在线研究，还可能需要写入文件。之后可以通过编辑subagent的文件来限制工具。
 
 ## 步骤5：查看你构建的内容（反思检查点）
 
@@ -124,7 +124,7 @@ Claude将显示位于`.claude/agents/stock-picker.md`的subagent文件。会看�
 ---
 name: stock-picker
 description: Compares multiple companies for investment decisions...
-skills: generate-stock-reports
+skills: stock-report
 ---
 ```
 
@@ -133,7 +133,7 @@ skills: generate-stock-reports
 frontmatter下方有一个**系统提示词**，包含你的评分方法。
 
 **确认这些关键要素：**
-- Subagent可以访问`generate-stock-reports` skill
+- Subagent可以访问`stock-report` skill
 - 系统提示词解释了评分细分
 - Subagent的目标很明确：比较公司并推荐一个
 
@@ -149,17 +149,19 @@ frontmatter下方有一个**系统提示词**，包含你的评分方法。
 
 subagent将根据描述自动激活。
 
-## 步骤8：观察Subagent工作
+## 步骤7：观察Subagent工作
 
 当subagent运行时，会看到它：
-1. **调用skill两次** - 为Apple调用一次generate-stock-reports skill，然后为Google调用一次
+1. **调用skill两次** - 为Apple调用一次stock-report skill，然后为Google调用一次
 2. **收集数据** - 每次skill调用都会搜索网络并生成公司报告
 3. **为公司评分** - 在各个类别中应用40/30/20/10的权重
 4. **生成输出** - 创建比较表和推荐
 
 这可能需要2-3分钟，因为涉及网络研究。
 
-## 步骤9：查看输出
+注意，你的主对话并没有被大量搜索结果和中间步骤填满——这就是隔离上下文在发挥作用。subagent在自己独立的工作空间中完成研究，只把你在这里看到的内容汇报回来。
+
+## 步骤8：查看输出
 
 subagent返回详细的分析，包括：
 - **单个公司报告** - 每只股票的产品更新、财务指标、管理层变化、分析师情绪
@@ -179,7 +181,7 @@ subagent可能会在终端中显示这些内容，或生成一个包含完整报
 ## 故障排除
 
 - **Subagent未激活**：确保请求提到了比较公司或投资决策。尝试："使用 stock-picker subagent 比较..."
-- **找不到Skill**：验证`.claude/skills/generate-stock-reports/SKILL.md`是否存在。如果刚添加，请重启Claude Code。
+- **找不到Skill**：验证`.claude/skills/stock-report/SKILL.md`是否存在。如果刚添加，请重启Claude Code。
 - **评分不完整**：让subagent "继续"或"更详细地解释每个类别的分数"
 - **创建subagent时出错**：检查`.claude/agents/`文件夹是否存在。Claude Code应该会自动创建它。
 

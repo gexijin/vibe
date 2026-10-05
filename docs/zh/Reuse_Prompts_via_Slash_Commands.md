@@ -25,15 +25,14 @@ lang: "zh"
 
 ## 步骤 1:创建项目文件夹
 
-**Windows(WSL):**
-- 从开始菜单打开 **Ubuntu**
+**Windows(PowerShell):**
+- 从开始菜单打开 **PowerShell**
 - 输入以下命令:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  将 `YOUR_USERNAME` 替换为你的 Windows 用户名
+  ```
 
 **Mac:**
 - 打开 **Terminal**(在 应用程序 > 实用工具 中找到)
@@ -46,8 +45,8 @@ lang: "zh"
 
 ## 步骤 2:启动 Claude Code
 
-**Windows(WSL):**
-- 仍在 Ubuntu 终端中,输入:
+**Windows(PowerShell):**
+- 仍在 PowerShell 中,输入:
   ```
   claude
   ```

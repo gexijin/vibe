@@ -27,15 +27,14 @@ lang: "zh"
 
 如果你完成了[斜杠命令教程](./Reuse_Prompts_via_Slash_Commands.md),`test_claude` 文件夹已存在。无论哪种情况,这些命令都可以使用。
 
-**Windows (WSL):**
-- 从开始菜单打开 **Ubuntu**
+**Windows (PowerShell):**
+- 从开始菜单打开 **PowerShell**
 - 输入以下命令:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  将 `YOUR_USERNAME` 替换为 Windows 用户名
 
 **Mac:**
 - 打开 **Terminal**(在应用程序 > 实用工具中)
@@ -46,7 +45,7 @@ lang: "zh"
   cd test_claude
   ```
 
-`-p` 标志会在文件夹不存在时创建它,如果已存在则不执行任何操作。
+`-p`(Mac)和 `-Force`(Windows)标志会在文件夹不存在时创建它,如果已存在则不执行任何操作。
 
 ## 步骤 2:启动 Claude Code
 
