@@ -193,7 +193,7 @@ streamlit run app.py
 
 ## 步骤 11:尝试调试
 
-- 在 `analysis.py`,点击第 8 行(`print(iris.head())`)行号左侧设置断点(显示红点)
+- 在 `analysis.py`,点击第 9 行(`print(iris.head())`)行号左侧设置断点(显示红点)
 - 点击 **Run > Start Debugging**
 - 提示时选择 **Python File**
 - 代码在断点处暂停
