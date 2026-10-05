@@ -248,7 +248,7 @@ claude
    ```
    claude --version
    ```
-- 输入 `claude`，按浏览器登录流程连接账户（和步骤 3 的选项 A 一样）。如果改用 API 密钥，则用 `export ANTHROPIC_API_KEY="your-api-key-here"` 来设置（WSL 里用的是 Linux 命令，而不是 `setx`）
+- 输入 `claude`，按浏览器登录流程连接账户（和步骤 4 的选项 A 一样）。如果改用 API 密钥，则用 `export ANTHROPIC_API_KEY="your-api-key-here"` 来设置（WSL 里用的是 Linux 命令，而不是 `setx`）
 - 要在 WSL 中打开 Windows 上的项目文件夹（把 `Username` 换成你实际的 Windows 用户名）：
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
