@@ -69,6 +69,10 @@ print(iris_df.describe())
 
 - **File > Save**をクリックしてファイルを保存します
 - Pythonターミナルを開く：メニューバーの**View**をクリックし、**Terminal**を選択します
+- このスクリプトに必要なパッケージをインストールします：
+  ```
+  pip install scikit-learn pandas
+  ```
 - ターミナルで次を実行：`python iris_analysis.py`
 - ターミナルにデータセットの構造と要約統計が表示されます
 
