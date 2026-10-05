@@ -44,7 +44,53 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
    ```
 - 此时应该会显示 Claude Code 的版本号
 
-## 步骤 3：连接 Anthropic 账户
+## 步骤 3：在 VS Code 中打开 Claude Code
+
+装好 Claude Code 之后，除了在终端里用，你还可以在 VS Code 里使用它。这通常是最方便的方式，因为不用离开编辑器，就能查看文件、修改代码、向它求助。
+
+可以把 Claude Code 侧边栏想象成 VS Code 里的一个聊天窗口。你可以在同一个界面里边干活边提问、让它解释代码、请它帮忙。
+
+### 如何打开 Claude Code 侧边栏
+
+1. 打开 VS Code
+2. 看向窗口最左侧
+3. 如果还没看到 Claude Code 面板，点击 **Extensions** 图标
+4. 在扩展市场里搜索 Claude Code
+5. 如果还没安装，点击 **Install**
+6. 安装完成后，在左侧边栏找到 Claude Code 图标
+
+如果看不到 Claude Code 图标，可以试试这样做：
+
+1. 按 **Ctrl + Shift + P**
+2. 输入：Claude Code: Open Sidebar
+3. 点击列表中对应的选项
+
+如果还是没有出现，关掉 VS Code 再重新打开。有时扩展需要重启一次，侧边栏才会显示出来。
+
+### 侧边栏能做什么
+
+在 Claude Code 侧边栏里，你可以：
+
+- 询问关于项目的问题
+- 请它帮忙修复错误
+- 让它解释看不懂的代码
+- 创建或修改文件
+- 不离开 VS Code，用更直观的方式工作
+
+这样做的好处是，代码在编辑器里开着，同一个窗口里就能向 Claude 求助。
+
+### 快速测试
+
+侧边栏打开后：
+
+- 输入：Explain this project to me
+- 按 **Enter**
+
+如果 Claude 回复了，就说明可以开始使用了。
+
+> 提示：如果侧边栏还是不见踪影，请确认 Claude Code 扩展已经安装，并且已经重启过 VS Code。
+
+## 步骤 4：连接 Anthropic 账户
 
 ### 选项 A. 使用 Claude Pro 或 Max 订阅
 
@@ -131,11 +177,11 @@ claude
 
 这样就可以用 Azure 上部署的 Claude 模型来运行 Claude Code 了。
 
-## 步骤 4：测试 Claude Code
+## 步骤 5：测试 Claude Code
 
 全部搞定！在 PowerShell 里输入 `claude`，随便问它点什么，比如"解释一下量子计算"。
 
-## 步骤 5：访问项目
+## 步骤 6：访问项目
 
 - 如果已经有项目文件夹，在 PowerShell 里切换到该目录：
    ```
@@ -150,7 +196,7 @@ claude
 
 **注意：**Claude 在项目文件夹里运行，并把设置保存在其中——这个文件夹就是它的工作区。
 
-## 步骤 6：（可选）安装 WSL2 以获得完整的 Linux 体验
+## 步骤 7：（可选）安装 WSL2 以获得完整的 Linux 体验
 
 对大多数人来说，上面的原生设置已经够用了。不过 Claude Code 在 Linux 下会跑得更顺：WSL2 能在 Windows 里运行真正的 Linux 系统，带来 **Bash 工具沙盒**（一项安全特性），也能和各种 Linux 工具链配合得更好。它配置更花时间，还要重启电脑，所以只有在你确实想要完整 Linux 体验时再做这一步。
 
