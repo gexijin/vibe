@@ -36,11 +36,6 @@ Windows 系统:
 - 在搜索框中输入 `Visual Studio Code` 或 `VS Code`
 - 当搜索结果中出现 **Visual Studio Code** 时点击它
 - VS Code 打开并显示欢迎标签页 - 你可以关闭此标签页
-- 查看 VS Code 左下角 - 你会看到一个蓝色或绿色图标
-- 点击此图标打开远程连接菜单
-- 从菜单中选择 **Connect to WSL**
-- VS Code 将重新加载并连接到你的 Ubuntu 安装
-- 左下角现在应该显示 **WSL: Ubuntu**
 
 Mac 系统:
 - 打开 **Finder** 并转到**应用程序**
@@ -49,16 +44,10 @@ Mac 系统:
 - VS Code 打开并显示欢迎标签页 - 你可以关闭此标签页
 
 ## 步骤 3:在 VS Code 中打开文件夹
-通过 WSL 的 Windows 系统:
-- 在 VS Code 中(仍然连接到 WSL),点击菜单栏中的**文件**,然后点击**打开文件夹**
-- 顶部中央会出现一个**打开文件夹**下拉菜单。
-- 通过输入以下内容找到你的文件夹:
-  ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  ```
-  将 `YOUR_USERNAME` 替换为你的 Windows 用户名(如 `John.Smith`)
-- 点击 **OK**。VS Code 将重新加载你的 `test_claude` 文件夹
-
+Windows 系统:
+- 点击菜单栏中的**文件**,然后点击**打开文件夹**
+- 导航到**文档**并选择 `test_claude` 文件夹
+- 点击**选择文件夹**。VS Code 将重新加载你的 `test_claude` 文件夹
 
 Mac 系统:
 - 在 VS Code 中,点击菜单栏中的**文件**,然后点击**打开文件夹**

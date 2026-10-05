@@ -24,15 +24,12 @@ lang: "zh"
 
 ## 步骤1：创建项目文件夹并启动Claude Code
 
-**Windows (WSL)：**
-- 从开始菜单打开**Ubuntu**
-- 输入以下命令：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
+**Windows (PowerShell)：**
+- 点击 **Windows 开始按钮**，输入 `PowerShell` 并打开它
+- 输入此命令：
+  ```powershell
+  cd ~/Documents/test_claude
   ```
-  将`YOUR_USERNAME`替换为你的Windows用户名
 - 启动Claude Code：
   ```
   claude

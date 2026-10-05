@@ -23,18 +23,17 @@ lang: "zh"
 
 ## 步骤1：导航到项目文件夹
 
-**Windows（WSL）：**
-- 从开始菜单打开**Ubuntu**
+**Windows（PowerShell）：**
+- 从开始菜单打开**PowerShell**
 - 输入：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  将`YOUR_USERNAME`替换为你的Windows用户名
+  cd ~\Documents\test_claude
+  ```
 
   如果文件夹不存在，请先创建它：
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac：**
@@ -61,7 +60,7 @@ claude
 
 ## 步骤3：启用编辑自动批准
 
-按`Ctrl+E`（Windows/Linux）或`Cmd+E`（Mac）来启用编辑自动批准模式。
+按**Shift+Tab**来启用编辑自动批准模式。
 
 这样可以让Claude创建和修改文件，而无需每次都请求权限。
 

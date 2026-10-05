@@ -1,18 +1,18 @@
 ---
-title: "在Windows上通过WSL使用Claude Code与RStudio"
+title: "在Windows上使用Claude Code与RStudio"
 lang: "zh"
 ---
 [首页](./)
 
-# 在Windows上通过WSL使用Claude Code与RStudio
+# 在Windows上使用Claude Code与RStudio
 
-你在Windows上安装了RStudio用于运行R代码，在WSL中安装了Claude Code用于AI辅助编程。本教程将展示如何在同一个项目文件上同时使用这两个工具。你将在Windows中创建R项目，手动编写一些代码，然后从Ubuntu终端使用Claude Code来增强代码，添加可视化和分析功能——同时保持RStudio打开以运行和测试代码。
+你在Windows上安装了RStudio用于运行R代码，并安装了Claude Code用于AI辅助编程。本教程将展示如何在同一个项目文件上同时使用这两个工具。你将创建R项目，手动编写一些代码，然后从PowerShell使用Claude Code来增强代码，添加可视化和分析功能——同时保持RStudio打开以运行和测试代码。
 
 ## 核心概念
 
-- **WSL (Windows Subsystem for Linux)** - 在Windows内运行Ubuntu Linux，Claude Code安装在其中
-- **文件路径转换** - Windows路径如`C:\Users\YourName\Documents`在WSL中变成`/mnt/c/Users/YourName/Documents`
-- **混合工作流** - RStudio (Windows)运行代码；Claude Code (WSL)编写和改进代码
+- **PowerShell** - Windows内置的命令行工具，本教程用它在RStudio旁边运行Claude Code
+- **混合工作流** - RStudio运行代码并显示结果；Claude Code编写和改进代码
+- **共享文件** - 两个工具在完全相同的项目文件夹上工作，一方的更改会立即在另一方中显示
 
 ## 所需准备
 
@@ -62,29 +62,27 @@ summary(iris)
 - 要运行代码：选中所有行，然后点击**Run**按钮（脚本面板右上角）
 - 应该在Console面板中看到输出，显示数据集结构和统计信息
 
-## 步骤5：打开Ubuntu Terminal
+## 步骤5：打开PowerShell
 
 - 点击**Windows开始按钮**
-- 在搜索框中输入`Ubuntu`
-- 点击**Ubuntu**（橙色圆形图标）
-- Ubuntu终端打开
+- 在搜索框中输入`PowerShell`
+- 点击**Windows PowerShell**打开它
 
 ## 步骤6：导航到项目文件夹
 
-- 在Ubuntu终端中，输入以下命令（将`YourUsername`替换为你的实际Windows用户名）：
+- 在PowerShell中，输入：
   ```
-  cd /mnt/c/Users/YourUsername/Documents/test_claude
+  cd ~\Documents\test_claude
   ```
-- 要查找用户名，可以输入：`ls /mnt/c/Users/`并查找你的文件夹名称
 - 通过输入以下命令验证位置是否正确：
   ```
-  ls
+  dir
   ```
 - 应该看到列出了`iris.R`和`test_claude.Rproj`
 
 ## 步骤7：启动Claude Code
 
-- 在Ubuntu终端中，输入：
+- 在PowerShell中，输入：
   ```
   claude
   ```
@@ -114,7 +112,7 @@ summary(iris)
 
 ## 步骤10：优化散点图
 
-- 切换到Ubuntu终端
+- 切换到PowerShell
 - 输入以下请求：
   ```
   移除标题。按物种更改标记类型。更改为 classic 主题。
@@ -130,7 +128,7 @@ summary(iris)
 
 ## 步骤12：请求Claude创建PCA图
 
-- 切换到Ubuntu终端
+- 切换到PowerShell
 - 输入以下请求：
   ```
   添加代码对数值变量进行 PCA 分析，并使用前两个主成分绘制样本图。
@@ -145,7 +143,7 @@ summary(iris)
 
 ## 步骤14：请求Claude审查并添加注释
 
-- 切换到Ubuntu终端
+- 切换到PowerShell
 - 输入以下请求：
   ```
   检查整个脚本的正确性。必要时添加注释。
@@ -154,7 +152,7 @@ summary(iris)
 
 ## 步骤15：请求Claude创建R Markdown
 
-- 切换到Ubuntu终端
+- 切换到PowerShell
 - 输入以下请求：
   ```
   为这个分析创建一个新的 R Markdown 文件。保存为 iris_report.Rmd
@@ -175,12 +173,12 @@ summary(iris)
 
 ## 故障排除
 
-- **从WSL访问Windows文件时"Permission denied"** - 确保使用`/mnt/c/`而不是`C:/`。检查路径中的用户名是否正确。
 - **RStudio不显示文件更改** - 点击**File > Reopen with Encoding > UTF-8**手动重新加载文件。
-- **"claude: command not found"** - 确保已完成安装指南。尝试打开一个新的Ubuntu终端窗口。
+- **"claude: command not found"** - 确保已完成安装指南。尝试打开一个新的PowerShell窗口。
 - **图表未显示** - 确保已安装ggplot2。如需要，在RStudio Console中运行`install.packages("ggplot2")`。
-- **错误："cannot change working directory"** - Windows路径包含空格。在步骤6中，将路径用引号括起来：`cd "/mnt/c/Users/Your Name/Documents/test_claude"`
+- **错误："cannot change working directory"** - Windows路径包含空格。在步骤6中，将路径用引号括起来：`cd "~\Documents\Your Name\test_claude"`
 - **Claude Code首次请求时很慢** - 等待30-60秒让Claude初始化。后续请求会更快。
+- **改用WSL？** - 如果你选择了可选的WSL/Ubuntu方式，请在步骤5-16中打开**Ubuntu**应用而不是PowerShell，并使用`cd /mnt/c/Users/YourUsername/Documents/test_claude`导航到你的项目
 
 ## 下一步
 
@@ -194,13 +192,13 @@ summary(iris)
 
 这种混合设置结合了两全其美：
 
-- **RStudio (Windows)** - 交互式R控制台、即时图表查看、用于运行代码的熟悉GUI
-- **Claude Code (WSL)** - AI驱动的代码生成、审查和改进
-- **共享文件** - 两个工具通过WSL的`/mnt/c/`挂载点在同一文件上工作
+- **RStudio** - 交互式R控制台、即时图表查看、用于运行代码的熟悉GUI
+- **Claude Code (PowerShell)** - AI驱动的代码生成、审查和改进
+- **共享文件** - 两个工具直接在同一个项目文件夹上工作
 - **迭代优化** - 从手动代码开始，用Claude增强，在RStudio中测试，然后进一步优化
 - **文档** - Claude可以为分析生成全面的报告和注释
 
-工作流程很简单：在Ubuntu终端中使用Claude编写或编辑代码，然后立即在RStudio中测试和运行。无需文件复制或手动同步——WSL和Windows无缝共享同一文件。
+工作流程很简单：在PowerShell中使用Claude编写或编辑代码，然后立即在RStudio中测试和运行。无需文件复制或手动同步——两个工具共享同一文件。
 
 ---
 

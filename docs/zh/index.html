@@ -438,7 +438,7 @@
         <section class="section">
         <p>&nbsp;&nbsp;&nbsp; Claude Code 不仅是强大的编程助手，还可帮你完成研究、写作、编辑和编程任务。它在本地运行，通过 Claude 大语言模型规划、执行和检验任务。</p>
 
-        <p>&nbsp;&nbsp;&nbsp; 本教程介绍发挥 Claude Code 潜力的核心工具：Git(版本控制)、VS Code(代码编辑器)、WSL(Windows Linux 子系统)和 Docker(隔离开发环境)。</p>
+        <p>&nbsp;&nbsp;&nbsp; 本教程介绍发挥 Claude Code 潜力的核心工具：Git(版本控制)、VS Code(代码编辑器)、PowerShell(在 Windows 上运行)和 Docker(隔离开发环境)。</p>
         <p>&nbsp;&nbsp;&nbsp; 使用 Claude Code 需要付费的 <a href="https://claude.com/pricing">Claude 订阅</a>。
             或者，<a href="https://openrouter.ai/docs/guides/claude-code-integration">OpenRouter</a> 通过统一 API 提供 500 多个模型的访问（包括 ChatGPT 等更经济的替代方案），是更实惠的选择。
         </p>
@@ -454,7 +454,7 @@
                 <li><a href="Claude_Code_Git_Windows">Windows：本地版本控制入门</a></li>
                 <li><a href="Claude_Code_Git_Mac">Mac：本地版本控制入门</a></li>
                 <li><a href="Claude_Code_RStudio_Mac">Mac：Claude Code 与 RStudio</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">Windows：Claude Code 与 RStudio（WSL）</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">Windows：Claude Code 与 RStudio</a></li>
             </ol>
 
             <h2>技能提升</h2>
@@ -614,7 +614,7 @@
 
         // Tutorial data (Chinese)
         const tutorials = {
-            1: { label: '安装 Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Windows 通过 WSL 安装 Claude Code', level: 0 },
+            1: { label: '安装 Claude\nCode (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Windows 通过 PowerShell 原生安装 Claude Code（WSL 可选）', level: 0 },
             14: { label: 'VS Code 中的\nClaude Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Windows 配置 VS Code 与 Claude Code 协同', level: 1 },
             11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: '学习 Git 本地版本控制，无需 GitHub 账户', level: 1 },
             2: { label: '安装 Claude\nCode (Mac)', url: 'Install_Claude_Code_MacOS', desc: 'macOS 快速安装 Claude Code', level: 0 },
@@ -631,7 +631,7 @@
             13: { label: '用 Claude\n写研究论文', url: 'Writing_Research_Paper_Claude_Code', desc: 'Claude Code 加速论文写作，Git 追踪每个版本', level: 2 },
             16: { label: 'Python 的\nVibe 编程', url: 'Vibe_Coding_Python_Docker_Guide', desc: '自然语言描述需求，自动生成数据可视化', level: 3 },
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Mac 结合 Claude Code 与 RStudio 开发 R', level: 2 },
-            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Windows 通过 WSL 连接 Claude Code 与 RStudio', level: 2 },
+            18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Windows 在 RStudio 中编辑 R 代码，Claude Code 在 PowerShell 中协助', level: 2 },
             19: { label: 'Claude Code\n开发 R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Claude Code 在 VS Code 中辅助 R 开发', level: 3 },
             20: { label: 'Claude Code\n开发 Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Claude Code 在 VS Code 中辅助 Python 开发', level: 3 },
             21: { label: '斜杠\n命令', url: 'Reuse_Prompts_via_Slash_Commands', desc: '创建可复用的命令快捷方式，如 /stock-report', level: 3 },

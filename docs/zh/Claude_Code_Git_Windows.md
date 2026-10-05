@@ -10,7 +10,7 @@ lang: "zh"
 
 ## 核心概念
 
-- **WSL (Windows Subsystem for Linux)** - 在 Windows 上原生运行 Linux 工具（如 Git）
+- **PowerShell** - Windows 内置的命令行工具，本教程用它来运行 Git 和 Claude Code
 - **Git** - 在计算机上跟踪文件的每次更改，创建可以随时返回的还原点
 - **Commit** - 项目在特定时间点的快照，附带变更描述
 - **Claude Code** - AI 编码助手，可以编写代码、修复错误，并通过简单请求处理 Git 操作
@@ -18,31 +18,29 @@ lang: "zh"
 ## 你需要准备什么
 
 - 完成 [在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win)
-- 已安装 WSL 和 Ubuntu
 - 20 分钟
 
-## 步骤 1：打开 Ubuntu Terminal
+## 步骤 1：打开 PowerShell
 
 - 点击 **开始** 菜单
-- 输入 `Ubuntu`
-- 点击 **Ubuntu** 打开终端
+- 输入 `PowerShell`
+- 点击 **Windows PowerShell** 打开它
 
-你会看到一个以 `$` 结尾的命令提示符。
+**注意：** 如果你选择了可选的 WSL/Ubuntu 方式而不是原生安装，请改为打开 **Ubuntu** 应用——Git 和 Claude Code 在那里的用法完全相同，只是使用 Linux 风格的路径（`/mnt/c/Users/...`）而不是 `~\Documents\...`。
 
 ## 步骤 2：安装 Git
 
-- 输入以下命令并按回车：
-  ```
-  sudo apt-get install git
-  ```
-- 当提示时，输入你的密码并按回车
-- 等待安装完成（10-30 秒）
-- 验证 Git 已安装：
+- 检查 Git 是否已经安装：
   ```
   git --version
   ```
-
-你应该会看到类似 `git version 2.34.1` 的内容。
+- 如果你看到类似 `git version 2.45.0` 的版本号，直接跳到步骤 3
+- 如果你看到错误信息，请安装 Git for Windows：
+  - 访问 [git-scm.com/download/win](https://git-scm.com/download/win)
+  - 下载应该会自动开始——下载完成后打开安装程序
+  - 在安装程序中一路点击 **Next**，接受默认选项
+  - 点击 **Install**，然后点击 **Finish**
+  - 关闭并重新打开 PowerShell，然后再次运行 `git --version` 进行验证
 
 ## 步骤 3：使用你的身份配置 Git
 
@@ -56,21 +54,18 @@ Git 需要知道你是谁以便在提交消息中记录。
 
 使用姓名和邮箱有助于在多人协作时识别是谁做出了更改。
 
-## 步骤 4：导航到 Windows 文件夹
+## 步骤 4：导航到 Documents 文件夹
 
-WSL 可以通过 `/mnt/c/` 访问 Windows 文件。
-
-- 导航到 Windows 用户文件夹：
+- 导航到 Documents 文件夹：
   ```
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  cd ~\Documents
   ```
-  将 `YOUR_USERNAME` 替换为实际的 Windows 用户名。
 - 验证位置：
   ```
   pwd
   ```
 
-你应该看到 `/mnt/c/Users/YOUR_USERNAME/Documents`。
+你应该看到一个以 `\Documents` 结尾的路径。
 
 ## 步骤 5：创建项目文件夹
 
@@ -255,9 +250,9 @@ Claude 会以易读格式显示你的提交。你会看到：
 
 ## 故障排除
 
-- **"not a git repository" 错误：** 确保在 test_claude 文件夹中（`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
+- **"not a git repository" 错误：** 确保在 test_claude 文件夹中（`cd ~\Documents\test_claude`）
 - **在 Windows 中找不到 timer.html：** 文件位于 `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
-- **Git 要求输入密码：** 你输错了 `sudo` 密码——仔细重试
+- **找不到 `git` 命令：** 安装 Git for Windows 后关闭并重新打开 PowerShell，让 PATH 生效，然后再次运行 `git --version`
 - **倒计时器无法工作：** 打开浏览器控制台（右键点击页面，选择 **检查**，点击 **Console** 标签），复制任何红色错误消息，粘贴给 Claude
 
 ## 你可以向 Claude 询问什么
