@@ -42,7 +42,7 @@ lang: "zh"
 - 选择身份验证方法：
   - **Claude Pro/Max用户**：点击**Sign in with Claude.ai**，在浏览器中授权，然后将代码复制回VS Code
   - **API密钥用户**：点击**Use API Key**并粘贴Anthropic API密钥
-- 详细身份验证步骤请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)指南（步骤5）
+- 详细身份验证步骤请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)指南（步骤3）
 - 登录后，聊天面板会显示"Ready to help"
 
 ## 步骤3：手动创建初始R脚本

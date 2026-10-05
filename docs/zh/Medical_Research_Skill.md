@@ -172,7 +172,7 @@ Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使�
 **document skill** 帮助你读写 PDF、Word、PowerPoint 和 Excel 文件。Claude 会将该 skill 克隆到 `.claude/skills/` 文件夹中。
 
 **Anthropic 存储库中的其他可用 skill:**
-- 在 [github.com/anthropics/claude-skills](https://github.com/anthropics/skills) 浏览完整目录
+- 在 [github.com/anthropics/skills](https://github.com/anthropics/skills) 浏览完整目录
 - 询问 Claude "What skills are available in the Anthropic repository?" 查看当前列表
 
 ## 下一步

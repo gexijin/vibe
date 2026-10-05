@@ -261,7 +261,7 @@ streamlit run app.py
 
 - 保持应用运行
 - 在 VS Code 中,编辑 `python/app.py`
-- 找到第 6 行:`st.title("Old Faithful Geyser Data")`
+- 找到第 5 行:`st.title("Old Faithful Geyser Data")`
 - 更改为:
 
 ```python
@@ -303,7 +303,7 @@ st.title("My First Python Docker App")
 
 - 在 VS Code 资源管理器中,导航到 `.devcontainer/Dockerfile`
 - 点击打开文件
-- 找到第 9 行:`RUN pip install --no-cache-dir ...`
+- 找到第 10 行:`RUN pip install --no-cache-dir ...`
 - 将 `scikit-learn` 添加到列表中:
 
 ```dockerfile
