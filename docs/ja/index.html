@@ -13,15 +13,19 @@
       gtag('config', 'G-4W28447R3P');
     </script>
     <title>みんなのClaude Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0d1117;
-            --card-bg: #161b22;
-            --border: #30363d;
-            --text: #e6edf3;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --accent-hover: #79b8ff;
+            --bg: #0a0e17;
+            --card-bg: #131826;
+            --border: #262b3a;
+            --text: #eef1f7;
+            --text-muted: #9aa4b4;
+            --accent: #818cf8;
+            --accent-hover: #9ba3ff;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', Roboto, Oxygen, Ubuntu, sans-serif;
         }
 
         * {
@@ -31,8 +35,12 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: var(--bg);
+            font-family: var(--font);
+            background:
+                radial-gradient(720px circle at 15% -10%, rgba(129, 140, 248, 0.14), transparent 55%),
+                radial-gradient(640px circle at 100% 0%, rgba(192, 132, 252, 0.10), transparent 50%),
+                var(--bg);
+            background-attachment: fixed;
             color: var(--text);
             line-height: 1.6;
             min-height: 100vh;
@@ -50,13 +58,20 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
             margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .subtitle {
             color: var(--text-muted);
             font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .lang-switch {
@@ -71,19 +86,16 @@
             color: var(--text-muted);
             text-decoration: none;
             padding: 0.25rem 0.5rem;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .lang-switch a:hover {
             color: var(--accent);
-            border-color: var(--accent);
         }
 
         .lang-switch a.active {
             color: var(--accent);
-            border-color: var(--accent);
+            font-weight: 600;
         }
 
         .section {
@@ -91,11 +103,14 @@
         }
 
         .section h2 {
-            font-size: 1.3rem;
-            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
             margin-bottom: 1rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid var(--accent);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
         }
 
         .tutorial-list {
@@ -144,7 +159,8 @@
             height: 400px;
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
         }
 
         /* Filter Buttons */
@@ -170,13 +186,13 @@
             display: inline-flex;
             align-items: center;
             gap: 4px;
-            padding: 3px 8px;
-            background: #21262d;
-            border: 1px solid #6e7681;
+            padding: 4px 10px;
+            background: #1a2030;
+            border: 1px solid #3a4152;
             color: var(--text);
             font-size: 0.6rem;
             font-weight: 600;
-            border-radius: 10px;
+            border-radius: 999px;
             cursor: pointer;
             transition: all 0.2s ease;
             user-select: none;
@@ -184,7 +200,7 @@
         }
 
         .filter-btn:hover {
-            background: #30363d;
+            background: #262b3a;
             border-color: var(--accent);
             transform: translateY(-1px);
         }
@@ -195,7 +211,7 @@
             bottom: calc(100% + 6px);
             left: 50%;
             transform: translateX(-50%);
-            background: #1c2128;
+            background: #171c28;
             color: var(--text);
             padding: 5px 8px;
             border-radius: 5px;
@@ -215,21 +231,21 @@
 
         /* Vis.js tooltip styling */
         .vis-tooltip {
-            background: #1c2128 !important;
+            background: #171c28 !important;
             color: var(--text) !important;
             border: 1px solid var(--border) !important;
             border-radius: 5px !important;
             padding: 5px 8px !important;
             font-size: 0.6rem !important;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
+            font-family: var(--font) !important;
         }
 
         .filter-btn.active {
-            background: linear-gradient(135deg, #d73a94 0%, #e856b0 100%);
-            border-color: #d73a94;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            border-color: transparent;
             color: #ffffff;
-            box-shadow: 0 2px 8px rgba(215, 58, 148, 0.4);
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
         }
 
         .progress-counter {
@@ -287,15 +303,20 @@
             display: flex;
         }
 
+        .modal {
+            backdrop-filter: blur(3px);
+        }
+
         .modal-content {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 20px;
             padding: 2rem;
             max-width: 400px;
             width: 90%;
             position: relative;
             text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .modal-content h3 {
@@ -312,18 +333,19 @@
 
         .modal-btn {
             display: inline-block;
-            background: #f78166;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
             color: #fff;
-            padding: 0.4rem 0.9rem;
-            border-radius: 4px;
+            padding: 0.5rem 1.1rem;
+            border-radius: 999px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.85rem;
-            transition: background 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .modal-btn:hover {
-            background: #ffa198;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.45);
         }
 
         .modal-buttons {
@@ -333,30 +355,30 @@
         }
 
         .modal-btn-secondary {
-            background: #21262d;
+            background: #1a2030;
             color: var(--text);
             border: 1px solid var(--border);
-            padding: 0.4rem 0.9rem;
-            border-radius: 4px;
+            padding: 0.5rem 1.1rem;
+            border-radius: 999px;
             font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.2s;
         }
 
         .modal-btn-secondary:hover {
-            background: #30363d;
+            background: #262b3a;
             border-color: var(--accent);
         }
 
         .modal-btn-secondary.completed {
-            background: #238636;
-            border-color: #238636;
+            background: #059669;
+            border-color: #059669;
             color: white;
         }
 
         .modal-btn-secondary.completed:hover {
-            background: #2ea043;
-            border-color: #2ea043;
+            background: #10b981;
+            border-color: #10b981;
         }
 
         .modal-close {
@@ -449,6 +471,7 @@
             <ol class="tutorial-list">
                 <li><a href="Install_CLAUDE_Code_Win">WindowsにClaude Codeをインストール</a></li>
                 <li><a href="Install_Claude_Code_MacOS">MacにClaude Codeをインストール</a></li>
+                <li><a href="Install_Claude_Desktop_App">Claude Desktopアプリをインストール（WindowsとMac）</a></li>
                 <li><a href="VS_Code_Getting_Started">VS Codeを始めよう</a></li>
                 <li><a href="Claude_Code_Basic_Operations">Claude Code: 基本操作</a></li>
                 <li><a href="Claude_Code_in_VS_Code_Win">WindowsでClaude Code用にVS Codeをセットアップ</a></li>
@@ -460,7 +483,7 @@
             </ol>
 
             <h2>スキル構築</h2>
-            <ol class="tutorial-list" start="11">
+            <ol class="tutorial-list" start="12">
                 <li><a href="Github_desktop">バージョン管理を始めよう</a></li>
                 <li><a href="R_Coding_VS_Code_Guide">VS CodeでRを実行</a></li>
                 <li><a href="Python_Coding_VS_Code_Guide">VS CodeでPythonを実行</a></li>
@@ -472,7 +495,7 @@
             </ol>
 
             <h2>エキスパートトピック</h2>
-            <ol class="tutorial-list" start="19">
+            <ol class="tutorial-list" start="20">
                 <li><a href="R_Coding_Docker_Guide">Docker経由でVS CodeでRコーディング</a></li>
                 <li><a href="Python_Coding_Docker_Guide">Docker経由でVS CodeでPythonコーディング</a></li>
                 <li><a href="Vibe_Coding_R_Docker_Guide">Claude CodeでRのVibe Coding</a></li>
@@ -562,7 +585,7 @@
         window.addEventListener('resize', resizeCanvas);
 
         function randomColor() {
-            const colors = ['#58a6ff', '#3fb950', '#a371f7', '#f78166', '#ffd700', '#ff6b6b', '#4ecdc4'];
+            const colors = ['#818cf8', '#34d399', '#c084fc', '#fb923c', '#fbbf24', '#f472b6', '#22d3ee', '#fb7185'];
             return colors[Math.floor(Math.random() * colors.length)];
         }
 
@@ -642,15 +665,16 @@
             24: { label: 'サブエージェント\nを作成', url: 'Create_subagents', desc: 'スキルを使用して複雑なタスクを完了する自律エージェントを構築 - 企業を調査、スコアリング、投資推奨する株式選択エージェントを作成', level: 3 },
             25: { label: 'Claude Code\n基本操作', url: 'Claude_Code_Basic_Operations', desc: 'Claude Codeの基本操作を学ぶ - 会話の開始、コンテキストの管理、スラッシュコマンドの使用、ファイルの操作', level: 0 },
             26: { label: 'VS Codeで\nExcel', url: 'Excel_Coding_VS_Code_Guide', desc: 'Claude CodeでExcelスプレッドシートを作成・編集 - 本物の数式、書式設定、グラフ', level: 1 },
-            27: { label: 'Excelで\nVibe Coding', url: 'Vibe_Coding_Excel_Guide', desc: '自然言語リクエストだけで、グラフ付きの複数シート予算管理表を作成 - Vibe Codingの完全な体験', level: 3 }
+            27: { label: 'Excelで\nVibe Coding', url: 'Vibe_Coding_Excel_Guide', desc: '自然言語リクエストだけで、グラフ付きの複数シート予算管理表を作成 - Vibe Codingの完全な体験', level: 3 },
+            28: { label: 'Claude Desktopを\nインストール', url: 'Install_Claude_Desktop_App', desc: 'オプション：WindowsとMac用のClaude Desktopチャットアプリをインストール - Claude Codeとは別の汎用チャットウィンドウ', level: 0 }
         };
 
         // Color scheme by level
         const levelColors = {
-            0: { background: '#58a6ff', border: '#79b8ff' },  // Blue - Basic
-            1: { background: '#3fb950', border: '#56d364' },  // Green - Intermediate
-            2: { background: '#a371f7', border: '#bc8cff' },  // Purple - Advanced
-            3: { background: '#f78166', border: '#ffa198' }   // Orange - Capstone
+            0: { background: '#818cf8', border: '#9ba3ff' },  // Blue - Basic
+            1: { background: '#34d399', border: '#6ee7b7' },  // Green - Intermediate
+            2: { background: '#c084fc', border: '#d8b4fe' },  // Purple - Advanced
+            3: { background: '#fb923c', border: '#fdba74' }   // Orange - Capstone
         };
 
         // Fixed positions for clean layout
@@ -658,6 +682,7 @@
             // Level 1 - Basic
             1: { x: 0, y: 0 },    // Install Claude Code Win
             2: { x: 0, y: 0 },      // Install Claude Code Mac
+            28: { x: -140, y: 0 },  // Install Claude Desktop App (optional, standalone)
 
             // Level 2 - Minimum
             17: { x: 120, y: 90 },   // RStudio (Mac)
@@ -703,10 +728,10 @@
         function getNodeColor(id, level) {
             if (isCompleted(id)) {
                 return {
-                    background: '#484f58',
-                    border: '#6e7681',
-                    hover: { background: '#6e7681', border: '#8b949e' },
-                    highlight: { background: '#6e7681', border: '#8b949e' }
+                    background: '#3f4657',
+                    border: '#3a4152',
+                    hover: { background: '#3a4152', border: '#9aa4b4' },
+                    highlight: { background: '#3a4152', border: '#9aa4b4' }
                 };
             }
             const base = levelColors[level];
@@ -724,10 +749,11 @@
                 label: getNodeLabel(parseInt(id), t.label),
                 title: 'クリックして学習を開始',
                 color: getNodeColor(parseInt(id), t.level),
-                font: { color: isCompleted(parseInt(id)) ? '#e6edf3' : '#0d1117', size: 12, face: 'system-ui' },
+                font: { color: isCompleted(parseInt(id)) ? '#eef1f7' : '#111827', size: 12, face: "Inter, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', system-ui" },
                 shape: 'box',
-                margin: 8,
-                shadow: true,
+                shapeProperties: { borderRadius: 8 },
+                margin: 9,
+                shadow: { enabled: true, color: 'rgba(0,0,0,0.35)', size: 8, x: 0, y: 3 },
                 x: positions[id].x,
                 y: positions[id].y,
                 fixed: { x: true, y: true }
@@ -766,7 +792,7 @@
                 label: getNodeLabel(id, tutorial.label),
                 title: 'クリックして学習を開始',
                 color: getNodeColor(id, tutorial.level),
-                font: { color: completed ? '#e6edf3' : '#0d1117', size: 12, face: 'system-ui' }
+                font: { color: completed ? '#eef1f7' : '#111827', size: 12, face: "Inter, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', system-ui" }
             });
             updateEdgeColors();
             updateProgress();
@@ -816,8 +842,8 @@
             const completedSet = new Set(getCompleted());
             const bothCompleted = completedSet.has(from) && completedSet.has(to);
             return {
-                color: bothCompleted ? '#f85149' : '#30363d',
-                hover: '#58a6ff'
+                color: bothCompleted ? '#fb7185' : '#262b3a',
+                hover: '#818cf8'
             };
         }
 
@@ -858,12 +884,13 @@
                 tooltipDelay: 0
             },
             edges: {
-                color: { color: '#30363d', hover: '#58a6ff' },
+                color: { color: '#262b3a', hover: '#818cf8' },
                 width: 2,
                 smooth: { type: 'cubicBezier' }
             },
             nodes: {
-                borderWidth: 2
+                borderWidth: 2,
+                shapeProperties: { borderRadius: 8 }
             }
         };
 
@@ -875,9 +902,9 @@
 
             // Define bars with same color, increasing brightness
             const bars = [
-                { xStart: -50, xEnd: 170, color: '#3a5f8f' },
-                { xStart: 180, xEnd: 420, color: '#4a7faf' },
-                { xStart: 430, xEnd: 580, color: '#58a6ff' }
+                { xStart: -50, xEnd: 170, color: '#3730a3' },
+                { xStart: 180, xEnd: 420, color: '#4f46e5' },
+                { xStart: 430, xEnd: 580, color: '#818cf8' }
             ];
 
             const yPosition = 180;
@@ -911,7 +938,7 @@
         const tutorialCategories = {
             windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
             mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
-            basics: [1, 2, 3, 25, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, VS Code Basics, Claude Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
+            basics: [1, 2, 3, 25, 28, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, Claude Desktop, VS Code Basics, Claude Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
             r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
             rstudio_mac: [17],         // RStudio (Mac)
             rstudio_windows: [18],     // RStudio (Windows)
@@ -920,7 +947,7 @@
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
             excel: [26, 27],           // Excel in VS Code, Vibe Coding in Excel
             shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27] // All coding tutorials
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -929,8 +956,8 @@
             let visibleNodes = [];
 
             if (currentLanguage === 'basics') {
-                // Basics mode: show VS Code Basics + Claude Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
-                visibleNodes = [...tutorialCategories[currentPlatform], 3, 25, 13, 21, 22, 23, 24];
+                // Basics mode: show VS Code Basics + Claude Code Basics + Claude Desktop + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
+                visibleNodes = [...tutorialCategories[currentPlatform], 3, 25, 28, 13, 21, 22, 23, 24];
             } else if (currentLanguage === 'r') {
                 // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper, no skills)
                 const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
