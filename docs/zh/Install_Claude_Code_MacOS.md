@@ -183,9 +183,11 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 - 在 Terminal 中输入：
    ```
-   sudo claude
+   claude update
    ```
 - Claude Code 会检查更新并安装最新版本
+
+**注意：** 不要使用 `sudo` 来运行或更新 Claude Code——这可能会在你的 `~/.claude` 文件夹中留下属于 root 的文件，导致你下次正常运行 Claude Code 时出现权限错误。
 
 **注意：** 通过 Homebrew 安装的版本不会自动更新。请定期运行 `brew upgrade claude-code` 以获取最新版本。
 
