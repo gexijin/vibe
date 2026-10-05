@@ -68,7 +68,7 @@ claude
 
 输入以下提示：
 ```
-将我的 stock-report slash 命令转换为名为 generate-stock-reports 的 Skill。
+将我的 stock-report slash 命令转换为 Skill。
 这个 Skill 应该在我询问公司或股票时自动激活。
 ```
 
