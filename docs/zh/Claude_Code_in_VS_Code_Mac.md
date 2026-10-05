@@ -45,7 +45,7 @@ lang: "zh"
 
 现在你应该能在左侧资源管理器面板中看到 `TEST_CLAUDE`。
 
-## 步骤 4：启动 Claude Code
+## 步骤 4：启动 Claude Code 并登录
 
 - 打开新终端：点击菜单栏中的 **Terminal（终端）> New Terminal（新建终端）**
 - 终端面板会出现在 VS Code 底部
@@ -53,10 +53,15 @@ lang: "zh"
   ```
   claude
   ```
+- 第一次这样做时，Claude Code 会要求你登录：
+  1. 按 Enter 打开浏览器窗口
+  2. 登录或创建 Anthropic 账户
+  3. 复制代码并粘贴回终端
+  4. 按 Enter
+- 你会看到欢迎消息和 Claude Code 提示符
+- 现在你可以在 VS Code 中编辑文件的同时使用 Claude Code 了
 
-按照[安装教程](Install_Claude_Code_MacOS.md)使用你的 Claude 订阅登录。登录后，你会看到欢迎消息和 Claude Code 提示符。
-
-现在你可以在 VS Code 中编辑文件的同时使用 Claude Code 了。
+**注意：**只需登录一次，以后启动时会直接显示欢迎消息。
 
 ## 步骤 5：测试工作流程
 
