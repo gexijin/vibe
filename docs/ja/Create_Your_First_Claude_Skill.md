@@ -23,18 +23,17 @@ lang: "ja"
 
 ## ステップ1：プロジェクトフォルダに移動
 
-**Windows（WSL）：**
-- スタートメニューから**Ubuntu**を開く
+**Windows（PowerShell）：**
+- スタートメニューから**PowerShell**を開く
 - 次を入力：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  `YOUR_USERNAME`をWindowsのユーザー名に置き換えてください
+  cd ~\Documents\test_claude
+  ```
 
   フォルダが存在しない場合は、最初に作成します：
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac：**
@@ -61,7 +60,7 @@ claude
 
 ## ステップ3：編集の自動承認を有効化
 
-`Ctrl+E`（Windows/Linux）または`Cmd+E`（Mac）を押して、編集の自動承認モードを有効にします。
+**Shift+Tab**を押して、編集の自動承認モードを有効にします。
 
 これにより、Claudeは毎回許可を求めることなくファイルを作成および変更できます。
 

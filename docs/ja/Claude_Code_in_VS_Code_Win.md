@@ -1,19 +1,18 @@
 ---
-title: "WSLでClaude Code用にVS Codeをセットアップ"
+title: "WindowsでClaude Code用にVS Codeをセットアップ"
 lang: "ja"
 ---
 [ホーム](./)
 
-# WSLでClaude Code用にVS Codeをセットアップ
+# WindowsでClaude Code用にVS Codeをセットアップ
 
-WSLとClaude Codeの準備ができたら、コードを編集するためのビジュアルエディターが欲しくなります。VS CodeはWindowsとLinux環境をつなぎ、エディターでファイルを編集しながら統合ターミナルでClaude Codeを実行できます。VS Codeを「Linux環境への窓」と考えてください。
+WindowsにClaude Codeをインストールできたら、コードを編集するためのビジュアルエディターが欲しくなります。VS Codeなら、エディターでファイルを編集しながら、すぐ隣の統合ターミナルでClaude Codeを実行できます。すべてが1つのウィンドウにまとまります。
 
 ## 重要な概念
 
-- **VS Code**：Windowsで動くMicrosoft製の無料エディター。WSLに接続してLinux側のファイルも扱えます。
-- **WSL拡張機能**：VS CodeにWSLへの接続機能を追加。Linuxツール（Claude Codeなど）をそのまま使えます。
-- **統合ターミナル**：VS Code内にあるターミナル。WSLのUbuntuで実行されるため、`claude`もここで実行可能。
-- **/mnt/c/**：WSLからWindowsファイルへアクセスするパス（例：`/mnt/c/Users/...` = `C:\Users\...`）。
+- **VS Code**：Microsoft製の無料エディター。ターミナルが組み込まれています。
+- **統合ターミナル**：VS Code内にあるPowerShellターミナル。ウィンドウを切り替えずにClaude Codeを実行できます。
+- **ワークスペースフォルダ**：VS Codeで開いたフォルダ。Claude Codeはこのフォルダ内のファイルを読み取り・編集します。
 
 ## 必要なもの
 
@@ -34,34 +33,14 @@ WSLとClaude Codeの準備ができたら、コードを編集するためのビ
 2. 検索結果の **Visual Studio Code** をクリック
 3. 起動直後に表示されるWelcomeタブは閉じてかまいません
 
-## ステップ3：WSL拡張機能をインストール
-
-1. VS Code左サイドバーの**拡張機能**（四つの正方形アイコン）をクリック
-2. 検索ボックスに `WSL` と入力
-3. Microsoft製の **WSL** 拡張機能を選び、**インストール**をクリック
-4. 数秒で完了します
-
-## ステップ4：WSLに接続
-
-1. VS Code左下のステータスバーにある青/緑のアイコンをクリック（または `F1` を押して「WSL」と入力）
-2. **WSLに接続** を選択
-3. VS Codeが再読み込みされ、Ubuntuに接続されます
-4. 左下に **WSL: Ubuntu** と表示されれば成功。
-
-初回接続時はWSL側に小さなサーバーがインストールされるため、30秒ほど待ちます。
-
-## ステップ5：フォルダを開く
+## ステップ3：フォルダを開く
 
 1. VS Codeメニューバーから **ファイル > フォルダーを開く** をクリック
-2. 表示されたパス入力ボックスに以下を入力：
-   ```
-   /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-   ```
-   ※ `YOUR_USERNAME` を自分のWindowsユーザー名に置き換える
-3. **OK** を押すとVS Codeが `test_claude` フォルダを読み込みます
+2. **ドキュメント** へ移動し、`test_claude` フォルダを選択
+3. **フォルダーの選択** をクリックするとVS Codeが `test_claude` フォルダを読み込みます
 4. 「作成者を信頼しますか？」と表示されたら **はい** を選択
 
-## ステップ6：Claude Codeを起動
+## ステップ4：Claude Codeを起動
 
 1. メニューバーの **ターミナル > 新しいターミナル** をクリック
 2. 下部に開いたターミナルで次を実行：
@@ -71,7 +50,7 @@ WSLとClaude Codeの準備ができたら、コードを編集するためのビ
 
 [インストールチュートリアル](Install_CLAUDE_Code_Win.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
-## ステップ7：動作テスト
+## ステップ5：動作テスト
 
 Claude Codeの入力欄に以下を入力してみましょう：
 ```
@@ -83,10 +62,10 @@ LLMがMarkdown形式を好む理由を説明する短い記事を書き、articl
 
 ## 後からVS Codeで再開するには
 
-- **方法A：** VS Codeを起動 → 左下アイコンから **WSLへ接続** → **ファイル > 最近使った項目** で `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude [WSL: Ubuntu]` を選択
-- **方法B：** WindowsでUbuntuアプリを開き、プロジェクトフォルダへ移動して `code .` を実行
+VS Codeを閉じた後、プロジェクトに戻る方法は次のとおりです：
 
-最近使ったフォルダに表示されるので、方法Aが最も早いことが多いです。
+- **方法A：** VS Codeを起動 → **ファイル > 最近使った項目** で `test_claude` を選択
+- **方法B：** **エクスプローラー**で `test_claude` フォルダを右クリックし、**Codeで開く** を選択
 
 ## 次のステップ
 
@@ -94,21 +73,17 @@ LLMがMarkdown形式を好む理由を説明する短い記事を書き、articl
 - 新機能を追加：「リストの平均を計算する関数を追加してください」
 - バグ修正を依頼：「このコードのエラーを修正してください」
 - 「Claude Code」拡張機能を検索し、インライン差分付きのビジュアルUIを試す
-- 大きなファイルをより効率的に扱うには、WSLファイルシステム内（`/home/user/`）にフォルダを作成します。Windowsからアクセスする場合は、エクスプローラーのサイドバー下部にあるLinuxアイコンを探すか、アドレスバーに `\\wsl.localhost\` と入力してください。
 
 ## トラブルシューティング
 
-- **左下に「WSL: Ubuntu」が表示されない**：まずUbuntuターミナルを起動してWSLが動作しているか確認。
-- **ターミナルがPowerShellになる**：ターミナルペインの `+` 右側の矢印から **Ubuntu (WSL)** を選択し、既定シェルを切り替え。
-- **`claude` が見つからない**：`claude --version` で確認。見つからない場合は[WSLインストール手順](./Install_CLAUDE_Code_Win)を再確認してください。
+- **`claude` が見つからない**：VS Codeのターミナルで `claude --version` を実行して確認。見つからない場合は、まず[インストール手順](Install_CLAUDE_Code_Win.md)に従ってください。
+- **WSLを使っている場合**：オプションのWSL/Ubuntuの方法を設定した場合は、拡張機能サイドバーから **WSL** 拡張機能をインストールし、左下の青/緑のアイコンをクリックして **WSLに接続** を選択してから、プロジェクトフォルダを開いてください（パスは `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）。
 
 ## ワークフローまとめ
 
 - **VS Code**：Windows上で動作し、エディターを提供
-- **WSL拡張機能**：VS CodeをUbuntuに接続し、Linuxコマンドを実行可能に
-- **統合ターミナル**：Ubuntu上で`claude`を実行
-- **ファイル配置**：Windows側（例：Documents）に置いたまま `/mnt/c/` 経由でアクセス
-- エディターで編集しつつ、ターミナルでClaudeと会話 —— WindowsとLinuxのいいとこ取りです。
+- **統合ターミナル**：VS Code内でそのまま`claude`を実行
+- エディターで編集しつつ、ターミナルでClaudeと会話 —— 両方のいいとこ取りです。
 
 ---
 

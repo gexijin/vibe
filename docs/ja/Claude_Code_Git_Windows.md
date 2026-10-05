@@ -10,7 +10,7 @@ AIの支援を受けて作業しています。AIはファイルを変更しま�
 
 ## 主要な概念
 
-- **WSL (Windows Subsystem for Linux)**：Linuxツール（Gitなど）をWindows上でそのまま実行できる仕組み
+- **PowerShell**：Windowsに標準搭載されているコマンドラインツール。ここではGitとClaude Codeの実行に使用します
 - **Git**：ファイルの変更履歴をすべて記録し、任意の時点に戻れるようにするバージョン管理システム
 - **コミット**：特定の時点でのプロジェクトの状態を説明付きで保存したもの
 - **Claude Code**：自然言語で指示するだけでコード作成・修正・Git操作まで行ってくれるAIアシスタント
@@ -18,31 +18,29 @@ AIの支援を受けて作業しています。AIはファイルを変更しま�
 ## 必要なもの
 
 - [WindowsへのClaude Codeのインストール](./Install_CLAUDE_Code_Win)が完了していること
-- WSLとUbuntuがインストール済み
 - 20分
 
-## ステップ1：Ubuntuターミナルを開く
+## ステップ1：PowerShellを開く
 
 - **スタート**メニューをクリック
-- `Ubuntu` と入力
-- **Ubuntu** をクリックしてターミナルを開く
+- `PowerShell` と入力
+- **Windows PowerShell** をクリックして開く
 
-`$` で終わるコマンドプロンプトが表示されます。
+**注意：** ネイティブインストールではなく、オプションのWSL/Ubuntuの方法を設定した場合は、代わりに **Ubuntu** アプリを開いてください。GitとClaude Codeは同じように動作します。ただし、パスは `~\Documents\...` ではなくLinux形式（`/mnt/c/Users/...`）になります。
 
 ## ステップ2：Gitをインストール
 
-- 次のコマンドを入力してEnterを押します：
-  ```
-  sudo apt-get install git
-  ```
-- パスワードを求められたら入力してEnterを押します
-- インストールが完了するまで待ちます（10〜30秒）
-- Gitがインストールされたことを確認します：
+- Gitがすでにインストールされているか確認します：
   ```
   git --version
   ```
-
-`git version 2.34.1` のように表示されるはずです。
+- `git version 2.45.0` のようなバージョン番号が表示された場合は、ステップ3に進みます
+- エラーが表示された場合は、Git for Windowsをインストールします：
+  - [git-scm.com/download/win](https://git-scm.com/download/win) にアクセス
+  - ダウンロードが自動的に始まります。完了したらインストーラーを開きます
+  - デフォルトのオプションのまま **Next** をクリックして進みます
+  - **Install** をクリックし、次に **Finish** をクリック
+  - PowerShellを閉じて開き直し、もう一度 `git --version` で確認します
 
 ## ステップ3：Gitに身元情報を登録
 
@@ -56,21 +54,18 @@ Gitはコミットメッセージに誰が変更したかを記録する必要�
 
 複数人で作業する場合、名前とメールアドレスを使うことで誰が変更したかを識別できます。
 
-## ステップ4：Windowsフォルダへ移動
+## ステップ4：Documentsフォルダへ移動
 
-WSLは `/mnt/c/` を通じてWindowsファイルにアクセスできます。
-
-- Windowsのユーザーフォルダに移動します：
+- Documentsフォルダに移動します：
   ```
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  cd ~\Documents
   ```
-  `YOUR_USERNAME` は実際のWindowsユーザー名に置き換えてください。
 - 正しい場所にいることを確認します：
   ```
   pwd
   ```
 
-`/mnt/c/Users/YOUR_USERNAME/Documents` と表示されるはずです。
+`\Documents` で終わるパスが表示されるはずです。
 
 ## ステップ5：プロジェクトフォルダを作成
 
@@ -254,9 +249,9 @@ Claudeがコミットを読みやすい形式で表示します。次のよう�
 
 ## トラブルシューティング
 
-- **"not a git repository" エラー：** test_claudeフォルダにいることを確認してください（`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
+- **"not a git repository" エラー：** test_claudeフォルダにいることを確認してください（`cd ~\Documents\test_claude`）
 - **Windows上でtimer.htmlが見つからない：** ファイルは `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` にあります
-- **Gitがパスワードを要求する：** `sudo` パスワードの入力ミスです。注意深く再入力してください
+- **`git` コマンドが見つからない：** Git for WindowsをインストールしたらPowerShellを閉じて開き直してPATHを更新し、もう一度 `git --version` を実行してください
 - **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証** を選択、**Console** タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
 
 ## Claudeに依頼できること
