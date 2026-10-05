@@ -71,7 +71,7 @@ Claude Desktop 不只是用来聊天。根据你的套餐不同，还可以使�
 
 - [在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win.md)或[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS.md)——安装本站其他教程中使用的、基于 Terminal 的编程助手
 - [Claude Code 基本操作](./Claude_Code_Basic_Operations.md)——安装好 Claude Code 后，学习基本用法
-- [What Is Anthropic and Claude?（英文）](../What_Is_Anthropic_And_Claude.md)——如果你刚接触 Claude，这是一篇简短的入门介绍
+- [什么是 Anthropic 和 Claude？](./What_Is_Anthropic_And_Claude.md)——如果你刚接触 Claude，这是一篇简短的入门介绍
 
 ## 故障排除
 
