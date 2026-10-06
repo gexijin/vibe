@@ -12,12 +12,13 @@ Vibe coding es como tener una conversación con su computadora: usted describe e
 
 - **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, edita y corrige archivos a partir de sus solicitudes en lenguaje natural
 - **Libro con varias hojas** - Un único archivo `.xlsx` con varias pestañas (Ingresos, Gastos, Resumen) que se referencian entre sí mediante fórmulas
-- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones que funcionen
+- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → hacer commit (guardar una versión en Git) de las versiones que funcionen
 
 ## Lo Que Necesitará
 
 - Haber completado [Use Claude Code con Excel en VS Code](./Excel_Coding_VS_Code_Guide)
 - Haber completado [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Microsoft Excel, [LibreOffice Calc](https://es.libreoffice.org/descarga/) (gratuito) o Google Sheets (gratuito en su navegador web) para ver gráficos, colores y listas desplegables
 - 25-30 minutos
 
 ## Paso 1: Crear Nuevo Repositorio en GitHub
@@ -43,6 +44,7 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 - Seleccione su carpeta `budget-dashboard`
 - Haga clic en **Select Folder** (Windows) u **Open** (Mac)
 - Si aún no lo ha hecho, instale la extensión **Spreadsheet Viewer** de MESCIUS (antes llamada **Excel Viewer** de GrapeCity) para poder ver hojas de cálculo sin salir de VS Code. Busque su ID, `GrapeCity.gc-excelviewer`, en el panel Extensions para encontrar la correcta
+- Spreadsheet Viewer es ideal para revisar números y fórmulas, pero no puede mostrar gráficos, celdas resaltadas con colores ni listas desplegables. Para eso usará Excel, LibreOffice Calc o Google Sheets
 
 ## Paso 3: Iniciar Claude Code
 
@@ -64,16 +66,17 @@ En lugar de construir una hoja de cálculo celda por celda, simplemente describa
 - En la terminal de Claude Code, escriba:
 
 ```
-Crea una hoja de cálculo llamada budget.xlsx con dos hojas: "Ingresos" y "Gastos". Ingresos debe tener columnas para Fuente, Mes y Monto, con 3 fuentes de ingresos de ejemplo durante 2 meses. Gastos debe tener columnas para Categoría, Mes y Monto, con 6 categorías de ejemplo (como Alquiler, Supermercado, Transporte, Servicios, Entretenimiento, Ahorro) durante los mismos 2 meses. Agrega una fila Total al final de cada hoja usando fórmulas SUM.
+Crea una hoja de cálculo llamada budget.xlsx con dos hojas: "Ingresos" y "Gastos". Ingresos debe tener columnas para Fuente, Mes y Monto, con 3 fuentes de ingresos de ejemplo durante 2 meses. Gastos debe tener columnas para Categoría, Mes y Monto, con 6 categorías de ejemplo (como Alquiler, Supermercado, Transporte, Servicios, Entretenimiento, Teléfono) durante los mismos 2 meses. Agrega una fila Total al final de cada hoja usando fórmulas SUM.
 ```
 
 - Presione Enter
-- Observe cómo Claude escribe y ejecuta un script de Python que construye el libro y luego lo vuelve a calcular para que los totales muestren números reales
+- Observe cómo Claude escribe y ejecuta un script de Python que construye el libro
+- Si Claude le pide permiso para ejecutar comandos o instalar herramientas auxiliares, elija **Yes**
 - Abra `budget.xlsx` en la pestaña de Spreadsheet Viewer y revise ambas hojas
 
-**Guarde su progreso:** Pídale a Claude que confirme los cambios usando Git, o hágalo usted mismo desde GitHub Desktop:
+**Guarde su progreso:** Pídale a Claude que haga commit con Git, o hágalo usted mismo desde GitHub Desktop:
 ```
-Confirma estos cambios.
+Haz commit de estos cambios con Git.
 ```
 
 ## Paso 5: Segundo Vibe - Agregar una Hoja de Resumen
@@ -83,14 +86,14 @@ Antes de crear gráficos, conecte las dos hojas.
 - En la terminal de Claude Code, escriba:
 
 ```
-Agrega una tercera hoja llamada "Resumen" a budget.xlsx. Debe mostrar Ingresos Totales, Gastos Totales y Ahorro Neto (Ingresos menos Gastos), cada uno calculado con fórmulas que hagan referencia a las hojas Ingresos y Gastos, no con números fijos.
+Agrega una tercera hoja llamada "Resumen" a budget.xlsx. Debe mostrar Ingresos Totales, Gastos Totales y Ahorro Neto (Ingresos menos Gastos), cada uno calculado con fórmulas que hagan referencia a las hojas Ingresos y Gastos, no con números fijos. Debajo, agrega una pequeña tabla que muestre los Ingresos y los Gastos de cada mes, también con fórmulas.
 ```
 
 - Presione Enter
-- Claude actualiza el libro y lo vuelve a calcular
+- Claude actualiza el libro
 - Abra la pestaña **Resumen** y haga clic en la celda Ahorro Neto para confirmar que es una fórmula que hace referencia a las otras hojas
 
-**Guarde su progreso:** Pídale a Claude que confirme los cambios, o use GitHub Desktop.
+**Guarde su progreso:** Pídale a Claude que haga commit, o use GitHub Desktop.
 
 ## Paso 6: Tercer Vibe - Agregar Gráficos
 
@@ -103,8 +106,10 @@ Agrega un gráfico circular a la hoja Gastos que muestre la proporción total de
 ```
 
 - Presione Enter
-- Claude agrega ambos gráficos y vuelve a calcular el archivo
-- Vuelva a abrir `budget.xlsx` en Spreadsheet Viewer (o actualice la pestaña) y revise ambas hojas para ver los nuevos gráficos
+- Claude agrega ambos gráficos
+- Para verlos, abra `budget.xlsx` en Excel o LibreOffice Calc (haga doble clic en él en el Explorador de archivos o en Finder), o súbalo a Google Sheets, y revise ambas hojas
+- Spreadsheet Viewer en VS Code no muestra gráficos; es lo esperado, siguen estando en el archivo
+- Cierre el archivo en Excel o LibreOffice antes de pedirle más cambios a Claude
 
 ## Paso 7: Cuarto Vibe - Resaltar las Categorías que Superan el Presupuesto
 
@@ -113,11 +118,11 @@ Haga visibles los problemas de un vistazo en lugar de buscarlos entre los númer
 - En la terminal de Claude Code, escriba:
 
 ```
-En la hoja Gastos, agrega formato condicional para que cualquier gasto de más de $500 en un solo mes se resalte en rojo, y cualquier gasto de menos de $100 se resalte en verde.
+En la hoja Gastos, agrega formato condicional para que cualquier gasto de más de $500 en un solo mes se resalte en rojo, y cualquier gasto de menos de $100 se resalte en verde. No colorees la fila Total.
 ```
 
 - Presione Enter
-- Vuelva a abrir el archivo y revise la hoja Gastos: las celdas ahora deberían tener colores según su valor
+- Abra el archivo en Excel, LibreOffice Calc o Google Sheets y revise la hoja Gastos: las celdas ahora deberían tener colores según su valor (Spreadsheet Viewer no muestra estos colores)
 
 Si algo no se ve bien, copie lo que ve y descríbaselo a Claude para que lo corrija.
 
@@ -132,11 +137,12 @@ Agrega validación de datos a la columna Categoría de la hoja Gastos para que s
 ```
 
 - Presione Enter
-- Abra el archivo, haga clic en una de las celdas vacías de Categoría y confirme que aparece una flecha desplegable con su lista de categorías
+- Abra el archivo en Excel, LibreOffice Calc o Google Sheets, haga clic en una de las celdas vacías de Categoría y compruebe que aparece una flecha desplegable con su lista de categorías (Spreadsheet Viewer no muestra listas desplegables)
+- Cierre el archivo cuando termine
 
-## Paso 9: Revisar y Confirmar
+## Paso 9: Revisar y Hacer Commit
 
-Antes de confirmar, revise lo que Claude construyó.
+Antes de hacer commit, revise lo que Claude construyó.
 
 - En Spreadsheet Viewer, revise las tres hojas: Ingresos, Gastos y Resumen
 - No necesita entender cada fórmula, pero hágase una idea de la estructura
@@ -166,20 +172,20 @@ Vibe coding brilla cuando usted itera. Pruebe agregar funciones describiéndolas
 - "Crea un segundo libro llamado household_budget.xlsx para una familia de cuatro personas con más categorías"
 
 Después de cada función exitosa:
-- Abra el archivo y revíselo en Spreadsheet Viewer
-- Si funciona, confirme los cambios con GitHub Desktop
+- Abra el archivo y revíselo: use Spreadsheet Viewer para los números, o Excel/LibreOffice para los gráficos y colores
+- Si funciona, haga commit con GitHub Desktop
 - Si algo se ve mal, descríbaselo a Claude y pídale que lo corrija
-- Cuando esté corregido, confirme la versión que funciona
+- Cuando esté corregido, haga commit de la versión que funciona
 
 **Principios clave:**
 
 - **Describa resultados, no la implementación** - Diga "resalta los gastos de más de $500", no "usa formato condicional con un CellIsRule"
 - **Itere rápidamente** - Probar → refinar → probar → refinar
-- **Confirme versiones que funcionen** - Guarde cada éxito antes de probar nuevas funciones
+- **Haga commit de las versiones que funcionen** - Guarde cada éxito antes de probar nuevas funciones
 - **Acepte los errores** - Si una fórmula o un gráfico no sale bien, simplemente describa el problema y pídale a Claude que lo corrija
 - **Mantenga el control** - Usted decide qué debe mostrar el control de presupuesto y cuándo es suficientemente bueno
 
-Cada vez, siga el patrón: describir → revisar el archivo → iterar → confirmar.
+Cada vez, siga el patrón: describir → revisar el archivo → iterar → hacer commit.
 
 ## Próximos Pasos
 
@@ -192,7 +198,7 @@ Cada vez, siga el patrón: describir → revisar el archivo → iterar → confi
 ## Solución de Problemas
 
 - **Una celda con fórmula aparece vacía o muestra `None`** - El archivo necesita volver a calcularse después de las ediciones. Pídale a Claude: "Vuelve a calcular budget.xlsx y confirma que no haya errores en las fórmulas."
-- **El gráfico no se actualiza después de cambiar los datos** - Vuelva a abrir la pestaña en VS Code (ciérrela y haga clic de nuevo en el archivo) para obligar a Spreadsheet Viewer a actualizarse.
+- **El gráfico no aparece** - Spreadsheet Viewer no puede mostrar gráficos. Abra el archivo en Excel, LibreOffice Calc o Google Sheets. Si tampoco aparece ahí, descríbale el problema a Claude y pídale que vuelva a agregar el gráfico.
 - **Claude comete un error** - ¡Es normal! Describa lo que se ve mal y pídale a Claude que lo corrija. Vibe coding incluye iteración y depuración.
 - **No puede hacer push a GitHub** - Asegúrese de haber iniciado sesión en GitHub Desktop y de haber publicado el repositorio (Paso 1). Revise su conexión a internet.
 - **La lista desplegable no aparece** - La validación de datos solo se muestra en aplicaciones de hojas de cálculo reales (Excel, LibreOffice, Google Sheets), no siempre en visores ligeros. Abra el archivo en Excel o LibreOffice Calc para probarla.
@@ -201,7 +207,7 @@ Cada vez, siga el patrón: describir → revisar el archivo → iterar → confi
 
 Este tutorial combinó varias herramientas en un solo flujo de trabajo:
 
-- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, confirmar, hacer push)
+- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, hacer commit, hacer push)
 - **VS Code** - Editor con la extensión Spreadsheet Viewer para vistas previas rápidas
 - **Claude Code** - Asistente con IA que crea y edita archivos `.xlsx` reales a partir de sus descripciones
 - **openpyxl (tras bastidores)** - El motor que Claude usa para escribir fórmulas, formato y gráficos en el archivo
@@ -216,7 +222,7 @@ Después de esta configuración inicial, su rutina diaria de vibe coding será:
 2. **Inicie Claude Code** - Escriba `claude` en la terminal
 3. **Describa su objetivo** - "Agrega una función que..." o "Corrige la fila donde..."
 4. **Revise el archivo** - Ábralo en Spreadsheet Viewer o en Excel/LibreOffice
-5. **Itere o confirme** - Si algo no está bien, describa la corrección; si funciona, confirme los cambios con GitHub Desktop
+5. **Itere o haga commit** - Si algo no está bien, describa la corrección; si funciona, haga commit con GitHub Desktop
 6. **Haga push con regularidad** - Haga clic en **Push origin** para respaldar en GitHub
 
 Cuanto más practique, mejor describirá lo que desea. Vibe coding es una habilidad: usted aprende qué tipo de descripciones funcionan mejor y cómo dividir grandes ideas de hojas de cálculo en partes que se puedan probar.
