@@ -10,7 +10,7 @@ lang: "zh"
 
 ## 关键概念
 
-- **Workspace（工作空间）** - 从某个文件夹启动Claude Code，该文件夹就是会话的工作空间
+- **Workspace（工作空间）** - 你启动Claude Code时所在的文件夹；在该会话中，Claude会读取和编辑其中的文件
 - **REPL（读取-求值-打印循环）** - 交互式会话，你输入命令，Claude回应，对话持续进行直到退出
 - **Context（上下文）** - Claude记住的代码和对话历史数量；类似工作记忆，会随时间填满
 - **Slash Commands（斜杠命令）** - 以`/`开头的内置快捷命令，用于执行特定操作，如清除历史或显示帮助
@@ -63,7 +63,7 @@ cd data_projects
 claude
 ```
 
-按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
+按照安装教程（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤4：询问关于项目的问题
 
@@ -134,15 +134,16 @@ Claude会检查Git历史（如果可用）并告诉你最近的提交。
 
 结束会话并返回正常Terminal提示符。你也可以按两次**Ctrl + C**。
 
-## 步骤6：键盘快捷键
+## 步骤6：批准更改并使用快捷键
 
-这些快捷键让使用Claude Code更快：
+当Claude想要编辑文件或运行命令时，会显示一个小菜单，其中有**Yes**和**No**等选项。用方向键选中你的选择，然后按**Enter**。
 
-- **Shift+Tab** - 在计划模式、编辑模式或正常模式之间切换 - 复杂任务时先进行计划
-- **Alt+Enter**（Windows/Linux）或**Option+Return**（Mac）- 在消息中添加新行而不发送
+另外，一些键盘快捷键能让使用Claude Code更快：
+
+- **Shift+Tab** - 在不同模式之间循环切换（Manual、Accept Edits、Plan）- 处理复杂任务时，Plan模式可以让你在Claude做任何修改之前先审查计划
 - **Ctrl+C** - 取消当前操作或Claude的响应
-- **Ctrl+D** - Claude请求权限时批准文件更改
-- **Esc** - 关闭菜单或取消当前输入
+- **Esc** - 中途停止Claude的响应，或关闭菜单
+- **`\`然后按Enter**（或**Ctrl+J**）- 在消息中添加新行而不发送
 
 ## 步骤7：始终创建CLAUDE.md文件
 
@@ -201,7 +202,7 @@ Claude可以运行Linux命令来执行各种操作。
   运行它并将新代码和图表保存在同一文件夹中
   ```
 
-我们可以问这个模糊的问题，因为我们刚要求它解释代码。之后会发生很多事情，Claude会安装软件、排查错误、解决环境问题——都是自动完成。
+Claude会安装软件、排查错误、管理环境——都是自动完成。
 
 你基本拥有了一个Linux bash命令专家。只要管理好权限并批准操作，就能非常高效。
 
@@ -216,9 +217,9 @@ Claude可以运行Linux命令来执行各种操作。
 
 ## 故障排除
 
-- **"Command not found"（命令未找到）错误** - Claude Code未安装或不在PATH中。运行`npm install -g @anthropic-ai/claude-code`安装
+- **"Command not found"（命令未找到）错误** - Claude Code未安装或不在PATH中。重新按照[Windows](Install_CLAUDE_Code_Win.md)或[Mac](Install_Claude_Code_MacOS.md)安装教程操作，或直接重新运行安装程序：`irm https://claude.ai/install.ps1 | iex`（Windows PowerShell）或`curl -fsSL https://claude.ai/install.sh | bash`（Mac/WSL）
 - **Claude给出过时信息** - 使用`/clear`清除上下文并重新询问。长对话会填满Claude的内存
-- **文件更改不起作用** - 确保在项目文件夹中有写权限。Claude会在修改文件前请求批准——按Ctrl+D批准
+- **文件更改不起作用** - 确保在项目文件夹中有写权限。Claude会在修改文件前请求批准——在弹出的菜单中选择**Yes**
 - **上下文快速填满** - 使用`/context`检查使用情况。接近满时，使用`/clear`开始全新对话
 
 ## 工作流程概述
