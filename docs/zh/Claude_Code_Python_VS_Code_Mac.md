@@ -69,6 +69,10 @@ print(iris_df.describe())
 
 - 点击 **File > Save** 保存文件
 - 打开 Python Terminal：点击 **View > Terminal**
+- 安装此脚本所需的包：
+  ```
+  pip install scikit-learn pandas
+  ```
 - 在 Terminal 中运行：`python iris_analysis.py`
 - 你应在 Terminal 中看到数据集结构和汇总统计信息
 
