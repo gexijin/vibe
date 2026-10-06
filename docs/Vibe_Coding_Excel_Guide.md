@@ -17,6 +17,7 @@ Vibe coding is like having a conversation with your computer - you describe the 
 
 - Finished [Use Claude Code with Excel in VS Code](./Excel_Coding_VS_Code_Guide)
 - Finished [Use GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Microsoft Excel, [LibreOffice Calc](https://www.libreoffice.org/download/download-libreoffice/) (free), or Google Sheets (free in your web browser) to see charts, colors, and dropdowns
 - 25-30 minutes
 
 ## Step 1: Create New GitHub Repository
@@ -42,6 +43,7 @@ You now have a local Git repository and a backup on GitHub.
 - Select your `budget-dashboard` folder
 - Click **Select Folder** (Windows) or **Open** (Mac)
 - If you haven't already, install the **Spreadsheet Viewer** extension by MESCIUS (formerly **Excel Viewer** by GrapeCity) so you can preview spreadsheets without leaving VS Code. Search the Extensions panel for its ID, `GrapeCity.gc-excelviewer`, to find the right one
+- The Spreadsheet Viewer is great for checking numbers and formulas, but it can't show charts, colored highlighting, or dropdown lists - you'll use Excel, LibreOffice Calc, or Google Sheets for those
 
 ## Step 3: Start Claude Code
 
@@ -63,11 +65,12 @@ Instead of building a spreadsheet cell by cell, just describe what you want.
 - In the Claude Code terminal, type:
 
 ```
-Create a spreadsheet called budget.xlsx with two sheets: "Income" and "Expenses". Income should have columns for Source, Month, and Amount, with 3 example income sources across 2 months. Expenses should have columns for Category, Month, and Amount, with 6 example categories (like Rent, Groceries, Transportation, Utilities, Entertainment, Savings) across the same 2 months. Add a Total row at the bottom of each sheet using SUM formulas.
+Create a spreadsheet called budget.xlsx with two sheets: "Income" and "Expenses". Income should have columns for Source, Month, and Amount, with 3 example income sources across 2 months. Expenses should have columns for Category, Month, and Amount, with 6 example categories (like Rent, Groceries, Transportation, Utilities, Entertainment, Phone) across the same 2 months. Add a Total row at the bottom of each sheet using SUM formulas.
 ```
 
 - Press Enter
-- Watch Claude write and run a Python script that builds the workbook, then recalculates it so the totals show real numbers
+- Watch Claude write and run a Python script that builds the workbook
+- If Claude asks permission to run commands or install helper tools, choose **Yes**
 - Open `budget.xlsx` in the Spreadsheet Viewer tab and click through both sheets
 
 **Save your progress:** Ask Claude to commit using Git, or do this yourself from GitHub Desktop:
@@ -82,11 +85,11 @@ Before building charts, tie the two sheets together.
 - In the Claude Code terminal, type:
 
 ```
-Add a third sheet called "Summary" to budget.xlsx. It should show Total Income, Total Expenses, and Net Savings (Income minus Expenses), each computed with formulas that reference the Income and Expenses sheets - not hardcoded numbers.
+Add a third sheet called "Summary" to budget.xlsx. It should show Total Income, Total Expenses, and Net Savings (Income minus Expenses), each computed with formulas that reference the Income and Expenses sheets - not hardcoded numbers. Below that, add a small table showing Income and Expenses for each month, also using formulas.
 ```
 
 - Press Enter
-- Claude updates the workbook and recalculates it
+- Claude updates the workbook
 - Open the **Summary** tab and click on the Net Savings cell to confirm it's a formula referencing the other sheets
 
 **Save your progress:** Ask Claude to commit, or use GitHub Desktop.
@@ -102,8 +105,10 @@ Add a pie chart to the Expenses sheet showing each category's total share of spe
 ```
 
 - Press Enter
-- Claude adds both charts and recalculates the file
-- Reopen `budget.xlsx` in the Spreadsheet Viewer (or refresh the tab) and check both sheets for the new charts
+- Claude adds both charts
+- To see them, open `budget.xlsx` in Excel or LibreOffice Calc (double-click it in File Explorer or Finder), or upload it to Google Sheets, and check both sheets
+- The Spreadsheet Viewer in VS Code won't show charts - that's expected, they're still in the file
+- Close the file in Excel or LibreOffice before asking Claude for more changes
 
 ## Step 7: Fourth Vibe - Highlight Over-Budget Categories
 
@@ -112,11 +117,11 @@ Make problems visible at a glance instead of hunting through numbers.
 - In the Claude Code terminal, type:
 
 ```
-On the Expenses sheet, add conditional formatting so any expense over $500 in a single month is highlighted in red, and anything under $100 is highlighted in green.
+On the Expenses sheet, add conditional formatting so any expense over $500 in a single month is highlighted in red, and anything under $100 is highlighted in green. Don't color the Total row.
 ```
 
 - Press Enter
-- Reopen the file and check the Expenses sheet - cells should now be colored based on their value
+- Open the file in Excel, LibreOffice Calc, or Google Sheets and check the Expenses sheet - cells should now be colored based on their value (the Spreadsheet Viewer doesn't show these colors)
 
 If something doesn't look right, copy what you see and describe it to Claude to fix.
 
@@ -131,7 +136,8 @@ Add data validation to the Category column in the Expenses sheet so it only acce
 ```
 
 - Press Enter
-- Open the file, click into one of the blank Category cells, and confirm a dropdown arrow appears with your category list
+- Open the file in Excel, LibreOffice Calc, or Google Sheets, click into one of the blank Category cells, and confirm a dropdown arrow appears with your category list (the Spreadsheet Viewer doesn't show dropdowns)
+- Close the file when you're done
 
 ## Step 9: Review and Commit
 
@@ -165,7 +171,7 @@ Vibe coding shines when you iterate. Try adding features by describing them:
 - "Create a second workbook called household_budget.xlsx for a family of four with more categories"
 
 After each successful feature:
-- Open the file and check it in the Spreadsheet Viewer
+- Open the file and check it - use the Spreadsheet Viewer for numbers, or Excel/LibreOffice for charts and colors
 - If it works, commit with GitHub Desktop
 - If something looks wrong, describe it to Claude and ask to fix it
 - When fixed, commit the working version
@@ -191,7 +197,7 @@ Each time, follow the pattern: describe → check the file → iterate → commi
 ## Troubleshooting
 
 - **A formula cell shows blank or `None`** - The file needs to be recalculated after edits. Ask Claude: "Recalculate budget.xlsx and confirm there are no formula errors."
-- **Chart doesn't update after changing data** - Reopen the tab in VS Code (close it and click the file again) to force the Spreadsheet Viewer to refresh.
+- **Chart doesn't appear** - The Spreadsheet Viewer can't display charts. Open the file in Excel, LibreOffice Calc, or Google Sheets. If it's missing there too, describe the problem to Claude and ask it to add the chart back.
 - **Claude makes a mistake** - Normal! Describe what looks wrong and ask Claude to fix it. Vibe coding includes iteration and debugging.
 - **Can't push to GitHub** - Make sure you're logged into GitHub Desktop and published the repository (Step 1). Check your internet connection.
 - **Dropdown list doesn't appear** - Data validation only shows in real spreadsheet apps (Excel, LibreOffice, Google Sheets), not always in lightweight previewers. Open the file in Excel or LibreOffice Calc to test it.
