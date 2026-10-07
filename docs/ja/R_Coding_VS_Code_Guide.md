@@ -16,7 +16,7 @@ Rコードを書きたいけど、RStudioが重く感じる、またはVS Code�
 
 ## 必要なもの
 
-- [VS Codeの基本](./ja/VS_Code_Getting_Started)を完了
+- [VS Codeの基本](./VS_Code_Getting_Started)を完了
 - Rとパッケージをダウンロードするためのインターネット接続
 - 10〜15分
 
