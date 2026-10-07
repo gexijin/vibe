@@ -18,14 +18,15 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 ## Ce Dont Vous Aurez Besoin
 
 - Claude Code installé depuis le tutoriel [Windows](Install_CLAUDE_Code_Win.md) ou [Mac](Install_Claude_Code_MacOS.md)
-- WSL installé si vous utilisez Windows
 - Familiarité de base avec l'utilisation d'un terminal ou d'une invite de commande
 - 15-20 minutes
 
 ## Étape 1 : Ouvrez Votre Terminal
 
-- **Windows** : Appuyez sur la touche Windows, tapez `Ubuntu`, et appuyez sur Entrée pour ouvrir le terminal WSL
+- **Windows** : Appuyez sur la touche Windows, tapez `PowerShell`, et appuyez sur Entrée pour ouvrir PowerShell
 - **Mac** : Appuyez sur `Cmd+Espace`, tapez `Terminal`, et appuyez sur Entrée
+
+**Remarque :** Si vous avez suivi le parcours optionnel WSL/Ubuntu du tutoriel d'installation Windows au lieu de l'installation native, ouvrez plutôt l'application **Ubuntu** et utilisez des chemins de style Linux (par ex. `/mnt/c/Users/VotreNom/...`) dans les étapes ci-dessous.
 
 Une fenêtre de texte s'ouvrira où vous pourrez taper des commandes.
 
@@ -45,12 +46,13 @@ cd data_projects
 - Visitez [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) dans votre navigateur web
 - Cliquez sur le bouton vert **Code** près du coin supérieur droit
 - Cliquez sur **Download ZIP**
-- Extrayez le fichier ZIP dans un dossier appelé **data_projects** dans le dossier Téléchargements.
+- Extrayez le fichier ZIP dans votre dossier Téléchargements. GitHub nomme le dossier extrait **data_projects-main** — renommez-le en **data_projects** pour qu'il corresponde au reste de ce tutoriel.
 - Dans votre terminal, naviguez vers le dossier extrait :
-  - **Windows** : `cd /mnt/c/Users/VotreNom/Downloads/data_projects`
-  - **Mac/Linux** : `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-Remplacez `VotreNom` par votre nom d'utilisateur réel et ajustez le chemin si vous l'avez extrait ailleurs. Pour les utilisateurs Windows, vos fichiers Windows sont accessibles depuis /mnt/c dans le système Linux.
+Ajustez le chemin si vous l'avez extrait ailleurs.
 
 ## Étape 3 : Démarrez Claude Code depuis le Dossier
 

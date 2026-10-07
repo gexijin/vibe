@@ -27,15 +27,14 @@ Dans ce tutoriel, vous allez créer un Claude Skill qui recherche la littératur
 
 Si vous avez terminé le [tutoriel sur les slash commands](./Reuse_Prompts_via_Slash_Commands.md), le dossier `test_claude` existe déjà. Ces commandes fonctionnent dans tous les cas.
 
-**Windows (WSL) :**
-- Ouvrez **Ubuntu** depuis le menu Démarrer
+**Windows (PowerShell) :**
+- Ouvrez **PowerShell** depuis le menu Démarrer
 - Tapez ces commandes :
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  Remplacez `YOUR_USERNAME` par votre nom d'utilisateur Windows
 
 **Mac :**
 - Ouvrez **Terminal** (trouvez-le dans Applications > Utilitaires)
@@ -46,7 +45,7 @@ Si vous avez terminé le [tutoriel sur les slash commands](./Reuse_Prompts_via_S
   cd test_claude
   ```
 
-Le flag `-p` crée le dossier s'il n'existe pas, ou ne fait simplement rien s'il existe déjà.
+Les flags `-p` (Mac) et `-Force` (Windows) créent le dossier s'il n'existe pas, ou ne font simplement rien s'il existe déjà.
 
 ## Étape 2 : Démarrer Claude Code
 

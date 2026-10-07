@@ -10,7 +10,7 @@ Vous travaillez avec l'assistance de l'IA. Elle apporte des modifications à vos
 
 ## Concepts Clés
 
-- **WSL (Windows Subsystem for Linux)** - Exécute des outils Linux comme Git nativement sur Windows
+- **PowerShell** - L'outil en ligne de commande intégré à Windows, utilisé ici pour exécuter Git et Claude Code
 - **Git** - Suit chaque modification de vos fichiers sur votre ordinateur, créant des points de restauration auxquels vous pouvez revenir à tout moment
 - **Commit** - Un instantané de votre projet à un moment spécifique avec une description de ce qui a changé
 - **Claude Code** - Assistant de codage IA qui écrit du code, corrige des bugs et gère les opérations Git grâce à de simples demandes
@@ -18,31 +18,29 @@ Vous travaillez avec l'assistance de l'IA. Elle apporte des modifications à vos
 ## Ce Dont Vous Aurez Besoin
 
 - Avoir terminé [Installer Claude Code sur Windows](./Install_CLAUDE_Code_Win)
-- WSL et Ubuntu installés
 - 20 minutes
 
-## Étape 1 : Ouvrez le Terminal Ubuntu
+## Étape 1 : Ouvrez PowerShell
 
 - Cliquez sur le menu **Démarrer**
-- Tapez `Ubuntu`
-- Cliquez sur **Ubuntu** pour ouvrir le terminal
+- Tapez `PowerShell`
+- Cliquez sur **Windows PowerShell** pour l'ouvrir
 
-Vous verrez une invite de commande se terminant par `$`.
+**Remarque :** Si vous avez suivi le parcours optionnel WSL/Ubuntu au lieu de l'installation native, ouvrez plutôt l'application **Ubuntu** — Git et Claude Code y fonctionnent de la même façon, simplement avec des chemins de style Linux (`/mnt/c/Users/...`) au lieu de `~\Documents\...`.
 
 ## Étape 2 : Installez Git
 
-- Tapez cette commande et appuyez sur Entrée :
-  ```
-  sudo apt-get install git
-  ```
-- Lorsque demandé, tapez votre mot de passe et appuyez sur Entrée
-- Attendez que l'installation se termine (10-30 secondes)
-- Vérifiez que Git est installé :
+- Vérifiez si Git est déjà installé :
   ```
   git --version
   ```
-
-Vous devriez voir quelque chose comme `git version 2.34.1`.
+- Si vous voyez un numéro de version comme `git version 2.45.0`, passez à l'Étape 3
+- Si vous voyez une erreur, installez Git for Windows :
+  - Allez sur [git-scm.com/download/win](https://git-scm.com/download/win)
+  - Le téléchargement devrait démarrer automatiquement — ouvrez le programme d'installation une fois terminé
+  - Cliquez sur **Next** tout au long de l'installation, en acceptant les options par défaut
+  - Cliquez sur **Install**, puis sur **Finish**
+  - Fermez et rouvrez PowerShell, puis vérifiez à nouveau avec `git --version`
 
 ## Étape 3 : Configurez Git avec Votre Identité
 
@@ -56,21 +54,18 @@ Git a besoin de savoir qui vous êtes pour les messages de commit.
 
 L'utilisation de votre nom et de votre email vous aide à identifier qui a effectué les modifications lorsque plusieurs personnes travaillent sur ceci.
 
-## Étape 4 : Naviguez vers un Dossier Windows
+## Étape 4 : Naviguez vers Votre Dossier Documents
 
-WSL peut accéder à vos fichiers Windows via `/mnt/c/`.
-
-- Naviguez vers votre dossier utilisateur Windows :
+- Naviguez vers votre dossier Documents :
   ```
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  cd ~\Documents
   ```
-  Remplacez `YOUR_USERNAME` par votre véritable nom d'utilisateur Windows.
 - Vérifiez que vous êtes au bon endroit :
   ```
   pwd
   ```
 
-Vous devriez voir `/mnt/c/Users/YOUR_USERNAME/Documents`.
+Vous devriez voir un chemin se terminant par `\Documents`.
 
 ## Étape 5 : Créez un Dossier de Projet
 
@@ -255,9 +250,9 @@ Rappelez-vous : Testez après chaque fonctionnalité, commitez après chaque suc
 
 ## Dépannage
 
-- **Erreur "not a git repository" :** Assurez-vous d'être dans le dossier test_claude (`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
+- **Erreur "not a git repository" :** Assurez-vous d'être dans le dossier test_claude (`cd ~\Documents\test_claude`)
 - **Impossible de trouver timer.html dans Windows :** Le fichier est à `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
-- **Git demande un mot de passe :** Vous avez mal saisi le mot de passe `sudo`—réessayez attentivement
+- **Commande `git` introuvable :** Fermez et rouvrez PowerShell après avoir installé Git for Windows pour que le PATH soit mis à jour, puis exécutez à nouveau `git --version`
 - **Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit sur la page, sélectionnez **Inspecter**, cliquez sur l'onglet **Console**), copiez tous les messages d'erreur en rouge, collez-les à Claude
 
 ## Ce Que Vous Pouvez Demander à Claude
