@@ -173,7 +173,7 @@ Anthropic pflegt ein Repository mit vorgefertigten Skills, die Sie sofort instal
 Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, Word, PowerPoint und Excel. Claude klont den Skill in Ihren `.claude/skills/`-Ordner.
 
 **Andere verfügbare Skills aus Anthropics Repository:**
-- Durchsuchen Sie den vollständigen Katalog unter [github.com/anthropics/claude-skills](https://github.com/anthropics/skills)
+- Durchsuchen Sie den vollständigen Katalog unter [github.com/anthropics/skills](https://github.com/anthropics/skills)
 - Fragen Sie Claude „Welche Skills sind im Anthropic Repository verfügbar?", um die aktuelle Liste zu sehen
 
 ## Nächste Schritte
