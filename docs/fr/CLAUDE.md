@@ -199,6 +199,9 @@ Tous les tutoriels anglais ont des versions chinoises simplifiées correspondant
 ### Espagnol (`es/`)
 Tous les tutoriels anglais ont des versions espagnoles correspondantes avec la même structure de noms de fichiers.
 
+### Hindi (`hi/`)
+Tous les tutoriels anglais ont des versions hindi correspondantes avec la même structure de noms de fichiers.
+
 Chaque dossier de traduction inclut :
 - Tous les guides d'installation
 - Tous les guides de configuration de VS Code
