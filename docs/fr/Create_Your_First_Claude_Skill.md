@@ -23,18 +23,17 @@ Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. E
 
 ## Étape 1 : Accédez au Dossier du Projet
 
-**Windows (WSL) :**
-- Ouvrez **Ubuntu** depuis le menu Démarrer
+**Windows (PowerShell) :**
+- Ouvrez **PowerShell** depuis le menu Démarrer
 - Tapez :
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  Remplacez `YOUR_USERNAME` par votre nom d'utilisateur Windows
+  cd ~\Documents\test_claude
+  ```
 
   Si le dossier n'existe pas, créez-le d'abord :
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac :**
@@ -61,7 +60,7 @@ Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installatio
 
 ## Étape 3 : Activez l'Approbation Automatique pour les Modifications
 
-Appuyez sur `Ctrl+E` (Windows/Linux) ou `Cmd+E` (Mac) pour activer le mode d'approbation automatique des modifications.
+Appuyez sur **Shift+Tab** pour activer le mode d'approbation automatique des modifications.
 
 Cela permet à Claude de créer et de modifier des fichiers sans demander la permission à chaque fois.
 

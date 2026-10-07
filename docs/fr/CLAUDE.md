@@ -7,7 +7,7 @@ Ce dépôt contient des tutoriels complets adaptés aux débutants pour utiliser
 Les tutoriels suivent une progression affichée dans le graphique interactif sur `index.html`. Voici les séquences recommandées :
 
 ### Windows - Parcours de Base (Recherche et Rédaction)
-1. `Install_CLAUDE_Code_Win.md` - Installez Claude Code via WSL
+1. `Install_CLAUDE_Code_Win.md` - Installez Claude Code nativement via PowerShell (WSL optionnel)
 2. `Claude_Code_Basic_Operations.md` - Opérations essentielles de Claude Code
 3. `VS_Code_Getting_Started.md` - Bases de VS Code pour débutants
 4. `Claude_Code_in_VS_Code_Win.md` - Connectez VS Code à Claude Code
@@ -82,7 +82,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 ## Vue d'Ensemble du Contenu
 
 ### Guides d'Installation
-- `Install_CLAUDE_Code_Win.md` - Installation Windows via WSL2 avec Ubuntu
+- `Install_CLAUDE_Code_Win.md` - Installation Windows via PowerShell natif (WSL2 optionnel)
 - `Install_Claude_Code_MacOS.md` - Installation macOS avec Terminal
 
 ### Configuration de VS Code
@@ -104,7 +104,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `R_Coding_Docker_Guide.md` - R dans les conteneurs Docker pour la reproductibilité
 - `Vibe_Coding_R_Docker_Guide.md` - Construction d'un tableau de bord NBA avec Shiny
 - `Claude_Code_RStudio_Mac.md` - Intégration de Claude Code avec RStudio sur Mac
-- `Claude_Code_WSL_RStudio_Windows.md` - Claude Code avec RStudio sur Windows via WSL
+- `Claude_Code_WSL_RStudio_Windows.md` - Claude Code avec RStudio sur Windows (PowerShell, WSL optionnel)
 - `Claude_Code_R_VS_Code_Mac.md` - Codage R simplifié dans VS Code sur Mac
 
 ### Guides de Codage Python

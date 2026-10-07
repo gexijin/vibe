@@ -25,15 +25,14 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
 
 ## Étape 1 : Créer un Dossier de Projet
 
-**Windows (WSL) :**
-- Ouvrez **Ubuntu** depuis le menu Démarrer
+**Windows (PowerShell) :**
+- Ouvrez **PowerShell** depuis le menu Démarrer
 - Tapez ces commandes :
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  Remplacez `YOUR_USERNAME` par votre nom d'utilisateur Windows
+  ```
 
 **Mac :**
 - Ouvrez **Terminal** (trouvez-le dans Applications > Utilitaires)
@@ -46,8 +45,8 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
 
 ## Étape 2 : Démarrer Claude Code
 
-**Windows (WSL) :**
-- Toujours dans le terminal Ubuntu, tapez :
+**Windows (PowerShell) :**
+- Toujours dans PowerShell, tapez :
   ```
   claude
   ```

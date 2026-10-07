@@ -24,15 +24,12 @@ Vous souhaitez comparer des opportunités d'investissement, mais faire des reche
 
 ## Étape 1 : Créer un Dossier de Projet et Démarrer Claude Code
 
-**Windows (WSL) :**
-- Ouvrez **Ubuntu** depuis le menu Démarrer
-- Tapez ces commandes :
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
+**Windows (PowerShell) :**
+- Cliquez sur le **bouton Démarrer de Windows**, tapez `PowerShell`, et ouvrez-le
+- Tapez cette commande :
+  ```powershell
+  cd ~/Documents/test_claude
   ```
-  Remplacez `YOUR_USERNAME` par votre nom d'utilisateur Windows
 - Démarrez Claude Code :
   ```
   claude
