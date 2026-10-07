@@ -183,9 +183,11 @@ Claude Code installé via l'installateur natif se met à jour automatiquement en
 
 - Dans Terminal, tapez :
    ```
-   sudo claude
+   claude update
    ```
 - Claude Code vérifiera les mises à jour et installera la dernière version
+
+**Remarque :** N'utilisez pas `sudo` pour lancer ou mettre à jour Claude Code : cela peut laisser dans votre dossier `~/.claude` des fichiers appartenant à root, qui provoqueront des erreurs de permissions la prochaine fois que vous lancerez Claude Code normalement.
 
 **Remarque :** Les installations via Homebrew ne se mettent pas à jour automatiquement. Exécutez `brew upgrade claude-code` périodiquement pour obtenir la dernière version.
 
