@@ -45,7 +45,7 @@ Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éd
 
 Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le côté gauche.
 
-## Étape 4 : Démarrer Claude Code
+## Étape 4 : Démarrer Claude Code et se Connecter
 
 - Ouvrez un nouveau terminal : cliquez sur **Terminal** dans la barre de menu, puis **Nouveau Terminal**
 - Un panneau de terminal apparaît en bas de VS Code
@@ -53,8 +53,15 @@ Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le c�
   ```
   claude
   ```
+- La première fois, Claude Code vous demande de vous connecter :
+  1. Appuyez sur Entrée pour ouvrir une fenêtre de navigateur
+  2. Connectez-vous ou créez un compte Anthropic
+  3. Copiez le code et collez-le dans le terminal
+  4. Appuyez sur Entrée
+- Vous verrez un message de bienvenue et l'invite Claude Code
+- Vous pouvez maintenant utiliser Claude Code tout en modifiant des fichiers dans VS Code
 
-Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
+**Remarque :** Vous n'avez besoin de vous connecter qu'une seule fois — les sessions suivantes affichent directement le message de bienvenue.
 
 ## Étape 5 : Tester le Flux de Travail
 
