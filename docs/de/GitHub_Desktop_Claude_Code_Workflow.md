@@ -79,7 +79,7 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
 
 ## Schritt 3: Den Timer testen
 
-- Klicken Sie in GitHub Desktop auf **Repository** → **Im Finder/Explorer anzeigen**
+- Klicken Sie in GitHub Desktop auf **Repository** → **Show in Finder** (Mac) bzw. **Show in Explorer** (Windows)
 - **Doppelklicken Sie** auf `timer.html`, um sie in Ihrem Browser zu öffnen
 - Testen Sie den Timer:
   - Geben Sie `1` in das Eingabefeld ein
@@ -194,8 +194,8 @@ Claude erklärt Ihre Änderungen in einfacher Sprache.
 
 Sie sehen:
 - Initial commit (README)
-- Create initial timer app
-- Add improved sound notification
+- Erstelle erste Timer-App mit Start/Stopp-Funktionalität
+- Claudes Commit für die Tonbenachrichtigung (Claude schreibt die Nachricht möglicherweise auf Englisch, z. B. „Add improved sound notification“, oder auf Deutsch)
 
 Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie haben ihn verworfen! Nur funktionierender Code hat es in Ihre Commits geschafft.
 
@@ -210,7 +210,7 @@ Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie hab
 
 ## Fehlerbehebung
 
-**„Authentication failed":** GitHub Desktop → File/Preferences → Accounts → Abmelden und erneut anmelden
+**„Authentication failed":** GitHub Desktop → File/Preferences → Accounts → **Sign out**, dann erneut **Sign in**
 
 **Claude sagt „not a git repository":** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
 
