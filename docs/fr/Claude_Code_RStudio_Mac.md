@@ -65,7 +65,7 @@ summary(iris)
 ## Étape 5 : Ouvrir le Terminal
 
 - Ouvrez **Finder** et cliquez sur **Applications** dans la barre latérale gauche
-- Ouvrez le dossier **Utilities**
+- Ouvrez le dossier **Utilitaires** (Utilities)
 - Double-cliquez sur **Terminal**
 - La fenêtre Terminal s'ouvre
 
