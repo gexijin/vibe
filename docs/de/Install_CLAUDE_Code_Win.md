@@ -46,7 +46,53 @@ Das war's – Claude Code erkennt Git Bash beim Start automatisch.
    ```
 - Sie sollten die Versionsnummer von Claude Code sehen
 
-## Schritt 3: Mit Ihrem Anthropic-Konto verbinden
+## Schritt 3: Claude Code in VS Code öffnen
+
+Jetzt, da Claude Code installiert ist, können Sie es auch in VS Code verwenden statt nur im Terminal. Das ist oft die einfachste Arbeitsweise, denn Sie können Dateien lesen, Code bearbeiten und um Hilfe bitten, ohne Ihren Editor zu verlassen.
+
+Stellen Sie sich die Claude Code-Seitenleiste wie ein Chatfenster innerhalb von VS Code vor. Dort können Sie Fragen stellen, sich Code erklären lassen und Hilfe bekommen, während Sie im selben Fenster arbeiten.
+
+### So öffnen Sie die Claude Code-Seitenleiste
+
+1. Öffnen Sie VS Code
+2. Schauen Sie ganz an den linken Rand des Fensters
+3. Klicken Sie auf das **Extensions**-Symbol, falls Sie das Claude Code-Fenster noch nicht sehen
+4. Suchen Sie im Extensions-Marketplace nach Claude Code
+5. Klicken Sie auf **Install**, falls die Erweiterung noch nicht installiert ist
+6. Suchen Sie nach der Installation das Claude Code-Symbol in der linken Seitenleiste
+
+Wenn Sie das Claude Code-Symbol nicht sehen, versuchen Sie Folgendes:
+
+1. Drücken Sie **Strg + Umschalt + P**
+2. Geben Sie ein: Claude Code: Open Sidebar
+3. Klicken Sie in der Liste auf den passenden Eintrag
+
+Wenn die Seitenleiste immer noch nicht erscheint, schließen Sie VS Code und öffnen Sie es erneut. Manchmal braucht die Erweiterung einen Neustart, bevor die Seitenleiste angezeigt wird.
+
+### Wofür die Seitenleiste da ist
+
+In der Claude Code-Seitenleiste können Sie:
+
+- Fragen zu Ihrem Projekt stellen
+- Hilfe beim Beheben von Fehlern bekommen
+- sich Code erklären lassen, den Sie nicht verstehen
+- Dateien erstellen oder aktualisieren
+- visueller arbeiten, ohne VS Code zu verlassen
+
+Das ist praktisch, weil Sie Ihren Code im Editor geöffnet lassen und Claude im selben Fenster um Hilfe bitten können.
+
+### Kurzer Test
+
+Wenn die Seitenleiste geöffnet ist:
+
+- Geben Sie ein: „Erkläre mir dieses Projekt“
+- Drücken Sie die **Eingabetaste**
+
+Wenn Claude antwortet, können Sie loslegen.
+
+> Tipp: Wenn die Seitenleiste immer noch fehlt, prüfen Sie, ob die Claude Code-Erweiterung installiert ist und VS Code neu gestartet wurde.
+
+## Schritt 4: Mit Ihrem Anthropic-Konto verbinden
 
 ### Option A. Ihr Claude Pro- oder Max-Abonnement verwenden
 
@@ -137,11 +183,11 @@ claude
 
 Sie sollten nun Claude Code mit Azure-bereitgestellten Claude-Modellen verwenden können.
 
-## Schritt 4: Claude Code testen
+## Schritt 5: Claude Code testen
 
 Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing".
 
-## Schritt 5: Auf Ihre Projekte zugreifen
+## Schritt 6: Auf Ihre Projekte zugreifen
 
 - Wenn Sie einen Projektordner haben, wechseln Sie in PowerShell dorthin:
    ```
@@ -157,7 +203,7 @@ Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allge
 
 **Hinweis:** Claude arbeitet innerhalb eines Projektordners und speichert dort seine Einstellungen. Das ist sein Arbeitsbereich.
 
-## Schritt 6: (Optional) WSL2 für die vollständige Linux-Erfahrung installieren
+## Schritt 7: (Optional) WSL2 für die vollständige Linux-Erfahrung installieren
 
 Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Claude Code läuft unter Linux jedoch besser. WSL2 führt ein echtes Linux-System innerhalb von Windows aus und bietet **Bash Tool Sandboxing** (eine Sicherheitsfunktion) sowie eine bessere Kompatibilität mit Linux-Toolchains. Die Einrichtung dauert länger und erfordert einen Neustart – tun Sie dies also nur, wenn Sie die vollständige Linux-Erfahrung möchten.
 
@@ -215,7 +261,7 @@ Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenst
    ```
    claude --version
    ```
-- Verbinden Sie Ihr Konto, indem Sie `claude` im Ubuntu-Terminal eingeben und der Browser-Anmeldung folgen (wie in Schritt 3, Option A). Wenn Sie stattdessen einen API-Schlüssel verwenden, setzen Sie ihn mit `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL verwendet Linux-Befehle, kein `setx`)
+- Verbinden Sie Ihr Konto, indem Sie `claude` im Ubuntu-Terminal eingeben und der Browser-Anmeldung folgen (wie in Schritt 4, Option A). Wenn Sie stattdessen einen API-Schlüssel verwenden, setzen Sie ihn mit `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL verwendet Linux-Befehle, kein `setx`)
 - Um einen Windows-Projektordner aus WSL zu öffnen:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
