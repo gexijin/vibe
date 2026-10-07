@@ -10,18 +10,33 @@ Sie möchten eine Tabelle erstellen – mit Formeln, Formatierung, vielleicht ei
 
 ## Wichtige Konzepte
 
-- **xlsx-Skill** - Eingebaute Fähigkeit von Claude Code, `.xlsx`-Tabellen mit echten Formeln, Formatierung und Diagrammen zu erstellen und zu bearbeiten
-- **[Spreadsheet Viewer-Erweiterung](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)** (früher Excel Viewer) - VS Code-Erweiterung, mit der Sie Tabellendateien ansehen und bearbeiten können, ohne den Editor zu verlassen
-- **Formeln statt fest eingetragener Zahlen** - Claude Code schreibt echte Excel-Formeln (wie `=SUM(B2:B9)`), sodass Ihre Tabelle neu rechnet, wenn Sie die Daten ändern
+- **xlsx-Skill** - Fähigkeit von Claude Code, `.xlsx`-Tabellen mit echten Formeln, Formatierung und Diagrammen zu erstellen und zu bearbeiten. Sie steht automatisch zur Verfügung, wenn Sie sich mit Ihrem Claude-Konto anmelden. Im Hintergrund nutzt Claude sie, um kleine Python-Programme zu schreiben und auszuführen, die die Datei erstellen
+- **[Spreadsheet Viewer-Erweiterung](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)** (früher Excel Viewer) - VS Code-Erweiterung, mit der Sie die Zahlen in einer Tabelle schnell prüfen können, ohne den Editor zu verlassen. Diagramme zeigt sie nicht an
+- **Formeln statt fest eingetragener Zahlen** - Claude Code schreibt echte Excel-Formeln (wie `=SUM(B2:B9)`), sodass Ihre Tabelle neu rechnet, wenn Sie die Daten ändern. In einem deutschen Excel oder LibreOffice sehen Sie dieselbe Formel als `=SUMME(B2:B9)` – das ist normal, das Programm übersetzt die Formelnamen automatisch
 
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - Claude Code installiert und funktionsfähig (siehe [Claude Code unter Windows installieren](./Install_CLAUDE_Code_Win) oder [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS))
-- Microsoft Excel, LibreOffice Calc oder Google Sheets, um die fertige Datei zu öffnen (optional – die Spreadsheet Viewer-Erweiterung funktioniert auch ohne diese Programme)
-- 15-20 Minuten
+- Microsoft Excel, [LibreOffice Calc](https://de.libreoffice.org/download/download/) (kostenlos) oder Google Sheets (kostenlos in Ihrem Webbrowser), um Diagramme zu sehen
+- 20-25 Minuten
 
-## Schritt 1: Die Spreadsheet Viewer-Erweiterung in VS Code installieren
+## Schritt 1: Python installieren
+
+Claude erstellt Tabellen, indem es kleine Python-Programme schreibt. Deshalb braucht Ihr Computer Python. Sie selbst müssen kein Python schreiben.
+
+- **Windows**:
+  - Gehen Sie zu [python.org/downloads/windows](https://www.python.org/downloads/windows/) (die Seite ist auf Englisch)
+  - Klicken Sie unter der neuesten Python 3-Version auf **Windows installer (64-bit)**
+  - Führen Sie die heruntergeladene Datei aus
+  - **Aktivieren Sie das Kästchen „Add python.exe to PATH“** unten im ersten Fenster und klicken Sie dann auf **Install Now**
+- **Mac**:
+  - Gehen Sie zu [python.org/downloads](https://www.python.org/downloads/) und klicken Sie auf die gelbe Schaltfläche **Download Python**
+  - Öffnen Sie die heruntergeladene Datei und folgen Sie dem Installationsprogramm, indem Sie auf **Fortfahren** und **Installieren** klicken
+
+Falls VS Code bereits geöffnet ist, schließen Sie es und öffnen Sie es erneut, damit es Python findet.
+
+## Schritt 2: Die Spreadsheet Viewer-Erweiterung in VS Code installieren
 
 - Öffnen Sie VS Code
 - Klicken Sie in der linken Seitenleiste auf das Symbol **Extensions** (oder klicken Sie auf **View > Extensions**)
@@ -30,15 +45,15 @@ Sie möchten eine Tabelle erstellen – mit Formeln, Formatierung, vielleicht ei
 
 **Hinweis:** Diese Erweiterung hieß früher **Excel Viewer** von **GrapeCity**, und ältere Anleitungen und Videos verwenden eventuell noch diesen Namen. Eine Suche nach „Excel Viewer" zeigt inzwischen mehrere andere Erweiterungen an. Suchen Sie daher nach der oben genannten ID, um die richtige zu finden. Die ID beginnt weiterhin mit `GrapeCity` – das ist so gewollt.
 
-Damit können Sie jede `.xlsx`-Datei anklicken und sie direkt in VS Code als Tabelle anzeigen lassen, ohne zu einer anderen App wechseln zu müssen.
+Damit können Sie jede `.xlsx`-Datei anklicken und ihre Tabellenblätter, Zahlen und Formeln direkt in VS Code sehen. Das ist ideal für schnelle Kontrollen, aber Diagramme, farbige Hervorhebungen und Dropdown-Listen kann die Erweiterung nicht anzeigen – dafür öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets.
 
-## Schritt 2: Ihren Projektordner erstellen
+## Schritt 3: Ihren Projektordner erstellen
 
 - Erstellen Sie einen neuen Ordner auf Ihrem Computer (z.B. `my-excel-project`)
 - Klicken Sie in VS Code auf **File > Open Folder** und wählen Sie Ihren neuen Ordner aus
 - Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac)
 
-## Schritt 3: Claude Code starten
+## Schritt 4: Claude Code starten
 
 - Klicken Sie in VS Code auf **Terminal > New Terminal**
 - Geben Sie diesen Befehl ein und drücken Sie Enter:
@@ -50,7 +65,7 @@ claude
 - Wenn Sie Claude Code zum ersten Mal verwenden, öffnet sich ein Browserfenster zur Authentifizierung – melden Sie sich mit Ihrem Claude-Konto an
 - Kehren Sie zu VS Code zurück, sobald Sie die Willkommensnachricht von Claude im Terminal sehen
 
-## Schritt 4: Ihre erste Tabelle erstellen
+## Schritt 5: Ihre erste Tabelle erstellen
 
 - Geben Sie im Claude Code-Terminal ein:
 
@@ -60,9 +75,10 @@ Erstelle eine Tabelle namens budget.xlsx mit den Spalten Kategorie, Monatsbetrag
 
 - Drücken Sie Enter
 - Beobachten Sie, wie Claude ein Python-Skript schreibt, es ausführt und `budget.xlsx` in Ihrem Projektordner erzeugt
-- Claude berechnet die Datei außerdem neu, damit die Formeln echte Zahlen anzeigen und keine leeren Zellen
+- Claude bittet um Erlaubnis, bevor es Befehle ausführt oder Hilfswerkzeuge installiert (wie `openpyxl`, eine Python-Erweiterung für Tabellen) – wählen Sie **Yes**, damit es weitermachen kann
+- Wenn Claude meldet, dass Python nicht installiert ist oder nicht gefunden wird, gehen Sie zurück zu Schritt 1 und schließen und öffnen Sie VS Code danach erneut
 
-## Schritt 5: Das Ergebnis ansehen
+## Schritt 6: Das Ergebnis ansehen
 
 - Klicken Sie im Explorer-Bereich von VS Code (links) auf `budget.xlsx`
 - Die Spreadsheet Viewer-Erweiterung öffnet die Datei als Tabelle
@@ -70,7 +86,7 @@ Erstelle eine Tabelle namens budget.xlsx mit den Spalten Kategorie, Monatsbetrag
 - Klicken Sie unten auf die Zelle **Summe** – Sie werden sehen, dass es sich um eine Formel handelt und nicht um eine eingetippte Zahl
 - Wenn Sie Excel oder LibreOffice Calc installiert haben, können Sie die Datei stattdessen auch im Datei-Explorer (Windows) oder im Finder (Mac) doppelklicken, um sie dort zu öffnen
 
-## Schritt 6: Claude bitten, ein Diagramm hinzuzufügen
+## Schritt 7: Claude bitten, ein Diagramm hinzuzufügen
 
 - Geben Sie wieder im Claude Code-Terminal ein:
 
@@ -79,12 +95,14 @@ Füge budget.xlsx ein Kreisdiagramm hinzu, das den Anteil jeder Kategorie an den
 ```
 
 - Drücken Sie Enter
-- Öffnen Sie `budget.xlsx` im Spreadsheet Viewer-Tab erneut (klicken Sie auf das Aktualisieren-Symbol oder schließen und öffnen Sie die Datei erneut), um das neue Diagramm zu sehen
+- Um das Diagramm zu sehen, öffnen Sie `budget.xlsx` in Excel oder LibreOffice Calc (doppelklicken Sie die Datei im Datei-Explorer oder im Finder) oder laden Sie sie in Google Sheets hoch
+- Der Spreadsheet Viewer in VS Code zeigt das Diagramm nicht an – das ist normal, das Diagramm ist trotzdem in der Datei
 
-## Schritt 7: Die Daten bearbeiten und Claude um eine Aktualisierung bitten
+## Schritt 8: Die Daten bearbeiten und Claude um eine Aktualisierung bitten
 
-- Ändern Sie im Spreadsheet Viewer oder in Excel/LibreOffice, falls Sie die Datei dort geöffnet haben, einen der Beträge (verdoppeln Sie zum Beispiel den Wert für Miete)
-- Speichern Sie die Datei
+- Ändern Sie in Excel oder LibreOffice Calc einen der Beträge (verdoppeln Sie zum Beispiel den Wert für Miete)
+- Speichern und schließen Sie die Datei
+- Nehmen Sie diese Änderung nicht im Spreadsheet Viewer vor – beim Speichern von dort aus kann das Diagramm aus der Datei verschwinden
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
@@ -92,11 +110,13 @@ Ich habe einige Zahlen in budget.xlsx geändert. Berechne die Summen neu und ste
 ```
 
 - Drücken Sie Enter
-- Claude liest Ihre Änderungen, berechnet die Formeln neu und bestätigt, dass alles zusammenpasst
+- Claude liest Ihre Änderungen, prüft die Formeln und bestätigt, dass alles zusammenpasst
+
+**Kein Excel oder LibreOffice?** Überspringen Sie die Änderung von Hand und bitten Sie stattdessen Claude: „Verdopple den Betrag für Miete in budget.xlsx.“
 
 Das ist der zentrale Arbeitsablauf: Beschreiben Sie, was Sie möchten, lassen Sie Claude es erstellen, prüfen Sie das Ergebnis und bitten Sie in einfachen Worten um Änderungen.
 
-## Schritt 8: Claude bitten, unordentliche Daten zu bereinigen
+## Schritt 9: Claude bitten, unordentliche Daten zu bereinigen
 
 Claude Code ist auch nützlich, um Tabellen zu reparieren, die bereits durcheinander sind.
 
@@ -124,13 +144,14 @@ Erstelle eine Datei messy_sales.csv mit 15 Zeilen Verkaufsdaten, die einige Prob
 - **Spreadsheet Viewer zeigt eine leere oder fehlerhafte Vorschau**: Schließen Sie den Tab und öffnen Sie die Datei erneut. Wenn es immer noch nicht funktioniert, öffnen Sie die Datei stattdessen in Excel, LibreOffice Calc oder Google Sheets – die Datei selbst ist in Ordnung, es handelt sich nur um einen Fehler in der Vorschau.
 - **Formelzellen sind leer statt eine Zahl anzuzeigen**: Das bedeutet meist, dass die Datei nach dem Schreiben nicht neu berechnet wurde. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt."
 - **Die Änderungen von Claude werden nicht angezeigt**: Stellen Sie sicher, dass Sie sich dieselbe Datei ansehen, die Claude bearbeitet hat (prüfen Sie den Dateinamen, den Claude nennt). Schließen und öffnen Sie den Tab in VS Code erneut, um eine Aktualisierung zu erzwingen.
-- **„claude is not recognized" im Terminal**: Claude Code ist nicht korrekt installiert. Sehen Sie sich die [Installationsanleitung](./Install_CLAUDE_Code_Win) für Ihr System noch einmal an.
+- **„claude is not recognized“ im Terminal**: Claude Code ist nicht korrekt installiert. Sehen Sie sich die Installationsanleitung für [Windows](./Install_CLAUDE_Code_Win) oder [Mac](./Install_Claude_Code_MacOS) noch einmal an.
+- **Das Diagramm fehlt**: Der Spreadsheet Viewer kann keine Diagramme anzeigen. Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets. Wenn das Diagramm dort ebenfalls fehlt, bitten Sie Claude: „Das Kreisdiagramm fehlt in budget.xlsx – bitte füge es wieder hinzu.“
 
 ## Workflow-Zusammenfassung
 
 - **VS Code** - Ihr Projektordner und ein Ort, um Tabellen mit der Spreadsheet Viewer-Erweiterung anzusehen
 - **Claude Code** - Schreibt und bearbeitet echte `.xlsx`-Dateien mit funktionierenden Formeln, basierend auf Ihren Anfragen in einfachen Worten
-- **Excel / LibreOffice / Google Sheets** - Optional, um die von Claude erstellten Dateien zu öffnen und von Hand anzupassen
+- **Excel / LibreOffice / Google Sheets** - Um Diagramme anzusehen und die von Claude erstellten Dateien von Hand anzupassen
 - **Iterieren** - Beschreiben Sie, was Sie möchten, prüfen Sie das Ergebnis, beschreiben Sie die nächste Änderung
 
 ---
