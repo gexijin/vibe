@@ -18,14 +18,15 @@ Das Programmieren mit KI-Unterstützung zu lernen kann anfangs überwältigend w
 ## Was Sie benötigen
 
 - Claude Code installiert aus dem [Windows](Install_CLAUDE_Code_Win.md)- oder [Mac](Install_Claude_Code_MacOS.md)-Tutorial
-- WSL installiert, wenn Sie Windows verwenden
 - Grundlegende Vertrautheit mit der Verwendung eines Terminals oder einer Eingabeaufforderung
 - 15-20 Minuten
 
 ## Schritt 1: Ihr Terminal öffnen
 
-- **Windows**: Drücken Sie die Windows-Taste, geben Sie `Ubuntu` ein und drücken Sie Enter, um das WSL-Terminal zu öffnen
+- **Windows**: Drücken Sie die Windows-Taste, geben Sie `PowerShell` ein und drücken Sie Enter, um PowerShell zu öffnen
 - **Mac**: Drücken Sie `Cmd+Leertaste`, geben Sie `Terminal` ein und drücken Sie Enter
+
+**Hinweis:** Wenn Sie im Windows-Installations-Tutorial statt der nativen Installation den optionalen WSL/Ubuntu-Weg eingerichtet haben, öffnen Sie stattdessen die App **Ubuntu** und verwenden Sie in den folgenden Schritten Linux-Pfade (z. B. `/mnt/c/Users/IhrName/...`).
 
 Ein Textfenster öffnet sich, in dem Sie Befehle eingeben können.
 
@@ -45,12 +46,13 @@ cd data_projects
 - Besuchen Sie [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) in Ihrem Webbrowser
 - Klicken Sie auf die grüne **Code**-Schaltfläche oben rechts
 - Klicken Sie auf **Download ZIP**
-- Entpacken Sie die ZIP-Datei in einen Ordner namens **data_projects** im Downloads-Ordner.
+- Entpacken Sie die ZIP-Datei in Ihren Downloads-Ordner. GitHub nennt den entpackten Ordner **data_projects-main** – benennen Sie ihn in **data_projects** um, damit er zum Rest dieses Tutorials passt.
 - Navigieren Sie in Ihrem Terminal zum entpackten Ordner:
-  - **Windows**: `cd /mnt/c/Users/IhrName/Downloads/data_projects`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-Ersetzen Sie `IhrName` durch Ihren tatsächlichen Benutzernamen und passen Sie den Pfad an, falls Sie es woanders entpackt haben. Für Windows-Benutzer: Ihre Windows-Dateien werden im Linux-System über /mnt/c zugänglich.
+Passen Sie den Pfad an, falls Sie es woanders entpackt haben.
 
 ## Schritt 3: Claude Code aus dem Ordner starten
 

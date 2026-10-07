@@ -10,7 +10,7 @@ Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. 
 
 ## Wichtige Konzepte
 
-- **WSL (Windows Subsystem for Linux)** - Führt Linux-Tools wie Git nativ unter Windows aus
+- **PowerShell** - Das integrierte Befehlszeilen-Tool von Windows, mit dem Sie hier Git und Claude Code ausführen
 - **Git** - Verfolgt jede Änderung an Ihren Dateien auf Ihrem Computer und erstellt Wiederherstellungspunkte, zu denen Sie jederzeit zurückkehren können
 - **Commit** - Ein Snapshot Ihres Projekts zu einem bestimmten Zeitpunkt mit einer Beschreibung dessen, was sich geändert hat
 - **Claude Code** - KI-Programmierassistent, der Code schreibt, Fehler behebt und Git-Operationen durch einfache Anfragen erledigt
@@ -18,31 +18,29 @@ Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. 
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code unter Windows installieren](./Install_CLAUDE_Code_Win)
-- WSL und Ubuntu installiert
 - 20 Minuten
 
-## Schritt 1: Ubuntu-Terminal öffnen
+## Schritt 1: PowerShell öffnen
 
 - Klicken Sie auf das **Start**-Menü
-- Geben Sie `Ubuntu` ein
-- Klicken Sie auf **Ubuntu**, um das Terminal zu öffnen
+- Geben Sie `PowerShell` ein
+- Klicken Sie auf **Windows PowerShell**, um es zu öffnen
 
-Sie sehen eine Eingabeaufforderung, die mit `$` endet.
+**Hinweis:** Wenn Sie statt der nativen Installation den optionalen WSL/Ubuntu-Weg eingerichtet haben, öffnen Sie stattdessen die App **Ubuntu** – Git und Claude Code funktionieren dort genauso, nur mit Linux-Pfaden (`/mnt/c/Users/...`) statt `~\Documents\...`.
 
 ## Schritt 2: Git installieren
 
-- Geben Sie diesen Befehl ein und drücken Sie Enter:
-  ```
-  sudo apt-get install git
-  ```
-- Wenn Sie dazu aufgefordert werden, geben Sie Ihr Passwort ein und drücken Sie Enter
-- Warten Sie, bis die Installation abgeschlossen ist (10-30 Sekunden)
-- Überprüfen Sie, ob Git installiert ist:
+- Überprüfen Sie, ob Git bereits installiert ist:
   ```
   git --version
   ```
-
-Sie sollten etwas wie `git version 2.34.1` sehen.
+- Wenn Sie eine Versionsnummer wie `git version 2.45.0` sehen, springen Sie zu Schritt 3
+- Wenn Sie eine Fehlermeldung sehen, installieren Sie Git for Windows:
+  - Gehen Sie zu [git-scm.com/download/win](https://git-scm.com/download/win)
+  - Der Download sollte automatisch starten – öffnen Sie das Installationsprogramm, wenn er abgeschlossen ist
+  - Klicken Sie sich mit **Next** durch das Installationsprogramm und übernehmen Sie die Standardoptionen
+  - Klicken Sie auf **Install** und dann auf **Finish**
+  - Schließen und öffnen Sie PowerShell erneut und überprüfen Sie dann noch einmal mit `git --version`
 
 ## Schritt 3: Git mit Ihrer Identität konfigurieren
 
@@ -56,21 +54,18 @@ Git muss wissen, wer Sie sind, für Commit-Nachrichten.
 
 Die Verwendung Ihres Namens und Ihrer E-Mail hilft Ihnen zu identifizieren, wer Änderungen vorgenommen hat, wenn mehrere Personen daran arbeiten.
 
-## Schritt 4: Zu einem Windows-Ordner navigieren
+## Schritt 4: Zu Ihrem Dokumente-Ordner navigieren
 
-WSL kann über `/mnt/c/` auf Ihre Windows-Dateien zugreifen.
-
-- Navigieren Sie zu Ihrem Windows-Benutzerordner:
+- Navigieren Sie zu Ihrem Dokumente-Ordner:
   ```
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents
+  cd ~\Documents
   ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren tatsächlichen Windows-Benutzernamen.
 - Überprüfen Sie, ob Sie am richtigen Ort sind:
   ```
   pwd
   ```
 
-Sie sollten `/mnt/c/Users/IHR_BENUTZERNAME/Documents` sehen.
+Sie sollten einen Pfad sehen, der auf `\Documents` endet.
 
 ## Schritt 5: Projektordner erstellen
 
@@ -255,9 +250,9 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 
 ## Fehlerbehebung
 
-- **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude`)
+- **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~\Documents\test_claude`)
 - **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html`
-- **Git fragt nach Passwort:** Sie haben das `sudo`-Passwort falsch eingegeben – versuchen Sie es noch einmal sorgfältig
+- **Befehl `git` nicht gefunden:** Schließen und öffnen Sie PowerShell nach der Installation von Git for Windows erneut, damit der PATH aktualisiert wird, und führen Sie dann noch einmal `git --version` aus
 - **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Console** klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
 
 ## Was Sie Claude fragen können

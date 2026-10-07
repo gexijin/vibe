@@ -446,7 +446,7 @@
              Bei einer Aufgabe verwendet es Claude, das große Sprachmodell, mehrfach, um die Arbeit zu planen, durchzuführen und
              die Ergebnisse zu überprüfen.</p>
 
-        <p>&nbsp;&nbsp;&nbsp; Durch praktische Aktivitäten stelle ich die grundlegenden Konzepte und Werkzeuge vor, die das volle Potenzial von Claude Code erschließen, einschließlich Git für Versionskontrolle, Visual Studio Code zum Programmieren und Bearbeiten, WSL (Windows-Subsystem für Linux) zum Ausführen unter Windows und Docker für isolierte Entwicklungsumgebungen.</p>
+        <p>&nbsp;&nbsp;&nbsp; Durch praktische Aktivitäten stelle ich die grundlegenden Konzepte und Werkzeuge vor, die das volle Potenzial von Claude Code erschließen, einschließlich Git für Versionskontrolle, Visual Studio Code zum Programmieren und Bearbeiten, PowerShell zum Ausführen unter Windows und Docker für isolierte Entwicklungsumgebungen.</p>
         <p>&nbsp;&nbsp;&nbsp; Um Claude Code zu nutzen, benötigen Sie ein kostenpflichtiges <a href="https://claude.com/pricing">Claude-Abonnement</a>.
             Alternativ bietet <a href="https://openrouter.ai/docs/guides/claude-code-integration">OpenRouter</a> eine wirtschaftlichere Option, indem es über eine einheitliche API Zugang zu über 500 Modellen bietet, einschließlich erschwinglicher Alternativen wie ChatGPT.
         </p>
@@ -462,7 +462,7 @@
                 <li><a href="Claude_Code_Git_Windows">Claude Code mit lokaler Versionskontrolle für Windows</a></li>
                 <li><a href="Claude_Code_Git_Mac">Claude Code mit lokaler Versionskontrolle für Mac</a></li>
                 <li><a href="Claude_Code_RStudio_Mac">Claude Code mit RStudio auf dem Mac verwenden</a></li>
-                <li><a href="Claude_Code_WSL_RStudio_Windows">Claude Code aus WSL mit RStudio unter Windows verwenden</a></li>
+                <li><a href="Claude_Code_WSL_RStudio_Windows">Claude Code mit RStudio unter Windows verwenden</a></li>
             </ol>
 
             <h2>Kompetenzentwicklung</h2>
@@ -622,8 +622,8 @@
 
         // Tutorial data (German)
         const tutorials = {
-            1: { label: 'Claude Code\ninstallieren (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Schritt-für-Schritt-Anleitung zur Installation von Claude Code unter Windows mit WSL, Ubuntu und Node.js', level: 0 },
-            14: { label: 'Claude Code in\nVS Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Richten Sie VS Code ein, um mit Claude Code unter Windows WSL zu arbeiten – bearbeiten Sie Dateien visuell, während Sie KI im Terminal ausführen', level: 1 },
+            1: { label: 'Claude Code\ninstallieren (Win)', url: 'Install_CLAUDE_Code_Win', desc: 'Schritt-für-Schritt-Anleitung zur nativen Installation von Claude Code unter Windows mit PowerShell (WSL optional)', level: 0 },
+            14: { label: 'Claude Code in\nVS Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'Richten Sie VS Code ein, um mit Claude Code unter Windows zu arbeiten – bearbeiten Sie Dateien visuell, während Sie KI im Terminal ausführen', level: 1 },
             11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Lernen Sie die Grundlagen der Versionskontrolle mit Git lokal und Claude Code – kein GitHub-Konto erforderlich', level: 1 },
             2: { label: 'Claude Code\ninstallieren (Mac)', url: 'Install_Claude_Code_MacOS', desc: 'Schnelle Einrichtungsanleitung für Claude Code auf macOS mit Node.js und npm', level: 0 },
             15: { label: 'Claude Code in\nVS Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'Richten Sie VS Code ein, um mit Claude Code auf dem Mac zu arbeiten – bearbeiten Sie Dateien visuell, während Sie KI im Terminal ausführen', level: 1 },
@@ -639,7 +639,7 @@
             13: { label: 'Forschungs-\narbeit', url: 'Writing_Research_Paper_Claude_Code', desc: 'Schreiben Sie Forschungsarbeiten schneller mit Claude Code für Recherche und Schreiben, während Git jede Version verfolgt', level: 2 },
             16: { label: 'Vibe Coding\nin Python', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'Analysieren Sie den Iris-Datensatz mit natürlichsprachlichen Anfragen – beschreiben Sie Visualisierungen und sehen Sie, wie sie erscheinen', level: 3 },
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Verwenden Sie Claude Code mit RStudio auf dem Mac – erstellen Sie R-Projekte und verbessern Sie sie mit KI, während RStudio Ihren Code ausführt', level: 2 },
-            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Verwenden Sie Claude Code aus WSL mit RStudio unter Windows – verbinden Sie Windows RStudio mit Linux-basierter KI-Unterstützung', level: 2 },
+            18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Verwenden Sie Claude Code mit RStudio unter Windows – bearbeiten Sie R-Code manuell in RStudio, während Claude Code Ihnen aus PowerShell hilft', level: 2 },
             19: { label: 'Claude Code\nfür R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Verwenden Sie den KI-Assistenten Claude Code, um R-Code in VS Code zu schreiben und zu verbessern – fordern Sie Grafiken, Analysen und Code-Verbesserungen an', level: 3 },
             20: { label: 'Claude Code für\nPython (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Verwenden Sie den KI-Assistenten Claude Code, um Python-Code in VS Code zu schreiben und zu verbessern – fordern Sie Grafiken, Analysen und Code-Verbesserungen an', level: 3 },
             21: { label: 'Slash-\nBefehle', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Erstellen Sie wiederverwendbare Shortcuts für komplexe Prompts – wandeln Sie lange Anweisungen in einfache Befehle wie /stock-report um', level: 3 },
