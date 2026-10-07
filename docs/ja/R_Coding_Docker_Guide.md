@@ -63,7 +63,7 @@ Rコードを共有したのに、「私のマシンでは動くのに...」と�
 - メニューから**Reopen in Container**を選択
 - VS Codeがコンテナをビルドします（初回は5〜10分かかります）
 - ビルドステップを示す進行通知が表示されます
-- 完了すると、緑色のアイコンに**Dev Container: R in Docker**と表示されます
+- 完了すると、緑色のアイコンに**Dev Container: R in Docker (AMD64)**と表示されます
 
 **注：** コンテナにはR拡張機能とlanguageserverパッケージが自動的に含まれます。Dockerfileとdevcontainer.jsonがこれを処理します。
 
@@ -159,7 +159,7 @@ titlePanel("初めてのR Dockerアプリ")
 - 完全な設定が表示されます：
 
 ```dockerfile
-# Docker Hubベースイメージを選択
+# R、Shiny Server、tidyverseパッケージを含むDocker Hubベースイメージを選択
 FROM rocker/shiny-verse:latest
 
 # 1. Rパッケージに一般的に必要なシステム依存関係
@@ -178,7 +178,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 # 4. Claude Codeをグローバルにインストール
 RUN npm install -g @anthropic-ai/claude-code
 
-# 5. Shinyサーバーポートを公開
+# 5. VS CodeからClaude Codeをアップデートできるよう、shinyにパスワードなしのsudoを許可
+RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    rm -rf /var/lib/apt/lists/*
+
+# Shinyサーバーポートを公開
 EXPOSE 3838
 ```
 
@@ -189,6 +193,7 @@ EXPOSE 3838
 - `RUN R -q -e 'install.packages(...)'` - Rパッケージを永続的にインストール
 - `RUN curl... && apt-get install -y nodejs` - Claude Codeを実行するために必要なNode.jsをインストール
 - `RUN npm install -g @anthropic-ai/claude-code` - AIアシスタンス用にClaude Codeをグローバルにインストール
+- `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - コンテナのユーザーがパスワードの入力なしで`sudo claude update`を実行できるようにする
 - `EXPOSE 3838` - Shinyアプリ用にポート3838を開く
 
 **使用できる他のRockerイメージ：**
@@ -256,6 +261,43 @@ library(data.table)
 4. **コードを書いて実行** - `.R`ファイルを編集し、`Ctrl+Enter`/`Cmd+Enter`で行ごとに実行、またはShinyアプリを**▶ Run Shiny App**ボタンで実行
 5. **作業を保存** - コードファイル（`.R`、`.Rmd`）はコンピュータに保存され、セッション間で永続
 6. **コミットしてプッシュ** - GitHub Desktopを使用して変更をコミットし、リポジトリにプッシュ
+
+## Docker Desktopとは？
+
+Docker Desktopは、コンピュータ上でDockerを使いやすくするアプリケーションです。Dockerに必要なバックグラウンドサービスに加えて、コンテナ、イメージ、ストレージ、その他のDockerリソースを確認・管理できる画面を提供します。
+
+Docker Desktopは、コンテナのコントロールセンターと考えることができます。Docker Desktopを開くと、Dockerエンジンが起動します。Dockerエンジンは、実際にコンテナを作成して実行するDockerの部分です。Docker Desktopがエンジンを管理してくれるため、通常はエンジンを直接操作する必要はありません。
+
+### Docker Desktopは何をするのか？
+
+Docker Desktopはいくつかの重要な役割を担っています：
+
+- **Dockerエンジンを実行する** - エンジンは、ソフトウェアを収めたコンテナを作成して実行します。
+- **イメージをダウンロードする** - イメージとは、Rとよく使われるRパッケージを含むLinuxシステムのような、すぐに使える出発点となるパッケージです。このチュートリアルのプロジェクトでは、Rockerプロジェクトのイメージを使用します。
+- **コンテナをビルドする** - Dockerは、このプロジェクトのDockerfileとDev Containerの設定を使って、R開発用に準備されたコンテナを作成します。
+- **コンテナを起動・停止する** - 必要に応じて、コンテナを開いたり、一時停止したり、再起動したり、停止したりできます。
+- **コンテナをファイルにつなぐ** - プロジェクトフォルダがコンテナ内で使えるようになるため、コードはコンテナ内で実行しながら、VS Codeでファイルを編集できます。
+- **コンテナをブラウザにつなぐ** - Shinyアプリがポート3838を使用すると、Docker DesktopとVS Codeが連携して、そのアプリをWebブラウザで表示できるようにします。
+
+### このチュートリアルにおけるDocker Desktopの役割
+
+3つの要素が連携して動作しています：
+
+1. **Docker Desktop**がコンピュータ上でDockerエンジンを実行します。
+2. **VS Code**が、Rコードを書いて実行するためのエディタを提供します。
+3. **Dev Container**が、R、Rパッケージ、このプロジェクトで使用するツールを含む、準備済みのLinux環境を提供します。
+
+**Reopen in Container**を選択すると、VS CodeはDocker Desktopにプロジェクトのコンテナをビルドまたは起動するよう依頼します。アプリケーションを動かしているのは引き続きあなたのコンピュータですが、R環境はコンテナの中にあります。これにより、Rのバージョン、パッケージ、システムツールがコンピュータの他の部分から切り離されます。
+
+Docker DesktopはVS Code、R、Webブラウザの代わりになるものではありません。コンテナを動かす環境を提供するものです。VS Codeは作業する場所、Rは使用する言語、ブラウザはShinyアプリを表示する場所です。
+
+### なぜDocker Desktopを使うのか？
+
+Rと必要なすべてのパッケージをコンピュータに直接インストールすると、バージョンの競合が起きることがあります。あるプロジェクトでは、別のプロジェクトとは異なるバージョンのパッケージが必要になる場合があります。Docker Desktopは、プロジェクトごとに管理された独自の環境を用意することで、こうした競合を避けるのに役立ちます。
+
+たとえば、クラスメートが同じプロジェクトファイルとDockerの設定を使えば、Dockerはあなたの環境とほぼ同じ環境をビルドできます。そのため、ソフトウェアのバージョンの違いだけが原因のエラーに出会う可能性が低くなります。Rコードとプロジェクトファイルはコンピュータ上に残り、それらを実行するために必要なツールはコンテナ内にまとめられます。
+
+このプロジェクトをビルドしたり、コンテナで再度開いたりする前に、Docker Desktopを開いて実行しておく必要があります。Docker Desktopが閉じていると、VS Codeはコンテナを起動できず、Dockerが実行されていないというエラーが表示されることがあります。
 
 ---
 
