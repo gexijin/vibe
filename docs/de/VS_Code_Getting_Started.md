@@ -50,7 +50,7 @@ Klicken Sie auf das **Explorer**-Symbol (oben in der Aktivitätsleiste), um den 
 
 - Klicken Sie auf **File** → **Open Folder**
 - Navigieren Sie zu einem beliebigen vorhandenen Ordner auf Ihrem Computer (z.B. Dokumente)
-- Klicken Sie auf **Open** (oder **Select Folder**)
+- Klicken Sie auf **Öffnen** oder **Ordner auswählen** (englisch: **Open** / **Select Folder**)
 - Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 Die Explorer-Seitenleiste zeigt nun die Dateien Ihres Ordners:

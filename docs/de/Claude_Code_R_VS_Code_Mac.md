@@ -28,7 +28,7 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
 - Klicken Sie unten im Dialog auf **Neuer Ordner**
 - Nennen Sie den Ordner `claude_r_test`
-- Klicken Sie auf **Open**, um den neuen Ordner zu öffnen
+- Klicken Sie auf **Öffnen** (englisch: **Open**), um den neuen Ordner zu öffnen
 - Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 ## Schritt 2: Claude Code Extension installieren und anmelden

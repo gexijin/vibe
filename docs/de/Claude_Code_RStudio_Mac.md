@@ -36,7 +36,7 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 - Geben Sie als **Directory name** ein: `test_claude`
 - Klicken Sie auf **Browse** neben „Create project as subdirectory of:"
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
-- Klicken Sie auf **Open**
+- Klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf **Create Project**
 - RStudio erstellt das Projekt und wechselt dorthin
 
@@ -167,7 +167,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 
 - Wechseln Sie zu RStudio
 - Klicken Sie auf **File > Open File...**
-- Wählen Sie `iris_report.Rmd` und klicken Sie auf **Open**
+- Wählen Sie `iris_report.Rmd` und klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf die **Knit**-Schaltfläche (mit einem Wollknäuel-Symbol) oben im Skriptbereich
 - RStudio generiert einen HTML-Bericht
 - Der Bericht öffnet sich in einem neuen Fenster und zeigt Ihre vollständige Analyse mit erzählendem Text

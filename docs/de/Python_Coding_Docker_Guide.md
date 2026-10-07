@@ -48,7 +48,7 @@ Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen,
 
 - Klicken Sie in VS Code auf **File > Open Folder**
 - Navigieren Sie zum Ordner `python-docker-demo`, den Sie gerade erstellt haben
-- Klicken Sie auf **Select Folder**
+- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Klicken Sie in der Explorer-Seitenleiste mit der rechten Maustaste auf den `.devcontainer`-Ordner
 - Klicken Sie auf **New File**
 - Nennen Sie sie `Dockerfile`

@@ -39,7 +39,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 
 - Klicken Sie in VS Code in der Menüleiste auf **File**, dann auf **Open Folder**
 - Navigieren Sie zu **Dokumente** und wählen Sie den Ordner `test_claude` aus
-- Klicken Sie auf **Select Folder**. VS Code lädt mit Ihrem `test_claude`-Ordner neu
+- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**). VS Code lädt mit Ihrem `test_claude`-Ordner neu
 - Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 

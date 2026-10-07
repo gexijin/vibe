@@ -36,7 +36,7 @@ Damit können Sie jede `.xlsx`-Datei anklicken und sie direkt in VS Code als Tab
 
 - Erstellen Sie einen neuen Ordner auf Ihrem Computer (z.B. `my-excel-project`)
 - Klicken Sie in VS Code auf **File > Open Folder** und wählen Sie Ihren neuen Ordner aus
-- Klicken Sie auf **Select Folder** (Windows) oder **Open** (Mac)
+- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
 
 ## Schritt 3: Claude Code starten
 

@@ -33,7 +33,7 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 
 - Öffnen Sie den **Finder**
 - Klicken Sie in der linken Seitenleiste auf **Dokumente**
-- Klicken Sie in der Menüleiste auf **Datei**, dann auf **Neuer Ordner**
+- Klicken Sie in der Finder-Menüleiste auf **Ablage**, dann auf **Neuer Ordner**
 - Nennen Sie den Ordner `test_claude`
 
 ## Schritt 3: Anmelden
@@ -51,7 +51,7 @@ Sie sind jetzt angemeldet. Dies müssen Sie nur einmal tun.
 
 - Klicken Sie in VS Code in der Menüleiste auf **File**, dann auf **Open Folder**
 - Navigieren Sie zu **Dokumente** und wählen Sie den Ordner `test_claude`, den Sie erstellt haben
-- Klicken Sie auf **Open**
+- Klicken Sie auf **Öffnen** (englisch: **Open**)
 - Wenn Sie gefragt werden „Do you trust the authors of the files in this folder?“, klicken Sie auf **Yes, I trust the authors**
 
 Sie sollten nun `TEST_CLAUDE` im Explorer-Panel auf der linken Seite sehen.

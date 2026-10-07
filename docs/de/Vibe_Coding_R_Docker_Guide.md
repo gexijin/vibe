@@ -61,7 +61,7 @@ Ihr `nba-dashboard`-Ordner sollte jetzt enthalten:
 - Öffnen Sie VS Code
 - Klicken Sie auf **File > Open Folder**
 - Navigieren Sie zum `nba-dashboard`-Ordner
-- Klicken Sie auf **Select Folder** (Windows) oder **Open** (Mac)
+- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
 - Eine Benachrichtigung erscheint unten rechts: **Folder contains a Dev Container configuration file**
 - Klicken Sie auf **Reopen in Container**
 - Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das grüne Symbol in der unteren linken Ecke und wählen Sie **Reopen in Container**
