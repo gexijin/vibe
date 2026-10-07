@@ -183,9 +183,11 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 - Terminalで以下を入力：
    ```
-   sudo claude
+   claude update
    ```
 - Claude Codeがアップデートを確認し、最新バージョンをインストールします
+
+**注意：** `sudo`を使ってClaude Codeを実行したりアップデートしたりしないでください。`~/.claude`フォルダにroot所有のファイルが残り、次回通常どおりClaude Codeを実行したときに権限エラーが発生する可能性があります。
 
 **注意：** Homebrewでインストールした場合は自動アップデートされません。定期的に`brew upgrade claude-code`を実行して最新バージョンを取得してください。
 
