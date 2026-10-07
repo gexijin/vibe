@@ -69,6 +69,10 @@ print(iris_df.describe())
 
 - Speichern Sie die Datei durch Klicken auf **Datei > Speichern**
 - Öffnen Sie das Python-Terminal: Klicken Sie in der Menüleiste auf **Ansicht**, dann auf **Terminal**
+- Installieren Sie die Pakete, die dieses Skript benötigt:
+  ```
+  pip install scikit-learn pandas
+  ```
 - Führen Sie im Terminal aus: `python iris_analysis.py`
 - Sie sollten die Datensatzstruktur und zusammenfassende Statistiken im Terminal sehen
 
