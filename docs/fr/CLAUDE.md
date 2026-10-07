@@ -7,6 +7,7 @@ Ce dépôt contient des tutoriels complets adaptés aux débutants pour utiliser
 Les tutoriels suivent une progression affichée dans le graphique interactif sur `index.html`. Voici les séquences recommandées :
 
 ### Windows - Parcours de Base (Recherche et Rédaction)
+0. `What_Is_Anthropic_And_Claude.md` - Introduction à Anthropic et Claude (aucune installation requise)
 1. `Install_CLAUDE_Code_Win.md` - Installez Claude Code nativement via PowerShell (WSL optionnel)
 2. `Claude_Code_Basic_Operations.md` - Opérations essentielles de Claude Code
 3. `VS_Code_Getting_Started.md` - Bases de VS Code pour débutants
@@ -22,6 +23,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `Claude_Code_WSL_RStudio_Windows.md` - Utilisez RStudio avec Claude Code (branche depuis l'étape 1)
 
 ### Mac - Parcours de Base (Recherche et Rédaction)
+0. `What_Is_Anthropic_And_Claude.md` - Introduction à Anthropic et Claude (aucune installation requise)
 1. `Install_Claude_Code_MacOS.md` - Installez Claude Code sur macOS
 2. `Claude_Code_Basic_Operations.md` - Opérations essentielles de Claude Code
 3. `VS_Code_Getting_Started.md` - Bases de VS Code pour débutants
@@ -80,6 +82,9 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `GitHub_Desktop_Claude_Code_Workflow.md` - Flux de travail de développement intégré
 
 ## Vue d'Ensemble du Contenu
+
+### Introduction
+- `What_Is_Anthropic_And_Claude.md` - Ce que sont Anthropic et Claude, avec une première conversation pratique
 
 ### Guides d'Installation
 - `Install_CLAUDE_Code_Win.md` - Installation Windows via PowerShell natif (WSL2 optionnel)
@@ -234,6 +239,7 @@ docs/
 │   ├── index.html
 │   └── [tous les tutoriels en chinois]
 │
+├── What_Is_Anthropic_And_Claude.md
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md
 ├── VS_Code_Getting_Started.md
