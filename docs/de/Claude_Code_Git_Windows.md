@@ -177,8 +177,7 @@ Manchmal funktioniert KI-Code nicht und Sie müssen von Ihrem letzten Speicherpu
   ```
   Verwirf diese Änderungen.
   ```
-- Claude wird um Bestätigung bitten
-- Drücken Sie `1` und dann Enter
+- Claude zeigt ein Menü mit Optionen wie **Yes** und **No** an – wählen Sie mit den Pfeiltasten **Yes** aus (oder drücken Sie die Zahl neben **Yes**) und drücken Sie dann **Enter**
 - Aktualisieren Sie Ihren Browser – die 15-Minuten-Schaltfläche verschwindet
 
 Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioniert wieder mit nur den 1- und 5-Minuten-Schaltflächen!
