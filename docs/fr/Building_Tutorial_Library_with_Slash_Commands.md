@@ -22,7 +22,7 @@ C'est exactement le modèle décrit dans mon [tutoriel sur les articles de reche
 
 Le résultat a été cinq commandes slash spécialisées qui gèrent l'ensemble du cycle de vie des tutoriels.
 
-### [`/tutorial`](./assets/commands/tutorial.md) - Le Générateur de Tutoriels
+### [`/tutorial`](../assets/commands/tutorial.md) - Le Générateur de Tutoriels
 
 Née de la création de plusieurs tutoriels interactifs, cette commande capture le flux de travail éprouvé :
 
@@ -41,7 +41,7 @@ Née de la création de plusieurs tutoriels interactifs, cette commande capture 
 
 La commande impose une structure cohérente dans tous les tutoriels. Chaque tutoriel semble provenir du même auteur — parce qu'ils ont suivi le même processus systématique. J'ai généré plus de 20 tutoriels couvrant des sujets allant des opérations Git de base aux flux de travail Docker avancés.
 
-### [`/review-tutorial`](./assets/commands/review-tutorial.md) - Le Robot de Contrôle Qualité
+### [`/review-tutorial`](../assets/commands/review-tutorial.md) - Le Robot de Contrôle Qualité
 
 Voici quelque chose de remarquable : j'ai simplement demandé à Claude de « créer une commande slash pour examiner les tutoriels ». Aucune spécification détaillée. Claude a généré un flux de travail complet en trois phases avec plus de 30 critères de qualité organisés en catégories :
 
@@ -53,7 +53,7 @@ Voici quelque chose de remarquable : j'ai simplement demandé à Claude de « cr
 
 La commande présente les résultats dans un rapport structuré, puis applique les corrections après approbation. Pourquoi était-ce nécessaire ? Deux raisons : Claude ne suit pas toujours strictement les règles de `/tutorial`, et la commande `/tutorial` elle-même a évolué à mesure que je créais plus de tutoriels. La commande de révision me permet de polir par lot les tutoriels antérieurs pour les conformer aux dernières normes.
 
-### [`/translate-chinese`](./assets/commands/translate-chinese.md) et [`/translate-spanish`](./assets/commands/translate-spanish.md) - Le Moteur de Localisation
+### [`/translate-chinese`](../assets/commands/translate-chinese.md) et [`/translate-spanish`](../assets/commands/translate-spanish.md) - Le Moteur de Localisation
 
 Les traductions japonaises sont venues en premier — et sans commande slash. J'ai simplement demandé à Claude Code de traduire tous les tutoriels en japonais dans une seule invite. Claude a automatiquement généré 8 sous-agents fonctionnant en parallèle, chacun gérant différents tutoriels simultanément. Les résultats étaient excellents, ce qui m'a donné confiance pour formaliser le processus en commandes slash pour le chinois et l'espagnol.
 
@@ -68,7 +68,7 @@ Avec les commandes slash prêtes, j'ai demandé à Claude Code de traduire les 2
 
 Le résultat : 81 fichiers de tutoriels traduits dans les répertoires chinois, espagnol et japonais — tous maintenant une qualité et une structure cohérentes.
 
-### [`/review-translation`](./assets/commands/review-translation.md) - L'Outil de Maintenance des Traductions
+### [`/review-translation`](../assets/commands/review-translation.md) - L'Outil de Maintenance des Traductions
 
 Les tutoriels évoluent. Les commandes changent. De nouvelles sections sont ajoutées. Cette commande maintient les traductions synchronisées grâce à un flux de travail en quatre phases :
 
@@ -122,7 +122,7 @@ C'est le pouvoir de l'automatisation systématique.
 
 ---
 
-*Vous voulez voir les commandes slash que j'ai créées ? Consultez le [dossier commands](./assets/commands/). La bibliothèque complète de tutoriels est disponible sur le [site de documentation du projet](https://github.com/gexijin/vibe/tree/main/docs).*
+*Vous voulez voir les commandes slash que j'ai créées ? Consultez le [dossier commands](../assets/commands/). La bibliothèque complète de tutoriels est disponible sur le [site de documentation du projet](https://github.com/gexijin/vibe/tree/main/docs).*
 
 ---
 
