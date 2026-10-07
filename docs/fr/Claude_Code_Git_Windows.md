@@ -177,8 +177,7 @@ Parfois le code de l'IA ne fonctionne pas et vous devez recommencer depuis votre
   ```
   Abandonne ces modifications.
   ```
-- Claude demandera confirmation
-- Tapez `yes` et appuyez sur Entrée
+- Claude affiche un menu avec des options comme **Yes** et **No** — utilisez les touches fléchées (ou appuyez sur le numéro à côté de **Yes**) pour le sélectionner, puis appuyez sur **Entrée**
 - Actualisez votre navigateur—le bouton 15 minutes disparaît
 
 Claude supprime les nouvelles modifications que nous n'aimons pas. Le minuteur fonctionne à nouveau avec seulement les boutons 1 et 5 minutes !
