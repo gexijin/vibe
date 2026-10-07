@@ -10,7 +10,7 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 
 ## Concepts Clés
 
-- **Workspace** - Si vous démarrez Claude Code depuis un dossier, celui-ci devient l'espace de travail de la session.
+- **Workspace** - Le dossier depuis lequel vous démarrez Claude Code ; Claude lit et modifie les fichiers qu'il contient pendant cette session
 - **REPL (Read-Eval-Print Loop)** - Une session interactive où vous tapez des commandes, Claude répond, et la conversation continue jusqu'à ce que vous quittiez
 - **Context** - La quantité de code et d'historique de conversation que Claude se souvient ; comme une mémoire de travail qui se remplit au fil du temps
 - **Slash Commands** - Raccourcis intégrés commençant par `/` qui effectuent des actions spécifiques comme effacer l'historique ou afficher l'aide
@@ -62,10 +62,7 @@ Dans votre terminal (assurez-vous d'être dans le dossier data_projects), tapez 
 claude
 ```
 
-Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
-
-Après vous être connecté avec succès, vous verrez un message de bienvenue et l'invite Claude Code.
-
+Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
 ## Étape 4 : Posez des Questions sur Votre Projet
 
@@ -138,15 +135,16 @@ Efface la conversation actuelle et recommence à zéro. Utilisez ceci lorsque vo
 
 Termine votre session et retourne à votre invite de terminal normale. Vous pouvez également appuyer sur **Ctrl + C** deux fois.
 
-## Étape 6 : Raccourcis Clavier
+## Étape 6 : Approuver les Modifications et Utiliser les Raccourcis
 
-Ces raccourcis rendent le travail avec Claude Code plus rapide :
+Lorsque Claude veut modifier un fichier ou exécuter une commande, il affiche un petit menu avec des options comme **Yes** et **No**. Utilisez les flèches du clavier pour sélectionner votre choix, puis appuyez sur **Entrée**.
 
-- **Shift+Tab** - Basculer entre le mode plan, édition ou normal - Planifiez d'abord pour les tâches complexes
-- **Alt+Entrée** (Windows/Linux) ou **Option+Return** (Mac) - Ajouter une nouvelle ligne dans votre message sans l'envoyer
+Quelques raccourcis clavier rendent aussi le travail avec Claude Code plus rapide :
+
+- **Shift+Tab** - Passer d'un mode à l'autre (Manual, Accept Edits, Plan) - Le mode Plan est utile pour examiner une tâche complexe avant que Claude ne fasse la moindre modification
 - **Ctrl+C** - Annuler l'opération actuelle ou la réponse de Claude
-- **Ctrl+D** - Approuver les modifications de fichiers lorsque Claude demande la permission
-- **Échap** - Fermer les menus ou annuler la saisie actuelle
+- **Échap** - Arrêter Claude au milieu d'une réponse, ou fermer un menu
+- **`\` puis Entrée** (ou **Ctrl+J**) - Ajouter une nouvelle ligne dans votre message sans l'envoyer
 
 ## Étape 7 : Toujours Créer un Fichier CLAUDE.md
 
@@ -205,7 +203,7 @@ Claude peut effectuer des actions en exécutant des commandes Linux sous de nomb
   Exécutez-le et enregistrez le nouveau code et les graphiques dans le même dossier.
   ```
 
-Nous pouvons poser cette question vague parce que nous venons de lui demander d'expliquer le code. Beaucoup de choses se produisent après cela. Claude installe des logiciels, résout des erreurs, résout des problèmes d'environnements - tout seul.
+Claude installe des logiciels, résout des erreurs et gère les environnements — tout seul.
 
 
 
@@ -222,9 +220,9 @@ Maintenant que vous connaissez les bases, essayez ceci par vous-même :
 
 ## Dépannage
 
-- **Erreur "Command not found"** - Claude Code n'est pas installé ou n'est pas dans votre PATH. Exécutez `npm install -g @anthropic-ai/claude-code` pour l'installer.
+- **Erreur "Command not found"** - Claude Code n'est pas installé ou n'est pas dans votre PATH. Suivez à nouveau le tutoriel d'installation [Windows](Install_CLAUDE_Code_Win.md) ou [Mac](Install_Claude_Code_MacOS.md), ou relancez directement l'installateur : `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) ou `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude donne des informations obsolètes** - Effacez le contexte avec `/clear` et redemandez. Les longues conversations peuvent remplir la mémoire de Claude.
-- **Les modifications de fichiers ne fonctionnent pas** - Assurez-vous d'avoir les permissions d'écriture dans votre dossier de projet. Claude demandera l'approbation avant de modifier les fichiers — appuyez sur Ctrl+D pour approuver.
+- **Les modifications de fichiers ne fonctionnent pas** - Assurez-vous d'avoir les permissions d'écriture dans votre dossier de projet. Claude demandera l'approbation avant de modifier les fichiers — sélectionnez **Yes** dans le menu qui apparaît.
 - **Le contexte se remplit rapidement** - Utilisez `/context` pour vérifier l'utilisation. Lorsqu'il est presque plein, utilisez `/clear` pour démarrer une conversation fraîche avec une ardoise propre.
 
 ## Aperçu du Flux de Travail
