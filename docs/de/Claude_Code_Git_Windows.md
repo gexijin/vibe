@@ -199,7 +199,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
 
 - Geben Sie in Claude Code ein:
   ```
-  Der Ton sollte weiterlaufen, bis ich auf eine Schaltfläche klicke, um ihn stummzuschalten.
+  Der Ton soll weiterlaufen, bis ich eine Schaltfläche zum Schlummern drücke.
   ```
 - Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 1 Minute)
 - Wenn es funktioniert, committen Sie die Änderungen:

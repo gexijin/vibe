@@ -41,7 +41,7 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 
 - Gehen Sie zu https://github.com/gexijin/vibe
   - **Hinweis für ARM64-Benutzer (Apple Silicon Macs):** Verwenden Sie stattdessen https://github.com/gexijin/vibe/tree/ARM64
-- Klicken Sie auf **Code** und Download Zip
+- Klicken Sie auf **Code** und dann auf **Download ZIP**
 - Öffnen Sie den Datei-Explorer (Windows) oder Finder (Mac)
 - Entpacken Sie die Datei im Download-Ordner
 - Navigieren Sie zu Ihrem Vibe-Projektordner (z.B. `Documents/vibe`)
@@ -283,7 +283,7 @@ Nach dieser ersten Einrichtung wird Ihre tägliche Vibe-Coding-Routine:
 1. **Docker Desktop starten** - Starten Sie die App, warten Sie auf den grünen Status
 2. **VS Code öffnen** - Öffnen Sie Ihr Projekt, öffnen Sie im Container neu falls nötig
 3. **Claude Code starten** - Geben Sie `claude` im Terminal ein
-4. **Beschreiben Sie Ihr Ziel** - "Add a feature that..." oder "Fix the bug where..."
+4. **Beschreiben Sie Ihr Ziel** - „Füge eine Funktion hinzu, die …“ oder „Behebe den Fehler, bei dem …“
 5. **Testen Sie die Änderungen** - Führen Sie Ihre App aus, prüfen Sie ob sie funktioniert
 6. **Iterieren oder committen** - Wenn kaputt, beschreiben Sie die Korrektur; wenn funktioniert, committen Sie mit GitHub Desktop
 7. **Regelmäßig pushen** - Klicken Sie auf **Push origin**, um auf GitHub zu sichern

@@ -122,7 +122,7 @@ Claude wird automatisch:
 - Die Ergebnisse analysieren
 - Die Forschung in einfacher Sprache erklären, die Wirksamkeit, Mechanismen und Überlegungen abdeckt
 
-Die Antwort enthält Abschnitte wie „How It Works", „Research Findings", „Important Considerations" und „The Bottom Line".
+Die Antwort enthält Abschnitte wie „So funktioniert es“, „Forschungsergebnisse“, „Wichtige Überlegungen“ und „Fazit“ (die genauen Überschriften können je nach Antwort abweichen).
 
 ## Schritt 8: Eine weitere Frage testen
 
