@@ -18,7 +18,7 @@ Das Erstellen von Tutorials ist zeitaufwändig. Jedes einzelne erfordert Recherc
 
 Ich erstellte fünf spezialisierte Slash-Befehle, die den gesamten Tutorial-Lebenszyklus abdeckten.
 
-### [`/tutorial`](./assets/commands/tutorial.md) - Der Tutorial-Generator
+### [`/tutorial`](../assets/commands/tutorial.md) - Der Tutorial-Generator
 
 Ich erstellte die ersten Tutorials manuell durch interaktives Prompten mit Claude. Verfeinerte den Prozess durch Iteration und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
 
@@ -39,7 +39,7 @@ Dies ist genau das Muster, das in meinem [Forschungsarbeit-Tutorial](./Writing_R
 
 Der Befehl erzwingt eine konsistente Struktur über alle Tutorials hinweg. Jedes Tutorial fühlt sich an, als käme es vom selben Autor – weil sie alle demselben systematischen Prozess folgten. Ich habe über 20 Tutorials zu Themen von grundlegenden Git-Operationen bis zu fortgeschrittenen Docker-Workflows generiert.
 
-### [`/review-tutorial`](./assets/commands/review-tutorial.md) - Der Qualitätskontroll-Bot
+### [`/review-tutorial`](../assets/commands/review-tutorial.md) - Der Qualitätskontroll-Bot
 
 Bei diesem bat ich Claude einfach, „einen Slash-Befehl zum Überprüfen von Tutorials zu erstellen". Keine detaillierten Spezifikationen. Claude generierte einen umfassenden dreiphasigen Workflow mit über 30 Qualitätskriterien, organisiert in Kategorien:
 
@@ -51,7 +51,7 @@ Bei diesem bat ich Claude einfach, „einen Slash-Befehl zum Überprüfen von Tu
 
 Der Befehl präsentiert Ergebnisse in einem strukturierten Bericht und wendet dann nach Genehmigung Korrekturen an. Warum war das nötig? Zwei Gründe: Claude befolgt die `/tutorial`-Regeln nicht immer streng, und der `/tutorial`-Befehl selbst entwickelte sich weiter, während ich mehr Tutorials erstellte. Der Review-Befehl ermöglicht es mir, frühere Tutorials stapelweise zu polieren, um den neuesten Standards zu entsprechen.
 
-### [`/translate-chinese`](./assets/commands/translate-chinese.md) & [`/translate-spanish`](./assets/commands/translate-spanish.md) - Die Lokalisierungs-Engine
+### [`/translate-chinese`](../assets/commands/translate-chinese.md) & [`/translate-spanish`](../assets/commands/translate-spanish.md) - Die Lokalisierungs-Engine
 
 Die japanischen Übersetzungen kamen zuerst – ohne Slash-Befehl. Ich bat Claude Code einfach, alle Tutorials in einem einzigen Prompt ins Japanische zu übersetzen. Claude erzeugte automatisch 8 Subagenten, die parallel liefen und jeweils verschiedene Tutorials gleichzeitig bearbeiteten.
 
@@ -66,7 +66,7 @@ Mit den fertigen Slash-Befehlen bat ich Claude Code, alle 25 Tutorials mit Subag
 
 Das Ergebnis: 81 übersetzte Tutorial-Dateien in chinesischen, spanischen, französischen, deutschen und japanischen Verzeichnissen – alle mit gleichbleibender Qualität und Struktur.
 
-### [`/review-translation`](./assets/commands/review-translation.md) - Das Übersetzungspflege-Tool
+### [`/review-translation`](../assets/commands/review-translation.md) - Das Übersetzungspflege-Tool
 
 Tutorials entwickeln sich weiter. Befehle ändern sich. Neue Abschnitte werden hinzugefügt. Dieser Befehl hält Übersetzungen durch einen vierphasigen Workflow synchron:
 
@@ -120,7 +120,7 @@ Das ist die Kraft systematischer Automatisierung.
 
 ---
 
-*Möchten Sie die Slash-Befehle sehen, die ich erstellt habe? Schauen Sie sich den [Commands-Ordner](./assets/commands/) an. Die vollständige Tutorial-Bibliothek ist auf der [Projektdokumentationsseite](https://github.com/gexijin/vibe/tree/main/docs) verfügbar.*
+*Möchten Sie die Slash-Befehle sehen, die ich erstellt habe? Schauen Sie sich den [Commands-Ordner](../assets/commands/) an. Die vollständige Tutorial-Bibliothek ist auf der [Projektdokumentationsseite](https://github.com/gexijin/vibe/tree/main/docs) verfügbar.*
 
 ---
 
