@@ -193,7 +193,7 @@ streamlit run app.py
 
 ## Étape 11 : Essayez le Débogage
 
-- Dans `analysis.py`, cliquez à gauche du numéro de ligne 8 (la ligne `print(iris.head())`) pour définir un point d'arrêt (un point rouge apparaît)
+- Dans `analysis.py`, cliquez à gauche du numéro de ligne 9 (la ligne `print(iris.head())`) pour définir un point d'arrêt (un point rouge apparaît)
 - Cliquez sur **Run** dans la barre de menu, puis sur **Start Debugging**
 - Sélectionnez **Python File** lorsque vous y êtes invité
 - L'exécution du code s'arrête au point d'arrêt
