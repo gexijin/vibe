@@ -193,7 +193,7 @@ Claude explique vos modifications en langage simple.
 - Dans **GitHub Desktop**, cliquez sur l'onglet **History**
 
 Vous verrez :
-- Commit initial (README)
+- Initial commit (README)
 - Create initial timer app
 - Add improved sound notification
 

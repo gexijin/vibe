@@ -10,13 +10,13 @@ Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. E
 
 ## Concepts Clés
 
-- **Skill** - Une capacité invoquée par le modèle stockée dans `.claude/skills/` que Claude active automatiquement en fonction du contexte
-- **Model-invoked** - Claude décide quand utiliser la Compétence en lisant sa description, sans que vous tapiez une commande
+- **Compétence (Skill)** - Une capacité invoquée par le modèle stockée dans `.claude/skills/` que Claude active automatiquement en fonction du contexte
+- **Invoquée par le modèle (model-invoked)** - Claude décide quand utiliser la Compétence en lisant sa description, sans que vous tapiez une commande
 - **SKILL.md** - Le fichier principal contenant le frontmatter YAML (métadonnées) et les instructions pour Claude
 
 ## Ce Dont Vous Aurez Besoin
 
-- Tutoriel [Create Custom Slash Commands](./Reuse_Prompts_via_Slash_Commands.md) terminé
+- Tutoriel [Créer des Commandes Slash Personnalisées](./Reuse_Prompts_via_Slash_Commands.md) terminé
 - La commande slash `stock-report` de ce tutoriel
 - VS Code installé
 - 10-15 minutes
