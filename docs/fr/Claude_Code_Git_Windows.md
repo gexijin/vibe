@@ -189,7 +189,7 @@ Claude supprime les nouvelles modifications que nous n'aimons pas. Le minuteur f
   ```
   Ajoute une notification sonore quand le minuteur atteint zéro.
   ```
-- Actualisez le navigateur et testez une fois que Claude a terminé (réglez le minuteur sur 0.1 minutes)
+- Actualisez le navigateur et testez une fois que Claude a terminé (réglez le minuteur sur 1 minute)
 - Si cela fonctionne, commitez les modifications :
   ```
   Enregistre ces modifications.
@@ -201,7 +201,7 @@ Claude supprime les nouvelles modifications que nous n'aimons pas. Le minuteur f
   ```
   Le son doit continuer jusqu'à ce que je clique sur un bouton pour le mettre en pause.
   ```
-- Actualisez le navigateur et testez une fois que Claude a terminé (réglez le minuteur sur 0.1 minutes)
+- Actualisez le navigateur et testez une fois que Claude a terminé (réglez le minuteur sur 1 minute)
 - Si cela fonctionne, commitez les modifications :
   ```
   Enregistre ces modifications.
