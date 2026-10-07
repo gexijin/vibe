@@ -21,6 +21,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 **Parcours alternatifs Windows :**
 - `Claude_Code_Git_Windows.md` - Contrôle de version local (branche depuis l'étape 1)
 - `Claude_Code_WSL_RStudio_Windows.md` - Utilisez RStudio avec Claude Code (branche depuis l'étape 1)
+- `Install_Claude_Desktop_App.md` - Facultatif : installez l'application de discussion Claude Desktop (non requise pour coder)
 
 ### Mac - Parcours de Base (Recherche et Rédaction)
 0. `What_Is_Anthropic_And_Claude.md` - Introduction à Anthropic et Claude (aucune installation requise)
@@ -37,6 +38,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 **Parcours alternatifs Mac :**
 - `Claude_Code_Git_Mac.md` - Contrôle de version local (branche depuis l'étape 1)
 - `Claude_Code_RStudio_Mac.md` - Utilisez RStudio avec Claude Code (branche depuis l'étape 1)
+- `Install_Claude_Desktop_App.md` - Facultatif : installez l'application de discussion Claude Desktop (non requise pour coder)
 
 ### Parcours Codage R
 **Parcours Principal (Docker + VS Code) :**
@@ -89,6 +91,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 ### Guides d'Installation
 - `Install_CLAUDE_Code_Win.md` - Installation Windows via PowerShell natif (WSL2 optionnel)
 - `Install_Claude_Code_MacOS.md` - Installation macOS avec Terminal
+- `Install_Claude_Desktop_App.md` - Installation de l'application de discussion Claude Desktop (Windows et Mac, alternative facultative à Claude Code)
 
 ### Configuration de VS Code
 - `VS_Code_Getting_Started.md` - Bases complètes de VS Code pour débutants
@@ -245,6 +248,7 @@ docs/
 ├── What_Is_Anthropic_And_Claude.md
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md
+├── Install_Claude_Desktop_App.md
 ├── VS_Code_Getting_Started.md
 ├── Claude_Code_in_VS_Code_Win.md
 ├── Claude_Code_in_VS_Code_Mac.md
