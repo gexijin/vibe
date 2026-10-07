@@ -68,7 +68,7 @@ Cela permet à Claude de créer et de modifier des fichiers sans demander la per
 
 Tapez cette invite :
 ```
-Convertis ma commande slash stock-report en une Compétence appelée generate-stock-reports.
+Convertis ma commande slash stock-report en une Compétence.
 La Compétence devrait s'activer automatiquement quand je pose des questions sur des entreprises ou des actions.
 ```
 
