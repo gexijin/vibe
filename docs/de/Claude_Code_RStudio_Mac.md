@@ -107,7 +107,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 ## Schritt 9: Den neuen Code in RStudio ausführen
 
 - Wechseln Sie zurück zu RStudio (klicken Sie auf das RStudio-Fenster oder drücken Sie **Command (⌘) + Tab**)
-- Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Ja**, um sie neu zu laden
+- Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Yes**, um sie neu zu laden
 - Wenn keine Aufforderung erscheint, klicken Sie auf **File > Reopen with Encoding > UTF-8**
 - Markieren Sie den gesamten Code und klicken Sie auf **Run**
 - Ein Streudiagramm erscheint im **Plots**-Bereich (unten rechts)

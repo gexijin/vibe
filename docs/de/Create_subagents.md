@@ -90,7 +90,7 @@ Geben Sie diesen Befehl ein:
 /agents
 ```
 
-Sie sehen die Claude Code Agenten-Oberfläche, die bestehende Subagenten (falls vorhanden) und Optionen zum **Erstellen**, **Bearbeiten** oder **Löschen** von Subagenten zeigt.
+Sie sehen die Claude Code Agenten-Oberfläche, die bestehende Subagenten (falls vorhanden) und Optionen zum Erstellen (**Create**), Bearbeiten (**Edit**) oder Löschen (**Delete**) von Subagenten zeigt.
 
 Erstellen Sie jetzt Ihren Subagenten:
 - Wählen Sie **Create new subagent**

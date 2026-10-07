@@ -40,12 +40,12 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 - Klicken Sie in VS Code in der Menüleiste auf **File**, dann auf **Open Folder**
 - Navigieren Sie zu **Dokumente** und wählen Sie den Ordner `test_claude` aus
 - Klicken Sie auf **Select Folder**. VS Code lädt mit Ihrem `test_claude`-Ordner neu
-- Wenn Sie gefragt werden „Vertrauen Sie den Autoren?", klicken Sie auf **Ja, ich vertraue den Autoren**
+- Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 
 ## Schritt 4: Claude Code starten
 
-- Nachdem VS Code neu geladen hat, öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **Neues Terminal**
+- Nachdem VS Code neu geladen hat, öffnen Sie ein neues Terminal: Klicken Sie in der Menüleiste auf **Terminal**, dann auf **New Terminal**
 - Geben Sie im Terminal-Panel ein:
   ```
   claude
@@ -61,7 +61,7 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 ```
 - Claude Code erstellt die Datei – Sie sehen `article.md` im Explorer-Panel auf der linken Seite erscheinen
 - Klicken Sie auf `article.md` im Explorer, um sie im Editor anzuzeigen
-- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Vorschau öffnen**
+- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
 - Sie sehen das Markdown mit korrekten Überschriften, Aufzählungspunkten und Formatierung gerendert
 
 ## Claude später in VS Code wieder öffnen
