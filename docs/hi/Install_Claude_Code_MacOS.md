@@ -183,9 +183,11 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 - Terminal में, टाइप करें:
    ```
-   sudo claude
+   claude update
    ```
 - Claude Code अपडेट्स की जाँच करेगा और नवीनतम वर्शन इंस्टॉल करेगा
+
+**नोट:** Claude Code को चलाने या अपडेट करने के लिए `sudo` का इस्तेमाल न करें — इससे आपके `~/.claude` फ़ोल्डर में ऐसी फ़ाइलें रह सकती हैं जिनका मालिक root है, और अगली बार Claude Code को सामान्य तरीके से चलाने पर अनुमति (permission) से जुड़ी त्रुटियाँ आ सकती हैं।
 
 **नोट:** Homebrew इंस्टॉलेशन अपने आप अपडेट नहीं होते। नवीनतम वर्शन पाने के लिए समय-समय पर `brew upgrade claude-code` चलाएँ।
 
