@@ -130,7 +130,7 @@ Claude crée `timer.html` (prend 10-30 secondes) avec le code CSS et JavaScript.
 - Double-cliquez sur `timer.html` pour l'ouvrir dans votre navigateur
 - Essayez la minuterie :
   - Tapez `1` dans le champ de saisie
-  - Cliquez sur **Start**
+  - Cliquez sur **Démarrer**
   - Regardez le compte à rebours
 
 **Si quelque chose ne fonctionne pas :** Dans Claude Code, décrivez l'erreur : « Je vois cette erreur : [décrivez ce qui s'est passé]. Peux-tu la corriger ? »
@@ -200,11 +200,11 @@ Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie f
   Enregistre ces modifications.
   ```
 
-## Étape 15 : Ajouter un Bouton de Répétition
+## Étape 15 : Ajouter un Bouton Snooze
 
 - Dans Claude Code, tapez :
   ```
-  Le son doit continuer jusqu'à ce que je clique sur un bouton pour le mettre en pause.
+  Le son doit continuer jusqu'à ce que je clique sur un bouton pour l'arrêter (snooze).
   ```
 - Actualisez le navigateur et testez après que Claude ait terminé (réglez la minuterie sur 0.1 minutes)
 - Si cela fonctionne, faites un commit des modifications :
@@ -223,7 +223,7 @@ Claude affiche vos commits dans un format lisible. Vous verrez :
 - Votre commit de l'application de minuterie initiale
 - Le commit des boutons prédéfinis (1 min et 5 min)
 - Le commit de la notification sonore
-- Le commit du bouton de répétition
+- Le commit du bouton snooze
 
 Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abandonnée !
 

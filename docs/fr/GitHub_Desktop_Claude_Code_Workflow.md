@@ -83,7 +83,7 @@ Claude crée le fichier `timer.html` (prend 10-30 secondes).
 - **Double-cliquez** sur `timer.html` pour l'ouvrir dans votre navigateur
 - Essayez le minuteur :
   - Tapez `1` dans le champ de saisie
-  - Cliquez sur **Start**
+  - Cliquez sur **Démarrer**
   - Observez le compte à rebours
 
 **Si cela fonctionne :** Passez à l'Étape 5.
@@ -136,7 +136,7 @@ Votre code est maintenant sauvegardé dans le cloud.
   Ajoute une notification sonore quand le minuteur atteint zéro. Utilise le
   bip intégré du navigateur ou crée une alerte audio simple.
   ```
-- Testez : Actualisez le navigateur, réglez le minuteur sur 0.1 minutes, cliquez sur Start
+- Testez : Actualisez le navigateur, réglez le minuteur sur 0.1 minutes, cliquez sur **Démarrer**
 
 **Pour ce tutoriel :** Faites semblant que le son ne fonctionne pas bien. Ne committez pas encore !
 
@@ -159,7 +159,7 @@ Vous venez de jeter le code défectueux et de revenir à votre dernier point de 
   élément audio HTML5 avec un simple bip généré par l'API Web Audio. Assure-toi
   de gérer correctement les restrictions de lecture automatique du navigateur.
   ```
-- Testez immédiatement (actualisez le navigateur, réglez sur 0.1 minutes, Start)
+- Testez immédiatement (actualisez le navigateur, réglez sur 0.1 minutes, **Démarrer**)
 
 **Si cela fonctionne :** Continuez à l'Étape 11.
 **Sinon :** Collez l'erreur à Claude ou réessayez.
