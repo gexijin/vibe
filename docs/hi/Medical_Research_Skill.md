@@ -27,15 +27,14 @@ lang: "hi"
 
 यदि आपने [स्लैश कमांड ट्यूटोरियल](./Reuse_Prompts_via_Slash_Commands.md) पूरा कर लिया है, तो `test_claude` फ़ोल्डर पहले से मौजूद है। ये कमांड दोनों ही स्थितियों में काम करते हैं।
 
-**Windows (WSL):**
-- Start मेनू से **Ubuntu** खोलें
+**Windows (PowerShell):**
+- Start मेनू से **PowerShell** खोलें
 - ये कमांड टाइप करें:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  `YOUR_USERNAME` को अपने Windows यूज़रनेम से बदलें
 
 **Mac:**
 - **Terminal** खोलें (इसे Applications > Utilities में खोजें)
@@ -46,7 +45,7 @@ lang: "hi"
   cd test_claude
   ```
 
-`-p` फ़्लैग फ़ोल्डर बनाता है अगर वह मौजूद नहीं है, या यदि पहले से मौजूद है तो कुछ नहीं करता।
+`-p` (Mac) और `-Force` (Windows) फ़्लैग फ़ोल्डर बनाते हैं अगर वह मौजूद नहीं है, या यदि पहले से मौजूद है तो कुछ नहीं करते।
 
 ## चरण 2: Claude Code शुरू करें
 

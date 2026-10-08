@@ -25,15 +25,14 @@ lang: "hi"
 
 ## चरण 1: एक प्रोजेक्ट फ़ोल्डर बनाएँ
 
-**Windows (WSL):**
-- स्टार्ट मेनू से **Ubuntu** खोलें
+**Windows (PowerShell):**
+- स्टार्ट मेनू से **PowerShell** खोलें
 - ये कमांड टाइप करें:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  `YOUR_USERNAME` को अपने Windows यूज़रनेम से बदलें
+  ```
 
 **Mac:**
 - **Terminal** खोलें (इसे Applications > Utilities में ढूँढें)
@@ -46,8 +45,8 @@ lang: "hi"
 
 ## चरण 2: Claude Code शुरू करें
 
-**Windows (WSL):**
-- Ubuntu टर्मिनल में ही रहते हुए, टाइप करें:
+**Windows (PowerShell):**
+- PowerShell में ही रहते हुए, टाइप करें:
   ```
   claude
   ```
