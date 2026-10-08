@@ -173,7 +173,7 @@ Anthropic पहले से बनी skills का एक रिपॉज़�
 **document skill** आपको PDF, Word, PowerPoint, और Excel फ़ाइलें पढ़ने और लिखने में मदद करती है। Claude skill को आपके `.claude/skills/` फ़ोल्डर में क्लोन कर देगा।
 
 **Anthropic के रिपॉज़िटरी से उपलब्ध अन्य skills:**
-- पूरी सूची [github.com/anthropics/claude-skills](https://github.com/anthropics/skills) पर ब्राउज़ करें
+- पूरी सूची [github.com/anthropics/skills](https://github.com/anthropics/skills) पर ब्राउज़ करें
 - वर्तमान सूची देखने के लिए Claude से पूछें "What skills are available in the Anthropic repository?"
 
 ## अगले कदम
