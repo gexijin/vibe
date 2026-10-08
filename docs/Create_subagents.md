@@ -153,7 +153,7 @@ The subagent will automatically activate based on your description.
 As the subagent runs, you'll see it:
 1. **Invoke the skill twice** - Call the stock-report skill once for Apple, then for Google
 2. **Gather data** - Each skill call searches the web and generates a company report
-3. **Score companies** - Applies the 40/30/20/10 weighting across categories
+3. **Score companies** - Scores each category and combines them into an overall score
 4. **Generate output** - Creates comparison table and recommendation
 
 This may take 2-3 minutes since web research is involved.
@@ -174,7 +174,7 @@ The subagent may display this in the terminal or generate a markdown file with t
 Now that you have a working stock-picker subagent, try these extensions:
 
 - **Compare 3+ stocks**: "Compare AAPL, MSFT, and GOOGL" to see how the subagent handles more options
-- **Adjust scoring weights**: Edit the subagent file to change the 40/30/20/10 breakdown (e.g., make growth 40% if you prefer growth stocks)
+- **Adjust scoring weights**: Edit the subagent file to change how much each category counts (e.g., make growth 40% if you prefer growth stocks)
 - **Create other subagents**: Build a "code-reviewer" subagent, "bug-hunter" subagent, or "document-writer" subagent for different tasks
 
 ## Troubleshooting
