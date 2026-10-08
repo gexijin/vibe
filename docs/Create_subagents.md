@@ -95,6 +95,7 @@ Now create your subagent:
 - Select **Project**
 - Select **Generate with Claude (recommended)**
 - Paste the following for instructions:
+
   ```
   Create a markdown file for a new subagent called stock-picker:
   - It takes two or more stocks

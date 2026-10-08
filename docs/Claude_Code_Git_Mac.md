@@ -112,6 +112,7 @@ Claude initializes a Git repository in your folder (takes 2-5 seconds). You now 
 ## Step 8: Build the Timer App
 
 - In Claude Code, type:
+
   ```
   Create a simple countdown timer app in a single file called timer.html.
   It should have:
