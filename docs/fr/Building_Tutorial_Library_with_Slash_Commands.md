@@ -4,7 +4,7 @@ lang: "fr"
 ---
 # Comment Claude Code m'a aidé à créer ces tutoriels
 
-En décembre 2025, je me suis lancé dans la création d'une bibliothèque de tutoriels complète pour Claude Code. Mon objectif : des tutoriels pratiques et ciblés qui guident les débutants complets à travers des tâches réelles, étape par étape. Pas de théorie en masse. Pas de manuels de référence exhaustifs. Juste « faites ceci, puis cela, puis ceci » jusqu'à ce que vous ayez accompli quelque chose de concret.
+Mi-décembre 2025, j'ai passé 2 heures sur Zoom à essayer d'aider mon assistante de recherche à installer Claude Code. J'ai compris qu'une personne comme elle avait besoin d'instructions précises et pratiques, alors je me suis lancé dans la création de tutoriels complets pour Claude Code. Mon objectif : des tutoriels pratiques et ciblés qui guident les débutants complets à travers des tâches réelles, étape par étape. Pas de théorie en masse. Pas de manuels de référence exhaustifs. Juste « faites ceci, puis cela, puis ceci » jusqu'à ce que vous ayez accompli quelque chose de concret.
 
 Ce qui a commencé comme quelques fichiers de documentation a rapidement évolué en une plateforme d'apprentissage multilingue avec plus de 100 documents de tutoriels. Le secret ? Je ne les ai pas tous écrits manuellement. Au lieu de cela, j'ai créé un ensemble de commandes slash personnalisées (essentiellement des invites réutilisables) qui ont transformé Claude Code en une usine de documentation automatisée — une usine qui produit systématiquement des tutoriels dans mon style pratique et progressif.
 
@@ -14,17 +14,13 @@ Créer des tutoriels prend du temps. Chacun nécessite une recherche des meilleu
 
 ## La Solution : Du Processus Manuel aux Commandes Slash Automatisées
 
-L'intuition clé : **automatiser les flux de travail éprouvés, pas les théoriques**.
-
-Je ne me suis pas assis pour concevoir des commandes slash à partir de zéro. Au lieu de cela, j'ai créé les premiers tutoriels manuellement par le biais d'invites interactives avec Claude, j'ai affiné le processus par itération, puis j'ai demandé à Claude de codifier le processus fonctionnel en une commande slash.
-
-C'est exactement le modèle décrit dans mon [tutoriel sur les articles de recherche](./Writing_Research_Paper_Claude_Code.md) : parcourez le flux de travail manuellement, puis à la dernière étape, demandez à Claude de l'enregistrer en tant que commande réutilisable.
-
-Le résultat a été cinq commandes slash spécialisées qui gèrent l'ensemble du cycle de vie des tutoriels.
+J'ai créé cinq commandes slash spécialisées qui gèrent l'ensemble du cycle de vie des tutoriels.
 
 ### [`/tutorial`](../assets/commands/tutorial.md) - Le Générateur de Tutoriels
 
-Née de la création de plusieurs tutoriels interactifs, cette commande capture le flux de travail éprouvé :
+J'ai créé les premiers tutoriels manuellement par le biais d'invites interactives avec Claude. J'ai affiné le processus par itération, puis j'ai demandé à Claude de codifier le processus fonctionnel en une commande slash.
+
+C'est exactement le modèle décrit dans mon [tutoriel sur les articles de recherche](./Writing_Research_Paper_Claude_Code.md) : parcourez le flux de travail manuellement, puis à la dernière étape, demandez à Claude de l'enregistrer en tant que commande réutilisable qui capture le flux de travail éprouvé :
 
 1. **Recherche** : Claude effectue des recherches sur le web pour obtenir des informations actuelles — pas de numéros de version obsolètes ni de méthodes dépréciées
 2. **Planification** : Claude présente ce qu'il a appris, recommande une approche et décrit les principales étapes
@@ -43,7 +39,7 @@ La commande impose une structure cohérente dans tous les tutoriels. Chaque tuto
 
 ### [`/review-tutorial`](../assets/commands/review-tutorial.md) - Le Robot de Contrôle Qualité
 
-Voici quelque chose de remarquable : j'ai simplement demandé à Claude de « créer une commande slash pour examiner les tutoriels ». Aucune spécification détaillée. Claude a généré un flux de travail complet en trois phases avec plus de 30 critères de qualité organisés en catégories :
+Pour celle-ci, j'ai simplement demandé à Claude de « créer une commande slash pour examiner les tutoriels ». Aucune spécification détaillée. Claude a généré un flux de travail complet en trois phases avec plus de 30 critères de qualité organisés en catégories :
 
 - **Qualité du Contenu** : titre, accroche, concepts clés, prérequis, flux des étapes, prochaines étapes, dépannage
 - **Normes de Formatage** : lien d'accueil, titres d'étapes, puces, gras/backticks, blocs de code, paragraphes
@@ -55,9 +51,9 @@ La commande présente les résultats dans un rapport structuré, puis applique l
 
 ### [`/translate-chinese`](../assets/commands/translate-chinese.md) et [`/translate-spanish`](../assets/commands/translate-spanish.md) - Le Moteur de Localisation
 
-Les traductions japonaises sont venues en premier — et sans commande slash. J'ai simplement demandé à Claude Code de traduire tous les tutoriels en japonais dans une seule invite. Claude a automatiquement généré 8 sous-agents fonctionnant en parallèle, chacun gérant différents tutoriels simultanément. Les résultats étaient excellents, ce qui m'a donné confiance pour formaliser le processus en commandes slash pour le chinois et l'espagnol.
+Les traductions japonaises sont venues en premier — sans commande slash. J'ai simplement demandé à Claude Code de traduire tous les tutoriels en japonais dans une seule invite. Claude a automatiquement généré 8 sous-agents fonctionnant en parallèle, chacun gérant différents tutoriels simultanément.
 
-Encore une fois, j'ai simplement demandé à Claude de « créer une commande slash pour traduire les tutoriels en chinois » — aucune directive spécifique. Claude a généré un flux de travail en six phases avec des règles complètes :
+Pour les langues suivantes, j'ai demandé à Claude de « créer une commande slash pour traduire les tutoriels en chinois » — aucune directive spécifique. Claude a généré un flux de travail en six phases avec des règles complètes :
 
 - **Règles de Traduction** : Conserver les blocs de code, les termes techniques (Git, Docker, VS Code), les chemins de fichiers et les URL en anglais ; traduire le texte d'instruction, les titres et les explications
 - **Directives Linguistiques** : Règles de ton et de style, traductions techniques courantes (Click = 点击, Install = 安装), conventions d'adresse formelle
@@ -66,7 +62,7 @@ Encore une fois, j'ai simplement demandé à Claude de « créer une commande sl
 
 Avec les commandes slash prêtes, j'ai demandé à Claude Code de traduire les 25 tutoriels en utilisant des sous-agents. La traduction complète — 50 nouveaux fichiers dans deux langues — n'a pris que 15 minutes.
 
-Le résultat : 81 fichiers de tutoriels traduits dans les répertoires chinois, espagnol et japonais — tous maintenant une qualité et une structure cohérentes.
+Le résultat : 81 fichiers de tutoriels traduits dans les répertoires chinois, espagnol, français, allemand et japonais — tous maintenant une qualité et une structure cohérentes.
 
 ### [`/review-translation`](../assets/commands/review-translation.md) - L'Outil de Maintenance des Traductions
 
@@ -83,7 +79,7 @@ La révision de qualité est approfondie — pour le japonais, elle vérifie la 
 
 Après avoir synchronisé les traductions avec les originaux anglais, j'ai ajouté une étape finale de peaufinage : éditer chaque document traduit individuellement pour la qualité linguistique, sans comparaison avec l'anglais. Cette étape se concentre uniquement sur la lecture naturelle du texte pour les locuteurs natifs.
 
-L'intuition clé : **utiliser des invites dans la langue cible**. Au lieu de demander à Claude en anglais de « polir ce document japonais », j'ai utilisé ChatGPT pour écrire les invites en japonais, chinois ou espagnol. Cela a produit des résultats nettement meilleurs — Claude semblait penser plus naturellement dans cette langue lorsque les instructions étaient également dans cette langue.
+J'ai utilisé des invites dans la langue cible. Au lieu de demander à Claude en anglais de « polir ce document japonais », j'ai utilisé ChatGPT pour écrire les invites en japonais, chinois ou espagnol. Cela semblait produire de meilleurs résultats — Claude paraissait penser plus naturellement dans cette langue lorsque les instructions étaient également dans cette langue.
 
 Par exemple, pour peaufiner les documents chinois, j'ai utilisé :
 « 修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents. » Pour l'espagnol : « Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents. » Pour le japonais : « @docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents. »
