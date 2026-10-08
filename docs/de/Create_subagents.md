@@ -24,15 +24,14 @@ Sie möchten Investitionsmöglichkeiten vergleichen, aber die Recherche mehrerer
 
 ## Schritt 1: Einen Projektordner erstellen und Claude Code starten
 
-**Windows (WSL):**
-- Öffnen Sie **Ubuntu** aus dem Startmenü
+**Windows (PowerShell):**
+- Klicken Sie auf die **Windows-Starttaste**, geben Sie `PowerShell` ein und öffnen Sie es
 - Geben Sie diese Befehle ein:
-  ```bash
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents
+  ```powershell
+  cd ~/Documents
   mkdir stock_picker_test
   cd stock_picker_test
   ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren Windows-Benutzernamen
 - Starten Sie Claude Code:
   ```
   claude
@@ -91,7 +90,7 @@ Geben Sie diesen Befehl ein:
 /agents
 ```
 
-Sie sehen die Claude Code Agenten-Oberfläche, die bestehende Subagenten (falls vorhanden) und Optionen zum **Erstellen**, **Bearbeiten** oder **Löschen** von Subagenten zeigt.
+Sie sehen die Claude Code Agenten-Oberfläche, die bestehende Subagenten (falls vorhanden) und Optionen zum Erstellen (**Create**), Bearbeiten (**Edit**) oder Löschen (**Delete**) von Subagenten zeigt.
 
 Erstellen Sie jetzt Ihren Subagenten:
 - Wählen Sie **Create new subagent**

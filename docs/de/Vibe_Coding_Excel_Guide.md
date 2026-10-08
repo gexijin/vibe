@@ -41,7 +41,7 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 - Öffnen Sie VS Code
 - Klicken Sie auf **File > Open Folder**
 - Wählen Sie Ihren `budget-dashboard`-Ordner aus
-- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac)
+- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
 - Falls noch nicht geschehen, installieren Sie die Erweiterung **Spreadsheet Viewer** von MESCIUS (früher **Excel Viewer** von GrapeCity), damit Sie Tabellen ansehen können, ohne VS Code zu verlassen. Suchen Sie im Extensions-Bereich nach ihrer ID, `GrapeCity.gc-excelviewer`, um die richtige zu finden
 
 ## Schritt 3: Claude Code starten

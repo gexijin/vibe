@@ -25,15 +25,14 @@ Das Beste daran? Wir verwenden Claude, um den detaillierten Prompt zu schreiben 
 
 ## Schritt 1: Einen Projektordner erstellen
 
-**Windows (WSL):**
-- Öffnen Sie **Ubuntu** aus dem Startmenü
+**Windows (PowerShell):**
+- Öffnen Sie **PowerShell** aus dem Startmenü
 - Geben Sie diese Befehle ein:
-  ```bash
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren Windows-Benutzernamen
+  ```
 
 **Mac:**
 - Öffnen Sie **Terminal** (finden Sie es unter Programme > Dienstprogramme)
@@ -46,8 +45,8 @@ Das Beste daran? Wir verwenden Claude, um den detaillierten Prompt zu schreiben 
 
 ## Schritt 2: Claude Code starten
 
-**Windows (WSL):**
-- Noch im Ubuntu-Terminal, geben Sie ein:
+**Windows (PowerShell):**
+- Noch in PowerShell, geben Sie ein:
   ```
   claude
   ```

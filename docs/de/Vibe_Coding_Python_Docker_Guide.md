@@ -58,7 +58,7 @@ Ihr `iris-analysis`-Ordner sollte jetzt enthalten:
 - Öffnen Sie VS Code
 - Klicken Sie auf **File > Open Folder**
 - Navigieren Sie zum `iris-analysis`-Ordner
-- Klicken Sie auf **Ordner auswählen**
+- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Eine Benachrichtigung erscheint unten rechts: **Folder contains a Dev Container configuration file**
 - Klicken Sie auf **Reopen in Container**
 - Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das grüne Symbol in der unteren linken Ecke und wählen Sie **Reopen in Container**

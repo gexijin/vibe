@@ -27,15 +27,14 @@ In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinis
 
 Wenn Sie das [Slash-Commands-Tutorial](./Reuse_Prompts_via_Slash_Commands.md) abgeschlossen haben, existiert der `test_claude`-Ordner bereits. Diese Befehle funktionieren in beiden Fällen.
 
-**Windows (WSL):**
-- Öffnen Sie **Ubuntu** aus dem Startmenü
+**Windows (PowerShell):**
+- Öffnen Sie **PowerShell** aus dem Startmenü
 - Geben Sie diese Befehle ein:
-  ```bash
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren Windows-Benutzernamen
 
 **Mac:**
 - Öffnen Sie **Terminal** (finden Sie es unter Programme > Dienstprogramme)
@@ -46,7 +45,7 @@ Wenn Sie das [Slash-Commands-Tutorial](./Reuse_Prompts_via_Slash_Commands.md) ab
   cd test_claude
   ```
 
-Das `-p`-Flag erstellt den Ordner, wenn er nicht existiert, oder tut einfach nichts, wenn er bereits existiert.
+Die Flags `-p` (Mac) und `-Force` (Windows) erstellen den Ordner, wenn er nicht existiert, oder tun einfach nichts, wenn er bereits existiert.
 
 ## Schritt 2: Claude Code starten
 

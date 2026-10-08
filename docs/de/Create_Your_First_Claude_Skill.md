@@ -23,18 +23,17 @@ Sie haben manuell `/stock-report AAPL` eingegeben, um Berichte zu generieren. Wa
 
 ## Schritt 1: Zum Projektordner navigieren
 
-**Windows (WSL):**
-- Öffnen Sie **Ubuntu** aus dem Startmenü
+**Windows (PowerShell):**
+- Öffnen Sie **PowerShell** aus dem Startmenü
 - Geben Sie ein:
-  ```bash
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude
   ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren Windows-Benutzernamen
+  cd ~\Documents\test_claude
+  ```
 
   Wenn der Ordner nicht existiert, erstellen Sie ihn zuerst:
-  ```bash
-  mkdir -p /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac:**
@@ -61,7 +60,7 @@ Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial be
 
 ## Schritt 3: Auto-Genehmigung für Bearbeitungen aktivieren
 
-Drücken Sie `Strg+E` (Windows/Linux) oder `Cmd+E` (Mac), um den Auto-Genehmigungsmodus für Bearbeitungen zu aktivieren.
+Drücken Sie **Shift+Tab**, um den Auto-Genehmigungsmodus für Bearbeitungen zu aktivieren.
 
 Dies ermöglicht Claude, Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen.
 

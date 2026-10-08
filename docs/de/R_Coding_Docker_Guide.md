@@ -52,7 +52,7 @@ Haben Sie schon einmal versucht, Ihren R-Code mit einem Kollegen zu teilen, nur 
 
 - Klicken Sie in VS Code auf **File > Open Folder**
 - Navigieren Sie zum Ordner `vibe`, den Sie gerade geklont haben
-- Klicken Sie auf **Select Folder**
+- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Sie sehen die Projektdateien in der Explorer-Seitenleiste
 
 ## Schritt 5: Im Container erneut öffnen

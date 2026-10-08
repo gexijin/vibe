@@ -1,18 +1,18 @@
 ---
-title: "Claude Code aus WSL mit RStudio unter Windows verwenden"
+title: "Claude Code mit RStudio unter Windows verwenden"
 lang: "de"
 ---
 [Startseite](./)
 
-# Claude Code aus WSL mit RStudio unter Windows verwenden
+# Claude Code mit RStudio unter Windows verwenden
 
-Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code in WSL für KI-gestützte Programmierunterstützung. Dieses Tutorial zeigt Ihnen, wie Sie beide Tools zusammen mit denselben Projektdateien verwenden können. Sie erstellen ein R-Projekt in Windows, schreiben etwas Code manuell und verwenden dann Claude Code vom Ubuntu-Terminal aus, um es mit Visualisierungen und Analysen zu erweitern – während RStudio geöffnet bleibt, um Ihren Code auszuführen und zu testen.
+Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für KI-gestützte Programmierunterstützung. Dieses Tutorial zeigt Ihnen, wie Sie beide Tools zusammen mit denselben Projektdateien verwenden können. Sie erstellen ein R-Projekt, schreiben etwas Code manuell und verwenden dann Claude Code aus PowerShell, um es mit Visualisierungen und Analysen zu erweitern – während RStudio geöffnet bleibt, um Ihren Code auszuführen und zu testen.
 
 ## Wichtige Konzepte
 
-- **WSL (Windows Subsystem for Linux)** - Führt Ubuntu Linux innerhalb von Windows aus, wo Claude Code installiert ist
-- **Pfadübersetzung** - Windows-Pfade wie `C:\Users\IhrName\Documents` werden zu `/mnt/c/Users/IhrName/Documents` in WSL
-- **Hybrid-Workflow** - RStudio (Windows) führt Code aus; Claude Code (WSL) schreibt und verbessert ihn
+- **PowerShell** - Das integrierte Befehlszeilen-Tool von Windows, mit dem Sie hier Claude Code neben RStudio ausführen
+- **Hybrid-Workflow** - RStudio führt Code aus und zeigt die Ergebnisse an; Claude Code schreibt und verbessert ihn
+- **Geteilte Dateien** - Beide Tools arbeiten mit genau demselben Projektordner, sodass Änderungen des einen Tools im anderen sichtbar werden
 
 ## Was Sie benötigen
 
@@ -36,7 +36,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code in WSL
 - Geben Sie als **Directory name** ein: `test_claude`
 - Klicken Sie auf **Browse** neben „Create project as subdirectory of:"
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
-- Klicken Sie auf **Ordner auswählen**
+- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Klicken Sie auf **Create Project**
 - RStudio erstellt das Projekt und wechselt dorthin
 
@@ -62,29 +62,27 @@ summary(iris)
 - Um den Code auszuführen: Markieren Sie alle Zeilen und klicken Sie auf die **Run**-Schaltfläche (oben rechts im Skriptbereich)
 - Sie sollten die Ausgabe im Console-Bereich sehen, die Datensatzstruktur und Statistiken zeigt
 
-## Schritt 5: Ubuntu-Terminal öffnen
+## Schritt 5: PowerShell öffnen
 
 - Klicken Sie auf die **Windows-Starttaste**
-- Geben Sie `Ubuntu` in das Suchfeld ein
-- Klicken Sie auf **Ubuntu** (orangefarbenes kreisförmiges Symbol)
-- Das Ubuntu-Terminal öffnet sich
+- Geben Sie `PowerShell` in das Suchfeld ein
+- Klicken Sie auf **Windows PowerShell**, um es zu öffnen
 
 ## Schritt 6: Zu Ihrem Projektordner navigieren
 
-- Geben Sie im Ubuntu-Terminal diesen Befehl ein (ersetzen Sie `IhrBenutzername` durch Ihren tatsächlichen Windows-Benutzernamen):
+- Geben Sie in PowerShell ein:
   ```
-  cd /mnt/c/Users/IhrBenutzername/Documents/test_claude
+  cd ~\Documents\test_claude
   ```
-- Um Ihren Benutzernamen zu finden, können Sie eingeben: `ls /mnt/c/Users/` und nach Ihrem Ordnernamen suchen
 - Überprüfen Sie, ob Sie am richtigen Ort sind, indem Sie eingeben:
   ```
-  ls
+  dir
   ```
 - Sie sollten `iris.R` und `test_claude.Rproj` aufgelistet sehen
 
 ## Schritt 7: Claude Code starten
 
-- Geben Sie im Ubuntu-Terminal ein:
+- Geben Sie in PowerShell ein:
   ```
   claude
   ```
@@ -106,7 +104,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 ## Schritt 9: Den neuen Code in RStudio ausführen
 
 - Wechseln Sie zurück zu RStudio (klicken Sie auf das RStudio-Fenster)
-- Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Ja**, um sie neu zu laden
+- Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Yes**, um sie neu zu laden
 - Wenn keine Aufforderung erscheint, klicken Sie auf **File > Reopen with Encoding > UTF-8**
 - Markieren Sie den gesamten Code und klicken Sie auf **Run**
 - Ein Streudiagramm erscheint im **Plots**-Bereich (unten rechts)
@@ -114,7 +112,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 ## Schritt 10: Das Streudiagramm verfeinern
 
-- Wechseln Sie zum Ubuntu-Terminal
+- Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
   Entferne den Titel. Ändere den Markierungstyp nach Art. Wechsle zum klassischen Theme.
@@ -130,7 +128,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 ## Schritt 12: Claude um PCA-Plot bitten
 
-- Wechseln Sie zum Ubuntu-Terminal
+- Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
   Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und die Proben unter Verwendung der ersten beiden Hauptkomponenten zu plotten.
@@ -145,7 +143,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 ## Schritt 14: Claude um Überprüfung und Kommentare bitten
 
-- Wechseln Sie zum Ubuntu-Terminal
+- Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
   Überprüfe das gesamte Skript auf Korrektheit. Füge bei Bedarf Kommentare hinzu.
@@ -154,7 +152,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 ## Schritt 15: Claude bitten, R Markdown zu erstellen
 
-- Wechseln Sie zum Ubuntu-Terminal
+- Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
   Erstelle eine neue R-Markdown-Datei für diese Analyse. Speichere sie als iris_report.Rmd
@@ -167,7 +165,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 - Wechseln Sie zu RStudio
 - Klicken Sie auf **File > Open File...**
-- Wählen Sie `iris_report.Rmd` und klicken Sie auf **Open**
+- Wählen Sie `iris_report.Rmd` und klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf die **Knit**-Schaltfläche (mit einem Wollknäuel-Symbol) oben im Skriptbereich
 - RStudio generiert einen HTML-Bericht
 - Der Bericht öffnet sich in einem neuen Fenster und zeigt Ihre vollständige Analyse mit erzählendem Text
@@ -175,12 +173,12 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 ## Fehlerbehebung
 
-- **„Permission denied" beim Zugriff auf Windows-Dateien von WSL** - Stellen Sie sicher, dass Sie `/mnt/c/` und nicht `C:/` verwenden. Überprüfen Sie, ob Ihr Benutzername im Pfad korrekt ist.
 - **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding > UTF-8**, um die Datei manuell neu zu laden.
-- **„claude: command not found"** - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Versuchen Sie, ein neues Ubuntu-Terminal-Fenster zu öffnen.
+- **„claude: command not found"** - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Versuchen Sie, ein neues PowerShell-Fenster zu öffnen.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
-- **Fehler: „cannot change working directory"** - Ihr Windows-Pfad enthält Leerzeichen. In Schritt 6, setzen Sie den Pfad in Anführungszeichen: `cd "/mnt/c/Users/Ihr Name/Documents/test_claude"`
+- **Fehler: „cannot change working directory"** - Ihr Windows-Pfad enthält Leerzeichen. In Schritt 6, setzen Sie den Pfad in Anführungszeichen: `cd "~\Documents\Ihr Name\test_claude"`
 - **Claude Code ist bei der ersten Anfrage langsam** - Warten Sie 30-60 Sekunden, bis Claude initialisiert ist. Nachfolgende Anfragen werden schneller sein.
+- **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, öffnen Sie in den Schritten 5-16 statt PowerShell die App **Ubuntu** und navigieren Sie mit `cd /mnt/c/Users/IhrBenutzername/Documents/test_claude` zu Ihrem Projekt
 
 ## Nächste Schritte
 
@@ -194,13 +192,13 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 Diese Hybrid-Einrichtung kombiniert das Beste aus beiden Welten:
 
-- **RStudio (Windows)** - Interaktive R-Konsole, sofortige Plot-Anzeige, vertraute GUI zum Ausführen von Code
-- **Claude Code (WSL)** - KI-gestützte Codegenerierung, Überprüfung und Verbesserung
-- **Geteilte Dateien** - Beide Tools arbeiten an denselben Dateien über WSLs `/mnt/c/`-Einhängepunkt
+- **RStudio** - Interaktive R-Konsole, sofortige Plot-Anzeige, vertraute GUI zum Ausführen von Code
+- **Claude Code (PowerShell)** - KI-gestützte Codegenerierung, Überprüfung und Verbesserung
+- **Geteilte Dateien** - Beide Tools arbeiten direkt mit demselben Projektordner
 - **Iterative Verfeinerung** - Beginnen Sie mit manuellem Code, verbessern Sie mit Claude, testen Sie in RStudio, dann verfeinern Sie weiter
 - **Dokumentation** - Claude kann umfassende Berichte und Kommentare für Ihre Analyse generieren
 
-Der Workflow ist einfach: Schreiben oder bearbeiten Sie Code mit Claude im Ubuntu-Terminal, dann testen und führen Sie ihn sofort in RStudio aus. Kein Dateikopieren oder manuelles Synchronisieren nötig – WSL und Windows teilen dieselben Dateien nahtlos.
+Der Workflow ist einfach: Schreiben oder bearbeiten Sie Code mit Claude in PowerShell, dann testen und führen Sie ihn sofort in RStudio aus. Kein Dateikopieren oder manuelles Synchronisieren nötig – beide Tools teilen dieselben Dateien.
 
 ---
 
