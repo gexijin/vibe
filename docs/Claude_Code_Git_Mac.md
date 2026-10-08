@@ -98,7 +98,7 @@ This is where your project will live.
   claude
   ```
 
-Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_MacOS.md). After logging in, you'll see a welcome message and the Claude Code prompt.
+Log in with your Claude subscription following the [installation tutorial](Install_Claude_Code_MacOS.md). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 ## Step 7: Ask Claude to Initialize Git
 
