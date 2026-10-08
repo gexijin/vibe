@@ -39,15 +39,17 @@ Ever tried to share your Python code with a colleague, only to spend hours debug
 ## Step 3: Create a Python Project Folder
 
 - Create a new folder on your computer named `python-docker-demo`
-- Inside it, create a subfolder named `.devcontainer`
-- Inside it, create a subfolder named `python`
+- In VS Code, click **File > Open Folder**
+- Navigate to the `python-docker-demo` folder you just created
+- Click **Select Folder** (Windows) or **Open** (Mac)
+- In the Explorer sidebar, hover over the **PYTHON-DOCKER-DEMO** heading, click the **New Folder** icon, and name the folder `.devcontainer`
+- Click an empty spot in the Explorer sidebar below `.devcontainer` so nothing is highlighted, then click the **New Folder** icon again and name the folder `python`
 - Your structure should look like: `python-docker-demo/.devcontainer/` and `python-docker-demo/python/`
+
+We create these folders in VS Code because Mac Finder won't let you name a folder starting with a dot (`.`).
 
 ## Step 4: Create the Dockerfile
 
-- In VS Code, click **File > Open Folder**
-- Navigate to the `python-docker-demo` folder you just created
-- Click **Select Folder**
 - In the Explorer sidebar, right-click the `.devcontainer` folder
 - Click **New File**
 - Name it `Dockerfile`
@@ -64,7 +66,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -137,7 +139,7 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - Click **File > Save**
@@ -200,10 +202,10 @@ You'll see `/workspaces/python-docker-demo` - this is your project folder inside
 - List the files:
 
 ```bash
-ls
+ls -a
 ```
 
-You'll see the folders you created: `.devcontainer/`, `python/`, etc.
+You'll see the folders you created: `.devcontainer/`, `python/`, etc. (`-a` also shows folders whose names start with a dot)
 
 - Try going up one directory:
 
@@ -232,7 +234,7 @@ The container has Python pre-installed with data science packages. Let's run the
 - Continue running each line or block one at a time with `Shift+Enter`
 - When you run `print(df.head())`, you'll see the first 5 rows in the terminal
 - When you run `print(df.describe())`, you'll see statistical summaries
-- When you run the histogram code, a plot window will open showing the visualization
+- When you run the histogram code, it saves the chart as `iris_histogram.png` in your project folder (the container has no screen, so plots can't open in a window) - click the file in the Explorer sidebar to view it
 
 ## Step 11: Run the Streamlit App
 
@@ -303,11 +305,11 @@ Packages installed via pip in the terminal (`pip install package`) are temporary
 - In VS Code Explorer, navigate to `.devcontainer/Dockerfile`
 - Click to open the file
 - Find line 10: `RUN pip install --no-cache-dir ...`
-- Add `scikit-learn` to the list:
+- Add `plotly` to the list:
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - Click **File > Save**
@@ -317,8 +319,8 @@ RUN pip install --no-cache-dir \
 - To verify, open a Python terminal and type:
 
 ```python
-import sklearn
-print(sklearn.__version__)
+import plotly
+print(plotly.__version__)
 ```
 
 If it displays the version without errors, the package is installed permanently.
@@ -326,7 +328,7 @@ If it displays the version without errors, the package is installed permanently.
 ## Next Steps
 
 - **Create a new Python script** - Make a new `.py` file in the `python/` folder, write data analysis code using built-in datasets or load your own CSV files
-- **Install Python packages** - Add packages you need by editing the Dockerfile (line 9) and rebuilding the container
+- **Install Python packages** - Add packages you need by editing the Dockerfile (line 10) and rebuilding the container
 - **Explore data science** - Try data manipulation with pandas and visualization with matplotlib or seaborn
 - **Build web apps** - Create interactive dashboards with Streamlit or Flask
 
