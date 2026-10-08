@@ -69,6 +69,10 @@ print(iris_df.describe())
 
 - Enregistrez le fichier en cliquant sur **File > Save**
 - Ouvrez le terminal Python : cliquez sur **View** dans la barre de menu, puis sur **Terminal**
+- Installez les packages dont ce script a besoin :
+  ```
+  pip install scikit-learn pandas
+  ```
 - Dans le terminal, exécutez : `python iris_analysis.py`
 - Vous devriez voir la structure du jeu de données et les statistiques récapitulatives dans le terminal
 
