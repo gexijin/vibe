@@ -38,7 +38,7 @@ lang: "hi"
 
 VS Code में पाँच मुख्य क्षेत्र हैं:
 
-- **एक्टिविटी बार (Activity Bar)** (बाईं किनारा) - Explorer, Search, Git, Extensions आदि के लिए आइकन
+- **एक्टिविटी बार (Activity Bar)** (बायाँ किनारा) - Explorer, Search, Git, Extensions आदि के लिए आइकन
 - **साइड बार (Side Bar)** - चुनी गई एक्टिविटी के लिए सामग्री दिखाता है (फ़ाइलें, सर्च नतीजे)
 - **एडिटर (Editor)** (बीच में) - जहाँ आप कोड लिखते हैं
 - **पैनल (Panel)** (नीचे) - Terminal, Problems, Output
@@ -91,7 +91,7 @@ Markdown एक सरल टेक्स्ट फ़ॉर्मेट है 
 - नतीजों में **Markdown Preview Enhanced** ढूँढें
 - **Install** पर क्लिक करें
 
-## चरण 6: अपनी Markdown फ़ाइल की पूर्वावलोकन करें
+## चरण 6: अपनी Markdown फ़ाइल का प्रीव्यू देखें
 
 - अगर `README.md` पहले से खुली नहीं है तो उसे खोलें
 - एडिटर में राइट-क्लिक करें और **Markdown Preview Enhanced: Open Preview to the Side** चुनें

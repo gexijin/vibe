@@ -261,7 +261,7 @@ claude
    ```
    claude --version
    ```
-- Ubuntu terminal में `claude` टाइप करके और ब्राउज़र लॉगिन का पालन करके अपना खाता कनेक्ट करें (यह चरण 3, विकल्प A जैसा ही है)। यदि आप इसके बजाय API कुंजी उपयोग करते हैं, तो इसे `export ANTHROPIC_API_KEY="your-api-key-here"` से सेट करें (WSL Linux कमांड इस्तेमाल करता है, `setx` नहीं)
+- Ubuntu terminal में `claude` टाइप करके और ब्राउज़र लॉगिन का पालन करके अपना खाता कनेक्ट करें (यह चरण 4, विकल्प A जैसा ही है)। यदि आप इसके बजाय API कुंजी उपयोग करते हैं, तो इसे `export ANTHROPIC_API_KEY="your-api-key-here"` से सेट करें (WSL Linux कमांड इस्तेमाल करता है, `setx` नहीं)
 - WSL से किसी Windows प्रोजेक्ट फ़ोल्डर को खोलने के लिए:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
