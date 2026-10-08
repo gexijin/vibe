@@ -229,7 +229,7 @@ claude
 
 - **Windows Start बटन** पर क्लिक करें, `PowerShell` टाइप करें
 - **Windows PowerShell** पर **राइट-क्लिक** करें और **Run as administrator** पर क्लिक करें
-- "क्या आप इस ऐप को अपने डिवाइस में बदलाव करने की अनुमति देना चाहते हैं?" पूछे जाने पर **Yes** पर क्लिक करें
+- "Do you want to allow this app to make changes to your device?" (क्या आप इस ऐप को अपने डिवाइस में बदलाव करने की अनुमति देना चाहते हैं?) पूछे जाने पर **Yes** पर क्लिक करें
 - PowerShell विंडो में, टाइप करें:
    ```
    wsl --install
