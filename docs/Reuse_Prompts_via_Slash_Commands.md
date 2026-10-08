@@ -7,7 +7,7 @@ title: "Create Custom Slash Commands"
 
 Tired of typing the same detailed prompts over and over? Custom slash commands let you save complex instructions as reusable shortcuts. Like creating keyboard shortcuts for your most frequent tasks, slash commands turn lengthy prompts into simple commands like `/stock-report Apple` that generate comprehensive reports instantly.
 
-The best part? We use Claude to write the detailed prompt and create the Skill. Yes, Claude is very good at prompting...itself.
+The best part? We use Claude to write the detailed prompt and create the slash command. Yes, Claude is very good at prompting...itself.
 
 ## Key Concepts
 
@@ -160,7 +160,7 @@ Claude updates the command file. You can verify from the editor.
   /stock-report AAPL
   ```
 
-Claude creates a file named something like `Apple_2025-12-13.html`. Click on this file from File Explorer on Windows or Mac to open it in your default browser.
+Claude creates a file named something like `Apple_2025-12-13.html`. Double-click this file in File Explorer (Windows) or Finder (Mac) to open it in your default browser.
 
 ## Step 11: Reuse slash command (Optional)
 
