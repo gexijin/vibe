@@ -454,6 +454,7 @@
             <ol class="tutorial-list">
                 <li><a href="Install_CLAUDE_Code_Win">Windows पर Claude Code इंस्टॉल करें</a></li>
                 <li><a href="Install_Claude_Code_MacOS">Mac पर Claude Code इंस्टॉल करें</a></li>
+                <li><a href="Install_Claude_Desktop_App">Claude Desktop ऐप इंस्टॉल करें (Windows और Mac)</a></li>
                 <li><a href="VS_Code_Getting_Started">VS Code के साथ शुरुआत करें</a></li>
                 <li><a href="Claude_Code_Basic_Operations">Claude Code: बुनियादी संचालन</a></li>
                 <li><a href="Claude_Code_in_VS_Code_Win">Windows पर Claude Code के लिए VS Code सेट करें</a></li>
@@ -465,7 +466,7 @@
             </ol>
 
             <h2>कौशल विकास</h2>
-            <ol class="tutorial-list" start="11">
+            <ol class="tutorial-list" start="12">
                 <li><a href="Github_desktop">वर्शन कंट्रोल के साथ शुरुआत करें</a></li>
                 <li><a href="R_Coding_VS_Code_Guide">VS Code में R चलाएँ</a></li>
                 <li><a href="Python_Coding_VS_Code_Guide">VS Code में Python चलाएँ</a></li>
@@ -476,7 +477,7 @@
             </ol>
 
             <h2>उन्नत विषय</h2>
-            <ol class="tutorial-list" start="18">
+            <ol class="tutorial-list" start="19">
                 <li><a href="R_Coding_Docker_Guide">Docker के ज़रिए VS Code में R कोडिंग</a></li>
                 <li><a href="Python_Coding_Docker_Guide">Docker के ज़रिए VS Code में Python कोडिंग</a></li>
                 <li><a href="Vibe_Coding_R_Docker_Guide">Claude Code के साथ R में Vibe Coding</a></li>
@@ -643,7 +644,8 @@
             22: { label: 'Claude\nSkill', url: 'Create_Your_First_Claude_Skill', desc: 'एक Claude Skill बनाएँ जो संदर्भ के आधार पर अपने-आप सक्रिय हो जाए—मैन्युअल स्लैश कमांड से AI-सक्रिय क्षमताओं की ओर अपग्रेड करें', level: 3 },
             23: { label: 'मेडिकल रिसर्च\nके लिए Claude Skill', url: 'Medical_Research_Skill', desc: 'एक विशेष स्किल बनाएँ जो PubMed खोजे और मेडिकल शोध लेखों को सरल भाषा में संक्षेप में बताए', level: 3 },
             24: { label: 'सबएजेंट\nबनाएँ', url: 'Create_subagents', desc: 'एक स्वायत्त एजेंट बनाएँ जो जटिल कार्यों को पूरा करने के लिए स्किल्स का उपयोग करे—एक स्टॉक-पिकर बनाएँ जो शोध करे, स्कोर दे, और निवेश की सिफ़ारिश करे', level: 3 },
-            25: { label: 'Claude Code\nबुनियादी बातें', url: 'Claude_Code_Basic_Operations', desc: 'आवश्यक Claude Code संचालन सीखें—बातचीत शुरू करना, संदर्भ प्रबंधित करना, स्लैश कमांड का उपयोग करना, और फ़ाइलों के साथ काम करना', level: 0 }
+            25: { label: 'Claude Code\nबुनियादी बातें', url: 'Claude_Code_Basic_Operations', desc: 'आवश्यक Claude Code संचालन सीखें—बातचीत शुरू करना, संदर्भ प्रबंधित करना, स्लैश कमांड का उपयोग करना, और फ़ाइलों के साथ काम करना', level: 0 },
+            28: { label: 'Claude Desktop\nइंस्टॉल करें', url: 'Install_Claude_Desktop_App', desc: 'वैकल्पिक: Windows और Mac के लिए Claude Desktop चैट ऐप इंस्टॉल करें - एक आम चैट विंडो, जो Claude Code से अलग है', level: 0 }
         };
 
         // Color scheme by level
@@ -659,6 +661,7 @@
             // Level 1 - Basic
             1: { x: 0, y: 0 },    // Install Claude Code Win
             2: { x: 0, y: 0 },      // Install Claude Code Mac
+            28: { x: -140, y: 0 },  // Install Claude Desktop App (optional, standalone)
 
             // Level 2 - Minimum
             17: { x: 120, y: 90 },   // RStudio (Mac)
@@ -907,7 +910,7 @@
         const tutorialCategories = {
             windows: [1, 14, 11],      // Install Win, VS Code Win, Git Win
             mac: [2, 15, 12],          // Install Mac, VS Code Mac, Git Mac
-            basics: [1, 2, 3, 25, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, VS Code Basics, Claude Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
+            basics: [1, 2, 3, 25, 28, 14, 15, 11, 12, 13, 21, 22, 23, 24], // All install, Claude Desktop, VS Code Basics, Claude Code Basics, VS Code platform, git, research paper, slash commands, skills, and agents tutorials
             r: [5, 7, 10],             // R in VS Code, R via Docker, Vibe Coding in R
             rstudio_mac: [17],         // RStudio (Mac)
             rstudio_windows: [18],     // RStudio (Windows)
@@ -915,7 +918,7 @@
             claude_code_python_mac: [20], // Claude Code for Python (Mac only)
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
             shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24] // All coding tutorials
+            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 28] // All coding tutorials
         };
 
         // Filter nodes based on current state
@@ -924,8 +927,8 @@
             let visibleNodes = [];
 
             if (currentLanguage === 'basics') {
-                // Basics mode: show VS Code Basics + Claude Code Basics + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
-                visibleNodes = [...tutorialCategories[currentPlatform], 3, 25, 13, 21, 22, 23, 24];
+                // Basics mode: show VS Code Basics + Claude Code Basics + Claude Desktop + install/git/VS Code for selected platform + research paper + slash commands + skills + agents
+                visibleNodes = [...tutorialCategories[currentPlatform], 3, 25, 28, 13, 21, 22, 23, 24];
             } else if (currentLanguage === 'r') {
                 // R mode: show platform install + R tutorials + platform-specific RStudio + coding shared (no git, no research paper, no skills)
                 const rstudioTutorial = currentPlatform === 'mac' ? tutorialCategories.rstudio_mac : tutorialCategories.rstudio_windows;
