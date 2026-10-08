@@ -261,7 +261,7 @@ streamlit run app.py
 
 - ऐप को चालू रखें
 - VS Code में, `python/app.py` एडिट करें
-- लाइन 6 खोजें: `st.title("Old Faithful Geyser Data")`
+- लाइन 5 खोजें: `st.title("Old Faithful Geyser Data")`
 - इसे इस तरह बदलें:
 
 ```python
@@ -303,7 +303,7 @@ terminal में pip से इंस्टॉल किए गए पैक�
 
 - VS Code Explorer में, `.devcontainer/Dockerfile` पर जाएँ
 - फ़ाइल खोलने के लिए क्लिक करें
-- लाइन 9 खोजें: `RUN pip install --no-cache-dir ...`
+- लाइन 10 खोजें: `RUN pip install --no-cache-dir ...`
 - सूची में `scikit-learn` जोड़ें:
 
 ```dockerfile
