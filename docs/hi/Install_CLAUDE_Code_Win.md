@@ -270,9 +270,9 @@ claude
 
 ## अगले कदम
 
-- **VS Code सेट अप करें**: [VS Code Getting Started](VS_Code_Getting_Started) गाइड का पालन करें, फिर इसे [Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win) से Claude Code से जोड़ें
-- **Git की मूल बातें सीखें**: [Claude Code Git on Windows](Claude_Code_Git_Windows) से अपने प्रोजेक्ट में वर्शन कंट्रोल जोड़ें
-- **एक प्रोजेक्ट आज़माएँ**: क्रिया में Claude Code देखने के लिए [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code) पर काम करें
+- **VS Code सेट अप करें**: [VS Code के साथ शुरुआत करें](VS_Code_Getting_Started) गाइड का पालन करें, फिर इसे [Windows पर Claude Code के लिए VS Code सेट करें](Claude_Code_in_VS_Code_Win) से Claude Code से जोड़ें
+- **Git की मूल बातें सीखें**: [Windows के लिए Claude Code के साथ वर्ज़न कंट्रोल](Claude_Code_Git_Windows) से अपने प्रोजेक्ट में वर्शन कंट्रोल जोड़ें
+- **एक प्रोजेक्ट आज़माएँ**: क्रिया में Claude Code देखने के लिए [Claude Code के साथ शोध पत्र लिखें](Writing_Research_Paper_Claude_Code) पर काम करें
 
 ## समस्या निवारण
 

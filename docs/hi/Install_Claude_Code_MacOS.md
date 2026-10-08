@@ -190,9 +190,9 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 **नोट:** Homebrew इंस्टॉलेशन अपने आप अपडेट नहीं होते। नवीनतम वर्शन पाने के लिए समय-समय पर `brew upgrade claude-code` चलाएँ।
 
 ## अगले कदम
-- [VS Code Getting Started](./VS_Code_Getting_Started.md) - एक लोकप्रिय कोड एडिटर, VS Code का उपयोग करना सीखें
-- [Claude Code in VS Code (Mac)](./Claude_Code_in_VS_Code_Mac.md) - VS Code के भीतर Claude Code चलाएँ
-- [Writing a Research Paper with Claude Code](./Writing_Research_Paper_Claude_Code.md) - अकादमिक लेखन के लिए Claude Code का उपयोग करें
+- [VS Code के साथ शुरुआत करें](./VS_Code_Getting_Started.md) - एक लोकप्रिय कोड एडिटर, VS Code का उपयोग करना सीखें
+- [Mac पर VS Code से Claude Code का उपयोग करें](./Claude_Code_in_VS_Code_Mac.md) - VS Code के भीतर Claude Code चलाएँ
+- [Claude Code के साथ शोध पत्र लिखें](./Writing_Research_Paper_Claude_Code.md) - अकादमिक लेखन के लिए Claude Code का उपयोग करें
 
 ## Terminal को फिर से कैसे खोलें
 

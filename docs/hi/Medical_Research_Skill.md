@@ -19,7 +19,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) या [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- पूरा किया हुआ [Windows पर Claude Code के लिए VS Code सेट करें](./Claude_Code_in_VS_Code_Win.md) या [Mac पर VS Code से Claude Code का उपयोग करें](./Claude_Code_in_VS_Code_Mac.md)
 - PubMed खोजों के लिए इंटरनेट कनेक्शन
 - 15-20 मिनट
 

@@ -17,8 +17,8 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Python Coding in VS Code via Docker](./Python_Coding_Docker_Guide)
-- पूरा किया हुआ [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- पूरा किया हुआ [Docker Container के ज़रिए VS Code में Python कोडिंग](./Python_Coding_Docker_Guide)
+- पूरा किया हुआ [Claude Code के साथ GitHub Desktop का उपयोग करें](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 मिनट
 
 ## चरण 1: नई GitHub रिपॉज़िटरी बनाएँ

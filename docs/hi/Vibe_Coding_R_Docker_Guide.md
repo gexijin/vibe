@@ -16,8 +16,8 @@ Vibe coding अपने कंप्यूटर के साथ बातच�
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [R Coding in VS Code via Docker](./R_Coding_Docker_Guide)
-- पूरा किया हुआ [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- पूरा किया हुआ [Docker कंटेनर के ज़रिए VS Code में R कोडिंग](./R_Coding_Docker_Guide)
+- पूरा किया हुआ [Claude Code के साथ GitHub Desktop का उपयोग करें](./GitHub_Desktop_Claude_Code_Workflow)
 - Docker Desktop इंस्टॉल और शुरू किया हुआ
 - 25-30 मिनट
 

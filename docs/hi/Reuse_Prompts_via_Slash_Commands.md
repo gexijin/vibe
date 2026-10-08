@@ -18,7 +18,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) या [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- पूरा किया हुआ [Windows पर Claude Code के लिए VS Code सेट करें](./Claude_Code_in_VS_Code_Win.md) या [Mac पर VS Code से Claude Code का उपयोग करें](./Claude_Code_in_VS_Code_Mac.md)
 - रिसर्च करने के लिए एक विषय (हम उदाहरण के तौर पर स्टॉक रिपोर्ट का उपयोग करेंगे)
 - VS Code जैसा एक टेक्स्ट एडिटर इंस्टॉल किया हुआ
 - 15-20 मिनट
@@ -178,7 +178,7 @@ Claude `Apple_2025-12-13.html` जैसे नाम की एक फ़ाइ
 
 ## चरण 12: एक और स्लैश कमांड आज़माएँ (वैकल्पिक)
 
-अगर आपने [Writing Research Paper](./Writing_Research_Paper_Claude_Code.md) ट्यूटोरियल पूरा किया है, तो आपके पास एक `/research-paper` कमांड होना चाहिए। इसे एक नए विषय पर टेस्ट करें।
+अगर आपने [Claude Code के साथ शोध पत्र लिखें](./Writing_Research_Paper_Claude_Code.md) ट्यूटोरियल पूरा किया है, तो आपके पास एक `/research-paper` कमांड होना चाहिए। इसे एक नए विषय पर टेस्ट करें।
 
 पहले, नए सिरे से शुरू करने के लिए Claude की मेमोरी साफ़ करें:
 
