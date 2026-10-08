@@ -156,7 +156,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    ```
 - Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
 - Free tier gives you 50 API requests per day
-- See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details
+- See the [official OpenRouter guide](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) for more details
 
 ### Option D. Use Anthropic API via Azure Foundry
 
