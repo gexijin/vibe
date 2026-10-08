@@ -211,4 +211,4 @@ The workflow is simple: write or edit code with Claude in Terminal, then immedia
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2024.
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.
