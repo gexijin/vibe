@@ -38,16 +38,16 @@ Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éd
 
 ## Étape 3 : Ouvrir le Dossier dans VS Code
 
-- Dans VS Code, cliquez sur **Fichier** dans la barre de menu, puis **Ouvrir un Dossier**
+- Dans VS Code, cliquez sur **File** dans la barre de menu, puis **Open Folder**
 - Naviguez vers **Documents** et sélectionnez le dossier `test_claude` que vous avez créé
-- Cliquez sur **Ouvrir**
-- Si vous êtes invité "Faites-vous confiance aux auteurs des fichiers dans ce dossier ?", cliquez sur **Oui, je fais confiance aux auteurs**
+- Cliquez sur **Open**
+- Si on vous demande "Do you trust the authors of the files in this folder?", cliquez sur **Yes, I trust the authors**
 
 Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le côté gauche.
 
 ## Étape 4 : Démarrer Claude Code et se Connecter
 
-- Ouvrez un nouveau terminal : cliquez sur **Terminal** dans la barre de menu, puis **Nouveau Terminal**
+- Ouvrez un nouveau terminal : cliquez sur **Terminal** dans la barre de menu, puis **New Terminal**
 - Un panneau de terminal apparaît en bas de VS Code
 - Dans le terminal, tapez :
   ```
@@ -71,17 +71,17 @@ Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le c�
 ```
 - Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau Explorateur sur la gauche
 - Cliquez sur `article.md` dans l'Explorateur pour le visualiser dans l'éditeur
-- Pour prévisualiser l'article formaté : faites un clic droit sur l'onglet `article.md` et sélectionnez **Ouvrir l'Aperçu**
+- Pour prévisualiser l'article formaté : faites un clic droit sur l'onglet `article.md` et sélectionnez **Open Preview**
 - Vous verrez le Markdown rendu avec les titres, puces et mise en forme appropriés
 
 ## Rouvrir Claude dans VS Code Plus Tard
 
 Après avoir fermé VS Code, voici comment revenir à votre projet :
 
-- **Option A :** Ouvrez VS Code, cliquez sur **Fichier > Ouvrir les Éléments Récents**, et sélectionnez `test_claude`
+- **Option A :** Ouvrez VS Code, cliquez sur **File > Open Recent**, et sélectionnez `test_claude`
 - **Option B :** Ouvrez Terminal, naviguez vers votre projet avec `cd ~/Documents/test_claude`, et tapez `code .`
 
-VS Code mémorise vos dossiers récents, donc l'Option A avec Ouvrir les Éléments Récents est généralement la plus rapide.
+VS Code mémorise vos dossiers récents, donc l'Option A avec Open Recent est généralement la plus rapide.
 
 ## Prochaines Étapes
 
@@ -93,7 +93,7 @@ VS Code mémorise vos dossiers récents, donc l'Option A avec Ouvrir les Éléme
 ## Dépannage
 
 - **Le terminal affiche "zsh" mais Claude Code ne démarre pas** - Assurez-vous que Claude Code est correctement installé ; exécutez `claude --version` pour vérifier
-- **Commande "code" introuvable dans Terminal** - Dans VS Code, cliquez sur **Affichage** dans la barre de menu, puis **Palette de Commandes**, tapez "shell command", et sélectionnez **Shell Command: Install 'code' command in PATH**
+- **Commande "code" introuvable dans Terminal** - Dans VS Code, cliquez sur **View** dans la barre de menu, puis **Command Palette**, tapez "shell command", et sélectionnez **Shell Command: Install 'code' command in PATH**
 - **VS Code ne s'ouvre pas car il provient d'un développeur non identifié** - Allez dans **Réglages Système > Confidentialité et Sécurité** et cliquez sur **Ouvrir Quand Même**
 
 ## Aperçu du Flux de Travail
