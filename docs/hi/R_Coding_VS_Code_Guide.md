@@ -1,5 +1,5 @@
 ---
-title: "Run R in VS Code"
+title: "VS Code में R चलाएँ"
 lang: "hi"
 ---
 [होम](./)
@@ -277,5 +277,4 @@ VS Code इन मुख्य फ़ायदों के साथ RStudio �
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025.
-</content>
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025।

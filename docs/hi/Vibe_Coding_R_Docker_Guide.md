@@ -1,5 +1,5 @@
 ---
-title: "Vibe Coding in R with Claude Code and Docker"
+title: "Claude Code और Docker के साथ R में Vibe Coding"
 lang: "hi"
 ---
 [होम](./)
@@ -305,5 +305,4 @@ Vibe coding तब चमकता है जब आप सुधार कर�
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025.
-</content>
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025।

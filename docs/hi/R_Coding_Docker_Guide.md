@@ -1,5 +1,5 @@
 ---
-title: "R Coding in VS Code via Docker Container"
+title: "Docker कंटेनर के ज़रिए VS Code में R कोडिंग"
 lang: "hi"
 ---
 [होम](./)
@@ -295,5 +295,4 @@ R और हर ज़रूरी पैकेज को सीधे अपन
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025.
-</content>
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025।

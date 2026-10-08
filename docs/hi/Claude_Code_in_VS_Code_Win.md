@@ -119,4 +119,4 @@ VS Code आपके हाल के फ़ोल्डर याद रखत�
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 10, 2025.
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 10 दिसंबर, 2025।

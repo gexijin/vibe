@@ -1,10 +1,10 @@
 ---
-title: "Get Started with VS Code"
+title: "VS Code के साथ शुरुआत करें"
 lang: "hi"
 ---
 [होम](./)
 
-# VS Code शुरू करें
+# VS Code के साथ शुरुआत करें
 
 आप कोड लिखना चाहते हैं, लेकिन Notepad या TextEdit सीमित लगते हैं। आपको कुछ ऐसा चाहिए जो आपको तेज़ी से कोड करने में मदद करे - सिंटैक्स हाइलाइटिंग, ऑटोकम्प्लीट और बिल्ट-इन टूल के साथ। **VS Code कोड के लिए एक स्मार्ट नोटबुक की तरह है** - यह समझता है कि आप क्या लिख रहे हैं और रास्ते में आपकी मदद करता है। [Visual Studio Code](https://code.visualstudio.com) मुफ़्त है, किसी भी OS पर चलता है, और लाखों डेवलपर इसका उपयोग करते हैं।
 
@@ -167,5 +167,4 @@ GitHub Copilot आपकी फ़ाइल का विश्लेषण क�
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025.
-</content>
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 7 दिसंबर, 2025।
