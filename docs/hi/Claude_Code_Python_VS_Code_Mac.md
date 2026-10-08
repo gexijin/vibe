@@ -167,4 +167,4 @@ iris_analysis.py में sepal length बनाम width का एक स्�
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 11 दिसंबर, 2025।

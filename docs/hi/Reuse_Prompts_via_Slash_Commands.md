@@ -1,5 +1,5 @@
 ---
-title: "Create Custom Slash Commands"
+title: "कस्टम स्लैश कमांड बनाएँ"
 lang: "hi"
 ---
 [होम](./)
@@ -220,5 +220,4 @@ Claude `Apple_2025-12-13.html` जैसे नाम की एक फ़ाइ
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 13 दिसंबर, 2025.
-</content>
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 13 दिसंबर, 2025।

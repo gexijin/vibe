@@ -1,5 +1,5 @@
 ---
-title: "Vibe Coding in Python with Claude Code and Docker"
+title: "Claude Code और Docker के साथ Python में Vibe Coding"
 lang: "hi"
 ---
 [होम](./)
@@ -273,5 +273,4 @@ Vibe coding तब चमकता है जब आप सुधार कर�
 
 ---
 
-निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 11 दिसंबर, 2025.
-</content>
+निर्माता [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/), 11 दिसंबर, 2025।
