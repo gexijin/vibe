@@ -219,7 +219,7 @@ streamlit run app.py
 
 - **pip install fails**: Ensure your virtual environment is activated (look for `(.venv)` in terminal). On Linux, you might need to install `python3-venv` first. On Windows, check antivirus isn't blocking pip.
 
-- **Streamlit app won't run**: Ensure streamlit is installed in your virtual environment (`pip list | grep streamlit`). Check the terminal for error messages. Make sure no other app is using port 8501.
+- **Streamlit app won't run**: Ensure streamlit is installed in your virtual environment (`pip show streamlit`). Check the terminal for error messages. Make sure no other app is using port 8501.
 
 ## Workflow Summary
 
