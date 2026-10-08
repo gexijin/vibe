@@ -226,7 +226,7 @@ Vibe coding shines when you iterate. Try adding features by describing them:
 - "Add a player search box so I can type a player's name and jump to them"
 - "Show the team logos next to team names in the dropdown"
 - "Add a line chart showing points per game trend for the selected team"
-- "Make the bar chart sortable by clicking column headers"
+- "Make the table sortable by clicking column headers"
 - "Add tooltips to the scatter plot showing player names when I hover"
 
 After each successful feature:
