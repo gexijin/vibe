@@ -51,7 +51,7 @@ For Windows:
 For Mac:
 - In VS Code, click **File** in the menu bar, then **Open Folder**
 - Navigate to and select the `test_claude` folder
-- Click **Open** (Mac) or **OK** (Windows)
+- Click **Open**
 - If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 ## Step 4: Start Claude Code
