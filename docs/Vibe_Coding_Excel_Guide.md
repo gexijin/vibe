@@ -101,7 +101,7 @@ Numbers are useful, but charts tell the story at a glance.
 - In the Claude Code terminal, type:
 
 ```
-Add a pie chart to the Expenses sheet showing each category's total share of spending. Add a bar chart to the Summary sheet comparing Total Income vs Total Expenses for each month.
+Add a pie chart to the Expenses sheet showing each category's total share of spending, with one slice per category (both months combined). Add a bar chart to the Summary sheet comparing Total Income vs Total Expenses for each month.
 ```
 
 - Press Enter
@@ -132,7 +132,7 @@ Make the sheet easier to extend without typos.
 - In the Claude Code terminal, type:
 
 ```
-Add data validation to the Category column in the Expenses sheet so it only accepts values from a dropdown list of the existing categories, plus "Other". Add two blank rows at the bottom ready for new entries.
+Add data validation to the Category column in the Expenses sheet so it only accepts values from a dropdown list of the existing categories, plus "Other". Add two blank rows just above the Total row ready for new entries, and make sure the Total, the Summary formulas, the pie chart totals and the color rules include them.
 ```
 
 - Press Enter
