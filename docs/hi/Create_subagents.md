@@ -18,8 +18,8 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Create Your First Claude Skill](./Create_Your_First_Claude_Skill.md) ट्यूटोरियल
-- उस ट्यूटोरियल से पहले से इंस्टॉल किया हुआ `stock-report` Skill (in `.claude/skills/stock-report/`)
+- पूरा किया हुआ [अपना पहला Claude Skill बनाएं](./Create_Your_First_Claude_Skill.md) ट्यूटोरियल
+- उस ट्यूटोरियल से पहले से इंस्टॉल किया हुआ `stock-report` Skill (`.claude/skills/stock-report/` में)
 - VS Code या कोई अन्य टेक्स्ट एडिटर
 - 20-25 मिनट
 
@@ -64,7 +64,7 @@ lang: "hi"
 
 आपको आउटपुट में `stock-report` दिखना चाहिए। यह Skill कंपनियों पर शोध करता है और प्रोडक्ट न्यूज़, मैनेजमेंट अपडेट, फाइनेंशियल परफॉरमेंस, और एनालिस्ट की राय को कवर करने वाली रिपोर्ट बनाता है।
 
-अगर आपको यह नहीं दिखता, तो Skill की फ़ाइलें `.claude/skills/stock-report/` (प्रोजेक्ट लेवल पर) में होनी चाहिए। अगर पूरा फ़ोल्डर ही गायब है, तो पहले वापस जाकर इसी प्रोजेक्ट फ़ोल्डर में [Create Your First Claude Skill](./Create_Your_First_Claude_Skill.md) ट्यूटोरियल पूरा करें।
+अगर आपको यह नहीं दिखता, तो Skill की फ़ाइलें `.claude/skills/stock-report/` (प्रोजेक्ट लेवल पर) में होनी चाहिए। अगर पूरा फ़ोल्डर ही गायब है, तो पहले वापस जाकर इसी प्रोजेक्ट फ़ोल्डर में [अपना पहला Claude Skill बनाएं](./Create_Your_First_Claude_Skill.md) ट्यूटोरियल पूरा करें।
 
 ## चरण 3: Subagent बनाम Skill की संरचना (Architecture) को समझें
 

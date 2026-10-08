@@ -31,8 +31,8 @@ Claude Code के साथ एक सिंपल टाइमर ऐप ब�
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Installing Claude Code on Windows](./Install_CLAUDE_Code_Win) या [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) ट्यूटोरियल
-- पूरा किया हुआ [Getting Started with Version Control](./Github_desktop) ट्यूटोरियल
+- पूरा किया हुआ [Windows पर Claude Code इंस्टॉल करें](./Install_CLAUDE_Code_Win) या [Mac पर Claude Code इंस्टॉल करें](./Install_Claude_Code_MacOS) ट्यूटोरियल
+- पूरा किया हुआ [वर्जन कंट्रोल के साथ शुरुआत करें](./Github_desktop) ट्यूटोरियल
 - 20 मिनट
 
 ## चरण 1: अपना प्रोजेक्ट बनाएं

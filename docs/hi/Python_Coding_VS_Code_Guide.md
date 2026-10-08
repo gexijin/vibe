@@ -17,7 +17,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [VS Code Basics](./VS_Code_Getting_Started)
+- पूरा किया हुआ [VS Code के साथ शुरुआत करें](./VS_Code_Getting_Started)
 - Python और पैकेज डाउनलोड करने के लिए इंटरनेट कनेक्शन
 - 15-20 मिनट
 

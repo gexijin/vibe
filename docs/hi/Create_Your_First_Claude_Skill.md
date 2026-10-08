@@ -16,7 +16,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Create Custom Slash Commands](./Reuse_Prompts_via_Slash_Commands.md) ट्यूटोरियल
+- पूरा किया हुआ [कस्टम स्लैश कमांड बनाएँ](./Reuse_Prompts_via_Slash_Commands.md) ट्यूटोरियल
 - उस ट्यूटोरियल का `stock-report` slash कमांड
 - VS Code इंस्टॉल किया हुआ
 - 10-15 मिनट

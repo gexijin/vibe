@@ -17,8 +17,8 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [R Coding in VS Code](./R_Coding_VS_Code_Guide)
-- पूरा किया हुआ [GitHub Desktop Basics](./Github_desktop)
+- पूरा किया हुआ [VS Code में R चलाएँ](./R_Coding_VS_Code_Guide)
+- पूरा किया हुआ [वर्जन कंट्रोल के साथ शुरुआत करें](./Github_desktop)
 - 20-25 मिनट
 
 ## चरण 1: Docker Desktop इंस्टॉल करें

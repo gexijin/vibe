@@ -17,7 +17,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Python Coding in VS Code](./Python_Coding_VS_Code_Guide)
+- पूरा किया हुआ [VS Code में Python कोडिंग](./Python_Coding_VS_Code_Guide)
 - 20-25 मिनट
 
 ## चरण 1: Docker Desktop इंस्टॉल करें
