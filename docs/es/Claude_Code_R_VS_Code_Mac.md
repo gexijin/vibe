@@ -42,7 +42,7 @@ Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere qu
 - Elija su método de autenticación:
   - **Usuarios de Claude Pro/Max**: Haga clic en **Sign in with Claude.ai**, autorice en el navegador y copie el código de vuelta a VS Code
   - **Usuarios de clave de API**: Haga clic en **Use API Key** y pegue su clave de API de Anthropic
-- Para pasos detallados de autenticación, consulte la guía [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 5)
+- Para pasos detallados de autenticación, consulte la guía [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3)
 - Una vez iniciada la sesión, verá "Ready to help" en el panel de chat
 
 ## Paso 3: Cree un Script de R Inicial Manualmente
