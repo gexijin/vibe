@@ -36,11 +36,6 @@ Para Windows:
 - Escriba `Visual Studio Code` o `VS Code` en el cuadro de búsqueda
 - Haga clic en **Visual Studio Code** cuando aparezca en los resultados de búsqueda
 - VS Code se abre con una pestaña de Bienvenida - puede cerrar esta pestaña
-- Mire la esquina inferior izquierda de VS Code - verá un icono azul o verde
-- Haga clic en este icono para abrir el menú de conexión remota
-- Seleccione **Connect to WSL** del menú
-- VS Code se recargará y se conectará a su instalación de Ubuntu
-- La esquina inferior izquierda ahora debería mostrar **WSL: Ubuntu**
 
 Para Mac:
 - Abra **Finder** y vaya a **Aplicaciones**
@@ -49,16 +44,10 @@ Para Mac:
 - VS Code se abre con una pestaña de Bienvenida - puede cerrar esta pestaña
 
 ## Paso 3: Abrir la Carpeta en VS Code
-Para Windows vía WSL:
-- En VS Code (todavía conectado a WSL), haga clic en **File** en la barra de menú, luego en **Open Folder**
-- Aparece un menú desplegable **Open Folder** en el centro superior
-- Encuentre su carpeta escribiendo:
-  ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario de Windows (por ejemplo, `John.Smith`)
-- Haga clic en **OK**. VS Code se recarga con su carpeta `test_claude`
-
+Para Windows:
+- Haga clic en **File** en la barra de menú, luego en **Open Folder**
+- Navegue hasta la carpeta `test_claude` en **Documentos** y selecciónela
+- Haga clic en **Select Folder**. VS Code se recarga con su carpeta `test_claude`
 
 Para Mac:
 - En VS Code, haga clic en **File** en la barra de menú, luego en **Open Folder**

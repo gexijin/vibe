@@ -27,15 +27,14 @@ En este tutorial, creará un Claude Skill que busca literatura médica revisada 
 
 Si completó el [tutorial de slash commands](./Reuse_Prompts_via_Slash_Commands.md), la carpeta `test_claude` ya existe. Estos comandos funcionan de cualquier manera.
 
-**Windows (WSL):**
-- Abra **Ubuntu** desde el menú Inicio
+**Windows (PowerShell):**
+- Abra **PowerShell** desde el menú Inicio
 - Ejecute estos comandos:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir -p test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
   ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario de Windows
 
 **Mac:**
 - Abra **Terminal** (Aplicaciones > Utilidades)
@@ -46,7 +45,7 @@ Si completó el [tutorial de slash commands](./Reuse_Prompts_via_Slash_Commands.
   cd test_claude
   ```
 
-La bandera `-p` crea la carpeta si no existe, o no hace nada si ya existe.
+Las opciones `-p` (Mac) y `-Force` (Windows) crean la carpeta si no existe, o no hacen nada si ya existe.
 
 ## Paso 2: Inicie Claude Code
 

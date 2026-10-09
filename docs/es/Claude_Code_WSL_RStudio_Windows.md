@@ -1,18 +1,18 @@
 ---
-title: "Uso de Claude Code desde WSL con RStudio en Windows"
+title: "Uso de Claude Code con RStudio en Windows"
 lang: "es"
 ---
 [Inicio](index.html)
 
-# Uso de Claude Code desde WSL con RStudio en Windows
+# Uso de Claude Code con RStudio en Windows
 
-Tiene RStudio en Windows para ejecutar código R y Claude Code en WSL para asistencia de programación con IA. Este tutorial le muestra cómo usar ambas herramientas juntas con los mismos archivos de proyecto. Creará un proyecto R en Windows, escribirá código manualmente y luego usará Claude Code desde el terminal Ubuntu para mejorarlo con visualizaciones y análisis, todo mientras RStudio permanece abierto para ejecutar y probar su código.
+Tiene RStudio en Windows para ejecutar código R y Claude Code para asistencia de programación con IA. Este tutorial le muestra cómo usar ambas herramientas juntas con los mismos archivos de proyecto. Creará un proyecto R, escribirá código manualmente y luego usará Claude Code desde PowerShell para mejorarlo con visualizaciones y análisis, todo mientras RStudio permanece abierto para ejecutar y probar su código.
 
 ## Conceptos Clave
 
-- **WSL (Windows Subsystem for Linux)** - Ejecuta Ubuntu Linux dentro de Windows donde está instalado Claude Code
-- **Traducción de rutas de archivo** - Las rutas de Windows como `C:\Users\TuNombre\Documents` se convierten en `/mnt/c/Users/TuNombre/Documents` en WSL
-- **Flujo de trabajo híbrido** - RStudio (Windows) ejecuta código; Claude Code (WSL) lo escribe y mejora
+- **PowerShell** - Herramienta de línea de comandos integrada en Windows, que aquí se usa para ejecutar Claude Code junto a RStudio
+- **Flujo de trabajo híbrido** - RStudio ejecuta y muestra el código; Claude Code lo escribe y mejora
+- **Archivos compartidos** - Ambas herramientas trabajan en la misma carpeta de proyecto, así que los cambios hechos en una aparecen en la otra
 
 ## Lo Que Necesitará
 
@@ -62,29 +62,27 @@ summary(iris)
 - Para ejecutar el código: resalte todas las líneas, luego haga clic en el botón **Run** (superior derecho del panel de script)
 - Debería ver la salida en el panel Console mostrando la estructura del conjunto de datos y las estadísticas
 
-## Paso 5: Abrir el Terminal Ubuntu
+## Paso 5: Abrir PowerShell
 
 - Haga clic en el **botón Inicio de Windows**
-- Escriba `Ubuntu` en el cuadro de búsqueda
-- Haga clic en **Ubuntu** (icono circular naranja)
-- Se abre el terminal Ubuntu
+- Escriba `PowerShell` en el cuadro de búsqueda
+- Haga clic en **Windows PowerShell** para abrirlo
 
 ## Paso 6: Navegar a Su Carpeta de Proyecto
 
-- En el terminal Ubuntu, escriba este comando (reemplace `TuNombreDeUsuario` con su nombre de usuario real de Windows):
+- En PowerShell, escriba:
   ```
-  cd /mnt/c/Users/TuNombreDeUsuario/Documents/test_claude
+  cd ~\Documents\test_claude
   ```
-- Para encontrar su nombre de usuario, puede escribir: `ls /mnt/c/Users/` y buscar el nombre de su carpeta
 - Verifique que está en la ubicación correcta escribiendo:
   ```
-  ls
+  dir
   ```
 - Debería ver `iris.R` y `test_claude.Rproj` listados
 
 ## Paso 7: Iniciar Claude Code
 
-- En el terminal Ubuntu, escriba:
+- En PowerShell, escriba:
   ```
   claude
   ```
@@ -114,7 +112,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 ## Paso 10: Refinar el Gráfico de Dispersión
 
-- Vuelva al terminal Ubuntu
+- Vuelva a PowerShell
 - Escriba esta solicitud:
   ```
   Elimina el título. Cambia el tipo de marcador por especie. Cambia al tema clásico.
@@ -130,7 +128,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 ## Paso 12: Solicitar a Claude un Gráfico PCA
 
-- Vuelva al terminal Ubuntu
+- Vuelva a PowerShell
 - Escriba esta solicitud:
   ```
   Agrega código para realizar PCA en las variables numéricas y graficar las muestras usando los dos primeros componentes principales.
@@ -145,7 +143,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 ## Paso 14: Solicitar a Claude que Revise y Comente
 
-- Vuelva al terminal Ubuntu
+- Vuelva a PowerShell
 - Escriba esta solicitud:
   ```
   Revisa todo el script para verificar que sea correcto. Agrega comentarios cuando sea necesario.
@@ -154,7 +152,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 ## Paso 15: Solicitar a Claude que Cree R Markdown
 
-- Vuelva al terminal Ubuntu
+- Vuelva a PowerShell
 - Escriba esta solicitud:
   ```
   Crea un nuevo archivo R Markdown para este análisis. Guárdalo como iris_report.Rmd
@@ -175,12 +173,12 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 ## Solución de Problemas
 
-- **"Permission denied" al acceder a archivos de Windows desde WSL** - Asegúrese de usar `/mnt/c/` y no `C:/`. Verifique que su nombre de usuario sea correcto en la ruta.
 - **RStudio no muestra los cambios en el archivo** - Haga clic en **File > Reopen with Encoding > UTF-8** para recargar el archivo manualmente.
-- **"claude: command not found"** - Asegúrese de haber completado la guía de instalación. Intente abrir una nueva ventana del terminal Ubuntu.
+- **"claude: command not found"** - Asegúrese de haber completado la guía de instalación. Intente abrir una nueva ventana de PowerShell.
 - **Los gráficos no aparecen** - Asegúrese de que ggplot2 esté instalado. Ejecute `install.packages("ggplot2")` en la Console de RStudio si es necesario.
-- **Error: "cannot change working directory"** - Su ruta de Windows contiene espacios. En el Paso 6, envuelva la ruta entre comillas: `cd "/mnt/c/Users/Tu Nombre/Documents/test_claude"`
+- **Error: "cannot change working directory"** - Su ruta de Windows contiene espacios. En el Paso 6, envuelva la ruta entre comillas: `cd "~\Documents\Su Nombre\test_claude"`
 - **Claude Code es lento en la primera solicitud** - Espere 30-60 segundos para que Claude se inicialice. Las solicitudes posteriores serán más rápidas.
+- **¿Usa WSL?** - Si configuró la ruta opcional de WSL/Ubuntu, abra la aplicación **Ubuntu** en lugar de PowerShell en los Pasos 5-16 y navegue a su proyecto con `cd /mnt/c/Users/SuNombreDeUsuario/Documents/test_claude`
 
 ## Próximos Pasos
 
@@ -194,13 +192,13 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 Esta configuración híbrida combina lo mejor de ambos mundos:
 
-- **RStudio (Windows)** - Consola R interactiva, visualización inmediata de gráficos, interfaz gráfica familiar para ejecutar código
-- **Claude Code (WSL)** - Generación de código con IA, revisión y mejora
-- **Archivos compartidos** - Ambas herramientas trabajan con los mismos archivos a través del punto de montaje `/mnt/c/` de WSL
+- **RStudio** - Consola R interactiva, visualización inmediata de gráficos, interfaz gráfica familiar para ejecutar código
+- **Claude Code (PowerShell)** - Generación de código con IA, revisión y mejora
+- **Archivos compartidos** - Ambas herramientas trabajan directamente en la misma carpeta de proyecto
 - **Refinamiento iterativo** - Comience con código manual, mejore con Claude, pruebe en RStudio y refine más
 - **Documentación** - Claude puede generar informes detallados y comentarios para su análisis
 
-El flujo de trabajo es simple: escriba o edite código con Claude en el terminal Ubuntu, luego pruébelo y ejecútelo inmediatamente en RStudio. No necesita copiar archivos ni sincronización manual: WSL y Windows comparten los mismos archivos sin problemas.
+El flujo de trabajo es simple: escriba o edite código con Claude en PowerShell, luego pruébelo y ejecútelo inmediatamente en RStudio. No necesita copiar archivos ni sincronización manual: ambas herramientas comparten los mismos archivos.
 
 ---
 

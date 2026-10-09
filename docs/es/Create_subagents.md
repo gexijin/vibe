@@ -24,15 +24,14 @@ Comparar oportunidades de inversión requiere horas de investigación y análisi
 
 ## Paso 1: Cree una carpeta de proyecto e inicie Claude Code
 
-**Windows (WSL):**
-- Abra **Ubuntu** desde el menú Inicio
+**Windows (PowerShell):**
+- Haga clic en el **botón Inicio de Windows**, escriba `PowerShell` y ábralo
 - Ejecute estos comandos:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```powershell
+  cd ~/Documents
   mkdir stock_picker_test
   cd stock_picker_test
   ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario de Windows
 - Inicie Claude Code:
   ```
   claude

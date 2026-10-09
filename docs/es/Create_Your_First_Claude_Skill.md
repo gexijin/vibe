@@ -23,18 +23,17 @@ Ha estado escribiendo manualmente `/stock-report AAPL` para generar informes. ¿
 
 ## Paso 1: Navegue hasta la carpeta del proyecto
 
-**Windows (WSL):**
-- Abra **Ubuntu** desde el menú Inicio
+**Windows (PowerShell):**
+- Abra **PowerShell** desde el menú Inicio
 - Ejecute:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario de Windows
+  cd ~\Documents\test_claude
+  ```
 
   Si la carpeta no existe, créela primero:
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac:**
@@ -61,7 +60,7 @@ Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalaci�
 
 ## Paso 3: Active la aprobación automática de ediciones
 
-Presione `Ctrl+E` (Windows/Linux) o `Cmd+E` (Mac) para habilitar el modo de aprobación automática.
+Presione **Shift+Tab** para habilitar el modo de aprobación automática de ediciones.
 
 Esto permite que Claude cree y modifique archivos sin solicitar permiso cada vez.
 

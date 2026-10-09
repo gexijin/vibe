@@ -25,15 +25,14 @@ lang: "es"
 
 ## Paso 1: Crear una Carpeta de Proyecto
 
-**Windows (WSL):**
-- Abra **Ubuntu** desde el menú Inicio
+**Windows (PowerShell):**
+- Abra **PowerShell** desde el menú Inicio
 - Escriba estos comandos:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  ```
+  cd ~\Documents
   mkdir test_claude
   cd test_claude
-   ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario de Windows
+  ```
 
 **Mac:**
 - Abra **Terminal** (encuéntrelo en Aplicaciones > Utilidades)
@@ -46,8 +45,8 @@ lang: "es"
 
 ## Paso 2: Iniciar Claude Code
 
-**Windows (WSL):**
-- Aún en el terminal Ubuntu, escriba:
+**Windows (PowerShell):**
+- Aún en PowerShell, escriba:
   ```
   claude
   ```

@@ -18,14 +18,15 @@ Aprender a programar con asistencia de IA puede resultar abrumador al principio.
 ## Lo Que Necesitará
 
 - Claude Code instalado desde el tutorial de [Windows](Install_CLAUDE_Code_Win.md) o [Mac](Install_Claude_Code_MacOS.md)
-- WSL instalado si está usando Windows
 - Familiaridad básica con el uso de una terminal o símbolo del sistema
 - 15-20 minutos
 
 ## Paso 1: Abra Su Terminal
 
-- **Windows**: Presione la tecla Windows, escriba `Ubuntu`, y presione Enter para abrir la terminal WSL
+- **Windows**: Presione la tecla Windows, escriba `PowerShell`, y presione Enter para abrir PowerShell
 - **Mac**: Presione `Cmd+Space`, escriba `Terminal`, y presione Enter
+
+**Nota:** Si en el tutorial de instalación de Windows configuró la ruta opcional de WSL/Ubuntu en lugar de la instalación nativa, abra la aplicación **Ubuntu** y use rutas de estilo Linux (por ejemplo, `/mnt/c/Users/SuNombre/...`) en los pasos siguientes.
 
 Se abrirá una ventana de texto donde puede escribir comandos.
 
@@ -45,12 +46,13 @@ cd data_projects
 - Visite [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) en su navegador web
 - Haga clic en el botón verde **Code** cerca de la parte superior derecha
 - Haga clic en **Download ZIP**
-- Extraiga el archivo ZIP a una carpeta llamada **data_projects** en la carpeta Descargas.
+- Extraiga el archivo ZIP en su carpeta Descargas. GitHub nombra la carpeta extraída **data_projects-main**: cámbiele el nombre a **data_projects** para que coincida con el resto de este tutorial.
 - En su terminal, navegue a la carpeta extraída:
-  - **Windows**: `cd /mnt/c/Users/SuNombre/Downloads/data_projects`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-Reemplace `SuNombre` con su nombre de usuario real y ajuste la ruta si lo extrajo en otro lugar. Para usuarios de Windows, sus archivos de Windows se acceden desde /mnt/c en el sistema Linux.
+Ajuste la ruta si lo extrajo en otro lugar.
 
 ## Paso 3: Inicie Claude Code desde la Carpeta
 
