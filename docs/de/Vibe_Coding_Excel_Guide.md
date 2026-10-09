@@ -18,6 +18,7 @@ Vibe Coding ist wie ein Gespräch mit Ihrem Computer – Sie beschreiben das Erg
 
 - Abgeschlossenes Tutorial [Claude Code mit Excel in VS Code verwenden](./Excel_Coding_VS_Code_Guide)
 - Abgeschlossenes Tutorial [GitHub Desktop mit Claude Code verwenden](./GitHub_Desktop_Claude_Code_Workflow)
+- Microsoft Excel, [LibreOffice Calc](https://de.libreoffice.org/download/download/) (kostenlos) oder Google Sheets (kostenlos in Ihrem Webbrowser), um Diagramme, Farben und Dropdown-Listen zu sehen
 - 25-30 Minuten
 
 ## Schritt 1: Neues GitHub-Repository erstellen
@@ -43,6 +44,7 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 - Wählen Sie Ihren `budget-dashboard`-Ordner aus
 - Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
 - Falls noch nicht geschehen, installieren Sie die Erweiterung **Spreadsheet Viewer** von MESCIUS (früher **Excel Viewer** von GrapeCity), damit Sie Tabellen ansehen können, ohne VS Code zu verlassen. Suchen Sie im Extensions-Bereich nach ihrer ID, `GrapeCity.gc-excelviewer`, um die richtige zu finden
+- Der Spreadsheet Viewer ist ideal, um Zahlen und Formeln zu prüfen, aber Diagramme, farbige Hervorhebungen und Dropdown-Listen kann er nicht anzeigen – dafür verwenden Sie Excel, LibreOffice Calc oder Google Sheets
 
 ## Schritt 3: Claude Code starten
 
@@ -64,11 +66,12 @@ Anstatt eine Tabelle Zelle für Zelle aufzubauen, beschreiben Sie einfach, was S
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Erstelle eine Tabelle namens budget.xlsx mit zwei Tabellenblättern: „Einnahmen" und „Ausgaben". Einnahmen soll die Spalten Quelle, Monat und Betrag haben, mit 3 Beispiel-Einnahmequellen über 2 Monate. Ausgaben soll die Spalten Kategorie, Monat und Betrag haben, mit 6 Beispielkategorien (wie Miete, Lebensmittel, Transport, Nebenkosten, Freizeit, Sparen) über dieselben 2 Monate. Füge unten auf jedem Blatt eine Zeile „Summe" mit SUM-Formeln hinzu.
+Erstelle eine Tabelle namens budget.xlsx mit zwei Tabellenblättern: „Einnahmen“ und „Ausgaben“. Einnahmen soll die Spalten Quelle, Monat und Betrag haben, mit 3 Beispiel-Einnahmequellen über 2 Monate. Ausgaben soll die Spalten Kategorie, Monat und Betrag haben, mit 6 Beispielkategorien (wie Miete, Lebensmittel, Transport, Nebenkosten, Freizeit, Telefon) über dieselben 2 Monate. Füge unten auf jedem Blatt eine Zeile „Summe“ mit SUM-Formeln hinzu.
 ```
 
 - Drücken Sie Enter
-- Beobachten Sie, wie Claude ein Python-Skript schreibt und ausführt, das die Arbeitsmappe erstellt, und sie anschließend neu berechnet, damit die Summen echte Zahlen anzeigen
+- Beobachten Sie, wie Claude ein Python-Skript schreibt und ausführt, das die Arbeitsmappe erstellt
+- Wenn Claude um Erlaubnis bittet, Befehle auszuführen oder Hilfswerkzeuge zu installieren, wählen Sie **Yes**
 - Öffnen Sie `budget.xlsx` im Spreadsheet Viewer-Tab und klicken Sie sich durch beide Blätter
 
 **Speichern Sie Ihren Fortschritt:** Bitten Sie Claude, mit Git zu committen, oder machen Sie dies selbst in GitHub Desktop:
@@ -83,11 +86,11 @@ Bevor Sie Diagramme erstellen, verknüpfen Sie die beiden Blätter miteinander.
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Füge budget.xlsx ein drittes Tabellenblatt namens „Übersicht" hinzu. Es soll Gesamteinnahmen, Gesamtausgaben und Nettoersparnis (Einnahmen minus Ausgaben) anzeigen, jeweils berechnet mit Formeln, die sich auf die Blätter Einnahmen und Ausgaben beziehen – keine fest eingetragenen Zahlen.
+Füge budget.xlsx ein drittes Tabellenblatt namens „Übersicht“ hinzu. Es soll Gesamteinnahmen, Gesamtausgaben und Nettoersparnis (Einnahmen minus Ausgaben) anzeigen, jeweils berechnet mit Formeln, die sich auf die Blätter Einnahmen und Ausgaben beziehen – keine fest eingetragenen Zahlen. Füge darunter eine kleine Tabelle hinzu, die Einnahmen und Ausgaben für jeden Monat zeigt, ebenfalls mit Formeln.
 ```
 
 - Drücken Sie Enter
-- Claude aktualisiert die Arbeitsmappe und berechnet sie neu
+- Claude aktualisiert die Arbeitsmappe
 - Öffnen Sie den Tab **Übersicht** und klicken Sie auf die Zelle Nettoersparnis, um zu prüfen, ob es sich um eine Formel handelt, die sich auf die anderen Blätter bezieht
 
 **Speichern Sie Ihren Fortschritt:** Bitten Sie Claude, zu committen, oder verwenden Sie GitHub Desktop.
@@ -103,8 +106,10 @@ Füge dem Blatt Ausgaben ein Kreisdiagramm hinzu, das den Gesamtanteil jeder Kat
 ```
 
 - Drücken Sie Enter
-- Claude fügt beide Diagramme hinzu und berechnet die Datei neu
-- Öffnen Sie `budget.xlsx` im Spreadsheet Viewer erneut (oder aktualisieren Sie den Tab) und prüfen Sie beide Blätter auf die neuen Diagramme
+- Claude fügt beide Diagramme hinzu
+- Um sie zu sehen, öffnen Sie `budget.xlsx` in Excel oder LibreOffice Calc (doppelklicken Sie die Datei im Datei-Explorer oder im Finder) oder laden Sie sie in Google Sheets hoch und prüfen Sie beide Blätter
+- Der Spreadsheet Viewer in VS Code zeigt keine Diagramme an – das ist normal, sie sind trotzdem in der Datei
+- Schließen Sie die Datei in Excel oder LibreOffice, bevor Sie Claude um weitere Änderungen bitten
 
 ## Schritt 7: Vierter Vibe - Kategorien über dem Budget hervorheben
 
@@ -113,11 +118,11 @@ Machen Sie Probleme auf einen Blick sichtbar, anstatt in den Zahlen danach zu su
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Füge auf dem Blatt Ausgaben eine bedingte Formatierung hinzu, sodass jede Ausgabe über $500 in einem einzelnen Monat rot hervorgehoben wird und alles unter $100 grün hervorgehoben wird.
+Füge auf dem Blatt Ausgaben eine bedingte Formatierung hinzu, sodass jede Ausgabe über $500 in einem einzelnen Monat rot hervorgehoben wird und alles unter $100 grün hervorgehoben wird. Färbe die Zeile „Summe“ nicht ein.
 ```
 
 - Drücken Sie Enter
-- Öffnen Sie die Datei erneut und prüfen Sie das Blatt Ausgaben – die Zellen sollten jetzt je nach Wert eingefärbt sein
+- Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets und prüfen Sie das Blatt Ausgaben – die Zellen sollten jetzt je nach Wert eingefärbt sein (der Spreadsheet Viewer zeigt diese Farben nicht an)
 
 Wenn etwas nicht richtig aussieht, kopieren Sie, was Sie sehen, und beschreiben Sie es Claude, damit es das Problem behebt.
 
@@ -132,7 +137,8 @@ Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, soda
 ```
 
 - Drücken Sie Enter
-- Öffnen Sie die Datei, klicken Sie in eine der leeren Zellen der Spalte Kategorie und prüfen Sie, ob ein Dropdown-Pfeil mit Ihrer Kategorienliste erscheint
+- Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets, klicken Sie in eine der leeren Zellen der Spalte Kategorie und prüfen Sie, ob ein Dropdown-Pfeil mit Ihrer Kategorienliste erscheint (der Spreadsheet Viewer zeigt keine Dropdown-Listen an)
+- Schließen Sie die Datei, wenn Sie fertig sind
 
 ## Schritt 9: Überprüfen und Committen
 
@@ -166,7 +172,7 @@ Vibe Coding glänzt beim Iterieren. Versuchen Sie, Funktionen hinzuzufügen, ind
 - "Erstelle eine zweite Arbeitsmappe namens household_budget.xlsx für eine vierköpfige Familie mit mehr Kategorien"
 
 Nach jeder erfolgreichen Funktion:
-- Öffnen Sie die Datei und prüfen Sie sie im Spreadsheet Viewer
+- Öffnen Sie die Datei und prüfen Sie sie – mit dem Spreadsheet Viewer für Zahlen oder mit Excel/LibreOffice für Diagramme und Farben
 - Wenn es funktioniert, committen Sie mit GitHub Desktop
 - Wenn etwas falsch aussieht, beschreiben Sie es Claude und bitten Sie um Korrektur
 - Wenn behoben, committen Sie die funktionierende Version
@@ -192,7 +198,7 @@ Jedes Mal folgen Sie dem Muster: beschreiben → Datei prüfen → iterieren →
 ## Fehlerbehebung
 
 - **Eine Formelzelle ist leer oder zeigt `None`** - Die Datei muss nach Änderungen neu berechnet werden. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt."
-- **Diagramm aktualisiert sich nach dem Ändern der Daten nicht** - Öffnen Sie den Tab in VS Code erneut (schließen Sie ihn und klicken Sie wieder auf die Datei), um den Spreadsheet Viewer zur Aktualisierung zu zwingen.
+- **Diagramm wird nicht angezeigt** - Der Spreadsheet Viewer kann keine Diagramme anzeigen. Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets. Wenn das Diagramm dort ebenfalls fehlt, beschreiben Sie Claude das Problem und bitten Sie es, das Diagramm wieder hinzuzufügen.
 - **Claude macht Fehler** - Normal! Beschreiben Sie, was falsch aussieht, und bitten Sie Claude, es zu beheben. Vibe Coding beinhaltet Iteration und Debugging.
 - **Kann nicht auf GitHub pushen** - Stellen Sie sicher, dass Sie in GitHub Desktop angemeldet sind und das Repository veröffentlicht haben (Schritt 1). Überprüfen Sie Ihre Internetverbindung.
 - **Dropdown-Liste erscheint nicht** - Die Datenüberprüfung wird nur in echten Tabellenprogrammen (Excel, LibreOffice, Google Sheets) angezeigt, nicht immer in einfachen Vorschau-Programmen. Öffnen Sie die Datei in Excel oder LibreOffice Calc, um sie zu testen.
