@@ -12,7 +12,7 @@ Vibe coding es como tener una conversación con su computadora: usted describe e
 
 - **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
 - **[hoopR](https://hoopr.sportsdataverse.org/)** - Paquete de R que proporciona acceso fácil a estadísticas de jugadores de la NBA y datos de partidos
-- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones que funcionen
+- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → hacer commit de las versiones que funcionen
 
 ## Lo Que Necesitará
 
@@ -107,9 +107,9 @@ Instala el paquete hoopR y carga las estadísticas actuales de jugadores de la N
 
 ¡Acaba de usar vibe coding! Sin buscar documentación, sin ensayo y error—solo describa y pruebe.
 
-**Guarde su progreso:** Pida a Claude que confirme usando Git, o hágalo usted mismo desde GitHub Desktop:
+**Guarde su progreso:** Pida a Claude que haga commit usando Git, o hágalo usted mismo desde GitHub Desktop:
 ```
-Confirma estos cambios.
+Haz commit de estos cambios.
 ```
 
 ## Paso 6: Segundo Vibe - Explorar los Datos
@@ -128,7 +128,7 @@ Muéstrame qué columnas están disponibles en estos datos de la NBA. Luego crea
 
 Esta exploración le ayuda a decidir qué incluir en su panel.
 
-**Guarde su progreso:** Pida a Claude que confirme, o use GitHub Desktop.
+**Guarde su progreso:** Pida a Claude que haga commit, o use GitHub Desktop.
 
 ## Paso 7: Tercer Vibe - Crear una Aplicación Shiny Básica
 
@@ -156,7 +156,7 @@ Pruebe su panel para ver si funciona.
 - El panel de la NBA se abre en su navegador web
 - Intente mover el deslizador de puntos: la tabla se filtra en tiempo real
 - Desplácese por los datos de jugadores
-- Confirme los cambios si la aplicación funciona
+- Haga commit de los cambios si la aplicación funciona
 
 Si algo no funciona, copie cualquier mensaje de error y péguelo a Claude para corregirlo.
 
@@ -197,9 +197,9 @@ Agrega un menú desplegable para filtrar jugadores por equipo. Colócalo en la p
 
 Está construyendo un panel profesional mediante una conversación.
 
-## Paso 11: Revisar y Confirmar
+## Paso 11: Revisar y Hacer Commit
 
-Antes de confirmar, revise lo que Claude construyó.
+Antes de hacer commit, revise lo que Claude construyó.
 
 - En el Explorador de VS Code, haga clic en `app.R` para abrirlo
 - Revise el código: observe el diseño de la interfaz, la lógica del servidor y el código de gráficos
@@ -232,20 +232,20 @@ Vibe coding brilla cuando itera. Intente agregar funcionalidades describiéndola
 
 Después de cada funcionalidad exitosa:
 - Pruébela en el navegador
-- Si funciona, confírmela con GitHub Desktop
+- Si funciona, haga commit con GitHub Desktop
 - Si falla, dígale a Claude el error y solicite corrección
-- Cuando esté corregido, confirme la versión funcional
+- Cuando esté corregido, haga commit de la versión funcional
 
 
 **Principios clave:**
 
 - **Describa resultados, no implementación** - Diga "muestra los mejores anotadores" no "usa arrange() y head()"
 - **Itere rápidamente** - Probar → refinar → probar → refinar
-- **Confirme versiones funcionales** - Guarde cada éxito antes de intentar nuevas funcionalidades
+- **Haga commit de las versiones funcionales** - Guarde cada éxito antes de intentar nuevas funcionalidades
 - **Acepte los fallos** - Si el código de Claude falla, simplemente describa el error y solicite corrección
 - **Mantenga el control** - Usted decide las funcionalidades, prioridades y cuándo es suficientemente bueno
 
-Cada vez, siga el patrón: describir → probar → iterar → confirmar.
+Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 
 ## Próximos Pasos
 
@@ -267,7 +267,7 @@ Cada vez, siga el patrón: describir → probar → iterar → confirmar.
 
 Este tutorial combinó varias tecnologías en un flujo de trabajo:
 
-- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, confirmar, hacer push)
+- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, hacer commit, hacer push)
 - **Contenedor Docker** - Entorno R aislado con todas las dependencias preinstaladas
 - **VS Code** - Editor de código que se conecta al contenedor Docker
 - **Claude Code** - Asistente con IA que escribe código R y Shiny a partir de sus descripciones
@@ -285,7 +285,7 @@ Después de esta configuración inicial, su rutina diaria de vibe coding se conv
 3. **Iniciar Claude Code** - Escriba `claude` en el terminal
 4. **Describa su objetivo** - "Agrega una funcionalidad que..." o "Corrige el error donde..."
 5. **Probar los cambios** - Ejecute su aplicación, verifique si funciona
-6. **Iterar o confirmar** - Si falla, describa la corrección; si funciona, confirme con GitHub Desktop
+6. **Iterar o hacer commit** - Si falla, describa la corrección; si funciona, haga commit con GitHub Desktop
 7. **Hacer push regularmente** - Haga clic en **Push origin** para respaldar en GitHub
 
 Cuanto más practique, mejor será describiendo lo que desea. Vibe coding es una habilidad: aprende qué tipos de descripciones funcionan mejor y cómo dividir grandes ideas en pasos manejables.

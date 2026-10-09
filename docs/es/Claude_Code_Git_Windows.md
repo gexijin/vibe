@@ -118,7 +118,7 @@ Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
 - Haga doble clic en `timer.html` para abrirlo en su navegador
 - Pruebe el temporizador:
   - Escriba `1` en el campo de entrada
-  - Haga clic en **Start**
+  - Haga clic en **Iniciar**
   - Observe la cuenta regresiva
 
 **Si algo está roto:** En Claude Code, describa el error: `Veo este error: [describa lo que pasó]. ¿Puedes corregirlo?`

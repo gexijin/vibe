@@ -130,7 +130,7 @@ Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
 - Haga doble clic en `timer.html` para abrirlo en su navegador
 - Pruebe el temporizador:
   - Escriba `1` en el campo de entrada
-  - Haga clic en **Start**
+  - Haga clic en **Iniciar**
   - Observe la cuenta regresiva
 
 **Si algo no funciona:** En Claude Code, describa el error: `Veo este error: [describa lo que pasó]. ¿Puedes corregirlo?`
@@ -201,7 +201,7 @@ Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona
   Guarda estos cambios
   ```
 
-## Paso 15: Agregue el Botón de Repetición
+## Paso 15: Agregue un Botón de Posponer
 
 - En Claude Code, escriba:
   ```
@@ -224,7 +224,7 @@ Claude muestra sus commits en un formato legible. Verá:
 - Su commit inicial de la aplicación de temporizador
 - El commit de los botones predefinidos (1-min y 5-min)
 - El commit de la notificación de sonido
-- El commit del botón de repetición
+- El commit del botón de posponer
 
 ¡Note que el intento del botón de 15 minutos no está ahí—lo descartó!
 
