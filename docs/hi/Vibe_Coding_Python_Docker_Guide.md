@@ -28,7 +28,7 @@ lang: "hi"
 - विवरण भरें:
   - **Name:** `iris-analysis`
   - **Description:** `Iris data analysis built with vibe coding`
-  - **Local Path:** एक स्थान चुनें (जैसे, Documents या work फ़ोल्डर)
+  - **Local Path:** एक स्थान चुनें (जैसे, Documents या आपके काम का फ़ोल्डर)
   - **Initialize this repository with a README** को चेक करें
 - **Create Repository** पर क्लिक करें
 - ऊपर **Publish repository** पर क्लिक करें
@@ -39,11 +39,12 @@ lang: "hi"
 
 ## चरण 2: Docker कॉन्फ़िगरेशन कॉपी करें
 
-अपना Docker एनवायरनमेंट सेट करने के लिए आपको vibe प्रोजेक्ट से `.devcontainer` फ़ोल्डर चाहिए।
+आपको उस `python-docker-demo` प्रोजेक्ट का `.devcontainer` फ़ोल्डर चाहिए, जिसे आपने [Docker Container के ज़रिए VS Code में Python कोडिंग](./Python_Coding_Docker_Guide) में बनाया था। इससे इस प्रोजेक्ट को वही Python एनवायरनमेंट मिलता है, जिसमें pandas, matplotlib और Claude Code पहले से इंस्टॉल हैं।
 
 - File Explorer (Windows) या Finder (Mac) खोलें
-- अपने vibe प्रोजेक्ट फ़ोल्डर पर जाएँ (जैसे, `Documents/vibe`)
+- अपने `python-docker-demo` फ़ोल्डर पर जाएँ
 - `.devcontainer` फ़ोल्डर ढूँढें
+  - Mac पर, Finder उन फ़ोल्डरों को छिपा देता है जिनके नाम डॉट (.) से शुरू होते हैं। उन्हें दिखाने के लिए **Cmd+Shift+.** (पीरियड) दबाएँ
 - पूरा फ़ोल्डर कॉपी करें (इसमें `Dockerfile` और `devcontainer.json` शामिल हैं)
 - अपने नए `iris-analysis` फ़ोल्डर पर जाएँ
 - `.devcontainer` फ़ोल्डर वहाँ पेस्ट करें
@@ -91,9 +92,7 @@ Claude Code अब चल रहा है और आपके अनुरो�
 - Claude Code टर्मिनल में, टाइप करें:
 
 ```
-scikit-learn से iris डेटासेट लोड करो। इसे उचित कॉलम नामों के साथ एक pandas
-dataframe में बदलो। प्रजाति के नामों को एक कॉलम के रूप में जोड़ो (सिर्फ़ नंबर नहीं)।
-मुझे पहली 10 पंक्तियाँ दिखाओ। कोड को iris_exploration.py नाम की फ़ाइल में सेव करो।
+scikit-learn से iris डेटासेट लोड करो। इसे उचित कॉलम नामों के साथ एक pandas dataframe में बदलो। प्रजाति के नामों को एक कॉलम के रूप में जोड़ो (सिर्फ़ नंबर नहीं)। मुझे पहली 10 पंक्तियाँ दिखाओ। कोड को iris_exploration.py नाम की फ़ाइल में सेव करो।
 ```
 
 - Enter दबाएँ
@@ -116,10 +115,7 @@ Claude से Git का उपयोग करके कमिट करने 
 - Claude Code टर्मिनल में, टाइप करें:
 
 ```
-मुझे प्रजाति के अनुसार समूहित iris डेटा के सारांश आँकड़े दिखाओ। मुझे तीनों
-प्रजातियों में से हर एक के लिए हर माप (sepal length, sepal width, petal
-length, petal width) का mean, min, और max देखना है। इसे iris_exploration.py
-में जोड़ो।
+मुझे प्रजाति के अनुसार समूहित iris डेटा के सारांश आँकड़े दिखाओ। मुझे तीनों प्रजातियों में से हर एक के लिए हर माप (sepal length, sepal width, petal length, petal width) का mean, min, और max देखना है। इसे iris_exploration.py में जोड़ो।
 ```
 
 - Enter दबाएँ
@@ -138,10 +134,7 @@ Claude से Git का उपयोग करके कमिट करने 
 - Claude Code टर्मिनल में, टाइप करें:
 
 ```
-सभी फूलों के petal length के वितरण को दिखाता हुआ एक हिस्टोग्राम बनाओ। 20
-bins का उपयोग करो। एक शीर्षक और अक्ष लेबल जोड़ो। प्लॉट को
-petal_length_histogram.png के रूप में सेव करो। इस कोड को
-iris_exploration.py में जोड़ो।
+सभी फूलों के petal length के वितरण को दिखाता हुआ एक हिस्टोग्राम बनाओ। 20 bins का उपयोग करो। एक शीर्षक और अक्ष लेबल जोड़ो। प्लॉट को petal_length_histogram.png के रूप में सेव करो। इस कोड को iris_exploration.py में जोड़ो।
 ```
 
 - Enter दबाएँ
@@ -157,10 +150,7 @@ iris_exploration.py में जोड़ो।
 - Claude Code टर्मिनल में, टाइप करें:
 
 ```
-x-अक्ष पर petal length और y-अक्ष पर petal width के साथ एक स्कैटर प्लॉट
-बनाओ। हर बिंदु को प्रजाति के अनुसार अलग-अलग रंगों से रंगो। यह दिखाने के
-लिए एक लीजेंड जोड़ो कि कौन-सा रंग किस प्रजाति का है। petal_scatter.png के
-रूप में सेव करो। इसे iris_exploration.py में जोड़ो।
+x-अक्ष पर petal length और y-अक्ष पर petal width के साथ एक स्कैटर प्लॉट बनाओ। हर बिंदु को प्रजाति के अनुसार अलग-अलग रंगों से रंगो। यह दिखाने के लिए एक लीजेंड जोड़ो कि कौन-सा रंग किस प्रजाति का है। petal_scatter.png के रूप में सेव करो। इसे iris_exploration.py में जोड़ो।
 ```
 
 - Enter दबाएँ
@@ -178,10 +168,7 @@ x-अक्ष पर petal length और y-अक्ष पर petal width क�
 - Claude Code टर्मिनल में, टाइप करें:
 
 ```
-तीनों प्रजातियों में petal length की तुलना करने वाला एक बॉक्स प्लॉट बनाओ।
-x-अक्ष पर प्रजाति और y-अक्ष पर petal length रखो। हर प्रजाति के लिए अलग
-रंग का उपयोग करो। एक शीर्षक जोड़ो। species_boxplot.png के रूप में सेव करो।
-इसे iris_exploration.py में जोड़ो।
+तीनों प्रजातियों में petal length की तुलना करने वाला एक बॉक्स प्लॉट बनाओ। x-अक्ष पर प्रजाति और y-अक्ष पर petal length रखो। हर प्रजाति के लिए अलग रंग का उपयोग करो। एक शीर्षक जोड़ो। species_boxplot.png के रूप में सेव करो। इसे iris_exploration.py में जोड़ो।
 ```
 
 - Enter दबाएँ
