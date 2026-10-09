@@ -32,7 +32,7 @@ Claude crea las hojas de cálculo escribiendo pequeños programas de Python, as�
   - **Marque la casilla "Add python.exe to PATH"** en la parte inferior de la primera pantalla y luego haga clic en **Install Now**
 - **Mac**:
   - Vaya a [python.org/downloads](https://www.python.org/downloads/) y haga clic en el botón amarillo **Download Python**
-  - Abra el archivo descargado y siga el instalador, haciendo clic en **Continuar** e **Instalar**
+  - Abra el archivo descargado y siga el instalador, haciendo clic en **Continue** (Continuar) e **Install** (Instalar)
 
 Si VS Code ya está abierto, ciérrelo y vuelva a abrirlo para que pueda encontrar Python.
 

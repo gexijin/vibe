@@ -224,9 +224,9 @@ Después de que su computadora se reinicie, una ventana de terminal con "Ubuntu"
 
 ## Próximos Pasos
 
-- **Configurar VS Code**: Siga la guía [VS Code Getting Started](VS_Code_Getting_Started), luego conéctelo a Claude Code con [Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win)
-- **Aprender conceptos básicos de Git**: Agregue control de versiones a sus proyectos con [Claude Code Git on Windows](Claude_Code_Git_Windows)
-- **Probar un proyecto**: Trabaje con [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code) para ver Claude Code en acción
+- **Configurar VS Code**: Siga la guía [Primeros Pasos con VS Code](VS_Code_Getting_Started), luego conéctelo a Claude Code con [Configure VS Code para Claude Code en Windows](Claude_Code_in_VS_Code_Win)
+- **Aprender conceptos básicos de Git**: Agregue control de versiones a sus proyectos con [Claude Code con control de versiones para Windows](Claude_Code_Git_Windows)
+- **Probar un proyecto**: Trabaje con [Escribir Artículos de Investigación con Claude Code](Writing_Research_Paper_Claude_Code) para ver Claude Code en acción
 
 ## Solución de Problemas
 

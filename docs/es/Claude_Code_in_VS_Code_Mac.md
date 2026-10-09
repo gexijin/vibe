@@ -6,12 +6,12 @@ lang: "es"
 
 # Use Claude Code desde VS Code en Mac
 
-Ya instaló Claude Code en su Mac, ahora necesita un editor visual para trabajar con su código. VS Code le permite editar archivos visualmente mientras ejecuta Claude Code en el terminal integrado. Es como tener su editor de código y asistente de IA lado a lado en una sola ventana.
+Ya instaló Claude Code en su Mac, ahora necesita un editor visual para trabajar con su código. VS Code le permite editar archivos visualmente mientras ejecuta Claude Code en la terminal integrada. Es como tener su editor de código y asistente de IA lado a lado en una sola ventana.
 
 ## Conceptos Clave
 
 - **VS Code** - Editor de código gratuito de Microsoft para Mac
-- **Terminal Integrado** - Panel de terminal dentro de VS Code donde ejecuta Claude Code
+- **Terminal Integrada** - Panel de terminal dentro de VS Code donde ejecuta Claude Code
 - **Panel Explorer** - Navegador de archivos en el lado izquierdo de VS Code
 
 ## Lo Que Necesitará
@@ -96,17 +96,17 @@ VS Code recuerda sus carpetas recientes, por lo que la Opción A con Open Recent
 
 ## Solución de Problemas
 
-- **El terminal muestra "zsh" pero Claude Code no se inicia** - Asegúrese de que Claude Code esté instalado correctamente; ejecute `claude --version` para verificar
+- **La terminal muestra "zsh" pero Claude Code no se inicia** - Asegúrese de que Claude Code esté instalado correctamente; ejecute `claude --version` para verificar
 - **Comando "code" no encontrado en Terminal** - En VS Code, haga clic en **View** en la barra de menú, luego en **Command Palette**, escriba "shell command", y seleccione **Shell Command: Install 'code' command in PATH**
 - **VS Code no se abre porque es de un desarrollador no identificado** - Vaya a **System Settings > Privacy & Security** y haga clic en **Open Anyway**
 
 ## Resumen del Flujo de Trabajo
 
 - **VS Code** proporciona la interfaz del editor visual
-- **Terminal Integrado** ejecuta Claude Code dentro de VS Code
+- **Terminal Integrada** ejecuta Claude Code dentro de VS Code
 - Sus archivos permanecen en su carpeta Documents (o donde elija)
-- Edite archivos en el editor, converse con Claude Code en el terminal: lo mejor de ambos mundos
+- Edite archivos en el editor, converse con Claude Code en la terminal: lo mejor de ambos mundos
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 10, 2025.
+Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 10 de diciembre de 2025.

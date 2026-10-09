@@ -17,7 +17,7 @@ Desea escribir código Python pero no está seguro de qué editor usar, o busca 
 
 ## Lo Que Necesitará
 
-- Tutorial completado [Primeros Pasos con VS Code](./VS_Code_Getting_Started)
+- Haber completado [Primeros Pasos con VS Code](./VS_Code_Getting_Started)
 - Conexión a Internet para descargar Python y paquetes
 - 15-20 minutos
 

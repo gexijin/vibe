@@ -16,7 +16,7 @@ Tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de co
 
 ## Lo Que Necesitará
 
-- Guía [Install Claude Code on Mac](./Install_Claude_Code_MacOS) completada
+- Guía [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) completada
 - RStudio instalado en Mac
 - 20-30 minutos
 
@@ -193,7 +193,7 @@ Atajos útiles para cambiar entre aplicaciones:
 ## Próximos Pasos
 
 - Pida a Claude que agregue pruebas estadísticas (pruebas t, ANOVA) a su análisis
-- Solicite a Claude una **versión Python** de este código y preparar un documento Quarto
+- Pida a Claude una **versión Python** de este código y que prepare un documento Quarto
 - Solicite a Claude crear funciones para tareas repetitivas en sus scripts R
 - Use Claude para depurar mensajes de error cuando su código R no funcione
 - Pida a Claude que optimice código R lento para mejor rendimiento

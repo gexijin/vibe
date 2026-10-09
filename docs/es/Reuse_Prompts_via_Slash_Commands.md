@@ -18,7 +18,7 @@ lang: "es"
 
 ## Lo Que Necesitará
 
-- Haber completado [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) o [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Haber completado [Configure VS Code para Claude Code en Windows](./Claude_Code_in_VS_Code_Win.md) o [Use Claude Code desde VS Code en Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Un tema para investigar (usaremos informes de acciones como ejemplo)
 - Un editor de texto como VS Code instalado
 - 15-20 minutos
@@ -178,7 +178,7 @@ La misma estructura de comando ahora investiga Tesla.
 
 ## Paso 12: Probar Otro Comando Slash (Opcional)
 
-Si completó el tutorial [Writing Research Paper](./Writing_Research_Paper_Claude_Code.md), debería tener un comando `/research-paper`. Pruébelo con un tema nuevo.
+Si completó el tutorial [Escribir Artículos de Investigación con Claude Code](./Writing_Research_Paper_Claude_Code.md), debería tener un comando `/research-paper`. Pruébelo con un tema nuevo.
 
 Primero, limpie la memoria de Claude para comenzar de nuevo:
 

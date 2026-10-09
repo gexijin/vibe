@@ -17,7 +17,7 @@ Ha escrito código Python línea por línea. Pero ¿qué pasaría si pudiera des
 
 ## Lo Que Necesitará
 
-- Haber completado [Programación en Python con VS Code y Docker](./Python_Coding_Docker_Guide)
+- Haber completado [Programación en Python en VS Code vía Docker](./Python_Coding_Docker_Guide)
 - Haber completado [Uso de GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 minutos
 
@@ -39,11 +39,12 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 
 ## Paso 2: Copiar Configuración de Docker
 
-Necesita la carpeta `.devcontainer` del proyecto vibe para configurar su entorno Docker.
+Necesita la carpeta `.devcontainer` del proyecto `python-docker-demo` que creó en [Programación en Python en VS Code vía Docker](./Python_Coding_Docker_Guide). Le da a este proyecto el mismo entorno de Python, con pandas, matplotlib y Claude Code ya instalados.
 
 - Abra File Explorer (Windows) o Finder (Mac)
-- Navegue a su carpeta del proyecto vibe (ej., `Documents/vibe`)
+- Navegue a su carpeta `python-docker-demo`
 - Busque la carpeta `.devcontainer`
+  - En Mac, Finder oculta las carpetas cuyo nombre empieza con un punto. Presione **Cmd+Shift+.** (punto) para mostrarlas
 - Copie la carpeta completa (contiene `Dockerfile` y `devcontainer.json`)
 - Navegue a su nueva carpeta `iris-analysis`
 - Pegue la carpeta `.devcontainer` allí
@@ -53,7 +54,7 @@ Su carpeta `iris-analysis` ahora debe contener:
 - `README.md` (creado por GitHub Desktop)
 - `.git/` (carpeta oculta para control de versiones)
 
-## Paso 3: Abrir Proyecto en Container
+## Paso 3: Abrir el Proyecto en el Contenedor
 
 - Abra VS Code
 - Haga clic en **File > Open Folder**
@@ -62,14 +63,14 @@ Su carpeta `iris-analysis` ahora debe contener:
 - Aparece una notificación en la parte inferior derecha: **Folder contains a Dev Container configuration file**
 - Haga clic en **Reopen in Container**
 - Si no ve la notificación, haga clic en el ícono verde en la esquina inferior izquierda y seleccione **Reopen in Container**
-- VS Code construye el container de Docker (toma 3-5 minutos la primera vez)
+- VS Code construye el contenedor Docker (toma 3-5 minutos la primera vez)
 - Observe la notificación de progreso mostrando los pasos de construcción
 - Cuando se complete, el ícono verde muestra **Dev Container: Python in Docker**
 
 ## Paso 4: Iniciar Claude Code
 
 - En VS Code, haga clic en **Terminal > New Terminal**
-- Ahora está dentro del container de Docker
+- Ahora está dentro del contenedor Docker
 - Escriba este comando para iniciar Claude Code:
 
 ```bash
@@ -79,7 +80,7 @@ claude
 - Se abre una ventana del navegador para autenticación
 - Haga clic en **Continue with Google** o **Continue with Email**
 - Inicie sesión con su cuenta de Claude (o cree una)
-- Después de que la autenticación sea exitosa, regrese al terminal de VS Code
+- Después de que la autenticación sea exitosa, regrese a la terminal de VS Code
 - Verá el mensaje de bienvenida de Claude
 
 Claude Code ahora está ejecutándose y listo para sus solicitudes.
@@ -88,7 +89,7 @@ Claude Code ahora está ejecutándose y listo para sus solicitudes.
 
 Ahora comienza la diversión. En lugar de buscar documentación, simplemente describa lo que desea.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Carga el conjunto de datos iris desde scikit-learn. Conviértelo en un dataframe de pandas con los nombres de columnas apropiados. Agrega los nombres de las especies como una columna (no solo números). Muéstrame las primeras 10 filas. Guarda el código en un archivo llamado iris_exploration.py
@@ -111,7 +112,7 @@ Confirma estos cambios.
 
 Antes de crear visualizaciones, comprenda qué contienen los datos.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Muéstrame estadísticas resumidas de los datos de iris agrupados por especie. Quiero ver la media, mínimo y máximo de cada medición (longitud de sépalo, ancho de sépalo, longitud de pétalo, ancho de pétalo) para cada una de las tres especies. Agrega esto a iris_exploration.py
@@ -130,7 +131,7 @@ Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub De
 
 Es hora de visualizar los datos.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea un histograma que muestre la distribución de las longitudes de pétalos para todas las flores. Usa 20 intervalos. Agrega un título y etiquetas de ejes. Guarda el gráfico como petal_length_histogram.png. Agrega este código a iris_exploration.py
@@ -146,7 +147,7 @@ Crea un histograma que muestre la distribución de las longitudes de pétalos pa
 
 Los gráficos de dispersión muestran relaciones entre dos variables.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea un gráfico de dispersión con la longitud de pétalo en el eje x y el ancho de pétalo en el eje y. Colorea cada punto por especie usando colores diferentes. Agrega una leyenda que muestre qué color representa cada especie. Guárdalo como petal_scatter.png. Agrega esto a iris_exploration.py
@@ -164,7 +165,7 @@ Esto es vibe coding en acción: describa la visualización, pruébela e itere.
 
 Los gráficos de cajas son excelentes para comparar distribuciones entre grupos.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea un gráfico de cajas comparando las longitudes de pétalos entre las tres especies. Coloca las especies en el eje x y la longitud de pétalo en el eje y. Usa colores diferentes para cada especie. Agrega un título. Guárdalo como species_boxplot.png. Agrega esto a iris_exploration.py

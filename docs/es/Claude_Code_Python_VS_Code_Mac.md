@@ -85,14 +85,14 @@ Agrega código a iris_analysis.py para crear un gráfico de dispersión del larg
 - Claude lee su archivo y propone cambios: verá una diferencia que muestra el código nuevo para agregar
 - Haga clic en **Accept** para aplicar los cambios
 - El código de seaborn/matplotlib aparece en su archivo
-- Si no tiene los paquetes requeridos, ejecute en el terminal:
+- Si no tiene los paquetes requeridos, ejecute en la terminal:
   ```
   pip install seaborn matplotlib scikit-learn pandas
   ```
 
 ## Paso 5: Ejecute el Código Actualizado
 
-- En el terminal, ejecute: `python iris_analysis.py`
+- En la terminal, ejecute: `python iris_analysis.py`
 - Aparece una ventana con el gráfico de dispersión
 - Debería ver puntos coloreados por especie (setosa, versicolor, virginica)
 - Cierre la ventana del gráfico para continuar
@@ -108,7 +108,7 @@ Elimina el título. Cambia el tipo de marcador según la especie. Cambia al esti
 - Presione Enter
 - Claude muestra los cambios de código actualizados
 - Haga clic en **Accept**
-- Ejecute el código actualizado nuevamente: `python iris_analysis.py` en el terminal
+- Ejecute el código actualizado nuevamente: `python iris_analysis.py` en la terminal
 - El gráfico ahora se muestra con diferentes formas de marcador por especie, sin título y con estilo whitegrid
 - Cierre la ventana del gráfico para continuar
 
@@ -123,7 +123,7 @@ Agrega código para realizar PCA en las variables numéricas y graficar las mues
 - Presione Enter
 - Claude agrega código PCA a su script
 - Haga clic en **Accept**
-- Ejecute el código: `python iris_analysis.py` en el terminal
+- Ejecute el código: `python iris_analysis.py` en la terminal
 - Aparece un gráfico PCA que muestra las muestras proyectadas en PC1 y PC2, coloreadas por especie
 - Cierre la ventana del gráfico cuando termine
 
@@ -153,7 +153,7 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios cuan
 - **La extensión Claude no se muestra** - Reinicie VS Code después de la instalación. Haga clic en **View > Extensions** para verificar que esté instalada.
 - **Error "Cannot read Python file"** - Asegúrese de haber guardado el archivo con extensión `.py`. Claude necesita archivos guardados para leerlos.
 - **Falló la autenticación** - Verifique que su suscripción Claude Pro/Max esté activa o que su clave API sea válida. Consulte [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) para solución de problemas de autenticación.
-- **Errores de paquete no encontrado** - Instale los paquetes requeridos en el terminal: `pip install seaborn matplotlib scikit-learn pandas`. Espere a que se complete la instalación antes de ejecutar el código.
+- **Errores de paquete no encontrado** - Instale los paquetes requeridos en la terminal: `pip install seaborn matplotlib scikit-learn pandas`. Espere a que se complete la instalación antes de ejecutar el código.
 - **Los cambios de código no se aplican** - Asegúrese de hacer clic en **Accept** en la diferencia. Si no funciona, intente copiar el código sugerido por Claude manualmente.
 - **El gráfico no se muestra** - Asegúrese de tener una pantalla. En algunos sistemas puede necesitar agregar `plt.show()` al final o usar `%matplotlib inline` en Jupyter.
 
@@ -167,4 +167,4 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios cuan
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.
+Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 11 de diciembre de 2025.
