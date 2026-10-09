@@ -10,7 +10,7 @@ Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A v
 
 ## Conceptos Clave
 
-- **WSL (Windows Subsystem for Linux)** - Ejecuta herramientas de Linux como Git de forma nativa en Windows
+- **PowerShell** - Herramienta de línea de comandos integrada en Windows, que aquí se usa para ejecutar Git y Claude Code
 - **Git** - Rastrea cada cambio en sus archivos en su computadora, creando puntos de restauración a los que puede volver en cualquier momento
 - **Commit** - Una instantánea de su proyecto en un punto específico en el tiempo con una descripción de qué cambió
 - **Claude Code** - Asistente de codificación de IA que escribe código, corrige errores y maneja operaciones de Git mediante solicitudes simples
@@ -18,31 +18,29 @@ Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A v
 ## Lo Que Necesitará
 
 - Haber completado [Instalación de Claude Code en Windows](./Install_CLAUDE_Code_Win)
-- WSL y Ubuntu instalados
 - 20 minutos
 
-## Paso 1: Abra Ubuntu Terminal
+## Paso 1: Abra PowerShell
 
 - Haga clic en el menú **Start**
-- Escriba `Ubuntu`
-- Haga clic en **Ubuntu** para abrir la terminal
+- Escriba `PowerShell`
+- Haga clic en **Windows PowerShell** para abrirlo
 
-Verá un símbolo del sistema que termina con `$`.
+**Nota:** Si configuró la ruta opcional de WSL/Ubuntu en lugar de la instalación nativa, abra la aplicación **Ubuntu**. Git y Claude Code funcionan igual allí, solo que con rutas de estilo Linux (`/mnt/c/Users/...`) en lugar de `~\Documents\...`.
 
 ## Paso 2: Instale Git
 
-- Escriba este comando y presione Enter:
-  ```
-  sudo apt-get install git
-  ```
-- Cuando se le solicite, escriba su contraseña y presione Enter
-- Espere a que se complete la instalación (10-30 segundos)
-- Verifique que Git esté instalado:
+- Verifique si Git ya está instalado:
   ```
   git --version
   ```
-
-Debería ver algo como `git version 2.34.1`.
+- Si ve un número de versión como `git version 2.45.0`, pase al Paso 3
+- Si ve un error, instale Git for Windows:
+  - Vaya a [git-scm.com/download/win](https://git-scm.com/download/win)
+  - La descarga debería comenzar automáticamente; abra el instalador cuando termine
+  - Haga clic en **Next** en cada pantalla del instalador, aceptando las opciones predeterminadas
+  - Haga clic en **Install** y luego en **Finish**
+  - Cierre y vuelva a abrir PowerShell, y luego verifique de nuevo con `git --version`
 
 ## Paso 3: Configure Git con Su Identidad
 
@@ -56,21 +54,18 @@ Git necesita saber quién es usted para los mensajes de commit.
 
 Usar su nombre y correo electrónico ayuda a identificar quién realizó los cambios cuando varias personas trabajan en el proyecto.
 
-## Paso 4: Navegue a una Carpeta de Windows
+## Paso 4: Navegue a Su Carpeta Documents
 
-WSL puede acceder a sus archivos de Windows a través de `/mnt/c/`.
-
-- Navegue a su carpeta de usuario de Windows:
+- Navegue a su carpeta Documents:
   ```
-  cd /mnt/c/Users/SU_USUARIO/Documents
+  cd ~\Documents
   ```
-  Reemplace `SU_USUARIO` con su nombre de usuario real de Windows.
 - Verifique que está en el lugar correcto:
   ```
   pwd
   ```
 
-Debería ver `/mnt/c/Users/SU_USUARIO/Documents`.
+Debería ver una ruta que termina en `\Documents`.
 
 ## Paso 5: Cree una Carpeta de Proyecto
 
@@ -255,9 +250,9 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 
 ## Solución de Problemas
 
-- **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd /mnt/c/Users/SU_USUARIO/Documents/test_claude`)
+- **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd ~\Documents\test_claude`)
 - **No puede encontrar timer.html en Windows:** El archivo está en `C:\Users\SU_USUARIO\Documents\test_claude\timer.html`
-- **Git solicita contraseña:** Escribió mal la contraseña de `sudo`—intente nuevamente con cuidado
+- **Comando `git` no encontrado:** Cierre y vuelva a abrir PowerShell después de instalar Git for Windows para que se actualice el PATH, y luego ejecute `git --version` otra vez
 - **El temporizador no funciona:** Abra la consola del navegador (haga clic derecho en la página, seleccione **Inspect**, haga clic en la pestaña **Console**), copie cualquier mensaje de error rojo y péguelo en Claude
 
 ## Lo Que Puede Preguntarle a Claude
