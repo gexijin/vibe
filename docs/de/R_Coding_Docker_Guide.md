@@ -63,7 +63,7 @@ Haben Sie schon einmal versucht, Ihren R-Code mit einem Kollegen zu teilen, nur 
 - Wählen Sie **Reopen in Container** aus dem Menü
 - VS Code baut den Container (dies dauert beim ersten Mal 5-10 Minuten)
 - Sie sehen eine Fortschrittsanzeige mit den Build-Schritten
-- Nach Abschluss zeigt das grüne Symbol **Dev Container: R in Docker** an
+- Nach Abschluss zeigt das grüne Symbol **Dev Container: R in Docker (AMD64)** an
 
 **Hinweis:** Der Container enthält automatisch die R-Erweiterung und das languageserver-Paket. Die Dockerfile und devcontainer.json erledigen das für Sie.
 
@@ -159,7 +159,7 @@ titlePanel("My First R Docker App")
 - Sie sehen die vollständige Konfiguration:
 
 ```dockerfile
-# choose a Dockerhub base image
+# choose a Dockerhub base image with R, Shiny Server, and tidyverse packages
 FROM rocker/shiny-verse:latest
 
 # 1. System deps commonly needed by R packages
@@ -178,7 +178,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 # 4. Install Claude Code globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# 5. Expose Shiny server port
+# 5. Give shiny passwordless sudo for updating Claude Code from VS Code
+RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    rm -rf /var/lib/apt/lists/*
+
+# Expose Shiny server port
 EXPOSE 3838
 ```
 
@@ -189,6 +193,7 @@ EXPOSE 3838
 - `RUN R -q -e 'install.packages(...)'` - Installiert R-Pakete permanent
 - `RUN curl... && apt-get install -y nodejs` - Installiert Node.js, erforderlich für Claude Code
 - `RUN npm install -g @anthropic-ai/claude-code` - Installiert Claude Code global für KI-Unterstützung
+- `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - Erlaubt dem Benutzer im Container, `sudo claude update` ohne Passwortabfrage auszuführen
 - `EXPOSE 3838` - Öffnet Port 3838 für Shiny-Apps
 
 **Andere Rocker-Images, die Sie verwenden können:**
@@ -255,6 +260,43 @@ Sobald alles eingerichtet ist, hier Ihre tägliche Routine:
 4. **Code schreiben und ausführen** - Bearbeiten Sie `.R`-Dateien, führen Sie sie Zeile für Zeile mit `Strg+Enter`/`Cmd+Enter` aus, oder führen Sie Shiny-Apps mit der Schaltfläche **▶ Run Shiny App** aus
 5. **Ihre Arbeit speichern** - Ihre Code-Dateien (`.R`, `.Rmd`) werden auf Ihrem Computer gespeichert und bleiben über Sitzungen hinweg erhalten
 6. **Committen und pushen** - Verwenden Sie GitHub Desktop, um Ihre Änderungen zu committen und in das Repository zu pushen
+
+## Was ist Docker Desktop?
+
+Docker Desktop ist eine Anwendung, die die Nutzung von Docker auf Ihrem Computer erleichtert. Sie stellt die Hintergrunddienste bereit, die Docker benötigt, und bietet ein Fenster, in dem Sie Ihre Container, Images, Speicher und andere Docker-Ressourcen sehen und verwalten können.
+
+Sie können sich Docker Desktop als Steuerzentrale für Ihre Container vorstellen. Wenn Sie Docker Desktop öffnen, startet es die Docker-Engine. Die Docker-Engine ist der Teil von Docker, der Container tatsächlich erstellt und ausführt. Normalerweise müssen Sie nicht direkt mit der Engine arbeiten, da Docker Desktop sie für Sie verwaltet.
+
+### Was macht Docker Desktop?
+
+Docker Desktop übernimmt mehrere wichtige Aufgaben:
+
+- **Führt die Docker-Engine aus** - Die Engine erstellt und betreibt die Container, in denen Ihre Software läuft.
+- **Lädt Images herunter** - Ein Image ist ein fertiges Startpaket, zum Beispiel ein Linux-System mit R und gängigen R-Paketen. In diesem Tutorial verwendet das Projekt ein Image aus dem Rocker-Projekt.
+- **Erstellt Container** - Docker verwendet das Dockerfile und die Dev-Container-Einstellungen dieses Projekts, um einen Container zu erstellen, der für die R-Entwicklung vorbereitet ist.
+- **Startet und stoppt Container** - Sie können den Container bei Bedarf öffnen, pausieren, neu starten oder stoppen.
+- **Verbindet Container mit Ihren Dateien** - Ihr Projektordner ist im Container verfügbar, sodass Sie Dateien in VS Code bearbeiten können, während der Code im Container läuft.
+- **Verbindet Container mit Ihrem Browser** - Wenn die Shiny-App Port 3838 verwendet, sorgen Docker Desktop und VS Code gemeinsam dafür, dass die App in Ihrem Webbrowser erreichbar ist.
+
+### Wie Docker Desktop in dieses Tutorial passt
+
+Drei Teile arbeiten zusammen:
+
+1. **Docker Desktop** führt die Docker-Engine auf Ihrem Computer aus.
+2. **VS Code** ist der Editor, in dem Sie R-Code schreiben und ausführen.
+3. **Der Dev Container** stellt eine vorbereitete Linux-Umgebung bereit, die R, R-Pakete und die in diesem Projekt verwendeten Werkzeuge enthält.
+
+Wenn Sie **Reopen in Container** wählen, bittet VS Code Docker Desktop, den Container des Projekts zu erstellen oder zu starten. Die Anwendung läuft weiterhin auf Ihrem Computer, aber die R-Umgebung befindet sich im Container. So bleiben R-Version, Pakete und Systemwerkzeuge vom Rest Ihres Computers getrennt.
+
+Docker Desktop ersetzt weder VS Code noch R noch Ihren Webbrowser. Es stellt die Umgebung bereit, in der der Container läuft. In VS Code arbeiten Sie, R ist die Sprache, die Sie verwenden, und im Browser sehen Sie sich die Shiny-App an.
+
+### Warum Docker Desktop verwenden?
+
+Wenn Sie R und alle benötigten Pakete direkt auf Ihrem Computer installieren, kann es manchmal zu Versionskonflikten kommen. Ein Projekt braucht vielleicht eine andere Paketversion als ein anderes Projekt. Docker Desktop hilft, solche Konflikte zu vermeiden, indem es jedem Projekt eine eigene, kontrollierte Umgebung gibt.
+
+Wenn zum Beispiel eine Kommilitonin oder ein Kommilitone dieselben Projektdateien und Docker-Einstellungen verwendet, kann Docker eine Umgebung erstellen, die Ihrer sehr ähnlich ist. Dadurch ist es weniger wahrscheinlich, dass Sie einen Fehler sehen, der nur durch unterschiedliche Softwareversionen entsteht. Ihr R-Code und Ihre Projektdateien bleiben auf Ihrem Computer, während die Werkzeuge, die zum Ausführen benötigt werden, im Container organisiert sind.
+
+Docker Desktop muss geöffnet sein und laufen, bevor Sie dieses Projekt in einem Container erstellen oder erneut öffnen. Wenn Docker Desktop geschlossen ist, kann VS Code den Container nicht starten, und Sie sehen möglicherweise eine Fehlermeldung, dass Docker nicht läuft.
 
 ---
 
