@@ -13,7 +13,7 @@ Ha escrito código Python línea por línea. Pero ¿qué pasaría si pudiera des
 - **[Vibe Coding](https://www.ibm.com/think/topics/vibe-coding)** - Programar describiendo lo que desea en lenguaje natural, iterando basándose en resultados en lugar de escribir código línea por línea
 - **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
 - **[Iris Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - Conjunto de datos clásico con mediciones de 150 flores iris de tres especies
-- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones que funcionen
+- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → hacer commit de las versiones que funcionen
 
 ## Lo Que Necesitará
 
@@ -103,9 +103,9 @@ Carga el conjunto de datos iris desde scikit-learn. Conviértelo en un dataframe
 
 ¡Acaba de usar vibe coding! Sin buscar documentación, sin ensayo y error—solo describa y pruebe.
 
-Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub Desktop.
+Solicite a Claude que haga commit usando Git. O hágalo usted mismo desde GitHub Desktop.
 ```
-Confirma estos cambios.
+Haz commit de estos cambios.
 ```
 ## Paso 6: Segundo Vibe - Estadísticas Resumidas
 
@@ -124,7 +124,7 @@ Muéstrame estadísticas resumidas de los datos de iris agrupados por especie. Q
 
 Esta exploración le ayuda a comprender los patrones en los datos.
 
-Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub Desktop.
+Solicite a Claude que haga commit usando Git. O hágalo usted mismo desde GitHub Desktop.
 
 ## Paso 7: Tercer Vibe - Crear un Histograma
 
@@ -176,9 +176,9 @@ Crea un gráfico de cajas comparando las longitudes de pétalos entre las tres e
 - Las cajas muestran la mediana y los cuartiles para cada especie
 - Puede ver claramente que Virginica tiene los pétalos más largos
 
-## Paso 10: Revisar y Confirmar
+## Paso 10: Revisar y Hacer Commit
 
-Antes de confirmar, revise lo que Claude construyó.
+Antes de hacer commit, revise lo que Claude construyó.
 
 - En VS Code Explorer, haga clic en `iris_exploration.py` para abrirlo
 - Revise el código—note las importaciones, carga de datos y secciones de gráficos
@@ -211,20 +211,20 @@ Vibe coding brilla cuando usted itera. Intente añadir funciones describiéndola
 
 Después de cada función exitosa:
 - Pruébela ejecutando el script
-- Si funciona, confirme con GitHub Desktop
+- Si funciona, haga commit con GitHub Desktop
 - Si falla, diga a Claude el error y solicite que lo corrija
-- Cuando esté corregido, confirme la versión funcional
+- Cuando esté corregido, haga commit de la versión funcional
 
 
 **Principios clave:**
 
 - **Describa resultados, no implementación** - Diga "muestra un mapa de calor de correlación" no "usa seaborn.heatmap() con df.corr()"
 - **Itere rápidamente** - Probar → refinar → probar → refinar
-- **Confirme versiones funcionales** - Guarde cada éxito antes de probar nuevas funciones
+- **Haga commit de las versiones funcionales** - Guarde cada éxito antes de probar nuevas funciones
 - **Acepte los fallos** - Si el código de Claude falla, simplemente describa el error y solicite corrección
 - **Mantenga el control** - Usted decide las funciones, prioridades y cuándo es suficientemente bueno
 
-Cada vez, siga el patrón: describir → probar → iterar → confirmar.
+Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 
 ## Próximos Pasos
 
@@ -246,7 +246,7 @@ Cada vez, siga el patrón: describir → probar → iterar → confirmar.
 
 Este tutorial combinó varias tecnologías en un flujo de trabajo:
 
-- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, confirmar, hacer push)
+- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, hacer commit, hacer push)
 - **Contenedor Docker** - Entorno Python aislado con todas las dependencias preinstaladas
 - **VS Code** - Editor de código que se conecta al contenedor de Docker
 - **Claude Code** - Asistente con IA que escribe código Python a partir de sus descripciones

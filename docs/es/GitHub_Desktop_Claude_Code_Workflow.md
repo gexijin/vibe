@@ -83,7 +83,7 @@ Claude crea el archivo `timer.html` (toma 10-30 segundos).
 - **Haga doble clic** en `timer.html` para abrirlo en su navegador
 - Pruebe el temporizador:
   - Escriba `1` en el campo de entrada
-  - Haga clic en **Start**
+  - Haga clic en **Iniciar**
   - Observe la cuenta regresiva
 
 **Si funciona:** Continúe al Paso 5.
@@ -136,7 +136,7 @@ Su código ahora está respaldado en la nube.
   Agrega una notificación de sonido cuando el temporizador llegue a cero. Usa el
   sonido de pitido integrado del navegador o crea una alerta de audio simple.
   ```
-- Pruebe: Actualice el navegador, configure el temporizador para 0.1 minutos, haga clic en Start
+- Pruebe: Actualice el navegador, configure el temporizador para 0.1 minutos, haga clic en **Iniciar**
 
 **Para este tutorial:** Finja que el sonido no funciona bien. No haga commit todavía.
 
@@ -159,7 +159,7 @@ Acaba de desechar código que no funcionaba y volvió a su último punto de guar
   elemento de audio HTML5 con un sonido de pitido simple generado por la Web Audio API.
   Asegúrate de que maneje las restricciones de reproducción automática del navegador de forma elegante.
   ```
-- Pruebe inmediatamente (actualice el navegador, configure 0.1 minutos, Start)
+- Pruebe inmediatamente (actualice el navegador, configure 0.1 minutos, **Iniciar**)
 
 **Si funciona:** Continúe al Paso 11.
 **Si no:** Pegue el error a Claude o intente de nuevo.
@@ -168,7 +168,7 @@ Acaba de desechar código que no funcionaba y volvió a su último punto de guar
 
 - En Claude Code:
   ```
-  confirma y envía mis cambios
+  haz commit y push de mis cambios
   ```
 
 Claude verificará los cambios, escribirá un mensaje de commit, hará commit y push (10-20 segundos).
@@ -194,8 +194,8 @@ Claude explica sus cambios en lenguaje sencillo.
 
 Verá:
 - Initial commit (README)
-- Create initial timer app
-- Add improved sound notification
+- Crear aplicación de temporizador inicial con funcionalidad de inicio/detener
+- El commit que Claude hizo para la notificación de sonido (su mensaje puede variar)
 
 Note que el primer intento fallido de sonido no está ahí - lo descartó. Solo el código que funciona llegó a sus commits.
 
