@@ -68,7 +68,7 @@ Dies ermöglicht Claude, Dateien zu erstellen und zu ändern, ohne jedes Mal um 
 
 Geben Sie diesen Prompt ein:
 ```
-Konvertiere meinen stock-report Slash-Befehl in einen Skill namens generate-stock-reports.
+Konvertiere meinen stock-report Slash-Befehl in einen Skill.
 Der Skill soll sich automatisch aktivieren, wenn ich nach Unternehmen oder Aktien frage.
 ```
 
