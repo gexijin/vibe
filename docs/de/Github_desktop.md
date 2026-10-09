@@ -66,7 +66,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 ## Schritt 5: Ihren Projektordner öffnen
 
 - Klicken Sie in GitHub Desktop in der Menüleiste auf **Repository**
-- Wählen Sie **Im Finder anzeigen** (Mac) oder **Im Explorer anzeigen** (Windows)
+- Wählen Sie **Show in Finder** (Mac) oder **Show in Explorer** (Windows)
 - Sie sehen einen Ordner mit Ihrem Projektnamen
 - Darin ist eine Datei namens `README.md`
 
@@ -113,7 +113,7 @@ Ihr Code ist jetzt online gesichert unter: `https://github.com/IHR-BENUTZERNAME/
 ## Fehlerbehebung
 
 - **Kann mich nicht bei GitHub anmelden** - Überprüfen Sie Ihre Internetverbindung. Versuchen Sie, sich zuerst auf github.com anzumelden, um zu verifizieren, dass Ihre Anmeldedaten funktionieren.
-- **Änderungen erscheinen nicht in GitHub Desktop** - Stellen Sie sicher, dass Sie Ihre Dateien gespeichert haben. Klicken Sie auf **Repository** → **Aktualisieren** oder starten Sie GitHub Desktop neu.
+- **Änderungen erscheinen nicht in GitHub Desktop** - Stellen Sie sicher, dass Sie Ihre Dateien gespeichert haben. Klicken Sie auf **Repository** → **Refresh** oder starten Sie GitHub Desktop neu.
 - **Push schlägt fehl mit „rejected"-Fehler** - Jemand anderes hat Änderungen gepusht. Klicken Sie zuerst auf **Fetch origin**, dann versuchen Sie erneut zu pushen.
 
 ## Workflow-Überblick
