@@ -193,7 +193,7 @@ streamlit run app.py
 
 ## Schritt 11: Debugging ausprobieren
 
-- In `analysis.py` klicken Sie links neben Zeilennummer 8 (die Zeile `print(iris.head())`), um einen Breakpoint zu setzen (roter Punkt erscheint)
+- In `analysis.py` klicken Sie links neben Zeilennummer 9 (die Zeile `print(iris.head())`), um einen Breakpoint zu setzen (roter Punkt erscheint)
 - Klicken Sie in der Menüleiste auf **Run**, dann auf **Start Debugging**
 - Wählen Sie **Python File**, wenn Sie dazu aufgefordert werden
 - Die Codeausführung pausiert am Breakpoint
