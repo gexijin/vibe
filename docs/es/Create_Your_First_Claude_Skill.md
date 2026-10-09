@@ -68,7 +68,7 @@ Esto permite que Claude cree y modifique archivos sin solicitar permiso cada vez
 
 Escriba este prompt:
 ```
-Convierte mi comando slash stock-report en una Skill llamada generate-stock-reports.
+Convierte mi comando slash stock-report en una Skill.
 La Skill debe activarse automáticamente cuando pregunte sobre empresas o acciones.
 ```
 
