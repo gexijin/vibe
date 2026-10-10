@@ -13,11 +13,11 @@ Está programando con asistencia de IA. Esta hace cambios en sus archivos. A vec
 - **Terminal** - Interfaz de línea de comandos integrada de Mac para ejecutar comandos
 - **Git** - Rastrea cada cambio en sus archivos en su computadora, creando puntos de restauración a los que puede volver en cualquier momento
 - **Commit** - Una instantánea de su proyecto en un momento específico con una descripción de lo que cambió
-- **Claude Code** - Asistente de codificación AI que escribe código, corrige errores y maneja operaciones de Git mediante solicitudes simples
+- **Claude Code** - Asistente de programación con IA que escribe código, corrige errores y maneja operaciones de Git mediante solicitudes simples
 
 ## Lo Que Necesitará
 
-- Haber completado [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
+- Haber completado [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS)
 - 30 minutos
 
 ## Paso 1: Abra Terminal
@@ -173,7 +173,7 @@ Creamos un segundo punto de guardado. Esta versión tiene los dos botones funcio
 - Actualice la pestaña de su navegador (presione `Command (⌘) + R`)
 - Pruebe: Haga clic en el botón **15 min**
 
-**Para este tutorial:** Pretenda que el botón de 15 minutos no funciona correctamente. No haga commit todavía—practicaremos descartando cambios malos.
+**Para este tutorial:** Suponga que el botón de 15 minutos no funciona correctamente. No haga commit todavía—practicaremos descartando cambios malos.
 
 ## Paso 13: Descarte los Cambios
 
@@ -246,7 +246,7 @@ Claude muestra sus commits en un formato legible. Verá:
 - Imposible de corregir → Descarte los cambios e intente de nuevo
 - Repita
 
-¡Siempre puede volver a cualquier commit. Descarte sin miedo—solo haga commit del código que funciona!
+Siempre puede volver a cualquier commit. ¡Descarte sin miedo: solo haga commit del código que funciona!
 
 ## Próximos Pasos
 

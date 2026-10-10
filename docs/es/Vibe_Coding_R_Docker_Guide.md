@@ -41,9 +41,9 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 
 - Vaya a https://github.com/gexijin/vibe
   - **Nota para usuarios de ARM64 (Apple Silicon Macs):** Use https://github.com/gexijin/vibe/tree/ARM64 en su lugar
-- Haga clic en **Code** y Download Zip
+- Haga clic en **Code** y luego en **Download ZIP**
 - Abra File Explorer (Windows) o Finder (Mac)
-- Descomprima el archivo en la carpeta Download
+- Descomprima el archivo en la carpeta Descargas (Downloads)
 - Navegue a su carpeta del proyecto vibe (por ejemplo, `Documents/vibe`)
 - Encuentre la carpeta `.devcontainer`
 - Copie la carpeta completa (contiene `Dockerfile` y `devcontainer.json`)
@@ -82,7 +82,7 @@ claude
 - Se abre una ventana del navegador para autenticación
 - Haga clic en **Continue with Google** o **Continue with Email**
 - Inicie sesión con su cuenta de Claude (o cree una)
-- Después de que la autenticación tenga éxito, regrese al terminal de VS Code
+- Después de que la autenticación tenga éxito, regrese a la terminal de VS Code
 - Verá el mensaje de bienvenida de Claude
 
 Claude Code ahora está ejecutándose y listo para sus solicitudes.
@@ -91,7 +91,7 @@ Claude Code ahora está ejecutándose y listo para sus solicitudes.
 
 Ahora comienza la parte divertida. En lugar de buscar documentación, simplemente describa lo que desea.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Instala el paquete hoopR y carga las estadísticas actuales de jugadores de la NBA. Muéstrame los 10 mejores jugadores por total de puntos anotados esta temporada. Muéstralo como una tabla bien formateada.
@@ -116,7 +116,7 @@ Haz commit de estos cambios.
 
 Antes de construir un panel, comprenda qué datos tiene.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Muéstrame qué columnas están disponibles en estos datos de la NBA. Luego crea un resumen mostrando: número de jugadores, número de equipos, promedio de puntos por jugador, y quién tiene más asistencias y rebotes.
@@ -134,7 +134,7 @@ Esta exploración le ayuda a decidir qué incluir en su panel.
 
 Es hora de construir el panel interactivo.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea una aplicación Shiny en un archivo llamado app.R que muestre una tabla interactiva de estadísticas de jugadores de la NBA. Incluye columnas para nombre de jugador, equipo, puntos, asistencias y rebotes. Agrega un deslizador para filtrar jugadores por un mínimo de puntos anotados (de 0 a 1000). Hazlo lucir limpio y profesional.
@@ -164,7 +164,7 @@ Si algo no funciona, copie cualquier mensaje de error y péguelo a Claude para c
 
 Las tablas son útiles, pero las visualizaciones cuentan mejores historias.
 
-- De vuelta en el terminal de Claude Code, escriba:
+- De vuelta en la terminal de Claude Code, escriba:
 
 ```
 Agrega un gráfico de barras debajo de la tabla mostrando los 15 mejores jugadores por puntos. Usa colores diferentes para cada jugador. También agrega un gráfico de dispersión mostrando la relación entre puntos y asistencias para todos los jugadores filtrados.
@@ -183,7 +183,7 @@ Esto es vibe coding en acción: describa la funcionalidad, pruébela e itere.
 
 Haga el panel más interactivo con selección de equipo.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Agrega un menú desplegable para filtrar jugadores por equipo. Colócalo en la parte superior. Cuando seleccione un equipo, muestra solo jugadores de ese equipo. Incluye una opción "Todos los Equipos" para mostrar a todos.
@@ -228,7 +228,7 @@ Vibe coding brilla cuando itera. Intente agregar funcionalidades describiéndola
 - "Muestra los logos de los equipos junto a los nombres de equipo en el menú desplegable"
 - "Agrega un gráfico de líneas mostrando la tendencia de puntos por partido para el equipo seleccionado"
 - "Haz que el gráfico de barras sea ordenable haciendo clic en los encabezados de columna"
-- "Agrega información emergente al gráfico de dispersión mostrando nombres de jugadores cuando paso el cursor"
+- "Agrega información emergente al gráfico de dispersión mostrando nombres de jugadores cuando pase el cursor"
 
 Después de cada funcionalidad exitosa:
 - Pruébela en el navegador
@@ -257,8 +257,8 @@ Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 
 ## Solución de Problemas
 
-- **La instalación de hoopR falla** - Verifique su conexión a internet; el paquete descarga datos de la web. Intente ejecutar `install.packages("hoopR")` en un terminal de R para ver mensajes de error detallados.
-- **La aplicación Shiny no se inicia** - Verifique que la extensión Shiny esté instalada (busque "Posit.shiny" en Extensiones de VS Code). Revise el terminal para mensajes de error y péguelos a Claude.
+- **La instalación de hoopR falla** - Verifique su conexión a internet; el paquete descarga datos de la web. Intente ejecutar `install.packages("hoopR")` en una terminal de R para ver mensajes de error detallados.
+- **La aplicación Shiny no se inicia** - Verifique que la extensión Shiny esté instalada (busque "Posit.shiny" en Extensiones de VS Code). Revise la terminal para mensajes de error y péguelos a Claude.
 - **No se muestran datos** - El paquete hoopR obtiene datos en vivo; si la temporada de la NBA no ha comenzado, puede haber datos limitados. Pida a Claude que use datos de muestra o de una temporada anterior.
 - **Claude comete errores** - ¡Es normal! Copie el mensaje de error, péguelo a Claude y diga "corrige este error". Vibe coding incluye iteración y depuración.
 - **No puedo hacer push a GitHub** - Asegúrese de haber iniciado sesión en GitHub Desktop y publicado el repositorio (Paso 1). Verifique su conexión a internet.

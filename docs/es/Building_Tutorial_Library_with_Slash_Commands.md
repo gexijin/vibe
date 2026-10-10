@@ -1,8 +1,8 @@
 ---
-title: "Cómo automaticé la documentación con prompts reutilizables"
+title: "Cómo Claude Code me ayudó a crear estos tutoriales"
 lang: "es"
 ---
-# Cómo automaticé la documentación con prompts reutilizables
+# Cómo Claude Code me ayudó a crear estos tutoriales
 
 A mediados de diciembre de 2025, pasé 2 horas tratando de ayudar a mi asistente de investigación a instalar Claude Code por Zoom. Me di cuenta de que alguien como ella necesita instrucciones específicas y prácticas, así que me propuse crear tutoriales completos para Claude Code. Mi objetivo: tutoriales prácticos y enfocados que guíen a principiantes completos a través de tareas reales paso a paso. Sin volcados de teoría. Sin manuales de referencia exhaustivos. Solo "haz esto, después esto, después esto" hasta lograr algo concreto.
 
@@ -125,10 +125,10 @@ Ese es el poder de la automatización sistemática.
 2. "Refleja que el comando /tutorial evolucionó primero a partir de prompts interactivos manuales."
 3. "Enfatiza mi estilo de tutorial: práctico, enfocado, paso a paso."
 4. "Añade que las traducciones al japonés llegaron primero sin comandos slash, y que Claude usó 8 subagentes en paralelo."
-5. "Añade que Claude escribió los comandos slash de traducción sin pautas específicas, y que 25 tutoriales fueron traducidos en 15 minutos usando subagentes."
+5. "Añade que Claude escribió los comandos slash de traducción sin pautas específicas, y el uso de subagentes."
 6. "Añade enlace a los comandos guardados en docs/assets/commands."
 7. "Reescribe con menos viñetas."
 8. "Lee realmente los comandos slash y añade detalles."
-9. "Resume nuestra interacción en cada turno. Añade una P.D. sobre cómo se generó este blog."
+9. "Resume nuestra interacción. Añade una P.D. sobre cómo se generó este blog."
 
 Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 15 de diciembre de 2025.
