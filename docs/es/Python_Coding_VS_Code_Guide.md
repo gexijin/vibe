@@ -193,7 +193,7 @@ streamlit run app.py
 
 ## Paso 11: Probar la Depuración
 
-- En `analysis.py`, haga clic a la izquierda del número de línea 8 (la línea `print(iris.head())`) para establecer un punto de interrupción (aparecerá un punto rojo)
+- En `analysis.py`, haga clic a la izquierda del número de línea 9 (la línea `print(iris.head())`) para establecer un punto de interrupción (aparecerá un punto rojo)
 - Haga clic en **Run** en la barra de menú, luego en **Start Debugging**
 - Seleccione **Python File** cuando se le solicite
 - La ejecución del código se pausará en el punto de interrupción
