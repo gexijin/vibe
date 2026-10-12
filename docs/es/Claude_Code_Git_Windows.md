@@ -172,8 +172,7 @@ A veces el código de la IA no funciona y necesita comenzar de nuevo desde su ú
   ```
   descarta estos cambios
   ```
-- Claude le pedirá confirmación
-- Escriba `yes` y presione Enter
+- Claude muestra un menú con opciones como **Yes** y **No**: use las teclas de flecha (o presione el número junto a **Yes**) para seleccionarla y luego presione **Enter**
 - Actualice su navegador—el botón de 15 minutos desaparece
 
 Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona nuevamente con solo los botones de 1 y 5 minutos!

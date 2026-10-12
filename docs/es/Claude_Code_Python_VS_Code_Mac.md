@@ -42,7 +42,7 @@ Ha configurado Python en VS Code y puede escribir código manualmente. Ahora des
 - Elija su método de autenticación:
   - **Usuarios de Claude Pro/Max**: Haga clic en **Sign in with Claude.ai**, autorice en el navegador y copie el código de vuelta a VS Code
   - **Usuarios de clave API**: Haga clic en **Use API Key** y pegue su clave API de Anthropic
-- Para pasos detallados de autenticación, consulte la guía [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 5)
+- Para pasos detallados de autenticación, consulte la guía [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3)
 - Una vez que haya iniciado sesión, verá "Ready to help" en el panel de chat
 
 ## Paso 3: Cree un Script Python Inicial Manualmente
@@ -69,6 +69,10 @@ print(iris_df.describe())
 
 - Guarde el archivo haciendo clic en **File > Save**
 - Abra el terminal de Python: haga clic en **View** en la barra de menú, luego en **Terminal**
+- Instale los paquetes que necesita este script:
+  ```
+  pip install scikit-learn pandas
+  ```
 - En el terminal, ejecute: `python iris_analysis.py`
 - Debería ver la estructura del conjunto de datos y las estadísticas resumidas en el terminal
 

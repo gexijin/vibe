@@ -261,7 +261,7 @@ Modifiquemos la aplicación para ver cómo funciona el desarrollo.
 
 - Mantenga la aplicación ejecutándose
 - En VS Code, edite `python/app.py`
-- Encuentre la línea 6: `st.title("Old Faithful Geyser Data")`
+- Encuentre la línea 5: `st.title("Old Faithful Geyser Data")`
 - Cámbiela a:
 
 ```python
@@ -303,7 +303,7 @@ Los paquetes instalados mediante pip en la terminal (`pip install package`) son 
 
 - En VS Code Explorer, navegue a `.devcontainer/Dockerfile`
 - Haga clic para abrir el archivo
-- Encuentre la línea 9: `RUN pip install --no-cache-dir ...`
+- Encuentre la línea 10: `RUN pip install --no-cache-dir ...`
 - Agregue `scikit-learn` a la lista:
 
 ```dockerfile
