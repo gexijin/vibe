@@ -433,6 +433,11 @@
 <body>
     <div class="lang-switch">
         <a href="../">English</a>
+        <a href="../zh/">中文</a>
+        <a class="active">日本語</a>
+        <a href="../es/">Español</a>
+        <a href="../fr/">Français</a>
+        <a href="../de/">Deutsch</a>
         <a href="../hi/">हिन्दी</a>
     </div>
     <div class="container">
@@ -454,7 +459,7 @@
             </div>
             <div id="network-graph"></div>
             <p class="progress-counter" id="progress-counter"></p>
-            <p class="learning-path-hint" id="learning-path-hint">トピックをクリックして開始。WindowsかMacを選択。<br>まずは基本から、次にR、Python、Excelのいずれかを選択してください。</p>
+            <p class="learning-path-hint" id="learning-path-hint">トピックをクリックして始めましょう。WindowsかMacを選んでください。<br>まずは「基本」から始め、次にR、Python、Excelのいずれかを選んでください。</p>
         </div>
 
         <section class="section">
@@ -516,7 +521,7 @@
         </div>
 
         <footer>
-            <p>Vibe制作：<a href="https://www.linkedin.com/in/steven-ge-ab016947/">Steven Ge</a>、<a href="https://orditus.com">Orditus LLC</a>。フィードバックとソースコードは<a href="https://github.com/gexijin/vibe">GitHub</a>で公開。最終更新：2026/2/18。</p>
+            <p>Vibe Codingで制作：<a href="https://www.linkedin.com/in/steven-ge-ab016947/">Steven Ge</a>、<a href="https://orditus.com">Orditus LLC</a>。フィードバックとソースコードは<a href="https://github.com/gexijin/vibe">GitHub</a>で公開。最終更新：2026/2/18。</p>
             <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">Claudeによる翻訳</p>
         </footer>
     </div>
@@ -640,10 +645,10 @@
         // Tutorial data (Japanese)
         const tutorials = {
             1: { label: 'Claude Codeを\nインストール(Win)', url: 'Install_CLAUDE_Code_Win', desc: 'PowerShellを使ってWindowsにClaude Codeをネイティブインストールするステップバイステップガイド（WSLはオプション）', level: 0 },
-            14: { label: 'VS CodeでClaude\nCode (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'WindowsでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
+            14: { label: 'VS Codeで\nClaude Code (Win)', url: 'Claude_Code_in_VS_Code_Win', desc: 'WindowsでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
             11: { label: 'Claude Code\n+ Git (Win)', url: 'Claude_Code_Git_Windows', desc: 'Claude CodeでGitを使ったバージョン管理の基本を学ぶ - GitHubアカウント不要', level: 1 },
             2: { label: 'Claude Codeを\nインストール(Mac)', url: 'Install_Claude_Code_MacOS', desc: 'ネイティブインストーラーでmacOSにClaude Codeをインストールするクイックセットアップガイド（Homebrewはオプション）', level: 0 },
-            15: { label: 'VS CodeでClaude\nCode (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'MacでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
+            15: { label: 'VS Codeで\nClaude Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'MacでVS CodeとClaude Codeをセットアップ - ターミナルでAIを実行しながらファイルを視覚的に編集', level: 1 },
             12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: 'MacでClaude CodeとGitを使ったバージョン管理の基本を学ぶ - GitHubアカウント不要', level: 1 },
             3: { label: 'VS Code\n基本', url: 'VS_Code_Getting_Started', desc: 'Visual Studio Codeの基礎を学ぶ - インストール、インターフェース操作、拡張機能、GitHub CopilotでのAIコーディング', level: 0 },
             4: { label: 'バージョン\n管理', url: 'Github_desktop', desc: 'GitとGitHub Desktopによるコード管理入門', level: 0 },
@@ -655,13 +660,13 @@
             10: { label: 'RでVibe\nCoding', url: 'Vibe_Coding_R_Docker_Guide', desc: '自然言語リクエストで実際のNBA統計ダッシュボードを構築 - 完全なVibe Coding体験', level: 3 },
             13: { label: 'Claudeで\n研究論文', url: 'Writing_Research_Paper_Claude_Code', desc: 'Claude Codeを使って研究論文を素早く作成 - Gitで全バージョンを追跡しながら研究とドラフト作成', level: 2 },
             16: { label: 'Pythonで\nVibe Coding', url: 'Vibe_Coding_Python_Docker_Guide', desc: '自然言語リクエストでIrisデータセットを分析 - 可視化を説明するとそれが現れる', level: 3 },
-            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'MacでRStudioとClaude Codeを組み合わせ、RプロジェクトをAIで強化しながらRStudioでコードを実行', level: 2 },
+            17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'MacでRStudioとClaude Codeを併用 - Rプロジェクトを作成してAIで改善し、コードはRStudioで実行', level: 2 },
             18: { label: 'RStudio\n(Win)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'WindowsでRStudioとClaude Codeを併用 - RStudioでRコードを手動編集しながら、PowerShellのClaude Codeがサポート', level: 2 },
-            19: { label: 'RにClaude\nCode (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'VS CodeでRコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
-            20: { label: 'Pythonに\nClaude Code (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'VS CodeでPythonコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
+            19: { label: 'R向け\nClaude Code (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'VS CodeでRコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
+            20: { label: 'Python向け\nClaude Code (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'VS CodeでPythonコード作成と改善にClaude Code AIアシスタントを使用 - プロット、分析、コード改善を依頼', level: 3 },
             21: { label: 'スラッシュ\nコマンド', url: 'Reuse_Prompts_via_Slash_Commands', desc: '複雑なプロンプトを再利用可能なショートカットに - /stock-reportのような簡単なコマンドに長い指示を変換', level: 3 },
-            22: { label: 'Claudeスキル', url: 'Create_Your_First_Claude_Skill', desc: 'コンテキストに基づいて自動的にアクティブ化されるClaudeスキルを構築 - 手動スラッシュコマンドからAIトリガー機能にアップグレード', level: 3 },
-            23: { label: '医学研究用\nClaudeスキル', url: 'Medical_Research_Skill', desc: 'PubMedを検索して医学研究論文を平易な英語で要約する専門スキルを作成', level: 3 },
+            22: { label: 'Claudeスキル', url: 'Create_Your_First_Claude_Skill', desc: 'コンテキストに基づいて自動的にアクティブ化されるClaudeスキルを構築 - 手動のスラッシュコマンドから、AIが自動で呼び出す機能へステップアップ', level: 3 },
+            23: { label: '医学研究用\nClaudeスキル', url: 'Medical_Research_Skill', desc: 'PubMedを検索して医学研究論文をわかりやすい言葉で要約する専門スキルを作成', level: 3 },
             24: { label: 'サブエージェント\nを作成', url: 'Create_subagents', desc: 'スキルを使用して複雑なタスクを完了する自律エージェントを構築 - 企業を調査、スコアリング、投資推奨する株式選択エージェントを作成', level: 3 },
             25: { label: 'Claude Code\n基本操作', url: 'Claude_Code_Basic_Operations', desc: 'Claude Codeの基本操作を学ぶ - 会話の開始、コンテキストの管理、スラッシュコマンドの使用、ファイルの操作', level: 0 },
             26: { label: 'VS Codeで\nExcel', url: 'Excel_Coding_VS_Code_Guide', desc: 'Claude CodeでExcelスプレッドシートを作成・編集 - 本物の数式、書式設定、グラフ', level: 1 },
