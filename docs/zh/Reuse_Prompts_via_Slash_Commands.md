@@ -175,11 +175,11 @@ slash command 中的 `$ARGUMENTS` 关键字充当占位符。输入 `/stock-repo
 
 相同命令结构现在研究的是特斯拉。
 
-## 步骤 13:尝试另一个 Slash Command(可选)
+## 步骤 12:尝试另一个 Slash Command(可选)
 
 如果完成了[使用 Claude Code 撰写研究论文](./Writing_Research_Paper_Claude_Code.md)教程,应该有一个 `/research-paper` 命令。在新主题上测试它。
 
-首先,清除 Claude 的内存重新开始:
+首先,清除 Claude 的记忆重新开始:
 
 ```
 /clear

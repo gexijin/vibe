@@ -16,8 +16,8 @@ lang: "zh"
 
 ## 准备工作
 
-- 完成 [Python in VS Code](./Python_Coding_VS_Code_Guide) 教程 - Python 应该已在 VS Code 中正常工作
-- 完成 [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) 教程 - Claude Code CLI 应该已安装
+- 完成 [在 VS Code 中进行 Python 编程](./Python_Coding_VS_Code_Guide) 教程 - Python 应该已在 VS Code 中正常工作
+- 完成 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS) 教程 - Claude Code CLI 应该已安装
 - Claude Pro/Max 订阅或 Anthropic API 密钥
 - 20-30 分钟
 
@@ -42,7 +42,7 @@ lang: "zh"
 - 选择身份验证方式：
   - **Claude Pro/Max 用户**：点击 **Sign in with Claude.ai**，在浏览器授权，将代码复制回 VS Code
   - **API 密钥用户**：点击 **Use API Key**，粘贴 Anthropic API 密钥
-- 详细身份验证步骤请参阅 [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) 指南（步骤 3）
+- 详细身份验证步骤请参阅 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS) 指南（步骤 3）
 - 登录成功后，聊天面板中显示"Ready to help"
 
 ## 步骤 3：手动创建初始 Python 脚本
@@ -156,7 +156,7 @@ print(iris_df.describe())
 
 - **Claude Extension 未显示** - 安装后重启 VS Code，点击 **View > Extensions** 验证是否已安装
 - **"Cannot read Python file" 错误** - 确保保存的文件使用 `.py` 扩展名，Claude 需读取已保存的文件
-- **身份验证失败** - 验证 Claude Pro/Max 订阅是否有效或 API 密钥是否正确，故障排除参阅 [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
+- **身份验证失败** - 验证 Claude Pro/Max 订阅是否有效或 API 密钥是否正确，故障排除参阅 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)
 - **找不到包错误** - 在 Terminal 中安装所需包：`pip install seaborn matplotlib scikit-learn pandas`，等待安装完成后再运行代码
 - **代码更改未应用** - 确保在差异对比上点击 **Accept**，如不起作用可手动复制 Claude 建议的代码
 - **图表未显示** - 确保有显示器，某些系统可能需要在末尾添加 `plt.show()` 或在 Jupyter 中使用 `%matplotlib inline`

@@ -154,7 +154,7 @@ Claude 会自动:
 
 **注意:** 该 skill 是完全独立的——所有代码和文档都存放在一个文件夹中。
 
-## 步骤 11:从 Anthropic 的存储库安装 Skill
+## 步骤 10:从 Anthropic 的存储库安装 Skill
 
 Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使用。
 
@@ -173,7 +173,7 @@ Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使�
 
 **Anthropic 存储库中的其他可用 skill:**
 - 在 [github.com/anthropics/skills](https://github.com/anthropics/skills) 浏览完整目录
-- 询问 Claude "What skills are available in the Anthropic repository?" 查看当前列表
+- 询问 Claude "Anthropic 存储库中有哪些可用的 skill?" 查看当前列表
 
 ## 下一步
 

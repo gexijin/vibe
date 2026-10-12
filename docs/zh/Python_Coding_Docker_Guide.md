@@ -43,7 +43,7 @@ lang: "zh"
 - 在 VS Code 中,点击 **File > Open Folder**
 - 导航到刚创建的 `python-docker-demo` 文件夹
 - 点击 **Select Folder**(Windows)或 **Open**(Mac)
-- 在资源管理器侧边栏中,将鼠标悬停在 **PYTHON-DOCKER-DEMO** 标题上,点击 **New Folder** 图标,将文件夹命名为 `.devcontainer`
+- 在 Explorer(资源管理器)侧边栏中,将鼠标悬停在 **PYTHON-DOCKER-DEMO** 标题上,点击 **New Folder** 图标,将文件夹命名为 `.devcontainer`
 - 点击资源管理器侧边栏中 `.devcontainer` 下方的空白处,让任何项目都不被选中,然后再次点击 **New Folder** 图标,将文件夹命名为 `python`
 - 结构应如下:`python-docker-demo/.devcontainer/` 和 `python-docker-demo/python/`
 
@@ -227,7 +227,7 @@ cd python-docker-demo
 
 容器已预装 Python 和数据科学包。让我们运行分析脚本。
 
-- 在 VS Code 资源管理器中,导航到 `python/iris_analysis.py`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `python/iris_analysis.py`
 - 点击打开文件
 - 选择第一行:`import pandas as pd`
 - 按 `Shift+Enter` 在交互式 Python 终端中运行
@@ -241,7 +241,7 @@ cd python-docker-demo
 
 该项目包含演示 Streamlit 应用,用于创建交互式直方图。
 
-- 在 VS Code 资源管理器中,导航到 `python/app.py`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `python/app.py`
 - 点击打开文件
 - 打开新终端(**Terminal > New Terminal**)
 - 运行应用:
@@ -277,7 +277,7 @@ st.title("My First Python Docker App")
 
 ## 步骤 13:了解 Dockerfile(可选)
 
-- 在 VS Code 资源管理器中,导航到 `.devcontainer/Dockerfile`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `.devcontainer/Dockerfile`
 - 点击打开文件
 - 会看到完整配置
 
@@ -303,7 +303,7 @@ st.title("My First Python Docker App")
 
 通过终端中的 pip 安装的包(`pip install package`)是临时的,重新构建容器时会消失。要使包永久化,请将它们添加到 Dockerfile。
 
-- 在 VS Code 资源管理器中,导航到 `.devcontainer/Dockerfile`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `.devcontainer/Dockerfile`
 - 点击打开文件
 - 找到第 10 行:`RUN pip install --no-cache-dir ...`
 - 将 `plotly` 添加到列表中:

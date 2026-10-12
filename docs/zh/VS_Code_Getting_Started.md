@@ -84,7 +84,7 @@ This is a **demo project** for learning VS Code.
 
 Markdown 是一种简单的文本格式,使用 `#` 表示标题、`**` 表示粗体、`-` 表示列表等符号。它广泛用于文档编写以及与 ChatGPT 和 Claude 等 LLM 的交互。
 
-## 步骤 5:安装 Markdown Preview Extension
+## 步骤 5:安装 Markdown 预览扩展
 
 - 点击活动栏中的 **Extensions** 图标(方块图标)
 - 在搜索框中输入 `Markdown Preview Enhanced`
@@ -144,7 +144,7 @@ GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编�
 
 ## 故障排除
 
-- **预览未显示:** 确保已安装 Markdown Preview Enhanced extension,并且你打开了 `.md` 文件
+- **预览未显示:** 确保已安装 Markdown Preview Enhanced 扩展,并且你打开了 `.md` 文件
 - **Terminal 显示错误目录:** 点击终端面板中的垃圾桶图标,然后点击 **Terminal** → **New Terminal**
 - **Chat 菜单不可见:** 可能需要安装 GitHub Copilot Chat——点击 **Extensions** 图标,搜索"GitHub Copilot Chat",然后安装
 - **Extensions 无法工作:** 点击 **View** → **Command Palette**,输入"reload window",并选择 **Developer: Reload Window**
@@ -153,8 +153,8 @@ GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编�
 
 1. 在 VS Code 中打开文件夹
 2. 创建/编辑文件
-3. 使用 extensions 进行预览
-4. 使用 terminal 执行命令
+3. 使用扩展进行预览
+4. 使用终端执行命令
 5. 使用 AI 理解和改进代码
 6. 保存并重复
 
@@ -162,7 +162,7 @@ GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编�
 
 - **尝试其他文件类型:** 创建 `.html`、`.css`、`.js` 或 `.py` 文件,查看 VS Code 的语法高亮功能
 - **探索 AI 功能:** 让 AI 编写代码、修复错误或为你的项目提供改进建议
-- **安装更多 extensions:** 尝试"Prettier"进行自动格式化,或"GitLens"获取 Git 功能
+- **安装更多扩展:** 尝试"Prettier"进行自动格式化,或"GitLens"获取 Git 功能
 - **学习快捷键:** 点击 **Help** → **Keyboard Shortcuts Reference** 加快你的工作流程
 
 ---

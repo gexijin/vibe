@@ -45,19 +45,19 @@ Mac 系统:
 
 ## 步骤 3:在 VS Code 中打开文件夹
 Windows 系统:
-- 点击菜单栏中的**文件**,然后点击**打开文件夹**
+- 点击菜单栏中的 **File**(文件),然后点击 **Open Folder**(打开文件夹)
 - 导航到**文档**并选择 `test_claude` 文件夹
 - 点击**选择文件夹**。VS Code 将重新加载你的 `test_claude` 文件夹
 
 Mac 系统:
-- 在 VS Code 中,点击菜单栏中的**文件**,然后点击**打开文件夹**
+- 在 VS Code 中,点击菜单栏中的 **File**(文件),然后点击 **Open Folder**(打开文件夹)
 - 导航到并选择 `test_claude` 文件夹
 - 点击**打开**
-- 如果提示"你信任作者吗?",请点击**是,我信任作者**
+- 如果提示"Do you trust the authors?"(你信任作者吗?),请点击 **Yes, I trust the authors**
 
 ## 步骤 4:启动 Claude Code
 
-- 打开终端:点击 VS Code 主菜单中的**终端**,然后点击**新建终端**
+- 打开终端:点击 VS Code 主菜单中的 **Terminal**(终端),然后点击 **New Terminal**(新建终端)
 - 在终端面板中,输入:
   ```
   claude
@@ -96,8 +96,8 @@ Claude 搜索网络并将研究结果组织到名为 `general_research.md` 的�
 ## 步骤 6:阅读来源
 阅读研究文档并点击原始来源以验证信息:
 
-1. 点击左侧资源管理器面板中的 `general_research.md`
-2. 预览格式化的文档:右键点击 `general_research.md` 标签页并选择**打开预览**
+1. 点击左侧 Explorer(资源管理器)面板中的 `general_research.md`
+2. 预览格式化的文档:右键点击 `general_research.md` 标签页并选择 **Open Preview**(打开预览)
 3. 点击来源链接阅读原始文章和研究
 
 ## 步骤 7:头脑风暴你的角度
@@ -231,7 +231,7 @@ Claude 将添加摘要。查看并编辑以确保准确捕捉论文的精髓。
 
 查看 Claude 的更改。
 
-**导出到 Word:** 在 VS Code 中,右键点击 `paper.md` 标签页并选择**打开预览**。点击预览窗格内部,然后点击**编辑 > 全选**和**编辑 > 复制**。粘贴到 Microsoft Word 中——格式将被保留。
+**导出到 Word:** 在 VS Code 中,右键点击 `paper.md` 标签页并选择 **Open Preview**(打开预览)。点击预览窗格内部,然后点击 **Edit > Select All**(全选)和 **Edit > Copy**(复制)。粘贴到 Microsoft Word 中——格式将被保留。
 
 ## 步骤 17:为未来论文创建斜杠命令
 
@@ -260,13 +260,13 @@ LLM 没有记忆。对于每个响应,我们必须发送聊天会话中所有先
 阅读 paper.md 并给我诚实的反馈。
 ```
 
-Claude 将批评你的论文,而不会受到曾经撰写过它的影响。根据反馈进行最终修订。
+Claude 会点评你的论文,而不会因为论文是它自己写的而受到影响。根据反馈进行最终修订。
 
 
 ## 完整工作流程
 
 1. **创建文件夹** - 在文档中设置项目文件夹
-2. **启动 VS Code** - 打开 VS Code 并连接到 WSL(Windows)
+2. **启动 VS Code** - 打开 VS Code
 3. **在 VS Code 中打开** - 在 VS Code 中打开文件夹
 4. **启动 Claude Code** - 从终端启动 Claude Code(按照安装教程登录)
 5. **研究** - Claude 搜索关于你主题的一般信息

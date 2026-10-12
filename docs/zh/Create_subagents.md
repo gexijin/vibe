@@ -13,7 +13,7 @@ lang: "zh"
 - **Subagent** - 专门的AI工作者，拥有自己的目标、系统提示词和工具，能够自主完成任务
 - **Isolated Context（隔离上下文）** - subagent在自己独立的工作空间中运行，因此它的研究过程不会让你的主对话变得杂乱——只有最终结果会返回给你
 - **Skill** - 可重用的能力（如生成股票报告），subagent可以调用它来完成目标
-- **System Prompt** - 定义subagent做什么、如何为公司评分以及返回什么格式的指令
+- **System Prompt（系统提示词）** - 定义subagent做什么、如何为公司评分以及返回什么格式的指令
 - **关注点分离** - Skill收集数据；subagent使用这些数据做出决策
 
 ## 你需要准备什么
@@ -89,7 +89,7 @@ lang: "zh"
 /agents
 ```
 
-会看到Claude Code agents界面，显示现有的subagent（如果有的话）以及**创建**、**编辑**或**删除**subagent的选项。
+会看到Claude Code agents界面，显示现有的subagent（如果有的话）以及**Create**（创建）、**Edit**（编辑）或**Delete**（删除）subagent的选项。
 
 现在创建你的subagent：
 - 选择**Create new subagent**

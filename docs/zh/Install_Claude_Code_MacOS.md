@@ -19,7 +19,7 @@ Claude Code 是运行在 Terminal 中的 AI 编程助手，可以帮助你编写
 
 ## 核心概念
 
-- **Terminal**：Mac 内置的命令行应用，通过输入命令来操作系统。这是与 Claude Code 交互的方式。
+- **Terminal**：Mac 内置的命令行应用，通过输入命令（而不是点击按钮）来操作电脑。这是与 Claude Code 交互的方式。
 - **Claude Code**：运行在 Terminal 中的 AI 编程助手，可以回答问题、编写代码并帮助理解项目。
 
 ## 准备内容

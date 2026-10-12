@@ -256,9 +256,9 @@ claude
 
 ## 下一步
 
-- **配置 VS Code**：先按 [VS Code Getting Started](VS_Code_Getting_Started) 指南操作，再用 [Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win) 把它和 Claude Code 连接起来
-- **学习 Git 基础**：用 [Claude Code Git on Windows](Claude_Code_Git_Windows) 给项目加上版本控制
-- **动手做个项目**：跟着 [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code) 走一遍，看看 Claude Code 的实战效果
+- **配置 VS Code**：先按 [VS Code 入门指南](VS_Code_Getting_Started) 操作，再用 [在 Windows 上为 Claude Code 设置 VS Code](Claude_Code_in_VS_Code_Win) 把它和 Claude Code 连接起来
+- **学习 Git 基础**：用 [Windows 系统上的 Claude Code 版本控制](Claude_Code_Git_Windows) 给项目加上版本控制
+- **动手做个项目**：跟着 [使用 Claude Code 撰写研究论文](Writing_Research_Paper_Claude_Code) 走一遍，看看 Claude Code 的实战效果
 
 ## 故障排除
 

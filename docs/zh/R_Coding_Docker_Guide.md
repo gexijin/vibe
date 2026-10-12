@@ -17,8 +17,8 @@ lang: "zh"
 
 ## 准备工作
 
-- 已完成 [R Coding in VS Code](./R_Coding_VS_Code_Guide)
-- 已完成 [GitHub Desktop Basics](./Github_desktop)
+- 已完成 [在 VS Code 中运行 R](./R_Coding_VS_Code_Guide)
+- 已完成 [GitHub Desktop 基础](./Github_desktop)
 - 20-25 分钟
 
 ## 步骤 1:安装 Docker Desktop
@@ -53,7 +53,7 @@ lang: "zh"
 - VS Code 中,点击 **File > Open Folder**
 - 导航到刚克隆的 `vibe` 文件夹
 - 点击 **Select Folder**
-- 资源管理器侧边栏会显示项目文件
+- 资源管理器(Explorer)侧边栏会显示项目文件
 
 ## 步骤 5:在容器中重新打开
 

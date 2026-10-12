@@ -6,13 +6,13 @@ lang: "zh"
 
 # 使用 Claude Code 和 Docker 进行 Python Vibe 编程
 
-你曾经逐行输入 Python 代码。但如果你只需用简单的英语描述想要的功能,代码就能自动生成呢?Vibe 编程就像与计算机对话——你描述结果,Claude Code 构建代码,你测试并完善。这不是魔法,而是一种新的工作方式:你负责愿景,AI 负责实现。本教程将教你如何仅用自然语言请求来分析经典的鸢尾花数据集。
+你曾经逐行输入 Python 代码。但如果你只需用日常语言描述想要的功能,代码就能自动生成呢?Vibe 编程就像与计算机对话——你描述结果,Claude Code 构建代码,你测试并完善。这不是魔法,而是一种新的工作方式:你负责愿景,AI 负责实现。本教程将教你如何仅用自然语言请求来分析经典的鸢尾花数据集。
 
 ## 核心概念
 
 - **[Vibe Coding](https://www.ibm.com/think/topics/vibe-coding)** - 用自然语言描述想要的功能,根据结果迭代,而非逐行编写代码
 - **[Claude Code](https://code.claude.com/)** - AI 编程助手,根据你的自然语言请求编写、调试和重构代码
-- **[Iris Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - 经典数据集,包含三个物种 150 朵鸢尾花的测量数据
+- **[鸢尾花数据集(Iris Dataset)](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - 经典数据集,包含三个物种 150 朵鸢尾花的测量数据
 - **迭代完善** - Vibe 编程的核心模式:描述 → 测试 → 完善 → 提交可用版本
 
 ## 准备工作
@@ -260,4 +260,4 @@ Vibe 编程在迭代时更显威力。尝试通过描述来添加功能:
 
 ---
 
-由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 December 11, 2025。
+由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 2025 年 12 月 11 日。
