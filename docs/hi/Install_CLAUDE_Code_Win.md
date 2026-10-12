@@ -157,7 +157,7 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
    ```
 - उपलब्ध मॉडल [openrouter.ai/models](https://openrouter.ai/models) पर ब्राउज़ करें
 - फ्री टियर आपको प्रतिदिन 50 API रिक्वेस्ट देता है
-- अधिक जानकारी के लिए [आधिकारिक OpenRouter गाइड](https://openrouter.ai/docs/guides/claude-code-integration) देखें
+- अधिक जानकारी के लिए [आधिकारिक OpenRouter गाइड](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) देखें
 
 ### विकल्प D. Azure Foundry के ज़रिए Anthropic API का उपयोग करें
 

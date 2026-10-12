@@ -124,7 +124,7 @@ Explorer जाँचें - `notes` फ़ोल्डर दिखाई द�
 
 ## चरण 8: VS Code में AI एजेंट का उपयोग करें (वैकल्पिक)
 
-VS Code में [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat) शामिल है, एक AI असिस्टेंट जो कोड को समझा, लिख और डिबग कर सकता है।
+VS Code में [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview) शामिल है, एक AI असिस्टेंट जो कोड को समझा, लिख और डिबग कर सकता है।
 
 - `README.md` फ़ाइल खोलें (या अपने प्रोजेक्ट की कोई अन्य फ़ाइल)
 - टाइटल बार में **Chat** → **Open Chat** पर क्लिक करें (या Windows/Linux पर `Ctrl+Alt+I`, Mac पर `Ctrl+Cmd+I` दबाएँ)
