@@ -96,6 +96,7 @@ lang: "hi"
 - **Project** चुनें
 - **Generate with Claude (recommended)** चुनें
 - निर्देशों के लिए यह पेस्ट करें:
+
   ```
   stock-picker नाम के एक नए Subagent के लिए एक markdown फ़ाइल बनाओ:
   - यह दो या उससे अधिक स्टॉक लेता है
