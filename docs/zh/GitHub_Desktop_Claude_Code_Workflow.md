@@ -65,6 +65,7 @@ lang: "zh"
 按照安装教程登录你的 Claude 订阅（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）。登录后，你将看到欢迎消息和 Claude Code 提示符。
 
 - 输入这个请求：
+
   ```
   创建一个简单的倒计时应用，保存为单个文件 timer.html。
   需要包含：

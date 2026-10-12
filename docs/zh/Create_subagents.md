@@ -96,6 +96,7 @@ lang: "zh"
 - 选择**Project**
 - 选择**Generate with Claude (recommended)**
 - 粘贴以下指令：
+
   ```
   为名为 stock-picker 的新 subagent 创建一个 markdown 文件：
   - 它接受两只或更多股票
