@@ -107,7 +107,7 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 
 - 按 Enter
 - Claude 会添加这两个图表
-- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在 File Explorer 或 Finder 中双击它），或者把它上传到 Google Sheets，然后检查两个工作表
+- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在文件资源管理器（File Explorer）或访达（Finder）中双击它），或者把它上传到 Google Sheets，然后检查两个工作表
 - VS Code 中的 Spreadsheet Viewer 不会显示图表——这是正常的，图表仍然在文件里
 - 在让 Claude 做更多修改之前，先在 Excel 或 LibreOffice 中关闭这个文件
 
@@ -167,7 +167,7 @@ Vibe 编程的优势在于迭代。试着通过描述来添加新功能：
 
 - “在‘汇总’工作表中添加一个‘储蓄目标’行，显示距离每月 $500 储蓄目标的进度”
 - “添加第四个工作表，等我补充更多月份的数据后，用它显示同比对比”
-- “把饼图的颜色改成蓝灰色主题”
+- “把饼图的颜色改成蓝色和灰色的配色”
 - “为每个公式添加注释说明，让我能学习它们的作用”
 - “再创建一个名为 household_budget.xlsx 的工作簿，为四口之家设计，包含更多类别”
 

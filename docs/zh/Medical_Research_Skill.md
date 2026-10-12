@@ -37,7 +37,7 @@ lang: "zh"
   ```
 
 **Mac:**
-- 打开 **Terminal**(在应用程序 > 实用工具中)
+- 打开**终端**(Terminal,在应用程序 > 实用工具中)
 - 输入以下命令:
   ```bash
   cd ~/Documents
@@ -139,10 +139,10 @@ Claude 会自动:
 
 **Windows:**
 - 打开 **文件资源管理器**,导航到 `C:\Users\YOUR_USERNAME\Documents\test_claude`
-- 右键单击文件夹并选择 **使用 Code 打开**
+- 右键单击文件夹并选择 **通过 Code 打开**(Open with Code)
 
 **Mac:**
-- 打开 **Finder**,导航到 `Documents/test_claude`
+- 打开**访达**(Finder),导航到 `Documents/test_claude`
 - 右键单击文件夹并选择 **使用 Visual Studio Code 打开**
 - 或者直接从 Terminal 输入 ``` code . ```
 
@@ -154,7 +154,7 @@ Claude 会自动:
 
 **注意:** 该 skill 是完全独立的——所有代码和文档都存放在一个文件夹中。
 
-## 步骤 11:从 Anthropic 的存储库安装 Skill
+## 步骤 10:从 Anthropic 的存储库安装 Skill
 
 Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使用。
 
@@ -173,7 +173,7 @@ Anthropic 维护了一个预构建 skill 的存储库,可以立即安装和使�
 
 **Anthropic 存储库中的其他可用 skill:**
 - 在 [github.com/anthropics/skills](https://github.com/anthropics/skills) 浏览完整目录
-- 询问 Claude "What skills are available in the Anthropic repository?" 查看当前列表
+- 询问 Claude "Anthropic 存储库中有哪些可用的 skill?" 查看当前列表
 
 ## 下一步
 

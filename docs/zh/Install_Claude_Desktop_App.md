@@ -6,15 +6,15 @@ lang: "zh"
 
 # 安装 Claude Desktop 应用
 
-Claude Desktop 是一款适用于 Windows 和 Mac 的独立聊天应用。打开它，输入一条消息，Claude 就会回答——不需要 Terminal，也不需要输入命令。无论是日常提问、查资料还是写作，它都是和 Claude 聊天的好方式。
+Claude Desktop 是一款适用于 Windows 和 Mac 的独立聊天应用。打开它，输入一条消息，Claude 就会回答——不需要终端，也不需要输入命令。无论是日常提问、查资料还是写作，它都是和 Claude 聊天的好方式。
 
-它和 **Claude Code** 不同。Claude Code 是本站其他教程中使用的工具，运行在 Terminal 中，帮助你在项目文件夹里编写和修改代码。Claude Desktop 则是一个通用的聊天窗口。两者可以同时安装；在付费套餐中，你甚至可以直接在 Claude Desktop 里打开 Claude Code。
+它和 **Claude Code** 不同。Claude Code 是本站其他教程中使用的工具，运行在终端中，帮助你在项目文件夹里编写和修改代码。Claude Desktop 则是一个通用的聊天窗口。两者可以同时安装；在付费套餐中，你甚至可以直接在 Claude Desktop 里打开 Claude Code。
 
 ## 核心概念
 
 - **Claude Desktop**：一款适用于 Windows 和 Mac 的原生应用，你可以像使用聊天软件一样直接和 Claude 对话。
 - **Claude.ai 账户**：你用来登录的账户——和你在 [claude.ai](https://claude.ai) 上使用的是同一个。免费和付费套餐都可以使用。
-- **Claude Code**：本站其他教程介绍的、基于 Terminal 的编程助手。它需要单独安装——请参阅[在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win.md)或[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS.md)。
+- **Claude Code**：本站其他教程介绍的、基于终端的编程助手。它需要单独安装——请参阅[在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win.md)或[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS.md)。
 
 ## 你需要准备的内容
 
@@ -61,7 +61,7 @@ Claude Desktop 是一款适用于 Windows 和 Mac 的独立聊天应用。打开
 Claude Desktop 不只是用来聊天。根据你的套餐不同，还可以使用：
 
 - **Chat（聊天）**——所有套餐都可用，包括免费套餐
-- **Claude Code**——Pro、Max、Team 和 Enterprise 套餐可以直接在 Claude Desktop 中启动 Claude Code，无需另外打开 Terminal
+- **Claude Code**——Pro、Max、Team 和 Enterprise 套餐可以直接在 Claude Desktop 中启动 Claude Code，无需另外打开终端
 - **Claude Cowork**——付费套餐可用，让 Claude 在可以访问本地文件的情况下完成多步骤任务
 - **Desktop Extensions（桌面扩展）**——一项高级功能，通过可安装扩展的目录将 Claude 连接到本地应用和文件；入门时不需要
 
@@ -69,7 +69,7 @@ Claude Desktop 不只是用来聊天。根据你的套餐不同，还可以使�
 
 ## 下一步
 
-- [在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win.md)或[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS.md)——安装本站其他教程中使用的、基于 Terminal 的编程助手
+- [在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win.md)或[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS.md)——安装本站其他教程中使用的、基于终端的编程助手
 - [Claude Code 基本操作](./Claude_Code_Basic_Operations.md)——安装好 Claude Code 后，学习基本用法
 - [什么是 Anthropic 和 Claude？](./What_Is_Anthropic_And_Claude.md)——如果你刚接触 Claude，这是一篇简短的入门介绍
 

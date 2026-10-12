@@ -24,9 +24,9 @@ lang: "zh"
 
 选择以下方法之一：
 
-- **Spotlight：** 按 `Command (⌘) + Space`，输入 `Terminal`，按 Enter
-- **Finder：** 打开 **应用程序** > **实用工具** > **Terminal**
-- **Launchpad：** 点击 Dock 中的 **Launchpad**，搜索 `Terminal`
+- **Spotlight：** 按 `Command (⌘) + Space`，输入 `终端`（或 `Terminal`），按 Enter
+- **访达（Finder）：** 打开 **应用程序** > **实用工具** > **终端**（Terminal）
+- **启动台（Launchpad）：** 点击 Dock 中的 **启动台**，搜索 `终端`（或 `Terminal`）
 
 你会看到一个以 `$` 或 `%` 结尾的命令提示符。
 
@@ -39,7 +39,7 @@ Mac 通常已预装 Git。检查一下：
   git --version
   ```
 
-**如果看到版本号**（如 `git version 2.39.0`），Git 已安装——跳到步骤 4。
+**如果看到版本号**（如 `git version 2.39.0`），Git 已安装——跳到步骤 3。
 
 **如果看到"command not found"** 或弹出窗口要求安装开发者工具：
 - 点击弹出窗口中的 **安装**，或运行：
@@ -113,6 +113,7 @@ Claude 在文件夹中初始化 Git 仓库（需要 2-5 秒）。现在你有版
 ## 步骤 8：构建计时器应用
 
 - 在 Claude Code 中，输入：
+
   ```
   创建一个简单的倒计时器应用，放在一个名为 timer.html 的文件中。
   它应该包含：
@@ -125,12 +126,12 @@ Claude 创建包含 CSS 和 JavaScript 代码的 `timer.html`（需要 10-30 秒
 
 ## 步骤 9：测试计时器
 
-- 打开 Finder
-- 导航到 **Documents** > **test_claude**
+- 打开**访达**（Finder）
+- 导航到 **文稿**（Documents）> **test_claude**
 - 双击 `timer.html` 在浏览器中打开
 - 试用计时器：
   - 在输入框中输入 `1`
-  - 点击 **Start**
+  - 点击 **开始**（或 **Start**）按钮
   - 观看倒计时
 
 **如果出现问题：** 在 Claude Code 中描述错误：`我看到这个错误：[描述发生了什么]。你能修复它吗？`
@@ -156,10 +157,10 @@ Claude 将：
   在顶部添加两个按钮。点击它们时自动启动 1 分钟和 5 分钟的计时器。
   ```
 - 刷新浏览器标签页（或按 `Command (⌘) + R`）
-- 测试：点击 **5 min** 按钮
+- 测试：点击 **5 分钟**（或 **5 min**）按钮
 - 如果正常工作，提交更改：
   ```
-  Save these changes.
+  保存这些更改
   ```
 
 我们创建了第二个保存点。这个版本有两个按钮正常工作。
@@ -171,7 +172,7 @@ Claude 将：
   添加一个 15 分钟按钮
   ```
 - 刷新浏览器标签页（按 `Command (⌘) + R`）
-- 测试：点击 **15 min** 按钮
+- 测试：点击 **15 分钟**（或 **15 min**）按钮
 
 **在本教程中：** 假装 15 分钟按钮工作不正常。先不要提交——我们将练习丢弃不良更改。
 
@@ -229,7 +230,7 @@ Claude 以可读格式显示你的提交。你会看到：
 
 ## 步骤 17：检查代码
 
-- 在显示应用的浏览器中，右键点击并选择 **View Page Source**（或按 `Option (⌥) + Command (⌘) + U`）
+- 在显示应用的浏览器中，右键点击并选择 **查看网页源代码**（View Page Source）（或按 `Option (⌥) + Command (⌘) + U`）
 - 你可以看到源代码
 - 在 Claude Code 中询问：
   ```
@@ -261,7 +262,7 @@ Claude 以可读格式显示你的提交。你会看到：
 ## 故障排除
 
 - **"not a git repository" 错误：** 确保你在 test_claude 文件夹中（`cd ~/Documents/test_claude`）
-- **在 Finder 中找不到 timer.html：** 文件位于 `/Users/YOUR_USERNAME/Documents/test_claude/timer.html`
+- **在访达中找不到 timer.html：** 文件位于 `/Users/YOUR_USERNAME/Documents/test_claude/timer.html`
 - **Git 命令不起作用：** 确保你完成了步骤 2 并安装了 Git
 - **计时器不工作：** 打开浏览器控制台（右键点击页面，选择 **检查**，然后点击 **Console** 标签），复制任何红色错误信息，粘贴给 Claude
 

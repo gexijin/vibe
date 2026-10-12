@@ -37,7 +37,7 @@ lang: "zh"
   ```
 
 **Mac：**
-- 打开**Terminal**（应用程序 > 实用工具）
+- 打开**终端**（Terminal，位于应用程序 > 实用工具）
 - 输入：
   ```bash
   cd ~/Documents/test_claude

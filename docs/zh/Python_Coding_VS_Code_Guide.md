@@ -220,7 +220,7 @@ streamlit run app.py
 
 - **pip install 失败**:确保虚拟环境已激活(终端显示 `(.venv)`)。Linux 上可能需先安装 `python3-venv`。Windows 上检查杀毒软件是否阻止 pip。
 
-- **Streamlit 应用无法运行**:确保虚拟环境中已安装 streamlit(`pip list | grep streamlit`)。检查终端错误消息。确保端口 8501 未被占用。
+- **Streamlit 应用无法运行**:确保虚拟环境中已安装 streamlit(`pip show streamlit`)。检查终端错误消息。确保端口 8501 未被占用。
 
 ## 工作流程总结
 

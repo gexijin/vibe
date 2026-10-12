@@ -40,15 +40,17 @@ lang: "zh"
 ## 步骤 3:创建 Python 项目文件夹
 
 - 在计算机上创建名为 `python-docker-demo` 的新文件夹
-- 在其中创建名为 `.devcontainer` 的子文件夹
-- 在其中创建名为 `python` 的子文件夹
+- 在 VS Code 中,点击 **File > Open Folder**
+- 导航到刚创建的 `python-docker-demo` 文件夹
+- 点击 **Select Folder**(Windows)或 **Open**(Mac)
+- 在 Explorer(资源管理器)侧边栏中,将鼠标悬停在 **PYTHON-DOCKER-DEMO** 标题上,点击 **New Folder** 图标,将文件夹命名为 `.devcontainer`
+- 点击资源管理器侧边栏中 `.devcontainer` 下方的空白处,让任何项目都不被选中,然后再次点击 **New Folder** 图标,将文件夹命名为 `python`
 - 结构应如下:`python-docker-demo/.devcontainer/` 和 `python-docker-demo/python/`
+
+我们在 VS Code 中创建这些文件夹,因为 Mac 的访达(Finder)不允许文件夹名称以点(`.`)开头。
 
 ## 步骤 4:创建 Dockerfile
 
-- 在 VS Code 中,点击 **File > Open Folder**
-- 导航到刚创建的 `python-docker-demo` 文件夹
-- 点击 **Select Folder**
 - 在资源管理器侧边栏中,右键点击 `.devcontainer` 文件夹
 - 点击 **New File**
 - 命名为 `Dockerfile`
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -138,7 +140,7 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - 点击 **File > Save**
@@ -201,10 +203,10 @@ pwd
 - 列出文件:
 
 ```bash
-ls
+ls -a
 ```
 
-你将看到创建的文件夹:`.devcontainer/`、`python/` 等。
+你将看到创建的文件夹:`.devcontainer/`、`python/` 等。(`-a` 还会显示名称以点开头的文件夹)
 
 - 尝试向上一级目录:
 
@@ -225,7 +227,7 @@ cd python-docker-demo
 
 容器已预装 Python 和数据科学包。让我们运行分析脚本。
 
-- 在 VS Code 资源管理器中,导航到 `python/iris_analysis.py`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `python/iris_analysis.py`
 - 点击打开文件
 - 选择第一行:`import pandas as pd`
 - 按 `Shift+Enter` 在交互式 Python 终端中运行
@@ -233,13 +235,13 @@ cd python-docker-demo
 - 继续使用 `Shift+Enter` 逐行或逐块运行
 - 运行 `print(df.head())` 时,会在终端看到前 5 行
 - 运行 `print(df.describe())` 时,会看到统计摘要
-- 运行直方图代码时,将打开绘图窗口显示可视化
+- 运行直方图代码时,图表会保存为项目文件夹中的 `iris_histogram.png`(容器没有屏幕,所以图表无法在窗口中打开)- 在资源管理器侧边栏中点击该文件即可查看
 
 ## 步骤 11:运行 Streamlit 应用
 
 该项目包含演示 Streamlit 应用,用于创建交互式直方图。
 
-- 在 VS Code 资源管理器中,导航到 `python/app.py`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `python/app.py`
 - 点击打开文件
 - 打开新终端(**Terminal > New Terminal**)
 - 运行应用:
@@ -275,7 +277,7 @@ st.title("My First Python Docker App")
 
 ## 步骤 13:了解 Dockerfile(可选)
 
-- 在 VS Code 资源管理器中,导航到 `.devcontainer/Dockerfile`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `.devcontainer/Dockerfile`
 - 点击打开文件
 - 会看到完整配置
 
@@ -301,14 +303,14 @@ st.title("My First Python Docker App")
 
 通过终端中的 pip 安装的包(`pip install package`)是临时的,重新构建容器时会消失。要使包永久化,请将它们添加到 Dockerfile。
 
-- 在 VS Code 资源管理器中,导航到 `.devcontainer/Dockerfile`
+- 在 VS Code 的 Explorer(资源管理器)中,导航到 `.devcontainer/Dockerfile`
 - 点击打开文件
 - 找到第 10 行:`RUN pip install --no-cache-dir ...`
-- 将 `scikit-learn` 添加到列表中:
+- 将 `plotly` 添加到列表中:
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - 点击 **File > Save**
@@ -318,8 +320,8 @@ RUN pip install --no-cache-dir \
 - 要验证,打开 Python 终端并输入:
 
 ```python
-import sklearn
-print(sklearn.__version__)
+import plotly
+print(plotly.__version__)
 ```
 
 如果显示版本号且没有错误,则包已永久安装。
@@ -327,7 +329,7 @@ print(sklearn.__version__)
 ## 下一步
 
 - **创建新的 Python 脚本** - 在 `python/` 文件夹中创建新的 `.py` 文件,使用内置数据集编写数据分析代码或加载自己的 CSV 文件
-- **安装 Python 包** - 通过编辑 Dockerfile(第 9 行)并重新构建容器来添加需要的包
+- **安装 Python 包** - 通过编辑 Dockerfile(第 10 行)并重新构建容器来添加需要的包
 - **探索数据科学** - 尝试使用 pandas 进行数据处理,使用 matplotlib 或 seaborn 进行可视化
 - **构建 Web 应用** - 使用 Streamlit 或 Flask 创建交互式仪表板
 

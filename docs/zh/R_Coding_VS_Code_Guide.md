@@ -31,21 +31,21 @@ lang: "zh"
 
 - **macOS**:
   - 从 [CRAN macOS](https://cran.r-project.org/bin/macosx/) 下载并运行 .pkg 安装程序
-  - 记住使用的是 Intel(`/Library/Frameworks/R.framework/Resources/bin/R`)还是 Homebrew 的 Apple Silicon(`/opt/homebrew/bin/R`)
+  - 记住使用的是 Intel(`/Library/Frameworks/R.framework/Resources/bin/R`)还是通过 Homebrew 安装 R 的 Apple Silicon(`/opt/homebrew/bin/R`)
   - 如是更新,新版本会替换旧版本
 
 - **Linux**:
   - 使用包管理器(如 Ubuntu 上用 `sudo apt install r-base`)
   - 或遵循 [CRAN Linux](https://cran.r-project.org/bin/linux/) 说明
 
-步骤 3 中会配置 VS Code 以找到 R,所以如果 `R --version` 在终端还不起作用,不必担心。
+步骤 4 中会配置 VS Code 以找到 R,所以如果 `R --version` 在终端还不起作用,不必担心。
 
 ## 步骤 2:在 VS Code 中安装 R 扩展
 
 - 打开 VS Code
-- 点击左侧边栏的**扩展**图标
-- 搜索 `REditorSupport.r`,点击 REditorSupport 的 R 扩展上的**安装**
-- 搜索 `Posit.shiny`,点击 Posit 的 Shiny 扩展上的**安装**
+- 点击左侧边栏的 **Extensions**(扩展)图标
+- 搜索 `REditorSupport.r`,点击 REditorSupport 的 R 扩展上的 **Install**
+- 搜索 `Posit.shiny`,点击 Posit 的 Shiny 扩展上的 **Install**
 
 ## 步骤 3:查找你的 R 安装路径
 
@@ -89,9 +89,9 @@ which R
 ## 步骤 4:配置 VS Code 以找到 R
 
 - VS Code 中,点击左下角的**齿轮图标**
-- 从菜单选择**设置**
+- 从菜单选择 **Settings**(设置)
 - 在顶部搜索栏,输入 `r.rpath.windows`(Windows)、`r.rpath.mac`(macOS)或 `r.rpath.linux`(Linux)
-- 会看到该设置出现。点击设置下方的**在 settings.json 中编辑**
+- 会看到该设置出现。点击设置下方的 **Edit in settings.json**(在 settings.json 中编辑)
 - settings.json 文件会打开
 - 在花括号 `{}` 内为你的平台添加相应配置
 
@@ -121,12 +121,12 @@ which R
 "r.rpath.linux": "/usr/bin/R",
 ```
 
-- 点击**文件 > 保存**保存文件
+- 点击 **File > Save** 保存文件
 - **完全重启 VS Code** 以使更改生效
 
 ## 步骤 5:安装所需的 R 包
 
-- VS Code 中,点击顶部菜单的**查看**,然后选择**命令面板**
+- VS Code 中,点击顶部菜单的 **View**,然后选择 **Command Palette**
 - 输入 `R: Create R Terminal` 并选择
 - R 控制台会出现在底部终端面板
   - 应该会看到 R 启动并显示版本信息
@@ -147,9 +147,9 @@ install.packages("shiny")
 ## 步骤 6:创建你的 R 项目
 
 - 在计算机上创建新文件夹(如 `my-r-project`)
-- VS Code 中,点击**文件 > 打开文件夹**选择你的新文件夹
-- 点击顶部菜单的**文件 > 新建文件**
-- 点击**文件 > 保存**将文件保存为 `analysis.R`
+- VS Code 中,点击 **File > Open Folder** 选择你的新文件夹
+- 点击顶部菜单的 **File > New File**
+- 点击 **File > Save** 将文件保存为 `analysis.R`
 
 ## 步骤 7:编写你的第一个 R 脚本
 
@@ -168,7 +168,7 @@ summary(iris)
 hist(iris$Sepal.Length)
 ```
 
-- 点击**文件 > 保存**保存文件
+- 点击 **File > Save** 保存文件
 
 ## 步骤 8:交互式运行 R 代码
 
@@ -179,7 +179,7 @@ hist(iris$Sepal.Length)
 
 ## 步骤 9:创建一个简单的 Shiny 应用
 
-- 在项目文件夹创建新文件:**文件 > 新建文件**
+- 在项目文件夹创建新文件:**File > New File**
 - 保存为 `app.R`
 - 输入以下代码:
 
@@ -231,12 +231,12 @@ shinyApp(ui = ui, server = server)
 - 鼠标悬停在现有代码中的单词 `mean` 上
 - 会出现弹出窗口,显示函数文档和使用示例
 - 尝试悬停在 `lm`、`summary` 或 `plot` 上查看文档
-- 输入 `data$`,观察 VS Code 建议列名(`x` 和 `y`)
+- 输入 `iris$`,观察 VS Code 建议列名(`Sepal.Length`、`Species` 等)
 
 ## 步骤 11:尝试更多功能
 
 - **Markdown 集成**:创建 R Markdown 文件(`.Rmd`)以混合代码、输出和文本
-- **代码格式化**:在 R 脚本中右键选择**格式化文档**以自动格式化代码
+- **代码格式化**:在 R 脚本中右键选择 **Format Document**(格式化文档)以自动格式化代码
 - **调试**:点击行号左侧设置断点,然后在调试模式下运行代码
 - **Git 集成**:使用 VS Code 内置 Git 功能对 R 项目进行版本控制
 
@@ -259,7 +259,7 @@ shinyApp(ui = ui, server = server)
 
 - **settings 中的 R 版本不匹配**:如果更新了 R 但 VS Code 仍在使用旧版本,更新 settings.json 中 `r.rpath` 配置的版本号以匹配新 R 安装(参见步骤 3 找到当前安装路径)。
 
-- **代码补全不起作用**:确保 languageserver 已成功安装(步骤 5)。安装后重启 VS Code。打开 R 文件后等 10-20 秒让语言服务器初始化。检查输出面板(查看 > 输出 > R Language Server)中的错误。
+- **代码补全不起作用**:确保 languageserver 已成功安装(步骤 5)。安装后重启 VS Code。打开 R 文件后等 10-20 秒让语言服务器初始化。检查输出面板(View > Output > R Language Server)中的错误。
 
 - **图形未显示**:图形会使用 R 默认图形设备在单独窗口打开。确保有可用的窗口管理器。某些系统上,可能需要安装 X11(macOS)或确保启用了图形支持。
 

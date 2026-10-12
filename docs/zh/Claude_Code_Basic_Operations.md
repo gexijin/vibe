@@ -25,7 +25,7 @@ lang: "zh"
 ## 步骤1：打开你的Terminal
 
 - **Windows**：按Windows键，输入`PowerShell`，然后按Enter打开PowerShell
-- **Mac**：按`Cmd+Space`，输入`Terminal`，然后按Enter
+- **Mac**：按`Cmd+Space`，输入`终端`（或`Terminal`），然后按Enter
 
 **注意：** 如果你在Windows安装教程中选择了可选的WSL/Ubuntu方式，而不是原生安装，请改为打开**Ubuntu**应用，并在下面的步骤中使用Linux风格的路径（例如`/mnt/c/Users/YourName/...`）。
 
@@ -47,7 +47,7 @@ cd data_projects
 - 在浏览器访问[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)
 - 点击右上方的绿色**Code**按钮
 - 点击**Download ZIP**
-- 将ZIP文件解压到你的Downloads文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。
+- 将ZIP文件解压到你的“下载”（Downloads）文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。
 - 在Terminal中导航到解压后的文件夹：
   ```
   cd ~/Downloads/data_projects
@@ -93,7 +93,7 @@ Claude会检查Git历史（如果可用）并告诉你最近的提交。
 
 ## 步骤5：基本斜杠命令
 
-输入`/`然后按Enter，查看所有可用命令。以下是最重要的几个：
+输入`/`即可查看所有可用命令。以下是最重要的几个：
 
 **查看所有命令：**
 
@@ -169,7 +169,7 @@ Claude将创建包含项目摘要的文件。该文件保存在项目根目录�
 
 Claude将读取该笔记本并解释它的作用、工作原理以及代码实现。这会将文件带入上下文。
 
-如果你在VS Code中使用Claude Code并已安装Claude Code扩展，只需打开文件即可将其添加到上下文。你会在命令窗口右下角看到`In Nested_Pie_Chart.ipynb`。此时Claude就知道你在谈论这个文件。
+如果你在VS Code中使用Claude Code并已安装Claude Code扩展，只需打开文件即可将其添加到上下文。你会在Claude Code窗口右下角看到`In Nested_Pie_Chart.ipynb`。此时Claude就知道你在谈论这个文件。
 
 此外，你可以选择几行代码，Claude会显示**3 lines selected**（已选择3行）。你可以要求Claude快速修改这些行或提出问题。因此，强烈建议在VS Code中使用Claude Code。
 

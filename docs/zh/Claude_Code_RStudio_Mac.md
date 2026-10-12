@@ -22,7 +22,7 @@ lang: "zh"
 
 ## 步骤 1：在 Mac 上打开 RStudio
 
-- 点击 Dock 中的 **Launchpad**（网格点图标）
+- 点击 Dock 中的 **启动台**（Launchpad，网格点图标）
 - 在搜索框中输入 `RStudio`
 - 点击 **RStudio** 打开
 - RStudio 窗口打开，显示多个窗格
@@ -34,7 +34,7 @@ lang: "zh"
 - 选择 **New Project**
 - 在 **Directory name** 中输入：`test_claude`
 - 点击"Create project as subdirectory of:"旁边的 **Browse**
-- 导航到 **Documents** 文件夹
+- 导航到 **文稿**（Documents）文件夹
 - 点击 **Open**
 - 点击 **Create Project**
 - RStudio 创建项目并切换到此项目
@@ -63,9 +63,9 @@ summary(iris)
 
 ## 步骤 5：打开 Terminal
 
-- 打开 **Finder** 并点击左侧边栏中的 **Applications**
-- 打开 **Utilities** 文件夹
-- 双击 **Terminal**
+- 打开 **访达**（Finder）并点击左侧边栏中的 **应用程序**（Applications）
+- 打开 **实用工具**（Utilities）文件夹
+- 双击 **终端**（Terminal）
 - Terminal 窗口打开
 
 ## 步骤 6：导航到你的项目文件夹
@@ -80,7 +80,7 @@ summary(iris)
   ```
 - 你应看到列出的 `iris.R` 和 `test_claude.Rproj`
 
-**提示：** 如不确定确切路径，可将文件夹从 Finder 拖放到 Terminal 中，完整路径将自动出现。
+**提示：** 如不确定确切路径，可将文件夹从访达（Finder）拖放到 Terminal 中，完整路径将自动出现。
 
 ## 步骤 7：启动 Claude Code
 
@@ -177,7 +177,7 @@ summary(iris)
 - **RStudio 不显示文件更改** - 点击 **File > Reopen with Encoding > UTF-8** 手动重新加载文件，或关闭并重新打开文件
 - **"claude: command not found"** - 确保完成 [安装指南](./Install_Claude_Code_MacOS)，尝试打开新 Terminal 窗口，或完全关闭 Terminal（**Command (⌘) + Q**）并重新打开
 - **图表未出现** - 确保已安装 ggplot2，如需要在 RStudio Console 中运行 `install.packages("ggplot2")`
-- **"No such file or directory"** - 检查步骤 6 中是否正确输入路径，尝试使用拖放：在输入 `cd ` 后（带空格），将 test_claude 文件夹从 Finder 拖到 Terminal
+- **"No such file or directory"** - 检查步骤 6 中是否正确输入路径，尝试使用拖放：在输入 `cd ` 后（带空格），将 test_claude 文件夹从访达（Finder）拖到 Terminal
 - **Claude Code 首次请求较慢** - 等待 30-60 秒让 Claude 初始化，后续请求会更快
 
 ## Mac 键盘快捷键
@@ -210,4 +210,4 @@ summary(iris)
 
 ---
 
-由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 2024 年 12 月 11 日。
+由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 2025 年 12 月 11 日。

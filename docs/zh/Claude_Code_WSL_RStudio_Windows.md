@@ -12,7 +12,7 @@ lang: "zh"
 
 - **PowerShell** - Windows内置的命令行工具，本教程用它在RStudio旁边运行Claude Code
 - **混合工作流** - RStudio运行代码并显示结果；Claude Code编写和改进代码
-- **共享文件** - 两个工具在完全相同的项目文件夹上工作，一方的更改会立即在另一方中显示
+- **共享文件** - 两个工具在完全相同的项目文件夹上工作，一方的更改会在另一方中显示
 
 ## 所需准备
 
@@ -35,8 +35,8 @@ lang: "zh"
 - 选择**New Project**
 - 在**Directory name**中输入：`test_claude`
 - 点击"Create project as subdirectory of:"旁边的**Browse**
-- 导航到**Documents**文件夹
-- 点击**Select Folder**
+- 导航到**文档**（Documents）文件夹
+- 点击**选择文件夹**（Select Folder）
 - 点击**Create Project**
 - RStudio创建项目并切换到该项目
 
@@ -176,7 +176,7 @@ summary(iris)
 - **RStudio不显示文件更改** - 点击**File > Reopen with Encoding > UTF-8**手动重新加载文件。
 - **"claude: command not found"** - 确保已完成安装指南。尝试打开一个新的PowerShell窗口。
 - **图表未显示** - 确保已安装ggplot2。如需要，在RStudio Console中运行`install.packages("ggplot2")`。
-- **错误："cannot change working directory"** - Windows路径包含空格。在步骤6中，将路径用引号括起来：`cd "~\Documents\Your Name\test_claude"`
+- **错误："cannot change working directory"** - Windows路径包含空格。在步骤6中，将路径用引号括起来，例如：`cd "C:\Users\Your Name\Documents\test_claude"`
 - **Claude Code首次请求时很慢** - 等待30-60秒让Claude初始化。后续请求会更快。
 - **改用WSL？** - 如果你选择了可选的WSL/Ubuntu方式，请在步骤5-16中打开**Ubuntu**应用而不是PowerShell，并使用`cd /mnt/c/Users/YourUsername/Documents/test_claude`导航到你的项目
 

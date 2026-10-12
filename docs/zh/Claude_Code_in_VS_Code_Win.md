@@ -69,7 +69,7 @@ lang: "zh"
 关闭 VS Code 后，返回项目的方法：
 
 - **方法 A：** 打开 VS Code，点击 **File > Open Recent**，选择 `test_claude`
-- **方法 B：** 打开**文件资源管理器**，右键单击 `test_claude` 文件夹，选择 **Open with Code**
+- **方法 B：** 打开**文件资源管理器**，右键单击 `test_claude` 文件夹，选择 **通过 Code 打开**（Open with Code）
 
 ## 下一步
 

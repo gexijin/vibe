@@ -13,7 +13,7 @@ lang: "zh"
 - **Subagent** - 专门的AI工作者，拥有自己的目标、系统提示词和工具，能够自主完成任务
 - **Isolated Context（隔离上下文）** - subagent在自己独立的工作空间中运行，因此它的研究过程不会让你的主对话变得杂乱——只有最终结果会返回给你
 - **Skill** - 可重用的能力（如生成股票报告），subagent可以调用它来完成目标
-- **System Prompt** - 定义subagent做什么、如何为公司评分以及返回什么格式的指令
+- **System Prompt（系统提示词）** - 定义subagent做什么、如何为公司评分以及返回什么格式的指令
 - **关注点分离** - Skill收集数据；subagent使用这些数据做出决策
 
 ## 你需要准备什么
@@ -39,7 +39,7 @@ lang: "zh"
   ```
 
 **Mac：**
-- 打开**Terminal**（在"应用程序 > 实用工具"中找到它）
+- 打开**终端**（Terminal，在"应用程序 > 实用工具"中找到它）
 - 输入以下命令：
   ```bash
   cd ~/Documents/test_claude
@@ -89,13 +89,14 @@ lang: "zh"
 /agents
 ```
 
-会看到Claude Code agents界面，显示现有的subagent（如果有的话）以及**创建**、**编辑**或**删除**subagent的选项。
+会看到Claude Code agents界面，显示现有的subagent（如果有的话）以及**Create**（创建）、**Edit**（编辑）或**Delete**（删除）subagent的选项。
 
 现在创建你的subagent：
 - 选择**Create new subagent**
 - 选择**Project**
 - 选择**Generate with Claude (recommended)**
 - 粘贴以下指令：
+
   ```
   为名为 stock-picker 的新 subagent 创建一个 markdown 文件：
   - 它接受两只或更多股票
@@ -154,7 +155,7 @@ subagent将根据描述自动激活。
 当subagent运行时，会看到它：
 1. **调用skill两次** - 为Apple调用一次stock-report skill，然后为Google调用一次
 2. **收集数据** - 每次skill调用都会搜索网络并生成公司报告
-3. **为公司评分** - 在各个类别中应用40/30/20/10的权重
+3. **为公司评分** - 为每个类别打分，再合并成一个总分
 4. **生成输出** - 创建比较表和推荐
 
 这可能需要2-3分钟，因为涉及网络研究。
@@ -175,7 +176,7 @@ subagent可能会在终端中显示这些内容，或生成一个包含完整报
 现在你有了一个可用的股票选择器subagent，尝试这些扩展：
 
 - **比较3只或更多股票**："比较 AAPL、MSFT 和 GOOGL"，看看subagent如何处理更多选项
-- **调整评分权重**：编辑subagent文件以更改40/30/20/10的细分（例如，如果偏好成长股，可以将增长设为40%）
+- **调整评分权重**：编辑subagent文件以更改每个类别所占的比重（例如，如果偏好成长股，可以将增长设为40%）
 - **创建其他subagent**：为不同任务构建"code-reviewer" subagent、"bug-hunter" subagent或"document-writer" subagent
 
 ## 故障排除

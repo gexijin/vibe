@@ -25,8 +25,8 @@ lang: "zh"
 
 - 打开**Visual Studio Code**
 - 点击菜单栏中的**File**，然后选择**Open Folder**
-- 导航到**Documents**文件夹
-- 点击对话框底部的**New Folder**
+- 导航到**文稿**（Documents）文件夹
+- 点击对话框底部的**新建文件夹**（New Folder）
 - 将文件夹命名为`claude_r_test`
 - 点击**Open**打开新文件夹
 - 如果提示"Do you trust the authors?"，点击**Yes, I trust the authors**
@@ -122,7 +122,7 @@ summary(iris)
 ```
 
 - 按Enter
-- Claude会审查代码并建议添加注释
+- Claude会审查代码并建议添加解释各部分的注释
 - 点击**Accept**
 - 脚本现在有了清晰的注释，解释了数据加载、可视化和PCA分析
 
