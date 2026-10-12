@@ -173,7 +173,7 @@ iris.R में sepal length बनाम width का एक स्कैट�
 - **RStudio फ़ाइल में बदलाव नहीं दिखा रहा** - फ़ाइल को मैन्युअल रूप से रीलोड करने के लिए **File > Reopen with Encoding > UTF-8** पर क्लिक करें।
 - **"claude: command not found"** - सुनिश्चित करें कि आपने इंस्टॉलेशन गाइड पूरी की है। एक नई PowerShell विंडो खोलने की कोशिश करें।
 - **प्लॉट नहीं दिख रहे** - सुनिश्चित करें कि ggplot2 इंस्टॉल है। ज़रूरत पड़ने पर RStudio Console में `install.packages("ggplot2")` चलाएँ।
-- **एरर: "cannot change working directory"** - आपके Windows पाथ में स्पेस हैं। चरण 6 में, पाथ को कोटेशन में रखें: `cd "~\Documents\Your Name\test_claude"`
+- **एरर: "cannot change working directory"** - आपके Windows पाथ में स्पेस हैं। चरण 6 में, पाथ को कोटेशन में रखें, उदाहरण के लिए: `cd "C:\Users\Your Name\Documents\test_claude"`
 - **Claude Code पहली रिक्वेस्ट पर धीमा है** - Claude के शुरू होने के लिए 30-60 सेकंड प्रतीक्षा करें। बाद की रिक्वेस्ट तेज़ होंगी।
 - **WSL का उपयोग कर रहे हैं?** - अगर आपने वैकल्पिक WSL/Ubuntu वाला तरीका अपनाया है, तो चरण 5-16 में PowerShell की जगह **Ubuntu** ऐप खोलें, और `cd /mnt/c/Users/YourUsername/Documents/test_claude` से अपने प्रोजेक्ट पर जाएँ
 
