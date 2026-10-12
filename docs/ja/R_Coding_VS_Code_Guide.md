@@ -38,7 +38,7 @@ Rコードを書きたいけど、RStudioが重く感じる、またはVS Code�
   - パッケージマネージャーを使用（例：Ubuntuで`sudo apt install r-base`）
   - または[CRAN Linux](https://cran.r-project.org/bin/linux/)の手順に従う
 
-ステップ3でVS CodeがRを見つけるように設定するので、ターミナルで`R --version`がまだ動作しなくても心配しないでください。
+ステップ4でVS CodeがRを見つけるように設定するので、ターミナルで`R --version`がまだ動作しなくても心配しないでください。
 
 ## ステップ2：VS CodeにR拡張機能をインストール
 
@@ -231,7 +231,7 @@ shinyApp(ui = ui, server = server)
 - 既存コードの`mean`という単語の上にマウスを置く
 - 関数のドキュメントと使用例を表示するポップアップが現れます
 - `lm`、`summary`、または`plot`の上にマウスを置いてドキュメントを確認
-- `data$`と入力するとVS Codeが列名（`x`と`y`）を提案します
+- `iris$`と入力するとVS Codeが列名（`Sepal.Length`、`Species`など）を提案します
 
 ## ステップ11：他の機能を試す
 
