@@ -39,11 +39,12 @@ lang: "ja"
 
 ## ステップ2：Docker設定をコピー
 
-Docker環境をセットアップするために、vibeプロジェクトの`.devcontainer`フォルダが必要です。
+[Docker経由でVS CodeでPythonコーディング](./Python_Coding_Docker_Guide.md)で作成した`python-docker-demo`プロジェクトの`.devcontainer`フォルダが必要です。これをコピーすると、このプロジェクトでも同じPython環境（pandas、matplotlib、Claude Codeがインストール済み）を使えます。
 
 - エクスプローラー（Windows）またはFinder（Mac）を開く
-- vibeプロジェクトフォルダに移動（例：`Documents/vibe`）
+- `python-docker-demo`フォルダに移動
 - `.devcontainer`フォルダを見つける
+  - Macでは、Finderは名前がドット（.）で始まるフォルダを表示しません。**Cmd+Shift+.**（ピリオド）を押すと表示されます
 - フォルダ全体をコピー（`Dockerfile`と`devcontainer.json`が含まれています）
 - 新しい`iris-analysis`フォルダに移動
 - `.devcontainer`フォルダを貼り付け
