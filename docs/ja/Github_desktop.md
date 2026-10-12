@@ -38,13 +38,13 @@ lang: "ja"
 
 ## ステップ3：GitHub Desktopにサインイン
 
-1. アプリを開き **Sign in to GitHub.com**
-2. ブラウザが自動で開くので **Authorize desktop**
-3. アプリに戻り **Finish** でセットアップ完了
+1. アプリを開き **Sign in to GitHub.com** をクリックします
+2. ブラウザが自動で開くので **Authorize desktop** をクリックします
+3. アプリに戻り **Finish** をクリックしてセットアップを完了します
 
 ## ステップ4：最初のリポジトリを作る
 
-1. GitHub Desktop のトップ画面で **Create a New Repository on your Hard Drive**
+1. GitHub Desktop のトップ画面で **Create a New Repository on your Hard Drive** をクリックします
 2. 次のように入力：
    - **Name**: `my-first-project`
    - **Description**: `Learning version control`（任意）
@@ -83,10 +83,10 @@ lang: "ja"
 ## ステップ8：GitHubにプッシュ
 
 1. 画面上部の **Publish repository** をクリック
-2. 必要に応じて「Keep this code private」をオン／オフ
+2. 名前はそのままにし、他の人にもコードを見せたい場合のみ「Keep this code private」のチェックを外す（任意）
 3. **Publish Repository** を押して完了
 
-これで `https://github.com/YOUR-USERNAME/my-first-project` にリポジトリが公開されました。
+これで `https://github.com/YOUR-USERNAME/my-first-project` にコードがバックアップされました。
 
 ## 次のステップ
 

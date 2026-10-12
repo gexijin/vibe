@@ -18,7 +18,7 @@ lang: "ja"
 
 ## 必要なもの
 
-- [WindowsでVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacでVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
+- [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
 - 調査するトピック（例として株式レポートを使用します）
 - VS Codeなどのテキストエディタがインストールされていること
 - 15〜20分

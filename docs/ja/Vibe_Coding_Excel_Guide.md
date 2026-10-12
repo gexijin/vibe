@@ -23,33 +23,33 @@ Vibe Codingは、コンピュータと会話するようなものです。あな
 
 ## ステップ1：新しいGitHubリポジトリを作成
 
-- GitHub Desktopを開く
-- **File > New Repository**をクリック
-- 詳細を記入：
+- GitHub Desktopを開きます
+- **File > New Repository**をクリックします
+- 詳細を記入します：
   - **Name：** `budget-dashboard`
   - **Description：** `vibe codingで構築した個人用家計簿`
-  - **Local Path：** 場所を選択（例：ドキュメントまたは作業フォルダ）
-  - **Initialize this repository with a README**にチェック
-- **Create Repository**をクリック
-- 上部の**Publish repository**をクリック
-- 公開したい場合は**Keep this code private**のチェックを外す（オプション）
-- **Publish Repository**をクリック
+  - **Local Path：** 場所を選択します（例：ドキュメントまたは作業フォルダ）
+  - **Initialize this repository with a README**にチェックを入れます
+- **Create Repository**をクリックします
+- 上部の**Publish repository**をクリックします
+- 公開したい場合は**Keep this code private**のチェックを外します（オプション）
+- **Publish Repository**をクリックします
 
 ローカルGitリポジトリとGitHub上のバックアップができました。
 
 ## ステップ2：VS Codeでプロジェクトを開く
 
-- VS Codeを開く
-- **File > Open Folder**をクリック
-- `budget-dashboard`フォルダを選択
-- **Select Folder**（Windows）または**Open**（Mac）をクリック
+- VS Codeを開きます
+- **File > Open Folder**をクリックします
+- `budget-dashboard`フォルダを選択します
+- **Select Folder**（Windows）または**Open**（Mac）をクリックします
 - まだの場合は、MESCIUSの**Spreadsheet Viewer**拡張機能（旧名称：GrapeCityの**Excel Viewer**）をインストールして、VS Codeを離れずにスプレッドシートをプレビューできるようにします。正しい拡張機能を見つけるには、ExtensionsパネルでそのID`GrapeCity.gc-excelviewer`を検索してください
 - Spreadsheet Viewerは数値や数式の確認には便利ですが、グラフ、色付きの強調表示、ドロップダウンリストは表示できません。これらにはExcel、LibreOffice Calc、またはGoogle Sheetsを使います
 
 ## ステップ3：Claude Codeを起動
 
-- **Terminal > New Terminal**をクリック
-- 次のコマンドを入力してClaude Codeを起動：
+- **Terminal > New Terminal**をクリックします
+- 次のコマンドを入力してClaude Codeを起動します：
 
 ```bash
 claude
@@ -66,7 +66,7 @@ claude
 - Claude Codeのターミナルに次のように入力します：
 
 ```
-budget.xlsxという名前のスプレッドシートを作成し、「収入」と「支出」の2つのシートを用意してください。「収入」シートには「収入源」「月」「金額」の列を作り、3つの収入源の例を2か月分入れてください。「支出」シートには「カテゴリ」「月」「金額」の列を作り、6つのカテゴリの例（家賃、食料品、交通費、光熱費、娯楽費、携帯電話代など）を同じ2か月分入れてください。各シートの一番下にSUM数式を使った「合計」行を追加してください。
+budget.xlsxという名前のスプレッドシートを作成し、「収入」と「支出」の2つのシートを用意してください。「収入」シートには「収入源」「月」「金額」の列を作り、3つの収入源の例を2か月分入れてください。「支出」シートには「カテゴリ」「月」「金額」の列を作り、6つのカテゴリの例（家賃、食料品、交通費、光熱費、娯楽費、携帯電話代など）を同じ2か月分入れてください。各シートの一番下にSUM数式を使った「合計」行を追加してください。金額は米ドル（$）で入力してください。
 ```
 
 - Enterキーを押します
@@ -146,7 +146,7 @@ budget.xlsxに「集計」という名前の3枚目のシートを追加して�
 
 - Spreadsheet Viewerで、3つのシート（収入、支出、集計）をすべてクリックして確認します
 - すべての数式を理解する必要はありませんが、全体の構造を把握しておきましょう
-- GitHub Desktopを開く
+- GitHub Desktopを開きます
 - `budget.xlsx`が変更されたファイルとして表示されます
 - 左下の**Summary**欄に次のように入力します：
 
@@ -154,8 +154,8 @@ budget.xlsxに「集計」という名前の3枚目のシートを追加して�
 家計簿にグラフ、条件付き書式、カテゴリのドロップダウンを追加
 ```
 
-- **Commit to main**をクリック
-- **Push origin**をクリックしてGitHubにバックアップ
+- **Commit to main**をクリックします
+- **Push origin**をクリックしてGitHubにバックアップします
 
 家計簿の完全な動作版を保存できました！
 

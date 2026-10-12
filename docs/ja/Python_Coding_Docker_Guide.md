@@ -23,7 +23,7 @@ Pythonコードを共有したのに、「私のマシンでは動くのに...�
 ## ステップ1：Docker Desktopをインストール
 
 - [Docker Desktopダウンロードページ](https://www.docker.com/products/docker-desktop/)にアクセス
-- **Download for Windows**をクリック（またはシステムに基づいてMac/Linux）
+- **Download for Windows**をクリック（Mac/Linuxの場合はお使いのシステム用のボタン）
 - インストーラーを実行し、インストールウィザードに従う
 - プロンプトが表示されたら、WSL 2を有効にする（Windowsユーザー）またはデフォルト設定を受け入れる
 - インストール後、Docker Desktopを起動
@@ -170,9 +170,9 @@ data = np.concatenate([
 # ヒストグラムを作成
 fig, ax = plt.subplots()
 ax.hist(data, bins=bins, edgecolor='black')
-ax.set_xlabel('噴出時間 (分)')
-ax.set_ylabel('頻度')
-ax.set_title(f'{bins}ビンのヒストグラム')
+ax.set_xlabel('Eruption Duration (minutes)')
+ax.set_ylabel('Frequency')
+ax.set_title(f'Histogram with {bins} bins')
 
 st.pyplot(fig)
 ```
@@ -232,7 +232,7 @@ cd python-docker-demo
 - 最初の行を選択：`import pandas as pd`
 - `Shift+Enter`を押して対話型Pythonターミナルで実行
 - 下部にPythonターミナルが開きます
-- `Shift+Enter`で各行またはブロックを1つずつ実行し続ける
+- `Shift+Enter`で各行またはブロックを1つずつ実行していきます
 - `print(df.head())`を実行すると、ターミナルに最初の5行が表示されます
 - `print(df.describe())`を実行すると、統計的な要約が表示されます
 - ヒストグラムコードを実行すると、グラフがプロジェクトフォルダに`iris_histogram.png`として保存されます（コンテナには画面がないため、グラフをウィンドウで開くことはできません） - エクスプローラーサイドバーでこのファイルをクリックすると表示できます
@@ -261,7 +261,7 @@ streamlit run app.py
 
 アプリを変更して開発がどのように機能するか見てみましょう。
 
-- アプリを実行したまま
+- アプリは実行したままにしておきます
 - VS Codeで`python/app.py`を編集
 - 5行目を見つけます：`st.title("オールドフェイスフル間欠泉データ")`
 - 以下に変更：
@@ -273,7 +273,7 @@ st.title("私の初めてのPython Dockerアプリ")
 - **ファイル > 保存**をクリック
 - ブラウザに戻る
 - 右上隅の**Always rerun**をクリック
-- タイトルがカスタムテキストとして表示されます
+- タイトルが変更したテキストに変わります
 
 ## ステップ13：Dockerfileを理解する（オプション）
 

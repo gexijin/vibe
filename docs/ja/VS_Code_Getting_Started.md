@@ -107,13 +107,13 @@ Markdownは `#` で見出し、`**` で太字、`-` でリストを表す簡単�
 ```
 ls
 ```
-（WindowsのCommand Promptでは `dir` を使用）
+（Windowsのコマンドプロンプトでは `dir` を使用）
 
 **作業ディレクトリを表示：**
 ```
 pwd
 ```
-（WindowsのCommand Promptでは `cd` を使用）
+（Windowsのコマンドプロンプトでは `cd` を使用）
 
 **新しいフォルダを作成：**
 ```

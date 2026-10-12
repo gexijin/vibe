@@ -259,9 +259,9 @@ claude
 
 ## 次のステップ
 
-- **VS Codeをセットアップ：** [VS Code Getting Started](VS_Code_Getting_Started)に従い、[Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win)でClaude Codeに接続します
-- **Gitの基本を学ぶ：** [Claude Code Git on Windows](Claude_Code_Git_Windows)でプロジェクトにバージョン管理を追加します
-- **プロジェクトを試す：** [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code)でClaude Codeの実際の動作を確認します
+- **VS Codeをセットアップ：** [VS Codeを始めよう](VS_Code_Getting_Started)に従い、[WindowsでClaude Code用にVS Codeをセットアップ](Claude_Code_in_VS_Code_Win)でClaude Codeに接続します
+- **Gitの基本を学ぶ：** [Windows版Claude Codeとバージョン管理](Claude_Code_Git_Windows)でプロジェクトにバージョン管理を追加します
+- **プロジェクトを試す：** [Claude Codeで研究論文を書く](Writing_Research_Paper_Claude_Code)でClaude Codeの実際の動作を確認します
 
 ## トラブルシューティング
 
@@ -282,7 +282,7 @@ claude doctor
    ```
 - PATHにClaudeのインストールディレクトリが含まれているか確認します
 
-### 「Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS」
+### 「Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS」というエラーが表示される
 このエラーは仮想化が有効でないことを意味します：
 - タスクマネージャーで仮想化が有効か確認します（上記のオプションのWSLセクション参照）
 - 無効の場合は、コンピューターのBIOSで有効にします

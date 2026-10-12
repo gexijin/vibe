@@ -77,7 +77,7 @@ Pythonインストールが表示されない場合は、**インタープリタ
 - `Python: Create Environment`と入力して選択します
 - **Venv**（組み込みの仮想環境）を選択します
 - リストからPythonインタープリタを選択します
-- VS Codeが環境を作成するまで待ちます（`.venv`フォルダが表示されます）
+- VS Codeが環境を作成するまで待ちます（`.venv`フォルダーが表示されます）
 - VS Codeがプロジェクト用にこの環境を自動的にアクティブ化します
 
 環境がアクティブになると、ターミナルプロンプトに`(.venv)`が表示されます。
@@ -235,4 +235,4 @@ VS Codeは、次の利点を備えたPython開発のための現代的で軽量�
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
+[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月7日に作成。
