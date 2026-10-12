@@ -132,7 +132,7 @@ Make the sheet easier to extend without typos.
 - In the Claude Code terminal, type:
 
 ```
-Add data validation to the Category column in the Expenses sheet so it only accepts values from a dropdown list of the existing categories, plus "Other". Add two blank rows just above the Total row ready for new entries, and make sure the Total, the Summary formulas, the pie chart totals and the color rules include them.
+Add data validation to the Category column in the Expenses sheet so it only accepts values from a dropdown list of the existing categories, plus "Other". Add two blank rows just above the Total row ready for new entries, and make sure the Total, the Summary formulas, the pie chart totals (with an "Other" slice) and the color rules include them. Leave the empty cells uncolored.
 ```
 
 - Press Enter
