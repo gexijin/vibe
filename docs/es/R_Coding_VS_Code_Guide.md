@@ -16,7 +16,7 @@ Quiere escribir código R pero RStudio se siente pesado o prefiere la flexibilid
 
 ## Lo Que Necesitará
 
-- Tutorial [VS Code Basics](./VS_Code_Getting_Started) completado
+- Haber completado [Primeros Pasos con VS Code](./VS_Code_Getting_Started)
 - Conexión a Internet para descargar R y paquetes
 - 10-15 minutos
 

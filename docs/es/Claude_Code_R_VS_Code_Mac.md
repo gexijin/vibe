@@ -152,4 +152,4 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios dond
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.
+Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 11 de diciembre de 2025.

@@ -131,7 +131,7 @@ Su código ahora está respaldado en la nube.
 
 ## Paso 8: Agregue Notificación de Sonido
 
-- En el terminal de Claude Code:
+- En la terminal de Claude Code:
   ```
   Agrega una notificación de sonido cuando el temporizador llegue a cero. Usa el
   sonido de pitido integrado del navegador o crea una alerta de audio simple.
@@ -233,7 +233,7 @@ Commits manuales cuando desea control. Commits de Claude cuando desea velocidad.
 
 Intente agregar características a su temporizador:
 
-**Victorias rápidas:**
+**Mejoras rápidas:**
 - Botones preestablecidos para 5, 10, 15 minutos: `Agrega tres botones preestablecidos: "5 min", "10 min" y "15 min"`
 - Botón de pausa: `Agrega un botón de Pausa/Reanudar que alterne el estado del temporizador`
 - Mejor estilo: `Mejora el diseño visual con un esquema de colores moderno`

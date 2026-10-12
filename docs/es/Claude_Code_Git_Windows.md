@@ -162,7 +162,7 @@ Creamos un segundo punto de guardado. Esta versión tiene los dos botones funcio
 - Actualice la pestaña de su navegador
 - Pruebe: Haga clic en el botón **15 min**
 
-**Para este tutorial:** Pretenda que el botón de 15 minutos no funciona correctamente. No haga commit todavía—practicaremos descartando cambios malos.
+**Para este tutorial:** Suponga que el botón de 15 minutos no funciona correctamente. No haga commit todavía—practicaremos descartando cambios malos.
 
 ## Paso 13: Descarte los Cambios
 

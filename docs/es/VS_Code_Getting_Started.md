@@ -13,7 +13,7 @@ Quiere escribir código, pero Notepad o TextEdit le resulta muy limitante. Neces
 - **Editor** - Área principal donde escribe código
 - **Explorer** - Barra lateral que muestra sus archivos y carpetas
 - **Extensions** - Complementos que agregan nuevas funciones a VS Code
-- **Terminal Integrado** - Línea de comandos integrada en VS Code
+- **Terminal Integrada** - Línea de comandos integrada en VS Code
 
 ## Lo Que Necesitará
 
@@ -38,13 +38,13 @@ Verá una pestaña de bienvenida con opciones para comenzar.
 
 VS Code tiene cinco áreas principales:
 
-- **Barra de Actividad** (borde izquierdo) - Iconos para Explorer, Search, Git, Extensions, etc.
+- **Activity Bar** (Barra de Actividad, borde izquierdo) - Iconos para Explorer, Search, Git, Extensions, etc.
 - **Barra Lateral** - Muestra el contenido de la actividad seleccionada (archivos, resultados de búsqueda)
 - **Editor** (centro) - Donde escribe código
 - **Panel** (parte inferior) - Terminal, Problems, Output
 - **Barra de Estado** (borde inferior) - Información sobre su archivo y proyecto
 
-Haga clic en el icono **Explorer** (parte superior de la Barra de Actividad) para ver el navegador de archivos.
+Haga clic en el icono **Explorer** (parte superior de la Activity Bar) para ver el navegador de archivos.
 
 ## Paso 3: Abra una Carpeta y Explore
 
@@ -57,7 +57,7 @@ La barra lateral Explorer ahora muestra los archivos de su carpeta:
 
 - Haga clic en una carpeta para expandirla
 - Haga clic en cualquier archivo para abrirlo en el editor
-- Haga clic en el icono **Search** en el Activity Bar (lupa) para buscar en todos los archivos
+- Haga clic en el icono **Search** en la Activity Bar (lupa) para buscar en todos los archivos
 
 ## Paso 4: Cree un Archivo Markdown
 
@@ -86,7 +86,7 @@ Markdown es un formato de texto simple que usa símbolos como `#` para encabezad
 
 ## Paso 5: Instale la Extensión Markdown Preview
 
-- Haga clic en el icono **Extensions** en el Activity Bar (el icono de cuadrados)
+- Haga clic en el icono **Extensions** en la Activity Bar (el icono de cuadrados)
 - Escriba `Markdown Preview Enhanced` en el cuadro de búsqueda
 - Encuentre **Markdown Preview Enhanced** en los resultados
 - Haga clic en **Install**
@@ -98,7 +98,7 @@ Markdown es un formato de texto simple que usa símbolos como `#` para encabezad
 
 Se abre un panel de vista previa que muestra su Markdown formateado: edite a la izquierda y vea los cambios a la derecha en tiempo real.
 
-## Paso 7: Use el Terminal Integrado
+## Paso 7: Use la Terminal Integrada
 
 - Haga clic en **Terminal** → **New Terminal**
 - Pruebe estos comandos:
@@ -120,7 +120,7 @@ pwd
 mkdir notes
 ```
 
-Revise Explorer: aparece la carpeta `notes`. El terminal se ejecuta en su carpeta de proyecto, por lo que los comandos afectan directamente su proyecto.
+Revise Explorer: aparece la carpeta `notes`. La terminal se ejecuta en su carpeta de proyecto, por lo que los comandos afectan directamente su proyecto.
 
 ## Paso 8: Use Agentes de IA en VS Code (Opcional)
 
@@ -145,7 +145,7 @@ GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que e
 ## Solución de Problemas
 
 - **La vista previa no se muestra:** Asegúrese de que la extensión Markdown Preview Enhanced esté instalada y que tenga un archivo `.md` abierto
-- **El terminal muestra el directorio incorrecto:** Haga clic en el icono de papelera en el panel del terminal, luego en **Terminal** → **New Terminal**
+- **La terminal muestra el directorio incorrecto:** Haga clic en el icono de papelera en el panel de la terminal, luego en **Terminal** → **New Terminal**
 - **El menú Chat no es visible:** Es posible que necesite instalar GitHub Copilot Chat: haga clic en el icono **Extensions**, busque "GitHub Copilot Chat" e instálelo
 - **Las extensiones no funcionan:** Haga clic en **View** → **Command Palette**, escriba "reload window" y seleccione **Developer: Reload Window**
 
@@ -154,7 +154,7 @@ GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que e
 1. Abra una carpeta en VS Code
 2. Cree y edite archivos
 3. Use extensiones para previsualizar
-4. Use el terminal para ejecutar comandos
+4. Use la terminal para ejecutar comandos
 5. Use IA para entender y mejorar el código
 6. Guarde y repita
 

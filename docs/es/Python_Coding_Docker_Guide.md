@@ -11,8 +11,8 @@ lang: "es"
 ## Conceptos Clave
 
 - **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** - Aplicación que ejecuta contenedores en su computadora, administrando entornos aislados
-- **[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)** - Función de VS Code que permite codificar dentro de un contenedor Docker con soporte completo del IDE
-- **Container Isolation** - Su código se ejecuta en un entorno Linux separado que solo ve su carpeta de proyecto, no toda su computadora
+- **[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)** - Función de VS Code que permite programar dentro de un contenedor Docker con soporte completo del IDE
+- **Aislamiento del contenedor** - Su código se ejecuta en un entorno Linux separado que solo ve su carpeta de proyecto, no toda su computadora
 - **[Python Official Images](https://hub.docker.com/_/python)** - Imágenes Docker preconstruidas con Python y herramientas esenciales preinstaladas
 
 ## Lo Que Necesitará
@@ -187,7 +187,7 @@ st.pyplot(fig)
 
 ## Paso 9: Comprender el Entorno del Contenedor
 
-Ahora está codificando dentro de un contenedor Linux. Exploremos lo que esto significa.
+Ahora está programando dentro de un contenedor Linux. Exploremos lo que esto significa.
 
 - Haga clic en **Terminal > New Terminal** para abrir una terminal dentro del contenedor
 - Verifique su ubicación actual:
@@ -253,7 +253,7 @@ streamlit run app.py
 - Aparece una notificación: **Open in Browser**
 - Haga clic en **Open in Browser**
 - La aplicación Streamlit se abre en su navegador web
-- Mueva el deslizador para cambiar los contenedores del histograma - el gráfico se actualiza en tiempo real
+- Mueva el deslizador para cambiar el número de intervalos (bins) del histograma - el gráfico se actualiza en tiempo real
 
 ## Paso 12: Hacer un Cambio Sencillo
 

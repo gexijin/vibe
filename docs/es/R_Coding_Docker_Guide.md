@@ -12,13 +12,13 @@ lang: "es"
 
 - **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** - Aplicación que ejecuta contenedores en su computadora, gestionando entornos aislados
 - **[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)** - Función de VS Code que le permite programar dentro de un contenedor Docker con soporte completo del IDE
-- **Container Isolation** - Su código se ejecuta en un entorno Linux separado que solo ve su carpeta de proyecto, no toda su computadora
+- **Aislamiento del contenedor** - Su código se ejecuta en un entorno Linux separado que solo ve su carpeta de proyecto, no toda su computadora
 - **[Rocker](https://rocker-project.org/)** - Imágenes Docker preconstruidas diseñadas específicamente para desarrollo en R
 
 ## Lo Que Necesitará
 
-- Tutorial [R Coding in VS Code](./R_Coding_VS_Code_Guide) completado
-- Tutorial [GitHub Desktop Basics](./Github_desktop) completado
+- Haber completado [Ejecutar R en VS Code](./R_Coding_VS_Code_Guide)
+- Haber completado [Introducción al Control de Versiones](./Github_desktop)
 - 20-25 minutos
 
 ## Paso 1: Instalar Docker Desktop
@@ -113,7 +113,7 @@ El contenedor tiene R preinstalado con paquetes comunes. Ejecutemos un script si
 - Seleccione la primera línea: `data(iris)`
 - Presione `Ctrl+Enter` (Windows/Linux) o `Cmd+Enter` (Mac) para ejecutarla
 - Si no tiene una terminal R abierta, la primera vez crea una, la segunda vez ejecuta el código
-- Continue ejecutando cada línea una a la vez
+- Continúe ejecutando cada línea, una a la vez
 - Cuando ejecute `head(iris)`, verá las primeras 6 filas en la terminal
 - Cuando ejecute `summary(iris)`, verá resúmenes estadísticos
 - Cuando ejecute los comandos `hist()`, se abrirán gráficos de histograma en ventanas separadas

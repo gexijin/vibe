@@ -17,7 +17,7 @@ Aprenda a escribir artículos de investigación utilizando Claude Code como asis
 
 ## Lo Que Necesitará
 
-- Haber completado [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win) o [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac)
+- Haber completado [Configure VS Code para Claude Code en Windows](./Claude_Code_in_VS_Code_Win) o [Use Claude Code desde VS Code en Mac](./Claude_Code_in_VS_Code_Mac)
 - 30-40 minutos
 
 ## Paso 1: Crear una Carpeta de Proyecto
@@ -57,7 +57,7 @@ Para Mac:
 
 ## Paso 4: Iniciar Claude Code
 
-- Abra un terminal: haga clic en **Terminal** en el menú principal de VS Code, luego en **New Terminal**
+- Abra una terminal: haga clic en **Terminal** en el menú principal de VS Code, luego en **New Terminal**
 - En el panel de terminal, escriba:
   ```
   claude
@@ -242,7 +242,7 @@ Crea un slash command llamado /research-paper que me guíe a través de
 todo este flujo de trabajo. Guárdalo para que pueda usarlo en futuros artículos de investigación sobre diversos temas.
 ```
 
-Claude creará un slash command personalizado en su carpeta `.claude/commands/`. Es un archivo Markdown que contiene un prompt. Podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [tu tema]`.
+Claude creará un slash command personalizado en su carpeta `.claude/commands/`. Es un archivo Markdown que contiene un prompt. Podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [su tema]`.
 
 ## Paso 18: Obtener Retroalimentación
 
@@ -267,7 +267,7 @@ Claude evaluará su artículo de forma objetiva, sin estar influenciado por habe
 
 1. **Crear Carpeta** - Configure su carpeta de proyecto en Documentos
 2. **Abrir en VS Code** - Abra la carpeta en VS Code
-3. **Iniciar Claude Code** - Lance Claude Code desde el terminal
+3. **Iniciar Claude Code** - Lance Claude Code desde la terminal
 4. **Investigar** - Claude busca información general sobre su tema
 5. **Leer Fuentes** - Revise la investigación en su editor de texto
 6. **Lluvia de Ideas** - Elija su enfoque/perspectiva
@@ -298,7 +298,7 @@ El slash command lo guiará automáticamente a través de todo el flujo de traba
 
 - **Los resultados de búsqueda parecen desactualizados:** Especifique "busca datos de 2024-2025 sobre [tema]"
 - **El borrador es muy largo o corto:** Indique: "Haz que tenga aproximadamente 1,000 palabras"
-- **No puede encontrar archivos:** En el terminal, escriba `ls` para listar todos los archivos en la carpeta actual
+- **No puede encontrar archivos:** En la terminal, escriba `ls` para listar todos los archivos en la carpeta actual
 
 ## Lo Que Puede Pedirle a Claude
 
