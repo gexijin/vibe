@@ -151,7 +151,7 @@ OpenRouter 是一个统一的 API 网关，用一个密钥就能访问 500 多�
    ```
 - 可用模型可在 [openrouter.ai/models](https://openrouter.ai/models) 查看
 - 免费套餐每天有 50 次 API 请求额度
-- 更多细节见[官方 OpenRouter 指南](https://openrouter.ai/docs/guides/claude-code-integration)
+- 更多细节见[官方 OpenRouter 指南](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)
 
 ### 选项 D. 通过 Azure Foundry 使用 Anthropic API
 

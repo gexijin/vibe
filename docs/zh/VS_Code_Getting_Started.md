@@ -124,7 +124,7 @@ mkdir notes
 
 ## 步骤 8:在 VS Code 中使用 AI Agent(可选)
 
-VS Code 包含 [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat),这是一个可以解释、编写和调试代码的 AI 助手。
+VS Code 包含 [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview),这是一个可以解释、编写和调试代码的 AI 助手。
 
 - 打开 `README.md` 文件(或项目中的任何其他文件)
 - 点击标题栏中的 **Chat** → **Open Chat**(或在 Windows/Linux 上按 `Ctrl+Alt+I`,在 Mac 上按 `Ctrl+Cmd+I`)
