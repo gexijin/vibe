@@ -220,7 +220,7 @@ streamlit run app.py
 
 - **pip install विफल होता है**: सुनिश्चित करें कि आपका virtual environment सक्रिय है (terminal में `(.venv)` देखें)। Linux पर, आपको पहले `python3-venv` इंस्टॉल करने की ज़रूरत हो सकती है। Windows पर, जाँचें कि एंटीवायरस pip को ब्लॉक नहीं कर रहा।
 
-- **Streamlit ऐप नहीं चलता**: सुनिश्चित करें कि streamlit आपके virtual environment में इंस्टॉल है (`pip list | grep streamlit`)। त्रुटि संदेशों के लिए terminal जाँचें। सुनिश्चित करें कि कोई अन्य ऐप पोर्ट 8501 का उपयोग नहीं कर रहा।
+- **Streamlit ऐप नहीं चलता**: सुनिश्चित करें कि streamlit आपके virtual environment में इंस्टॉल है (`pip show streamlit`)। त्रुटि संदेशों के लिए terminal जाँचें। सुनिश्चित करें कि कोई अन्य ऐप पोर्ट 8501 का उपयोग नहीं कर रहा।
 
 ## वर्कफ़्लो सारांश
 
