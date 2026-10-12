@@ -58,7 +58,7 @@ lang: "zh"
 - 打开 VS Code
 - 点击 **File > Open Folder**
 - 导航到 `iris-analysis` 文件夹
-- 点击 **Select Folder**
+- 点击 **Select Folder**(Windows)或 **Open**(Mac)
 - 右下角出现通知:**Folder contains a Dev Container configuration file**
 - 点击 **Reopen in Container**
 - 如果没看到通知,点击左下角的绿色图标,选择 **Reopen in Container**
