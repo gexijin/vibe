@@ -38,7 +38,7 @@ lang: "zh"
   - 使用包管理器(如 Ubuntu 上用 `sudo apt install r-base`)
   - 或遵循 [CRAN Linux](https://cran.r-project.org/bin/linux/) 说明
 
-步骤 3 中会配置 VS Code 以找到 R,所以如果 `R --version` 在终端还不起作用,不必担心。
+步骤 4 中会配置 VS Code 以找到 R,所以如果 `R --version` 在终端还不起作用,不必担心。
 
 ## 步骤 2:在 VS Code 中安装 R 扩展
 
@@ -231,7 +231,7 @@ shinyApp(ui = ui, server = server)
 - 鼠标悬停在现有代码中的单词 `mean` 上
 - 会出现弹出窗口,显示函数文档和使用示例
 - 尝试悬停在 `lm`、`summary` 或 `plot` 上查看文档
-- 输入 `data$`,观察 VS Code 建议列名(`x` 和 `y`)
+- 输入 `iris$`,观察 VS Code 建议列名(`Sepal.Length`、`Species` 等)
 
 ## 步骤 11:尝试更多功能
 
