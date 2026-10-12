@@ -18,6 +18,7 @@ Vibe 编程就像与计算机对话——你描述想要的结果，Claude Code 
 
 - 完成 [在 VS Code 中使用 Claude Code 处理 Excel](./Excel_Coding_VS_Code_Guide)
 - 完成 [将 GitHub Desktop 与 Claude Code 结合使用](./GitHub_Desktop_Claude_Code_Workflow)
+- 用于查看图表、颜色和下拉列表的 Microsoft Excel、[LibreOffice Calc](https://www.libreoffice.org/download/download-libreoffice/)（免费）或 Google Sheets（在网页浏览器中免费使用）
 - 25-30 分钟
 
 ## 步骤 1：创建新的 GitHub 仓库
@@ -43,6 +44,7 @@ Vibe 编程就像与计算机对话——你描述想要的结果，Claude Code 
 - 选择你的 `budget-dashboard` 文件夹
 - 点击 **Select Folder**（Windows）或 **Open**（Mac）
 - 如果还没有安装，请安装 MESCIUS 发布的 **Spreadsheet Viewer** 扩展（原名为 GrapeCity 发布的 **Excel Viewer**），这样无需离开 VS Code 就能预览电子表格。在 Extensions 面板中搜索它的 ID `GrapeCity.gc-excelviewer`，即可找到正确的扩展
+- Spreadsheet Viewer 很适合核对数字和公式，但无法显示图表、彩色高亮或下拉列表——这些需要用 Excel、LibreOffice Calc 或 Google Sheets 查看
 
 ## 步骤 3：启动 Claude Code
 
@@ -64,11 +66,12 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 - 在 Claude Code 终端中输入：
 
 ```
-创建一个名为 budget.xlsx 的电子表格，包含两个工作表：“收入”和“支出”。“收入”工作表包含“来源”、“月份”和“金额”三列，填入 3 个示例收入来源，覆盖 2 个月。“支出”工作表包含“类别”、“月份”和“金额”三列，填入 6 个示例类别（如房租、日用杂货、交通、水电费、娱乐、储蓄），覆盖同样的 2 个月。在每个工作表底部添加一个“合计”行，使用 SUM 公式求和。
+创建一个名为 budget.xlsx 的电子表格，包含两个工作表：“收入”和“支出”。“收入”工作表包含“来源”、“月份”和“金额”三列，填入 3 个示例收入来源，覆盖 2 个月。“支出”工作表包含“类别”、“月份”和“金额”三列，填入 6 个示例类别（如房租、日用杂货、交通、水电费、娱乐、手机费），覆盖同样的 2 个月。在每个工作表底部添加一个“合计”行，使用 SUM 公式求和。
 ```
 
 - 按 Enter
-- 看着 Claude 编写并运行一个 Python 脚本来生成工作簿，然后重新计算，让合计显示真实的数字
+- 看着 Claude 编写并运行一个 Python 脚本来生成工作簿
+- 如果 Claude 请求许可来运行命令或安装辅助工具，选择 **Yes**
 - 在 Spreadsheet Viewer 标签页中打开 `budget.xlsx`，逐个点击查看两个工作表
 
 **保存进度**：让 Claude 用 Git 提交，或者自己在 GitHub Desktop 中操作：
@@ -83,11 +86,11 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 - 在 Claude Code 终端中输入：
 
 ```
-在 budget.xlsx 中添加第三个工作表，命名为“汇总”。它应显示“总收入”、“总支出”和“净储蓄”（收入减去支出），每一项都要用引用“收入”和“支出”工作表的公式计算，而不是写死的数字。
+在 budget.xlsx 中添加第三个工作表，命名为“汇总”。它应显示“总收入”、“总支出”和“净储蓄”（收入减去支出），每一项都要用引用“收入”和“支出”工作表的公式计算，而不是写死的数字。在它下方再添加一个小表格，显示每个月的收入和支出，同样使用公式。
 ```
 
 - 按 Enter
-- Claude 会更新工作簿并重新计算
+- Claude 会更新工作簿
 - 打开 **汇总** 标签页，点击“净储蓄”单元格，确认它是一个引用了其他工作表的公式
 
 **保存进度**：让 Claude 提交，或者使用 GitHub Desktop。
@@ -103,8 +106,10 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 ```
 
 - 按 Enter
-- Claude 会添加这两个图表并重新计算文件
-- 在 Spreadsheet Viewer 中重新打开 `budget.xlsx`（或刷新标签页），检查两个工作表中的新图表
+- Claude 会添加这两个图表
+- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在 File Explorer 或 Finder 中双击它），或者把它上传到 Google Sheets，然后检查两个工作表
+- VS Code 中的 Spreadsheet Viewer 不会显示图表——这是正常的，图表仍然在文件里
+- 在让 Claude 做更多修改之前，先在 Excel 或 LibreOffice 中关闭这个文件
 
 ## 步骤 7：第四次 Vibe - 突出显示超支类别
 
@@ -113,11 +118,11 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 - 在 Claude Code 终端中输入：
 
 ```
-在“支出”工作表中添加条件格式：单月超过 $500 的支出用红色突出显示，低于 $100 的用绿色突出显示。
+在“支出”工作表中添加条件格式：单月超过 $500 的支出用红色突出显示，低于 $100 的用绿色突出显示。“合计”行不要上色。
 ```
 
 - 按 Enter
-- 重新打开文件，检查“支出”工作表——单元格现在应该会根据数值显示不同颜色
+- 用 Excel、LibreOffice Calc 或 Google Sheets 打开文件，检查“支出”工作表——单元格现在应该会根据数值显示不同颜色（Spreadsheet Viewer 不会显示这些颜色）
 
 如果有地方看起来不对，把你看到的内容复制下来，描述给 Claude，让它修复。
 
@@ -132,7 +137,8 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 ```
 
 - 按 Enter
-- 打开文件，点击其中一个空白的“类别”单元格，确认出现了下拉箭头，并且列表中有你的各个类别
+- 用 Excel、LibreOffice Calc 或 Google Sheets 打开文件，点击其中一个空白的“类别”单元格，确认出现了下拉箭头，并且列表中有你的各个类别（Spreadsheet Viewer 不会显示下拉列表）
+- 完成后关闭文件
 
 ## 步骤 9：审查并提交
 
@@ -166,7 +172,7 @@ Vibe 编程的优势在于迭代。试着通过描述来添加新功能：
 - “再创建一个名为 household_budget.xlsx 的工作簿，为四口之家设计，包含更多类别”
 
 每成功完成一个功能后：
-- 打开文件，在 Spreadsheet Viewer 中检查
+- 打开文件进行检查——用 Spreadsheet Viewer 核对数字，或用 Excel/LibreOffice 查看图表和颜色
 - 如果没问题，用 GitHub Desktop 提交
 - 如果有地方不对，描述给 Claude 并请它修复
 - 修复后，提交可用的版本
@@ -192,7 +198,7 @@ Vibe 编程的优势在于迭代。试着通过描述来添加新功能：
 ## 故障排除
 
 - **公式单元格显示为空白或 `None`** - 文件在编辑后需要重新计算。可以对 Claude 说：“重新计算 budget.xlsx，并确认没有公式错误。”
-- **修改数据后图表没有更新** - 在 VS Code 中重新打开标签页（关闭后再次点击文件），强制 Spreadsheet Viewer 刷新。
+- **图表没有显示** - Spreadsheet Viewer 无法显示图表。请用 Excel、LibreOffice Calc 或 Google Sheets 打开文件。如果在那里也看不到，把问题描述给 Claude，请它把图表加回来。
 - **Claude 出错了** - 这很正常！描述哪里看起来不对，请 Claude 修复。Vibe 编程本身就包含迭代和调试。
 - **无法推送到 GitHub** - 确认你已登录 GitHub Desktop，并且已经发布了仓库（步骤 1）。检查网络连接。
 - **下拉列表没有出现** - 数据验证只会在真正的电子表格应用（Excel、LibreOffice、Google Sheets）中显示，轻量级预览工具不一定支持。请用 Excel 或 LibreOffice Calc 打开文件进行测试。
