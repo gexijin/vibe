@@ -8,7 +8,7 @@ lang: "zh"
 
 厌倦了反复输入相同的详细提示词?自定义 slash command 让你将复杂指令保存为可重复使用的快捷方式。就像为常用任务创建键盘快捷键,slash command 可以将冗长提示词转化为简单命令,例如 `/stock-report Apple` 就能立即生成综合报告。
 
-最棒的部分?我们用 Claude 来编写详细提示词并创建 Skill。是的,Claude 非常擅长为……自己编写提示词。
+最棒的部分?我们用 Claude 来编写详细提示词并创建 slash command。是的,Claude 非常擅长为……自己编写提示词。
 
 ## 核心概念
 
@@ -161,7 +161,7 @@ Claude 更新命令文件。可以从编辑器验证。
   /stock-report AAPL
   ```
 
-Claude 创建名为 `Apple_2025-12-13.html` 之类的文件。在 Windows 或 Mac 上从文件资源管理器点击此文件,在默认浏览器打开。
+Claude 创建名为 `Apple_2025-12-13.html` 之类的文件。在文件资源管理器(Windows)或 Finder(Mac)中双击此文件,在默认浏览器打开。
 
 ## 步骤 11:重复使用 slash command(可选)
 
