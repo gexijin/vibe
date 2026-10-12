@@ -23,18 +23,17 @@ lang: "hi"
 
 ## चरण 1: प्रोजेक्ट फ़ोल्डर पर जाएं
 
-**Windows (WSL):**
-- Start मेनू से **Ubuntu** खोलें
+**Windows (PowerShell):**
+- Start मेनू से **PowerShell** खोलें
 - टाइप करें:
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  `YOUR_USERNAME` की जगह अपना Windows यूज़रनेम डालें
+  cd ~\Documents\test_claude
+  ```
 
   अगर फ़ोल्डर मौजूद नहीं है, तो पहले इसे बनाएं:
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac:**
@@ -61,7 +60,7 @@ claude
 
 ## चरण 3: एडिट के लिए ऑटो-अप्रूव सक्षम करें
 
-एडिट के लिए ऑटो-अप्रूव मोड सक्षम करने के लिए `Ctrl+E` (Windows/Linux) या `Cmd+E` (Mac) दबाएं।
+एडिट के लिए ऑटो-अप्रूव मोड सक्षम करने के लिए **Shift+Tab** दबाएं।
 
 इससे Claude हर बार अनुमति मांगे बिना फ़ाइलें बना और बदल सकता है।
 

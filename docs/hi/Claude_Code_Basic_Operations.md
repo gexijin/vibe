@@ -18,14 +18,15 @@ AI की मदद से कोडिंग सीखना शुरुआत
 ## आपको क्या चाहिए
 
 - [Windows](Install_CLAUDE_Code_Win.md) या [Mac](Install_Claude_Code_MacOS.md) ट्यूटोरियल से इंस्टॉल किया गया Claude Code
-- यदि आप Windows का उपयोग कर रहे हैं तो WSL इंस्टॉल किया हुआ
 - टर्मिनल या कमांड प्रॉम्प्ट के उपयोग की बुनियादी जानकारी
 - 15-20 मिनट
 
 ## चरण 1: अपना टर्मिनल खोलें
 
-- **Windows**: Windows की दबाएँ, `Ubuntu` टाइप करें, और WSL टर्मिनल खोलने के लिए Enter दबाएँ
+- **Windows**: Windows की दबाएँ, `PowerShell` टाइप करें, और PowerShell खोलने के लिए Enter दबाएँ
 - **Mac**: `Cmd+Space` दबाएँ, `Terminal` टाइप करें, और Enter दबाएँ
+
+**नोट:** अगर आपने Windows इंस्टॉल ट्यूटोरियल में नेटिव इंस्टॉल की जगह वैकल्पिक WSL/Ubuntu वाला तरीका अपनाया है, तो इसकी जगह **Ubuntu** ऐप खोलें और नीचे के चरणों में Linux-स्टाइल पथ (जैसे `/mnt/c/Users/YourName/...`) का उपयोग करें।
 
 एक टेक्स्ट विंडो खुलेगी जहाँ आप कमांड टाइप कर सकते हैं।
 
@@ -45,12 +46,13 @@ cd data_projects
 - अपने वेब ब्राउज़र में [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) पर जाएँ
 - ऊपर दाईं ओर हरे रंग के **Code** बटन पर क्लिक करें
 - **Download ZIP** पर क्लिक करें
-- ZIP फ़ाइल को Downloads फ़ोल्डर के अंदर **data_projects** नामक फ़ोल्डर में एक्सट्रैक्ट करें।
+- ZIP फ़ाइल को अपने Downloads फ़ोल्डर के अंदर एक्सट्रैक्ट करें। GitHub एक्सट्रैक्ट किए गए फ़ोल्डर का नाम **data_projects-main** रखता है — इसका नाम बदलकर **data_projects** कर दें, ताकि यह इस ट्यूटोरियल के बाकी हिस्से से मेल खाए।
 - अपने टर्मिनल में, एक्सट्रैक्ट किए गए फ़ोल्डर पर जाएँ:
-  - **Windows**: `cd /mnt/c/Users/YourName/Downloads/data_projects`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-`YourName` को अपने असली यूज़रनेम से बदलें और यदि आपने इसे कहीं और एक्सट्रैक्ट किया है तो पथ को उसी अनुसार समायोजित करें। Windows उपयोगकर्ताओं के लिए, आपकी Windows फ़ाइलें Linux सिस्टम में /mnt/c से एक्सेस की जाती हैं।
+यदि आपने इसे कहीं और एक्सट्रैक्ट किया है तो पथ को उसी अनुसार बदल लें।
 
 ## चरण 3: फ़ोल्डर से Claude Code शुरू करें
 

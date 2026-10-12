@@ -29,12 +29,9 @@ lang: "hi"
 
 **Windows (PowerShell):**
 - **Windows Start बटन** पर क्लिक करें, `PowerShell` टाइप करें, और उसे खोलें
-- ये कमांड टाइप करें:
+- यह कमांड टाइप करें:
   ```powershell
-  cd ~/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
-
+  cd ~/Documents/test_claude
   ```
 - Claude Code शुरू करें:
   ```
