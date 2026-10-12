@@ -42,7 +42,7 @@ lang: "zh"
 - 选择身份验证方式：
   - **Claude Pro/Max 用户**：点击 **Sign in with Claude.ai**，在浏览器授权，将代码复制回 VS Code
   - **API 密钥用户**：点击 **Use API Key**，粘贴 Anthropic API 密钥
-- 详细身份验证步骤请参阅 [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) 指南（步骤 5）
+- 详细身份验证步骤请参阅 [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) 指南（步骤 3）
 - 登录成功后，聊天面板中显示"Ready to help"
 
 ## 步骤 3：手动创建初始 Python 脚本
