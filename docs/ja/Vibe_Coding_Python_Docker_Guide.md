@@ -58,7 +58,7 @@ Docker環境をセットアップするために、vibeプロジェクトの`.de
 - VS Codeを開く
 - **ファイル > フォルダーを開く**をクリック
 - `iris-analysis`フォルダに移動
-- **フォルダーの選択**をクリック
+- **フォルダーの選択**（Windows）または**開く**（Mac）をクリック
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
 - **Reopen in Container**をクリック
 - 通知が表示されない場合は、左下隅の緑色のアイコンをクリックして**Reopen in Container**を選択
