@@ -182,7 +182,7 @@ iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けし�
 | RStudioが更新を検知しない | **File > Reopen with Encoding > UTF-8** で手動リロード |
 | `claude: command not found` | インストールガイドを再確認。PowerShellのウィンドウを新しく開き直す |
 | プロットが表示されない | RStudio Consoleで `install.packages("ggplot2")` を実行 |
-| `cannot change working directory` | Windowsのパスにスペースが含まれています。ステップ6でパスを引用符で囲む：`cd "~\Documents\Your Name\test_claude"` |
+| `cannot change working directory` | Windowsのパスにスペースが含まれています。ステップ6でパスを引用符で囲む（例：`cd "C:\Users\Your Name\Documents\test_claude"`） |
 | 初回リクエストが遅い | 30〜60秒待てば初期化され、その後は高速化します |
 | WSLを使っている場合 | オプションのWSL/Ubuntuの方法を設定した場合は、ステップ5〜16でPowerShellの代わりに **Ubuntu** アプリを開き、`cd /mnt/c/Users/YourUsername/Documents/test_claude` でプロジェクトへ移動 |
 
