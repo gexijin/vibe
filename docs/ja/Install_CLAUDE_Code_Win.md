@@ -153,7 +153,7 @@ OpenRouterは、単一のAPIキーで500以上の大規模言語モデルにア�
    ```
 - 利用可能なモデルは[openrouter.ai/models](https://openrouter.ai/models)で確認できます
 - 無料枠は1日50件のAPIリクエストが可能です
-- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/guides/claude-code-integration)を参照してください
+- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)を参照してください
 
 ### オプションD. Azure Foundry経由でAnthropic APIを使用
 

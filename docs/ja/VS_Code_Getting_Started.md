@@ -124,7 +124,7 @@ mkdir notes
 
 ## ステップ8：VS CodeでAIエージェントを使う（任意）
 
-VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat)が搭載されており、コードの説明、作成、デバッグを支援するAIアシスタントです。
+VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview)が搭載されており、コードの説明、作成、デバッグを支援するAIアシスタントです。
 
 - `README.md` ファイル（またはプロジェクト内の他のファイル）を開く
 - タイトルバーの **Chat > Open Chat** をクリック（Windows/Linuxでは `Ctrl+Alt+I`、Macでは `Ctrl+Cmd+I` を押す）
