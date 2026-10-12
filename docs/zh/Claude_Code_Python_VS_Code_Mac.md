@@ -25,8 +25,8 @@ lang: "zh"
 
 - 打开 **Visual Studio Code**
 - 点击菜单栏中的 **File**，然后点击 **Open Folder**
-- 导航到你的 **Documents** 文件夹
-- 点击对话框底部的 **New Folder**
+- 导航到你的 **文稿**（Documents）文件夹
+- 点击对话框底部的 **新建文件夹**（New Folder）
 - 将文件夹命名为 `claude_python_test`
 - 点击 **Open** 打开新文件夹
 - 如果提示"Do you trust the authors?"，点击 **Yes, I trust the authors**

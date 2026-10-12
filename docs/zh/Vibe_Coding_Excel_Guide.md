@@ -107,7 +107,7 @@ Claude Code 现在已经运行，随时可以接收你的请求。
 
 - 按 Enter
 - Claude 会添加这两个图表
-- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在 File Explorer 或 Finder 中双击它），或者把它上传到 Google Sheets，然后检查两个工作表
+- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在文件资源管理器（File Explorer）或访达（Finder）中双击它），或者把它上传到 Google Sheets，然后检查两个工作表
 - VS Code 中的 Spreadsheet Viewer 不会显示图表——这是正常的，图表仍然在文件里
 - 在让 Claude 做更多修改之前，先在 Excel 或 LibreOffice 中关闭这个文件
 

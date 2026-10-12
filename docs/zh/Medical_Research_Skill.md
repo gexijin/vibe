@@ -37,7 +37,7 @@ lang: "zh"
   ```
 
 **Mac:**
-- 打开 **Terminal**(在应用程序 > 实用工具中)
+- 打开**终端**(Terminal,在应用程序 > 实用工具中)
 - 输入以下命令:
   ```bash
   cd ~/Documents
@@ -139,10 +139,10 @@ Claude 会自动:
 
 **Windows:**
 - 打开 **文件资源管理器**,导航到 `C:\Users\YOUR_USERNAME\Documents\test_claude`
-- 右键单击文件夹并选择 **使用 Code 打开**
+- 右键单击文件夹并选择 **通过 Code 打开**(Open with Code)
 
 **Mac:**
-- 打开 **Finder**,导航到 `Documents/test_claude`
+- 打开**访达**(Finder),导航到 `Documents/test_claude`
 - 右键单击文件夹并选择 **使用 Visual Studio Code 打开**
 - 或者直接从 Terminal 输入 ``` code . ```
 

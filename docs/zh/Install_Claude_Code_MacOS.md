@@ -32,9 +32,9 @@ Claude Code 是运行在 Terminal 中的 AI 编程助手，可以帮助你编写
 
 ## 步骤 1：打开 Terminal
 
-- 点击 Dock 中的 **Launchpad** 图标（彩色方块图标）
-- 在搜索框中输入 `Terminal`
-- 点击 **Terminal**（黑色方块图标）
+- 点击 Dock 中的 **启动台**（Launchpad）图标（彩色方块图标）
+- 在搜索框中输入 `终端`（或 `Terminal`）
+- 点击 **终端**（Terminal，黑色方块图标）
 - Terminal 窗口将打开，显示闪烁的光标
 
 **提示：** 保持 Terminal 打开以继续下一步。
@@ -76,7 +76,7 @@ brew install --cask claude-code
 - 点击 **Authorize**
 - 出现长代码时点击 **Copy Code**
 - 返回 Terminal 窗口
-- 在 Terminal 中粘贴代码：点击菜单栏的 **Edit**，然后点击 **Paste**
+- 在 Terminal 中粘贴代码：点击菜单栏的 **编辑**（Edit），然后点击 **粘贴**（Paste）
 - 应该显示成功消息
 - 按照说明完成设置
 
@@ -200,9 +200,9 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 关闭 Terminal 后，重新打开的方法：
 
-- 点击 Dock 中的 **Launchpad** 图标（彩色方块图标）
-- 在搜索框中输入 `Terminal`
-- 点击 **Terminal**
+- 点击 Dock 中的 **启动台**（Launchpad）图标（彩色方块图标）
+- 在搜索框中输入 `终端`（或 `Terminal`）
+- 点击 **终端**（Terminal）
 - Terminal 窗口将打开
 
 ## 故障排除
@@ -220,7 +220,7 @@ claude doctor
 - 检查网络连接并重试
 
 ### 找不到 Claude Code 命令
-- 完全关闭 Terminal（点击菜单栏的 **Terminal**，然后点击 **Quit Terminal**）
+- 完全关闭 Terminal：点击菜单栏的 **终端**（Terminal），然后点击 **退出终端**（Quit Terminal）
 - 重新打开 Terminal
 - 输入 `claude --version` 检查是否已安装
 - 尝试重新运行安装命令：`curl -fsSL https://claude.ai/install.sh | bash`
@@ -234,7 +234,7 @@ claude doctor
 
 ### 查找项目路径
 快速获取文件夹路径：
-- 打开 Finder
+- 打开**访达**（Finder）
 - 导航到项目文件夹
 - 将文件夹拖放到 Terminal，完整路径会自动显示！
 

@@ -72,7 +72,7 @@ lang: "zh"
 
 ## 第 6 步：做出第一次修改
 
-- 在任何文本编辑器中打开 `README.md`(Notepad、TextEdit 或 VS Code)
+- 在任何文本编辑器中打开 `README.md`(记事本、文本编辑或 VS Code)
 - 将内容替换为：
   ```
   # My First Project
@@ -86,7 +86,7 @@ lang: "zh"
   - Create save points (commits)
   - Back up my work to GitHub
   ```
-- 点击 **File** → **Save**
+- 点击 **文件** → **保存**(VS Code 中为 **File** → **Save**)
 
 ## 第 7 步：创建你的第一个提交(存档点)
 

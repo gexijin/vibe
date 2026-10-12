@@ -39,7 +39,7 @@ lang: "zh"
   ```
 
 **Mac：**
-- 打开**Terminal**（在"应用程序 > 实用工具"中找到它）
+- 打开**终端**（Terminal，在"应用程序 > 实用工具"中找到它）
 - 输入以下命令：
   ```bash
   cd ~/Documents/test_claude

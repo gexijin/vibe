@@ -35,7 +35,7 @@ lang: "zh"
   ```
 
 **Mac:**
-- 打开 **Terminal**(在 应用程序 > 实用工具 中找到)
+- 打开**终端**(Terminal,在 应用程序 > 实用工具 中找到)
 - 输入以下命令:
   ```bash
   cd ~/Documents
@@ -52,7 +52,7 @@ lang: "zh"
   ```
 
 **Mac:**
-- 仍在 Terminal 中,输入:
+- 仍在终端(Terminal)中,输入:
   ```
   claude
   ```
@@ -161,7 +161,7 @@ Claude 更新命令文件。可以从编辑器验证。
   /stock-report AAPL
   ```
 
-Claude 创建名为 `Apple_2025-12-13.html` 之类的文件。在文件资源管理器(Windows)或 Finder(Mac)中双击此文件,在默认浏览器打开。
+Claude 创建名为 `Apple_2025-12-13.html` 之类的文件。在文件资源管理器(Windows)或访达(Finder,Mac)中双击此文件,在默认浏览器打开。
 
 ## 步骤 11:重复使用 slash command(可选)
 

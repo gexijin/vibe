@@ -24,7 +24,7 @@ lang: "zh"
 
 为你的研究论文创建一个文件夹:
 
-- 打开**文件资源管理器**(Windows) 或 **Finder**(Mac)
+- 打开**文件资源管理器**(Windows) 或**访达**(Finder,Mac)
 - 导航到**文档**
 - 创建一个名为 `test_claude` 的新文件夹
 
@@ -38,7 +38,7 @@ Windows 系统:
 - VS Code 打开并显示欢迎标签页 - 你可以关闭此标签页
 
 Mac 系统:
-- 打开 **Finder** 并转到**应用程序**
+- 打开**访达**(Finder)并转到**应用程序**
 - 找到 **Visual Studio Code** 并双击它
 - 如果看到警告"Visual Studio Code 是从互联网下载的应用程序",请点击**打开**
 - VS Code 打开并显示欢迎标签页 - 你可以关闭此标签页

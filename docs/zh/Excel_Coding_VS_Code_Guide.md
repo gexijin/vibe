@@ -84,7 +84,7 @@ claude
 - Spreadsheet Viewer 扩展会以电子表格的形式打开这个文件
 - 如果你看到的是一堆乱码和符号，说明 VS Code 把文件当作纯文本打开了——请参阅下方的故障排除
 - 点击底部的 **合计** 单元格——注意它是一个公式，而不是手动输入的数字
-- 如果你安装了 Excel 或 LibreOffice Calc，也可以在 File Explorer（Windows）或 Finder（Mac）中双击这个文件，用它们打开
+- 如果你安装了 Excel 或 LibreOffice Calc，也可以在文件资源管理器（Windows）或访达（Finder，Mac）中双击这个文件，用它们打开
 
 ## 步骤 7：让 Claude 添加图表
 
@@ -95,7 +95,7 @@ claude
 ```
 
 - 按 Enter
-- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在 File Explorer 或 Finder 中双击它），或者把它上传到 Google Sheets
+- 要查看图表，请用 Excel 或 LibreOffice Calc 打开 `budget.xlsx`（在文件资源管理器或访达中双击它），或者把它上传到 Google Sheets
 - VS Code 中的 Spreadsheet Viewer 不会显示图表——这是正常的，图表仍然在文件里
 
 ## 步骤 8：编辑数据并让 Claude 更新

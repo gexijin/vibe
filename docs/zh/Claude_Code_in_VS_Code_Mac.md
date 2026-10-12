@@ -22,24 +22,24 @@ lang: "zh"
 
 ## 步骤 1：启动 VS Code
 
-- 打开 **Finder** 并进入 **Applications（应用程序）**
+- 打开**访达**（Finder）并进入**应用程序**（Applications）
 - 找到 **Visual Studio Code** 并双击打开
 - 如果看到警告"Visual Studio Code is an app downloaded from the internet（Visual Studio Code 是从互联网下载的应用）"，点击 **Open（打开）**
 - VS Code 会打开并显示欢迎标签页，你可以关闭这个标签页
 
-**提示：**在 Dock 中右键点击 VS Code，选择 **Options > Keep in Dock（选项 > 在 Dock 中保留）**，方便以后快速访问。
+**提示：**在 Dock 中右键点击 VS Code，选择 **选项 > 在程序坞中保留**（Options > Keep in Dock），方便以后快速访问。
 
 ## 步骤 2：创建项目文件夹
 
-- 打开 **Finder**
-- 点击左侧边栏中的 **Documents（文稿）**
-- 点击菜单栏中的 **File（文件）> New Folder（新建文件夹）**
+- 打开**访达**（Finder）
+- 点击左侧边栏中的**文稿**（Documents）
+- 点击菜单栏中的**文件 > 新建文件夹**（File > New Folder）
 - 将文件夹命名为 `test_claude`
 
 ## 步骤 3：在 VS Code 中打开文件夹
 
 - 在 VS Code 中，点击菜单栏中的 **File（文件）> Open Folder（打开文件夹）**
-- 导航到 **Documents（文稿）**，选择 `test_claude` 文件夹
+- 导航到**文稿**（Documents），选择 `test_claude` 文件夹
 - 点击 **Open（打开）**
 - 如果提示"Do you trust the authors of the files in this folder?（你信任此文件夹中文件的作者吗？）"，点击 **Yes, I trust the authors（是的，我信任这些作者）**
 
@@ -79,7 +79,7 @@ lang: "zh"
 关闭 VS Code 后，以下是返回项目的方法：
 
 - **方法 A：** 打开 VS Code，点击 **File > Open Recent（文件 > 打开最近使用）**，然后选择 `test_claude`
-- **方法 B：** 打开 Terminal（终端），使用 `cd ~/Documents/test_claude` 导航到你的项目，然后输入 `code .`
+- **方法 B：** 打开**终端**（Terminal），使用 `cd ~/Documents/test_claude` 导航到你的项目，然后输入 `code .`
 
 VS Code 会记住最近使用的文件夹，使用方法 A 的 Open Recent（打开最近使用）通常最快。
 

@@ -35,8 +35,8 @@ lang: "zh"
 - 选择**New Project**
 - 在**Directory name**中输入：`test_claude`
 - 点击"Create project as subdirectory of:"旁边的**Browse**
-- 导航到**Documents**文件夹
-- 点击**Select Folder**
+- 导航到**文档**（Documents）文件夹
+- 点击**选择文件夹**（Select Folder）
 - 点击**Create Project**
 - RStudio创建项目并切换到该项目
 

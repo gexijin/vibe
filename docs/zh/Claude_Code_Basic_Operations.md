@@ -25,7 +25,7 @@ lang: "zh"
 ## 步骤1：打开你的Terminal
 
 - **Windows**：按Windows键，输入`PowerShell`，然后按Enter打开PowerShell
-- **Mac**：按`Cmd+Space`，输入`Terminal`，然后按Enter
+- **Mac**：按`Cmd+Space`，输入`终端`（或`Terminal`），然后按Enter
 
 **注意：** 如果你在Windows安装教程中选择了可选的WSL/Ubuntu方式，而不是原生安装，请改为打开**Ubuntu**应用，并在下面的步骤中使用Linux风格的路径（例如`/mnt/c/Users/YourName/...`）。
 
@@ -47,7 +47,7 @@ cd data_projects
 - 在浏览器访问[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)
 - 点击右上方的绿色**Code**按钮
 - 点击**Download ZIP**
-- 将ZIP文件解压到你的Downloads文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。
+- 将ZIP文件解压到你的“下载”（Downloads）文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。
 - 在Terminal中导航到解压后的文件夹：
   ```
   cd ~/Downloads/data_projects

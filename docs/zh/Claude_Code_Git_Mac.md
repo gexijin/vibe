@@ -24,9 +24,9 @@ lang: "zh"
 
 选择以下方法之一：
 
-- **Spotlight：** 按 `Command (⌘) + Space`，输入 `Terminal`，按 Enter
-- **Finder：** 打开 **应用程序** > **实用工具** > **Terminal**
-- **Launchpad：** 点击 Dock 中的 **Launchpad**，搜索 `Terminal`
+- **Spotlight：** 按 `Command (⌘) + Space`，输入 `终端`（或 `Terminal`），按 Enter
+- **访达（Finder）：** 打开 **应用程序** > **实用工具** > **终端**（Terminal）
+- **启动台（Launchpad）：** 点击 Dock 中的 **启动台**，搜索 `终端`（或 `Terminal`）
 
 你会看到一个以 `$` 或 `%` 结尾的命令提示符。
 
@@ -126,8 +126,8 @@ Claude 创建包含 CSS 和 JavaScript 代码的 `timer.html`（需要 10-30 秒
 
 ## 步骤 9：测试计时器
 
-- 打开 Finder
-- 导航到 **Documents** > **test_claude**
+- 打开**访达**（Finder）
+- 导航到 **文稿**（Documents）> **test_claude**
 - 双击 `timer.html` 在浏览器中打开
 - 试用计时器：
   - 在输入框中输入 `1`
@@ -262,7 +262,7 @@ Claude 以可读格式显示你的提交。你会看到：
 ## 故障排除
 
 - **"not a git repository" 错误：** 确保你在 test_claude 文件夹中（`cd ~/Documents/test_claude`）
-- **在 Finder 中找不到 timer.html：** 文件位于 `/Users/YOUR_USERNAME/Documents/test_claude/timer.html`
+- **在访达中找不到 timer.html：** 文件位于 `/Users/YOUR_USERNAME/Documents/test_claude/timer.html`
 - **Git 命令不起作用：** 确保你完成了步骤 2 并安装了 Git
 - **计时器不工作：** 打开浏览器控制台（右键点击页面，选择 **检查**，然后点击 **Console** 标签），复制任何红色错误信息，粘贴给 Claude
 

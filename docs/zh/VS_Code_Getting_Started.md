@@ -28,7 +28,7 @@ lang: "zh"
 - 点击 **Download** 按钮(会自动检测你的操作系统)
 - 运行安装程序:
    - **Windows:** 双击 `.exe` 文件,在提示中点击 **Next**
-   - **Mac:** 打开 `.dmg` 文件,将 VS Code 拖到 **Applications** 文件夹
+   - **Mac:** 打开 `.dmg` 文件,将 VS Code 拖到**应用程序**(Applications)文件夹
    - **Linux:** 根据你的包管理器遵循相应说明
 - 启动 VS Code
 
@@ -49,7 +49,7 @@ VS Code 有五个主要区域:
 ## 步骤 3:打开文件夹并浏览
 
 - 点击 **File** → **Open Folder**
-- 导航到计算机上的任何现有文件夹(如 Documents)
+- 导航到计算机上的任何现有文件夹(如 文档/文稿 文件夹)
 - 点击 **Open**(或 **Select Folder**)
 - 如果提示"Do you trust the authors?",点击 **Yes, I trust the authors**
 

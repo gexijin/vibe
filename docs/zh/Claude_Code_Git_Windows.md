@@ -115,7 +115,7 @@ Claude 会创建 `timer.html`（需要 10-30 秒），包含 CSS 和 JavaScript 
 ## 步骤 9：测试倒计时器
 
 - 打开 Windows 文件资源管理器
-- 导航到 `Documents\test_claude`
+- 导航到 **文档** > **test_claude**（即 `Documents\test_claude`）
 - 双击 `timer.html` 在浏览器中打开
 - 测试倒计时器：
   - 在输入框中输入 `1`

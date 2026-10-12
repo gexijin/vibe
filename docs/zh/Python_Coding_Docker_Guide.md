@@ -47,7 +47,7 @@ lang: "zh"
 - 点击资源管理器侧边栏中 `.devcontainer` 下方的空白处,让任何项目都不被选中,然后再次点击 **New Folder** 图标,将文件夹命名为 `python`
 - 结构应如下:`python-docker-demo/.devcontainer/` 和 `python-docker-demo/python/`
 
-我们在 VS Code 中创建这些文件夹,因为 Mac 的 Finder 不允许文件夹名称以点(`.`)开头。
+我们在 VS Code 中创建这些文件夹,因为 Mac 的访达(Finder)不允许文件夹名称以点(`.`)开头。
 
 ## 步骤 4:创建 Dockerfile
 
