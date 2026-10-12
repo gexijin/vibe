@@ -63,7 +63,7 @@ lang: "hi"
 - मेनू से **Reopen in Container** चुनें
 - VS Code कंटेनर बनाएगा (पहली बार में इसमें 5-10 मिनट लगते हैं)
 - आपको बिल्ड के चरण दिखाती एक प्रगति सूचना दिखेगी
-- पूरा होने पर, हरा आइकन **Dev Container: R in Docker** दिखाएगा
+- पूरा होने पर, हरा आइकन **Dev Container: R in Docker (AMD64)** दिखाएगा
 
 **नोट:** कंटेनर में स्वचालित रूप से R एक्सटेंशन और languageserver पैकेज शामिल होते हैं। Dockerfile और devcontainer.json यह काम आपके लिए संभालते हैं।
 
@@ -159,7 +159,7 @@ titlePanel("My First R Docker App")
 - आपको पूरा कॉन्फ़िगरेशन दिखेगा:
 
 ```dockerfile
-# choose a Dockerhub base image
+# choose a Dockerhub base image with R, Shiny Server, and tidyverse packages
 FROM rocker/shiny-verse:latest
 
 # 1. System deps commonly needed by R packages
@@ -178,7 +178,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 # 4. Install Claude Code globally
 RUN npm install -g @anthropic-ai/claude-code
 
-# 5. Expose Shiny server port
+# 5. Give shiny passwordless sudo for updating Claude Code from VS Code
+RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
+    rm -rf /var/lib/apt/lists/*
+
+# Expose Shiny server port
 EXPOSE 3838
 ```
 
@@ -189,6 +193,7 @@ EXPOSE 3838
 - `RUN R -q -e 'install.packages(...)'` - R पैकेजों को स्थायी रूप से इंस्टॉल करता है
 - `RUN curl... && apt-get install -y nodejs` - Node.js इंस्टॉल करता है, जो Claude Code चलाने के लिए ज़रूरी है
 - `RUN npm install -g @anthropic-ai/claude-code` - AI सहायता के लिए Claude Code को ग्लोबली इंस्टॉल करता है
+- `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - कंटेनर के यूज़र को बिना पासवर्ड डाले `sudo claude update` चलाने देता है
 - `EXPOSE 3838` - Shiny ऐप्स के लिए पोर्ट 3838 खोलता है
 
 **अन्य Rocker इमेज जो आप उपयोग कर सकते हैं:**
