@@ -11,26 +11,27 @@ Comparar oportunidades de inversión requiere horas de investigación y análisi
 ## Conceptos clave
 
 - **Subagente** - Trabajador de IA especializado con objetivo propio, prompt de sistema y herramientas que completa tareas de forma autónoma
+- **Contexto aislado** - Un subagente trabaja en su propio espacio de trabajo separado, así que su investigación no satura su conversación principal; solo regresa el resultado final
 - **Skill** - Capacidad reutilizable (como generar informes bursátiles) que los subagentes pueden invocar para lograr sus objetivos
 - **System Prompt** - Instrucciones que definen qué hace el subagente, cómo evalúa empresas y qué formato devuelve
 - **Separación de responsabilidades** - Los skills recopilan datos; los subagentes usan esos datos para tomar decisiones
 
 ## Lo que necesitará
 
-- Haber completado [Claude Code en VS Code en Windows](./Claude_Code_in_VS_Code_Win.md) o [Claude Code en VS Code en Mac](./Claude_Code_in_VS_Code_Mac.md)
-- Skill de informe bursátil ya instalado (en `.claude/skills/generate-stock-reports/`)
+- Haber completado el tutorial [Cree su primera Claude Skill](./Create_Your_First_Claude_Skill.md)
+- El skill `stock-report` ya instalado (en `.claude/skills/stock-report/`) de ese tutorial
 - VS Code u otro editor de texto
 - 20-25 minutos
 
-## Paso 1: Cree una carpeta de proyecto e inicie Claude Code
+## Paso 1: Abra su carpeta de proyecto e inicie Claude Code
+
+Su skill `stock-report` está en la misma carpeta de proyecto que usó en el tutorial de Skills; vuelva a abrir esa carpeta en lugar de crear una nueva.
 
 **Windows (PowerShell):**
 - Haga clic en el **botón Inicio de Windows**, escriba `PowerShell` y ábralo
-- Ejecute estos comandos:
+- Ejecute este comando:
   ```powershell
-  cd ~/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
+  cd ~/Documents/test_claude
   ```
 - Inicie Claude Code:
   ```
@@ -39,11 +40,9 @@ Comparar oportunidades de inversión requiere horas de investigación y análisi
 
 **Mac:**
 - Abra **Terminal** (Aplicaciones > Utilidades)
-- Ejecute estos comandos:
+- Ejecute este comando:
   ```bash
-  cd ~/Documents
-  mkdir stock_picker_test
-  cd stock_picker_test
+  cd ~/Documents/test_claude
   ```
 - Inicie Claude Code:
   ```
@@ -60,9 +59,9 @@ Antes de construir su subagente, confirme que el skill está disponible. Escriba
 Lista todas las skills disponibles
 ```
 
-Debería ver `generate-stock-reports` en la salida. Este skill investiga empresas y genera informes que cubren noticias de productos, actualizaciones de gestión, desempeño financiero y perspectivas de analistas.
+Debería ver `stock-report` en la salida. Este skill investiga empresas y genera informes que cubren noticias de productos, actualizaciones de gestión, desempeño financiero y perspectivas de analistas.
 
-Si no lo ve, los archivos del skill deberían estar en `.claude/skills/generate-stock-reports/` (nivel de proyecto).
+Si no lo ve, los archivos del skill deberían estar en `.claude/skills/stock-report/` (nivel de proyecto). Si la carpeta no existe, vuelva atrás y complete primero el tutorial [Cree su primera Claude Skill](./Create_Your_First_Claude_Skill.md) en esta misma carpeta de proyecto.
 
 ## Paso 3: Comprenda la arquitectura de subagente vs skill
 
@@ -100,13 +99,15 @@ Ahora cree su subagente:
   ```
   Crea un archivo markdown para un nuevo subagente llamado stock-picker:
   - Acepta dos o más acciones
-  - Usa el skill generate-stock-reports para investigar
+  - Usa el skill stock-report para investigar
   - Crea tarjetas de puntuación basadas en las categorías de datos recopilados
   - Proporciona una recomendación final.
   ```
 - Presione **Enter** en **[Continue]** para usar **All tools**
 - Seleccione **Sonnet** para el modelo
 - Presione **Enter** para elegir un color aleatorio
+
+**Qué significa "All tools":** Un subagente puede limitarse solo a las herramientas que necesita, por ejemplo, un agente de solo investigación con únicamente búsqueda web. Este tutorial usa **All tools** porque el stock-picker necesita investigar en línea y puede escribir archivos. Puede restringirlo más adelante editando el archivo del subagente.
 
 ## Paso 5: Revise lo que construyó (punto de reflexión)
 
@@ -123,7 +124,7 @@ Un **YAML frontmatter** en la parte superior:
 ---
 name: stock-picker
 description: Compara múltiples empresas para decisiones de inversión...
-skills: generate-stock-reports
+skills: stock-report
 ---
 ```
 
@@ -132,7 +133,7 @@ Este frontmatter (la sección entre marcadores `---`) indica a Claude Code cuán
 Un **System prompt** debajo del frontmatter con su metodología de puntuación.
 
 **Confirme estos elementos clave:**
-- El subagente tiene acceso al skill `generate-stock-reports`
+- El subagente tiene acceso al skill `stock-report`
 - El system prompt explica el desglose de puntuación
 - El objetivo del subagente es claro: comparar empresas y recomendar una
 
@@ -151,12 +152,14 @@ El subagente se activará automáticamente según su descripción.
 ## Paso 7: Observe cómo trabaja el subagente
 
 Mientras el subagente se ejecuta, verá que:
-1. **Invoca el skill dos veces** - Llama al skill generate-stock-reports una vez para Apple y luego para Google
+1. **Invoca el skill dos veces** - Llama al skill stock-report una vez para Apple y luego para Google
 2. **Recopila datos** - Cada llamada al skill busca en la web y genera un informe de empresa
 3. **Evalúa empresas** - Aplica la ponderación 40/30/20/10 entre categorías
 4. **Genera salida** - Crea tabla de comparación y recomendación
 
 Esto puede tomar 2-3 minutos ya que involucra búsqueda web.
+
+Observe que su conversación principal no se llena con todos los resultados de búsqueda y pasos intermedios: eso es el contexto aislado en acción. El subagente investiga en su propio espacio de trabajo separado y solo le informa lo que ve aquí.
 
 ## Paso 8: Revise la salida
 
@@ -178,7 +181,7 @@ Ahora que tiene un subagente selector de acciones funcional, pruebe estas extens
 ## Solución de problemas
 
 - **Subagente no se activa**: Asegúrese de que su solicitud mencione comparar empresas o decisiones de inversión. Intente: "Usa el subagente stock-picker para comparar..."
-- **Skill no encontrado**: Verifique que `.claude/skills/generate-stock-reports/SKILL.md` existe. Reinicie Claude Code si acaba de agregarlo.
+- **Skill no encontrado**: Verifique que `.claude/skills/stock-report/SKILL.md` existe. Reinicie Claude Code si acaba de agregarlo.
 - **Puntuaciones incompletas**: Pida al subagente que "continúe" o "explique las puntuaciones de cada categoría con más detalle"
 - **Error al crear subagente**: Verifique que la carpeta `.claude/agents/` existe. Claude Code debería crearla automáticamente.
 
