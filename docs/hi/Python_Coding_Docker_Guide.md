@@ -40,15 +40,17 @@ lang: "hi"
 ## चरण 3: एक Python प्रोजेक्ट फ़ोल्डर बनाएँ
 
 - अपने कंप्यूटर पर `python-docker-demo` नाम का एक नया फ़ोल्डर बनाएँ
-- उसके अंदर, `.devcontainer` नाम का एक सबफ़ोल्डर बनाएँ
-- `python-docker-demo` फ़ोल्डर के अंदर (`.devcontainer` के अंदर नहीं), `python` नाम का एक दूसरा सबफ़ोल्डर बनाएँ
+- VS Code में, **File > Open Folder** पर क्लिक करें
+- अभी बनाए गए `python-docker-demo` फ़ोल्डर पर जाएँ
+- **Select Folder** (Windows) या **Open** (Mac) पर क्लिक करें
+- Explorer साइडबार में, **PYTHON-DOCKER-DEMO** हेडिंग पर माउस ले जाएँ, **New Folder** आइकन पर क्लिक करें, और फ़ोल्डर का नाम `.devcontainer` रखें
+- Explorer साइडबार में `.devcontainer` के नीचे किसी खाली जगह पर क्लिक करें ताकि कुछ भी हाइलाइट न रहे, फिर **New Folder** आइकन पर दोबारा क्लिक करें और फ़ोल्डर का नाम `python` रखें (यह `.devcontainer` के अंदर नहीं, उसके बगल में बनना चाहिए)
 - आपकी संरचना ऐसी दिखनी चाहिए: `python-docker-demo/.devcontainer/` और `python-docker-demo/python/`
+
+हम ये फ़ोल्डर VS Code में इसलिए बनाते हैं क्योंकि Mac का Finder डॉट (`.`) से शुरू होने वाला फ़ोल्डर नाम रखने नहीं देता।
 
 ## चरण 4: Dockerfile बनाएँ
 
-- VS Code में, **File > Open Folder** पर क्लिक करें
-- अभी बनाए गए `python-docker-demo` फ़ोल्डर पर जाएँ
-- **Select Folder** पर क्लिक करें
 - Explorer साइडबार में, `.devcontainer` फ़ोल्डर पर राइट-क्लिक करें
 - **New File** पर क्लिक करें
 - इसे `Dockerfile` नाम दें
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -138,7 +140,7 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - **File > Save** पर क्लिक करें
@@ -201,10 +203,10 @@ pwd
 - फ़ाइलों की सूची देखें:
 
 ```bash
-ls
+ls -a
 ```
 
-आपको वे फ़ोल्डर दिखेंगे जो आपने बनाए थे: `.devcontainer/`, `python/`, आदि।
+आपको वे फ़ोल्डर दिखेंगे जो आपने बनाए थे: `.devcontainer/`, `python/`, आदि। (`-a` उन फ़ोल्डरों को भी दिखाता है जिनके नाम डॉट से शुरू होते हैं)
 
 - एक डायरेक्टरी ऊपर जाने की कोशिश करें:
 
@@ -233,7 +235,7 @@ cd python-docker-demo
 - `Shift+Enter` के साथ एक-एक करके हर लाइन या ब्लॉक चलाना जारी रखें
 - जब आप `print(df.head())` चलाते हैं, तो आपको टर्मिनल में पहली 5 पंक्तियाँ दिखेंगी
 - जब आप `print(df.describe())` चलाते हैं, तो आपको सांख्यिकीय सारांश दिखेंगे
-- जब आप हिस्टोग्राम कोड चलाते हैं, तो विज़ुअलाइज़ेशन दिखाने वाली एक प्लॉट विंडो खुलेगी
+- जब आप हिस्टोग्राम कोड चलाते हैं, तो यह चार्ट को आपके प्रोजेक्ट फ़ोल्डर में `iris_histogram.png` नाम से सेव कर देता है (कंटेनर में कोई स्क्रीन नहीं होती, इसलिए प्लॉट किसी विंडो में नहीं खुल सकते) - इसे देखने के लिए Explorer साइडबार में इस फ़ाइल पर क्लिक करें
 
 ## चरण 11: Streamlit ऐप चलाएँ
 
@@ -261,7 +263,7 @@ streamlit run app.py
 
 - ऐप को चालू रखें
 - VS Code में, `python/app.py` एडिट करें
-- लाइन 6 खोजें: `st.title("Old Faithful Geyser Data")`
+- लाइन 5 खोजें: `st.title("Old Faithful Geyser Data")`
 - इसे इस तरह बदलें:
 
 ```python
@@ -303,12 +305,12 @@ st.title("My First Python Docker App")
 
 - VS Code Explorer में, `.devcontainer/Dockerfile` पर जाएँ
 - फ़ाइल खोलने के लिए क्लिक करें
-- लाइन 9 खोजें: `RUN pip install --no-cache-dir ...`
-- सूची में `scikit-learn` जोड़ें:
+- लाइन 10 खोजें: `RUN pip install --no-cache-dir ...`
+- सूची में `plotly` जोड़ें:
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - **File > Save** पर क्लिक करें
@@ -318,8 +320,8 @@ RUN pip install --no-cache-dir \
 - सत्यापित करने के लिए, एक Python टर्मिनल खोलें और टाइप करें:
 
 ```python
-import sklearn
-print(sklearn.__version__)
+import plotly
+print(plotly.__version__)
 ```
 
 यदि यह बिना किसी त्रुटि के वर्शन दिखाता है, तो पैकेज स्थायी रूप से इंस्टॉल हो गया है।
@@ -327,7 +329,7 @@ print(sklearn.__version__)
 ## अगले कदम
 
 - **एक नई Python स्क्रिप्ट बनाएँ** - `python/` फ़ोल्डर में एक नई `.py` फ़ाइल बनाएँ, बिल्ट-इन डेटासेट का उपयोग करके या अपनी CSV फ़ाइलें लोड करके डेटा विश्लेषण कोड लिखें
-- **Python पैकेज इंस्टॉल करें** - Dockerfile (लाइन 9) एडिट करके और कंटेनर को फिर से बिल्ड करके ज़रूरी पैकेज जोड़ें
+- **Python पैकेज इंस्टॉल करें** - Dockerfile (लाइन 10) एडिट करके और कंटेनर को फिर से बिल्ड करके ज़रूरी पैकेज जोड़ें
 - **डेटा साइंस एक्सप्लोर करें** - pandas के साथ डेटा मैनिपुलेशन और matplotlib या seaborn के साथ विज़ुअलाइज़ेशन आज़माएँ
 - **वेब ऐप बनाएँ** - Streamlit या Flask के साथ इंटरैक्टिव डैशबोर्ड बनाएँ
 
