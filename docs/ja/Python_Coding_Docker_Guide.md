@@ -40,15 +40,17 @@ Pythonコードを共有したのに、「私のマシンでは動くのに...�
 ## ステップ3：Pythonプロジェクトフォルダを作成
 
 - コンピュータに`python-docker-demo`という新しいフォルダを作成
-- `python-docker-demo`の中に`.devcontainer`というサブフォルダを作成
-- `python-docker-demo`の中に`python`というサブフォルダを作成
+- VS Codeで**ファイル > フォルダーを開く**をクリック
+- 作成した`python-docker-demo`フォルダに移動
+- **フォルダーの選択**（Windows）または**開く**（Mac）をクリック
+- エクスプローラーサイドバーで**PYTHON-DOCKER-DEMO**の見出しにマウスを合わせ、**新しいフォルダー**アイコンをクリックして、フォルダに`.devcontainer`と名前を付ける
+- エクスプローラーサイドバーの`.devcontainer`の下の何もないところをクリックして、どの項目も選択されていない状態にしてから、もう一度**新しいフォルダー**アイコンをクリックして、フォルダに`python`と名前を付ける
 - 構造は次のようになります：`python-docker-demo/.devcontainer/` と `python-docker-demo/python/`
+
+これらのフォルダをVS Codeで作成するのは、MacのFinderではドット（`.`）で始まる名前のフォルダを作れないためです。
 
 ## ステップ4：Dockerfileを作成
 
-- VS Codeで**ファイル > フォルダーを開く**をクリック
-- 作成した`python-docker-demo`フォルダに移動
-- **フォルダーの選択**をクリック
 - エクスプローラーサイドバーで`.devcontainer`フォルダを右クリック
 - **新しいファイル**をクリック
 - `Dockerfile`と名前を付ける
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. データサイエンスとWebアプリ用のPythonパッケージをインストール
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. NodeSourceからNode.js LTSをインストール
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -138,7 +140,7 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - **ファイル > 保存**をクリック
@@ -201,10 +203,10 @@ pwd
 - ファイルを一覧表示：
 
 ```bash
-ls
+ls -a
 ```
 
-作成したフォルダが表示されます：`.devcontainer/`、`python/` など。
+作成したフォルダが表示されます：`.devcontainer/`、`python/` など（`-a`を付けると、名前がドットで始まるフォルダも表示されます）。
 
 - 一つ上のディレクトリに移動してみます：
 
@@ -233,7 +235,7 @@ cd python-docker-demo
 - `Shift+Enter`で各行またはブロックを1つずつ実行し続ける
 - `print(df.head())`を実行すると、ターミナルに最初の5行が表示されます
 - `print(df.describe())`を実行すると、統計的な要約が表示されます
-- ヒストグラムコードを実行すると、可視化を表示するプロットウィンドウが開きます
+- ヒストグラムコードを実行すると、グラフがプロジェクトフォルダに`iris_histogram.png`として保存されます（コンテナには画面がないため、グラフをウィンドウで開くことはできません） - エクスプローラーサイドバーでこのファイルをクリックすると表示できます
 
 ## ステップ11：Streamlitアプリを実行
 
@@ -304,11 +306,11 @@ st.title("私の初めてのPython Dockerアプリ")
 - VS Codeエクスプローラーで`.devcontainer/Dockerfile`に移動
 - クリックしてファイルを開く
 - 10行目を見つけます：`RUN pip install --no-cache-dir ...`
-- リストに`scikit-learn`を追加します：
+- リストに`plotly`を追加します：
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - **ファイル > 保存**をクリック
@@ -318,8 +320,8 @@ RUN pip install --no-cache-dir \
 - 確認するには、Pythonターミナルを開いて入力します：
 
 ```python
-import sklearn
-print(sklearn.__version__)
+import plotly
+print(plotly.__version__)
 ```
 
 エラーなくバージョンが表示されれば、パッケージは永続的にインストールされています。
@@ -327,7 +329,7 @@ print(sklearn.__version__)
 ## 次のステップ
 
 - **新しいPythonスクリプトを作成** - `python/`フォルダに新しい`.py`ファイルを作成し、組み込みデータセットを使用するか、独自のCSVファイルを読み込んでデータ分析コードを書く
-- **Pythonパッケージをインストール** - Dockerfile（9行目）を編集してコンテナを再ビルドして、必要なパッケージを追加
+- **Pythonパッケージをインストール** - Dockerfile（10行目）を編集してコンテナを再ビルドして、必要なパッケージを追加
 - **データサイエンスを探索** - pandasでデータ操作、matplotlibやseabornで可視化を試す
 - **Webアプリを構築** - StreamlitやFlaskで対話型ダッシュボードを作成
 
