@@ -96,6 +96,7 @@ Claude Codeエージェントインターフェースが表示され、既存の
 - **Project**を選択
 - **Generate with Claude (recommended)**を選択
 - 指示として次を貼り付けてください：
+
   ```
   stock-pickerという新しいサブエージェント用のmarkdownファイルを作成してください：
   - 2つ以上の株式を受け取る
