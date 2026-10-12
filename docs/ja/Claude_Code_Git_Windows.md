@@ -54,9 +54,9 @@ Gitはコミットメッセージに誰が変更したかを記録する必要�
 
 複数人で作業する場合、名前とメールアドレスを使うことで誰が変更したかを識別できます。
 
-## ステップ4：Documentsフォルダへ移動
+## ステップ4：ドキュメント（Documents）フォルダへ移動
 
-- Documentsフォルダに移動します：
+- ドキュメント（Documents）フォルダに移動します：
   ```
   cd ~\Documents
   ```
@@ -114,8 +114,8 @@ Claudeが `timer.html` を作成します（10〜30秒かかります）。CSS�
 
 ## ステップ9：タイマーをテスト
 
-- Windowsのファイルエクスプローラーを開く
-- `Documents\test_claude` に移動
+- Windowsの **エクスプローラー**（File Explorer）を開く
+- **ドキュメント** > **test_claude** に移動
 - `timer.html` をダブルクリックしてブラウザで開く
 - タイマーを試します：
   - 入力フィールドに `1` と入力
@@ -252,7 +252,7 @@ Claudeがコミットを読みやすい形式で表示します。次のよう�
 - **"not a git repository" エラー：** test_claudeフォルダにいることを確認してください（`cd ~\Documents\test_claude`）
 - **Windows上でtimer.htmlが見つからない：** ファイルは `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` にあります
 - **`git` コマンドが見つからない：** Git for WindowsをインストールしたらPowerShellを閉じて開き直してPATHを更新し、もう一度 `git --version` を実行してください
-- **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証** を選択、**Console** タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
+- **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証** を選択、**コンソール**（Console）タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
 
 ## Claudeに依頼できること
 

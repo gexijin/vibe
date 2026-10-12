@@ -26,8 +26,8 @@ Git for Windowsは **推奨ですがオプション** で、Claude Codeがコマ
 
 - [git-scm.com/download/win](https://git-scm.com/download/win) にアクセスします
 - ダウンロードが自動的に始まります。完了したらインストーラーを開きます
-- デフォルトのまま **次へ（Next）** を進めます
-- **インストール（Install）**、続いて **完了（Finish）** をクリックします
+- デフォルトのまま **Next**（次へ） を進めます
+- **Install**（インストール）、続いて **Finish**（完了） をクリックします
 
 これで完了です。Claude Codeは起動時にGit Bashを自動的に検出します。
 
@@ -56,7 +56,7 @@ Claude Codeのサイドバーは、VS Codeの中にあるチャットウィン�
 
 1. VS Codeを開きます
 2. ウィンドウの一番左側を見ます
-3. Claude Codeのパネルがまだ表示されていない場合は、**Extensions**アイコンをクリックします
+3. Claude Codeのパネルがまだ表示されていない場合は、**Extensions**（拡張機能）アイコンをクリックします
 4. 拡張機能マーケットプレイスでClaude Codeを検索します
 5. まだインストールされていない場合は、**Install**をクリックします
 6. インストール後、左側のサイドバーにClaude Codeのアイコンがあるか確認します

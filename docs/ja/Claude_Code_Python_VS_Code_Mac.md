@@ -24,18 +24,18 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 ## ステップ1: VS Codeを開いてPythonプロジェクトを作成
 
 - **Visual Studio Code**を開きます
-- メニューバーの**File**をクリックし、**Open Folder**を選択します
-- **Documents**フォルダに移動します
-- ダイアログの下部にある**New Folder**をクリックします
+- メニューバーの**File**（ファイル）をクリックし、**Open Folder**（フォルダーを開く）を選択します
+- **書類**（Documents）フォルダに移動します
+- ダイアログの下部にある**新規フォルダ**（New Folder）をクリックします
 - フォルダ名を`claude_python_test`にします
-- **Open**をクリックして新しいフォルダを開きます
-- 「Do you trust the authors?」と表示されたら、**Yes, I trust the authors**をクリックします
+- **開く**（Open）をクリックして新しいフォルダを開きます
+- 「Do you trust the authors?」と表示されたら、**Yes, I trust the authors**（はい、作成者を信頼します）をクリックします
 
 ## ステップ2: Claude Code拡張機能をインストールしてサインイン
 
-- 左サイドバーの**Extensions**アイコン（4つの正方形のアイコン）をクリックします
+- 左サイドバーの**Extensions**（拡張機能）アイコン（4つの正方形のアイコン）をクリックします
 - 検索ボックスに`Claude Code`と入力します
-- Anthropicの**Claude Code**を見つけて**Install**をクリックします
+- Anthropicの**Claude Code**を見つけて**Install**（インストール）をクリックします
 - インストール後、左サイドバーにClaudeアイコン（キラキラマーク）が表示されます
 - Claudeアイコンをクリックしてチャットパネルを開きます
 - チャットパネルの**Sign in to Claude Code**をクリックします
@@ -47,9 +47,9 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 
 ## ステップ3: 最初のPythonスクリプトを手動で作成
 
-- メニューバーの**File > New File**をクリックします
-- **Select a language**をクリックして`Python`と入力し、**Python**を選択します
-- **File > Save**をクリックしてファイルを保存し、`iris_analysis.py`と名前を付けます
+- メニューバーの**File > New File**（ファイル > 新しいファイル）をクリックします
+- **Select a language**（言語の選択）をクリックして`Python`と入力し、**Python**を選択します
+- **File > Save**（ファイル > 保存）をクリックしてファイルを保存し、`iris_analysis.py`と名前を付けます
 - 次のコードを入力します：
 
 ```python
@@ -68,7 +68,7 @@ print(iris_df.describe())
 ```
 
 - **File > Save**をクリックしてファイルを保存します
-- Pythonターミナルを開く：メニューバーの**View**をクリックし、**Terminal**を選択します
+- Pythonターミナルを開く：メニューバーの**View**（表示）をクリックし、**Terminal**（ターミナル）を選択します
 - このスクリプトに必要なパッケージをインストールします：
   ```
   pip install scikit-learn pandas
@@ -154,7 +154,7 @@ iris_analysis.pyに、sepal lengthとwidthの散布図を作成するコード�
 
 ## トラブルシューティング
 
-- **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**をクリックしてインストールされていることを確認してください。
+- **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**（表示 > 拡張機能）をクリックしてインストールされていることを確認してください。
 - **「Cannot read Python file」エラー** - ファイルが`.py`拡張子で保存されていることを確認してください。Claudeが読み取れるのは保存済みのファイルだけです。
 - **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)を参照してください。
 - **パッケージが見つからないエラー** - ターミナルで必要なパッケージをインストール：`pip install seaborn matplotlib scikit-learn pandas`。コードを実行する前にインストールが完了するまで待ってください。

@@ -57,11 +57,11 @@ lang: "ja"
 ## ステップ3：コンテナでプロジェクトを開く
 
 - VS Codeを開く
-- **ファイル > フォルダーを開く**をクリック
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリック
 - `iris-analysis`フォルダに移動
-- **フォルダーの選択**（Windows）または**開く**（Mac）をクリック
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリック
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
-- **Reopen in Container**をクリック
+- **Reopen in Container**（コンテナーで再度開く）をクリック
 - 通知が表示されない場合は、左下隅の緑色のアイコンをクリックして**Reopen in Container**を選択
 - VS CodeがDockerコンテナをビルドします（初回は3〜5分かかります）
 - ビルドステップを示す進行通知を見る
@@ -69,7 +69,7 @@ lang: "ja"
 
 ## ステップ4：Claude Codeを起動
 
-- VS Codeで**ターミナル > 新しいターミナル**をクリック
+- VS Codeで**Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリック
 - これでDockerコンテナ内にいます
 - このコマンドを入力してClaude Codeを起動：
 
@@ -236,7 +236,7 @@ Vibe Codingは反復によって真価を発揮します。説明するだけで
 - **インポートエラー** - Dockerコンテナにはpandas、matplotlib、scikit-learnがプリインストールされています。エラーが出る場合は、Claudeにpipでのインストールを依頼してください。
 - **Claudeが間違える** - 問題ありません。エラーメッセージをコピーしてClaudeに貼り付け、「このエラーを修正して」と依頼してください。Vibe Codingには反復とデバッグが含まれます。
 - **GitHubにプッシュできない** - GitHub Desktopにログインし、リポジトリを公開済みであることを確認してください（ステップ1）。インターネット接続も確認してください。
-- **コンテナが起動しない** - Docker Desktopが実行中であることを確認してください（緑色のステータス表示）。VS Codeの緑色のアイコンをクリックして**Rebuild Container**を試してください。
+- **コンテナが起動しない** - Docker Desktopが実行中であることを確認してください（緑色のステータス表示）。VS Codeの緑色のアイコンをクリックして**Rebuild Container**（コンテナーのリビルド）を試してください。
 
 ## ワークフロー概要
 

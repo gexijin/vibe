@@ -35,7 +35,7 @@ lang: "ja"
   ```
 
 **Mac：**
-- **ターミナル**を開く（アプリケーション > ユーティリティにあります）
+- **ターミナル**（Terminal）を開く（**アプリケーション**（Applications）> **ユーティリティ**（Utilities）にあります）
 - 次のコマンドを入力：
   ```bash
   cd ~/Documents
@@ -83,7 +83,7 @@ Claudeが詳細なプロンプトを作成し、`.claude/commands/`フォルダ�
 
 VS Codeをインストールしている場合（推奨）：
 - VS Codeを起動
-- **ファイル**から**フォルダを開く**を選択し、プロジェクトフォルダ`Documents/test_claude`を選択
+- **File**から**Open Folder**（フォルダーを開く）を選択し、プロジェクトフォルダ`Documents/test_claude`を選択
 - ファイルエクスプローラから`.claude/commands`に移動し、`stock-report.md`ファイルをクリックして開く
 
 プロンプトを確認し、必要に応じて指示を変更してください。

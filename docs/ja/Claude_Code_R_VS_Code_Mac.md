@@ -24,18 +24,18 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 ## ステップ1: VS Codeを開いてRプロジェクトを作成
 
 - **Visual Studio Code**を開きます
-- メニューバーの**File**をクリックし、**Open Folder**を選択します
-- **Documents**フォルダに移動します
-- ダイアログの下部にある**New Folder**をクリックします
+- メニューバーの**File**（ファイル）をクリックし、**Open Folder**（フォルダーを開く）を選択します
+- **書類**（Documents）フォルダに移動します
+- ダイアログの下部にある**新規フォルダ**（New Folder）をクリックします
 - フォルダ名を`claude_r_test`にします
 - **Open**をクリックして新しいフォルダを開きます
-- 「Do you trust the authors?」と表示されたら、**Yes, I trust the authors**をクリックします
+- 「Do you trust the authors?」と表示されたら、**Yes, I trust the authors**（はい、作成者を信頼します）をクリックします
 
 ## ステップ2: Claude Code拡張機能をインストールしてサインイン
 
-- 左サイドバーの**Extensions**アイコン（4つの正方形のアイコン）をクリックします
+- 左サイドバーの**Extensions**（拡張機能）アイコン（4つの正方形のアイコン）をクリックします
 - 検索ボックスに`Claude Code`と入力します
-- Anthropicの**Claude Code**を見つけて**Install**をクリックします
+- Anthropicの**Claude Code**を見つけて**Install**（インストール）をクリックします
 - インストール後、左サイドバーにClaudeアイコン（キラキラマーク）が表示されます
 - Claudeアイコンをクリックしてチャットパネルを開きます
 - チャットパネルの**Sign in to Claude Code**をクリックします
@@ -47,9 +47,9 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 
 ## ステップ3: 最初のRスクリプトを手動で作成
 
-- メニューバーの**File > New File**をクリックします
+- メニューバーの**File > New File**（ファイル > 新しいファイル）をクリックします
 - **Select a language**をクリックして`R`と入力し、**R**を選択します
-- **File > Save**をクリックしてファイルを保存し、`iris_analysis.R`と名前を付けます
+- **File > Save**（ファイル > 保存）をクリックしてファイルを保存し、`iris_analysis.R`と名前を付けます
 - 次のコードを入力します：
 
 ```r
@@ -59,7 +59,7 @@ summary(iris)
 ```
 
 - **File > Save**をクリックしてファイルを保存します
-- Rターミナルを開く：メニューバーの**View**をクリックし、**Command Palette**を選択、`R: Create R Terminal`と入力してEnterを押します
+- Rターミナルを開く：メニューバーの**View**（表示）をクリックし、**Command Palette**（コマンド パレット）を選択、`R: Create R Terminal`と入力してEnterを押します
 - コードを選択して`Cmd+Enter`を押して実行します
 - ターミナルにデータセットの構造と要約統計が表示されます
 
@@ -136,7 +136,7 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 
 ## トラブルシューティング
 
-- **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**をクリックしてインストールされていることを確認してください。
+- **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**（表示 > 拡張機能）をクリックしてインストールされていることを確認してください。
 - **「Cannot read R file」エラー** - ファイルが`.R`拡張子で保存されていることを確認してください。Claudeが読み取れるのは保存済みのファイルだけです。
 - **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)を参照してください。
 - **ggplot2が見つからない** - Rターミナルでインストール：`install.packages("ggplot2")`。コードを実行する前にインストールが完了するまで待ってください。

@@ -40,15 +40,15 @@ Vibe Codingは、コンピュータと会話するようなものです。あな
 ## ステップ2：VS Codeでプロジェクトを開く
 
 - VS Codeを開きます
-- **File > Open Folder**をクリックします
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリックします
 - `budget-dashboard`フォルダを選択します
-- **Select Folder**（Windows）または**Open**（Mac）をクリックします
-- まだの場合は、MESCIUSの**Spreadsheet Viewer**拡張機能（旧名称：GrapeCityの**Excel Viewer**）をインストールして、VS Codeを離れずにスプレッドシートをプレビューできるようにします。正しい拡張機能を見つけるには、ExtensionsパネルでそのID`GrapeCity.gc-excelviewer`を検索してください
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリックします
+- まだの場合は、MESCIUSの**Spreadsheet Viewer**拡張機能（旧名称：GrapeCityの**Excel Viewer**）をインストールして、VS Codeを離れずにスプレッドシートをプレビューできるようにします。正しい拡張機能を見つけるには、Extensions（拡張機能）パネルでそのID`GrapeCity.gc-excelviewer`を検索してください
 - Spreadsheet Viewerは数値や数式の確認には便利ですが、グラフ、色付きの強調表示、ドロップダウンリストは表示できません。これらにはExcel、LibreOffice Calc、またはGoogle Sheetsを使います
 
 ## ステップ3：Claude Codeを起動
 
-- **Terminal > New Terminal**をクリックします
+- **Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリックします
 - 次のコマンドを入力してClaude Codeを起動します：
 
 ```bash

@@ -41,7 +41,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 - 入力：
   - **Name：** `test_claude`
   - **Description：** `A timer app built with Claude Code`
-  - **Local Path：** Documentsフォルダ
+  - **Local Path：** **書類**（Documents, Mac）または **ドキュメント**（Documents, Windows）フォルダ
   - **「Initialize this repository with a README」にチェック**
 - **Create Repository** をクリック
 - 上部の **Publish repository** をクリック
@@ -91,7 +91,7 @@ Claudeが `timer.html` ファイルを作成します（10〜30秒）。
 
 ## ステップ4：エラーを修正（必要な場合）
 
-- ブラウザコンソールを開く（ページ上で右クリック → **検証** → **Console** タブ）
+- ブラウザコンソールを開く（ページ上で右クリック → **検証** → **コンソール**（Console）タブ）
 - 赤いエラーメッセージをコピー
 - ターミナルのClaude Codeに戻る
 - エラーを貼り付け：
@@ -212,11 +212,11 @@ Claudeが変更内容を分かりやすく説明してくれます。
 
 ## トラブルシューティング
 
-**「認証失敗」：** GitHub Desktop → File/環境設定 → Accounts → サインアウトして再度サインイン
+**「Authentication failed」と表示される：** GitHub Desktopで **File** → **Options**（Windows）または **GitHub Desktop** → **Settings**（Mac）→ **Accounts** → サインアウトして再度サインイン
 
 **Claudeが「not a git repository」と表示：** 正しいフォルダにいることを確認（`cd ~/Documents/test_claude`）
 
-**タイマーが動作しない：** ブラウザコンソールを開き（右クリック → **検証** → **Console**）、エラーをコピーしてClaudeに貼り付け
+**タイマーが動作しない：** ブラウザコンソールを開き（右クリック → **検証** → **コンソール**（Console））、エラーをコピーしてClaudeに貼り付け
 
 **困ったときは：** [GitHub Desktopドキュメント](https://docs.github.com/ja/desktop) • [Claude Codeドキュメント](https://docs.anthropic.com/en/docs/claude-code)
 

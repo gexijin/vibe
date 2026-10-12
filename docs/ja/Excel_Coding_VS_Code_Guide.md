@@ -39,9 +39,9 @@ VS Codeをすでに開いている場合は、Pythonを認識させるために�
 ## ステップ2：VS CodeにSpreadsheet Viewer拡張機能をインストール
 
 - VS Codeを開きます
-- 左サイドバーの**Extensions**アイコンをクリックします（または**View > Extensions**をクリック）
+- 左サイドバーの**Extensions**（拡張機能）アイコンをクリックします（または**View > Extensions**（表示 > 拡張機能）をクリック）
 - `GrapeCity.gc-excelviewer`で検索します
-- **MESCIUS**の**Spreadsheet Viewer**の**Install**をクリックします
+- **MESCIUS**の**Spreadsheet Viewer**の**Install**（インストール）をクリックします
 
 **注：** この拡張機能は以前、**GrapeCity**の**Excel Viewer**という名前でした。古いガイドや動画では今もその名前が使われていることがあります。現在「Excel Viewer」で検索すると他の拡張機能もいくつか表示されるため、正しいものを見つけるには上記のIDで検索してください。IDが今も`GrapeCity`で始まっているのは正常です。
 
@@ -50,12 +50,12 @@ VS Codeをすでに開いている場合は、Pythonを認識させるために�
 ## ステップ3：プロジェクトフォルダを作成
 
 - パソコン上に新しいフォルダを作成します（例：`my-excel-project`）
-- VS Codeで**File > Open Folder**をクリックし、作成したフォルダを選択します
-- **Select Folder**（Windows）または**Open**（Mac）をクリックします
+- VS Codeで**File > Open Folder**（ファイル > フォルダーを開く）をクリックし、作成したフォルダを選択します
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリックします
 
 ## ステップ4：Claude Codeを起動
 
-- VS Codeで**Terminal > New Terminal**をクリックします
+- VS Codeで**Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリックします
 - 次のコマンドを入力してEnterキーを押します：
 
 ```bash
@@ -140,7 +140,7 @@ Claude Codeは、すでに散らかってしまったスプレッドシートを
 
 ## トラブルシューティング
 
-- **`budget.xlsx`が文字化けしたテキストや記号（`PK`で始まる）で開かれる**：スプレッドシートビューアーがファイルを処理しなかったため、VS Codeが生のファイルを表示しています。ファイル自体は問題ありません。`.xlsx`はプレーンテキストではなく圧縮されたファイルの集まりです。MESCIUSの**Spreadsheet Viewer**（`GrapeCity.gc-excelviewer`）がインストールされ、有効になっていることを確認してください。次にタブを閉じ、Explorerパネルで`budget.xlsx`を右クリックして**Open With...**を選び、**Excel Editor**（Spreadsheet Viewerの`.xlsx`ファイル用エディター）を選択します。他のスプレッドシート拡張機能もインストールされている場合は、同じ一覧から**Configure default editor for '*.xlsx'...**を選んで**Excel Editor**を選択すると、今後はファイルをクリックするだけでこのエディターが使われるようになります。
+- **`budget.xlsx`が文字化けしたテキストや記号（`PK`で始まる）で開かれる**：スプレッドシートビューアーがファイルを処理しなかったため、VS Codeが生のファイルを表示しています。ファイル自体は問題ありません。`.xlsx`はプレーンテキストではなく圧縮されたファイルの集まりです。MESCIUSの**Spreadsheet Viewer**（`GrapeCity.gc-excelviewer`）がインストールされ、有効になっていることを確認してください。次にタブを閉じ、Explorerパネルで`budget.xlsx`を右クリックして**Open With...**（ファイルを開くアプリケーションの選択...）を選び、**Excel Editor**（Spreadsheet Viewerの`.xlsx`ファイル用エディター）を選択します。他のスプレッドシート拡張機能もインストールされている場合は、同じ一覧から**Configure default editor for '*.xlsx'...**（'*.xlsx' の既定のエディターを構成...）を選んで**Excel Editor**を選択すると、今後はファイルをクリックするだけでこのエディターが使われるようになります。
 - **Spreadsheet Viewerのプレビューが空白または崩れて表示される**：タブを閉じてファイルを開き直してください。それでもうまくいかない場合は、代わりにExcel、LibreOffice Calc、またはGoogle Sheetsでファイルを開いてください。ファイル自体は問題なく、プレビューの一時的な不具合です。
 - **数式のセルに数値ではなく空白が表示される**：通常、ファイルを書き込んだ後に再計算されていないことが原因です。Claudeに次のように依頼してください：「budget.xlsxを再計算して、数式エラーがないことを確認して」
 - **Claudeの変更が反映されない**：Claudeが編集したのと同じファイルを見ているか確認してください（Claudeが示したファイル名を確認します）。VS Codeでタブを閉じて開き直すと、強制的に更新されます。

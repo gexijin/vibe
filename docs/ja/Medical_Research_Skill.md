@@ -37,7 +37,7 @@ lang: "ja"
   ```
 
 **Mac：**
-- **ターミナル**を開く（アプリケーション > ユーティリティにあります）
+- **ターミナル**（Terminal）を開く（**アプリケーション**（Applications）> **ユーティリティ**（Utilities）にあります）
 - 次のコマンドを入力：
   ```bash
   cd ~/Documents
@@ -138,12 +138,12 @@ Claudeが自動的に以下を実行します：
 VS Codeを開いてスキル構造を確認：
 
 **Windows：**
-- **ファイルエクスプローラ**を開き、`C:\Users\YOUR_USERNAME\Documents\test_claude`に移動
-- フォルダを右クリックして**Codeで開く**を選択
+- **エクスプローラー**（File Explorer）を開き、`C:\Users\YOUR_USERNAME\Documents\test_claude`に移動
+- フォルダを右クリックして**Codeで開く**（Open with Code）を選択
 
 **Mac：**
 - **Finder**を開き、`Documents/test_claude`に移動
-- フォルダを右クリックして**Visual Studio Codeで開く**を選択
+- フォルダを右クリックして**Visual Studio Codeで開く**（Open with Visual Studio Code）を選択
 - またはターミナルから```code .```と入力
 
 VS Codeで：

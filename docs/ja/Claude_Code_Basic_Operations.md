@@ -46,7 +46,7 @@ cd data_projects
 - Webブラウザで[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)にアクセスします
 - 右上近くの緑色の**Code**ボタンをクリックします
 - **Download ZIP**をクリックします
-- ZIPファイルをダウンロードフォルダに解凍します。GitHubは解凍したフォルダに**data_projects-main**という名前を付けます。このチュートリアルの他の部分と一致させるため、**data_projects**に名前を変更してください。
+- ZIPファイルを**ダウンロード**（Downloads）フォルダに解凍します。GitHubは解凍したフォルダに**data_projects-main**という名前を付けます。このチュートリアルの他の部分と一致させるため、**data_projects**に名前を変更してください。
 - ターミナルで、解凍したフォルダに移動します：
   ```
   cd ~/Downloads/data_projects

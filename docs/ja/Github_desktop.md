@@ -34,7 +34,7 @@ lang: "ja"
 1. [desktop.github.com](https://desktop.github.com) を開き、**Download** をクリック
 2. ダウンロードしたファイルを開いてインストール
    - **Windows**：インストーラーをダブルクリックすると自動でセットアップ＆起動
-   - **Mac**：ダウンロードした`.zip`ファイルを開き、**GitHub Desktop**をApplicationsフォルダへドラッグして起動
+   - **Mac**：ダウンロードした`.zip`ファイルを開き、**GitHub Desktop**を**アプリケーション**（Applications）フォルダへドラッグし、アプリケーションフォルダから起動
 
 ## ステップ3：GitHub Desktopにサインイン
 
@@ -48,7 +48,7 @@ lang: "ja"
 2. 次のように入力：
    - **Name**: `my-first-project`
    - **Description**: `Learning version control`（任意）
-   - **Local Path**: 保存先（Documentsなど）
+   - **Local Path**: 保存先（**書類**／**ドキュメント**（Documents）フォルダなど）
    - **Initialize this repository with a README** にチェック
 3. **Create Repository** をクリック
 
@@ -59,7 +59,7 @@ lang: "ja"
 
 ## ステップ6：READMEを編集
 
-1. `README.md` をメモ帳／TextEdit／VS Codeなどで開く
+1. `README.md` を**メモ帳**（Notepad）／**テキストエディット**（TextEdit）／VS Codeなどで開く
 2. 内容を以下に書き換え、保存
    ```
    # 初めてのプロジェクト

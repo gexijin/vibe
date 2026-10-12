@@ -37,8 +37,8 @@ WindowsのRStudioでRコードを実行しながら、Claude CodeでAI支援を�
 - **New Project**を選択
 - **Directory name**に：`test_claude`と入力
 - "Create project as subdirectory of:"の横にある**Browse**をクリック
-- **Documents**フォルダに移動
-- **Select Folder**をクリック
+- **ドキュメント**（Documents）フォルダに移動
+- **フォルダーの選択**（Select Folder）をクリック
 - **Create Project**をクリック
 - RStudioがプロジェクトを作成し、そのプロジェクトに切り替わります
 

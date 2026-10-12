@@ -37,7 +37,7 @@ lang: "ja"
   ```
 
 **Mac：**
-- **ターミナル**を開く（アプリケーション > ユーティリティ）
+- **ターミナル**（Terminal）を開く（**アプリケーション**（Applications）> **ユーティリティ**（Utilities））
 - 次を入力：
   ```bash
   cd ~/Documents/test_claude
@@ -79,7 +79,7 @@ Claudeが既存のスラッシュコマンドを分析し、`.claude/skills/stoc
 ## ステップ5：スキルの構造を確認
 
 VS Codeを開いてプロジェクトを表示：
-- **ファイル > フォルダを開く**をクリック
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリック
 - `Documents/test_claude`を選択
 - ファイルエクスプローラで`.claude/skills/stock-report/`に移動
 - `SKILL.md`をクリックして開く

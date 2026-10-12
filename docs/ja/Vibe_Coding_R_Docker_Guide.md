@@ -43,7 +43,7 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
   - **ARM64ユーザー向けの注意（Apple Silicon Mac）：** 代わりに https://github.com/gexijin/vibe/tree/ARM64 を使用
 - **Code**をクリックしてZipをダウンロード
 - エクスプローラー（Windows）またはFinder（Mac）を開く
-- Downloadフォルダでファイルを解凍
+- **ダウンロード**（Downloads）フォルダでファイルを解凍
 - vibeプロジェクトフォルダに移動（例：`Documents/vibe`）
 - `.devcontainer`フォルダを見つける
 - フォルダ全体をコピー（`Dockerfile`と`devcontainer.json`が含まれています）
@@ -59,9 +59,9 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
 
 - WindowsまたはMacから**Docker Desktop**アプリを起動。バックグラウンドで実行させる
 - VS Codeを開く
-- **ファイル > フォルダーを開く**をクリック
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリック
 - `nba-dashboard`フォルダに移動
-- **フォルダーの選択**（Windows）または**開く**（Mac）をクリック
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリック
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
 - **Reopen in Container**をクリック
 - 通知が表示されない場合は、左下隅の緑色のアイコンをクリックして**Reopen in Container**を選択
@@ -71,7 +71,7 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
 
 ## ステップ4：Claude Codeを起動
 
-- VS Codeで**ターミナル > 新しいターミナル**をクリック
+- VS Codeで**Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリック
 - これでDockerコンテナ内にいます
 - このコマンドを入力してClaude Codeを起動：
 
