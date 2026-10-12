@@ -42,7 +42,7 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 - 認証方法を選択します：
   - **Claude Pro/Maxユーザー**: **Sign in with Claude.ai**をクリックし、ブラウザで認証してコードをVS Codeにコピーします
   - **APIキーユーザー**: **Use API Key**をクリックしてAnthropic APIキーを貼り付けます
-- 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイド（ステップ5）を参照してください
+- 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイド（ステップ3）を参照してください
 - サインインすると、チャットパネルに「Ready to help」と表示されます
 
 ## ステップ3: 最初のPythonスクリプトを手動で作成
