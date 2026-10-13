@@ -17,7 +17,7 @@ You're coding with AI assistance. It makes changes to your files. Sometimes the 
 ## What You'll Need
 
 - Finished [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
-- 30 minutes
+- 20-30 minutes
 
 ## Step 1: Open Terminal
 
@@ -111,7 +111,7 @@ Claude initializes a Git repository in your folder (takes 2-5 seconds). You now 
 
 ## Step 8: Build the Timer App
 
-- In Claude Code, type:
+- In Claude Code, copy and paste this whole request (pasting keeps all the lines together; pressing Enter would send it early):
 
   ```
   Create a simple countdown timer app in a single file called timer.html.
@@ -183,7 +183,7 @@ Sometimes AI code doesn't work and you need to start over from your last save po
   ```
   discard these changes.
   ```
-- Claude shows a menu with options like **Yes** and **No** — use the arrow keys (or press the number next to **Yes**) to select it, then press **Enter**
+- Claude will usually ask you to confirm first. If it shows a menu, choose **Yes** (arrow keys or the number next to it) and press **Enter**. If it asks in a message, type `yes, discard the changes to timer.html` and press **Enter**
 - Refresh your browser—the 15-minute button disappears
 
 Claude throws away the new changes we don't like. The timer works again with just the 1- and 5-minute buttons!
@@ -230,6 +230,7 @@ Notice the 15-minute button attempt isn't there—you discarded it!
 ## Step 17: Examine the code
 
 - In the browser that shows the app, right click and select **View Page Source** (or press `Option (⌥) + Command (⌘) + U`)
+- **Using Safari?** First click **Safari** > **Settings** > **Advanced** and tick **Show features for web developers**. Then right-click the page and choose **Show Page Source**
 - You can see the source code for this.
 - In Claude Code, ask
   ```
@@ -263,7 +264,7 @@ Remember: Test after each feature, commit after each success, discard failures.
 - **"not a git repository" error:** Make sure you're in the test_claude folder (`cd ~/Documents/test_claude`)
 - **Can't find timer.html in Finder:** The file is at `/Users/YOUR_USERNAME/Documents/test_claude/timer.html`
 - **Git commands don't work:** Make sure you completed Step 2 and installed Git
-- **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, then click the **Console** tab), copy any red error messages, paste them to Claude
+- **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, then click the **Console** tab; in Safari, first turn on the developer features as shown in Step 17, then choose **Inspect Element**), copy any red error messages, paste them to Claude
 
 ## What You Can Ask Claude
 
@@ -271,7 +272,7 @@ Remember: Test after each feature, commit after each success, discard failures.
 - `show me the diff` - See exactly what code changed
 - `explain what the timer code does` - Understand the implementation
 - `create a branch called experiment` - Try risky changes safely
-- `go back to the previous commit` - Undo everything since last commit
+- `undo everything since my last commit` - Throw away changes you haven't saved yet
 
 Claude handles all Git operations through natural language—no commands to memorize!
 
@@ -281,6 +282,6 @@ Claude handles all Git operations through natural language—no commands to memo
 - **Development:** Claude writes code, you test in browser
 - **Version Control:** Claude handles all Git operations via simple requests
 - **Safety:** Discard bad changes anytime, return to any previous commit
-- **Local:** Everything stays on your computer, no account or internet required
+- **Local:** Your Git history stays on your computer — no GitHub account needed (Claude Code itself still needs internet and your Claude account)
 
 Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 8, 2025.
