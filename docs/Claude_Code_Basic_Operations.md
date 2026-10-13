@@ -45,7 +45,7 @@ cd data_projects
 - Visit [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) in your web browser
 - Click the green **Code** button near the top right
 - Click **Download ZIP**
-- Extract the ZIP file under your Downloads folder. GitHub names the extracted folder **data_projects-main** — rename it to **data_projects** so it matches the rest of this tutorial.
+- Extract the ZIP file under your Downloads folder. GitHub names the extracted folder **data_projects-main** — rename it to **data_projects** so it matches the rest of this tutorial. On Windows, **Extract All** may create a folder inside a folder (data_projects-main → data_projects-main). Open it: if you see only another **data_projects-main** folder, move that inner folder into Downloads and rename it to **data_projects**.
 - In your terminal, navigate to the extracted folder:
   ```
   cd ~/Downloads/data_projects
@@ -136,7 +136,7 @@ Ends your session and returns to your normal terminal prompt. You can also hit *
 
 ## Step 6: Approve Changes and Use Shortcuts
 
-When Claude wants to edit a file or run a command, it shows a small menu with options like **Yes** and **No**. Use the arrow keys to highlight your choice and press **Enter**.
+New sessions usually start in **Auto** mode, where Claude handles routine edits and commands without asking. If Claude asks for permission, it shows a small menu with options like **Yes** and **No**. Use the arrow keys to highlight your choice and press **Enter**. If you want to approve every change yourself, press **Shift+Tab** until the mode below the prompt shows **Manual**.
 
 A few keyboard shortcuts also make working with Claude Code faster:
 
@@ -174,9 +174,9 @@ If you're working with Claude Code from VS Code and have the Claude Code extensi
 Furthermore, you can select a few lines of code and Claude will show **3 lines selected**. You can ask Claude to make quick changes to these lines or ask questions. Therefore, I highly recommend using Claude Code from VS Code. 
 
 
-## Step 9: Take Actions with Linux Commands
+## Step 9: Take Actions with Terminal Commands
 
-Claude can take actions by running Linux commands in many forms. 
+Claude can take actions by running terminal commands (Bash on Mac/Linux, Git Bash or PowerShell on Windows) in many forms. 
 
 - Install software
   ```
@@ -206,7 +206,7 @@ Claude installs software, troubleshoots errors, and manages environments—all o
 
 
 
-You essentially have an expert in Linux bash commands at your disposal. As long as you manage permissions and approve actions, you can be very productive. 
+You essentially have an expert in terminal commands at your disposal. As long as you manage permissions and approve actions, you can be very productive. 
 
 ## Next Steps
 
@@ -221,7 +221,7 @@ Now that you know the basics, try these on your own:
 
 - **"Command not found" error** - Claude Code isn't installed or not in your PATH. Follow the [Windows](Install_CLAUDE_Code_Win.md) or [Mac](Install_Claude_Code_MacOS.md) installation tutorial again, or rerun the installer directly: `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) or `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude gives outdated information** - Clear the context with `/clear` and ask again. Long conversations can fill up Claude's memory.
-- **File changes not working** - Make sure you have write permissions in your project folder. Claude will ask for approval before modifying files—select **Yes** from the menu that appears.
+- **File changes not working** - Make sure you have write permissions in your project folder. If Claude asks for approval, select **Yes** from the menu that appears.
 - **Context filling up quickly** - Use `/context` to check usage. When it's nearly full, use `/clear` to start a fresh conversation with a clean slate.
 
 ## Workflow Overview
@@ -231,7 +231,7 @@ Working with Claude Code follows this pattern:
 - Start Claude in your project folder with `claude`
 - Ask questions in natural language
 - Claude reads files as needed and responds
-- Request code changes—Claude asks permission before modifying files
+- Request code changes—if Claude asks for permission, choose **Yes**
 - Use `/clear` when changing topics or context gets full
 - Use `/exit` when you're done
 
