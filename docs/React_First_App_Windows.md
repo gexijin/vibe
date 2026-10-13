@@ -28,10 +28,10 @@ You'll use two programs: **PowerShell** to create and run the app, and **VS Code
 
 Node.js lets your computer build and run React apps.
 
-- Go to [nodejs.org](https://nodejs.org)
-- Click the big button that says **LTS** (the recommended version)
-- Open the downloaded file and click **Next** through the installer, accepting the defaults
-- Click **Install**, then **Finish**
+- Go to [nodejs.org](https://nodejs.org) and click **Get Node.js®**
+- On the download page (it already picks the recommended **LTS** version), click the **Windows Installer (.msi)** button
+- Open the downloaded file. Tick **I accept the terms in the License Agreement**, then click **Next** through the rest, keeping the defaults
+- Click **Install** (click **Yes** if Windows asks for permission), then **Finish**
 
 ## Step 2: Open PowerShell
 
@@ -42,20 +42,17 @@ PowerShell is a window where you type commands instead of clicking. You'll only 
 - Click **Windows PowerShell** in the results
 - A window opens with a blinking cursor—you type a command there and press **Enter**
 
-## Step 3:  Change folder via command line
+## Step 3: Go to Your Documents Folder
 
-Before creating the app, you'll move into your **Documents** folder—the same folder you open in File Explorer (Windows) or Finder (Mac). This is where your project will be saved, so it's easy to find later.
+Before creating the app, you'll move into your **Documents** folder—the same folder you open in File Explorer. This is where your project will be saved, so it's easy to find later.
 
 The command below is `cd`, short for "change directory." It simply moves you into a folder, the way double-clicking a folder opens it.
 
-- **On Windows (PowerShell):** type this and press **Enter** (replace John.Smith with your own user name on Windows):
+- Type this and press **Enter**:
   ```
-  cd C:/Users/John.Smith/Documents
+  cd ~\Documents
   ```
-- **On Mac (Terminal):** type this and press **Enter**:
-  ```
-  cd ~/Documents
-  ```
+  (If your Documents folder is synced with OneDrive, use `cd ~\OneDrive\Documents` instead.)
 
 You won't see much happen—that's normal. The text to the left of the blinking cursor changes to show you're now inside Documents.
 
@@ -64,10 +61,11 @@ You won't see much happen—that's normal. The text to the left of the blinking 
 Type this command and press **Enter**:
 
 ```
-npm create vite@latest heart-react -- --template react
+npm create vite@latest heart-react -- --template react --no-interactive
 ```
 
 - If it asks **Ok to proceed? (y)**, type `y` and press **Enter**
+- When it finishes, it prints `Done. Now run:` followed by three commands. You'll run them in the next step.
 
 This creates a new folder called heart-react inside Documents, with your project inside it.
 
@@ -103,7 +101,7 @@ npm run dev
 
 - Open **VS Code**
 - Click **File** → **Open Folder**
-- Open your `heart-react` folder (in Documents) and click **Select Folder** (click **Yes** if asked whether you trust the folder)
+- Open your `heart-react` folder (in Documents) and click **Select Folder** (if VS Code asks whether you trust the authors, click **Yes, I trust the authors**)
 - The **Explorer** on the left shows your project, including the `src` and `public` folders
 
 ## Step 8: Build the Dashboard with ChatGPT
@@ -111,13 +109,14 @@ npm run dev
 - Go to [chat.openai.com](https://chat.openai.com) and type:
   ```
   I have a React app made with Vite. Replace App.jsx so that on load
-  it fetches /heartatk4R.txt (tab-separated; columns SEX, DIED (0/1),
-  CHARGES, LOS, AGE). Show total patients and average age and charges
+  it fetches /heartatk4R.txt (tab-separated with a header row; columns
+  Patient, DIAGNOSIS, SEX, DRG, DIED (0/1), CHARGES, LOS, AGE). Show
+  total patients and average age and charges
   as cards. Ignore NA. Give me the full App.jsx.
   ```
 - Copy the code
 - In VS Code's **Explorer** (left side), open the `src` folder and click **App.jsx**
-- Select all the old text (**Edit** → **Select All**), delete it, and paste the new code
+- Select all the old text (press **Ctrl+A**, or **Selection** → **Select All**), delete it, and paste the new code
 - Click **File** → **Save**
 - Look at your browser—it updates by itself with your dashboard. No refresh, no picking a file!
 
@@ -141,10 +140,10 @@ That instant update is what React is all about: you change a value, React update
 - Open **GitHub Desktop**
 - Click **File** → **Add Local Repository**
 - Click **Choose...**, select your `heart-react` folder, and click **Add Repository**
-- If it says the folder isn't a Git repository, click the link to **create a repository**
-- Notice `node_modules` is **not** in the file list—Vite added a `.gitignore` that tells Git to skip it
-- Type a commit message: `First React dashboard`
-- Click **Commit to main**
+- GitHub Desktop says the folder doesn't appear to be a Git repository. Click the **create a repository** link, then click **Create repository**
+- GitHub Desktop saves all your files as a first commit called **Initial commit**. Click the **History** tab to see it
+- Notice `node_modules` is **not** in that commit. Vite added a `.gitignore` file that tells Git to skip it
+- From now on, each time you change `App.jsx`, type a commit message (for example `Add sex filter`) and click **Commit to main**
 
 ## Next Steps
 
