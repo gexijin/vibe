@@ -6,7 +6,7 @@ lang: "fr"
 
 # Créer des Commandes Slash Personnalisées
 
-Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Comme créer des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
+Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Tout comme des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
 
 Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer la commande slash. Oui, Claude est très doué pour se prompter... lui-même.
 
@@ -18,7 +18,7 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir complété [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) ou [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Avoir complété [Configurer VS Code pour Claude Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Un sujet à rechercher (nous utiliserons les rapports boursiers comme exemple)
 - Un éditeur de texte tel que VS Code installé
 - 15-20 minutes
@@ -84,7 +84,7 @@ Utilisez n'importe quel éditeur de texte pour ouvrir le fichier `stock-report.m
 Si vous avez VS Code installé (recommandé) :
 - Démarrez VS Code
 - Depuis **File**, choisissez **Open folder**, et sélectionnez le dossier de projet `Documents/test_claude`
-- Depuis l'explorateur de fichiers, naviguez vers `.claude/commands` et cliquez sur le fichier `stock-report.md` pour l'ouvrir
+- Dans le panneau **Explorer** de VS Code (à gauche), naviguez vers `.claude/commands` et cliquez sur le fichier `stock-report.md` pour l'ouvrir
 
 Examinez le prompt et apportez des modifications aux instructions si vous le souhaitez.
 
@@ -177,7 +177,7 @@ La même structure de commande recherche maintenant Tesla à la place.
 
 ## Étape 12 : Essayer une Autre Commande Slash (Optionnel)
 
-Si vous avez complété le tutoriel [Writing Research Paper](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
+Si vous avez complété le tutoriel [Rédiger un article de recherche avec Claude Code](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
 
 Commencez par effacer la mémoire de Claude pour repartir de zéro :
 
@@ -185,14 +185,14 @@ Commencez par effacer la mémoire de Claude pour repartir de zéro :
 /clear
 ```
 
-Ensuite, exécutez la commande research paper :
+Ensuite, exécutez la commande `/research-paper` :
 
 ```
-/research-paper AI in schools
+/research-paper L'IA à l'école
 ```
 
 Deux différences clés :
-- /research-paper a été créé à la fin d'une session en capturant l'interaction humaine, tandis que /stock-report est créé à partir de zéro.
+- La commande /research-paper a été créée à la fin d'une session en capturant l'interaction humaine, tandis que /stock-report a été créée de zéro.
 - /research-paper demande de manière interactive des entrées avant de rédiger un article.
 
 ## Prochaines Étapes
@@ -206,8 +206,8 @@ Maintenant que vous comprenez les commandes slash, créez davantage de commandes
 ## Dépannage
 
 - **Commande non trouvée :** Redémarrez Claude Code pour recharger les commandes depuis `.claude/commands/`
-- **Arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
-- **Rapport incomplet :** Demandez à Claude de « continuer » ou « ajouter plus de détails à la section [nom de la section] »
+- **Les arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
+- **Rapport incomplet :** Demandez à Claude : « continue » ou « ajoute plus de détails à la section [nom de la section] »
 
 ## Aperçu du Workflow
 

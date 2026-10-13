@@ -10,10 +10,10 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 
 ## Concepts Clés
 
-- **Workspace** - Le dossier depuis lequel vous démarrez Claude Code ; Claude lit et modifie les fichiers qu'il contient pendant cette session
+- **Espace de travail (workspace)** - Le dossier depuis lequel vous démarrez Claude Code ; Claude lit et modifie les fichiers qu'il contient pendant cette session
 - **REPL (Read-Eval-Print Loop)** - Une session interactive où vous tapez des commandes, Claude répond, et la conversation continue jusqu'à ce que vous quittiez
-- **Context** - La quantité de code et d'historique de conversation que Claude se souvient ; comme une mémoire de travail qui se remplit au fil du temps
-- **Slash Commands** - Raccourcis intégrés commençant par `/` qui effectuent des actions spécifiques comme effacer l'historique ou afficher l'aide
+- **Contexte** - La quantité de code et d'historique de conversation dont Claude se souvient ; comme une mémoire de travail qui se remplit au fil du temps
+- **Commandes slash** - Raccourcis intégrés commençant par `/` qui effectuent des actions spécifiques comme effacer l'historique ou afficher l'aide
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -34,7 +34,7 @@ Une fenêtre de texte s'ouvrira où vous pourrez taper des commandes.
 
 Nous utiliserons un véritable projet de science des données pour explorer les fonctionnalités de Claude Code. Vous pouvez soit le cloner avec Git, soit le télécharger directement.
 
-**Option A : Cloner avec Git (si vous avez Git installé) :**
+**Option A : Cloner avec Git (si Git est installé) :**
 
 ```
 git clone https://github.com/gexijin/data_projects
@@ -90,7 +90,7 @@ Claude vérifiera l'historique Git (si disponible) et vous informera des commits
 
 Vous pouvez demander à Claude n'importe quoi sur votre code en langage naturel. Il lit les fichiers selon les besoins pour répondre à vos questions.
 
-## Étape 5 : Slash Commands Essentielles
+## Étape 5 : Commandes Slash Essentielles
 
 Tapez `/` pour voir toutes les commandes disponibles. Voici les plus importantes :
 
@@ -100,7 +100,7 @@ Tapez `/` pour voir toutes les commandes disponibles. Voici les plus importantes
 /
 ```
 
-Cela affiche un menu de toutes les slash commands. Utilisez les touches fléchées pour parcourir, appuyez sur Entrée pour sélectionner, ou appuyez sur Échap pour annuler.
+Cela affiche un menu de toutes les commandes slash. Utilisez les touches fléchées pour parcourir, appuyez sur Entrée pour sélectionner, ou appuyez sur Échap pour annuler.
 
 **Obtenir de l'aide :**
 
@@ -165,10 +165,10 @@ Vous pouvez modifier CLAUDE.md dans le dossier du projet à tout moment pour ajo
 Vous pouvez utiliser `@` pour référencer un fichier spécifique :
 
 ```
-Expliquez le code dans @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
+Explique le code dans @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 ```
 
-Claude lira le notebook et expliquera ce qu'il fait, comment il fonctionne et ce que le code accomplit. Cela amène effectivement le fichier dans le contexte.
+Claude lira le notebook et expliquera ce qu'il fait, comment il fonctionne et ce que le code accomplit. Cela revient à ajouter le fichier au contexte.
 
 Si vous travaillez avec Claude Code depuis VS Code et avez l'extension Claude Code installée, vous pouvez ajouter le fichier au contexte simplement en l'ouvrant. Vous verrez `In Nested_Pie_Chart.ipynb` dans le coin inférieur droit de la fenêtre Claude Code. Alors Claude sait que vous parlez de ce fichier.
 
@@ -181,33 +181,33 @@ Claude peut effectuer des actions en exécutant des commandes Linux sous de nomb
 
 - Installer des logiciels
   ```
-  Installez la bibliothèque pandas
+  Installe la bibliothèque pandas
   ```
 
 - Démarrer le contrôle de version
   ```
-  Commencez à suivre les changements en utilisant Git. Mon nom est James Bond et mon email est bond@earth.com
+  Commence à suivre les changements avec Git. Je m'appelle James Bond et mon e-mail est bond@earth.com
   ```
-- Valider les changements
+- Faire un commit des changements
   ```
-  Validez ces changements.
+  Fais un commit de ces changements.
   ```
 - Trouver et télécharger des données
   ```
-  Téléchargez le jeu de données wine quality depuis UCI. Mettez-le dans un nouveau dossier appelé wine.
+  Télécharge le jeu de données wine quality depuis UCI. Mets-le dans un nouveau dossier appelé wine.
   ```
 
 - Exécuter du code
   ```
-  Réécrivez le code du graphique en camembert imbriqué comme un script Python ordinaire.
-  Exécutez-le et enregistrez le nouveau code et les graphiques dans le même dossier.
+  Réécris le code du graphique en camembert imbriqué sous forme de script Python ordinaire.
+  Exécute-le et enregistre le nouveau code et les graphiques dans le même dossier.
   ```
 
 Claude installe des logiciels, résout des erreurs et gère les environnements — tout seul.
 
 
 
-Vous avez essentiellement un expert en commandes bash Linux à votre disposition. Tant que vous gérez les permissions et approuvez les actions, vous pouvez être très productif.
+En pratique, vous avez un expert en commandes bash Linux à votre disposition. Tant que vous gérez les permissions et approuvez les actions, vous pouvez être très productif.
 
 ## Prochaines Étapes
 
@@ -223,7 +223,7 @@ Maintenant que vous connaissez les bases, essayez ceci par vous-même :
 - **Erreur "Command not found"** - Claude Code n'est pas installé ou n'est pas dans votre PATH. Suivez à nouveau le tutoriel d'installation [Windows](Install_CLAUDE_Code_Win.md) ou [Mac](Install_Claude_Code_MacOS.md), ou relancez directement l'installateur : `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) ou `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude donne des informations obsolètes** - Effacez le contexte avec `/clear` et redemandez. Les longues conversations peuvent remplir la mémoire de Claude.
 - **Les modifications de fichiers ne fonctionnent pas** - Assurez-vous d'avoir les permissions d'écriture dans votre dossier de projet. Claude demandera l'approbation avant de modifier les fichiers — sélectionnez **Yes** dans le menu qui apparaît.
-- **Le contexte se remplit rapidement** - Utilisez `/context` pour vérifier l'utilisation. Lorsqu'il est presque plein, utilisez `/clear` pour démarrer une conversation fraîche avec une ardoise propre.
+- **Le contexte se remplit rapidement** - Utilisez `/context` pour vérifier l'utilisation. Lorsqu'il est presque plein, utilisez `/clear` pour repartir de zéro avec une nouvelle conversation.
 
 ## Aperçu du Flux de Travail
 

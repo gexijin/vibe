@@ -6,7 +6,7 @@ lang: "fr"
 
 # Premiers Pas avec VS Code
 
-Vous souhaitez écrire du code, mais Notepad ou TextEdit vous semblent limités. Vous avez besoin d'un outil qui vous aide à coder plus rapidement - avec la coloration syntaxique, l'autocomplétion et des outils intégrés. **VS Code est comme un cahier intelligent pour le code** - il comprend ce que vous écrivez et vous aide tout au long du processus. [Visual Studio Code](https://code.visualstudio.com) est gratuit, fonctionne sur tous les systèmes d'exploitation et est utilisé par des millions de développeurs.
+Vous souhaitez écrire du code, mais le Bloc-notes ou TextEdit vous semblent limités. Vous avez besoin d'un outil qui vous aide à coder plus rapidement - avec la coloration syntaxique, l'autocomplétion et des outils intégrés. **VS Code est comme un cahier intelligent pour le code** - il comprend ce que vous écrivez et vous aide tout au long du processus. [Visual Studio Code](https://code.visualstudio.com) est gratuit, fonctionne sur tous les systèmes d'exploitation et est utilisé par des millions de développeurs.
 
 ## Concepts Clés
 
@@ -107,13 +107,13 @@ Un panneau de prévisualisation s'ouvre affichant votre Markdown formaté - édi
 ```
 ls
 ```
-(Sur Windows Command Prompt, utilisez `dir`)
+(Dans l'Invite de commandes de Windows, utilisez `dir`)
 
 **Afficher le répertoire de travail actuel :**
 ```
 pwd
 ```
-(Sur Windows Command Prompt, utilisez `cd`)
+(Dans l'Invite de commandes de Windows, utilisez `cd`)
 
 **Créer un nouveau dossier :**
 ```
@@ -134,7 +134,7 @@ VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/cha
 
 GitHub Copilot analysera votre fichier et expliquera ce qu'il fait. Vous pouvez lui demander d'écrire du nouveau code, de corriger des bugs ou de répondre à des questions comme « Comment ajouter plus de fonctionnalités ? »
 
-**Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/copilot/copilot-chat), surlignez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
+**Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/copilot/copilot-chat), sélectionnez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
 
 ## Comment Rouvrir Votre Projet
 

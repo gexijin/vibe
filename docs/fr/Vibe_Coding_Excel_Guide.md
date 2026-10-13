@@ -16,8 +16,8 @@ Le vibe coding ressemble à une conversation avec votre ordinateur : vous décri
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Use Claude Code with Excel in VS Code](./Excel_Coding_VS_Code_Guide)
-- Avoir terminé [Use GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Avoir terminé [Utiliser Claude Code avec Excel dans VS Code](./Excel_Coding_VS_Code_Guide)
+- Avoir terminé [Utiliser GitHub Desktop avec Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - Microsoft Excel, [LibreOffice Calc](https://fr.libreoffice.org/download/) (gratuit) ou Google Sheets (gratuit dans votre navigateur web) pour voir les graphiques, les couleurs et les listes déroulantes
 - 25-30 minutes
 
@@ -66,7 +66,7 @@ Au lieu de construire une feuille de calcul cellule par cellule, décrivez simpl
 - Dans le terminal Claude Code, tapez :
 
 ```
-Crée une feuille de calcul appelée budget.xlsx avec deux feuilles : « Revenus » et « Dépenses ». Revenus doit avoir les colonnes Source, Mois et Montant, avec 3 exemples de sources de revenus sur 2 mois. Dépenses doit avoir les colonnes Catégorie, Mois et Montant, avec 6 exemples de catégories (comme Loyer, Courses, Transport, Charges, Loisirs, Téléphone) sur les mêmes 2 mois. Ajoute une ligne Total en bas de chaque feuille à l'aide de formules SUM.
+Crée un classeur Excel appelé budget.xlsx avec deux feuilles : « Revenus » et « Dépenses ». Revenus doit avoir les colonnes Source, Mois et Montant, avec 3 exemples de sources de revenus sur 2 mois. Dépenses doit avoir les colonnes Catégorie, Mois et Montant, avec 6 exemples de catégories (comme Loyer, Courses, Transport, Charges, Loisirs, Téléphone) sur les mêmes 2 mois. Ajoute une ligne Total en bas de chaque feuille à l'aide de formules SUM.
 ```
 
 - Appuyez sur Entrée
@@ -102,7 +102,7 @@ Les nombres sont utiles, mais les graphiques racontent l'histoire en un coup d'�
 - Dans le terminal Claude Code, tapez :
 
 ```
-Ajoute à la feuille Dépenses un graphique en secteurs montrant la part totale de chaque catégorie dans les dépenses. Ajoute à la feuille Synthèse un graphique en barres comparant le Total des revenus et le Total des dépenses pour chaque mois.
+Ajoute à la feuille Dépenses un graphique en secteurs montrant la part totale de chaque catégorie dans les dépenses, avec une part par catégorie (les deux mois cumulés). Ajoute à la feuille Synthèse un graphique en barres comparant le Total des revenus et le Total des dépenses pour chaque mois.
 ```
 
 - Appuyez sur Entrée
@@ -118,7 +118,7 @@ Rendez les problèmes visibles en un coup d'œil au lieu de les chercher parmi l
 - Dans le terminal Claude Code, tapez :
 
 ```
-Dans la feuille Dépenses, ajoute une mise en forme conditionnelle pour que toute dépense supérieure à $500 sur un seul mois soit surlignée en rouge, et toute dépense inférieure à $100 soit surlignée en vert. Ne colore pas la ligne Total.
+Dans la feuille Dépenses, ajoute une mise en forme conditionnelle pour que toute dépense supérieure à 500 $ sur un seul mois soit surlignée en rouge, et toute dépense inférieure à 100 $ soit surlignée en vert. Ne colore pas la ligne Total.
 ```
 
 - Appuyez sur Entrée
@@ -133,7 +133,7 @@ Rendez la feuille plus facile à compléter sans fautes de frappe.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Ajoute une validation des données à la colonne Catégorie de la feuille Dépenses pour qu'elle n'accepte que les valeurs d'une liste déroulante contenant les catégories existantes, plus « Autre ». Ajoute deux lignes vides en bas, prêtes pour de nouvelles saisies.
+Ajoute une validation des données à la colonne Catégorie de la feuille Dépenses pour qu'elle n'accepte que les valeurs d'une liste déroulante contenant les catégories existantes, plus « Autre ». Ajoute deux lignes vides juste au-dessus de la ligne Total, prêtes pour de nouvelles saisies, et assure-toi que le Total, les formules de la Synthèse, les totaux du graphique en secteurs (avec une part « Autre ») et les règles de couleur les incluent. Laisse les cellules vides sans couleur.
 ```
 
 - Appuyez sur Entrée
@@ -165,7 +165,7 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 **Exemples de demandes à Claude :**
 
-- « Ajoute une ligne Objectif d'épargne à la feuille Synthèse montrant la progression vers un objectif d'épargne de $500/mois »
+- « Ajoute une ligne Objectif d'épargne à la feuille Synthèse montrant la progression vers un objectif d'épargne de 500 $/mois »
 - « Ajoute une quatrième feuille qui affiche une comparaison d'une année sur l'autre quand j'aurai ajouté plus de mois de données »
 - « Change les couleurs du graphique en secteurs pour un thème bleu et gris »
 - « Ajoute une note expliquant chaque formule pour que je puisse apprendre ce qu'elles font »
@@ -175,11 +175,11 @@ Après chaque fonctionnalité réussie :
 - Ouvrez le fichier et vérifiez-le : utilisez Spreadsheet Viewer pour les nombres, ou Excel/LibreOffice pour les graphiques et les couleurs
 - Si cela fonctionne, committez avec GitHub Desktop
 - Si quelque chose semble incorrect, décrivez-le à Claude et demandez-lui de le corriger
-- Une fois corrigée, committez la version fonctionnelle
+- Une fois le problème corrigé, committez la version fonctionnelle
 
 **Principes clés :**
 
-- **Décrivez les résultats, pas l'implémentation** - Dites « surligne les dépenses supérieures à $500 » et non « utilise une mise en forme conditionnelle avec une CellIsRule »
+- **Décrivez les résultats, pas l'implémentation** - Dites « surligne les dépenses supérieures à 500 $ » et non « utilise une mise en forme conditionnelle avec une CellIsRule »
 - **Itérez rapidement** - Tester → affiner → tester → affiner
 - **Committez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
 - **Acceptez les échecs** - Si une formule ou un graphique ne sort pas correctement, décrivez simplement le problème et demandez à Claude de le corriger
@@ -193,7 +193,7 @@ Après chaque fonctionnalité réussie :
 - **Importez de vraies données** - Déposez un relevé bancaire au format CSV dans votre dossier de projet et demandez à Claude de l'intégrer au suivi
 - **Apprenez en posant des questions** - Quand Claude écrit une formule, demandez « explique ce que fait cette formule » pour apprendre Excel
 - **Partagez votre suivi** - Poussez le fichier terminé sur GitHub pour que vous (ou les membres de votre famille) puissiez récupérer la dernière version
-- **Lisez sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
+- **Renseignez-vous sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
 
 ## Dépannage
 

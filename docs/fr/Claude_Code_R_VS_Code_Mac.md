@@ -10,14 +10,14 @@ Vous avez configuré R dans VS Code et pouvez écrire du code manuellement. Main
 
 ## Concepts Clés
 
-- **[Extension Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - Extension VS Code qui intègre l'assistant IA Claude directement dans votre éditeur avec des modifications de code en ligne
+- **[Extension Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - Extension VS Code qui intègre l'assistant IA Claude directement dans votre éditeur avec des modifications proposées directement dans votre code
 - **Panneau de Discussion** - Panneau latéral dans VS Code où vous conversez avec Claude à propos de votre code
-- **Modifications en Ligne** - Les suggestions de modifications de code de Claude apparaissent directement dans vos fichiers avec des diffs que vous pouvez accepter ou rejeter
+- **Modifications intégrées** - Les suggestions de modifications de code de Claude apparaissent directement dans vos fichiers avec des diffs que vous pouvez accepter ou rejeter
 
 ## Ce Dont Vous Aurez Besoin
 
 - Tutoriel [R dans VS Code](./R_Coding_VS_Code_Guide) terminé - R doit fonctionner dans VS Code
-- Tutoriel [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) terminé - L'interface CLI Claude Code doit être installée
+- Tutoriel [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) terminé - Claude Code (en ligne de commande) doit être installé
 - Abonnement Claude Pro/Max ou clé API Anthropic
 - 20-30 minutes
 
@@ -26,7 +26,7 @@ Vous avez configuré R dans VS Code et pouvez écrire du code manuellement. Main
 - Ouvrez **Visual Studio Code**
 - Cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
 - Naviguez vers votre dossier **Documents**
-- Cliquez sur **New Folder** en bas de la boîte de dialogue
+- Cliquez sur **Nouveau dossier** en bas de la boîte de dialogue
 - Nommez le dossier `claude_r_test`
 - Cliquez sur **Open** pour ouvrir le nouveau dossier
 - Si on vous demande "Do you trust the authors?", cliquez sur **Yes, I trust the authors**
@@ -63,13 +63,13 @@ summary(iris)
 - Sélectionnez le code et appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac) pour l'exécuter
 - Vous devriez voir la structure du jeu de données et les statistiques récapitulatives dans le terminal
 
-## Étape 4 : Demander à Claude d'Ajouter un Graphique de Dispersion
+## Étape 4 : Demander à Claude d'Ajouter un Nuage de Points
 
 - Cliquez sur l'icône **Claude** dans la barre latérale gauche pour ouvrir le panneau de discussion
 - Dans la zone de discussion en bas, tapez :
 
 ```
-Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris_analysis.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 
 - Appuyez sur Entrée pour envoyer
@@ -82,7 +82,7 @@ Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la l
 
 - Sélectionnez tout le code dans `iris_analysis.R`
 - Appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac)
-- Un graphique de dispersion apparaît dans une fenêtre graphique séparée
+- Un nuage de points apparaît dans une fenêtre graphique séparée
 - Vous devriez voir des points colorés par espèce (setosa, versicolor, virginica)
 
 ## Étape 6 : Demander à Claude d'Affiner le Graphique
@@ -108,10 +108,10 @@ Ajoute du code pour effectuer une ACP sur les variables numériques et tracer le
 ```
 
 - Appuyez sur Entrée
-- Claude ajoute du code PCA à votre script
+- Claude ajoute du code d'ACP à votre script
 - Cliquez sur **Accept**
 - Exécutez tout le code : sélectionnez tout et appuyez sur `Ctrl+Enter` / `Cmd+Enter`
-- Un graphique PCA apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
+- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
 
 ## Étape 8 : Demander à Claude de Réviser et Commenter
 
@@ -124,12 +124,12 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 - Appuyez sur Entrée
 - Claude révise le code et suggère des commentaires expliquant chaque section
 - Cliquez sur **Accept**
-- Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'analyse PCA
+- Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'ACP
 
 ## Prochaines Étapes
 
 - Demandez à Claude de créer un rapport R Markdown : « Crée un fichier R Markdown pour cette analyse »
-- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'Erreur X, peux-tu le corriger ? »
+- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'erreur X, peux-tu le corriger ? »
 - Demandez des tests statistiques : « Ajoute un test t comparant la longueur des sépales entre setosa et versicolor »
 - Demandez à Claude d'optimiser le code : « Rends cette boucle plus rapide en utilisant la vectorisation »
 - Obtenez de l'aide avec des fonctions inconnues : « Explique ce que fait dplyr::mutate »
@@ -144,10 +144,10 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 
 ## Résumé du Flux de Travail
 
-- **Extension Claude Code** fournit un assistant IA directement dans VS Code avec un panneau de discussion et des diffs en ligne
-- **Raffinement itératif** - Commencez avec du code de base, demandez à Claude d'améliorer, testez immédiatement, puis affinez davantage
-- **Conscience du contexte** - Claude lit vos fichiers R et comprend la structure de votre projet
-- **Édition en ligne** - Les modifications proposées apparaissent sous forme de diffs dans vos fichiers réels, pas dans des réponses de discussion séparées
+- **Extension Claude Code** fournit un assistant IA directement dans VS Code avec un panneau de discussion et des diffs affichés directement dans vos fichiers
+- **Raffinement itératif** - Commencez avec du code de base, demandez à Claude de l'améliorer, testez immédiatement, puis affinez davantage
+- **Prise en compte du contexte** - Claude lit vos fichiers R et comprend la structure de votre projet
+- **Édition dans le fichier** - Les modifications proposées apparaissent sous forme de diffs dans vos fichiers réels, pas dans des réponses de discussion séparées
 - **Restez dans le flux** - Pas besoin de basculer entre le navigateur et l'éditeur - tout se passe dans VS Code
 
 ---

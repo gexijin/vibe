@@ -26,7 +26,7 @@ Créer une application de minuteur simple avec Claude Code et suivre toutes les 
 - Créer un projet et une application de minuteur
 - Tester et corriger les erreurs
 - Committer et pousser les modifications
-- Supprimer les mauvaises modifications et réessayer
+- Abandonner les mauvaises modifications et réessayer
 - Laisser Claude automatiser les commits
 
 ## Ce Dont Vous Aurez Besoin
@@ -73,7 +73,7 @@ Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installatio
   - Des boutons Démarrer et Arrêter
   - Un affichage montrant le temps restant au format MM:SS
   - Quand le minuteur atteint zéro, afficher « Le temps est écoulé ! »
-  Garde ça simple avec CSS et JavaScript en ligne.
+  Garde ça simple, avec le CSS et le JavaScript directement dans le fichier.
   ```
 
 Claude crée le fichier `timer.html` (prend 10-30 secondes).
@@ -92,14 +92,14 @@ Claude crée le fichier `timer.html` (prend 10-30 secondes).
 
 ## Étape 4 : Corriger les Erreurs (Si Nécessaire)
 
-- Ouvrez la console du navigateur (clic droit sur la page → **Inspect** → onglet **Console**)
+- Ouvrez la console du navigateur (clic droit sur la page → **Inspecter** → onglet **Console**)
 - Copiez tous les messages d'erreur en rouge
 - Retournez à Claude Code dans votre terminal
 - Collez l'erreur :
   ```
   Je vois cette erreur : [collez l'erreur]. Peux-tu la corriger ?
   ```
-- Actualisez le navigateur (cliquez sur le bouton de rechargement ou clic droit → **Reload**) et testez à nouveau
+- Actualisez le navigateur (cliquez sur le bouton de rechargement ou clic droit → **Actualiser**) et testez à nouveau
 
 ## Étape 5 : Examiner les Modifications
 
@@ -141,7 +141,7 @@ Votre code est maintenant sauvegardé dans le cloud.
 
 **Pour ce tutoriel :** Faites semblant que le son ne fonctionne pas bien. Ne committez pas encore !
 
-## Étape 9 : Supprimer les Mauvaises Modifications
+## Étape 9 : Abandonner les Mauvaises Modifications
 
   Parfois l'IA nous met sur la mauvaise voie et nous devons recommencer depuis notre dernier commit (point de sauvegarde).
 
@@ -169,14 +169,14 @@ Vous venez de jeter le code défectueux et de revenir à votre dernier point de 
 
 - Dans Claude Code :
   ```
-  Commit et pousse mes modifications
+  Fais un commit et pousse mes modifications
   ```
 
 Claude va vérifier les modifications, écrire un message de commit, committer et pousser (10-20 secondes).
 
-**Quand utiliser :**
+**Quand utiliser chaque méthode :**
 - Commits manuels : Lorsque vous apprenez ou voulez le contrôle
-- Commits Claude : Lorsque vous travaillez rapidement et voulez de bons messages
+- Commits par Claude : Lorsque vous travaillez rapidement et voulez de bons messages
 
 ## Étape 12 : Demander à Claude de Résumer les Modifications
 
@@ -198,14 +198,14 @@ Vous verrez :
 - Create initial timer app
 - Add improved sound notification
 
-Remarquez que la première tentative de son ratée n'est pas là - vous l'avez supprimée ! Seul le code fonctionnel a été inclus dans vos commits.
+Remarquez que la première tentative ratée pour le son n'est pas là - vous l'avez abandonnée ! Seul le code fonctionnel a été inclus dans vos commits.
 
 ## Défis
 - Son personnalisé : Téléchargez un .mp3 gratuit depuis [freesound.org](https://freesound.org), placez-le dans votre dossier de projet, demandez à Claude de l'utiliser
 - Minuteurs multiples : « Permets aux utilisateurs de créer et exécuter plusieurs minuteurs simultanément »
 - Barre de progression : « Ajoute une barre de progression qui montre visuellement combien de temps il reste »
 
-**Rappelez-vous :** Testez après chaque fonctionnalité, committez après chaque succès, supprimez les échecs.
+**Rappelez-vous :** Testez après chaque fonctionnalité, committez après chaque succès, abandonnez les échecs.
 
 **Consultez votre projet sur GitHub.com :** Cliquez sur **Repository** → **View on GitHub** dans GitHub Desktop pour voir votre historique complet des commits et votre code en ligne.
 
@@ -215,7 +215,7 @@ Remarquez que la première tentative de son ratée n'est pas là - vous l'avez s
 
 **Claude dit "not a git repository" :** Assurez-vous d'être dans le bon dossier (`cd ~/Documents/test_claude`)
 
-**Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit → **Inspect** → **Console**), copiez les erreurs, collez-les à Claude
+**Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit → **Inspecter** → **Console**), copiez les erreurs, collez-les à Claude
 
 **Besoin d'aide ?** [Documentation GitHub Desktop](https://docs.github.com/en/desktop) • [Documentation Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 
@@ -224,11 +224,11 @@ Remarquez que la première tentative de son ratée n'est pas là - vous l'avez s
 - Demandez à Claude de faire des modifications
 - Testez dans le navigateur
 - Si cela fonctionne → Examinez et committez
-- Si cela échoue → Supprimez et réessayez
+- Si cela échoue → Abandonnez et réessayez
 - Poussez vers GitHub
 - Répétez
 
-Commits manuels quand vous voulez le contrôle. Commits Claude quand vous voulez la rapidité. Supprimez sans crainte - ne committez que le code fonctionnel !
+Commits manuels quand vous voulez le contrôle. Commits Claude quand vous voulez la rapidité. Abandonnez sans crainte - ne committez que le code fonctionnel !
 
 ## Prochaines Étapes
 

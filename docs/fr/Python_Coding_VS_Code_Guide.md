@@ -10,14 +10,14 @@ Vous souhaitez écrire du code Python mais vous n'êtes pas sûr de l'éditeur �
 
 ## Concepts Clés
 
-- **[Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - Extension VS Code de Microsoft qui fournit la coloration syntaxique, le débogage, l'exécution de code et la prise en charge des notebooks Jupyter
+- **[Extension Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - Extension VS Code de Microsoft qui fournit la coloration syntaxique, le débogage, l'exécution de code et la prise en charge des notebooks Jupyter
 - **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)** - Serveur de langage qui active IntelliSense rapide, la vérification de type et les imports automatiques pour Python
-- **[Virtual Environment](https://docs.python.org/3/library/venv.html)** - Environnement Python isolé pour gérer les packages spécifiques au projet sans affecter le Python système
+- **[Environnement virtuel](https://docs.python.org/3/library/venv.html)** - Environnement Python isolé pour gérer les packages spécifiques au projet sans affecter le Python système
 - **[Streamlit](https://streamlit.io/)** - Bibliothèque Python pour créer des applications web interactives avec de simples scripts Python
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [VS Code Basics](./VS_Code_Getting_Started)
+- Avoir terminé [Premiers Pas avec VS Code](./VS_Code_Getting_Started)
 - Connexion Internet pour télécharger Python et les packages
 - 15 à 20 minutes
 
@@ -214,13 +214,13 @@ streamlit run app.py
 
 - **Aucun interpréteur trouvé** : Cliquez sur le sélecteur d'interpréteur dans le coin inférieur droit de VS Code, ou cliquez sur **View > Command Palette** et exécutez `Python: Select Interpreter`. Si votre installation Python n'apparaît pas, sélectionnez **Enter interpreter path** et naviguez vers votre exécutable Python.
 
-- **L'environnement virtuel ne s'active pas** : VS Code devrait l'activer automatiquement lorsque vous ouvrez un terminal. Sinon, activez-le manuellement : Windows : `.venv\Scripts\activate`, Mac/Linux : `source .venv/bin/activate`. Vérifiez en voyant `(.venv)` dans votre invite de terminal.
+- **L'environnement virtuel ne s'active pas** : VS Code devrait l'activer automatiquement lorsque vous ouvrez un terminal. Sinon, activez-le manuellement : Windows : `.venv\Scripts\activate`, Mac/Linux : `source .venv/bin/activate`. Vous saurez qu'il est actif si `(.venv)` apparaît dans votre invite de terminal.
 
 - **IntelliSense ne fonctionne pas** : Assurez-vous que Pylance est installé et activé. Vérifiez que le coin inférieur droit affiche votre interpréteur sélectionné. Attendez 10 à 20 secondes après l'ouverture d'un fichier pour que Pylance s'initialise. Redémarrez VS Code si les problèmes persistent.
 
 - **pip install échoue** : Assurez-vous que votre environnement virtuel est activé (recherchez `(.venv)` dans le terminal). Sur Linux, vous devrez peut-être installer d'abord `python3-venv`. Sur Windows, vérifiez que l'antivirus ne bloque pas pip.
 
-- **L'application Streamlit ne s'exécute pas** : Assurez-vous que streamlit est installé dans votre environnement virtuel (`pip show streamlit`). Vérifiez le terminal pour les messages d'erreur. Assurez-vous qu'aucune autre application n'utilise le port 8501.
+- **L'application Streamlit ne s'exécute pas** : Assurez-vous que streamlit est installé dans votre environnement virtuel (`pip show streamlit`). Regardez si le terminal affiche des messages d'erreur. Assurez-vous qu'aucune autre application n'utilise le port 8501.
 
 ## Résumé du Flux de Travail
 
@@ -230,7 +230,7 @@ VS Code fournit un environnement moderne et léger pour le développement Python
 - **IntelliSense puissant** : Complétions intelligentes, vérification de type et imports automatiques via Pylance
 - **Débogage intégré** : Définissez des points d'arrêt, inspectez les variables et parcourez le code
 - **Prise en charge de Jupyter** : Exécutez des notebooks directement dans VS Code sans applications séparées
-- **Contrôle de version** : Intégration Git intégrée pour suivre les modifications
+- **Contrôle de version** : Git intégré pour suivre les modifications
 - **Écosystème d'extensions** : Des milliers d'extensions pour les tests, le formatage, le linting et plus encore
 
 ---

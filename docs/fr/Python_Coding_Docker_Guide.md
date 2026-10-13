@@ -17,7 +17,7 @@ Avez-vous déjà essayé de partager votre code Python avec un collègue, pour f
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Python Coding in VS Code](./Python_Coding_VS_Code_Guide)
+- Avoir terminé [Programmation Python dans VS Code](./Python_Coding_VS_Code_Guide)
 - 20-25 minutes
 
 ## Étape 1 : Installez Docker Desktop
@@ -215,7 +215,7 @@ cd ..
 ls
 ```
 
-Vous ne verrez que `python-docker-demo/` - le conteneur est isolé. Vous ne pouvez pas accéder aux autres dossiers de votre ordinateur, Bureau ou Documents. Cette isolation garantit que votre environnement Python est propre et reproductible.
+Vous ne verrez que `python-docker-demo/` - le conteneur est isolé. Vous ne pouvez pas accéder aux autres dossiers de votre ordinateur, ni à votre Bureau ni à vos Documents. Cette isolation garantit que votre environnement Python est propre et reproductible.
 
 - Retournez au dossier du projet :
 
@@ -227,7 +227,7 @@ cd python-docker-demo
 
 Le conteneur a Python pré-installé avec des packages de science des données. Exécutons le script d'analyse.
 
-- Dans VS Code Explorer, naviguez vers `python/iris_analysis.py`
+- Dans l'Explorer de VS Code, naviguez vers `python/iris_analysis.py`
 - Cliquez pour ouvrir le fichier
 - Sélectionnez la première ligne : `import pandas as pd`
 - Appuyez sur `Shift+Enter` pour l'exécuter dans un terminal Python interactif
@@ -241,7 +241,7 @@ Le conteneur a Python pré-installé avec des packages de science des données. 
 
 Le projet inclut une application Streamlit de démonstration qui crée un histogramme interactif.
 
-- Dans VS Code Explorer, naviguez vers `python/app.py`
+- Dans l'Explorer de VS Code, naviguez vers `python/app.py`
 - Cliquez pour ouvrir le fichier
 - Ouvrez un nouveau terminal (**Terminal > New Terminal**)
 - Exécutez l'application :
@@ -277,7 +277,7 @@ st.title("My First Python Docker App")
 
 ## Étape 13 : Comprendre le Dockerfile (Optionnel)
 
-- Dans VS Code Explorer, naviguez vers `.devcontainer/Dockerfile`
+- Dans l'Explorer de VS Code, naviguez vers `.devcontainer/Dockerfile`
 - Cliquez pour ouvrir le fichier
 - Vous verrez la configuration complète
 
@@ -303,7 +303,7 @@ Après avoir changé l'image de base, reconstruisez le conteneur pour appliquer 
 
 Les packages installés via pip dans le terminal (`pip install package`) sont temporaires et disparaissent lorsque vous reconstruisez le conteneur. Pour rendre les packages permanents, ajoutez-les au Dockerfile.
 
-- Dans VS Code Explorer, naviguez vers `.devcontainer/Dockerfile`
+- Dans l'Explorer de VS Code, naviguez vers `.devcontainer/Dockerfile`
 - Cliquez pour ouvrir le fichier
 - Trouvez la ligne 10 : `RUN pip install --no-cache-dir ...`
 - Ajoutez `plotly` à la liste :
@@ -346,7 +346,7 @@ Cette configuration vous donne un environnement de développement Python profess
 - **VS Code** fournit l'éditeur de code avec la coloration syntaxique, IntelliSense et le débogage
 - **Le conteneur Docker** exécute un environnement Linux isolé avec Python et toutes les dépendances
 - **L'image officielle Python** (`python:3.12-slim`) inclut Python, pip et les outils essentiels
-- **La configuration Dev Container** (`.devcontainer/`) installe automatiquement les extensions VS Code pour le débogage Python et le support du langage
+- **La configuration Dev Container** (`.devcontainer/`) installe automatiquement les extensions VS Code pour le débogage Python et la prise en charge du langage
 - **Le transfert de port** vous permet d'accéder aux applications web (Streamlit, Flask) s'exécutant à l'intérieur du conteneur depuis votre navigateur
 
 ## Flux de Travail Quotidien
@@ -358,7 +358,7 @@ Une fois que tout est configuré, voici votre routine quotidienne :
 3. **Rouvrez dans le Conteneur** - Si vous n'êtes pas déjà dans le conteneur, cliquez sur l'icône verte (en bas à gauche) et sélectionnez **Reopen in Container**
 4. **Écrivez et exécutez du code** - Éditez les fichiers `.py`, exécutez ligne par ligne avec `Shift+Enter`, ou exécutez des applications avec `streamlit run app.py`
 5. **Enregistrez votre travail** - Vos fichiers de code (`.py`, `.ipynb`) sont enregistrés sur votre ordinateur et persistent entre les sessions
-6. **Validez et poussez** - Utilisez GitHub Desktop pour valider vos modifications et pousser vers le dépôt
+6. **Faites un commit et un push** - Utilisez GitHub Desktop pour faire un commit de vos modifications et les envoyer (push) vers le dépôt
 
 ---
 

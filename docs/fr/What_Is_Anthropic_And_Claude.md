@@ -13,7 +13,7 @@ Avant d'installer quoi que ce soit, il est utile de savoir ce que vous installez
 - **Anthropic** - L'entreprise qui crée Claude. Elle est basée à San Francisco et s'attache à rendre l'IA utile et sûre à utiliser
 - **Claude** - L'assistant IA d'Anthropic. Vous discutez avec lui en tapant des messages, un peu comme si vous écriviez des textos à un ami très savant
 - **Prompt** - Le message que vous tapez pour Claude. Plus votre prompt est clair, meilleure est la réponse de Claude
-- **Modèle** - Une version précise de Claude (par exemple, une conçue pour les réponses rapides et une autre pour les problèmes plus difficiles). Vous n'avez pas encore besoin d'en choisir un
+- **Modèle** - Une version précise de Claude (par exemple, l'une conçue pour les réponses rapides, l'autre pour les problèmes plus difficiles). Vous n'avez pas encore besoin d'en choisir un
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -45,7 +45,7 @@ Claude se souvient de ce dont vous avez déjà parlé dans la même conversation
 
 - Dans la même conversation, tapez une question de suivi, par exemple :
    ```
-   Peux-tu me donner un exemple concret de la vie réelle ?
+   Peux-tu m'en donner un exemple concret ?
    ```
 - Remarquez que la réponse de Claude s'appuie sur votre première question, sans que vous ayez à répéter le contexte
 

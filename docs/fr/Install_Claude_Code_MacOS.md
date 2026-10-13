@@ -63,7 +63,7 @@ brew install --cask claude-code
 
 **Astuce :** Exécutez `claude doctor` après l'installation pour vérifier que tout est correctement configuré.
 
-## Étape 3 : Connecter à votre compte Anthropic
+## Étape 3 : Se connecter à votre compte Anthropic
 
 ### Option A. Utilisez votre abonnement Claude Pro ou Max
 
@@ -84,7 +84,7 @@ brew install --cask claude-code
 
 Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
 
-- Tout d'abord, obtenez votre clé API depuis la [Anthropic Console](https://console.anthropic.com/)
+- Tout d'abord, obtenez votre clé API depuis la [Console Anthropic](https://console.anthropic.com/)
 - Dans Terminal, tapez :
    ```
    export ANTHROPIC_API_KEY="your-api-key-here"
@@ -146,7 +146,7 @@ export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
-**Remarque :** Remplacez `xxxx-eastus2` par le nom de votre Foundry Resource (n'utilisez pas l'URL de base complète). Remplacez `your_api_key` par votre clé API complète depuis votre portail Azure.
+**Remarque :** Remplacez `xxxx-eastus2` par le nom de votre ressource Foundry (n'utilisez pas l'URL de base complète). Remplacez `your_api_key` par votre clé API complète depuis votre portail Azure.
 
 ## Étape 4 : Tester Claude Code
 
@@ -157,7 +157,7 @@ Vous êtes prêt ! Voici comment utiliser Claude Code :
    claude
    ```
 - Il vous pose quelques questions avant d'être prêt à discuter
-- Pour voir si cela fonctionne, posez une question générale telle que "Expliquez l'informatique quantique."
+- Pour voir si cela fonctionne, posez une question générale telle que « Explique l'informatique quantique. »
 
 ## Étape 5 : Naviguer vers votre projet
 
@@ -238,13 +238,13 @@ Pour trouver le chemin vers un dossier :
 - Naviguez vers votre dossier de projet
 - Glissez et déposez le dossier dans Terminal - le chemin complet apparaîtra !
 
-### Utiliser différentes applications Terminal
+### Utiliser d'autres applications de terminal
 Vous pouvez également utiliser d'autres applications de terminal telles que :
 - iTerm2 (alternative populaire avec plus de fonctionnalités)
 - Warp (terminal moderne avec des fonctionnalités IA)
 - Hyper (terminal multiplateforme)
 
-Claude Code fonctionne avec tous !
+Claude Code fonctionne avec toutes !
 
 ## Besoin d'aide ?
 
@@ -253,4 +253,4 @@ Claude Code fonctionne avec tous !
 
 ---
 
-*Dernière mise à jour : Février 2026*
+*Dernière mise à jour : février 2026*

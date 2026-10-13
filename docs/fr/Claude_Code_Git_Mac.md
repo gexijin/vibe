@@ -17,7 +17,7 @@ Vous codez avec l'assistance de l'IA. Elle apporte des modifications à vos fich
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
+- Avoir terminé [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS)
 - 30 minutes
 
 ## Étape 1 : Ouvrir Terminal
@@ -174,7 +174,7 @@ Nous avons créé un 2e point de sauvegarde. Cette version a les deux boutons qu
 - Actualisez votre onglet de navigateur (appuyez sur `Command (⌘) + R`)
 - Testez : Cliquez sur le bouton **15 min**
 
-**Pour ce tutoriel :** Prétendez que le bouton 15 minutes ne fonctionne pas correctement. Ne faites pas encore de commit—nous allons pratiquer l'abandon des mauvaises modifications.
+**Pour ce tutoriel :** Faites comme si le bouton 15 minutes ne fonctionnait pas correctement. Ne faites pas encore de commit—nous allons pratiquer l'abandon des mauvaises modifications.
 
 ## Étape 13 : Abandonner les Modifications
 
@@ -195,7 +195,7 @@ Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie f
   ```
   Ajoute une notification sonore quand le temps est écoulé.
   ```
-- Actualisez le navigateur et testez après que Claude ait terminé (réglez la minuterie sur 0.1 minutes)
+- Actualisez le navigateur et testez une fois que Claude a terminé (réglez la minuterie sur 0.1 minutes)
 - Si cela fonctionne, faites un commit des modifications :
   ```
   Enregistre ces modifications.
@@ -207,7 +207,7 @@ Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie f
   ```
   Le son doit continuer jusqu'à ce que je clique sur un bouton pour l'arrêter (snooze).
   ```
-- Actualisez le navigateur et testez après que Claude ait terminé (réglez la minuterie sur 0.1 minutes)
+- Actualisez le navigateur et testez une fois que Claude a terminé (réglez la minuterie sur 0.1 minutes)
 - Si cela fonctionne, faites un commit des modifications :
   ```
   Enregistre ces modifications.
@@ -231,13 +231,13 @@ Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abando
 ## Étape 17 : Examiner le Code
 
 - Dans le navigateur qui affiche l'application, faites un clic droit et sélectionnez **Afficher le code source de la page** (ou appuyez sur `Option (⌥) + Command (⌘) + U`)
-- Vous pouvez voir le code source de ceci.
+- Vous voyez le code source de l'application.
 - Dans Claude Code, demandez
   ```
   Explique ce code. Juste les grandes lignes.
   ```
 
-## Le Workflow Complet
+## Le Flux de Travail Complet
 
 - Demandez à Claude d'apporter des modifications
 - Testez
@@ -246,7 +246,7 @@ Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abando
 - Impossible à corriger → Abandonnez les modifications et réessayez
 - Répétez
 
-Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte—ne commitez que le code fonctionnel !
+Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte—ne committez que le code fonctionnel !
 
 ## Prochaines Étapes
 
@@ -254,10 +254,10 @@ Essayez d'ajouter plus de fonctionnalités à votre minuterie :
 
 - **Bouton 15 minutes :** « Ajoute un bouton prédéfini de 15 minutes qui fonctionne » (refaites ce que nous avons abandonné !)
 - **Bouton Pause :** « Ajoute un bouton Pause/Reprendre qui bascule l'état de la minuterie »
-- **Meilleure mise en page :** « Améliore le design visuel avec une palette de couleurs moderne et des polices plus grandes »
+- **Meilleur style :** « Améliore le design visuel avec une palette de couleurs moderne et des polices plus grandes »
 - **Barre de progression :** « Ajoute une barre de progression visuelle montrant le temps restant »
 
-N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque succès, abandonnez les échecs.
+N'oubliez pas : Testez après chaque fonctionnalité, committez après chaque succès, abandonnez les échecs.
 
 ## Dépannage
 
@@ -268,15 +268,15 @@ N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque suc
 
 ## Ce Que Vous Pouvez Demander à Claude
 
-- « Quels fichiers ai-je modifiés ? » - Voir les modifications non commitées
+- « Quels fichiers ai-je modifiés ? » - Voir les modifications non committées
 - « Montre-moi les différences » - Voir exactement quel code a changé
 - « Explique ce que fait le code de la minuterie » - Comprendre l'implémentation
-- « Crée une branche appelée expérience » - Essayer des modifications risquées en toute sécurité
+- « Crée une branche appelée essai » - Essayer des modifications risquées en toute sécurité
 - « Reviens au commit précédent » - Annuler tout depuis le dernier commit
 
 Claude gère toutes les opérations Git en langage naturel—aucune commande à mémoriser !
 
-## Aperçu du Workflow
+## Aperçu du Flux de Travail
 
 - **Configuration :** Installez Git une fois, configurez l'identité une fois
 - **Développement :** Claude écrit le code, vous testez dans le navigateur

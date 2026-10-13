@@ -6,7 +6,7 @@ lang: "fr"
 
 # Utiliser Claude Code avec RStudio sur Windows
 
-Vous disposez de RStudio sur Windows pour exécuter du code R et de Claude Code pour une assistance au codage pilotée par l'IA. Ce tutoriel vous montre comment utiliser ces deux outils ensemble sur les mêmes fichiers de projet. Vous allez créer un projet R, écrire du code manuellement, puis utiliser Claude Code depuis PowerShell pour l'améliorer avec des visualisations et des analyses—tout en gardant RStudio ouvert pour exécuter et tester votre code.
+Vous disposez de RStudio sur Windows pour exécuter du code R et de Claude Code pour une assistance au codage pilotée par l'IA. Ce tutoriel vous montre comment utiliser ces deux outils ensemble sur les mêmes fichiers de projet. Vous allez créer un projet R, écrire du code manuellement, puis utiliser Claude Code depuis PowerShell pour l'améliorer avec des visualisations et des analyses, tout en gardant RStudio ouvert pour exécuter et tester votre code.
 
 ## Concepts Clés
 
@@ -94,7 +94,7 @@ Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installati
 Si Claude Code est lent ou ne répond pas, attendez simplement qu'il s'initialise. Ensuite, tapez cette requête :
 
 ```
-Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 - Claude Code va lire votre fichier `iris.R` et ajouter le code de visualisation
 - Lorsqu'on vous le demande, donnez à Claude la permission de modifier le fichier iris.R en sélectionnant l'option appropriée
@@ -126,7 +126,7 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 - Le graphique devrait maintenant s'afficher sans titre, avec différentes formes de marqueurs pour chaque espèce, et en utilisant le thème classique
 
 
-## Étape 12 : Demander à Claude un Graphique PCA
+## Étape 12 : Demander à Claude un Graphique d'ACP
 
 - Revenez à PowerShell
 - Tapez cette requête :
@@ -134,12 +134,12 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
   Ajoute du code pour effectuer une ACP sur les variables numériques et tracer les échantillons en utilisant les deux premières composantes principales.
   ```
 
-## Étape 13 : Exécuter l'Analyse PCA
+## Étape 13 : Exécuter l'ACP
 
 - Revenez à RStudio
 - Rechargez le fichier si demandé
 - Sélectionnez tout le code et cliquez sur **Run**
-- Un graphique PCA apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
+- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
 
 ## Étape 14 : Demander à Claude de Réviser et Commenter
 
@@ -182,11 +182,11 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 
 ## Prochaines Étapes
 
-- Essayez de demander à Claude d'ajouter des tests statistiques (t-tests, ANOVA) à votre analyse
+- Essayez de demander à Claude d'ajouter des tests statistiques (tests t, ANOVA) à votre analyse
 - Demandez à Claude d'obtenir une **version Python** de ce code et de préparer un document Quarto
 - Demandez à Claude de créer des fonctions pour les tâches répétitives dans vos scripts R
 - Utilisez Claude pour déboguer les messages d'erreur lorsque votre code R ne s'exécute pas
-- Explorez en demandant à Claude d'optimiser du code R lent pour de meilleures performances
+- Demandez à Claude d'optimiser du code R lent pour en améliorer les performances
 
 ## Résumé du Flux de Travail
 
@@ -198,7 +198,7 @@ Cette configuration hybride combine le meilleur des deux mondes :
 - **Raffinement itératif** - Commencez avec du code manuel, améliorez avec Claude, testez dans RStudio, puis affinez davantage
 - **Documentation** - Claude peut générer des rapports complets et des commentaires pour votre analyse
 
-Le flux de travail est simple : écrivez ou modifiez du code avec Claude dans PowerShell, puis testez-le et exécutez-le immédiatement dans RStudio. Aucune copie de fichier ni synchronisation manuelle nécessaire—les deux outils partagent les mêmes fichiers.
+Le flux de travail est simple : écrivez ou modifiez du code avec Claude dans PowerShell, puis testez-le et exécutez-le immédiatement dans RStudio. Aucune copie de fichier ni synchronisation manuelle n'est nécessaire : les deux outils partagent les mêmes fichiers.
 
 ---
 

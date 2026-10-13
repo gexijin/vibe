@@ -63,7 +63,7 @@ Voyez la barre latérale (sidebar) de Claude Code comme une fenêtre de discussi
 
 Si vous ne voyez pas l'icône Claude Code, essayez ceci :
 
-1. Appuyez sur **Ctrl + Shift + P**
+1. Appuyez sur **Ctrl + Maj + P**
 2. Tapez : Claude Code: Open Sidebar
 3. Cliquez sur l'option correspondante dans la liste
 
@@ -86,7 +86,7 @@ C'est pratique, car vous pouvez garder votre code ouvert dans l'éditeur et dema
 Une fois la barre latérale ouverte :
 
 - tapez : « Explique-moi ce projet »
-- appuyez sur **Enter**
+- appuyez sur **Entrée**
 
 Si Claude répond, vous êtes prêt à l'utiliser.
 
@@ -129,7 +129,7 @@ Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
 
 ### Option C. Utilisez l'API OpenRouter (commencez gratuitement !)
 
-OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. C'est une façon économique d'utiliser Claude Code : vous ne payez qu'à l'usage et choisissez parmi des modèles de différentes gammes de prix.
+OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. Cela peut être une façon économique d'utiliser Claude Code : vous ne payez qu'à l'usage et choisissez parmi des modèles de différentes gammes de prix.
 
 - Inscrivez-vous sur [openrouter.ai](https://openrouter.ai) et connectez-vous
 - Cliquez sur **Get API key** et copiez la clé dans un endroit sûr
@@ -185,7 +185,7 @@ Vous devriez maintenant pouvoir utiliser Claude Code avec les modèles Claude d�
 
 ## Étape 5 : Tester Claude Code
 
-Vous êtes prêt ! Tapez `claude` dans PowerShell et posez une question générale comme « Expliquez l'informatique quantique ».
+Vous êtes prêt ! Tapez `claude` dans PowerShell et posez une question générale comme « Explique l'informatique quantique ».
 
 ## Étape 6 : Accéder à vos projets
 
@@ -214,11 +214,11 @@ Pour la plupart des utilisateurs, la configuration native ci-dessus suffit large
 - **Faites un clic droit** sur la barre des tâches (la barre en bas de votre écran)
 - Cliquez sur **Gestionnaire des tâches** dans le menu
 - Si le Gestionnaire des tâches s'ouvre dans une petite fenêtre, cliquez sur **Plus de détails** en bas
-- Cliquez sur l'onglet **Performance** en haut
+- Cliquez sur l'onglet **Performances** en haut
 - Cliquez sur **Processeur** dans la barre latérale gauche
-- Trouvez la ligne qui indique **Virtualisation :** et vérifiez si elle indique **Activée**
+- Trouvez la ligne qui indique **Virtualisation :** et vérifiez si elle indique **Activé**
 
-**Si elle indique "Désactivée" :** Vous devez activer la virtualisation dans le BIOS de votre ordinateur :
+**Si elle indique « Désactivé » :** Vous devez activer la virtualisation dans le BIOS de votre ordinateur :
 - Redémarrez votre ordinateur
 - Au démarrage, appuyez sur la touche BIOS (généralement **F2**, **F10**, **Suppr** ou **Échap**, selon le fabricant)
 - Recherchez les paramètres liés à "Virtualization Technology", "Intel VT-x", "AMD-V" ou "SVM Mode"
@@ -270,9 +270,9 @@ Après le redémarrage, une fenêtre de terminal avec "Ubuntu" dans le titre dev
 
 ## Prochaines étapes
 
-- **Configurer VS Code :** Suivez le guide [VS Code Getting Started](VS_Code_Getting_Started), puis connectez-le à Claude Code avec [Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win)
-- **Apprendre les bases de Git :** Ajoutez le contrôle de version à vos projets avec [Claude Code Git on Windows](Claude_Code_Git_Windows)
-- **Essayer un projet :** Parcourez [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code) pour voir Claude Code en action
+- **Configurer VS Code :** Suivez le guide [Premiers Pas avec VS Code](VS_Code_Getting_Started), puis connectez-le à Claude Code avec [Configurer VS Code pour Claude Code sur Windows](Claude_Code_in_VS_Code_Win)
+- **Apprendre les bases de Git :** Ajoutez le contrôle de version à vos projets avec [Claude Code avec contrôle de version pour Windows](Claude_Code_Git_Windows)
+- **Essayer un projet :** Parcourez [Rédiger un article de recherche avec Claude Code](Writing_Research_Paper_Claude_Code) pour voir Claude Code en action
 
 ## Dépannage
 

@@ -6,14 +6,14 @@ lang: "fr"
 
 # Premiers Pas avec le Contrôle de Version
 
-Vous travaillez sur un projet et effectuez des modifications qui brisent tout. Vous ne vous souvenez plus de ce que vous avez changé, et vous souhaitez revenir au moment où tout fonctionnait. Le contrôle de version est comme des points de sauvegarde dans un jeu vidéo—chaque fois que vous « committez » votre travail, vous créez un point de restauration auquel vous pouvez toujours revenir. [GitHub](https://github.com) stocke vos points de sauvegarde dans le cloud, de sorte que votre code soit sauvegardé en toute sécurité et accessible depuis n'importe quel ordinateur.
+Vous travaillez sur un projet et effectuez des modifications qui cassent tout. Vous ne vous souvenez plus de ce que vous avez changé, et vous souhaitez revenir au moment où tout fonctionnait. Le contrôle de version est comme des points de sauvegarde dans un jeu vidéo—chaque fois que vous « committez » votre travail, vous créez un point de restauration auquel vous pouvez toujours revenir. [GitHub](https://github.com) stocke vos points de sauvegarde dans le cloud, de sorte que votre code soit sauvegardé en toute sécurité et accessible depuis n'importe quel ordinateur.
 
 ## Concepts Clés
 
 - **Git** - Logiciel de contrôle de version qui suit les modifications apportées à vos fichiers sur votre ordinateur
 - **GitHub** - Site web qui stocke votre code dans le cloud, comme Google Drive pour le code
 - **GitHub Desktop** - Application qui facilite l'utilisation de Git avec des boutons au lieu de commandes
-- **Repository (repo)** - Un dossier de projet qui suit toutes vos modifications
+- **Dépôt (repository, ou repo)** - Un dossier de projet qui suit toutes vos modifications
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -53,7 +53,7 @@ Vous travaillez sur un projet et effectuez des modifications qui brisent tout. V
 - Revenez à GitHub Desktop
 - Cliquez sur **Finish** pour terminer la configuration
 
-## Étape 4 : Créer Votre Premier Repository
+## Étape 4 : Créer Votre Premier Dépôt
 
 - Dans GitHub Desktop, cliquez sur **Create a New Repository on your Hard Drive**
 - Remplissez le formulaire :
@@ -72,7 +72,7 @@ Vous travaillez sur un projet et effectuez des modifications qui brisent tout. V
 
 ## Étape 6 : Effectuer Votre Première Modification
 
-- Ouvrez `README.md` dans n'importe quel éditeur de texte (Notepad, TextEdit ou VS Code)
+- Ouvrez `README.md` dans n'importe quel éditeur de texte (Bloc-notes, TextEdit ou VS Code)
 - Remplacez le contenu par :
   ```
   # My First Project
@@ -86,7 +86,7 @@ Vous travaillez sur un projet et effectuez des modifications qui brisent tout. V
   - Create save points (commits)
   - Back up my work to GitHub
   ```
-- Cliquez sur **File** → **Save**
+- Cliquez sur **Fichier** → **Enregistrer** (dans VS Code : **File** → **Save**)
 
 ## Étape 7 : Créer Votre Premier Commit (Point de Sauvegarde)
 
