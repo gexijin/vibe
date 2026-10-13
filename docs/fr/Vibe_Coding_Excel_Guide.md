@@ -133,7 +133,7 @@ Rendez la feuille plus facile à compléter sans fautes de frappe.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Ajoute une validation des données à la colonne Catégorie de la feuille Dépenses pour qu'elle n'accepte que les valeurs d'une liste déroulante contenant les catégories existantes, plus « Autre ». Ajoute deux lignes vides juste au-dessus de la ligne Total, prêtes pour de nouvelles saisies, et assure-toi que le Total, les formules de la Synthèse, les totaux du graphique en secteurs et les règles de couleur les incluent.
+Ajoute une validation des données à la colonne Catégorie de la feuille Dépenses pour qu'elle n'accepte que les valeurs d'une liste déroulante contenant les catégories existantes, plus « Autre ». Ajoute deux lignes vides juste au-dessus de la ligne Total, prêtes pour de nouvelles saisies, et assure-toi que le Total, les formules de la Synthèse, les totaux du graphique en secteurs (avec une part « Autre ») et les règles de couleur les incluent. Laisse les cellules vides sans couleur.
 ```
 
 - Appuyez sur Entrée
