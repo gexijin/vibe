@@ -81,7 +81,7 @@ Claude analyse votre commande slash existante et la convertit en Compétence dan
 Ouvrez VS Code et visualisez le projet :
 - Cliquez sur **File > Open Folder**
 - Sélectionnez `Documents/test_claude`
-- Dans l'explorateur de fichiers, accédez à `.claude/skills/stock-report/`
+- Dans le panneau **Explorer** de VS Code (à gauche), accédez à `.claude/skills/stock-report/`
 - Cliquez sur `SKILL.md` pour l'ouvrir
 
 Remarquez la structure :
@@ -172,9 +172,9 @@ Analyse Apple
 
 Maintenant que vous comprenez les Compétences, créez-en d'autres pour vos flux de travail :
 
-- **Research Skill** - S'active automatiquement lorsque vous posez des questions nécessitant une recherche web
-- **Code Review Skill** - S'active lorsque vous mentionnez des bugs, des anomalies ou des problèmes de code
-- **Meeting Notes Skill** - S'active lorsque vous collez des transcriptions de réunions ou mentionnez des résumés
+- **Compétence de recherche** - S'active automatiquement lorsque vous posez des questions nécessitant une recherche web
+- **Compétence de revue de code** - S'active lorsque vous mentionnez des bugs, des anomalies ou des problèmes de code
+- **Compétence de notes de réunion** - S'active lorsque vous collez des transcriptions de réunions ou mentionnez des résumés
 
 Le principe : Définissez quand Claude devrait automatiquement aider, pas seulement des raccourcis que vous déclenchez manuellement.
 
@@ -182,7 +182,7 @@ Le principe : Définissez quand Claude devrait automatiquement aider, pas seulem
 
 - **La Compétence ne s'active pas :** Vérifiez le champ `description` dans `SKILL.md`—il doit inclure des mots déclencheurs liés à votre question
 - **La Compétence s'active trop souvent :** Précisez davantage dans la description quand l'utiliser
-- **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché—activez « Afficher les fichiers cachés » dans votre explorateur de fichiers)
+- **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché). Dans l'**Explorateur de fichiers** de Windows, activez **Affichage > Afficher > Éléments masqués** ; dans le **Finder** sur Mac, appuyez sur **Cmd+Maj+.** pour l'afficher
 - **Les modifications de SKILL.md ne fonctionnent pas :** Les Compétences se chargent automatiquement lorsqu'elles sont modifiées—aucun redémarrage nécessaire. Si cela ne fonctionne toujours pas, vérifiez le formatage YAML
 
 ## Aperçu du Flux de Travail

@@ -114,7 +114,7 @@ Claude crée `timer.html` (prend 10-30 secondes) avec le code CSS et JavaScript.
 
 ## Étape 9 : Testez le Minuteur
 
-- Ouvrez l'Explorateur de Fichiers Windows
+- Ouvrez l'Explorateur de fichiers Windows
 - Naviguez vers `Documents\test_claude`
 - Double-cliquez sur `timer.html` pour l'ouvrir dans votre navigateur
 - Essayez le minuteur :

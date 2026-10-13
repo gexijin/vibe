@@ -84,7 +84,7 @@ brew install --cask claude-code
 
 Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
 
-- Tout d'abord, obtenez votre clé API depuis la [Anthropic Console](https://console.anthropic.com/)
+- Tout d'abord, obtenez votre clé API depuis la [Console Anthropic](https://console.anthropic.com/)
 - Dans Terminal, tapez :
    ```
    export ANTHROPIC_API_KEY="your-api-key-here"
@@ -146,7 +146,7 @@ export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
-**Remarque :** Remplacez `xxxx-eastus2` par le nom de votre Foundry Resource (n'utilisez pas l'URL de base complète). Remplacez `your_api_key` par votre clé API complète depuis votre portail Azure.
+**Remarque :** Remplacez `xxxx-eastus2` par le nom de votre ressource Foundry (n'utilisez pas l'URL de base complète). Remplacez `your_api_key` par votre clé API complète depuis votre portail Azure.
 
 ## Étape 4 : Tester Claude Code
 

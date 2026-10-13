@@ -16,8 +16,8 @@ Le vibe coding ressemble à une conversation avec votre ordinateur : vous décri
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Use Claude Code with Excel in VS Code](./Excel_Coding_VS_Code_Guide)
-- Avoir terminé [Use GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Avoir terminé [Utiliser Claude Code avec Excel dans VS Code](./Excel_Coding_VS_Code_Guide)
+- Avoir terminé [Utiliser GitHub Desktop avec Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - Microsoft Excel, [LibreOffice Calc](https://fr.libreoffice.org/download/) (gratuit) ou Google Sheets (gratuit dans votre navigateur web) pour voir les graphiques, les couleurs et les listes déroulantes
 - 25-30 minutes
 

@@ -92,14 +92,14 @@ Claude crée le fichier `timer.html` (prend 10-30 secondes).
 
 ## Étape 4 : Corriger les Erreurs (Si Nécessaire)
 
-- Ouvrez la console du navigateur (clic droit sur la page → **Inspect** → onglet **Console**)
+- Ouvrez la console du navigateur (clic droit sur la page → **Inspecter** → onglet **Console**)
 - Copiez tous les messages d'erreur en rouge
 - Retournez à Claude Code dans votre terminal
 - Collez l'erreur :
   ```
   Je vois cette erreur : [collez l'erreur]. Peux-tu la corriger ?
   ```
-- Actualisez le navigateur (cliquez sur le bouton de rechargement ou clic droit → **Reload**) et testez à nouveau
+- Actualisez le navigateur (cliquez sur le bouton de rechargement ou clic droit → **Actualiser**) et testez à nouveau
 
 ## Étape 5 : Examiner les Modifications
 
@@ -215,7 +215,7 @@ Remarquez que la première tentative ratée pour le son n'est pas là - vous l'a
 
 **Claude dit "not a git repository" :** Assurez-vous d'être dans le bon dossier (`cd ~/Documents/test_claude`)
 
-**Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit → **Inspect** → **Console**), copiez les erreurs, collez-les à Claude
+**Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit → **Inspecter** → **Console**), copiez les erreurs, collez-les à Claude
 
 **Besoin d'aide ?** [Documentation GitHub Desktop](https://docs.github.com/en/desktop) • [Documentation Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 

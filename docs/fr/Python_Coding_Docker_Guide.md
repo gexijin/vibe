@@ -17,7 +17,7 @@ Avez-vous déjà essayé de partager votre code Python avec un collègue, pour f
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Python Coding in VS Code](./Python_Coding_VS_Code_Guide)
+- Avoir terminé [Programmation Python dans VS Code](./Python_Coding_VS_Code_Guide)
 - 20-25 minutes
 
 ## Étape 1 : Installez Docker Desktop
@@ -227,7 +227,7 @@ cd python-docker-demo
 
 Le conteneur a Python pré-installé avec des packages de science des données. Exécutons le script d'analyse.
 
-- Dans VS Code Explorer, naviguez vers `python/iris_analysis.py`
+- Dans l'Explorer de VS Code, naviguez vers `python/iris_analysis.py`
 - Cliquez pour ouvrir le fichier
 - Sélectionnez la première ligne : `import pandas as pd`
 - Appuyez sur `Shift+Enter` pour l'exécuter dans un terminal Python interactif
@@ -241,7 +241,7 @@ Le conteneur a Python pré-installé avec des packages de science des données. 
 
 Le projet inclut une application Streamlit de démonstration qui crée un histogramme interactif.
 
-- Dans VS Code Explorer, naviguez vers `python/app.py`
+- Dans l'Explorer de VS Code, naviguez vers `python/app.py`
 - Cliquez pour ouvrir le fichier
 - Ouvrez un nouveau terminal (**Terminal > New Terminal**)
 - Exécutez l'application :
@@ -277,7 +277,7 @@ st.title("My First Python Docker App")
 
 ## Étape 13 : Comprendre le Dockerfile (Optionnel)
 
-- Dans VS Code Explorer, naviguez vers `.devcontainer/Dockerfile`
+- Dans l'Explorer de VS Code, naviguez vers `.devcontainer/Dockerfile`
 - Cliquez pour ouvrir le fichier
 - Vous verrez la configuration complète
 
@@ -303,7 +303,7 @@ Après avoir changé l'image de base, reconstruisez le conteneur pour appliquer 
 
 Les packages installés via pip dans le terminal (`pip install package`) sont temporaires et disparaissent lorsque vous reconstruisez le conteneur. Pour rendre les packages permanents, ajoutez-les au Dockerfile.
 
-- Dans VS Code Explorer, naviguez vers `.devcontainer/Dockerfile`
+- Dans l'Explorer de VS Code, naviguez vers `.devcontainer/Dockerfile`
 - Cliquez pour ouvrir le fichier
 - Trouvez la ligne 10 : `RUN pip install --no-cache-dir ...`
 - Ajoutez `plotly` à la liste :

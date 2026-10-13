@@ -26,7 +26,7 @@ Vous avez configuré R dans VS Code et pouvez écrire du code manuellement. Main
 - Ouvrez **Visual Studio Code**
 - Cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
 - Naviguez vers votre dossier **Documents**
-- Cliquez sur **New Folder** en bas de la boîte de dialogue
+- Cliquez sur **Nouveau dossier** en bas de la boîte de dialogue
 - Nommez le dossier `claude_r_test`
 - Cliquez sur **Open** pour ouvrir le nouveau dossier
 - Si on vous demande "Do you trust the authors?", cliquez sur **Yes, I trust the authors**

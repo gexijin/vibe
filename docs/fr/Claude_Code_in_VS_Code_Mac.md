@@ -33,7 +33,7 @@ Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éd
 
 - Ouvrez **Finder**
 - Cliquez sur **Documents** dans la barre latérale gauche
-- Cliquez sur **Fichier** dans la barre de menu, puis **Nouveau Dossier**
+- Cliquez sur **Fichier** dans la barre de menu, puis **Nouveau dossier**
 - Nommez le dossier `test_claude`
 
 ## Étape 3 : Ouvrir le Dossier dans VS Code
@@ -43,7 +43,7 @@ Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éd
 - Cliquez sur **Open**
 - Si on vous demande "Do you trust the authors of the files in this folder?", cliquez sur **Yes, I trust the authors**
 
-Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le côté gauche.
+Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau **Explorer** sur le côté gauche.
 
 ## Étape 4 : Démarrer Claude Code et se Connecter
 
@@ -69,7 +69,7 @@ Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau Explorateur sur le c�
 ```
 Écris un court article expliquant pourquoi les LLM aiment utiliser le format Markdown. Enregistre-le sous article.md
 ```
-- Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau Explorateur sur la gauche
+- Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau **Explorer** sur la gauche
 - Cliquez sur `article.md` dans l'Explorateur pour le visualiser dans l'éditeur
 - Pour prévisualiser l'article formaté : faites un clic droit sur l'onglet `article.md` et sélectionnez **Open Preview**
 - Vous verrez le Markdown rendu avec les titres, puces et mise en forme appropriés
@@ -94,7 +94,7 @@ VS Code mémorise vos dossiers récents, donc l'Option A avec Open Recent est g�
 
 - **Le terminal affiche "zsh" mais Claude Code ne démarre pas** - Assurez-vous que Claude Code est correctement installé ; exécutez `claude --version` pour vérifier
 - **Commande "code" introuvable dans Terminal** - Dans VS Code, cliquez sur **View** dans la barre de menu, puis **Command Palette**, tapez "shell command", et sélectionnez **Shell Command: Install 'code' command in PATH**
-- **VS Code ne s'ouvre pas car il provient d'un développeur non identifié** - Allez dans **Réglages Système > Confidentialité et Sécurité** et cliquez sur **Ouvrir Quand Même**
+- **VS Code ne s'ouvre pas car il provient d'un développeur non identifié** - Allez dans **Réglages Système > Confidentialité et sécurité** et cliquez sur **Ouvrir quand même**
 
 ## Aperçu du Flux de Travail
 

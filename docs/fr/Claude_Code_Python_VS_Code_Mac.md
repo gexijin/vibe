@@ -16,8 +16,8 @@ Vous avez configuré Python dans VS Code et pouvez écrire du code manuellement.
 
 ## Ce Dont Vous Aurez Besoin
 
-- Terminé le tutoriel [Python dans VS Code](./Python_Coding_VS_Code_Guide) - Python doit fonctionner dans VS Code
-- Terminé le tutoriel [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) - Claude Code CLI doit être installé
+- Avoir terminé le tutoriel [Programmation Python dans VS Code](./Python_Coding_VS_Code_Guide) - Python doit fonctionner dans VS Code
+- Avoir terminé le tutoriel [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) - Claude Code CLI doit être installé
 - Abonnement Claude Pro/Max ou clé API Anthropic
 - 20-30 minutes
 
@@ -26,7 +26,7 @@ Vous avez configuré Python dans VS Code et pouvez écrire du code manuellement.
 - Ouvrez **Visual Studio Code**
 - Cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
 - Naviguez vers votre dossier **Documents**
-- Cliquez sur **New Folder** en bas de la boîte de dialogue
+- Cliquez sur **Nouveau dossier** en bas de la boîte de dialogue
 - Nommez le dossier `claude_python_test`
 - Cliquez sur **Open** pour ouvrir le nouveau dossier
 - Si on vous demande "Do you trust the authors?", cliquez sur **Yes, I trust the authors**

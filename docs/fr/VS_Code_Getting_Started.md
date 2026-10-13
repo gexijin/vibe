@@ -6,7 +6,7 @@ lang: "fr"
 
 # Premiers Pas avec VS Code
 
-Vous souhaitez écrire du code, mais Notepad ou TextEdit vous semblent limités. Vous avez besoin d'un outil qui vous aide à coder plus rapidement - avec la coloration syntaxique, l'autocomplétion et des outils intégrés. **VS Code est comme un cahier intelligent pour le code** - il comprend ce que vous écrivez et vous aide tout au long du processus. [Visual Studio Code](https://code.visualstudio.com) est gratuit, fonctionne sur tous les systèmes d'exploitation et est utilisé par des millions de développeurs.
+Vous souhaitez écrire du code, mais le Bloc-notes ou TextEdit vous semblent limités. Vous avez besoin d'un outil qui vous aide à coder plus rapidement - avec la coloration syntaxique, l'autocomplétion et des outils intégrés. **VS Code est comme un cahier intelligent pour le code** - il comprend ce que vous écrivez et vous aide tout au long du processus. [Visual Studio Code](https://code.visualstudio.com) est gratuit, fonctionne sur tous les systèmes d'exploitation et est utilisé par des millions de développeurs.
 
 ## Concepts Clés
 
@@ -107,13 +107,13 @@ Un panneau de prévisualisation s'ouvre affichant votre Markdown formaté - édi
 ```
 ls
 ```
-(Sur Windows Command Prompt, utilisez `dir`)
+(Dans l'Invite de commandes de Windows, utilisez `dir`)
 
 **Afficher le répertoire de travail actuel :**
 ```
 pwd
 ```
-(Sur Windows Command Prompt, utilisez `cd`)
+(Dans l'Invite de commandes de Windows, utilisez `cd`)
 
 **Créer un nouveau dossier :**
 ```

@@ -104,9 +104,9 @@ Maintenant créez votre sous-agent :
   - Des fiches de notation sont créées en fonction des catégories de données collectées
   - Une recommandation finale est donnée.
   ```
-- Appuyez sur **Enter** sur **[Continue]** pour utiliser **All tools**
+- Appuyez sur **Entrée** sur **[Continue]** pour utiliser **All tools**
 - Sélectionnez **Sonnet** pour le modèle
-- Appuyez sur **Enter** pour choisir une couleur aléatoirement
+- Appuyez sur **Entrée** pour choisir une couleur aléatoirement
 
 **Ce que signifie « All tools » :** Un sous-agent peut être limité aux seuls outils dont il a besoin, par exemple un agent dédié uniquement à la recherche, avec seulement la recherche web. Ce tutoriel utilise **All tools** car le stock-picker doit faire des recherches en ligne et peut écrire des fichiers. Vous pourrez restreindre cela plus tard en modifiant le fichier du sous-agent.
 

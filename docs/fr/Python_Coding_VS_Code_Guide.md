@@ -10,14 +10,14 @@ Vous souhaitez écrire du code Python mais vous n'êtes pas sûr de l'éditeur �
 
 ## Concepts Clés
 
-- **[Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - Extension VS Code de Microsoft qui fournit la coloration syntaxique, le débogage, l'exécution de code et la prise en charge des notebooks Jupyter
+- **[Extension Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)** - Extension VS Code de Microsoft qui fournit la coloration syntaxique, le débogage, l'exécution de code et la prise en charge des notebooks Jupyter
 - **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)** - Serveur de langage qui active IntelliSense rapide, la vérification de type et les imports automatiques pour Python
-- **[Virtual Environment](https://docs.python.org/3/library/venv.html)** - Environnement Python isolé pour gérer les packages spécifiques au projet sans affecter le Python système
+- **[Environnement virtuel](https://docs.python.org/3/library/venv.html)** - Environnement Python isolé pour gérer les packages spécifiques au projet sans affecter le Python système
 - **[Streamlit](https://streamlit.io/)** - Bibliothèque Python pour créer des applications web interactives avec de simples scripts Python
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [VS Code Basics](./VS_Code_Getting_Started)
+- Avoir terminé [Premiers Pas avec VS Code](./VS_Code_Getting_Started)
 - Connexion Internet pour télécharger Python et les packages
 - 15 à 20 minutes
 

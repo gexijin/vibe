@@ -16,8 +16,8 @@ Vous avez besoin d'une feuille de calcul - des formules, une mise en forme, peut
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [VS Code Basics](./VS_Code_Getting_Started)
-- Claude Code installé et fonctionnel (voir [Install Claude Code on Windows](./Install_CLAUDE_Code_Win) ou [Install Claude Code on Mac](./Install_Claude_Code_MacOS))
+- Avoir terminé [Premiers Pas avec VS Code](./VS_Code_Getting_Started)
+- Claude Code installé et fonctionnel (voir [Installer Claude Code sur Windows](./Install_CLAUDE_Code_Win) ou [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS))
 - Microsoft Excel, [LibreOffice Calc](https://fr.libreoffice.org/download/) (gratuit) ou Google Sheets (gratuit dans votre navigateur web) pour voir les graphiques
 - 20-25 minutes
 
@@ -135,8 +135,8 @@ Crée un fichier messy_sales.csv avec 15 lignes de données de ventes qui compor
 - Demandez à Claude de construire une feuille de calcul à partir d'un fichier CSV que vous avez déjà (faites-le d'abord glisser dans votre dossier de projet)
 - Essayez des demandes plus avancées : « ajoute une mise en forme conditionnelle pour que toute catégorie au-dessus de $500 passe en rouge »
 - Demandez à Claude d'ajouter une deuxième feuille qui résume les données de la première
-- Combinez cela avec [Use GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow) pour enregistrer des versions de vos feuilles de calcul au fur et à mesure
-- Passez à [Vibe Coding a Budget Tracker in Excel](./Vibe_Coding_Excel_Guide) pour construire un projet complet à plusieurs feuilles
+- Combinez cela avec [Utiliser GitHub Desktop avec Claude Code](./GitHub_Desktop_Claude_Code_Workflow) pour enregistrer des versions de vos feuilles de calcul au fur et à mesure
+- Passez à [Vibe Coding d'un Suivi de Budget dans Excel](./Vibe_Coding_Excel_Guide) pour construire un projet complet à plusieurs feuilles
 
 ## Dépannage
 

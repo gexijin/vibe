@@ -187,7 +187,7 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 Raccourcis utiles pour basculer entre les applications :
 - **Command (⌘) + Tab** - Basculer rapidement entre les applications ouvertes
 - **Command (⌘) + `** (accent grave) - Basculer entre les fenêtres de la même application
-- **Command (⌘) + Space** - Ouvrir la recherche Spotlight (pour ouvrir des applications)
+- **Command (⌘) + Espace** - Ouvrir la recherche Spotlight (pour ouvrir des applications)
 - **Command (⌘) + Q** - Quitter complètement une application
 
 ## Prochaines Étapes

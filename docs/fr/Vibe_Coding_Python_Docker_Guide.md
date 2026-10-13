@@ -17,8 +17,8 @@ Vous avez écrit du code Python en tapant chaque ligne vous-même. Mais que se p
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Python Coding in VS Code via Docker](./Python_Coding_Docker_Guide)
-- Avoir terminé [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Avoir terminé [Programmation Python dans VS Code via un Conteneur Docker](./Python_Coding_Docker_Guide)
+- Avoir terminé [Utiliser GitHub Desktop avec Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 minutes
 
 ## Étape 1 : Créer un Nouveau Dépôt GitHub
@@ -181,7 +181,7 @@ Crée un diagramme en boîte comparant les longueurs de pétales des trois espè
 
 Avant de faire le commit, examinez ce que Claude a construit.
 
-- Dans l'Explorateur VS Code, cliquez sur `iris_exploration.py` pour l'ouvrir
+- Dans l'**Explorer** de VS Code, cliquez sur `iris_exploration.py` pour l'ouvrir
 - Parcourez le code : remarquez les imports, le chargement des données et les sections de traçage
 - Vous n'avez pas besoin de comprendre chaque ligne, mais ayez une idée de la structure
 - Vérifiez que tous les fichiers PNG ont été créés : `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`

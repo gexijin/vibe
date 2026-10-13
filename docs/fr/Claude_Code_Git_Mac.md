@@ -17,7 +17,7 @@ Vous codez avec l'assistance de l'IA. Elle apporte des modifications à vos fich
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
+- Avoir terminé [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS)
 - 30 minutes
 
 ## Étape 1 : Ouvrir Terminal

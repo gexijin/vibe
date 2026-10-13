@@ -15,7 +15,7 @@ Dans ce tutoriel, vous allez créer un Claude Skill qui recherche la littératur
 - **Claude Skill** - Un outil spécialisé qui étend les capacités de Claude Code avec des instructions personnalisées, du code et de la documentation stockés dans `.claude/skills/`
 - **PubMed** - Base de données gratuite de plus de 35 millions d'articles de recherche biomédicale maintenue par la Bibliothèque Nationale de Médecine des États-Unis
 - **Biopython** - Bibliothèque Python qui fournit des outils pour interroger la base de données PubMed de manière programmatique
-- **Auto-edit mode** - Fonctionnalité activée avec Shift+Tab qui permet à Claude d'effectuer plusieurs modifications de fichiers sans demander la permission à chaque fois
+- **Mode auto-edit** - Fonctionnalité activée avec Shift+Tab qui permet à Claude d'effectuer plusieurs modifications de fichiers sans demander la permission à chaque fois
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -138,16 +138,16 @@ La réponse explique le consensus scientifique, l'origine du mythe et les consé
 Ouvrez VS Code pour voir la structure du skill :
 
 **Windows :**
-- Ouvrez l'**Explorateur de Fichiers**, naviguez vers `C:\Users\YOUR_USERNAME\Documents\test_claude`
+- Ouvrez l'**Explorateur de fichiers**, naviguez vers `C:\Users\YOUR_USERNAME\Documents\test_claude`
 - Faites un clic droit sur le dossier et sélectionnez **Ouvrir avec Code**
 
 **Mac :**
 - Ouvrez le **Finder**, naviguez vers `Documents/test_claude`
-- Faites un clic droit sur le dossier et sélectionnez **Ouvrir avec Visual Studio Code**
+- Faites un clic droit sur le dossier et sélectionnez **Ouvrir avec > Visual Studio Code**
 - Ou tapez simplement ``` code . ``` depuis Terminal
 
 Dans VS Code :
-- Développez `.claude/skills/medical-research/` dans l'explorateur de fichiers
+- Développez `.claude/skills/medical-research/` dans le panneau **Explorer** de VS Code
 - Ouvrez `SKILL.md` pour voir les instructions détaillées pour Claude
 - Ouvrez `README.md` pour voir la documentation utilisateur
 - Ouvrez `pubmed_search.py` pour voir le code Python
@@ -191,7 +191,7 @@ Le **document skill** vous aide à lire et écrire des fichiers en PDF, Word, Po
 ## Aperçu du Workflow
 
 - **Claude Skills** sont plus puissants que les slash commands - ils combinent code, documentation et instructions personnalisées
-- **Auto-edit mode** (Shift+Tab) simplifie la création en évitant les demandes de permission répétées
+- **Le mode auto-edit** (Shift+Tab) simplifie la création en évitant les demandes de permission répétées
 - **Packaging autonome** - Les scripts vivent à l'intérieur des dossiers de skills, les rendant portables et partageables
 - **Activation automatique** - Les skills se déclenchent en fonction du type de question (les questions de recherche activent medical-research)
 - **Interface en langage naturel** - Posez des questions naturelles sans connaître les détails techniques

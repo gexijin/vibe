@@ -16,8 +16,8 @@ Le vibe coding, c'est comme avoir une conversation avec votre ordinateur : vous 
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [R Coding in VS Code via Docker](./R_Coding_Docker_Guide)
-- Avoir terminé [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Avoir terminé [Codage R dans VS Code via un conteneur Docker](./R_Coding_Docker_Guide)
+- Avoir terminé [Utiliser GitHub Desktop avec Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - Docker Desktop installé et démarré
 - 25 à 30 minutes
 
@@ -41,9 +41,9 @@ Vous disposez maintenant d'un dépôt Git local et d'une sauvegarde sur GitHub.
 
 - Allez sur https://github.com/gexijin/vibe
   - **Remarque pour les utilisateurs ARM64 (Mac Apple Silicon) :** Utilisez plutôt https://github.com/gexijin/vibe/tree/ARM64
-- Cliquez sur **Code** et Download Zip
-- Ouvrez File Explorer (Windows) ou Finder (Mac)
-- Décompressez le fichier dans le dossier Download
+- Cliquez sur **Code**, puis sur **Download ZIP**
+- Ouvrez l'**Explorateur de fichiers** (Windows) ou le **Finder** (Mac)
+- Décompressez le fichier dans le dossier Téléchargements
 - Naviguez vers votre dossier projet vibe (par exemple, `Documents/vibe`)
 - Trouvez le dossier `.devcontainer`
 - Copiez l'intégralité du dossier (il contient `Dockerfile` et `devcontainer.json`)
@@ -201,7 +201,7 @@ Vous construisez un tableau de bord professionnel en ayant une conversation.
 
 Avant de faire le commit, examinez ce que Claude a construit.
 
-- Dans l'Explorateur VS Code, cliquez sur `app.R` pour l'ouvrir
+- Dans l'**Explorer** de VS Code, cliquez sur `app.R` pour l'ouvrir
 - Parcourez le code : remarquez la disposition de l'interface utilisateur, la logique du serveur et le code des graphiques
 - Vous n'avez pas besoin de comprendre chaque ligne, mais faites-vous une idée de la structure
 - Ouvrez GitHub Desktop
@@ -258,7 +258,7 @@ Après chaque fonctionnalité réussie :
 ## Dépannage
 
 - **L'installation de hoopR échoue** - Vérifiez votre connexion Internet ; le package télécharge des données depuis le web. Essayez d'exécuter `install.packages("hoopR")` dans un terminal R pour voir les messages d'erreur détaillés.
-- **L'application Shiny ne démarre pas** - Vérifiez que l'extension Shiny est installée (recherchez "Posit.shiny" dans Extensions VS Code). Recherchez les messages d'erreur dans le terminal et collez-les dans Claude.
+- **L'application Shiny ne démarre pas** - Vérifiez que l'extension Shiny est installée (recherchez "Posit.shiny" dans le panneau Extensions de VS Code). Recherchez les messages d'erreur dans le terminal et collez-les dans Claude.
 - **Aucune donnée ne s'affiche** - Le package hoopR récupère des données en direct ; si la saison NBA n'a pas commencé, il peut y avoir des données limitées. Demandez à Claude d'utiliser des données d'exemple ou une saison précédente.
 - **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites « corrige cette erreur ». Le vibe coding inclut l'itération et le débogage.
 - **Impossible de pousser vers GitHub** - Assurez-vous que vous êtes connecté à GitHub Desktop et que vous avez publié le dépôt (Étape 1). Vérifiez votre connexion Internet.

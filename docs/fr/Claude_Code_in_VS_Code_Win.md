@@ -59,7 +59,7 @@ Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installati
 ```
 Écris un court article expliquant pourquoi les LLM aiment utiliser le format Markdown. Enregistre-le sous article.md
 ```
-- Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau Explorateur à gauche
+- Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau **Explorer** à gauche
 - Cliquez sur `article.md` dans l'Explorateur pour le visualiser dans l'éditeur
 - Pour prévisualiser l'article formaté : faites un clic droit sur l'onglet `article.md` et sélectionnez **Open Preview**
 - Vous verrez le Markdown rendu avec des titres, des puces et une mise en forme appropriés

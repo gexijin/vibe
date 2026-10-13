@@ -18,7 +18,7 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir complété [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) ou [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Avoir complété [Configurer VS Code pour Claude Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Un sujet à rechercher (nous utiliserons les rapports boursiers comme exemple)
 - Un éditeur de texte tel que VS Code installé
 - 15-20 minutes
@@ -84,7 +84,7 @@ Utilisez n'importe quel éditeur de texte pour ouvrir le fichier `stock-report.m
 Si vous avez VS Code installé (recommandé) :
 - Démarrez VS Code
 - Depuis **File**, choisissez **Open folder**, et sélectionnez le dossier de projet `Documents/test_claude`
-- Depuis l'explorateur de fichiers, naviguez vers `.claude/commands` et cliquez sur le fichier `stock-report.md` pour l'ouvrir
+- Dans le panneau **Explorer** de VS Code (à gauche), naviguez vers `.claude/commands` et cliquez sur le fichier `stock-report.md` pour l'ouvrir
 
 Examinez le prompt et apportez des modifications aux instructions si vous le souhaitez.
 
@@ -177,7 +177,7 @@ La même structure de commande recherche maintenant Tesla à la place.
 
 ## Étape 12 : Essayer une Autre Commande Slash (Optionnel)
 
-Si vous avez complété le tutoriel [Writing Research Paper](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
+Si vous avez complété le tutoriel [Rédiger un article de recherche avec Claude Code](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
 
 Commencez par effacer la mémoire de Claude pour repartir de zéro :
 

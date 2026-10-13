@@ -96,7 +96,7 @@ Examinez le résumé de Claude pour obtenir un aperçu rapide du paysage de la r
 ## Étape 6 : Lire les sources
 Lisez le document de recherche et cliquez sur les sources originales pour vérifier les informations :
 
-1. Cliquez sur `general_research.md` dans le panneau Explorateur sur la gauche
+1. Cliquez sur `general_research.md` dans le panneau **Explorer** sur la gauche
 2. Prévisualisez le document formaté : cliquez avec le bouton droit sur l'onglet `general_research.md` et sélectionnez **Open Preview**
 3. Cliquez sur les liens des sources pour lire les articles et études originaux
 

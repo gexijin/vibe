@@ -10,9 +10,9 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 
 ## Concepts Clés
 
-- **Workspace** - Le dossier depuis lequel vous démarrez Claude Code ; Claude lit et modifie les fichiers qu'il contient pendant cette session
+- **Espace de travail (workspace)** - Le dossier depuis lequel vous démarrez Claude Code ; Claude lit et modifie les fichiers qu'il contient pendant cette session
 - **REPL (Read-Eval-Print Loop)** - Une session interactive où vous tapez des commandes, Claude répond, et la conversation continue jusqu'à ce que vous quittiez
-- **Context** - La quantité de code et d'historique de conversation dont Claude se souvient ; comme une mémoire de travail qui se remplit au fil du temps
+- **Contexte** - La quantité de code et d'historique de conversation dont Claude se souvient ; comme une mémoire de travail qui se remplit au fil du temps
 - **Slash Commands** - Raccourcis intégrés commençant par `/` qui effectuent des actions spécifiques comme effacer l'historique ou afficher l'aide
 
 ## Ce Dont Vous Aurez Besoin

@@ -17,8 +17,8 @@ Avez-vous déjà essayé de partager votre code R avec un collègue, pour ensuit
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [R Coding in VS Code](./R_Coding_VS_Code_Guide)
-- Avoir terminé [GitHub Desktop Basics](./Github_desktop)
+- Avoir terminé [Exécuter R dans VS Code](./R_Coding_VS_Code_Guide)
+- Avoir terminé [Premiers Pas avec le Contrôle de Version](./Github_desktop)
 - 20-25 minutes
 
 ## Étape 1 : Installez Docker Desktop

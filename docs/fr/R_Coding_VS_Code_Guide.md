@@ -16,7 +16,7 @@ Vous souhaitez écrire du code R mais RStudio vous semble lourd ou vous préfér
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [VS Code Basics](./VS_Code_Getting_Started)
+- Avoir terminé [Premiers Pas avec VS Code](./VS_Code_Getting_Started)
 - Connexion Internet pour télécharger R et les packages
 - 10 à 15 minutes
 
@@ -53,7 +53,7 @@ Avant de configurer VS Code, vous devez savoir où R est installé sur votre sys
 
 ### Pour les Utilisateurs Windows
 
-1. Ouvrez l'**Explorateur de Fichiers**
+1. Ouvrez l'**Explorateur de fichiers**
 2. Naviguez vers `C:\Program Files\R\`
 3. Vous verrez un dossier comme `R-4.5.3` (votre numéro de version peut différer)
 4. Ouvrez ce dossier → Ouvrez le dossier `bin`
