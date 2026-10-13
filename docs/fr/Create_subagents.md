@@ -154,7 +154,7 @@ Le sous-agent s'activera automatiquement en fonction de votre description.
 Pendant que le sous-agent s'exécute, vous le verrez :
 1. **Invoquer le skill deux fois** - Appeler le skill stock-report une fois pour Apple, puis pour Google
 2. **Collecter des données** - Chaque appel du skill recherche sur le web et génère un rapport d'entreprise
-3. **Évaluer les entreprises** - Applique la pondération 40/30/20/10 sur les catégories
+3. **Évaluer les entreprises** - Note chaque catégorie et les combine en une note globale
 4. **Générer la sortie** - Crée un tableau de comparaison et une recommandation
 
 Cela peut prendre 2-3 minutes car la recherche web est impliquée.
@@ -175,7 +175,7 @@ Le sous-agent peut afficher cela dans le terminal ou générer un fichier markdo
 Maintenant que vous avez un sous-agent de sélection d'actions fonctionnel, essayez ces extensions :
 
 - **Comparer 3+ actions** : « Compare AAPL, MSFT et GOOGL » pour voir comment le sous-agent gère plus d'options
-- **Ajuster les pondérations** : Modifiez le fichier du sous-agent pour changer la répartition 40/30/20/10 (par exemple, mettez la croissance à 40% si vous préférez les actions de croissance)
+- **Ajuster les pondérations** : Modifiez le fichier du sous-agent pour changer le poids de chaque catégorie (par exemple, mettez la croissance à 40% si vous préférez les actions de croissance)
 - **Créer d'autres sous-agents** : Construisez un sous-agent "code-reviewer", "bug-hunter" ou "document-writer" pour différentes tâches
 
 ## Dépannage
