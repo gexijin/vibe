@@ -40,11 +40,12 @@ You now have a local Git repository and a backup on GitHub.
 
 - Go to https://github.com/gexijin/vibe
   - **Note for ARM64 users (Apple Silicon Macs):** Use https://github.com/gexijin/vibe/tree/ARM64 instead
-- Click **Code** and Download Zip
-- Open File Explorer (Windows) or Finder (Mac)
-- Unzip the file in Download folder
-- Navigate to your vibe project folder (e.g., `Documents/vibe`)
+- Click **Code**, then **Download ZIP**
+- Open File Explorer (Windows) or Finder (Mac) and go to your **Downloads** folder
+- Unzip the file: on Windows, right-click it and choose **Extract All**; on Mac, double-click it
+- Open the unzipped `vibe-main` folder (`vibe-ARM64` if you used the ARM64 link). On Windows it may contain another folder with the same name; open that one
 - Find the `.devcontainer` folder
+  - On Mac, Finder hides folders whose names start with a dot. Press **Cmd+Shift+.** (period) to show them
 - Copy the entire folder (it contains `Dockerfile` and `devcontainer.json`)
 - Navigate to your new `nba-dashboard` folder
 - Paste the `.devcontainer` folder there
@@ -66,7 +67,7 @@ Your `nba-dashboard` folder should now contain:
 - If you don't see the notification, click the green icon in bottom-left corner and select **Reopen in Container**
 - VS Code builds the Docker container (takes 3-5 minutes first time)
 - Watch the progress notification showing build steps
-- When complete, the green icon shows **Dev Container: R in Docker**
+- When complete, the green icon shows **Dev Container: R in Docker (AMD64)** (or **(ARM64)**)
 
 ## Step 4: Start Claude Code
 
@@ -204,8 +205,8 @@ Before committing, review what Claude built.
 - Skim through the code—notice the UI layout, server logic, and plotting code
 - You don't need to understand every line, but get a sense of the structure
 - Open GitHub Desktop
-- You'll see `app.R` listed as a new file
-- The right panel shows all the code in green (new additions)
+- You'll see `app.R` listed (as a new file, or as changed if you already committed it in an earlier step)
+- The right panel shows the added code in green
 - In the **Summary** field at bottom left, type:
 
 ```
