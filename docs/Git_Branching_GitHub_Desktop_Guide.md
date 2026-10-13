@@ -38,7 +38,7 @@ You'll create and edit all your files in VS Code. Open your project folder once,
 
 - Open **VS Code**
 - Click **File** → **Open Folder**
-- Browse to your `heart-dashboard` folder and click **Open** (on Mac, **Select Folder**)
+- Browse to your `heart-dashboard` folder and click **Select Folder** (on Mac, **Open**)
 - If VS Code asks "Do you trust the authors?", click **Yes, I trust the authors**
 - On the left you'll see the **Explorer** panel listing your folder, with the `README.md` file inside it
 
@@ -46,10 +46,11 @@ Keep VS Code open—you'll come back to it throughout.
 
 ## Step 3: Download the Data
 
-- **Right-click** this link and choose **Save Link As** (or **Save Target As**): [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
+- **Right-click** this link and choose **Save Link As** (Safari: **Download Linked File As…**): [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
 - Save it into your `heart-dashboard` folder, named `heartatk4R.txt`
-- Peek at the data in **Excel**: open Excel first, click **File** → **Open** → **Browse**, set the file-type dropdown to **All Files**, then pick `heartatk4R.txt` from your `heart-dashboard` folder
-- Excel shows one heart-attack patient per row, with columns: `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), `AGE`
+- Peek at the data in **Excel** (optional): open Excel, click **File** → **Open** → **Browse** (on Mac, **File** → **Open…**), set the file-type dropdown to **All Files** if needed, and pick `heartatk4R.txt` from your `heart-dashboard` folder
+- If a **Text Import Wizard** appears, just click **Finish**
+- Excel shows one heart-attack patient per row. The columns include `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), and `AGE` (plus `Patient`, `DIAGNOSIS`, and `DRG`, which we won't use)
 - Close Excel without saving—you only opened it to look
 - Back in VS Code, `heartatk4R.txt` now appears in the Explorer panel too
 
@@ -59,8 +60,9 @@ Keep VS Code open—you'll come back to it throughout.
 - Type this prompt:
   ```
   Make a one-page HTML dashboard in a single file. Add a button to
-  load a tab-separated .txt file from my computer. Columns: SEX,
-  DIED (0 or 1), CHARGES, LOS, AGE. Show total patients, percent
+  load a tab-separated .txt file (with a header row) from my computer.
+  Columns: Patient, DIAGNOSIS, SEX, DRG, DIED (0 or 1), CHARGES, LOS,
+  AGE. Show total patients, percent
   died, and average age, charges, and stay as cards. Ignore NA.
   ```
 - Click the **Copy** button on the code block ChatGPT provides
@@ -80,7 +82,7 @@ Because you typed the real name `index.html`, VS Code saves it correctly—no ex
 
 ## Step 6: Test the Dashboard in Your Browser
 
-- In your `heart-dashboard` folder, double-click `index.html`
+- In GitHub Desktop, click **Repository** → **Show in Explorer** (Mac: **Show in Finder**), then double-click `index.html`
 - It opens in your web browser
 - Click the **Choose File** button (or similar) and pick `heartatk4R.txt` from your folder
 - The cards fill in with numbers from the data

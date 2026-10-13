@@ -1,9 +1,9 @@
 ---
-title: "Claude Code with version control for Windows"
+title: "Claude Code with local version control for Windows"
 ---
 [Home](./)
 
-# Claude Code with version control for Windows
+# Claude Code with local version control for Windows
 
 You're working with AI assistance. It makes changes to your files. Sometimes the changes are brilliant. Sometimes they aren't. **Version control is like an undo button for your entire project.** Every time you save a snapshot (called a "commit"), you create a restore point you can always go back to. Best of all, you can do this entirely on your computer and Claude Code does it for you.
 
@@ -17,7 +17,7 @@ You're working with AI assistance. It makes changes to your files. Sometimes the
 ## What You'll Need
 
 - Finished [Installing Claude Code on Windows](./Install_CLAUDE_Code_Win)
-- 20 minutes
+- 20-30 minutes
 
 ## Step 1: Open PowerShell
 
@@ -36,7 +36,7 @@ You're working with AI assistance. It makes changes to your files. Sometimes the
 - If you see a version number like `git version 2.45.0`, skip to Step 3
 - If you see an error, install Git for Windows:
   - Go to [git-scm.com/download/win](https://git-scm.com/download/win)
-  - The download should start automatically — open the installer when it finishes
+  - On that page, click **Click here to download** (at the top), then open the installer when the download finishes
   - Click **Next** through the installer, accepting the default options
   - Click **Install**, then **Finish**
   - Close and reopen PowerShell, then verify again with `git --version`
@@ -65,6 +65,8 @@ Using your name and email helps you identify who made changes when multiple peop
   ```
 
 You should see a path ending in `\Documents`.
+
+If you see `Cannot find path`, your Documents folder is probably backed up by OneDrive. Run `cd ~\OneDrive\Documents` instead.
 
 ## Step 5: Create Project Folder
 
@@ -99,7 +101,8 @@ Claude initializes a Git repository in your folder (takes 2-5 seconds). You now 
 
 ## Step 8: Build the Timer App
 
-- In Claude Code, type:
+- In Claude Code, copy and paste this whole request (pasting keeps all the lines together; pressing Enter would send it early):
+
   ```
   Create a simple countdown timer app in a single file called timer.html.
   It should have:
@@ -119,6 +122,8 @@ Claude creates `timer.html` (takes 10-30 seconds) with the CSS and JavaScript co
   - Type `1` in the input field
   - Click **Start**
   - Watch the countdown
+
+**Can't see `test_claude`?** If OneDrive backs up your Documents, File Explorer shows a different Documents folder. Click the File Explorer address bar, paste `%USERPROFILE%\Documents\test_claude`, and press **Enter**.
 
 **If something's broken:** In Claude Code, describe the error: `I'm seeing this error: [describe what happened]. Can you fix it?`
 
@@ -142,7 +147,7 @@ You've created your first save point! You can always return to this working vers
   ```
   Add two buttons on the top. If I click on them it automatically starts 1- and 5-minute timers.
   ```
-- Refresh your browser tab
+- Refresh your browser tab (press `F5` or `Ctrl + R`)
 - Test: Click the **5 min** button
 - If it works, commit the changes:
   ```
@@ -158,7 +163,7 @@ We created a 2nd save point. This version has the two buttons working.
   ```
   Add a 15-minute button.
   ```
-- Refresh your browser tab
+- Refresh your browser tab (press `F5` or `Ctrl + R`)
 - Test: Click the **15 min** button
 
 **For this tutorial:** Pretend the 15-minute button doesn't work correctly. Don't commit yet—we'll practice discarding bad changes.
@@ -171,7 +176,7 @@ Sometimes AI code doesn't work and you need to start over from your last save po
   ```
   discard these changes.
   ```
-- Claude shows a menu with options like **Yes** and **No** — use the arrow keys (or press the number next to **Yes**) to select it, then press **Enter**
+- Claude will usually ask you to confirm first. If it shows a menu, choose **Yes** (arrow keys or the number next to it) and press **Enter**. If it asks in a message, type `yes, discard the changes to timer.html` and press **Enter**
 - Refresh your browser—the 15-minute button disappears
 
 Claude throws away the new changes we don't like. The timer works again with just the 1- and 5-minute buttons!
@@ -249,7 +254,7 @@ Remember: Test after each feature, commit after each success, discard failures.
 ## Troubleshooting
 
 - **"not a git repository" error:** Make sure you're in the test_claude folder (`cd ~\Documents\test_claude`)
-- **Can't find timer.html in Windows:** The file is at `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
+- **Can't find timer.html in Windows:** The file is at `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` (or `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html` if you used the OneDrive path in Step 4)
 - **`git` command not found:** Close and reopen PowerShell after installing Git for Windows so the PATH updates, then run `git --version` again
 - **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, click **Console** tab), copy any red error messages, paste them to Claude
 
@@ -259,7 +264,7 @@ Remember: Test after each feature, commit after each success, discard failures.
 - `show me the diff` - See exactly what code changed
 - `explain what the timer code does` - Understand the implementation
 - `create a branch called experiment` - Try risky changes safely
-- `go back to the previous commit` - Undo everything since last commit
+- `undo everything since my last commit` - Throw away changes you haven't saved yet
 
 Claude handles all Git operations through natural language—no commands to memorize!
 
@@ -269,6 +274,6 @@ Claude handles all Git operations through natural language—no commands to memo
 - **Development:** Claude writes code, you test in browser
 - **Version Control:** Claude handles all Git operations via simple requests
 - **Safety:** Discard bad changes anytime, return to any previous commit
-- **Local:** Everything stays on your computer, no account or internet required
+- **Local:** Your Git history stays on your computer — no GitHub account needed (Claude Code itself still needs internet and your Claude account)
 
 Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 8, 2025.

@@ -31,7 +31,7 @@ Build a simple timer app with Claude Code and track all changes with GitHub Desk
 ## What You'll Need
 
 - Finished [Installing Claude Code on Windows](./Install_CLAUDE_Code_Win) or [Installing Claude Code on Mac](./Install_Claude_Code_MacOS)
-- Finished [Getting Started with Version Control](./Github_desktop)
+- Finished [Get Started with Version Control](./Github_desktop)
 - 20 minutes
 
 ## Step 1: Create Your Project
@@ -41,7 +41,7 @@ Build a simple timer app with Claude Code and track all changes with GitHub Desk
 - Fill in:
   - **Name:** `test_claude`
   - **Description:** `A timer app built with Claude Code`
-  - **Local Path:** Documents folder
+  - **Local Path:** Click **Choose...** and pick your **Documents** folder (the default is a `GitHub` folder inside Documents, so change it)
   - **Check** "Initialize this repository with a README"
 - Click **Create Repository**
 - Click **Publish repository** at the top
@@ -64,6 +64,7 @@ You now have a local project and cloud backup on GitHub.
 Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
 - Type this request:
+
   ```
   Create a simple countdown timer app in a single file called timer.html.
   It should have:
@@ -141,7 +142,7 @@ Your code is now backed up in the cloud.
 
 ## Step 9: Discard Bad Changes
 
-  Sometimes AI put us on the wrong path and we need to start over from our last commit (save point).
+Sometimes AI puts us on the wrong path, and we need to start over from our last commit (save point).
 
 - Open **GitHub Desktop**
 - Click **Branch** menu → **Discard All Changes**
@@ -180,7 +181,7 @@ Claude will check changes, write a commit message, commit, and push (10-20 secon
 
 - In Claude Code:
   ```
-  what files have I changed?
+  what did my last commit change?
   ```
 
 Claude explains your changes in plain English.
@@ -191,10 +192,10 @@ Claude explains your changes in plain English.
 
 - In **GitHub Desktop**, click **History** tab
 
-You'll see:
-- Initial commit (README)
-- Create initial timer app
-- Add improved sound notification
+You'll see (newest at the top):
+- Claude's commit for the sound notification (its wording will vary)
+- Create initial timer app with start/stop functionality
+- Initial commit
 
 Notice the first failed sound attempt isn't there - you discarded it! Only working code made it into your commits.
 
