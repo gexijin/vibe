@@ -173,9 +173,9 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 ## Troubleshooting
 
 - **RStudio doesn't show file changes** - Click **File > Reopen with Encoding > UTF-8** to manually reload the file.
-- **"claude: command not found"** - Make sure you completed the installation guide. Try opening a fresh PowerShell window.
+- **"The term 'claude' is not recognized"** - Make sure you completed the installation guide. Close PowerShell and open a fresh window, then try again.
 - **Plots not appearing** - Make sure ggplot2 is installed. Run `install.packages("ggplot2")` in RStudio Console if needed.
-- **Error: "cannot change working directory"** - Your Windows path contains spaces. In Step 6, wrap the path in quotes, for example: `cd "C:\Users\Your Name\Documents\test_claude"`
+- **"Cannot find path ... because it does not exist" in Step 6** - Your project may be in a different folder. In RStudio, the path at the top of the **Files** pane shows where `test_claude` is. If your Documents folder is backed up by OneDrive, try `cd ~\OneDrive\Documents\test_claude`. If the path contains spaces, wrap it in quotes, for example: `cd "C:\Users\Your Name\OneDrive\Documents\test_claude"`
 - **Claude Code is slow on first request** - Wait 30-60 seconds for Claude to initialize. Subsequent requests will be faster.
 - **Using WSL instead?** - If you set up the optional WSL/Ubuntu path, open the **Ubuntu** app instead of PowerShell in Steps 5-16, and navigate to your project with `cd /mnt/c/Users/YourUsername/Documents/test_claude`
 
