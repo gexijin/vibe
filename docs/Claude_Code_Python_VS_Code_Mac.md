@@ -67,7 +67,9 @@ print(iris_df.describe())
 ```
 
 - Save the file by clicking **File > Save**
-- Open Python terminal: click **View** in menu bar, then **Terminal**
+- Create a virtual environment, as in Step 5 of [Python Coding in VS Code](./Python_Coding_VS_Code_Guide): click **View > Command Palette**, type `Python: Create Environment`, choose **Venv**, then pick your Python version
+- Wait for the `.venv` folder to appear in the Explorer
+- Open a terminal: click **View** in the menu bar, then **Terminal**. You should see `(.venv)` at the start of the prompt
 - Install the packages this script needs:
   ```
   pip install scikit-learn pandas
@@ -156,7 +158,7 @@ Review the entire script for correctness. Add comments when necessary.
 - **Claude extension not showing** - Restart VS Code after installation. Click **View > Extensions** to verify it's installed.
 - **"Cannot read Python file" error** - Make sure you saved the file with `.py` extension. Claude needs saved files to read them.
 - **Authentication failed** - Verify your Claude Pro/Max subscription is active or your API key is valid. See [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) for authentication troubleshooting.
-- **Package not found errors** - Install required packages in terminal: `pip install seaborn matplotlib scikit-learn pandas`. Wait for installation to complete before running code.
+- **Package not found errors** or **`command not found: python`** - Make sure the terminal shows `(.venv)` (if not, close it and open a new one with **View > Terminal**), then install the required packages: `pip install seaborn matplotlib scikit-learn pandas`. Wait for installation to complete before running code.
 - **Code changes not applying** - Make sure to click **Accept** on the diff. If it's not working, try copying Claude's suggested code manually.
 - **Plot not showing** - Make sure you have a display. On some systems you may need to add `plt.show()` at the end or use `%matplotlib inline` in Jupyter.
 
