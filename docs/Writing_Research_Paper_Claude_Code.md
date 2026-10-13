@@ -70,7 +70,7 @@ Ask Claude to research your topic. Copy and paste this prompt into Claude Code, 
 
 ```
 I'm writing a ~1,000 word research paper on AI adoption in the workplace.
-Search for recent data (2023-2025) on:
+Search for recent data (from the last two years) on:
 - Productivity gains from AI tools
 - Job displacement concerns and statistics
 - Real-world case studies from companies
@@ -295,7 +295,7 @@ The slash command will guide you through the entire workflow automatically! Don'
 
 ## Troubleshooting
 
-- **Claude search results seem outdated:** Specify "search for 2024-2025 data on [topic]"
+- **Claude search results seem outdated:** Ask for a time range, for example "search for data from the last two years on [topic]"
 - **Draft is too long/short:** Tell Claude: "Make this approximately 1,000 words"
 - **Can't find files:** In terminal, type `ls` to list all files in current folder
 
