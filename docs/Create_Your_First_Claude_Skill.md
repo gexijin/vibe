@@ -181,7 +181,7 @@ The pattern: Define when Claude should automatically help, not just shortcuts yo
 
 - **Skill doesn't activate:** Check the `description` field in `SKILL.md`—it must include trigger words related to your question
 - **Skill activates too often:** Make the description more specific about when to use it
-- **Can't find the Skill folder:** Skills are in `.claude/skills/` (hidden folder—enable "Show hidden files" in your file explorer)
+- **Can't find the Skill folder:** Skills are in `.claude/skills/` (a hidden folder: VS Code's Explorer shows it, or in File Explorer on Windows choose **View > Show > Hidden items**; in Finder on Mac press **Cmd+Shift+.**)
 - **Changes to SKILL.md not working:** Skills load automatically when modified—no restart needed. If still not working, check YAML formatting
 
 ## Workflow Overview
