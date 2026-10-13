@@ -185,7 +185,7 @@ Before committing, review what Claude built.
 - You don't need to understand every line, but get a sense of the structure
 - Check that all PNG files were created: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Open GitHub Desktop
-- You'll see all new files listed (the Python script and PNG images)
+- You'll see the new PNG images listed, plus `iris_exploration.py` as a changed file (Claude added the plotting code)
 - In the **Summary** field at bottom left, type:
 
 ```
