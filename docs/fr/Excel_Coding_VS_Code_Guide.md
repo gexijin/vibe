@@ -133,7 +133,7 @@ Crée un fichier messy_sales.csv avec 15 lignes de données de ventes qui compor
 ## Prochaines Étapes
 
 - Demandez à Claude de construire une feuille de calcul à partir d'un fichier CSV que vous avez déjà (faites-le d'abord glisser dans votre dossier de projet)
-- Essayez des demandes plus avancées : « ajoute une mise en forme conditionnelle pour que toute catégorie au-dessus de $500 passe en rouge »
+- Essayez des demandes plus avancées : « ajoute une mise en forme conditionnelle pour que toute catégorie au-dessus de 500 $ passe en rouge »
 - Demandez à Claude d'ajouter une deuxième feuille qui résume les données de la première
 - Combinez cela avec [Utiliser GitHub Desktop avec Claude Code](./GitHub_Desktop_Claude_Code_Workflow) pour enregistrer des versions de vos feuilles de calcul au fur et à mesure
 - Passez à [Vibe Coding d'un Suivi de Budget dans Excel](./Vibe_Coding_Excel_Guide) pour construire un projet complet à plusieurs feuilles

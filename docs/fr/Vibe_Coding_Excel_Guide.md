@@ -118,7 +118,7 @@ Rendez les problèmes visibles en un coup d'œil au lieu de les chercher parmi l
 - Dans le terminal Claude Code, tapez :
 
 ```
-Dans la feuille Dépenses, ajoute une mise en forme conditionnelle pour que toute dépense supérieure à $500 sur un seul mois soit surlignée en rouge, et toute dépense inférieure à $100 soit surlignée en vert. Ne colore pas la ligne Total.
+Dans la feuille Dépenses, ajoute une mise en forme conditionnelle pour que toute dépense supérieure à 500 $ sur un seul mois soit surlignée en rouge, et toute dépense inférieure à 100 $ soit surlignée en vert. Ne colore pas la ligne Total.
 ```
 
 - Appuyez sur Entrée
@@ -165,7 +165,7 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 **Exemples de demandes à Claude :**
 
-- « Ajoute une ligne Objectif d'épargne à la feuille Synthèse montrant la progression vers un objectif d'épargne de $500/mois »
+- « Ajoute une ligne Objectif d'épargne à la feuille Synthèse montrant la progression vers un objectif d'épargne de 500 $/mois »
 - « Ajoute une quatrième feuille qui affiche une comparaison d'une année sur l'autre quand j'aurai ajouté plus de mois de données »
 - « Change les couleurs du graphique en secteurs pour un thème bleu et gris »
 - « Ajoute une note expliquant chaque formule pour que je puisse apprendre ce qu'elles font »
@@ -179,7 +179,7 @@ Après chaque fonctionnalité réussie :
 
 **Principes clés :**
 
-- **Décrivez les résultats, pas l'implémentation** - Dites « surligne les dépenses supérieures à $500 » et non « utilise une mise en forme conditionnelle avec une CellIsRule »
+- **Décrivez les résultats, pas l'implémentation** - Dites « surligne les dépenses supérieures à 500 $ » et non « utilise une mise en forme conditionnelle avec une CellIsRule »
 - **Itérez rapidement** - Tester → affiner → tester → affiner
 - **Committez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
 - **Acceptez les échecs** - Si une formule ou un graphique ne sort pas correctement, décrivez simplement le problème et demandez à Claude de le corriger
