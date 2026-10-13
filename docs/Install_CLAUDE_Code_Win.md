@@ -24,7 +24,7 @@ Claude Code is an AI assistant that lives in your terminal and helps you write, 
 Git for Windows is **recommended but optional**. It adds **Git Bash**, the shell Claude Code uses to run commands. If you skip this step, Claude Code falls back to PowerShell instead — so you can move straight to Step 2 and install Git later if you prefer.
 
 - Go to [git-scm.com/download/win](https://git-scm.com/download/win)
-- The download should start automatically — open the installer when it finishes
+- Click **Click here to download** at the top of the page, then open the installer when it finishes
 - Click **Next** through the installer, accepting the default options
 - Click **Install**, then **Finish**
 
@@ -44,8 +44,15 @@ That's it — Claude Code will detect Git Bash automatically when it starts.
    claude --version
    ```
 - You should see the version number of Claude Code
+- If you see `'claude' is not recognized` instead, run these two lines in PowerShell, then close and reopen PowerShell and try `claude --version` again:
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
-## Step 3: Open Claude Code in VS Code
+## Step 3: (Optional) Open Claude Code in VS Code
+
+Skip this step if you don't have VS Code yet — you can install it later with [VS Code Getting Started](VS_Code_Getting_Started.md) and come back.
 
 Now that Claude Code is installed, you can use it inside VS Code instead of only in the terminal. This is often the easiest way to work because you can read files, edit code, and ask for help without leaving your editor.
 
@@ -58,12 +65,12 @@ Think of the Claude Code sidebar as a chat window inside VS Code. It lets you as
 3. Click the Extensions icon if you do not already see the Claude Code panel
 4. Search for Claude Code in the Extensions marketplace
 5. Click Install if it is not already installed
-6. After installation, look for the Claude Code icon in the left sidebar
+6. After installation, look for the Claude Code Spark icon in the left sidebar, or click **✻ Claude Code** in the bottom-right corner of the window
 
 If you do not see the Claude Code icon, try this:
 
 1. Press Ctrl + Shift + P
-2. Type: Claude Code: Open Sidebar
+2. Type: Claude Code: Open in Side Bar
 3. Click the matching option in the list
 
 If it still does not appear, close VS Code and reopen it. Sometimes the extension needs a fresh start before the sidebar shows up.
@@ -99,13 +106,10 @@ If Claude responds, you are ready to use it. The first time, the sidebar may ask
    ```
    claude
    ```
-- Claude tries to open a browser. If it cannot open automatically, hold **Ctrl** and click on the long URL to open it in a browser. Alternatively, copy the URL and paste it into an external browser.
+- Claude tries to open a browser. If it cannot open automatically, press **c** to copy the login link, then paste it into your browser.
 - Log in to your Claude.ai account (this may happen automatically if you're using Chrome)
-- Click **Authorize**
-- Click **Copy Code** when a long code appears
-- Go back to the terminal window
-- To paste in the terminal: **Right-click** and select **Paste** (or press **Ctrl+Shift+V**)
-- You should see a success message
+- Click **Authorize**. The browser should say you're logged in, and PowerShell shows a success message.
+- Only if the browser shows a long code instead (this happens in WSL/Ubuntu), click **Copy Code**, go back to the terminal, paste it at **Paste code here if prompted** (**right-click** or press **Ctrl+V**), and press **Enter**.
 - Follow the instructions to complete the setup
 
 The API-based options below stay in **PowerShell** and use the `setx` command, which saves a setting permanently. After running `setx`, **close and reopen PowerShell** so the change takes effect, then start `claude`.
@@ -126,7 +130,7 @@ If you have an Anthropic API key instead of a Claude subscription:
    claude
    ```
 
-### Option C. Use OpenRouter API (starts for free!)
+### Option C. Use OpenRouter API (pay as you go)
 
 OpenRouter is a unified API gateway that provides access to 500+ large language models through a single API key. This can be an economical way to use Claude Code, as you pay only for usage and can choose from models at various price points.
 
@@ -155,8 +159,10 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
    ```
 - Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
-- Free tier gives you 50 API requests per day
-- See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details
+- Free (`:free`) models are limited to 50 requests per day, which a single Claude Code task can use up quickly
+- The models shown above are paid models — check their prices at [openrouter.ai/models](https://openrouter.ai/models) before using them
+- Claude Code is only guaranteed to work with Anthropic models through OpenRouter
+- See the [official OpenRouter guide](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) for more details
 
 ### Option D. Use Anthropic API via Azure Foundry
 
@@ -204,7 +210,7 @@ You're all set! Type `claude` in PowerShell and ask a general question such as "
 
 ## Step 7: (Optional) Install WSL2 for the Full Linux Experience
 
-The native setup above is almost all that most people need. But Claude Code performs better under Linux. WSL2 runs a real Linux system inside Windows and adds **Bash tool sandboxing** (a security feature) plus better compatibility with Linux toolchains. It takes longer to set up and requires a restart, so only do this if you want the full Linux experience.
+The native setup above is almost all that most people need. But some features work only under Linux. WSL2 runs a real Linux system inside Windows and adds **Bash tool sandboxing** (a security feature) plus better compatibility with Linux toolchains. It takes longer to set up and requires a restart, so only do this if you want the full Linux experience.
 
 ### a) Check virtualization and install WSL
 
@@ -213,7 +219,7 @@ The native setup above is almost all that most people need. But Claude Code perf
 - **Right-click** on the taskbar (the bar at the bottom of your screen)
 - Click on **Task Manager** from the menu
 - If Task Manager opens in a small window, click **More details** at the bottom
-- Click on the **Performance** tab at the top
+- Click **Performance** (a tab at the top on Windows 10, or an icon in the left menu on Windows 11)
 - Click on **CPU** in the left sidebar
 - Find the line that says **Virtualization:** and check if it says **Enabled**
 
@@ -256,11 +262,15 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
    ```
    curl -fsSL https://claude.ai/install.sh | bash
    ```
-- Verify by typing:
+- Close the Ubuntu window, open **Ubuntu** again from the Start menu, then verify by typing:
    ```
    claude --version
    ```
-- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 3, Option A). If you use an API key instead, set it with `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL uses Linux commands, not `setx`)
+- If you still see `command not found`, run this line, then try `claude --version` again:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+   ```
+- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 4, Option A). If you use an API key instead, set it with `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL uses Linux commands, not `setx`)
 - To open a Windows project folder from WSL:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
@@ -290,7 +300,11 @@ This built-in diagnostic tool checks your installation and reports common issues
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Make sure your PATH includes the Claude installation directory
+- If you see `'claude' is not recognized`, run these two lines in PowerShell, then close and reopen PowerShell:
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 This error means virtualization is not enabled:

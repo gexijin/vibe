@@ -27,7 +27,7 @@ Here are the four tools you'll install, with links to their official documentati
 
 ## What You'll Need
 
-- Ubuntu 22.04 LTS or newer (or compatible Debian-based distro)
+- Ubuntu 24.04 LTS or 26.04 LTS (64-bit Intel/AMD)
 - sudo access on your computer
 - Personal Gmail account (for Google Antigravity)
 - Internet connection
@@ -45,7 +45,7 @@ Git tracks your file changes and creates restore points you can return to.
 
 - Type the following command and press Enter:
   ```
-  sudo apt-get update && sudo apt-get install git
+  sudo apt-get update && sudo apt-get install -y git
   ```
 - Type your password when prompted and press Enter
 - Wait for the installation to complete (10-30 seconds)
@@ -75,7 +75,7 @@ Docker runs your code in isolated containers that work the same on every machine
 
 - In your terminal, run:
   ```
-  sudo apt-get install ca-certificates curl gnupg
+  sudo apt-get install -y ca-certificates curl gnupg
   ```
 
 **Add Docker's official GPG key and repository:**
@@ -110,23 +110,13 @@ Docker Desktop itself isn't in the apt repository you just added — it's distri
 - Launch **Docker Desktop** from the app menu
 - Wait for the Docker engine to start (you'll see a green status indicator in the bottom left)
 
-**Add your user to the docker group:**
-
-This lets you run Docker commands without `sudo`.
-
-- Run:
-  ```
-  sudo usermod -aG docker $USER
-  ```
-- Log out and log back in for the change to take effect
-
 **Verify Docker is working:**
 
 - Open a new terminal and type:
   ```
-  docker --version
+  docker run hello-world
   ```
-- You should see something like `Docker version 27.x.x`
+- You should see a message that starts with **Hello from Docker!**
 
 ## Step 3: Install VS Code
 
@@ -167,21 +157,16 @@ No WSL extension needed — you're already running native Linux.
 Google Antigravity is an AI-powered development platform with built-in agentic coding features.
 
 - Go to [antigravity.google/download](https://antigravity.google/download)
-- Select the **Linux** version
-- Download the `.deb` package
-- Open a terminal and navigate to your Downloads folder:
+- Select **Linux**, then under **Antigravity IDE (Standalone)**, click the **x64** download (the file is called `Antigravity IDE.tar.gz`)
+- Open a terminal and extract it in your Downloads folder:
   ```
   cd ~/Downloads
+  tar -xzf "Antigravity IDE.tar.gz"
   ```
-- Install the package:
+- Start Antigravity IDE (use this same command whenever you want to open it):
   ```
-  sudo dpkg -i google-antigravity_*.deb
+  ~/Downloads/"Antigravity IDE"/antigravity-ide
   ```
-- If you see dependency errors, fix them with:
-  ```
-  sudo apt-get install -f
-  ```
-- Launch **Google Antigravity** from the app menu
 
 **Initial setup:**
 
@@ -210,9 +195,9 @@ Run through this checklist to confirm everything is working.
 - Make sure Docker Desktop is running (green indicator in the bottom left)
 - In the terminal, type:
   ```
-  docker --version
+  docker run hello-world
   ```
-- You should see a version number
+- You should see a message that starts with **Hello from Docker!**
 
 **VS Code:**
 - In the terminal, type:
@@ -222,7 +207,7 @@ Run through this checklist to confirm everything is working.
 - You should see a version number
 
 **Google Antigravity:**
-- Open Google Antigravity from the app menu
+- Start Antigravity IDE with the command from Step 4
 - Confirm you see the editor interface and are signed in
 
 All four tools working? You're ready for the workshop!
@@ -237,13 +222,9 @@ All four tools working? You're ready for the workshop!
 - Docker Desktop needs the AppIndicator/KStatusNotifierItem GNOME extension to show its tray icon
 - On Ubuntu this is included by default; on other GNOME distros, install it from your distro's extension manager or [extensions.gnome.org](https://extensions.gnome.org/)
 
-### Docker permission denied
-- Make sure you added your user to the docker group:
-  ```
-  sudo usermod -aG docker $USER
-  ```
-- Log out and log back in for the change to take effect
-- Try running `docker --version` again in a new terminal
+### Docker commands don't work
+- Make sure Docker Desktop is running (green indicator in the bottom left)
+- Open a new terminal and type `docker run hello-world` — you should see **Hello from Docker!**
 
 ### VS Code not launching or showing errors
 - Install any missing dependencies:

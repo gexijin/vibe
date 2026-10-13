@@ -28,7 +28,7 @@ Here are the four tools you'll install, with links to their official documentati
 
 ## What You'll Need
 
-- Windows 10 (version 2004 or higher) or Windows 11
+- Windows 10 version 22H2 or Windows 11 version 23H2 or newer (check in **Settings > System > About**)
 - Administrator access on your computer
 - Personal Gmail account (for Google Antigravity)
 - Internet connection
@@ -49,7 +49,7 @@ Git tracks your file changes and creates restore points you can return to.
 - If you see a version number like `git version 2.45.0`, skip to "Configure your identity" below
 - If you see an error, install Git for Windows:
   - Go to [git-scm.com/download/win](https://git-scm.com/download/win)
-  - The download should start automatically — open the installer when it finishes
+  - Click **Click here to download** at the top of the page, then open the installer when it finishes
   - Click **Next** through the installer, accepting the default options
   - Click **Install**, then **Finish**
   - Close and reopen PowerShell, then verify again with `git --version`
@@ -73,7 +73,7 @@ Docker runs your code in isolated containers that work the same on every machine
 - Visit the [Docker Desktop download page](https://www.docker.com/products/docker-desktop/)
 - Click **Download for Windows**
 - Run the downloaded installer
-- Follow the installation wizard and accept the defaults (Docker Desktop manages its own Linux backend automatically)
+- Follow the installation wizard and accept the defaults (keep **Use WSL 2 instead of Hyper-V** checked. If Docker Desktop says WSL needs installing or updating, open PowerShell as administrator, run `wsl --update`, then restart your computer.)
 - After installation, launch **Docker Desktop**
 - Wait for the Docker engine to start (you'll see a green status indicator in the bottom left)
 
@@ -81,9 +81,9 @@ Docker runs your code in isolated containers that work the same on every machine
 
 - In PowerShell, type:
   ```
-  docker --version
+  docker run hello-world
   ```
-- You should see something like `Docker version 27.x.x`
+- You should see a message that starts with **Hello from Docker!**
 
 **Note:** If Docker Desktop shows a virtualization error during setup, restart your computer, enter your BIOS settings (usually by pressing **F2**, **F10**, **Del**, or **Esc** during startup), and enable **Virtualization Technology**, **Intel VT-x**, **AMD-V**, or **SVM Mode**.
 
@@ -100,9 +100,9 @@ Docker runs your code in isolated containers that work the same on every machine
 Google Antigravity is an AI-powered development platform with built-in agentic coding features.
 
 - Go to [antigravity.google/download](https://antigravity.google/download)
-- Select the **Windows** version
+- Select **Windows**, then under **Antigravity IDE (Standalone)**, click the **x64** download (the file is called `Antigravity IDE.exe`)
 - Run the downloaded installer and complete the installation
-- Launch **Google Antigravity**
+- Launch **Antigravity IDE**
 
 **Initial setup:**
 
@@ -131,16 +131,16 @@ Run through this checklist to confirm everything is working.
 - Make sure Docker Desktop is running (green indicator in the bottom left)
 - In PowerShell, type:
   ```
-  docker --version
+  docker run hello-world
   ```
-- You should see a version number
+- You should see a message that starts with **Hello from Docker!**
 
 **VS Code:**
 - Open VS Code
 - Confirm the editor launches and you can see the Explorer panel on the left
 
 **Google Antigravity:**
-- Open Google Antigravity
+- Open **Antigravity IDE**
 - Confirm you see the editor interface and are signed in
 
 All four tools working? You're ready for the workshop!
