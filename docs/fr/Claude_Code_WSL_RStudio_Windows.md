@@ -176,7 +176,7 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 - **RStudio n'affiche pas les modifications de fichier** - Cliquez sur **File > Reopen with Encoding > UTF-8** pour recharger manuellement le fichier.
 - **"claude: command not found"** - Assurez-vous d'avoir terminé le guide d'installation. Essayez d'ouvrir une nouvelle fenêtre PowerShell.
 - **Les graphiques n'apparaissent pas** - Assurez-vous que ggplot2 est installé. Exécutez `install.packages("ggplot2")` dans la Console RStudio si nécessaire.
-- **Erreur : "cannot change working directory"** - Votre chemin Windows contient des espaces. À l'Étape 6, encadrez le chemin avec des guillemets : `cd "~\Documents\Votre Nom\test_claude"`
+- **Erreur : "cannot change working directory"** - Votre chemin Windows contient des espaces. À l'Étape 6, encadrez le chemin avec des guillemets, par exemple : `cd "C:\Users\Votre Nom\Documents\test_claude"`
 - **Claude Code est lent à la première requête** - Attendez 30 à 60 secondes pour que Claude s'initialise. Les requêtes suivantes seront plus rapides.
 - **Vous utilisez WSL ?** - Si vous avez suivi le parcours optionnel WSL/Ubuntu, ouvrez l'application **Ubuntu** au lieu de PowerShell aux Étapes 5 à 16, et naviguez vers votre projet avec `cd /mnt/c/Users/VotreNomUtilisateur/Documents/test_claude`
 
