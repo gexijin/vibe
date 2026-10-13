@@ -24,9 +24,9 @@ Before you install anything, it helps to know what you're actually installing. *
 
 - Go to [claude.ai](https://claude.ai)
 - Click **Sign up**
-- Type your email address and click **Continue**
-- Check your email for a verification code and type it in
-- Follow the on-screen prompts to finish creating your account
+- Type your email address and click **Continue with email** (or click **Continue with Google**)
+- Open the email from Anthropic and click the link inside it (if you open it on a different device, such as your phone, it shows a code — type that code on your computer)
+- Follow the on-screen prompts to finish creating your account (you may be asked for a phone number to receive a text-message code)
 
 ## Step 2: Send Your First Message
 
@@ -50,19 +50,19 @@ Claude remembers what you've already talked about in the same conversation.
 
 ## Step 4: Find the Model Picker
 
-- Look near the top of the chat window for a button showing a model name (for example, "Claude")
-- Click it to see a short list of available models
+- Look at the bottom right of the message box, next to the send arrow, for a button showing a model name (for example, "Sonnet")
+- Click it to see a short list of available models (click **More models** to see the rest)
 - You don't need to change anything here — just know this menu exists, since some later tutorials will ask you to pick a specific model
 
 ## Next Steps
 
-- **Install Claude Code**: Bring this same AI assistant into your coding projects with [Install Claude Code on Windows](Install_CLAUDE_Code_Win) or [Install Claude Code on macOS](Install_Claude_Code_MacOS)
+- **Install Claude Code**: Bring this same AI assistant into your coding projects with [Install Claude Code on Windows](Install_CLAUDE_Code_Win) or [Install Claude Code on macOS](Install_Claude_Code_MacOS). Claude Code needs a paid Claude plan (such as Pro or Max) or an Anthropic Console account — the free plan doesn't include it.
 - **Keep chatting**: Ask Claude to help plan something you're already working on — an email, a recipe, or a study guide
 - **Try a harder prompt**: Ask Claude to compare two options for a decision you're facing, and see how it explains its reasoning
 
 ## Troubleshooting
 
-- **Didn't receive a verification email** - Check your spam or junk folder; wait a minute and click **Resend code** if needed
+- **Didn't receive the sign-up email** - Check your spam or junk folder; wait a minute, then go back to [claude.ai](https://claude.ai) and enter your email again
 - **Page won't load or looks broken** - Refresh the page, or try a different browser like Chrome or Firefox
 - **Not sure what to type** - Start simple: ask Claude to explain a topic you're curious about, or ask for help with something you're already doing today
 
