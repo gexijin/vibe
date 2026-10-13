@@ -19,7 +19,7 @@ This is different from **Claude Code**, the tool used in the rest of these tutor
 
 - A Windows 10 (or newer) or Mac (macOS 11 Big Sur or newer) computer
 - Internet connection
-- A free or paid Claude.ai account (you can create one during setup if you don't have one)
+- A free or paid Claude.ai account (see [What Is Anthropic and Claude?](./What_Is_Anthropic_And_Claude.md) to create one)
 - 5 minutes
 
 ## Step 1: Download the Installer
