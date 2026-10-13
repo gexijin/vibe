@@ -14,7 +14,7 @@ In this tutorial, you'll create a Claude Skill that searches peer-reviewed medic
 - **Claude Skill** - A specialized tool that extends Claude Code's capabilities with custom instructions, code, and documentation stored in `.claude/skills/`
 - **PubMed** - Free database of 35+ million biomedical research papers maintained by the US National Library of Medicine
 - **Biopython** - Python library that provides tools to query PubMed's database programmatically
-- **Auto-edit mode** - Feature activated with Shift+Tab that lets Claude make multiple file changes without asking permission each time
+- **Accept edits mode** - A mode (switched with Shift+Tab) that lets Claude make multiple file changes without asking permission each time
 
 ## What You'll Need
 
@@ -55,11 +55,14 @@ claude
 
 Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
-## Step 3: Enable Auto-Edit Mode
+## Step 3: Let Claude Edit Files Without Asking
 
-Press **Shift+Tab** to enable auto-edit mode. You'll see a confirmation message.
+Look at the status line just below the Claude Code prompt:
 
-Auto-edit mode allows Claude to create and modify multiple files without asking for permission each time. This is essential for building skills which involve creating many files.
+- If it says **auto mode on** or **accept edits on**, you're all set
+- If it says **manual mode on**, press **Shift+Tab** until it says **accept edits on**
+
+This allows Claude to create and modify multiple files without asking for permission each time. This is essential for building skills which involve creating many files.
 
 ## Step 4: Create the PubMed Search Script
 
@@ -184,13 +187,13 @@ The **document skill** helps you read and write files in PDF, Word, PowerPoint, 
 ## Troubleshooting
 
 - **Biopython not installed:** Claude will automatically install Biopython when it creates the script. If you see import errors when testing, ask Claude to install Biopython manually with `pip install biopython`
-- **Script not found:** Check that auto-edit mode was enabled (Shift+Tab) - Claude needs permission to create files
+- **Script not found:** Check that the status line shows **accept edits on** or **auto mode on** (press Shift+Tab to switch) - Claude needs permission to create files
 - **Skill doesn't activate:** The skill should work immediately after creation - try asking the question again or check that SKILL.md has the correct `name: medical-research` in the header
 
 ## Workflow Overview
 
 - **Claude Skills** are more powerful than slash commands - they combine code, documentation, and custom instructions
-- **Auto-edit mode** (Shift+Tab) streamlines creation by avoiding repeated permission prompts
+- **Accept edits mode** (Shift+Tab) streamlines creation by avoiding repeated permission prompts
 - **Self-contained packaging** - Scripts live inside skill folders, making them portable and shareable
 - **Automatic activation** - Skills trigger based on question patterns (research questions activate medical-research)
 - **Plain-language interface** - Ask natural questions without knowing the technical details

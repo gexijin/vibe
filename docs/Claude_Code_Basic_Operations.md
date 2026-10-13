@@ -140,7 +140,7 @@ When Claude wants to edit a file or run a command, it shows a small menu with op
 
 A few keyboard shortcuts also make working with Claude Code faster:
 
-- **Shift+Tab** - Cycle through modes (Manual, Accept Edits, Plan) - Plan mode is useful for reviewing a complex task before Claude makes any changes
+- **Shift+Tab** - Cycle through modes (Auto, Manual, Accept Edits, Plan); the current mode is shown just below the prompt. Plan mode is useful for reviewing a complex task before Claude makes any changes
 - **Ctrl+C** - Cancel the current operation or Claude's response
 - **Esc** - Stop Claude mid-response, or close a menu
 - **`\` then Enter** (or **Ctrl+J**) - Add a new line in your message without sending it
