@@ -85,7 +85,7 @@ You'll see `(.venv)` in your terminal prompt when the environment is active.
 
 - Open a new terminal in VS Code by clicking **View > Terminal**
 - The terminal should show `(.venv)` indicating your virtual environment is active
-- Install packages by typing these commands:
+- Install packages by typing this command:
 
 ```bash
 pip install pandas matplotlib streamlit
