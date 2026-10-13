@@ -92,12 +92,12 @@ summary(iris)
 
 Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
-## Étape 8 : Demander à Claude un Graphique de Dispersion
+## Étape 8 : Demander à Claude un Nuage de Points
 
 Si Claude Code est lent ou ne répond pas, attendez simplement qu'il s'initialise. Ensuite, tapez cette demande :
 
 ```
-Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 - Claude Code va lire votre fichier `iris.R` et ajouter le code de visualisation
 - Lorsqu'on vous le demande, donnez à Claude la permission de modifier le fichier iris.R en sélectionnant l'option appropriée
@@ -110,10 +110,10 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 - Vous verrez peut-être une invite indiquant que le fichier a changé - cliquez sur **Yes** pour recharger
 - Si aucune invite n'apparaît, cliquez sur **File > Reopen with Encoding > UTF-8**
 - Sélectionnez tout le code et cliquez sur **Run**
-- Un graphique de dispersion apparaît dans le panneau **Plots** (en bas à droite)
+- Un nuage de points apparaît dans le panneau **Plots** (en bas à droite)
 - Si vous obtenez une erreur concernant ggplot2, installez-le en tapant `install.packages("ggplot2")` dans le panneau Console
 
-## Étape 10 : Affiner le Graphique de Dispersion
+## Étape 10 : Affiner le Nuage de Points
 
 - Revenez au Terminal (appuyez sur **Command (⌘) + Tab** ou cliquez sur la fenêtre Terminal)
 - Tapez cette demande :

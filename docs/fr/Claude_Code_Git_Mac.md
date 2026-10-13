@@ -237,7 +237,7 @@ Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abando
   Explique ce code. Juste les grandes lignes.
   ```
 
-## Le Workflow Complet
+## Le Flux de Travail Complet
 
 - Demandez à Claude d'apporter des modifications
 - Testez
@@ -246,7 +246,7 @@ Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abando
 - Impossible à corriger → Abandonnez les modifications et réessayez
 - Répétez
 
-Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte—ne commitez que le code fonctionnel !
+Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte—ne committez que le code fonctionnel !
 
 ## Prochaines Étapes
 
@@ -257,7 +257,7 @@ Essayez d'ajouter plus de fonctionnalités à votre minuterie :
 - **Meilleur style :** « Améliore le design visuel avec une palette de couleurs moderne et des polices plus grandes »
 - **Barre de progression :** « Ajoute une barre de progression visuelle montrant le temps restant »
 
-N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque succès, abandonnez les échecs.
+N'oubliez pas : Testez après chaque fonctionnalité, committez après chaque succès, abandonnez les échecs.
 
 ## Dépannage
 
@@ -268,7 +268,7 @@ N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque suc
 
 ## Ce Que Vous Pouvez Demander à Claude
 
-- « Quels fichiers ai-je modifiés ? » - Voir les modifications non commitées
+- « Quels fichiers ai-je modifiés ? » - Voir les modifications non committées
 - « Montre-moi les différences » - Voir exactement quel code a changé
 - « Explique ce que fait le code de la minuterie » - Comprendre l'implémentation
 - « Crée une branche appelée essai » - Essayer des modifications risquées en toute sécurité
@@ -276,7 +276,7 @@ N'oubliez pas : Testez après chaque fonctionnalité, commitez après chaque suc
 
 Claude gère toutes les opérations Git en langage naturel—aucune commande à mémoriser !
 
-## Aperçu du Workflow
+## Aperçu du Flux de Travail
 
 - **Configuration :** Installez Git une fois, configurez l'identité une fois
 - **Développement :** Claude écrit le code, vous testez dans le navigateur

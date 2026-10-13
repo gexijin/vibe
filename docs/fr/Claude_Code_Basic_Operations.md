@@ -13,7 +13,7 @@ Apprendre à coder avec l'assistance de l'IA peut sembler intimidant au début. 
 - **Espace de travail (workspace)** - Le dossier depuis lequel vous démarrez Claude Code ; Claude lit et modifie les fichiers qu'il contient pendant cette session
 - **REPL (Read-Eval-Print Loop)** - Une session interactive où vous tapez des commandes, Claude répond, et la conversation continue jusqu'à ce que vous quittiez
 - **Contexte** - La quantité de code et d'historique de conversation dont Claude se souvient ; comme une mémoire de travail qui se remplit au fil du temps
-- **Slash Commands** - Raccourcis intégrés commençant par `/` qui effectuent des actions spécifiques comme effacer l'historique ou afficher l'aide
+- **Commandes slash** - Raccourcis intégrés commençant par `/` qui effectuent des actions spécifiques comme effacer l'historique ou afficher l'aide
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -90,7 +90,7 @@ Claude vérifiera l'historique Git (si disponible) et vous informera des commits
 
 Vous pouvez demander à Claude n'importe quoi sur votre code en langage naturel. Il lit les fichiers selon les besoins pour répondre à vos questions.
 
-## Étape 5 : Slash Commands Essentielles
+## Étape 5 : Commandes Slash Essentielles
 
 Tapez `/` pour voir toutes les commandes disponibles. Voici les plus importantes :
 
@@ -100,7 +100,7 @@ Tapez `/` pour voir toutes les commandes disponibles. Voici les plus importantes
 /
 ```
 
-Cela affiche un menu de toutes les slash commands. Utilisez les touches fléchées pour parcourir, appuyez sur Entrée pour sélectionner, ou appuyez sur Échap pour annuler.
+Cela affiche un menu de toutes les commandes slash. Utilisez les touches fléchées pour parcourir, appuyez sur Entrée pour sélectionner, ou appuyez sur Échap pour annuler.
 
 **Obtenir de l'aide :**
 

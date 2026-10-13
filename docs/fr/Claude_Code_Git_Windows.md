@@ -124,7 +124,7 @@ Claude crée `timer.html` (prend 10-30 secondes) avec le code CSS et JavaScript.
 
 **Si quelque chose ne fonctionne pas :** Dans Claude Code, décrivez l'erreur : « Je vois cette erreur : [décrivez ce qui s'est passé]. Peux-tu la corriger ? »
 
-## Étape 10 : Demandez à Claude de Commit
+## Étape 10 : Demandez à Claude de Faire un Commit
 
 - Dans Claude Code, tapez :
   ```
@@ -146,7 +146,7 @@ Vous avez créé votre premier point de sauvegarde ! Vous pouvez toujours reveni
   ```
 - Actualisez votre onglet de navigateur
 - Testez : Cliquez sur le bouton **5 min**
-- Si cela fonctionne, commitez les modifications :
+- Si cela fonctionne, committez les modifications :
   ```
   Enregistre ces modifications.
   ```
@@ -163,7 +163,7 @@ Nous avons créé un 2e point de sauvegarde. Cette version a les deux boutons fo
 - Actualisez votre onglet de navigateur
 - Testez : Cliquez sur le bouton **15 min**
 
-**Pour ce tutoriel :** Faites semblant que le bouton 15 minutes ne fonctionne pas correctement. Ne commitez pas encore—nous allons pratiquer l'abandon des mauvaises modifications.
+**Pour ce tutoriel :** Faites comme si le bouton 15 minutes ne fonctionnait pas correctement. Ne committez pas encore—nous allons pratiquer l'abandon des mauvaises modifications.
 
 ## Étape 13 : Abandonnez les Modifications
 
@@ -185,7 +185,7 @@ Claude supprime les nouvelles modifications que nous n'aimons pas. Le minuteur f
   Ajoute une notification sonore quand le minuteur atteint zéro.
   ```
 - Actualisez le navigateur et testez une fois que Claude a terminé (réglez le minuteur sur 1 minute)
-- Si cela fonctionne, commitez les modifications :
+- Si cela fonctionne, committez les modifications :
   ```
   Enregistre ces modifications.
   ```
@@ -197,7 +197,7 @@ Claude supprime les nouvelles modifications que nous n'aimons pas. Le minuteur f
   Le son doit continuer jusqu'à ce que je clique sur un bouton pour l'arrêter (snooze).
   ```
 - Actualisez le navigateur et testez une fois que Claude a terminé (réglez le minuteur sur 1 minute)
-- Si cela fonctionne, commitez les modifications :
+- Si cela fonctionne, committez les modifications :
   ```
   Enregistre ces modifications.
   ```
@@ -230,12 +230,12 @@ Remarquez que la tentative du bouton 15 minutes n'est pas là—vous l'avez aban
 
 - Demandez à Claude d'apporter des modifications
 - Testez
-- Si cela fonctionne → Demandez à Claude de commiter
+- Si cela fonctionne → Demandez à Claude de committer
 - Si cela échoue → Demandez à Claude de le corriger.
 - Impossible de corriger → Abandonnez les modifications et réessayez
 - Répétez
 
-Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte—ne commitez que du code fonctionnel !
+Vous pouvez toujours revenir à n'importe quel commit. Abandonnez sans crainte—ne committez que du code fonctionnel !
 
 ## Prochaines Étapes
 
@@ -246,7 +246,7 @@ Essayez d'ajouter d'autres fonctionnalités à votre minuteur :
 - **Meilleur style :** « Améliore le design visuel avec une palette de couleurs moderne et des polices plus grandes »
 - **Barre de progression :** « Ajoute une barre de progression visuelle montrant le temps restant »
 
-Rappelez-vous : Testez après chaque fonctionnalité, commitez après chaque succès, abandonnez les échecs.
+Rappelez-vous : Testez après chaque fonctionnalité, committez après chaque succès, abandonnez les échecs.
 
 ## Dépannage
 
@@ -257,7 +257,7 @@ Rappelez-vous : Testez après chaque fonctionnalité, commitez après chaque suc
 
 ## Ce Que Vous Pouvez Demander à Claude
 
-- « Quels fichiers ai-je modifiés ? » - Voir les modifications non commitées
+- « Quels fichiers ai-je modifiés ? » - Voir les modifications non committées
 - « Montre-moi les différences » - Voir exactement quel code a changé
 - « Explique ce que fait le code du minuteur » - Comprendre l'implémentation
 - « Crée une branche appelée essai » - Essayer des modifications risquées en toute sécurité

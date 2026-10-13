@@ -188,7 +188,7 @@ Commencez par effacer la mémoire de Claude pour repartir de zéro :
 Ensuite, exécutez la commande `/research-paper` :
 
 ```
-/research-paper AI in schools
+/research-paper L'IA à l'école
 ```
 
 Deux différences clés :

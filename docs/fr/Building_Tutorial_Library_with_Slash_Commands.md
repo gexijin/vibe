@@ -6,7 +6,7 @@ lang: "fr"
 
 Mi-décembre 2025, j'ai passé 2 heures sur Zoom à essayer d'aider mon assistante de recherche à installer Claude Code. J'ai compris qu'une personne comme elle avait besoin d'instructions précises et pratiques, alors je me suis lancé dans la création de tutoriels complets pour Claude Code. Mon objectif : des tutoriels pratiques et ciblés qui guident les débutants complets à travers des tâches réelles, étape par étape. Pas de théorie en masse. Pas de manuels de référence exhaustifs. Juste « faites ceci, puis cela, puis ceci » jusqu'à ce que vous ayez accompli quelque chose de concret.
 
-Ce qui a commencé comme quelques fichiers de documentation a rapidement évolué en une plateforme d'apprentissage multilingue avec plus de 100 documents de tutoriels. Le secret ? Je ne les ai pas tous écrits manuellement. Au lieu de cela, j'ai créé un ensemble de commandes slash personnalisées (essentiellement des invites réutilisables) qui ont transformé Claude Code en une usine de documentation automatisée — une usine qui produit systématiquement des tutoriels dans mon style pratique et progressif.
+Ce qui a commencé comme quelques fichiers de documentation a rapidement évolué en une plateforme d'apprentissage multilingue avec plus de 100 documents de tutoriels. Le secret ? Je ne les ai pas tous écrits manuellement. Au lieu de cela, j'ai créé un ensemble de commandes slash personnalisées (essentiellement des prompts réutilisables) qui ont transformé Claude Code en une usine de documentation automatisée — une usine qui produit systématiquement des tutoriels dans mon style pratique et progressif.
 
 ## Le Défi
 
@@ -18,7 +18,7 @@ J'ai créé cinq commandes slash spécialisées qui gèrent l'ensemble du cycle 
 
 ### [`/tutorial`](../assets/commands/tutorial.md) - Le Générateur de Tutoriels
 
-J'ai créé les premiers tutoriels manuellement par le biais d'invites interactives avec Claude. J'ai affiné le processus par itération, puis j'ai demandé à Claude de codifier le processus fonctionnel en une commande slash.
+J'ai créé les premiers tutoriels manuellement par le biais de prompts interactifs avec Claude. J'ai affiné le processus par itération, puis j'ai demandé à Claude de codifier le processus fonctionnel en une commande slash.
 
 C'est exactement le modèle décrit dans mon [tutoriel sur les articles de recherche](./Writing_Research_Paper_Claude_Code.md) : parcourez le flux de travail manuellement, puis à la dernière étape, demandez à Claude de l'enregistrer en tant que commande réutilisable qui capture le flux de travail éprouvé :
 
@@ -51,7 +51,7 @@ La commande présente les résultats dans un rapport structuré, puis applique l
 
 ### [`/translate-chinese`](../assets/commands/translate-chinese.md) et [`/translate-spanish`](../assets/commands/translate-spanish.md) - Le Moteur de Localisation
 
-Les traductions japonaises sont venues en premier — sans commande slash. J'ai simplement demandé à Claude Code de traduire tous les tutoriels en japonais dans une seule invite. Claude a automatiquement généré 8 sous-agents fonctionnant en parallèle, chacun gérant différents tutoriels simultanément.
+Les traductions japonaises sont venues en premier — sans commande slash. J'ai simplement demandé à Claude Code de traduire tous les tutoriels en japonais dans un seul prompt. Claude a automatiquement généré 8 sous-agents fonctionnant en parallèle, chacun gérant différents tutoriels simultanément.
 
 Pour les langues suivantes, j'ai demandé à Claude de « créer une commande slash pour traduire les tutoriels en chinois » — aucune directive spécifique. Claude a généré un flux de travail en six phases avec des règles complètes :
 
@@ -79,7 +79,7 @@ La révision de qualité est approfondie — pour le japonais, elle vérifie la 
 
 Après avoir synchronisé les traductions avec les originaux anglais, j'ai ajouté une étape finale de peaufinage : éditer chaque document traduit individuellement pour la qualité linguistique, sans comparaison avec l'anglais. Cette étape se concentre uniquement sur la lecture naturelle du texte pour les locuteurs natifs.
 
-J'ai utilisé des invites dans la langue cible. Au lieu de demander à Claude en anglais de « polir ce document japonais », j'ai utilisé ChatGPT pour écrire les invites en japonais, chinois ou espagnol. Cela semblait produire de meilleurs résultats — Claude paraissait penser plus naturellement dans cette langue lorsque les instructions étaient également dans cette langue.
+J'ai utilisé des prompts dans la langue cible. Au lieu de demander à Claude en anglais de « polir ce document japonais », j'ai utilisé ChatGPT pour écrire les prompts en japonais, chinois ou espagnol. Cela semblait produire de meilleurs résultats — Claude paraissait penser plus naturellement dans cette langue lorsque les instructions étaient également dans cette langue.
 
 Par exemple, pour peaufiner les documents chinois, j'ai utilisé :
 « 修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents. » Pour l'espagnol : « Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents. » Pour le japonais : « @docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents. »
@@ -104,7 +104,7 @@ Tous les tutoriels suivent la même structure, le même style d'écriture et les
 - **Structurez les commandes comme des flux de travail multiphases.** Dites à Claude comment réfléchir au problème, pas seulement quoi faire.
 - **Intégrez le contrôle qualité dans le processus.** Créez une commande de révision en parallèle de votre commande de génération.
 - **Rendez les commandes collaboratives, pas autonomes.** Incluez des étapes d'approbation. Claude gère les parties fastidieuses ; vous prenez les décisions stratégiques.
-- **Utilisez les sous-agents pour le traitement par lot.** Lors du traitement de nombreux documents, dites explicitement « Use subagents » dans votre invite. Appuyez d'abord sur Shift+Tab pour activer le mode d'acceptation automatique — les sous-agents ne demanderont pas de permissions, rendant le traitement parallèle fluide.
+- **Utilisez les sous-agents pour le traitement par lot.** Lors du traitement de nombreux documents, dites explicitement « Use subagents » dans votre prompt. Appuyez d'abord sur Shift+Tab pour activer le mode d'acceptation automatique — les sous-agents ne demanderont pas de permissions, rendant le traitement parallèle fluide.
 
 ## Conclusion
 
@@ -122,7 +122,7 @@ C'est le pouvoir de l'automatisation systématique.
 
 ---
 
-**P.S.** Cet article de blog a lui-même été rédigé par Claude Code à travers des invites itératives :
+**P.S.** Cet article de blog a lui-même été rédigé par Claude Code à travers des prompts successifs :
 1. « Examine mon historique de commits et écris un article de blog sur la façon dont j'ai créé ces tutoriels, en soulignant mon utilisation de commandes slash pour automatiser. »
 2. « Indique que la commande /tutorial est d'abord née de prompts interactifs manuels. »
 3. « Souligne mon style de tutoriel : pratique, ciblé, étape par étape. »

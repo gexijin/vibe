@@ -12,7 +12,7 @@ Vous souhaitez comparer des opportunités d'investissement, mais faire des reche
 
 - **Sous-Agent** - Un travailleur IA spécialisé avec son propre objectif, son prompt système et ses outils qui accomplit des tâches de manière autonome
 - **Contexte Isolé** - Un sous-agent travaille dans son propre espace de travail séparé, donc ses recherches n'encombrent pas votre conversation principale : seul le résultat final vous est renvoyé
-- **Skill** - Une capacité réutilisable (comme générer des rapports boursiers) que les sous-agents peuvent invoquer pour accomplir leurs objectifs
+- **Skill** (appelé « Compétence » dans le tutoriel précédent) - Une capacité réutilisable (comme générer des rapports boursiers) que les sous-agents peuvent invoquer pour accomplir leurs objectifs
 - **Prompt Système** - Instructions qui définissent ce que fait le sous-agent, comment il évalue les entreprises et quel format il renvoie
 - **Séparation des Responsabilités** - Les skills collectent les données ; les sous-agents utilisent ces données pour prendre des décisions
 

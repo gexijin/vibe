@@ -94,7 +94,7 @@ Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installati
 Si Claude Code est lent ou ne répond pas, attendez simplement qu'il s'initialise. Ensuite, tapez cette requête :
 
 ```
-Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 - Claude Code va lire votre fichier `iris.R` et ajouter le code de visualisation
 - Lorsqu'on vous le demande, donnez à Claude la permission de modifier le fichier iris.R en sélectionnant l'option appropriée

@@ -76,13 +76,13 @@ print(iris_df.describe())
 - Dans le terminal, exécutez : `python iris_analysis.py`
 - Vous devriez voir la structure du jeu de données et les statistiques récapitulatives dans le terminal
 
-## Étape 4 : Demander à Claude d'Ajouter un Graphique de Dispersion
+## Étape 4 : Demander à Claude d'Ajouter un Nuage de Points
 
 - Cliquez sur l'icône **Claude** dans la barre latérale gauche pour ouvrir le panneau de chat
 - Dans la zone de chat en bas, tapez :
 
 ```
-Ajoute du code à iris_analysis.py pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise seaborn.
+Ajoute du code à iris_analysis.py pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise seaborn.
 ```
 
 - Appuyez sur Entrée pour envoyer
@@ -97,7 +97,7 @@ Ajoute du code à iris_analysis.py pour créer un graphique de dispersion de la 
 ## Étape 5 : Exécuter le Code Mis à Jour
 
 - Dans le terminal, exécutez : `python iris_analysis.py`
-- Une fenêtre de graphique de dispersion apparaît
+- Une fenêtre avec le nuage de points apparaît
 - Vous devriez voir des points colorés par espèce (setosa, versicolor, virginica)
 - Fermez la fenêtre du graphique pour continuer
 

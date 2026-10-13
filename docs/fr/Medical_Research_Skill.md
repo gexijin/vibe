@@ -6,7 +6,7 @@ lang: "fr"
 
 # Créer un Claude Skill pour la Recherche Médicale
 
-Rester informé de la recherche médicale implique de parcourir des articles scientifiques denses remplis de jargon. Un Claude Skill, c'est comme avoir un assistant de recherche qui lit des centaines d'articles et les explique en langage clair - au lieu de passer des heures à chercher sur PubMed et à décoder un langage technique, vous posez une simple question et obtenez un résumé clair basé sur les dernières avancées scientifiques.
+Rester informé de la recherche médicale implique de parcourir des articles scientifiques denses remplis de jargon. Un Claude Skill (appelé « Compétence » dans le tutoriel précédent), c'est comme avoir un assistant de recherche qui lit des centaines d'articles et les explique en langage clair - au lieu de passer des heures à chercher sur PubMed et à décoder un langage technique, vous posez une simple question et obtenez un résumé clair basé sur les dernières avancées scientifiques.
 
 Dans ce tutoriel, vous allez créer un Claude Skill qui recherche la littérature médicale évaluée par les pairs. Nous créons d'abord un script Python pour interroger PubMed. La meilleure partie ? Vous pouvez demander à Claude de faire tout le travail ! Il dispose d'un Skill qui crée des Skills !
 
@@ -25,7 +25,7 @@ Dans ce tutoriel, vous allez créer un Claude Skill qui recherche la littératur
 
 ## Étape 1 : Naviguer vers le Dossier du Projet
 
-Si vous avez terminé le [tutoriel sur les slash commands](./Reuse_Prompts_via_Slash_Commands.md), le dossier `test_claude` existe déjà. Ces commandes fonctionnent dans tous les cas.
+Si vous avez terminé le [tutoriel sur les commandes slash](./Reuse_Prompts_via_Slash_Commands.md), le dossier `test_claude` existe déjà. Ces commandes fonctionnent dans tous les cas.
 
 **Windows (PowerShell) :**
 - Ouvrez **PowerShell** depuis le menu Démarrer
@@ -154,14 +154,14 @@ Dans VS Code :
 
 **Remarque :** Le skill est complètement autonome - tout le code et la documentation vivent dans un seul dossier.
 
-## Étape 10 : Installer des Skills depuis le Répertoire d'Anthropic
+## Étape 10 : Installer des Skills depuis le Dépôt d'Anthropic
 
-Anthropic maintient un répertoire de skills pré-construits que vous pouvez installer et utiliser instantanément.
+Anthropic maintient un dépôt (repository) de skills pré-construits que vous pouvez installer et utiliser instantanément.
 
-- Pour installer un skill depuis le répertoire, demandez simplement à Claude :
+- Pour installer un skill depuis le dépôt, demandez simplement à Claude :
 
   ```
-  Installe le skill document depuis le répertoire d'Anthropic
+  Installe le skill document depuis le dépôt d'Anthropic
   ```
 - Essayez ce skill :
   ```
@@ -169,11 +169,11 @@ Anthropic maintient un répertoire de skills pré-construits que vous pouvez ins
   ```
 
 
-Le **document skill** vous aide à lire et écrire des fichiers en PDF, Word, PowerPoint et Excel. Claude clonera le skill dans votre dossier `.claude/skills/`.
+Le **skill document** vous aide à lire et écrire des fichiers en PDF, Word, PowerPoint et Excel. Claude clonera le skill dans votre dossier `.claude/skills/`.
 
-**Autres skills disponibles depuis le répertoire d'Anthropic :**
+**Autres skills disponibles dans le dépôt d'Anthropic :**
 - Parcourez le catalogue complet sur [github.com/anthropics/skills](https://github.com/anthropics/skills)
-- Demandez à Claude « Quels skills sont disponibles dans le répertoire d'Anthropic ? » pour voir la liste actuelle
+- Demandez à Claude « Quels skills sont disponibles dans le dépôt d'Anthropic ? » pour voir la liste actuelle
 
 ## Prochaines Étapes
 
@@ -190,15 +190,15 @@ Le **document skill** vous aide à lire et écrire des fichiers en PDF, Word, Po
 
 ## Aperçu du Workflow
 
-- **Claude Skills** sont plus puissants que les slash commands - ils combinent code, documentation et instructions personnalisées
+- **Les Claude Skills** sont plus puissants que les commandes slash - ils combinent code, documentation et instructions personnalisées
 - **Le mode auto-edit** (Shift+Tab) simplifie la création en évitant les demandes de permission répétées
 - **Packaging autonome** - Les scripts vivent à l'intérieur des dossiers de skills, les rendant portables et partageables
 - **Activation automatique** - Les skills se déclenchent en fonction du type de question (les questions de recherche activent medical-research)
 - **Interface en langage naturel** - Posez des questions naturelles sans connaître les détails techniques
 
-## Skills vs Slash Commands
+## Skills ou commandes slash
 
-| Fonctionnalité | Skills | Slash Commands |
+| Fonctionnalité | Skills | Commandes slash |
 |---------|--------|----------------|
 | **Ce qu'il contient** | Prompts, code, données et documentation | Prompts uniquement |
 | **Activation** | Automatiquement chargé lorsque pertinent | Déclenché manuellement avec `/command` |
@@ -206,7 +206,7 @@ Le **document skill** vous aide à lire et écrire des fichiers en PDF, Word, Po
 | **Emplacement du fichier** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **Structure** | Plusieurs fichiers (SKILL.md, README.md, fichiers de code) | Un seul fichier `.md` par commande |
 
-**Point Clé :** Les Slash Commands injectent simplement des prompts depuis l'interface utilisateur. C'est utile, mais limité.
+**Point Clé :** Les commandes slash injectent simplement des prompts depuis l'interface utilisateur. C'est utile, mais limité.
 
 ---
 

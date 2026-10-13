@@ -26,7 +26,7 @@ Créer une application de minuteur simple avec Claude Code et suivre toutes les 
 - Créer un projet et une application de minuteur
 - Tester et corriger les erreurs
 - Committer et pousser les modifications
-- Supprimer les mauvaises modifications et réessayer
+- Abandonner les mauvaises modifications et réessayer
 - Laisser Claude automatiser les commits
 
 ## Ce Dont Vous Aurez Besoin
@@ -141,7 +141,7 @@ Votre code est maintenant sauvegardé dans le cloud.
 
 **Pour ce tutoriel :** Faites semblant que le son ne fonctionne pas bien. Ne committez pas encore !
 
-## Étape 9 : Supprimer les Mauvaises Modifications
+## Étape 9 : Abandonner les Mauvaises Modifications
 
   Parfois l'IA nous met sur la mauvaise voie et nous devons recommencer depuis notre dernier commit (point de sauvegarde).
 
@@ -198,14 +198,14 @@ Vous verrez :
 - Create initial timer app
 - Add improved sound notification
 
-Remarquez que la première tentative ratée pour le son n'est pas là - vous l'avez supprimée ! Seul le code fonctionnel a été inclus dans vos commits.
+Remarquez que la première tentative ratée pour le son n'est pas là - vous l'avez abandonnée ! Seul le code fonctionnel a été inclus dans vos commits.
 
 ## Défis
 - Son personnalisé : Téléchargez un .mp3 gratuit depuis [freesound.org](https://freesound.org), placez-le dans votre dossier de projet, demandez à Claude de l'utiliser
 - Minuteurs multiples : « Permets aux utilisateurs de créer et exécuter plusieurs minuteurs simultanément »
 - Barre de progression : « Ajoute une barre de progression qui montre visuellement combien de temps il reste »
 
-**Rappelez-vous :** Testez après chaque fonctionnalité, committez après chaque succès, supprimez les échecs.
+**Rappelez-vous :** Testez après chaque fonctionnalité, committez après chaque succès, abandonnez les échecs.
 
 **Consultez votre projet sur GitHub.com :** Cliquez sur **Repository** → **View on GitHub** dans GitHub Desktop pour voir votre historique complet des commits et votre code en ligne.
 
@@ -224,11 +224,11 @@ Remarquez que la première tentative ratée pour le son n'est pas là - vous l'a
 - Demandez à Claude de faire des modifications
 - Testez dans le navigateur
 - Si cela fonctionne → Examinez et committez
-- Si cela échoue → Supprimez et réessayez
+- Si cela échoue → Abandonnez et réessayez
 - Poussez vers GitHub
 - Répétez
 
-Commits manuels quand vous voulez le contrôle. Commits Claude quand vous voulez la rapidité. Supprimez sans crainte - ne committez que le code fonctionnel !
+Commits manuels quand vous voulez le contrôle. Commits Claude quand vous voulez la rapidité. Abandonnez sans crainte - ne committez que le code fonctionnel !
 
 ## Prochaines Étapes
 

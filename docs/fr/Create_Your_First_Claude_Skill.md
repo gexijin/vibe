@@ -66,7 +66,7 @@ Cela permet à Claude de créer et de modifier des fichiers sans demander la per
 
 ## Étape 4 : Demandez à Claude de Convertir la Commande Slash
 
-Tapez cette invite :
+Tapez ce prompt :
 ```
 Convertis ma commande slash stock-report en une Compétence.
 La Compétence devrait s'activer automatiquement quand je pose des questions sur des entreprises ou des actions.

@@ -63,13 +63,13 @@ summary(iris)
 - Sélectionnez le code et appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac) pour l'exécuter
 - Vous devriez voir la structure du jeu de données et les statistiques récapitulatives dans le terminal
 
-## Étape 4 : Demander à Claude d'Ajouter un Graphique de Dispersion
+## Étape 4 : Demander à Claude d'Ajouter un Nuage de Points
 
 - Cliquez sur l'icône **Claude** dans la barre latérale gauche pour ouvrir le panneau de discussion
 - Dans la zone de discussion en bas, tapez :
 
 ```
-Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris_analysis.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 
 - Appuyez sur Entrée pour envoyer
@@ -82,7 +82,7 @@ Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la l
 
 - Sélectionnez tout le code dans `iris_analysis.R`
 - Appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac)
-- Un graphique de dispersion apparaît dans une fenêtre graphique séparée
+- Un nuage de points apparaît dans une fenêtre graphique séparée
 - Vous devriez voir des points colorés par espèce (setosa, versicolor, virginica)
 
 ## Étape 6 : Demander à Claude d'Affiner le Graphique
