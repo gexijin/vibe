@@ -102,7 +102,7 @@ All tutorials follow the same structure, writing style, and formatting conventio
 - **Structure commands as multi-phase workflows.** Tell Claude how to think through the problem, not just what to do.
 - **Build quality control into the process.** Create a review command alongside your generation command.
 - **Make commands collaborative, not autonomous.** Include approval steps. Claude handles tedious parts; you make strategic decisions.
-- **Use subagents for batch processing.** When processing many documents, explicitly say "Use subagents" in your prompt. Press Shift+Tab first to enable auto-accept mode—subagents won't ask for permissions, making parallel processing seamless.
+- **Use subagents for batch processing.** When processing many documents, explicitly say "Use subagents" in your prompt. First make sure the status line shows **accept edits on** or **auto mode on** (press Shift+Tab to switch)—subagents won't ask for permissions, making parallel processing seamless.
 
 ## Conclusion
 
