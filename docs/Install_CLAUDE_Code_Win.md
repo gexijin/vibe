@@ -260,7 +260,7 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
    ```
    claude --version
    ```
-- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 3, Option A). If you use an API key instead, set it with `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL uses Linux commands, not `setx`)
+- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 4, Option A). If you use an API key instead, set it with `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL uses Linux commands, not `setx`)
 - To open a Windows project folder from WSL:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
