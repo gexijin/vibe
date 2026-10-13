@@ -6,7 +6,7 @@ lang: "ja"
 
 # Claude CodeとDockerでPythonのVibe Coding
 
-従来、Pythonコードはすべての行を自分で入力して書く必要がありました。しかし、欲しいものを自然な言葉で説明するだけでコードが生成されたらどうでしょう？Vibe Codingは、コンピュータとの対話によってプログラミングを行う新しい手法です。あなたが実現したい結果を説明すれば、Claude Codeがコードを構築し、テストし、改良します。これは魔法ではなく、あなたがビジョンを示し、AIが実装を担う新しい作業方法です。このチュートリアルでは、自然言語による指示だけで古典的なIrisデータセットを分析する方法を紹介します。
+従来、Pythonコードはすべての行を自分で入力して書く必要がありました。しかし、欲しいものを自然な言葉で説明するだけでコードが生成されたらどうでしょう？Vibe Codingは、コンピュータとの対話によってプログラミングを行う新しい手法です。あなたが実現したい結果を説明し、Claude Codeがそれを構築し、あなたがテストして改良します。これは魔法ではなく、あなたがビジョンを示し、AIが実装を担う新しい作業方法です。このチュートリアルでは、自然言語による指示だけで古典的なIrisデータセットを分析する方法を紹介します。
 
 ## 主要な概念
 
@@ -39,11 +39,12 @@ lang: "ja"
 
 ## ステップ2：Docker設定をコピー
 
-Docker環境をセットアップするために、vibeプロジェクトの`.devcontainer`フォルダが必要です。
+[Docker経由でVS CodeでPythonコーディング](./Python_Coding_Docker_Guide.md)で作成した`python-docker-demo`プロジェクトの`.devcontainer`フォルダが必要です。これをコピーすると、このプロジェクトでも同じPython環境（pandas、matplotlib、Claude Codeがインストール済み）を使えます。
 
 - エクスプローラー（Windows）またはFinder（Mac）を開く
-- vibeプロジェクトフォルダに移動（例：`Documents/vibe`）
+- `python-docker-demo`フォルダに移動
 - `.devcontainer`フォルダを見つける
+  - Macでは、Finderは名前がドット（.）で始まるフォルダを表示しません。**Cmd+Shift+.**（ピリオド）を押すと表示されます
 - フォルダ全体をコピー（`Dockerfile`と`devcontainer.json`が含まれています）
 - 新しい`iris-analysis`フォルダに移動
 - `.devcontainer`フォルダを貼り付け
@@ -56,11 +57,11 @@ Docker環境をセットアップするために、vibeプロジェクトの`.de
 ## ステップ3：コンテナでプロジェクトを開く
 
 - VS Codeを開く
-- **ファイル > フォルダーを開く**をクリック
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリック
 - `iris-analysis`フォルダに移動
-- **フォルダーの選択**をクリック
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリック
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
-- **Reopen in Container**をクリック
+- **Reopen in Container**（コンテナーで再度開く）をクリック
 - 通知が表示されない場合は、左下隅の緑色のアイコンをクリックして**Reopen in Container**を選択
 - VS CodeがDockerコンテナをビルドします（初回は3〜5分かかります）
 - ビルドステップを示す進行通知を見る
@@ -68,7 +69,7 @@ Docker環境をセットアップするために、vibeプロジェクトの`.de
 
 ## ステップ4：Claude Codeを起動
 
-- VS Codeで**ターミナル > 新しいターミナル**をクリック
+- VS Codeで**Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリック
 - これでDockerコンテナ内にいます
 - このコマンドを入力してClaude Codeを起動：
 
@@ -180,7 +181,7 @@ Enterを押すと、Claudeが箱ひげ図のコードを追加します。
 - 全ての行を理解する必要はありませんが、構造の感覚をつかむ
 - すべてのPNGファイルが作成されたことを確認：`petal_length_histogram.png`、`petal_scatter.png`、`species_boxplot.png`
 - GitHub Desktopを開く
-- すべての新しいファイルがリストされている（PythonスクリプトとPNG画像）
+- すべての新しいファイル（PythonスクリプトとPNG画像）が一覧に表示されます
 - 左下の**Summary**フィールドに入力：
 
 ```
@@ -235,7 +236,7 @@ Vibe Codingは反復によって真価を発揮します。説明するだけで
 - **インポートエラー** - Dockerコンテナにはpandas、matplotlib、scikit-learnがプリインストールされています。エラーが出る場合は、Claudeにpipでのインストールを依頼してください。
 - **Claudeが間違える** - 問題ありません。エラーメッセージをコピーしてClaudeに貼り付け、「このエラーを修正して」と依頼してください。Vibe Codingには反復とデバッグが含まれます。
 - **GitHubにプッシュできない** - GitHub Desktopにログインし、リポジトリを公開済みであることを確認してください（ステップ1）。インターネット接続も確認してください。
-- **コンテナが起動しない** - Docker Desktopが実行中であることを確認してください（緑色のステータス表示）。VS Codeの緑色のアイコンをクリックして**Rebuild Container**を試してください。
+- **コンテナが起動しない** - Docker Desktopが実行中であることを確認してください（緑色のステータス表示）。VS Codeの緑色のアイコンをクリックして**Rebuild Container**（コンテナーのリビルド）を試してください。
 
 ## ワークフロー概要
 

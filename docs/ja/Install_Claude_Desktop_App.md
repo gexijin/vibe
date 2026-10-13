@@ -6,15 +6,15 @@ lang: "ja"
 
 # Claude Desktopアプリをインストール
 
-Claude Desktopは、WindowsとMacで使える単独のチャットアプリです。アプリを開いてメッセージを入力すれば、Claudeが答えてくれます。Terminalもコマンド入力も必要ありません。日常的な質問、調べもの、文章作成などでClaudeとチャットするのにぴったりです。
+Claude Desktopは、WindowsとMacで使える単独のチャットアプリです。アプリを開いてメッセージを入力すれば、Claudeが答えてくれます。ターミナルもコマンド入力も必要ありません。日常的な質問、調べもの、文章作成などでClaudeとチャットするのにぴったりです。
 
-これは、このサイトの他のチュートリアルで使っている**Claude Code**とは別のものです。Claude CodeはTerminal上で動作し、プロジェクトフォルダ内のコードの作成や編集を手伝います。Claude Desktopは汎用のチャットウィンドウです。両方インストールすることもでき、有料プランならClaude Desktopの中からClaude Codeを開くこともできます。
+これは、このサイトの他のチュートリアルで使っている**Claude Code**とは別のものです。Claude Codeはターミナル上で動作し、プロジェクトフォルダ内のコードの作成や編集を手伝います。Claude Desktopは汎用のチャットウィンドウです。両方インストールすることもでき、有料プランならClaude Desktopの中からClaude Codeを開くこともできます。
 
 ## 主要な概念
 
 - **Claude Desktop**：WindowsとMac用のネイティブアプリです。メッセージアプリのように、Claudeと直接チャットできます。
 - **Claude.aiアカウント**：サインインに使うアカウントで、[claude.ai](https://claude.ai)で使うものと同じです。無料プランでも有料プランでも使えます。
-- **Claude Code**：このサイトの他のチュートリアルで扱っている、Terminalベースのコーディングアシスタントです。インストールは別に必要です。[WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win.md)または[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)を参照してください。
+- **Claude Code**：このサイトの他のチュートリアルで扱っている、ターミナルベースのコーディングアシスタントです。インストールは別に必要です。[WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win.md)または[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)を参照してください。
 
 ## 用意するもの
 
@@ -26,21 +26,21 @@ Claude Desktopは、WindowsとMacで使える単独のチャットアプリで�
 ## ステップ1：インストーラーをダウンロードする
 
 - [claude.ai/download](https://claude.ai/download)にアクセス
-- **Windows：** **Download for Windows**をクリックします。（ARMベースのWindows PCを使っている場合は（あまり一般的ではありません）、ページにある別のarm64用ダウンロードリンクを使ってください。）
+- **Windows：** **Download for Windows**をクリックします。（あまり一般的ではありませんが、ARMベースのWindows PCを使っている場合は、ページにある別のarm64用ダウンロードリンクを使ってください。）
 - **Mac：** **Download for macOS**をクリックします。このダウンロードはIntelとApple Siliconの両方のMacで動作するので、自分のMacのチップの種類を知らなくても大丈夫です。
 
 ## ステップ2：アプリをインストールする
 
 ### Windows
 
-- ダウンロードしたファイルを開きます（自動で開かない場合は**ダウンロード**フォルダを確認してください）
+- ダウンロードしたファイルを開きます（自動で開かない場合は**ダウンロード**（Downloads）フォルダを確認してください）
 - インストーラーの画面の指示に従います
 - 完了したら、スタートメニューから**Claude**を探します
 
 ### Mac
 
 - ダウンロードしたファイルを開きます
-- 表示されたら、**Claude**アイコンを**アプリケーション**フォルダにドラッグします
+- 表示されたら、**Claude**アイコンを**アプリケーション**（Applications）フォルダにドラッグします
 - **アプリケーション**フォルダまたはLaunchpadから**Claude**を開きます
 
 ## ステップ3：サインインする
@@ -61,7 +61,7 @@ Claude Desktopは、WindowsとMacで使える単独のチャットアプリで�
 Claude Desktopはチャットだけのものではありません。プランによって次の機能が使えます：
 
 - **チャット** — 無料プランを含むすべてのプランで利用できます
-- **Claude Code** — Pro、Max、Team、EnterpriseプランではClaude Desktopの中からClaude Codeを起動でき、別のTerminalを開く必要がありません
+- **Claude Code** — Pro、Max、Team、EnterpriseプランではClaude Desktopの中からClaude Codeを起動でき、別のターミナルを開く必要がありません
 - **Claude Cowork** — 有料プランでは、ローカルファイルにアクセスしながら、Claudeに複数ステップのタスクを任せられます
 - **Desktop Extensions** — インストール可能な拡張機能のディレクトリを通じて、Claudeをローカルのアプリやファイルにつなぐ上級者向け機能です。始めるのに必要はありません
 
@@ -69,7 +69,7 @@ Claude Desktopはチャットだけのものではありません。プランに
 
 ## 次のステップ
 
-- [WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win.md)または[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md) — このサイトの他のチュートリアルで使う、Terminalベースのコーディングアシスタントをセットアップします
+- [WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win.md)または[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md) — このサイトの他のチュートリアルで使う、ターミナルベースのコーディングアシスタントをセットアップします
 - [Claude Code: 基本操作](./Claude_Code_Basic_Operations.md) — Claude Codeをインストールしたら、基本を学びましょう
 - [AnthropicとClaudeとは？](./What_Is_Anthropic_And_Claude.md) — Claudeをまったく初めて使う方向けの簡単な入門です
 

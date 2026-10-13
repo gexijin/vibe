@@ -37,7 +37,7 @@ lang: "ja"
   ```
 
 **Mac：**
-- **ターミナル**を開く（アプリケーション > ユーティリティにあります）
+- **ターミナル**（Terminal）を開く（**アプリケーション**（Applications）> **ユーティリティ**（Utilities）にあります）
 - 次のコマンドを入力：
   ```bash
   cd ~/Documents
@@ -72,7 +72,7 @@ pubmed_search.pyというPythonスクリプトを作成してください。要�
 - 最大10件の最近の論文を取得する
 - PMID、タイトル、著者、ジャーナル、年、要約のプレビュー、URLを返す
 ```
-Claudeがスクリプトを作成します。PubMedとのやり取りに必要なBiopythonパッケージとentrezモジュールを自動的にインストールします。出力を確認して、スクリプトの構造を理解してください。
+Claudeがスクリプトを作成します。必要なBiopythonパッケージ（PubMedとやり取りするためのentrezモジュールを含む）をインストールします。出力を確認して、スクリプトの構造を理解してください。
 
 ## ステップ5：スクリプトをテスト
 
@@ -131,19 +131,19 @@ Claudeが自動的に以下を実行します：
 ワクチンは自閉症を引き起こしますか？
 ```
 
-応答には科学的コンセンサス、誤解の起源、実世界のデータが含まれます。
+応答には科学的コンセンサス、誤解の起源、現実社会への影響が含まれます。
 
 ## ステップ9：スキルファイルを探索（オプション）
 
 VS Codeを開いてスキル構造を確認：
 
 **Windows：**
-- **ファイルエクスプローラ**を開き、`C:\Users\YOUR_USERNAME\Documents\test_claude`に移動
-- フォルダを右クリックして**Codeで開く**を選択
+- **エクスプローラー**（File Explorer）を開き、`C:\Users\YOUR_USERNAME\Documents\test_claude`に移動
+- フォルダを右クリックして**Codeで開く**（Open with Code）を選択
 
 **Mac：**
 - **Finder**を開き、`Documents/test_claude`に移動
-- フォルダを右クリックして**Visual Studio Codeで開く**を選択
+- フォルダを右クリックして**Visual Studio Codeで開く**（Open with Visual Studio Code）を選択
 - またはターミナルから```code .```と入力
 
 VS Codeで：

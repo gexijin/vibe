@@ -37,8 +37,8 @@ WindowsのRStudioでRコードを実行しながら、Claude CodeでAI支援を�
 - **New Project**を選択
 - **Directory name**に：`test_claude`と入力
 - "Create project as subdirectory of:"の横にある**Browse**をクリック
-- **Documents**フォルダに移動
-- **Select Folder**をクリック
+- **ドキュメント**（Documents）フォルダに移動
+- **フォルダーの選択**（Select Folder）をクリック
 - **Create Project**をクリック
 - RStudioがプロジェクトを作成し、そのプロジェクトに切り替わります
 
@@ -96,7 +96,7 @@ summary(iris)
 Claude Codeの起動が遅い場合は、初期化が完了するまで待ちましょう。その後、以下のリクエストを入力します：
 
 ```
-iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けして作成するコードを追加してください。ggplot2を使用してください。
+iris.Rに、がく片の長さと幅の散布図を種ごとに色分けして作成するコードを追加してください。ggplot2を使用してください。
 ```
 - Claude Codeが`iris.R`ファイルを読み込み、可視化コードを追加します
 - 確認を求められたら、適切な選択肢を選んでiris.Rファイルの編集を許可します
@@ -117,7 +117,7 @@ iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けし�
 - PowerShellに切り替えます
 - 以下のリクエストを入力：
   ```
-  タイトルを削除してください。種別ごとにマーカーの形を変更してください。クラシックテーマに変更してください。
+  タイトルを削除してください。種ごとにマーカーの形を変更してください。クラシックテーマに変更してください。
   ```
 
 ## ステップ11：改良されたプロットを表示
@@ -170,7 +170,7 @@ iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けし�
 - `iris_report.Rmd`を選択して**Open**をクリック
 - スクリプトペインの上部にある**Knit**ボタン（毛糸玉アイコン）をクリック
 - RStudioがHTMLレポートを生成します
-- 完全な解析とナラティブテキストを含むレポートが新しいウィンドウで開きます
+- 完全な解析と説明文を含むレポートが新しいウィンドウで開きます
 - HTMLファイルはプロジェクトフォルダに保存されます
 
 ---
@@ -182,7 +182,7 @@ iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けし�
 | RStudioが更新を検知しない | **File > Reopen with Encoding > UTF-8** で手動リロード |
 | `claude: command not found` | インストールガイドを再確認。PowerShellのウィンドウを新しく開き直す |
 | プロットが表示されない | RStudio Consoleで `install.packages("ggplot2")` を実行 |
-| `cannot change working directory` | Windowsのパスにスペースが含まれています。ステップ6でパスを引用符で囲む：`cd "~\Documents\Your Name\test_claude"` |
+| `cannot change working directory` | Windowsのパスにスペースが含まれています。ステップ6でパスを引用符で囲む（例：`cd "C:\Users\Your Name\Documents\test_claude"`） |
 | 初回リクエストが遅い | 30〜60秒待てば初期化され、その後は高速化します |
 | WSLを使っている場合 | オプションのWSL/Ubuntuの方法を設定した場合は、ステップ5〜16でPowerShellの代わりに **Ubuntu** アプリを開き、`cd /mnt/c/Users/YourUsername/Documents/test_claude` でプロジェクトへ移動 |
 
@@ -208,4 +208,4 @@ iris.Rに、がく片の長さと幅の散布図を種別ごとに色分けし�
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.
+[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月11日に作成。

@@ -6,7 +6,7 @@ lang: "ja"
 
 # Claude CodeとDockerでRのVibe Coding
 
-Vibe Codingは、コンピュータとの対話によってプログラミングを行う新しい手法です。あなたが実現したい結果を説明すれば、Claude Codeがコードを構築し、テストし、改良します。これは魔法ではなく、あなたがビジョンを示し、AIが実装を担う新しい作業方法です。このチュートリアルでは、自然言語による指示だけで実際のNBA統計ダッシュボードを構築する方法を紹介します。
+Vibe Codingは、コンピュータとの対話によってプログラミングを行う新しい手法です。あなたが実現したい結果を説明すると、Claude Codeがそれを構築し、あなたがテストして改良します。これは魔法ではなく、あなたがビジョンを示し、AIが実装を担う新しい作業方法です。このチュートリアルでは、自然言語による指示だけで実際のNBA統計ダッシュボードを構築する方法を紹介します。
 
 ## 主要な概念
 
@@ -43,7 +43,7 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
   - **ARM64ユーザー向けの注意（Apple Silicon Mac）：** 代わりに https://github.com/gexijin/vibe/tree/ARM64 を使用
 - **Code**をクリックしてZipをダウンロード
 - エクスプローラー（Windows）またはFinder（Mac）を開く
-- Downloadフォルダでファイルを解凍
+- **ダウンロード**（Downloads）フォルダでファイルを解凍
 - vibeプロジェクトフォルダに移動（例：`Documents/vibe`）
 - `.devcontainer`フォルダを見つける
 - フォルダ全体をコピー（`Dockerfile`と`devcontainer.json`が含まれています）
@@ -59,9 +59,9 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
 
 - WindowsまたはMacから**Docker Desktop**アプリを起動。バックグラウンドで実行させる
 - VS Codeを開く
-- **ファイル > フォルダーを開く**をクリック
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリック
 - `nba-dashboard`フォルダに移動
-- **フォルダーの選択**（Windows）または**開く**（Mac）をクリック
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリック
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
 - **Reopen in Container**をクリック
 - 通知が表示されない場合は、左下隅の緑色のアイコンをクリックして**Reopen in Container**を選択
@@ -71,7 +71,7 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
 
 ## ステップ4：Claude Codeを起動
 
-- VS Codeで**ターミナル > 新しいターミナル**をクリック
+- VS Codeで**Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリック
 - これでDockerコンテナ内にいます
 - このコマンドを入力してClaude Codeを起動：
 
@@ -245,7 +245,7 @@ Vibe Codingは反復によって真価を発揮します。説明するだけで
 ## 次のステップ
 
 - **自分の領域に適用する** - 研究、ビジネス、趣味のデータにVibe Codingを使用
-- **他のパッケージを試す** - フットボール用の`nflfastR`やサッカー用の`worldfootballR`をClaudeに依頼
+- **他のパッケージを試す** - アメリカンフットボール用の`nflfastR`やサッカー用の`worldfootballR`をClaudeに依頼
 - **質問して学ぶ** - Claudeがコードを生成したら、「この関数は何をするか説明して」と聞いてRを学ぶ
 - **ダッシュボードを共有する** - [shinyapps.io](https://www.shinyapps.io/)にデプロイする方法をClaudeに聞く
 - **Vibe Codingについて詳しく学ぶ** - [IBMのガイド](https://www.ibm.com/think/topics/vibe-coding)でこの手法について深く理解する
@@ -269,7 +269,7 @@ Vibe Codingは反復によって真価を発揮します。説明するだけで
 - **hoopRパッケージ** - シンプルなAPIでNBAデータにアクセスできるデータソース
 - **Shinyフレームワーク** - Rで対話型Webアプリケーションを作成するフレームワーク
 
-魔法は単一のツールにあるのではなく、Vibe Codingによって実現したいことを説明し、素早く反復できる点にあります。空のプロジェクトから動作するスポーツダッシュボードまで、手動で1行もコードを書かずに30分で完成させました。
+魔法は単一のツールにあるのではなく、Vibe Codingによって実現したいことを説明し、素早く反復できる点にあります。空のプロジェクトから動作するスポーツダッシュボードまで、手動で1行もコードを書かずに30分以内で完成させました。
 
 ## 日常のワークフロー
 

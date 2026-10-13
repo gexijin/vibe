@@ -8,7 +8,7 @@ lang: "ja"
 
 同じ詳細なプロンプトを何度も入力するのは面倒ではありませんか？カスタムスラッシュコマンドを使えば、複雑な指示を再利用可能なショートカットとして保存できます。よく使うタスクのキーボードショートカットを作成するように、スラッシュコマンドは長いプロンプトを`/stock-report Apple`のような簡単なコマンドに変え、包括的なレポートを即座に生成します。
 
-さらに素晴らしいのは、Claudeを使って詳細なプロンプトを書き、スキルを作成できることです。Claudeは自分自身へのプロンプト作成がとても得意なのです。
+さらに素晴らしいのは、Claudeを使って詳細なプロンプトを書き、スラッシュコマンドを作成できることです。Claudeは自分自身へのプロンプト作成がとても得意なのです。
 
 ## 主要な概念
 
@@ -18,7 +18,7 @@ lang: "ja"
 
 ## 必要なもの
 
-- [WindowsでVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacでVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
+- [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
 - 調査するトピック（例として株式レポートを使用します）
 - VS Codeなどのテキストエディタがインストールされていること
 - 15〜20分
@@ -35,7 +35,7 @@ lang: "ja"
   ```
 
 **Mac：**
-- **ターミナル**を開く（アプリケーション > ユーティリティにあります）
+- **ターミナル**（Terminal）を開く（**アプリケーション**（Applications）> **ユーティリティ**（Utilities）にあります）
 - 次のコマンドを入力：
   ```bash
   cd ~/Documents
@@ -83,7 +83,7 @@ Claudeが詳細なプロンプトを作成し、`.claude/commands/`フォルダ�
 
 VS Codeをインストールしている場合（推奨）：
 - VS Codeを起動
-- **ファイル**から**フォルダを開く**を選択し、プロジェクトフォルダ`Documents/test_claude`を選択
+- **File**から**Open Folder**（フォルダーを開く）を選択し、プロジェクトフォルダ`Documents/test_claude`を選択
 - ファイルエクスプローラから`.claude/commands`に移動し、`stock-report.md`ファイルをクリックして開く
 
 プロンプトを確認し、必要に応じて指示を変更してください。
@@ -161,7 +161,7 @@ Claudeがコマンドファイルを更新します。エディタで確認で�
   /stock-report AAPL
   ```
 
-Claudeが`Apple_2025-12-13.html`のような名前のファイルを作成します。WindowsまたはMacのファイルエクスプローラからこのファイルをクリックして、デフォルトのブラウザで開きます。
+Claudeが`Apple_2025-12-13.html`のような名前のファイルを作成します。エクスプローラー（Windows）またはFinder（Mac）でこのファイルをダブルクリックして、デフォルトのブラウザで開きます。
 
 ## ステップ11：スラッシュコマンドを再利用（オプション）
 

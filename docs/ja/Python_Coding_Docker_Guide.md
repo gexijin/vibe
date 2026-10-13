@@ -23,7 +23,7 @@ Pythonコードを共有したのに、「私のマシンでは動くのに...�
 ## ステップ1：Docker Desktopをインストール
 
 - [Docker Desktopダウンロードページ](https://www.docker.com/products/docker-desktop/)にアクセス
-- **Download for Windows**をクリック（またはシステムに基づいてMac/Linux）
+- **Download for Windows**をクリック（Mac/Linuxの場合はお使いのシステム用のボタン）
 - インストーラーを実行し、インストールウィザードに従う
 - プロンプトが表示されたら、WSL 2を有効にする（Windowsユーザー）またはデフォルト設定を受け入れる
 - インストール後、Docker Desktopを起動
@@ -32,25 +32,27 @@ Pythonコードを共有したのに、「私のマシンでは動くのに...�
 ## ステップ2：Dev Containers拡張機能をインストール
 
 - VS Codeを開く
-- 左サイドバーの**拡張機能**アイコンをクリック（または**表示 > 拡張機能**をクリック）
+- 左サイドバーの**Extensions**（拡張機能）アイコンをクリック（または**View > Extensions**（表示 > 拡張機能）をクリック）
 - 検索ボックスに`dev containers`と入力
 - Microsoftの**Dev Containers**を見つける
-- **インストール**をクリック
+- **Install**（インストール）をクリック
 
 ## ステップ3：Pythonプロジェクトフォルダを作成
 
 - コンピュータに`python-docker-demo`という新しいフォルダを作成
-- `python-docker-demo`の中に`.devcontainer`というサブフォルダを作成
-- `python-docker-demo`の中に`python`というサブフォルダを作成
+- VS Codeで**File > Open Folder**（ファイル > フォルダーを開く）をクリック
+- 作成した`python-docker-demo`フォルダに移動
+- **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリック
+- エクスプローラーサイドバーで**PYTHON-DOCKER-DEMO**の見出しにマウスを合わせ、**New Folder**（新しいフォルダー）アイコンをクリックして、フォルダに`.devcontainer`と名前を付ける
+- エクスプローラーサイドバーの`.devcontainer`の下の何もないところをクリックして、どの項目も選択されていない状態にしてから、もう一度**New Folder**アイコンをクリックして、フォルダに`python`と名前を付ける
 - 構造は次のようになります：`python-docker-demo/.devcontainer/` と `python-docker-demo/python/`
+
+これらのフォルダをVS Codeで作成するのは、MacのFinderではドット（`.`）で始まる名前のフォルダを作れないためです。
 
 ## ステップ4：Dockerfileを作成
 
-- VS Codeで**ファイル > フォルダーを開く**をクリック
-- 作成した`python-docker-demo`フォルダに移動
-- **フォルダーの選択**をクリック
 - エクスプローラーサイドバーで`.devcontainer`フォルダを右クリック
-- **新しいファイル**をクリック
+- **New File**（新しいファイル）をクリック
 - `Dockerfile`と名前を付ける
 - 以下の内容を貼り付け：
 
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. データサイエンスとWebアプリ用のPythonパッケージをインストール
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. NodeSourceからNode.js LTSをインストール
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -79,7 +81,7 @@ RUN npm install -g @anthropic-ai/claude-code
 EXPOSE 8501
 ```
 
-- **ファイル > 保存**をクリック
+- **File > Save**（ファイル > 保存）をクリック
 
 ## ステップ5：Dev Container設定を作成
 
@@ -105,7 +107,7 @@ EXPOSE 8501
 }
 ```
 
-- **ファイル > 保存**をクリック
+- **File > Save**（ファイル > 保存）をクリック
 
 ## ステップ6：Pythonデータ分析スクリプトを作成
 
@@ -138,10 +140,10 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
-- **ファイル > 保存**をクリック
+- **File > Save**（ファイル > 保存）をクリック
 
 ## ステップ7：Streamlit Webアプリを作成
 
@@ -168,19 +170,19 @@ data = np.concatenate([
 # ヒストグラムを作成
 fig, ax = plt.subplots()
 ax.hist(data, bins=bins, edgecolor='black')
-ax.set_xlabel('噴出時間 (分)')
-ax.set_ylabel('頻度')
-ax.set_title(f'{bins}ビンのヒストグラム')
+ax.set_xlabel('Eruption Duration (minutes)')
+ax.set_ylabel('Frequency')
+ax.set_title(f'Histogram with {bins} bins')
 
 st.pyplot(fig)
 ```
 
-- **ファイル > 保存**をクリック
+- **File > Save**（ファイル > 保存）をクリック
 
 ## ステップ8：コンテナ内で再度開く
 
 - VS Code左下隅の緑色のアイコンをクリック
-- メニューから**Reopen in Container**を選択
+- メニューから**Reopen in Container**（コンテナーで再度開く）を選択
 - VS Codeがコンテナをビルドします（初回は5〜10分かかります）
 - ビルドステップを示す進行通知が表示されます
 - 完了すると、緑色のアイコンに**Dev Container: Python in Docker**と表示されます
@@ -189,7 +191,7 @@ st.pyplot(fig)
 
 これでLinuxコンテナ内でコーディングしています。これが何を意味するのか探ってみましょう。
 
-- **ターミナル > 新しいターミナル**をクリックしてコンテナ内のターミナルを開く
+- **Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリックしてコンテナ内のターミナルを開く
 - 現在の場所を確認します：
 
 ```bash
@@ -201,10 +203,10 @@ pwd
 - ファイルを一覧表示：
 
 ```bash
-ls
+ls -a
 ```
 
-作成したフォルダが表示されます：`.devcontainer/`、`python/` など。
+作成したフォルダが表示されます：`.devcontainer/`、`python/` など（`-a`を付けると、名前がドットで始まるフォルダも表示されます）。
 
 - 一つ上のディレクトリに移動してみます：
 
@@ -230,10 +232,10 @@ cd python-docker-demo
 - 最初の行を選択：`import pandas as pd`
 - `Shift+Enter`を押して対話型Pythonターミナルで実行
 - 下部にPythonターミナルが開きます
-- `Shift+Enter`で各行またはブロックを1つずつ実行し続ける
+- `Shift+Enter`で各行またはブロックを1つずつ実行していきます
 - `print(df.head())`を実行すると、ターミナルに最初の5行が表示されます
 - `print(df.describe())`を実行すると、統計的な要約が表示されます
-- ヒストグラムコードを実行すると、可視化を表示するプロットウィンドウが開きます
+- ヒストグラムコードを実行すると、グラフがプロジェクトフォルダに`iris_histogram.png`として保存されます（コンテナには画面がないため、グラフをウィンドウで開くことはできません） - エクスプローラーサイドバーでこのファイルをクリックすると表示できます
 
 ## ステップ11：Streamlitアプリを実行
 
@@ -241,7 +243,7 @@ cd python-docker-demo
 
 - VS Codeエクスプローラーで`python/app.py`に移動
 - クリックしてファイルを開く
-- 新しいターミナルを開きます（**ターミナル > 新しいターミナル**）
+- 新しいターミナルを開きます（**Terminal > New Terminal**（ターミナル > 新しいターミナル））
 - アプリを実行します：
 
 ```bash
@@ -250,7 +252,7 @@ streamlit run app.py
 ```
 
 - アプリが起動し、URL: `http://localhost:8501`が表示されます
-- 通知が表示されます：**Open in Browser**
+- 通知が表示されます：**Open in Browser**（ブラウザーで開く）
 - **Open in Browser**をクリック
 - StreamlitアプリがWebブラウザで開きます
 - スライダーを動かしてヒストグラムのビン数を変更 - チャートがリアルタイムで更新されます
@@ -259,7 +261,7 @@ streamlit run app.py
 
 アプリを変更して開発がどのように機能するか見てみましょう。
 
-- アプリを実行したまま
+- アプリは実行したままにしておきます
 - VS Codeで`python/app.py`を編集
 - 5行目を見つけます：`st.title("オールドフェイスフル間欠泉データ")`
 - 以下に変更：
@@ -268,10 +270,10 @@ streamlit run app.py
 st.title("私の初めてのPython Dockerアプリ")
 ```
 
-- **ファイル > 保存**をクリック
+- **File > Save**（ファイル > 保存）をクリック
 - ブラウザに戻る
 - 右上隅の**Always rerun**をクリック
-- タイトルがカスタムテキストとして表示されます
+- タイトルが変更したテキストに変わります
 
 ## ステップ13：Dockerfileを理解する（オプション）
 
@@ -304,22 +306,22 @@ st.title("私の初めてのPython Dockerアプリ")
 - VS Codeエクスプローラーで`.devcontainer/Dockerfile`に移動
 - クリックしてファイルを開く
 - 10行目を見つけます：`RUN pip install --no-cache-dir ...`
-- リストに`scikit-learn`を追加します：
+- リストに`plotly`を追加します：
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
-- **ファイル > 保存**をクリック
+- **File > Save**（ファイル > 保存）をクリック
 - 左下隅の緑色のアイコンをクリック
-- メニューから**Rebuild Container**を選択
+- メニューから**Rebuild Container**（コンテナーのリビルド）を選択
 - VS Codeが新しいパッケージでコンテナを再ビルドします（2〜5分かかります）
 - 確認するには、Pythonターミナルを開いて入力します：
 
 ```python
-import sklearn
-print(sklearn.__version__)
+import plotly
+print(plotly.__version__)
 ```
 
 エラーなくバージョンが表示されれば、パッケージは永続的にインストールされています。
@@ -327,14 +329,14 @@ print(sklearn.__version__)
 ## 次のステップ
 
 - **新しいPythonスクリプトを作成** - `python/`フォルダに新しい`.py`ファイルを作成し、組み込みデータセットを使用するか、独自のCSVファイルを読み込んでデータ分析コードを書く
-- **Pythonパッケージをインストール** - Dockerfile（9行目）を編集してコンテナを再ビルドして、必要なパッケージを追加
+- **Pythonパッケージをインストール** - Dockerfile（10行目）を編集してコンテナを再ビルドして、必要なパッケージを追加
 - **データサイエンスを探索** - pandasでデータ操作、matplotlibやseabornで可視化を試す
 - **Webアプリを構築** - StreamlitやFlaskで対話型ダッシュボードを作成
 
 ## トラブルシューティング
 
 - **Docker Desktopが実行されていない** - Docker Desktopを開き、コンテナを再度開く前に緑色のステータスインジケーターを待つ
-- **コンテナビルドが失敗** - インターネット接続を確認。最初のビルドはイメージとパッケージをダウンロードします。**Rebuild Container**をクリックして再試行
+- **コンテナビルドが失敗** - インターネット接続を確認。最初のビルドはイメージとパッケージをダウンロードします。**Rebuild Container**（コンテナーのリビルド）をクリックして再試行
 - **ポート8501がすでに使用中** - そのポートを使用している他のアプリを停止するか、Dockerfileと`devcontainer.json`でポートを変更
 
 ## ワークフロー概要
@@ -353,7 +355,7 @@ print(sklearn.__version__)
 
 1. **Docker Desktopを起動** - アプリを開いて緑色のステータスインジケーターを待つ（Dockerが実行されている必要があります）
 2. **VS Codeを開く** - VS Codeを起動してプロジェクトフォルダを開く
-3. **コンテナで再度開く** - まだコンテナ内でない場合、緑色のアイコン（左下）をクリックして**Reopen in Container**を選択
+3. **コンテナで再度開く** - まだコンテナ内でない場合、緑色のアイコン（左下）をクリックして**Reopen in Container**（コンテナーで再度開く）を選択
 4. **コードを書いて実行** - `.py`ファイルを編集し、`Shift+Enter`で行ごとに実行、または`streamlit run app.py`でアプリを実行
 5. **作業を保存** - コードファイル（`.py`、`.ipynb`）はコンピュータに保存され、セッション間で永続
 6. **コミットしてプッシュ** - GitHub Desktopを使用して変更をコミットし、リポジトリにプッシュ

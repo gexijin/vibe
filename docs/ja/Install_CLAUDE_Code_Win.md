@@ -26,8 +26,8 @@ Git for Windowsは **推奨ですがオプション** で、Claude Codeがコマ
 
 - [git-scm.com/download/win](https://git-scm.com/download/win) にアクセスします
 - ダウンロードが自動的に始まります。完了したらインストーラーを開きます
-- デフォルトのまま **次へ（Next）** を進めます
-- **インストール（Install）**、続いて **完了（Finish）** をクリックします
+- デフォルトのまま **Next**（次へ） を進めます
+- **Install**（インストール）、続いて **Finish**（完了） をクリックします
 
 これで完了です。Claude Codeは起動時にGit Bashを自動的に検出します。
 
@@ -56,7 +56,7 @@ Claude Codeのサイドバーは、VS Codeの中にあるチャットウィン�
 
 1. VS Codeを開きます
 2. ウィンドウの一番左側を見ます
-3. Claude Codeのパネルがまだ表示されていない場合は、**Extensions**アイコンをクリックします
+3. Claude Codeのパネルがまだ表示されていない場合は、**Extensions**（拡張機能）アイコンをクリックします
 4. 拡張機能マーケットプレイスでClaude Codeを検索します
 5. まだインストールされていない場合は、**Install**をクリックします
 6. インストール後、左側のサイドバーにClaude Codeのアイコンがあるか確認します
@@ -153,7 +153,7 @@ OpenRouterは、単一のAPIキーで500以上の大規模言語モデルにア�
    ```
 - 利用可能なモデルは[openrouter.ai/models](https://openrouter.ai/models)で確認できます
 - 無料枠は1日50件のAPIリクエストが可能です
-- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/guides/claude-code-integration)を参照してください
+- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)を参照してください
 
 ### オプションD. Azure Foundry経由でAnthropic APIを使用
 
@@ -259,9 +259,9 @@ claude
 
 ## 次のステップ
 
-- **VS Codeをセットアップ：** [VS Code Getting Started](VS_Code_Getting_Started)に従い、[Claude Code in VS Code (Windows)](Claude_Code_in_VS_Code_Win)でClaude Codeに接続します
-- **Gitの基本を学ぶ：** [Claude Code Git on Windows](Claude_Code_Git_Windows)でプロジェクトにバージョン管理を追加します
-- **プロジェクトを試す：** [Writing a Research Paper with Claude Code](Writing_Research_Paper_Claude_Code)でClaude Codeの実際の動作を確認します
+- **VS Codeをセットアップ：** [VS Codeを始めよう](VS_Code_Getting_Started)に従い、[WindowsでClaude Code用にVS Codeをセットアップ](Claude_Code_in_VS_Code_Win)でClaude Codeに接続します
+- **Gitの基本を学ぶ：** [Windows版Claude Codeとバージョン管理](Claude_Code_Git_Windows)でプロジェクトにバージョン管理を追加します
+- **プロジェクトを試す：** [Claude Codeで研究論文を書く](Writing_Research_Paper_Claude_Code)でClaude Codeの実際の動作を確認します
 
 ## トラブルシューティング
 
@@ -282,7 +282,7 @@ claude doctor
    ```
 - PATHにClaudeのインストールディレクトリが含まれているか確認します
 
-### 「Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS」
+### 「Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS」というエラーが表示される
 このエラーは仮想化が有効でないことを意味します：
 - タスクマネージャーで仮想化が有効か確認します（上記のオプションのWSLセクション参照）
 - 無効の場合は、コンピューターのBIOSで有効にします

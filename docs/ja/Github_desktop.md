@@ -34,21 +34,21 @@ lang: "ja"
 1. [desktop.github.com](https://desktop.github.com) を開き、**Download** をクリック
 2. ダウンロードしたファイルを開いてインストール
    - **Windows**：インストーラーをダブルクリックすると自動でセットアップ＆起動
-   - **Mac**：ダウンロードした`.zip`ファイルを開き、**GitHub Desktop**をApplicationsフォルダへドラッグして起動
+   - **Mac**：ダウンロードした`.zip`ファイルを開き、**GitHub Desktop**を**アプリケーション**（Applications）フォルダへドラッグし、アプリケーションフォルダから起動
 
 ## ステップ3：GitHub Desktopにサインイン
 
-1. アプリを開き **Sign in to GitHub.com**
-2. ブラウザが自動で開くので **Authorize desktop**
-3. アプリに戻り **Finish** でセットアップ完了
+1. アプリを開き **Sign in to GitHub.com** をクリックします
+2. ブラウザが自動で開くので **Authorize desktop** をクリックします
+3. アプリに戻り **Finish** をクリックしてセットアップを完了します
 
 ## ステップ4：最初のリポジトリを作る
 
-1. GitHub Desktop のトップ画面で **Create a New Repository on your Hard Drive**
+1. GitHub Desktop のトップ画面で **Create a New Repository on your Hard Drive** をクリックします
 2. 次のように入力：
    - **Name**: `my-first-project`
    - **Description**: `Learning version control`（任意）
-   - **Local Path**: 保存先（Documentsなど）
+   - **Local Path**: 保存先（**書類**／**ドキュメント**（Documents）フォルダなど）
    - **Initialize this repository with a README** にチェック
 3. **Create Repository** をクリック
 
@@ -59,7 +59,7 @@ lang: "ja"
 
 ## ステップ6：READMEを編集
 
-1. `README.md` をメモ帳／TextEdit／VS Codeなどで開く
+1. `README.md` を**メモ帳**（Notepad）／**テキストエディット**（TextEdit）／VS Codeなどで開く
 2. 内容を以下に書き換え、保存
    ```
    # 初めてのプロジェクト
@@ -83,10 +83,10 @@ lang: "ja"
 ## ステップ8：GitHubにプッシュ
 
 1. 画面上部の **Publish repository** をクリック
-2. 必要に応じて「Keep this code private」をオン／オフ
+2. 名前はそのままにし、他の人にもコードを見せたい場合のみ「Keep this code private」のチェックを外す（任意）
 3. **Publish Repository** を押して完了
 
-これで `https://github.com/YOUR-USERNAME/my-first-project` にリポジトリが公開されました。
+これで `https://github.com/YOUR-USERNAME/my-first-project` にコードがバックアップされました。
 
 ## 次のステップ
 

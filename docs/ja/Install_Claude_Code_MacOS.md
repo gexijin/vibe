@@ -6,21 +6,21 @@ lang: "ja"
 
 # MacにClaude Codeをインストール
 
-Claude Codeは、Terminal上で動作するAIアシスタントで、コードの作成、デバッグ、理解を支援します。いつでも相談できる頼れるコーディングパートナーのようなものです。完全な初心者でも経験豊富な開発者でも、Claude Codeはワークフローを加速し、学習を助けます。
+Claude Codeは、ターミナル上で動作するAIアシスタントで、コードの作成、デバッグ、理解を支援します。いつでも相談できる頼れるコーディングパートナーのようなものです。完全な初心者でも経験豊富な開発者でも、Claude Codeはワークフローを加速し、学習を助けます。
 
 このガイドでは、初心者にもわかりやすいよう、インストール手順をステップごとに詳しく説明します。
 
 ## 概要
 
-- Terminalを開く
+- ターミナルを開く
 - Claude Codeをインストール
 - API接続を設定
 - Claude Codeを使い始める
 
 ## 主要な概念
 
-- **Terminal**：ボタンをクリックする代わりにコマンドを入力するMac内蔵のアプリです。Claude Codeとのやり取りはここで行います。
-- **Claude Code**：Terminalで実行するAIコーディングアシスタントです。質問に答えたり、コードを書いたり、既存のプロジェクトを理解するのを助けたりできます。
+- **ターミナル**（Terminal）：ボタンをクリックする代わりにコマンドを入力するMac内蔵のアプリです。Claude Codeとのやり取りはここで行います。
+- **Claude Code**：ターミナルで実行するAIコーディングアシスタントです。質問に答えたり、コードを書いたり、既存のプロジェクトを理解するのを助けたりできます。
 
 ## 用意するもの
 
@@ -30,25 +30,25 @@ Claude Codeは、Terminal上で動作するAIアシスタントで、コード�
 - Claude Pro/MaxサブスクリプションまたはAPIキー
 - 5〜10分
 
-## ステップ1：Terminalを開く
+## ステップ1：ターミナルを開く
 
 - Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
-- 上部の検索ボックスに`Terminal`と入力
-- **Terminal**（黒い四角アイコン）をクリック
-- Terminalウィンドウが開き、カーソルが点滅します
+- 上部の検索ボックスに`ターミナル`と入力
+- **ターミナル**（Terminal、黒い四角アイコン）をクリック
+- ターミナルウィンドウが開き、カーソルが点滅します
 
-**ヒント：** 次のステップでもTerminalを使うので、開いたままにしておいてください。
+**ヒント：** 次のステップでもターミナルを使うので、開いたままにしておいてください。
 
 ## ステップ2：Claude Codeをインストール
 
-Terminalで以下のコマンドをコピー＆ペーストして、**Return**キーを押してください：
+ターミナルで以下のコマンドをコピー＆ペーストして、**Return**キーを押してください：
 ```
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Claude Codeのインストールを待ちます（1〜2分）
 - 進捗メッセージが表示される場合がありますが、これは正常です
-- インストールが完了したら、Terminalを閉じて再度開き、以下を入力して確認します：
+- インストールが完了したら、ターミナルを閉じて再度開き、以下を入力して確認します：
    ```
    claude --version
    ```
@@ -67,16 +67,16 @@ brew install --cask claude-code
 
 ### オプションA. Claude ProまたはMaxサブスクリプションを使用
 
-- Terminalで以下を入力：
+- ターミナルで以下を入力：
    ```
    claude
    ```
-- Claudeがブラウザを開こうとします。自動的に開かない場合は、Terminalに表示されたURLをコピーしてブラウザに貼り付けてください。
+- Claudeがブラウザを開こうとします。自動的に開かない場合は、ターミナルに表示されたURLをコピーしてブラウザに貼り付けてください。
 - Claude.aiアカウントにログインします（自動的にログインされる場合もあります）
 - **Authorize**をクリック
 - 長いコードが表示されたら**Copy Code**をクリック
-- Terminalウィンドウに戻ります
-- Terminalに貼り付けるには：メニューバーの**編集**をクリックし、次に**ペースト**をクリック
+- ターミナルウィンドウに戻ります
+- ターミナルに貼り付けるには：メニューバーの**編集**をクリックし、次に**ペースト**をクリック
 - 成功メッセージが表示されるはずです
 - 指示に従ってセットアップを完了してください
 
@@ -85,7 +85,7 @@ brew install --cask claude-code
 Claudeサブスクリプションの代わりにAnthropic APIキーを使用する場合：
 
 - まず、[Anthropic Console](https://console.anthropic.com/)からAPIキーを取得します
-- Terminalで以下を入力：
+- ターミナルで以下を入力：
    ```
    export ANTHROPIC_API_KEY="your-api-key-here"
    ```
@@ -95,7 +95,7 @@ Claudeサブスクリプションの代わりにAnthropic APIキーを使用す�
    echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.zshrc
    ```
    `your-api-key-here`を実際のAPIキーに置き換えてください
-- 変更を有効にするため、Terminalを閉じて再度開いてください
+- 変更を有効にするため、ターミナルを閉じて再度開いてください
 
 **注意：** bashを使用している古いMacの場合は、上記のコマンドで`~/.zshrc`を`~/.bash_profile`に置き換えてください。
 
@@ -129,12 +129,12 @@ OpenRouterは、500以上の大規模言語モデルに単一のAPIキーでア�
    ```
 - 利用可能なモデルは[openrouter.ai/models](https://openrouter.ai/models)で確認できます
 - 無料プランでは1日50回のAPIリクエストが可能です
-- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/guides/claude-code-integration)を参照してください
+- 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)を参照してください
 
 
 ### オプションD. Azure Foundry経由でAnthropic APIを使用
 
-このオプションは、Azure上でClaudeモデルをホストしている組織向けです。Claudeを起動する前に、Terminalウィンドウで以下のコードを貼り付けて環境変数を定義します：
+このオプションは、Azure上でClaudeモデルをホストしている組織向けです。Claudeを起動する前に、ターミナルウィンドウで以下のコードを貼り付けて環境変数を定義します：
 ```
 # Enable Microsoft Foundry integration
 export CLAUDE_CODE_USE_FOUNDRY=1
@@ -152,7 +152,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 これで準備完了です！Claude Codeの使い方は次のとおりです：
 
-- Terminalで以下を入力：
+- ターミナルで以下を入力：
    ```
    claude
    ```
@@ -181,7 +181,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 ネイティブインストーラーでインストールしたClaude Codeは、バックグラウンドで自動的にアップデートされます。手動でアップデートを実行することもできます：
 
-- Terminalで以下を入力：
+- ターミナルで以下を入力：
    ```
    claude update
    ```
@@ -196,14 +196,14 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 - [VS CodeでClaude Code（Mac）](./Claude_Code_in_VS_Code_Mac.md) - VS Code内でClaude Codeを実行
 - [Claude Codeで研究論文を書く](./Writing_Research_Paper_Claude_Code.md) - 学術論文執筆にClaude Codeを活用
 
-## Terminalを再度開く方法
+## ターミナルを再度開く方法
 
-Terminalを閉じた後、再度開く方法は次のとおりです：
+ターミナルを閉じた後、再度開く方法は次のとおりです：
 
 - Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
-- 上部の検索ボックスに`Terminal`と入力
-- **Terminal**をクリック
-- Terminalウィンドウが開きます
+- 上部の検索ボックスに`ターミナル`と入力
+- **ターミナル**（Terminal）をクリック
+- ターミナルウィンドウが開きます
 
 ## トラブルシューティング
 
@@ -220,8 +220,8 @@ claude doctor
 - インターネット接続を確認して再度試してください
 
 ### Claude Codeコマンドが見つからない
-- Terminalを完全に終了します（メニューバーの**Terminal**をクリックし、**Terminalを終了**を選択）
-- Terminalを再度開きます
+- ターミナルを完全に終了します（メニューバーの**ターミナル**をクリックし、**ターミナルを終了**を選択）
+- ターミナルを再度開きます
 - `claude --version`でインストールされているか確認してください
 - インストールコマンドを再度実行してみてください：`curl -fsSL https://claude.ai/install.sh | bash`
 
@@ -236,10 +236,10 @@ claude doctor
 フォルダへのパスを見つけるには：
 - Finderを開きます
 - プロジェクトフォルダに移動します
-- フォルダをTerminalにドラッグ＆ドロップすると、フルパスが表示されます！
+- フォルダをターミナルにドラッグ＆ドロップすると、フルパスが表示されます！
 
-### 別のTerminalアプリを使用する
-他のTerminalアプリも使用できます：
+### 別のターミナルアプリを使用する
+他のターミナルアプリも使用できます：
 - iTerm2（より多くの機能を持つ人気の代替品）
 - Warp（AI機能を備えたモダンなターミナル）
 - Hyper（クロスプラットフォームターミナル）
