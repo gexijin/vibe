@@ -68,7 +68,7 @@ Write a short article explaining why LLMs like to use Markdown format. Save it a
 After closing VS Code, here's how to get back to your project:
 
 - **Option A:** Open VS Code, click **File > Open Recent**, and select `test_claude`
-- **Option B:** Open **File Explorer**, right-click the `test_claude` folder, and select **Open with Code**
+- **Option B:** Open **File Explorer**, right-click the `test_claude` folder, and select **Open with Code** (on Windows 11, click **Show more options** first). This option only appears if **Add "Open with Code" action** was ticked when VS Code was installed; otherwise use Option A
 
 ## Next Steps
 
