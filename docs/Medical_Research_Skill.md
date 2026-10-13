@@ -71,7 +71,7 @@ Write a Python script called pubmed_search.py that:
 - Retrieves up to 10 recent papers
 - Returns PMID, title, authors, journal, year, abstract preview, and URL
 ```
-Claude creates the script. It installs the required Biopython package, which includes a entrez module for interacting with PubMed. Review the output to see the script structure.
+Claude creates the script. It installs the required Biopython package, which includes an Entrez module for interacting with PubMed. Review the output to see the script structure.
 
 ## Step 5: Test the Script
 
@@ -110,7 +110,7 @@ This takes 2-3 minutes as Claude writes comprehensive documentation.
 Ask a research question in plain language:
 
 ```
-Can I lose weight via keto diet?
+Can I lose weight on a keto diet?
 ```
 
 Claude automatically:
@@ -127,7 +127,7 @@ The response includes sections like "How It Works," "Research Findings," "Import
 Try another research topic:
 
 ```
-Does vaccine cause autism?
+Do vaccines cause autism?
 ```
 
 The response explains the scientific consensus, the origin of the myth, and real-world consequences.
@@ -205,7 +205,7 @@ The **document skill** helps you read and write files in PDF, Word, PowerPoint, 
 | **File location** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **Structure** | Multiple files (SKILL.md, README.md, code files) | Single `.md` file per command |
 
-**Key Takeaway:** Slash Commands just injects prompts from the UI. It is useful, but limited.
+**Key Takeaway:** Slash commands just inject prompts from the UI. It is useful, but limited.
 
 ---
 
