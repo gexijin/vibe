@@ -21,9 +21,9 @@ You have RStudio on Mac for running R code and Claude Code for AI-powered coding
 
 ## Step 1: Open RStudio on Mac
 
-- Click on **Launchpad** in your Dock (the grid of dots icon)
-- Type `RStudio` in the search box
-- Click on **RStudio** to open it
+- Press **Command (⌘) + Space** to open Spotlight search
+- Type `RStudio`
+- Press **Return** to open it
 - RStudio window opens with multiple panes
 
 ## Step 2: Create a New R Project

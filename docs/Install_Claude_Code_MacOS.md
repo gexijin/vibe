@@ -31,9 +31,9 @@ This guide walks you through installation step by step, with detailed instructio
 
 ## Step 1: Open Terminal
 
-- Click the **Launchpad** icon in your Dock (the icon with colorful squares)
-- Type `Terminal` in the search box at the top
-- Click on **Terminal** (a black square icon)
+- Press **Command (⌘) + Space** to open Spotlight search
+- Type `Terminal`
+- Press **Return** (or click **Terminal**, a black square icon, in the results)
 - A Terminal window will open with a blinking cursor
 
 **Tip:** Keep Terminal open for the next steps.
@@ -199,9 +199,9 @@ Claude Code installed via the native installer automatically updates itself in t
 
 After closing Terminal, here's how to open it again:
 
-- Click the **Launchpad** icon in your Dock (the icon with colorful squares)
-- Type `Terminal` in the search box at the top
-- Click on **Terminal**
+- Press **Command (⌘) + Space** to open Spotlight search
+- Type `Terminal`
+- Press **Return**
 - A Terminal window will open
 
 ## Troubleshooting

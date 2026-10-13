@@ -40,7 +40,7 @@ This is different from **Claude Code**, the tool used in the rest of these tutor
 
 - Open the downloaded file
 - Drag the **Claude** icon into the **Applications** folder when prompted
-- Open **Claude** from your **Applications** folder or Launchpad
+- Open **Claude** from your **Applications** folder (or press **Command (⌘) + Space**, type `Claude`, and press **Return**)
 
 ## Step 3: Sign In
 

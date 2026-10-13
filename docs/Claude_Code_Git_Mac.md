@@ -25,7 +25,6 @@ Choose one of these methods:
 
 - **Spotlight:** Press `Command (⌘) + Space`, type `Terminal`, press Enter
 - **Finder:** Open **Applications** > **Utilities** > **Terminal**
-- **Launchpad:** Click **Launchpad** in the Dock, search for `Terminal`
 
 You'll see a command prompt ending with `$` or `%`.
 
