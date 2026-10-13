@@ -11,6 +11,7 @@ You've been manually typing `/stock-report AAPL` to generate reports. What if Cl
 
 - **Skill** - A model-invoked capability stored in `.claude/skills/` that Claude automatically activates based on context
 - **Model-invoked** - Claude decides when to use the Skill by reading its description, without you typing a command
+- **Still a slash command** - You can also run any Skill yourself by typing `/skill-name` (for example `/stock-report AAPL`). If a Skill and a slash command have the same name, the Skill is used
 - **SKILL.md** - The main file containing YAML frontmatter (metadata) and instructions for Claude
 
 ## What You'll Need
@@ -100,7 +101,11 @@ The `description` field is the key—it tells Claude exactly when to activate th
 
 ## Step 6: Test the Skill (Without Typing a Command)
 
-Instead of typing `/stock-report AAPL`, just ask a natural question:
+First, make sure Claude Code has loaded the new Skill. Type:
+```
+/reload-skills
+```
+Claude Code reports how many skills are available. Now, instead of typing `/stock-report AAPL`, just ask a natural question:
 ```
 What's happening with Apple lately?
 ```
@@ -185,7 +190,7 @@ The pattern: Define when Claude should automatically help, not just shortcuts yo
 - **Skill doesn't activate:** Check the `description` field in `SKILL.md`—it must include trigger words related to your question
 - **Skill activates too often:** Make the description more specific about when to use it
 - **Can't find the Skill folder:** Skills are in `.claude/skills/` (a hidden folder: VS Code's Explorer shows it, or in File Explorer on Windows choose **View > Show > Hidden items**; in Finder on Mac press **Cmd+Shift+.**)
-- **Changes to SKILL.md not working:** Skills load automatically when modified—no restart needed. If still not working, check YAML formatting
+- **Changes to SKILL.md not working:** Skills usually reload automatically when modified. If the `.claude/skills/` folder was created during this session, type `/reload-skills` (or restart Claude Code). If still not working, check YAML formatting
 
 ## Workflow Overview
 
