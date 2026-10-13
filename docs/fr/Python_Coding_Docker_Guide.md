@@ -40,15 +40,17 @@ Avez-vous déjà essayé de partager votre code Python avec un collègue, pour f
 ## Étape 3 : Créez un Dossier de Projet Python
 
 - Créez un nouveau dossier sur votre ordinateur nommé `python-docker-demo`
-- À l'intérieur, créez un sous-dossier nommé `.devcontainer`
-- À l'intérieur, créez un sous-dossier nommé `python`
+- Dans VS Code, cliquez sur **File > Open Folder**
+- Naviguez vers le dossier `python-docker-demo` que vous venez de créer
+- Cliquez sur **Select Folder** (Windows) ou **Open** (Mac)
+- Dans la barre latérale Explorer, survolez l'en-tête **PYTHON-DOCKER-DEMO**, cliquez sur l'icône **New Folder** et nommez le dossier `.devcontainer`
+- Cliquez sur un espace vide de la barre latérale Explorer, sous `.devcontainer`, pour que rien ne soit sélectionné, puis cliquez à nouveau sur l'icône **New Folder** et nommez le dossier `python`
 - Votre structure devrait ressembler à : `python-docker-demo/.devcontainer/` et `python-docker-demo/python/`
+
+Nous créons ces dossiers dans VS Code, car le Finder du Mac refuse les noms de dossier commençant par un point (`.`).
 
 ## Étape 4 : Créez le Dockerfile
 
-- Dans VS Code, cliquez sur **File > Open Folder**
-- Naviguez vers le dossier `python-docker-demo` que vous venez de créer
-- Cliquez sur **Select Folder**
 - Dans la barre latérale Explorer, faites un clic droit sur le dossier `.devcontainer`
 - Cliquez sur **New File**
 - Nommez-le `Dockerfile`
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -138,7 +140,7 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - Cliquez sur **File > Save**
@@ -201,10 +203,10 @@ Vous verrez `/workspaces/python-docker-demo` - c'est votre dossier de projet à 
 - Listez les fichiers :
 
 ```bash
-ls
+ls -a
 ```
 
-Vous verrez les dossiers que vous avez créés : `.devcontainer/`, `python/`, etc.
+Vous verrez les dossiers que vous avez créés : `.devcontainer/`, `python/`, etc. (`-a` affiche aussi les dossiers dont le nom commence par un point)
 
 - Essayez de remonter d'un répertoire :
 
@@ -233,7 +235,7 @@ Le conteneur a Python pré-installé avec des packages de science des données. 
 - Continuez à exécuter chaque ligne ou bloc un à la fois avec `Shift+Enter`
 - Lorsque vous exécutez `print(df.head())`, vous verrez les 5 premières lignes dans le terminal
 - Lorsque vous exécutez `print(df.describe())`, vous verrez des résumés statistiques
-- Lorsque vous exécutez le code de l'histogramme, une fenêtre de graphique s'ouvrira montrant la visualisation
+- Lorsque vous exécutez le code de l'histogramme, il enregistre le graphique sous le nom `iris_histogram.png` dans votre dossier de projet (le conteneur n'a pas d'écran, donc les graphiques ne peuvent pas s'ouvrir dans une fenêtre) - cliquez sur le fichier dans la barre latérale Explorer pour le voir
 
 ## Étape 11 : Exécutez l'Application Streamlit
 
@@ -304,11 +306,11 @@ Les packages installés via pip dans le terminal (`pip install package`) sont te
 - Dans VS Code Explorer, naviguez vers `.devcontainer/Dockerfile`
 - Cliquez pour ouvrir le fichier
 - Trouvez la ligne 10 : `RUN pip install --no-cache-dir ...`
-- Ajoutez `scikit-learn` à la liste :
+- Ajoutez `plotly` à la liste :
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - Cliquez sur **File > Save**
@@ -318,8 +320,8 @@ RUN pip install --no-cache-dir \
 - Pour vérifier, ouvrez un terminal Python et tapez :
 
 ```python
-import sklearn
-print(sklearn.__version__)
+import plotly
+print(plotly.__version__)
 ```
 
 Si cela affiche la version sans erreurs, le package est installé de manière permanente.
@@ -327,7 +329,7 @@ Si cela affiche la version sans erreurs, le package est installé de manière pe
 ## Prochaines Étapes
 
 - **Créez un nouveau script Python** - Créez un nouveau fichier `.py` dans le dossier `python/`, écrivez du code d'analyse de données en utilisant des ensembles de données intégrés ou chargez vos propres fichiers CSV
-- **Installez des packages Python** - Ajoutez les packages dont vous avez besoin en éditant le Dockerfile (ligne 9) et en reconstruisant le conteneur
+- **Installez des packages Python** - Ajoutez les packages dont vous avez besoin en éditant le Dockerfile (ligne 10) et en reconstruisant le conteneur
 - **Explorez la science des données** - Essayez la manipulation de données avec pandas et la visualisation avec matplotlib ou seaborn
 - **Construisez des applications web** - Créez des tableaux de bord interactifs avec Streamlit ou Flask
 
