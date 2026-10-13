@@ -123,7 +123,7 @@ Check Explorer - the `notes` folder appears! The terminal runs in your project f
 
 ## Step 8: Use AI Agents in VS Code (Optional)
 
-VS Code includes [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat), an AI assistant that can explain, write, and debug code.
+VS Code includes [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat), an AI assistant that can explain, write, and debug code.
 
 - Open the `README.md` file (or any other file in your project)
 - Click **Chat** → **Open Chat** in the title bar (or press `Ctrl+Alt+I` on Windows/Linux, `Ctrl+Cmd+I` on Mac)
