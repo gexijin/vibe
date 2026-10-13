@@ -52,7 +52,7 @@ Pour Windows :
 Pour Mac :
 - Dans VS Code, cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
 - Naviguez vers et sélectionnez le dossier `test_claude`
-- Cliquez sur **Open** (Mac) ou **OK** (Windows)
+- Cliquez sur **Open**
 - Si demandé « Do you trust the authors? », cliquez sur **Yes, I trust the authors**
 
 ## Étape 4 : Démarrer Claude Code
