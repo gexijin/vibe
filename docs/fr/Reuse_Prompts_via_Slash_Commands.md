@@ -8,7 +8,7 @@ lang: "fr"
 
 Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Comme créer des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
 
-Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer la Skill. Oui, Claude est très doué pour se prompter... lui-même.
+Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer la commande slash. Oui, Claude est très doué pour se prompter... lui-même.
 
 ## Concepts Clés
 
@@ -161,7 +161,7 @@ Claude met à jour le fichier de commande. Vous pouvez vérifier depuis l'édite
   /stock-report AAPL
   ```
 
-Claude crée un fichier nommé quelque chose comme `Apple_2025-12-13.html`. Cliquez sur ce fichier depuis File Explorer sur Windows ou Mac pour l'ouvrir dans votre navigateur par défaut.
+Claude crée un fichier nommé quelque chose comme `Apple_2025-12-13.html`. Double-cliquez sur ce fichier dans l'**Explorateur de fichiers** (Windows) ou le **Finder** (Mac) pour l'ouvrir dans votre navigateur par défaut.
 
 ## Étape 11 : Réutiliser la Commande Slash (Optionnel)
 
