@@ -101,6 +101,7 @@ Claude initialise un dépôt Git dans votre dossier (prend 2-5 secondes). Vous a
 ## Étape 8 : Construisez l'Application Minuteur
 
 - Dans Claude Code, tapez :
+
   ```
   Crée une application de minuteur simple dans un seul fichier appelé timer.html.
   Elle doit avoir :

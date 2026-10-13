@@ -96,6 +96,7 @@ Maintenant créez votre sous-agent :
 - Sélectionnez **Project**
 - Sélectionnez **Generate with Claude (recommended)**
 - Collez ce qui suit pour les instructions :
+
   ```
   Crée un fichier markdown pour un nouveau sous-agent appelé stock-picker :
   - Il prend deux actions ou plus
