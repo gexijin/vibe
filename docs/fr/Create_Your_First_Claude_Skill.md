@@ -6,7 +6,7 @@ lang: "fr"
 
 # Créez Votre Première Compétence Claude
 
-Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. Et si Claude pouvait décider automatiquement de créer un rapport boursier en fonction de votre conversation ? C'est le pouvoir des Compétences (Skills)—comme passer d'une boîte de vitesses manuelle à une transmission automatique qui change les vitesses selon les besoins.
+Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. Et si Claude pouvait décider automatiquement de créer un rapport boursier en fonction de votre conversation ? C'est le pouvoir des Compétences (Skills)—comme passer d'une boîte de vitesses manuelle à une transmission automatique qui passe les vitesses quand il le faut.
 
 ## Concepts Clés
 
@@ -173,7 +173,7 @@ Analyse Apple
 Maintenant que vous comprenez les Compétences, créez-en d'autres pour vos flux de travail :
 
 - **Research Skill** - S'active automatiquement lorsque vous posez des questions nécessitant une recherche web
-- **Code Review Skill** - S'active lorsque vous mentionnez des bugs, des problèmes ou des problèmes de code
+- **Code Review Skill** - S'active lorsque vous mentionnez des bugs, des anomalies ou des problèmes de code
 - **Meeting Notes Skill** - S'active lorsque vous collez des transcriptions de réunions ou mentionnez des résumés
 
 Le principe : Définissez quand Claude devrait automatiquement aider, pas seulement des raccourcis que vous déclenchez manuellement.
@@ -181,7 +181,7 @@ Le principe : Définissez quand Claude devrait automatiquement aider, pas seulem
 ## Dépannage
 
 - **La Compétence ne s'active pas :** Vérifiez le champ `description` dans `SKILL.md`—il doit inclure des mots déclencheurs liés à votre question
-- **La Compétence s'active trop souvent :** Rendez la description plus spécifique sur quand l'utiliser
+- **La Compétence s'active trop souvent :** Précisez davantage dans la description quand l'utiliser
 - **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché—activez « Afficher les fichiers cachés » dans votre explorateur de fichiers)
 - **Les modifications de SKILL.md ne fonctionnent pas :** Les Compétences se chargent automatiquement lorsqu'elles sont modifiées—aucun redémarrage nécessaire. Si cela ne fonctionne toujours pas, vérifiez le formatage YAML
 
@@ -191,7 +191,7 @@ Le principe : Définissez quand Claude devrait automatiquement aider, pas seulem
 - **Les Compétences** sont des capacités que Claude découvre et utilise automatiquement (comme un assistant qui connaît vos préférences)
 - **Les descriptions de Compétences** agissent comme des instructions indiquant à Claude : « Utilise-moi quand l'utilisateur dit X »
 - **Les deux peuvent coexister** - Utilisez les commandes slash pour les tâches rapides et répétitives ; utilisez les Compétences pour les flux de travail complexes
-- **Les Compétences évoluent mieux** - Vous n'avez pas besoin de mémoriser les noms de commandes ; Claude décide en fonction du contexte
+- **Les Compétences passent mieux à l'échelle** - Vous n'avez pas besoin de mémoriser les noms de commandes ; Claude décide en fonction du contexte
 
 ---
 

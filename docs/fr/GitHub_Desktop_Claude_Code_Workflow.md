@@ -73,7 +73,7 @@ Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installatio
   - Des boutons Démarrer et Arrêter
   - Un affichage montrant le temps restant au format MM:SS
   - Quand le minuteur atteint zéro, afficher « Le temps est écoulé ! »
-  Garde ça simple avec CSS et JavaScript en ligne.
+  Garde ça simple, avec le CSS et le JavaScript directement dans le fichier.
   ```
 
 Claude crée le fichier `timer.html` (prend 10-30 secondes).
@@ -169,14 +169,14 @@ Vous venez de jeter le code défectueux et de revenir à votre dernier point de 
 
 - Dans Claude Code :
   ```
-  Commit et pousse mes modifications
+  Fais un commit et pousse mes modifications
   ```
 
 Claude va vérifier les modifications, écrire un message de commit, committer et pousser (10-20 secondes).
 
-**Quand utiliser :**
+**Quand utiliser chaque méthode :**
 - Commits manuels : Lorsque vous apprenez ou voulez le contrôle
-- Commits Claude : Lorsque vous travaillez rapidement et voulez de bons messages
+- Commits par Claude : Lorsque vous travaillez rapidement et voulez de bons messages
 
 ## Étape 12 : Demander à Claude de Résumer les Modifications
 
@@ -198,7 +198,7 @@ Vous verrez :
 - Create initial timer app
 - Add improved sound notification
 
-Remarquez que la première tentative de son ratée n'est pas là - vous l'avez supprimée ! Seul le code fonctionnel a été inclus dans vos commits.
+Remarquez que la première tentative ratée pour le son n'est pas là - vous l'avez supprimée ! Seul le code fonctionnel a été inclus dans vos commits.
 
 ## Défis
 - Son personnalisé : Téléchargez un .mp3 gratuit depuis [freesound.org](https://freesound.org), placez-le dans votre dossier de projet, demandez à Claude de l'utiliser

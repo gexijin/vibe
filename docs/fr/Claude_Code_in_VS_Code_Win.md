@@ -76,7 +76,7 @@ Après avoir fermé VS Code, voici comment revenir à votre projet :
 - Demandez à Claude Code d'expliquer une base de code existante : « Explique ce que fait ce projet »
 - Demandez à Claude Code de vous aider à écrire de nouvelles fonctionnalités : « Ajoute une fonction qui calcule la moyenne d'une liste »
 - Utilisez Claude Code pour corriger des bugs : « Ce code donne une erreur, peux-tu le corriger ? »
-- Essayez l'extension VS Code de Claude Code pour une interface visuelle avec des diffs en ligne (recherchez « Claude Code » dans Extensions)
+- Essayez l'extension VS Code de Claude Code pour une interface visuelle qui affiche les modifications directement dans le code (recherchez « Claude Code » dans Extensions)
 
 ## Dépannage
 

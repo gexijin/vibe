@@ -52,7 +52,7 @@ Git a besoin de savoir qui vous êtes pour les messages de commit.
   git config --global user.email "your.email@example.com"
   ```
 
-L'utilisation de votre nom et de votre email vous aide à identifier qui a effectué les modifications lorsque plusieurs personnes travaillent sur ceci.
+L'utilisation de votre nom et de votre email vous aide à identifier qui a effectué les modifications lorsque plusieurs personnes travaillent sur ce projet.
 
 ## Étape 4 : Naviguez vers Votre Dossier Documents
 
@@ -151,7 +151,7 @@ Vous avez créé votre premier point de sauvegarde ! Vous pouvez toujours reveni
   Enregistre ces modifications.
   ```
 
-Nous avons créé un 2ème point de sauvegarde. Cette version a les deux boutons fonctionnels.
+Nous avons créé un 2e point de sauvegarde. Cette version a les deux boutons fonctionnels.
 
 
 ## Étape 12 : Ajoutez un Autre Bouton
@@ -220,7 +220,7 @@ Remarquez que la tentative du bouton 15 minutes n'est pas là—vous l'avez aban
 ## Étape 17 : Examinez le Code
 
 - Dans le navigateur qui affiche l'application, faites un clic droit et sélectionnez **Afficher le code source de la page**
-- Vous pouvez voir le code source pour cela.
+- Vous voyez le code source de l'application.
 - Dans Claude Code, demandez
   ```
   Explique ce code. Juste les grandes lignes.
@@ -260,7 +260,7 @@ Rappelez-vous : Testez après chaque fonctionnalité, commitez après chaque suc
 - « Quels fichiers ai-je modifiés ? » - Voir les modifications non commitées
 - « Montre-moi les différences » - Voir exactement quel code a changé
 - « Explique ce que fait le code du minuteur » - Comprendre l'implémentation
-- « Crée une branche appelée expérience » - Essayer des modifications risquées en toute sécurité
+- « Crée une branche appelée essai » - Essayer des modifications risquées en toute sécurité
 - « Reviens au commit précédent » - Annuler tout depuis le dernier commit
 
 Claude gère toutes les opérations Git en langage naturel—aucune commande à mémoriser !

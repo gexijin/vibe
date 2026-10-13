@@ -13,7 +13,7 @@ Vous avez écrit du code Python en tapant chaque ligne vous-même. Mais que se p
 - **[Vibe Coding](https://www.ibm.com/think/topics/vibe-coding)** - Programmer en décrivant ce que vous voulez en langage naturel, puis itérer en fonction des résultats plutôt que d'écrire le code ligne par ligne
 - **[Claude Code](https://code.claude.com/)** - Assistant de codage IA qui écrit, débogue et refactorise le code en fonction de vos demandes en langage naturel
 - **[Jeu de données Iris](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - Jeu de données classique contenant les mesures de 150 fleurs d'iris de trois espèces
-- **Raffinement itératif** - Le modèle central du vibe coding : décrire → tester → affiner → valider les versions fonctionnelles
+- **Raffinement itératif** - Le modèle central du vibe coding : décrire → tester → affiner → committer les versions fonctionnelles
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -87,7 +87,7 @@ Claude Code est maintenant en cours d'exécution et prêt pour vos demandes.
 
 ## Étape 5 : Premier Vibe - Charger les Données
 
-Maintenant, le plaisir commence. Au lieu de consulter la documentation, décrivez simplement ce que vous voulez.
+C'est maintenant que ça devient amusant. Au lieu de consulter la documentation, décrivez simplement ce que vous voulez.
 
 - Dans le terminal Claude Code, tapez :
 
@@ -104,9 +104,9 @@ Charge le jeu de données iris depuis scikit-learn. Convertis-le en dataframe pa
 
 Vous venez d'utiliser le vibe coding ! Pas de recherche dans la documentation, pas d'essais et d'erreurs : décrivez et testez simplement.
 
-Demandez à Claude de valider en utilisant Git. Ou faites-le vous-même depuis GitHub Desktop.
+Demandez à Claude de faire un commit avec Git. Ou faites-le vous-même depuis GitHub Desktop.
 ```
-Valide ces modifications.
+Fais un commit de ces modifications avec Git.
 ```
 ## Étape 6 : Deuxième Vibe - Statistiques Récapitulatives
 
@@ -125,7 +125,7 @@ Montre-moi les statistiques récapitulatives pour les données iris regroupées 
 
 Cette exploration vous aide à comprendre les motifs dans les données.
 
-Demandez à Claude de valider en utilisant Git. Ou faites-le vous-même depuis GitHub Desktop.
+Demandez à Claude de faire un commit avec Git. Ou faites-le vous-même depuis GitHub Desktop.
 
 ## Étape 7 : Troisième Vibe - Créer un Histogramme
 
@@ -177,9 +177,9 @@ Crée un diagramme en boîte comparant les longueurs de pétales des trois espè
 - Les boîtes montrent la médiane et les quartiles pour chaque espèce
 - Vous pouvez clairement voir que Virginica a les pétales les plus longs
 
-## Étape 10 : Réviser et Valider
+## Étape 10 : Réviser et Committer
 
-Avant de valider, examinez ce que Claude a construit.
+Avant de faire le commit, examinez ce que Claude a construit.
 
 - Dans l'Explorateur VS Code, cliquez sur `iris_exploration.py` pour l'ouvrir
 - Parcourez le code : remarquez les imports, le chargement des données et les sections de traçage
@@ -212,28 +212,28 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 Après chaque fonctionnalité réussie :
 - Testez-la en exécutant le script
-- Si cela fonctionne, validez avec GitHub Desktop
-- Si cela casse, dites à Claude l'erreur et demandez de la corriger
-- Une fois corrigée, validez la version fonctionnelle
+- Si cela fonctionne, faites un commit avec GitHub Desktop
+- Si cela ne marche pas, indiquez l'erreur à Claude et demandez-lui de la corriger
+- Une fois l'erreur corrigée, committez la version fonctionnelle
 
 
 **Principes clés :**
 
 - **Décrivez les résultats, pas l'implémentation** - Dites « montre une carte thermique de corrélation » et non « utilise seaborn.heatmap() avec df.corr() »
 - **Itérez rapidement** - Tester → affiner → tester → affiner
-- **Validez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
-- **Acceptez les échecs** - Si le code de Claude ne fonctionne pas, décrivez simplement l'erreur et demandez de la corriger
+- **Committez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
+- **Acceptez les échecs** - Si le code de Claude ne fonctionne pas, décrivez simplement l'erreur et demandez-lui de la corriger
 - **Restez aux commandes** - Vous décidez des fonctionnalités, des priorités et quand c'est suffisamment bon
 
-À chaque fois, suivez le modèle : décrire → tester → itérer → valider.
+À chaque fois, suivez le modèle : décrire → tester → itérer → committer.
 
 ## Prochaines Étapes
 
 - **Essayez différents jeux de données** - Demandez à Claude d'utiliser le jeu de données wine, digits ou de charger un fichier CSV
-- **Explorez plus de visualisations** - Essayez les heatmaps, les pair plots ou les violin plots
+- **Explorez plus de visualisations** - Essayez les cartes thermiques (heatmaps), les matrices de nuages de points (pair plots) ou les diagrammes en violon (violin plots)
 - **Apprenez en posant des questions** - Quand Claude écrit du code, demandez « explique ce que fait cette ligne » pour apprendre Python
 - **Appliquez à vos propres données** - Utilisez le vibe coding pour analyser vos données de recherche ou de travail
-- **Lisez sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
+- **Renseignez-vous sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
 
 ## Dépannage
 
@@ -247,7 +247,7 @@ Après chaque fonctionnalité réussie :
 
 Ce tutoriel a combiné plusieurs technologies dans un seul flux de travail :
 
-- **GitHub Desktop** - Contrôle de version avec interface visuelle (créer des dépôts, valider, pousser)
+- **GitHub Desktop** - Contrôle de version avec interface visuelle (créer des dépôts, committer, pousser)
 - **Conteneur Docker** - Environnement Python isolé avec toutes les dépendances pré-installées
 - **VS Code** - Éditeur de code qui se connecte au conteneur Docker
 - **Claude Code** - Assistant IA qui écrit du code Python à partir de vos descriptions

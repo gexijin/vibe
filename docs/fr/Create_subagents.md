@@ -6,7 +6,7 @@ lang: "fr"
 
 # Créer un Sous-Agent dans Claude Code
 
-Vous souhaitez comparer des opportunités d'investissement, mais faire des recherches sur plusieurs entreprises et les évaluer prend des heures. Imaginez un sous-agent comme l'embauche d'un analyste financier qui sait exactement comment utiliser vos outils de recherche : vous lui donnez des noms d'entreprises, et il rassemble des rapports, évalue chaque entreprise selon des critères clés et recommande le meilleur investissement. Une fois que vous aurez appris à créer des sous-agents, vous pourrez automatiser n'importe quel flux de travail répétitif en plusieurs étapes dans votre travail. Ce tutoriel vous montre comment construire cet analyste.
+Vous souhaitez comparer des opportunités d'investissement, mais faire des recherches sur plusieurs entreprises et les évaluer prend des heures. Un sous-agent, c'est comme embaucher un analyste financier qui sait exactement comment utiliser vos outils de recherche : vous lui donnez des noms d'entreprises, et il rassemble des rapports, évalue chaque entreprise selon des critères clés et recommande le meilleur investissement. Une fois que vous aurez appris à créer des sous-agents, vous pourrez automatiser n'importe quel flux de travail répétitif en plusieurs étapes dans votre travail. Ce tutoriel vous montre comment construire cet analyste.
 
 ## Concepts Clés
 
@@ -14,7 +14,7 @@ Vous souhaitez comparer des opportunités d'investissement, mais faire des reche
 - **Contexte Isolé** - Un sous-agent travaille dans son propre espace de travail séparé, donc ses recherches n'encombrent pas votre conversation principale : seul le résultat final vous est renvoyé
 - **Skill** - Une capacité réutilisable (comme générer des rapports boursiers) que les sous-agents peuvent invoquer pour accomplir leurs objectifs
 - **Prompt Système** - Instructions qui définissent ce que fait le sous-agent, comment il évalue les entreprises et quel format il renvoie
-- **Séparation des Préoccupations** - Les skills collectent les données ; les sous-agents utilisent ces données pour prendre des décisions
+- **Séparation des Responsabilités** - Les skills collectent les données ; les sous-agents utilisent ces données pour prendre des décisions
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -89,7 +89,7 @@ Tapez cette commande :
 /agents
 ```
 
-Vous verrez l'interface des agents de Claude Code montrant les sous-agents existants (le cas échéant) et les options pour **Create**, **Edit** ou **Delete** des sous-agents.
+Vous verrez l'interface des agents de Claude Code montrant les sous-agents existants (le cas échéant) et les options **Create**, **Edit** ou **Delete** pour créer, modifier ou supprimer des sous-agents.
 
 Maintenant créez votre sous-agent :
 - Sélectionnez **Create new subagent**
@@ -158,7 +158,7 @@ Pendant que le sous-agent s'exécute, vous le verrez :
 3. **Évaluer les entreprises** - Note chaque catégorie et les combine en une note globale
 4. **Générer la sortie** - Crée un tableau de comparaison et une recommandation
 
-Cela peut prendre 2-3 minutes car la recherche web est impliquée.
+Cela peut prendre 2-3 minutes car il faut effectuer des recherches sur le web.
 
 Remarquez que votre conversation principale ne se remplit pas de tous les résultats de recherche et des étapes intermédiaires : c'est le contexte isolé en action. Le sous-agent fait ses recherches dans son propre espace de travail séparé et ne vous renvoie que ce que vous voyez ici.
 
@@ -183,7 +183,7 @@ Maintenant que vous avez un sous-agent de sélection d'actions fonctionnel, essa
 
 - **Le sous-agent ne s'active pas** : Assurez-vous que votre demande mentionne la comparaison d'entreprises ou les décisions d'investissement. Essayez : « Utilise le sous-agent stock-picker pour comparer... »
 - **Skill non trouvé** : Vérifiez que `.claude/skills/stock-report/SKILL.md` existe. Redémarrez Claude Code si vous venez de l'ajouter.
-- **Scores incomplets** : Demandez au sous-agent de « continuer » ou « explique les scores pour chaque catégorie plus en détail »
+- **Scores incomplets** : Demandez au sous-agent : « continue » ou « explique plus en détail les scores de chaque catégorie »
 - **Erreur lors de la création du sous-agent** : Vérifiez que le dossier `.claude/agents/` existe. Claude Code devrait le créer automatiquement.
 
 ## Vue d'Ensemble du Flux de Travail
@@ -191,7 +191,7 @@ Maintenant que vous avez un sous-agent de sélection d'actions fonctionnel, essa
 - **Les sous-agents automatisent les flux de travail en plusieurs étapes** - Ils orchestrent les skills, appliquent la logique et fournissent des décisions
 - **Les skills sont des outils réutilisables** - Un skill peut être utilisé par plusieurs sous-agents pour différents objectifs
 - **Les prompts système définissent le comportement** - Des instructions claires et des critères d'évaluation rendent les sous-agents fiables
-- **Les sous-agents maintiennent leur focus** - Chaque sous-agent a un objectif unique et clair (sélection d'actions, revue de code, etc.)
+- **Les sous-agents restent concentrés** - Chaque sous-agent a un objectif unique et clair (sélection d'actions, revue de code, etc.)
 - **La composition permet l'évolutivité** - Construisez une bibliothèque de skills et de sous-agents qui fonctionnent ensemble
 
 ---

@@ -57,7 +57,7 @@ Avant de configurer VS Code, vous devez savoir où R est installé sur votre sys
 2. Naviguez vers `C:\Program Files\R\`
 3. Vous verrez un dossier comme `R-4.5.3` (votre numéro de version peut différer)
 4. Ouvrez ce dossier → Ouvrez le dossier `bin`
-5. Vous verrez `R.exe` là
+5. Vous y verrez `R.exe`
 6. Le chemin complet est : `C:\Program Files\R\R-4.5.3\bin\R.exe`
 
 **Notez ou retenez votre numéro de version** (par exemple, `R-4.5.3`) - vous en aurez besoin à l'Étape 4.
@@ -142,7 +142,7 @@ install.packages("shiny")
 - Tapez `q()` et appuyez sur Entrée pour quitter R
 - Tapez `n` lorsqu'on vous demande d'enregistrer l'espace de travail
 
-Simplement taper `R` dans un terminal normal ne fonctionnera pas à moins que R ne soit dans votre PATH système. L'extension R utilise votre paramètre `r.rpath` pour trouver R.
+Taper simplement `R` dans un terminal ordinaire ne fonctionnera pas si R n'est pas dans le PATH de votre système. L'extension R utilise votre paramètre `r.rpath` pour trouver R.
 
 ## Étape 6 : Créer Votre Projet R
 
@@ -238,7 +238,7 @@ shinyApp(ui = ui, server = server)
 - **Intégration Markdown** : Créez un fichier R Markdown (`.Rmd`) pour mélanger code, sortie et texte
 - **Formatage de code** : Faites un clic droit dans votre script R et sélectionnez **Format Document** pour formater automatiquement le code
 - **Débogage** : Définissez des points d'arrêt en cliquant à gauche des numéros de ligne, puis exécutez le code en mode débogage
-- **Intégration Git** : Utilisez les fonctionnalités Git intégrées de VS Code pour contrôler la version de vos projets R
+- **Intégration Git** : Utilisez les fonctionnalités Git intégrées de VS Code pour gérer les versions de vos projets R
 
 ## Prochaines Étapes
 
@@ -259,11 +259,11 @@ shinyApp(ui = ui, server = server)
 
 - **Incompatibilité de version R dans les paramètres** : Si vous avez mis à jour R mais que VS Code utilise toujours l'ancienne version, mettez à jour le numéro de version dans votre configuration `r.rpath` de settings.json pour correspondre à la nouvelle installation de R (voir Étape 3 pour trouver votre chemin d'installation actuel).
 
-- **La complétion de code ne fonctionne pas** : Assurez-vous que languageserver s'est installé avec succès (Étape 5). Redémarrez VS Code après l'installation. Attendez 10 à 20 secondes après l'ouverture d'un fichier R pour que le serveur de langage s'initialise. Vérifiez le panneau Output (View > Output > R Language Server) pour les erreurs.
+- **La complétion de code ne fonctionne pas** : Assurez-vous que languageserver s'est installé avec succès (Étape 5). Redémarrez VS Code après l'installation. Attendez 10 à 20 secondes après l'ouverture d'un fichier R pour que le serveur de langage s'initialise. Recherchez d'éventuelles erreurs dans le panneau Output (View > Output > R Language Server).
 
 - **Les graphiques n'apparaissent pas** : Les graphiques s'ouvriront dans des fenêtres séparées en utilisant le périphérique graphique par défaut de R. Assurez-vous d'avoir un gestionnaire de fenêtres disponible. Sur certains systèmes, vous devrez peut-être installer X11 (macOS) ou vous assurer que le support graphique est activé.
 
-- **L'application Shiny ne s'exécute pas** : Assurez-vous que l'extension Shiny est installée (Étape 2), que le package shiny est installé (Étape 5), et que votre fichier est nommé `app.R`. Vérifiez le terminal pour les messages d'erreur. Le bouton Run n'apparaît que lorsque VS Code reconnaît le fichier comme une application Shiny.
+- **L'application Shiny ne s'exécute pas** : Assurez-vous que l'extension Shiny est installée (Étape 2), que le package shiny est installé (Étape 5), et que votre fichier est nommé `app.R`. Recherchez d'éventuels messages d'erreur dans le terminal. Le bouton Run n'apparaît que lorsque VS Code reconnaît le fichier comme une application Shiny.
 
 ## Résumé du Flux de Travail
 
@@ -273,7 +273,7 @@ VS Code fournit une alternative moderne et légère à RStudio avec ces avantage
 - **Personnalisable** : Installez uniquement les extensions dont vous avez besoin pour une configuration légère
 - **Terminal intégré** : Exécutez R, Git et des commandes shell côte à côte
 - **Développement Shiny** : Lancement d'application en un clic avec rechargement automatique fait gagner du temps
-- **Contrôle de version** : Intégration Git intégrée sans outils externes
+- **Contrôle de version** : Git intégré, sans outil externe
 
 ---
 

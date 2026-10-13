@@ -6,7 +6,7 @@ lang: "fr"
 
 # Utiliser Claude Code depuis VS Code sur Mac
 
-Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éditeur visuel pour travailler avec votre code. VS Code vous permet d'éditer des fichiers visuellement tout en exécutant Claude Code dans le terminal intégré. Imaginez-le comme ayant votre éditeur de code et votre assistant IA côte à côte dans une seule fenêtre.
+Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éditeur visuel pour travailler avec votre code. VS Code vous permet d'éditer des fichiers visuellement tout en exécutant Claude Code dans le terminal intégré. C'est comme avoir votre éditeur de code et votre assistant IA côte à côte dans une seule fenêtre.
 
 ## Concepts Clés
 
@@ -88,7 +88,7 @@ VS Code mémorise vos dossiers récents, donc l'Option A avec Open Recent est g�
 - Demandez à Claude Code d'expliquer une base de code existante : « Explique ce que fait ce projet »
 - Demandez à Claude Code de vous aider à écrire de nouvelles fonctionnalités : « Ajoute une fonction qui calcule la moyenne d'une liste »
 - Utilisez Claude Code pour corriger des bugs : « Ce code donne une erreur, peux-tu le corriger ? »
-- Essayez l'extension Claude Code VS Code pour une interface visuelle avec des différences en ligne (recherchez "Claude Code" dans Extensions)
+- Essayez l'extension Claude Code VS Code pour une interface visuelle qui affiche les modifications directement dans le code (recherchez "Claude Code" dans Extensions)
 
 ## Dépannage
 

@@ -134,7 +134,7 @@ VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/cha
 
 GitHub Copilot analysera votre fichier et expliquera ce qu'il fait. Vous pouvez lui demander d'écrire du nouveau code, de corriger des bugs ou de répondre à des questions comme « Comment ajouter plus de fonctionnalités ? »
 
-**Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/copilot/copilot-chat), surlignez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
+**Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/copilot/copilot-chat), sélectionnez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
 
 ## Comment Rouvrir Votre Projet
 

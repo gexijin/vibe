@@ -12,7 +12,7 @@ Le vibe coding, c'est comme avoir une conversation avec votre ordinateur : vous 
 
 - **[Claude Code](https://code.claude.com/)** - Assistant de codage IA qui écrit, débogue et refactorise du code en fonction de vos requêtes en langage naturel
 - **[hoopR](https://hoopr.sportsdataverse.org/)** - Package R qui fournit un accès facile aux statistiques des joueurs NBA et aux données des matchs
-- **Raffinement itératif** - Le modèle de base du vibe coding : décrire → tester → affiner → valider les versions fonctionnelles
+- **Raffinement itératif** - Le modèle de base du vibe coding : décrire → tester → affiner → committer les versions fonctionnelles
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -107,14 +107,14 @@ Installe le package hoopR et charge les statistiques actuelles des joueurs NBA. 
 
 Vous venez d'utiliser le vibe coding ! Pas de recherche dans la documentation, pas d'essais et d'erreurs : simplement décrire et tester.
 
-**Sauvegardez votre progression :** Demandez à Claude de valider en utilisant Git, ou faites-le vous-même depuis GitHub Desktop :
+**Sauvegardez votre progression :** Demandez à Claude de faire un commit avec Git, ou faites-le vous-même depuis GitHub Desktop :
 ```
-Valide ces modifications.
+Fais un commit de ces modifications avec Git.
 ```
 
 ## Étape 6 : Deuxième Vibe - Explorer les Données
 
-Avant de créer un tableau de bord, comprenez quelles données vous avez.
+Avant de créer un tableau de bord, prenez le temps de comprendre de quelles données vous disposez.
 
 - Dans le terminal Claude Code, tapez :
 
@@ -128,7 +128,7 @@ Montre-moi quelles colonnes sont disponibles dans ces données NBA. Ensuite cré
 
 Cette exploration vous aide à décider quoi mettre dans votre tableau de bord.
 
-**Sauvegardez votre progression :** Demandez à Claude de valider, ou utilisez GitHub Desktop.
+**Sauvegardez votre progression :** Demandez à Claude de faire un commit, ou utilisez GitHub Desktop.
 
 ## Étape 7 : Troisième Vibe - Créer une Application Shiny de Base
 
@@ -154,11 +154,11 @@ Testez votre tableau de bord pour voir s'il fonctionne.
 - L'application démarre et une notification apparaît : **Open in Browser**
 - Cliquez sur **Open in Browser**
 - Le tableau de bord NBA s'ouvre dans votre navigateur web
-- Essayez de déplacer le curseur de points : le tableau filtre en temps réel
+- Essayez de déplacer le curseur de points : le tableau se filtre en temps réel
 - Faites défiler les données des joueurs
-- Validez les modifications si l'application fonctionne
+- Faites un commit si l'application fonctionne
 
-Si quelque chose ne fonctionne pas, copiez les messages d'erreur et collez-les à Claude pour les corriger.
+Si quelque chose ne fonctionne pas, copiez les messages d'erreur et collez-les dans Claude pour qu'il corrige le problème.
 
 ## Étape 9 : Quatrième Vibe - Ajouter une Visualisation
 
@@ -197,16 +197,16 @@ Ajoute un menu déroulant pour filtrer les joueurs par équipe. Mets-le en haut.
 
 Vous construisez un tableau de bord professionnel en ayant une conversation.
 
-## Étape 11 : Réviser et Valider
+## Étape 11 : Réviser et Committer
 
-Avant de valider, examinez ce que Claude a construit.
+Avant de faire le commit, examinez ce que Claude a construit.
 
 - Dans l'Explorateur VS Code, cliquez sur `app.R` pour l'ouvrir
-- Parcourez le code : remarquez la disposition de l'interface utilisateur, la logique du serveur et le code de traçage
-- Vous n'avez pas besoin de comprendre chaque ligne, mais obtenez une idée de la structure
+- Parcourez le code : remarquez la disposition de l'interface utilisateur, la logique du serveur et le code des graphiques
+- Vous n'avez pas besoin de comprendre chaque ligne, mais faites-vous une idée de la structure
 - Ouvrez GitHub Desktop
 - Vous verrez `app.R` listé comme un nouveau fichier
-- Le panneau de droite montre tout le code en vert (nouvelles additions)
+- Le panneau de droite montre tout le code en vert (ajouts)
 - Dans le champ **Summary** en bas à gauche, tapez :
 
 ```
@@ -224,7 +224,7 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 **Exemples de requêtes à Claude :**
 
-- « Ajoute une zone de recherche de joueur pour que je puisse taper le nom d'un joueur et accéder directement à lui »
+- « Ajoute une zone de recherche de joueur pour que je puisse taper le nom d'un joueur et arriver directement sur sa ligne »
 - « Affiche les logos des équipes à côté des noms d'équipes dans le menu déroulant »
 - « Ajoute un graphique linéaire montrant la tendance des points par match pour l'équipe sélectionnée »
 - « Rends le tableau triable en cliquant sur les en-têtes de colonnes »
@@ -232,20 +232,20 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 
 Après chaque fonctionnalité réussie :
 - Testez-la dans le navigateur
-- Si elle fonctionne, validez avec GitHub Desktop
-- Si elle ne fonctionne pas, dites l'erreur à Claude et demandez de la corriger
-- Une fois corrigée, validez la version fonctionnelle
+- Si elle fonctionne, faites un commit avec GitHub Desktop
+- Si elle ne fonctionne pas, décrivez l'erreur à Claude et demandez-lui de la corriger
+- Une fois l'erreur corrigée, committez la version fonctionnelle
 
 
 **Principes clés :**
 
 - **Décrivez les résultats, pas l'implémentation** - Dites « montre les meilleurs marqueurs » et non « utilise arrange() et head() »
 - **Itérez rapidement** - Tester → affiner → tester → affiner
-- **Validez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
-- **Acceptez les échecs** - Si le code de Claude ne fonctionne pas, décrivez simplement l'erreur et demandez de la corriger
+- **Committez les versions fonctionnelles** - Enregistrez chaque succès avant d'essayer de nouvelles fonctionnalités
+- **Acceptez les échecs** - Si le code de Claude ne fonctionne pas, décrivez simplement l'erreur et demandez-lui de la corriger
 - **Gardez le contrôle** - Vous décidez des fonctionnalités, des priorités et du moment où c'est suffisant
 
-À chaque fois, suivez le modèle : décrire → tester → itérer → valider.
+À chaque fois, suivez le modèle : décrire → tester → itérer → committer.
 
 ## Prochaines Étapes
 
@@ -258,7 +258,7 @@ Après chaque fonctionnalité réussie :
 ## Dépannage
 
 - **L'installation de hoopR échoue** - Vérifiez votre connexion Internet ; le package télécharge des données depuis le web. Essayez d'exécuter `install.packages("hoopR")` dans un terminal R pour voir les messages d'erreur détaillés.
-- **L'application Shiny ne démarre pas** - Vérifiez que l'extension Shiny est installée (recherchez "Posit.shiny" dans Extensions VS Code). Vérifiez le terminal pour les messages d'erreur et collez-les à Claude.
+- **L'application Shiny ne démarre pas** - Vérifiez que l'extension Shiny est installée (recherchez "Posit.shiny" dans Extensions VS Code). Recherchez les messages d'erreur dans le terminal et collez-les dans Claude.
 - **Aucune donnée ne s'affiche** - Le package hoopR récupère des données en direct ; si la saison NBA n'a pas commencé, il peut y avoir des données limitées. Demandez à Claude d'utiliser des données d'exemple ou une saison précédente.
 - **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites « corrige cette erreur ». Le vibe coding inclut l'itération et le débogage.
 - **Impossible de pousser vers GitHub** - Assurez-vous que vous êtes connecté à GitHub Desktop et que vous avez publié le dépôt (Étape 1). Vérifiez votre connexion Internet.
@@ -267,7 +267,7 @@ Après chaque fonctionnalité réussie :
 
 Ce tutoriel a combiné plusieurs technologies en un seul flux de travail :
 
-- **GitHub Desktop** - Contrôle de version avec interface visuelle (créer des dépôts, valider, pousser)
+- **GitHub Desktop** - Contrôle de version avec interface visuelle (créer des dépôts, committer, pousser)
 - **Conteneur Docker** - Environnement R isolé avec toutes les dépendances pré-installées
 - **VS Code** - Éditeur de code qui se connecte au conteneur Docker
 - **Claude Code** - Assistant IA qui écrit du code R et Shiny à partir de vos descriptions
@@ -280,15 +280,15 @@ La magie n'est pas un outil unique : c'est la façon dont le vibe coding vous pe
 
 Après cette configuration initiale, votre routine quotidienne de vibe coding devient :
 
-1. **Démarrez Docker Desktop** - Lancez l'application, attendez l'état vert
+1. **Démarrez Docker Desktop** - Lancez l'application, attendez que l'indicateur passe au vert
 2. **Ouvrez VS Code** - Ouvrez votre projet, rouvrez dans le conteneur si nécessaire
 3. **Démarrez Claude Code** - Tapez `claude` dans le terminal
 4. **Décrivez votre objectif** - « Ajoute une fonctionnalité qui... » ou « Corrige le bug où... »
 5. **Testez les modifications** - Exécutez votre application, vérifiez si elle fonctionne
-6. **Itérez ou validez** - Si cassée, décrivez la correction ; si fonctionnelle, validez avec GitHub Desktop
+6. **Itérez ou committez** - Si elle ne fonctionne pas, décrivez la correction ; si elle fonctionne, faites un commit avec GitHub Desktop
 7. **Poussez régulièrement** - Cliquez sur **Push origin** pour sauvegarder sur GitHub
 
-Plus vous pratiquez, mieux vous devenez à décrire ce que vous voulez. Le vibe coding est une compétence : vous apprenez quels types de descriptions fonctionnent le mieux et comment diviser de grandes idées en morceaux testables.
+Plus vous pratiquez, mieux vous savez décrire ce que vous voulez. Le vibe coding est une compétence : vous apprenez quels types de descriptions fonctionnent le mieux et comment diviser de grandes idées en morceaux testables.
 
 ---
 

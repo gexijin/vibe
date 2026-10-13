@@ -6,7 +6,7 @@ lang: "fr"
 
 # Premiers Pas avec le Contrôle de Version
 
-Vous travaillez sur un projet et effectuez des modifications qui brisent tout. Vous ne vous souvenez plus de ce que vous avez changé, et vous souhaitez revenir au moment où tout fonctionnait. Le contrôle de version est comme des points de sauvegarde dans un jeu vidéo—chaque fois que vous « committez » votre travail, vous créez un point de restauration auquel vous pouvez toujours revenir. [GitHub](https://github.com) stocke vos points de sauvegarde dans le cloud, de sorte que votre code soit sauvegardé en toute sécurité et accessible depuis n'importe quel ordinateur.
+Vous travaillez sur un projet et effectuez des modifications qui cassent tout. Vous ne vous souvenez plus de ce que vous avez changé, et vous souhaitez revenir au moment où tout fonctionnait. Le contrôle de version est comme des points de sauvegarde dans un jeu vidéo—chaque fois que vous « committez » votre travail, vous créez un point de restauration auquel vous pouvez toujours revenir. [GitHub](https://github.com) stocke vos points de sauvegarde dans le cloud, de sorte que votre code soit sauvegardé en toute sécurité et accessible depuis n'importe quel ordinateur.
 
 ## Concepts Clés
 

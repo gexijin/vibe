@@ -51,9 +51,9 @@ Pour Windows :
 
 Pour Mac :
 - Dans VS Code, cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
-- Naviguez vers et sélectionnez le dossier `test_claude`
+- Naviguez jusqu'au dossier `test_claude` et sélectionnez-le
 - Cliquez sur **Open**
-- Si demandé « Do you trust the authors? », cliquez sur **Yes, I trust the authors**
+- Si on vous demande « Do you trust the authors? », cliquez sur **Yes, I trust the authors**
 
 ## Étape 4 : Démarrer Claude Code
 
@@ -183,7 +183,7 @@ Rends l'introduction plus engageante avec une accroche captivante.
 
 ## Étape 13 : Ajouter un résumé
 
-Demandez à Claude d'ajouter un bref résumé exécutif au début :
+Demandez à Claude d'ajouter une courte synthèse au début :
 
 ```
 Ajoute un résumé au début de l'article. Écris 2-3 phrases courtes
@@ -246,7 +246,7 @@ Claude créera un slash command personnalisé dans votre dossier `.claude/comman
 
 ## Étape 18 : Obtenir des commentaires
 
-Les LLM n'ont pas de mémoire. Pour chaque réponse, nous devons envoyer toutes nos conversations précédentes de la session de chat pour le contexte. À mesure que l'interaction s'allonge, nous devons être conscients de la longueur du contexte. S'il n'est pas lié, ou si nous pouvons fournir un contexte plus clair, nous bénéficierons d'un nouveau départ.
+Les LLM n'ont pas de mémoire. Pour chaque réponse, nous devons envoyer toutes nos conversations précédentes de la session de chat pour le contexte. À mesure que l'interaction s'allonge, nous devons être conscients de la longueur du contexte. Si la suite n'a pas de rapport avec ce qui précède, ou si nous pouvons repartir d'un contexte plus propre, mieux vaut recommencer à zéro.
 
 Effacez la mémoire de Claude pour obtenir des commentaires sur votre article. Tapez :
 
@@ -276,12 +276,12 @@ Claude critiquera votre article sans être influencé par le fait de l'avoir éc
 9. **Rédiger** - Claude rédige l'article complet avec références
 10. **Réviser manuellement** - Vous ajoutez votre voix et apportez des modifications
 11. **Polir avec l'IA** - Claude améliore des sections spécifiques
-12. **Ajouter un résumé** - Claude crée un résumé exécutif
+12. **Ajouter un résumé** - Claude rédige une synthèse
 13. **Améliorer le titre** - Claude suggère des options de titre, vous personnalisez
 14. **Vérifier les références** - (Optionnel) Claude vérifie toutes les citations
 15. **Relire avec l'IA** - Claude corrige les erreurs et améliore le flux
 16. **Créer un slash command** - Enregistrez le workflow pour de futurs articles
-17. **Obtenir des commentaires neufs** - Effacez la mémoire pour une critique impartiale
+17. **Obtenir un avis neuf** - Effacez la mémoire pour une critique impartiale
 
 ## Prochaines étapes
 
@@ -290,7 +290,7 @@ Maintenant que vous avez le slash command `/research-paper`, essayez d'écrire p
 - **Technologie :** `/research-paper "Impact of social media on teen mental health"`
 - **Affaires :** `/research-paper "Remote work productivity"`
 - **Science :** `/research-paper "CRISPR gene editing ethics"`
-- **Format :** Demandez à Claude de `Give me the paper in LaTeX format`
+- **Format :** Demandez à Claude : `Donne-moi l'article au format LaTeX`
 
 Le slash command vous guidera automatiquement à travers tout le workflow ! N'oubliez pas d'effacer la mémoire lorsque vous changez de sujet.
 

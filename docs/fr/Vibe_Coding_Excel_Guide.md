@@ -66,7 +66,7 @@ Au lieu de construire une feuille de calcul cellule par cellule, décrivez simpl
 - Dans le terminal Claude Code, tapez :
 
 ```
-Crée une feuille de calcul appelée budget.xlsx avec deux feuilles : « Revenus » et « Dépenses ». Revenus doit avoir les colonnes Source, Mois et Montant, avec 3 exemples de sources de revenus sur 2 mois. Dépenses doit avoir les colonnes Catégorie, Mois et Montant, avec 6 exemples de catégories (comme Loyer, Courses, Transport, Charges, Loisirs, Téléphone) sur les mêmes 2 mois. Ajoute une ligne Total en bas de chaque feuille à l'aide de formules SUM.
+Crée un classeur Excel appelé budget.xlsx avec deux feuilles : « Revenus » et « Dépenses ». Revenus doit avoir les colonnes Source, Mois et Montant, avec 3 exemples de sources de revenus sur 2 mois. Dépenses doit avoir les colonnes Catégorie, Mois et Montant, avec 6 exemples de catégories (comme Loyer, Courses, Transport, Charges, Loisirs, Téléphone) sur les mêmes 2 mois. Ajoute une ligne Total en bas de chaque feuille à l'aide de formules SUM.
 ```
 
 - Appuyez sur Entrée
@@ -175,7 +175,7 @@ Après chaque fonctionnalité réussie :
 - Ouvrez le fichier et vérifiez-le : utilisez Spreadsheet Viewer pour les nombres, ou Excel/LibreOffice pour les graphiques et les couleurs
 - Si cela fonctionne, committez avec GitHub Desktop
 - Si quelque chose semble incorrect, décrivez-le à Claude et demandez-lui de le corriger
-- Une fois corrigée, committez la version fonctionnelle
+- Une fois le problème corrigé, committez la version fonctionnelle
 
 **Principes clés :**
 
@@ -193,7 +193,7 @@ Après chaque fonctionnalité réussie :
 - **Importez de vraies données** - Déposez un relevé bancaire au format CSV dans votre dossier de projet et demandez à Claude de l'intégrer au suivi
 - **Apprenez en posant des questions** - Quand Claude écrit une formule, demandez « explique ce que fait cette formule » pour apprendre Excel
 - **Partagez votre suivi** - Poussez le fichier terminé sur GitHub pour que vous (ou les membres de votre famille) puissiez récupérer la dernière version
-- **Lisez sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
+- **Renseignez-vous sur le vibe coding** - Visitez [le guide d'IBM](https://www.ibm.com/think/topics/vibe-coding) pour en savoir plus sur ce style de codage
 
 ## Dépannage
 

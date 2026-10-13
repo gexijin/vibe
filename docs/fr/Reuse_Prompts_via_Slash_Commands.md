@@ -6,7 +6,7 @@ lang: "fr"
 
 # Créer des Commandes Slash Personnalisées
 
-Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Comme créer des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
+Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Tout comme des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
 
 Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer la commande slash. Oui, Claude est très doué pour se prompter... lui-même.
 
@@ -185,14 +185,14 @@ Commencez par effacer la mémoire de Claude pour repartir de zéro :
 /clear
 ```
 
-Ensuite, exécutez la commande research paper :
+Ensuite, exécutez la commande `/research-paper` :
 
 ```
 /research-paper AI in schools
 ```
 
 Deux différences clés :
-- /research-paper a été créé à la fin d'une session en capturant l'interaction humaine, tandis que /stock-report est créé à partir de zéro.
+- La commande /research-paper a été créée à la fin d'une session en capturant l'interaction humaine, tandis que /stock-report a été créée de zéro.
 - /research-paper demande de manière interactive des entrées avant de rédiger un article.
 
 ## Prochaines Étapes
@@ -206,8 +206,8 @@ Maintenant que vous comprenez les commandes slash, créez davantage de commandes
 ## Dépannage
 
 - **Commande non trouvée :** Redémarrez Claude Code pour recharger les commandes depuis `.claude/commands/`
-- **Arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
-- **Rapport incomplet :** Demandez à Claude de « continuer » ou « ajouter plus de détails à la section [nom de la section] »
+- **Les arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
+- **Rapport incomplet :** Demandez à Claude : « continue » ou « ajoute plus de détails à la section [nom de la section] »
 
 ## Aperçu du Workflow
 

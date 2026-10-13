@@ -6,7 +6,7 @@ lang: "fr"
 
 # Utiliser Claude Code avec Excel dans VS Code
 
-Vous avez besoin d'un tableur - des formules, une mise en forme, peut-être un graphique - mais vous ne voulez pas vous battre avec les menus d'Excel. Considérez Claude Code comme un assistant qui connaît Excel sur le bout des doigts : vous décrivez ce que vous voulez en français, et il construit un vrai fichier `.xlsx` avec des formules qui fonctionnent. Ce tutoriel vous montre comment préparer un dossier de projet dans VS Code et laisser Claude Code créer et modifier des feuilles de calcul Excel pour vous.
+Vous avez besoin d'une feuille de calcul - des formules, une mise en forme, peut-être un graphique - mais vous ne voulez pas vous battre avec les menus d'Excel. Considérez Claude Code comme un assistant qui connaît Excel sur le bout des doigts : vous décrivez ce que vous voulez en français, et il construit un vrai fichier `.xlsx` avec des formules qui fonctionnent. Ce tutoriel vous montre comment préparer un dossier de projet dans VS Code et laisser Claude Code créer et modifier des feuilles de calcul Excel pour vous.
 
 ## Concepts Clés
 

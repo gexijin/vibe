@@ -129,7 +129,7 @@ Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
 
 ### Option C. Utilisez l'API OpenRouter (commencez gratuitement !)
 
-OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. C'est une façon économique d'utiliser Claude Code : vous ne payez qu'à l'usage et choisissez parmi des modèles de différentes gammes de prix.
+OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. Cela peut être une façon économique d'utiliser Claude Code : vous ne payez qu'à l'usage et choisissez parmi des modèles de différentes gammes de prix.
 
 - Inscrivez-vous sur [openrouter.ai](https://openrouter.ai) et connectez-vous
 - Cliquez sur **Get API key** et copiez la clé dans un endroit sûr
@@ -185,7 +185,7 @@ Vous devriez maintenant pouvoir utiliser Claude Code avec les modèles Claude d�
 
 ## Étape 5 : Tester Claude Code
 
-Vous êtes prêt ! Tapez `claude` dans PowerShell et posez une question générale comme « Expliquez l'informatique quantique ».
+Vous êtes prêt ! Tapez `claude` dans PowerShell et posez une question générale comme « Explique l'informatique quantique ».
 
 ## Étape 6 : Accéder à vos projets
 

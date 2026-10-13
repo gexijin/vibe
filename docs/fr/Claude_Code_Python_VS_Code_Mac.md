@@ -10,7 +10,7 @@ Vous avez configuré Python dans VS Code et pouvez écrire du code manuellement.
 
 ## Concepts Clés
 
-- **[Extension Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - Extension VS Code qui intègre l'assistant IA Claude directement dans votre éditeur avec des modifications de code en ligne
+- **[Extension Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - Extension VS Code qui intègre l'assistant IA Claude directement dans votre éditeur, avec des modifications proposées directement dans votre code
 - **Panneau de Chat** - Panneau latéral dans VS Code où vous conversez avec Claude à propos de votre code
 - **Modifications en Ligne** - Les modifications de code suggérées par Claude apparaissent directement dans vos fichiers avec des différences que vous pouvez accepter ou rejeter
 
@@ -86,7 +86,7 @@ Ajoute du code à iris_analysis.py pour créer un graphique de dispersion de la 
 ```
 
 - Appuyez sur Entrée pour envoyer
-- Claude lit votre fichier et propose des modifications - vous verrez une différence montrant le nouveau code à ajouter
+- Claude lit votre fichier et propose des modifications - vous verrez un aperçu des modifications (diff) montrant le nouveau code à ajouter
 - Cliquez sur **Accept** pour appliquer les modifications
 - Le code seaborn/matplotlib apparaît dans votre fichier
 - Si vous n'avez pas les packages requis, exécutez dans le terminal :
@@ -116,7 +116,7 @@ Supprime le titre. Change le type de marqueur par espèce. Passe au style whiteg
 - Le graphique s'affiche maintenant avec différentes formes de marqueurs par espèce, sans titre, et dans le style whitegrid
 - Fermez la fenêtre du graphique pour continuer
 
-## Étape 7 : Demander à Claude une Analyse PCA
+## Étape 7 : Demander à Claude une Analyse en Composantes Principales (ACP)
 
 - Dans le panneau de chat Claude, tapez :
 
@@ -125,10 +125,10 @@ Ajoute du code pour effectuer une ACP sur les variables numériques et tracer le
 ```
 
 - Appuyez sur Entrée
-- Claude ajoute du code PCA à votre script
+- Claude ajoute le code de l'ACP à votre script
 - Cliquez sur **Accept**
 - Exécutez le code : `python iris_analysis.py` dans le terminal
-- Un graphique PCA apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
+- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
 - Fermez la fenêtre du graphique lorsque vous avez terminé
 
 ## Étape 8 : Demander à Claude de Réviser et Commenter
@@ -142,12 +142,12 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 - Appuyez sur Entrée
 - Claude révise le code et suggère des commentaires expliquant chaque section
 - Cliquez sur **Accept**
-- Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'analyse PCA
+- Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'ACP
 
 ## Prochaines Étapes
 
 - Demandez à Claude de créer un notebook Jupyter : « Convertis ceci en notebook Jupyter »
-- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'Erreur X, peux-tu le corriger ? »
+- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'erreur X, peux-tu la corriger ? »
 - Demandez des tests statistiques : « Ajoute un test t comparant la longueur des sépales entre setosa et versicolor »
 - Demandez à Claude d'optimiser le code : « Rends ce code plus efficace en utilisant la vectorisation numpy »
 - Obtenez de l'aide sur les fonctions inconnues : « Explique ce que fait pandas.groupby »
@@ -158,15 +158,15 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 - **Erreur "Cannot read Python file"** - Assurez-vous d'avoir enregistré le fichier avec l'extension `.py`. Claude a besoin de fichiers enregistrés pour les lire.
 - **L'authentification a échoué** - Vérifiez que votre abonnement Claude Pro/Max est actif ou que votre clé API est valide. Consultez [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
 - **Erreurs de package introuvable** - Installez les packages requis dans le terminal : `pip install seaborn matplotlib scikit-learn pandas`. Attendez que l'installation soit terminée avant d'exécuter le code.
-- **Les modifications de code ne s'appliquent pas** - Assurez-vous de cliquer sur **Accept** sur la différence. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
+- **Les modifications de code ne s'appliquent pas** - Assurez-vous de cliquer sur **Accept** dans l'aperçu des modifications. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
 - **Le graphique ne s'affiche pas** - Assurez-vous d'avoir un affichage. Sur certains systèmes, vous devrez peut-être ajouter `plt.show()` à la fin ou utiliser `%matplotlib inline` dans Jupyter.
 
 ## Résumé du Flux de Travail
 
-- **Extension Claude Code** fournit un assistant IA directement dans VS Code avec un panneau de chat et des différences en ligne
+- **L'extension Claude Code** fournit un assistant IA directement dans VS Code avec un panneau de chat et des modifications affichées directement dans vos fichiers
 - **Raffinement itératif** - Commencez avec du code de base, demandez à Claude d'améliorer, testez immédiatement, puis affinez davantage
-- **Conscience du contexte** - Claude lit vos fichiers Python et comprend la structure de votre projet
-- **Édition en ligne** - Les modifications proposées apparaissent sous forme de différences dans vos fichiers réels, pas dans des réponses de chat séparées
+- **Compréhension du contexte** - Claude lit vos fichiers Python et comprend la structure de votre projet
+- **Édition dans le fichier** - Les modifications proposées apparaissent directement dans vos fichiers réels, pas dans des réponses de chat séparées
 - **Restez dans le flux** - Pas de basculement entre le navigateur et l'éditeur - tout se passe dans VS Code
 
 ---

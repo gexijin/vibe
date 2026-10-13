@@ -63,7 +63,7 @@ Avez-vous déjà essayé de partager votre code R avec un collègue, pour ensuit
 - Sélectionnez **Reopen in Container** dans le menu
 - VS Code construira le conteneur (cela prend 5-10 minutes la première fois)
 - Vous verrez une notification de progression affichant les étapes de construction
-- Lorsque terminé, l'icône verte affichera **Dev Container: R in Docker (AMD64)**
+- Une fois la construction terminée, l'icône verte affichera **Dev Container: R in Docker (AMD64)**
 
 **Remarque :** Le conteneur inclut automatiquement l'extension R et le package languageserver. Le Dockerfile et le devcontainer.json gèrent cela pour vous.
 
@@ -105,7 +105,7 @@ cd vibe
 
 ## Étape 7 : Exécutez du code R ligne par ligne
 
-Le conteneur a R pré-installé avec des packages communs. Exécutons un script d'analyse de données simple.
+Le conteneur a R pré-installé avec des packages courants. Exécutons un script d'analyse de données simple.
 
 - Dans l'Explorer de VS Code, naviguez jusqu'à `R/iris_analysis.R`
 - Cliquez pour ouvrir le fichier
@@ -113,7 +113,7 @@ Le conteneur a R pré-installé avec des packages communs. Exécutons un script 
 - Sélectionnez la première ligne : `data(iris)`
 - Appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac) pour l'exécuter
 - Si vous n'avez pas de terminal R ouvert, la première fois en crée un, la deuxième fois exécute le code
-- Continuez à exécuter chaque ligne une à la fois
+- Continuez en exécutant les lignes une par une
 - Lorsque vous exécutez `head(iris)`, vous verrez les 6 premières lignes dans le terminal
 - Lorsque vous exécutez `summary(iris)`, vous verrez des résumés statistiques
 - Lorsque vous exécutez les commandes `hist()`, des graphiques d'histogrammes s'ouvriront dans des fenêtres séparées
@@ -126,13 +126,13 @@ Le projet inclut une application Shiny de démonstration qui crée un histogramm
 - Dans l'Explorer de VS Code, naviguez jusqu'à `R/app.R`
 - Cliquez pour ouvrir le fichier
 - Vous verrez le code d'une application web Shiny
-- Regardez en haut à droite de la fenêtre de l'éditeur pour un bouton **▶**
+- Repérez le bouton **▶** en haut à droite de la fenêtre de l'éditeur
 - Cliquez sur la flèche déroulante à côté et sélectionnez **Run Shiny App**
 - L'application démarrera et VS Code transférera automatiquement le port 3838
 - Une notification apparaît : **Open in Browser**
 - Cliquez sur **Open in Browser**
 - L'application Shiny s'ouvre dans votre navigateur web
-- Déplacez le curseur pour changer les barres de l'histogramme - le graphique se met à jour en temps réel
+- Déplacez le curseur pour changer le nombre de classes de l'histogramme - le graphique se met à jour en temps réel
 
 ## Étape 9 : Effectuez une modification simple
 
@@ -152,7 +152,7 @@ titlePanel("My First R Docker App")
 - Actualisez votre navigateur (ou il peut s'actualiser automatiquement)
 - Le titre affiche maintenant votre texte personnalisé
 
-## Étape 10 : Comprendre le Dockerfile (Optionnel)
+## Étape 10 : Comprenez le Dockerfile (Optionnel)
 
 - Dans l'Explorer de VS Code, naviguez jusqu'à `.devcontainer/Dockerfile`
 - Cliquez pour ouvrir le fichier

@@ -45,7 +45,7 @@ Si vous avez terminé le [tutoriel sur les slash commands](./Reuse_Prompts_via_S
   cd test_claude
   ```
 
-Les flags `-p` (Mac) et `-Force` (Windows) créent le dossier s'il n'existe pas, ou ne font simplement rien s'il existe déjà.
+Les options `-p` (Mac) et `-Force` (Windows) créent le dossier s'il n'existe pas, ou ne font simplement rien s'il existe déjà.
 
 ## Étape 2 : Démarrer Claude Code
 
@@ -118,7 +118,7 @@ Claude automatiquement :
 - Reconnaît ceci comme une question de recherche médicale
 - Active le skill medical-research
 - Recherche des articles pertinents sur PubMed
-- Analyse les découvertes
+- Analyse les résultats
 - Explique la recherche en langage clair couvrant l'efficacité, les mécanismes et les considérations
 
 La réponse inclut des sections comme "Comment Ça Marche", "Résultats de Recherche", "Considérations Importantes" et "Conclusion".
@@ -193,7 +193,7 @@ Le **document skill** vous aide à lire et écrire des fichiers en PDF, Word, Po
 - **Claude Skills** sont plus puissants que les slash commands - ils combinent code, documentation et instructions personnalisées
 - **Auto-edit mode** (Shift+Tab) simplifie la création en évitant les demandes de permission répétées
 - **Packaging autonome** - Les scripts vivent à l'intérieur des dossiers de skills, les rendant portables et partageables
-- **Activation automatique** - Les skills se déclenchent en fonction des modèles de questions (les questions de recherche activent medical-research)
+- **Activation automatique** - Les skills se déclenchent en fonction du type de question (les questions de recherche activent medical-research)
 - **Interface en langage naturel** - Posez des questions naturelles sans connaître les détails techniques
 
 ## Skills vs Slash Commands

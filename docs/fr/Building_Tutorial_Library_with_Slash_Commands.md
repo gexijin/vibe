@@ -22,9 +22,9 @@ J'ai créé les premiers tutoriels manuellement par le biais d'invites interacti
 
 C'est exactement le modèle décrit dans mon [tutoriel sur les articles de recherche](./Writing_Research_Paper_Claude_Code.md) : parcourez le flux de travail manuellement, puis à la dernière étape, demandez à Claude de l'enregistrer en tant que commande réutilisable qui capture le flux de travail éprouvé :
 
-1. **Recherche** : Claude effectue des recherches sur le web pour obtenir des informations actuelles — pas de numéros de version obsolètes ni de méthodes dépréciées
+1. **Recherche** : Claude effectue des recherches sur le web pour obtenir des informations actuelles — pas de numéros de version obsolètes ni de méthodes abandonnées
 2. **Planification** : Claude présente ce qu'il a appris, recommande une approche et décrit les principales étapes
-3. **Itération** : Je révise le plan, je demande à Claude de réviser plusieurs fois jusqu'à satisfaction
+3. **Itération** : J'examine le plan et demande à Claude de le réviser plusieurs fois jusqu'à satisfaction
 4. **Rédaction** : Après approbation, Claude rédige en suivant des règles de formatage strictes :
    - Lien d'accueil en haut
    - Accroche engageante
@@ -62,7 +62,7 @@ Pour les langues suivantes, j'ai demandé à Claude de « créer une commande sl
 
 Avec les commandes slash prêtes, j'ai demandé à Claude Code de traduire les 25 tutoriels en utilisant des sous-agents. La traduction complète — 50 nouveaux fichiers dans deux langues — n'a pris que 15 minutes.
 
-Le résultat : 81 fichiers de tutoriels traduits dans les répertoires chinois, espagnol, français, allemand et japonais — tous maintenant une qualité et une structure cohérentes.
+Le résultat : 81 fichiers de tutoriels traduits dans les répertoires chinois, espagnol, français, allemand et japonais — tous d'une qualité et d'une structure cohérentes.
 
 ### [`/review-translation`](../assets/commands/review-translation.md) - L'Outil de Maintenance des Traductions
 
@@ -84,7 +84,7 @@ J'ai utilisé des invites dans la langue cible. Au lieu de demander à Claude en
 Par exemple, pour peaufiner les documents chinois, j'ai utilisé :
 « 修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents. » Pour l'espagnol : « Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents. » Pour le japonais : « @docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents. »
 
-De meilleurs modèles tels qu'Opus 4.5 semblent également aider. Cette étape de peaufinage a détecté des formulations maladroites qui n'étaient pas techniquement incorrectes mais qui ne semblaient pas naturelles. Combiné avec les sous-agents, j'ai pu peaufiner tous les plus de 25 documents dans chaque langue en une seule opération par lot.
+De meilleurs modèles tels qu'Opus 4.5 semblent également aider. Cette étape de peaufinage a détecté des formulations maladroites qui n'étaient pas techniquement incorrectes mais qui ne semblaient pas naturelles. Grâce aux sous-agents, j'ai pu peaufiner plus de 25 documents dans chaque langue en une seule opération par lot.
 
 ## Passer à l'Échelle avec les Sous-Agents
 
@@ -108,7 +108,7 @@ Tous les tutoriels suivent la même structure, le même style d'écriture et les
 
 ## Conclusion
 
-La construction de cette bibliothèque de tutoriels m'a appris que l'automatisation ne consiste pas à retirer les humains du processus — il s'agit d'amplifier le jugement humain. Je n'ai pas écrit plus de 100 tutoriels manuellement, mais chacun d'entre eux reflète mes normes, ma structure et mon approbation.
+La construction de cette bibliothèque de tutoriels m'a appris que l'automatisation ne consiste pas à retirer les humains du processus — il s'agit d'amplifier le jugement humain. Je n'ai pas écrit à la main ces plus de 100 tutoriels, mais chacun d'entre eux reflète mes normes, ma structure et mon approbation.
 
 Les commandes slash ont transformé Claude Code d'un assistant utile en une usine de documentation qui travaille sous ma direction, maintient mes normes et s'adapte à la taille de projet dont j'ai besoin.
 
@@ -123,14 +123,14 @@ C'est le pouvoir de l'automatisation systématique.
 ---
 
 **P.S.** Cet article de blog a lui-même été rédigé par Claude Code à travers des invites itératives :
-1. « Examinez mon historique de commits et écrivez un article de blog sur la façon dont j'ai créé ces tutoriels, en soulignant mon utilisation de commandes slash pour automatiser. »
-2. « Reflétez que la commande /tutorial a évolué à partir d'invites interactives manuelles d'abord. »
-3. « Soulignez mon style de tutoriel : pratique, ciblé, étape par étape. »
-4. « Ajoutez que les traductions japonaises sont venues en premier sans commandes slash, et Claude a utilisé 8 sous-agents en parallèle. »
-5. « Ajoutez que Claude a écrit les commandes slash de traduction sans directives spécifiques, et l'utilisation de sous-agents. »
-6. « Lien vers les commandes enregistrées dans docs/assets/commands. »
-7. « Réécrivez avec moins de puces. »
-8. « Lisez réellement les commandes slash et ajoutez des détails. »
-9. « Résumez notre interaction. Ajoutez un P.S. sur la façon dont ce blog a été généré. »
+1. « Examine mon historique de commits et écris un article de blog sur la façon dont j'ai créé ces tutoriels, en soulignant mon utilisation de commandes slash pour automatiser. »
+2. « Indique que la commande /tutorial est d'abord née de prompts interactifs manuels. »
+3. « Souligne mon style de tutoriel : pratique, ciblé, étape par étape. »
+4. « Ajoute que les traductions japonaises sont venues en premier sans commandes slash, et Claude a utilisé 8 sous-agents en parallèle. »
+5. « Ajoute que Claude a écrit les commandes slash de traduction sans directives spécifiques, et l'utilisation de sous-agents. »
+6. « Ajoute un lien vers les commandes enregistrées dans docs/assets/commands. »
+7. « Réécris avec moins de puces. »
+8. « Lis vraiment les commandes slash et ajoute des détails. »
+9. « Résume notre interaction. Ajoute un P.S. sur la façon dont ce blog a été généré. »
 
 Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 15 décembre 2025.
