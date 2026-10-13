@@ -37,7 +37,7 @@ You need R version 4.0 or higher for the best compatibility.
   - Use your package manager (e.g., `sudo apt install r-base` on Ubuntu)
   - Or follow [CRAN Linux](https://cran.r-project.org/bin/linux/) instructions
 
-You'll configure VS Code to find R in Step 3, so don't worry if `R --version` doesn't work in your terminal yet.
+You'll configure VS Code to find R in Step 4, so don't worry if `R --version` doesn't work in your terminal yet.
 
 ## Step 2: Install R Extensions in VS Code
 
@@ -87,12 +87,10 @@ which R
 
 ## Step 4: Configure VS Code to Find R
 
-- In VS Code, click the **gear icon** in the lower left corner
-- Select **Settings** from the menu
-- In the search bar at the top, type `r.rpath.windows` (Windows), `r.rpath.mac` (macOS), or `r.rpath.linux` (Linux)
-- You should see the setting appear. Click **Edit in settings.json** below the setting
-- The settings.json file will open
-- Add the appropriate configuration for your platform inside the curly braces `{}`
+- In VS Code, click **View > Command Palette**
+- Type `Preferences: Open User Settings (JSON)` and select it
+- The settings.json file opens
+- Add the line for your platform inside the curly braces `{}`. If there are other lines already, make sure the line above yours ends with a comma
 
 **For Windows**, add this line (replace `R-4.5.3` with your version from Step 3):
 
@@ -139,7 +137,7 @@ install.packages("shiny")
 
 - Wait for installation to complete (may take a few minutes)
 - Type `q()` and press Enter to exit R
-- Type `n` when asked about saving workspace
+- R closes right away (if it asks about saving the workspace, type `n`)
 
 Simply typing `R` in a regular terminal won't work unless R is in your system PATH. The R extension uses your `r.rpath` setting to find R.
 
@@ -173,7 +171,7 @@ hist(iris$Sepal.Length)
 
 - With `analysis.R` open, select a line of code and press `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (Mac) to run it
 - If you don't have a terminal open, the first `Ctrl+Enter` / `Cmd+Enter` opens an R terminal. The second runs the code.
-- Watch the output appear in the terminal and the plot will open in a separate window
+- Watch the output appear in the terminal. The histogram opens in a plot tab inside VS Code, next to your script
 - You can also select all lines and run them the same way.
 
 ## Step 9: Create a Simple Shiny App
@@ -230,13 +228,13 @@ shinyApp(ui = ui, server = server)
 - Hover your mouse over the word `mean` in your existing code
 - A popup shows the function documentation and usage examples
 - Try hovering over `lm`, `summary`, or `plot` to see their documentation
-- Type `data$` and watch VS Code suggest column names (`x` and `y`)
+- Type `iris$` and watch VS Code suggest column names (`Sepal.Length`, `Species`, and so on)
 
 ## Step 11: Try More Features
 
 - **Markdown integration**: Create an R Markdown file (`.Rmd`) to mix code, output, and text
 - **Code formatting**: Right-click in your R script and select **Format Document** to auto-format code
-- **Debugging**: Set breakpoints by clicking left of line numbers, then run code in debug mode
+- **Debugging**: Install the [R Debugger extension](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger) and follow its setup page to add breakpoints and step through code
 - **Git integration**: Use VS Code's built-in Git features to version control your R projects
 
 ## Next Steps
@@ -260,7 +258,7 @@ shinyApp(ui = ui, server = server)
 
 - **Code completion not working**: Make sure languageserver installed successfully (Step 5). Restart VS Code after installation. Wait 10-20 seconds after opening an R file for the language server to initialize. Check the Output panel (View > Output > R Language Server) for errors.
 
-- **Plots not appearing**: Plots will open in separate windows using R's default graphics device. Make sure you have a window manager available. On some systems, you may need to install X11 (macOS) or ensure graphics support is enabled.
+- **Plots not appearing**: Plots open in a tab inside VS Code. If nothing appears, make sure you started R with **R: Create R Terminal** (not by typing `R` in a plain terminal), then run the `hist()` line again.
 
 - **Shiny app won't run**: Ensure the Shiny extension is installed (Step 2), shiny package is installed (Step 5), and your file is named `app.R`. Check the terminal for error messages. The Run button only appears when VS Code recognizes the file as a Shiny app.
 
