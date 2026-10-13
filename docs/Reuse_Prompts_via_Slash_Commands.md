@@ -7,7 +7,7 @@ title: "Create Custom Slash Commands"
 
 Tired of typing the same detailed prompts over and over? Custom slash commands let you save complex instructions as reusable shortcuts. Like creating keyboard shortcuts for your most frequent tasks, slash commands turn lengthy prompts into simple commands like `/stock-report Apple` that generate comprehensive reports instantly.
 
-The best part? We use Claude to write the detailed prompt and create the Skill. Yes, Claude is very good at prompting...itself.
+The best part? We use Claude to write the detailed prompt and create the slash command. Yes, Claude is very good at prompting...itself.
 
 ## Key Concepts
 
@@ -29,7 +29,7 @@ The best part? We use Claude to write the detailed prompt and create the Skill. 
 - Type these commands:
   ```
   cd ~\Documents
-  mkdir test_claude
+  mkdir -Force test_claude
   cd test_claude
   ```
 
@@ -38,9 +38,11 @@ The best part? We use Claude to write the detailed prompt and create the Skill. 
 - Type these commands:
   ```bash
   cd ~/Documents
-  mkdir test_claude
+  mkdir -p test_claude
   cd test_claude
   ```
+
+If the folder already exists, these commands simply reuse it.
 
 ## Step 2: Start Claude Code
 
@@ -63,7 +65,7 @@ Log in with your Claude subscription following the installation tutorial ([Windo
 Instead of manually creating files, let Claude do the work. Type this prompt:
 
 ```
-Create a slash command called stock-report that generates 
+Create a slash command in .claude/commands/ called stock-report that generates 
 reports on recent developments of a company identified by name or ticker symbol.
 Include:
 - Product or service news 
@@ -71,8 +73,9 @@ Include:
 - Recent financial reports 
 - Analyst reports 
 ```
-When asked, grant Claude permission to create the file.
+If Claude asks for permission to create the file, choose **Yes**.
 Claude will create a detailed prompt and save it as `stock-report.md` to the `.claude/commands/` folder.
+(If Claude saved it as `.claude/skills/stock-report/SKILL.md` instead, that works the same way. Open that file in the next steps.)
 
 **Note:** We use Markdown format throughout: in prompts, reports, and slash commands. Markdown is AI-friendly and can be easily edited as plain text files. 
 
@@ -160,7 +163,7 @@ Claude updates the command file. You can verify from the editor.
   /stock-report AAPL
   ```
 
-Claude creates a file named something like `Apple_2025-12-13.html`. Click on this file from File Explorer on Windows or Mac to open it in your default browser.
+Claude creates a file named something like `Apple_2025-12-13.html`. Double-click this file in File Explorer (Windows) or Finder (Mac) to open it in your default browser.
 
 ## Step 11: Reuse slash command (Optional)
 
@@ -213,7 +216,7 @@ Now that you understand slash commands, create more custom commands for your wor
 - **Custom slash commands** save time by turning complex prompts into simple shortcuts
 - **Arguments** make commands flexible for different inputs (stock tickers, topics, files)
 - **Claude builds commands** - You don't need to manually write Markdown files; just describe what you want
-- **Commands are reusable** - Once created, use them across projects and sessions
+- **Commands are reusable** - Once created, use them in every session in this project folder. To use a command in all your projects, ask Claude to move it to your personal `~/.claude/commands/` folder
 - **Combine commands** - Build a library of specialized commands for different tasks
 
 ---

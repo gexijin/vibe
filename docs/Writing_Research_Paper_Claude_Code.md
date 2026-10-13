@@ -47,11 +47,12 @@ For Windows:
 - Click **File** in the menu bar, then **Open Folder**
 - Navigate to and select the `test_claude` folder in **Documents**
 - Click **Select Folder**. VS Code reloads with your `test_claude` folder
+- If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 For Mac:
 - In VS Code, click **File** in the menu bar, then **Open Folder**
 - Navigate to and select the `test_claude` folder
-- Click **Open** (Mac) or **OK** (Windows)
+- Click **Open**
 - If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 ## Step 4: Start Claude Code
@@ -130,7 +131,7 @@ research and my chosen angle. Use bullet points for the narrative flow.
 Save as outlines.md
 ```
 
-Review the outline and ask Claude to adjust as needed (e.g., "Make section 2 focus more on case studies" or "Add a section on limitations"). 
+Review the outlines in `outlines.md` and ask Claude to adjust as needed (e.g., "Make section 2 focus more on case studies" or "Add a section on limitations"). 
 
 ## Step 10: Draft the Paper
 
@@ -241,7 +242,7 @@ Create a slash command called /research-paper that guides me through
 this entire workflow. Save it so I can use it for future research papers on various topics.
 ```
 
-Claude will create a custom slash command in your `.claude/commands/` folder. It is a Markdown file containing a prompt. You can start your next research paper by simply typing `/research-paper [your topic]`!
+Claude will create a custom slash command, usually in your `.claude/commands/` folder (or `.claude/skills/research-paper/`). It is a Markdown file containing a prompt. You can start your next research paper by simply typing `/research-paper [your topic]`!
 
 ## Step 18: Get Feedback
 

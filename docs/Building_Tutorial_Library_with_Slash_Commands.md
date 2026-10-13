@@ -1,6 +1,8 @@
 ---
 title: "How Claude Code helped me create these tutorials"
 ---
+[Home](./)
+
 # How Claude Code helped me create these tutorials
 
 In mid-December 2025, I spent 2 hours trying to help my research assistant install Claude Code over Zoom. I realized that someone like her needs some specific, hands-on instructions, so I set out to create comprehensive tutorials for Claude Code. My goal: hands-on, focused tutorials that walk complete beginners through real tasks step by step. No theory dumps. No comprehensive reference manuals. Just "do this, then this, then this" until you've accomplished something concrete.
@@ -102,7 +104,7 @@ All tutorials follow the same structure, writing style, and formatting conventio
 - **Structure commands as multi-phase workflows.** Tell Claude how to think through the problem, not just what to do.
 - **Build quality control into the process.** Create a review command alongside your generation command.
 - **Make commands collaborative, not autonomous.** Include approval steps. Claude handles tedious parts; you make strategic decisions.
-- **Use subagents for batch processing.** When processing many documents, explicitly say "Use subagents" in your prompt. First make sure the status line shows **accept edits on** or **auto mode on** (press Shift+Tab to switch)—subagents won't ask for permissions, making parallel processing seamless.
+- **Use subagents for batch processing.** When processing many documents, explicitly say "Use subagents" in your prompt. First make sure the status line shows **accept edits on** or **auto mode on** (press Shift+Tab to switch)—subagents use the same mode, so they rarely stop to ask for permission, making parallel processing much smoother.
 
 ## Conclusion
 
