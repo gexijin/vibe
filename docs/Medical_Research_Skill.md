@@ -138,12 +138,12 @@ Open VS Code to see the skill structure:
 
 **Windows:**
 - Open **File Explorer**, navigate to `C:\Users\YOUR_USERNAME\Documents\test_claude`
-- Right-click the folder and select **Open with Code**
+- Right-click the folder and select **Open with Code** (on Windows 11, click **Show more options** first). If you don't see it, open VS Code and use **File > Open Folder** instead
 
 **Mac:**
 - Open **Finder**, navigate to `Documents/test_claude`
-- Right-click the folder and select **Open with Visual Studio Code**
-- Or just type ``` code . ``` from Terminal
+- Right-click the folder and select **Open With > Visual Studio Code**
+- Or, if you've set up VS Code's `code` command, type `code .` in Terminal
 
 In VS Code:
 - Expand `.claude/skills/medical-research/` in the file explorer
