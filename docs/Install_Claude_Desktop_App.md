@@ -75,7 +75,7 @@ You don't need any of these to use Claude Desktop for everyday chatting — they
 ## Troubleshooting
 
 - **Windows blocks the installer with a "Windows protected your PC" message** — This is Windows' standard SmartScreen warning for new downloads, not specific to Claude. Click **More info**, then **Run anyway**, if you trust the source (the official claude.ai/download page).
-- **Mac says the app "cannot be opened because it is from an unidentified developer"** — This is macOS Gatekeeper, a standard security check. Right-click (or Control-click) the Claude app and choose **Open**, then confirm.
+- **Mac won't open the app, or asks whether you're sure you want to open it** — This is macOS Gatekeeper, a standard security check for apps downloaded from the internet. If you see a prompt, click **Open**. If macOS blocks the app instead, open **System Settings > Privacy & Security**, scroll down, and click **Open Anyway** next to the message about Claude (on macOS 15 Sequoia and later, right-clicking the app and choosing **Open** no longer works for this).
 - **Sign-in doesn't work** — Check your internet connection, and confirm you can log in at [claude.ai](https://claude.ai) in a browser first.
 - **App won't launch after installing** — Restart your computer, then try opening Claude again. If that doesn't help, redownload the installer from [claude.ai/download](https://claude.ai/download).
 
