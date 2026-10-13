@@ -146,7 +146,7 @@ Before committing, review what Claude built.
 - In the Spreadsheet Viewer, click through all three sheets - Income, Expenses, Summary
 - You don't need to understand every formula, but get a sense of the structure
 - Open GitHub Desktop
-- You'll see `budget.xlsx` listed as a changed file
+- You'll see `budget.xlsx` listed as a changed file (you may also see helper scripts Claude wrote, such as a `.py` file - it's fine to commit those too)
 - In the **Summary** field at bottom left, type:
 
 ```

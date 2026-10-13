@@ -42,7 +42,7 @@ If VS Code is already open, close and reopen it so it can find Python.
 - Search for `GrapeCity.gc-excelviewer`
 - Click **Install** on **Spreadsheet Viewer** by **MESCIUS**
 
-**Note:** This extension used to be called **Excel Viewer** by **GrapeCity**, and older guides and videos may still use that name. Searching for "Excel Viewer" now shows several other extensions, so search by the ID above to get the right one. The ID still starts with `GrapeCity` - that's expected.
+**Note:** This extension used to be called **Excel Viewer** by **GrapeCity**, and older guides and videos may still use that name. Searching for "Excel Viewer" now shows several other extensions, so search by the ID above to get the right one. The ID still starts with `GrapeCity` - that's expected. The Marketplace page says it is no longer actively maintained; it still works fine for previewing the files in this tutorial.
 
 This lets you click any `.xlsx` file and see its sheets, numbers, and formulas right inside VS Code. It's great for quick checks, but it can't show charts, colored highlighting, or dropdown lists - for those, open the file in Excel, LibreOffice Calc, or Google Sheets.
 
@@ -74,7 +74,7 @@ Create a spreadsheet called budget.xlsx with columns for Category, Monthly Amoun
 
 - Press Enter
 - Watch Claude write a Python script, run it, and produce `budget.xlsx` in your project folder
-- Claude will ask permission before running commands or installing helper tools (like `openpyxl`, a Python add-on for spreadsheets) - choose **Yes** to let it continue
+- If Claude asks permission to run commands or install helper tools (like `openpyxl`, a Python add-on for spreadsheets), choose **Yes** to let it continue
 - If Claude says Python isn't installed or can't be found, go back to Step 1, then close and reopen VS Code
 
 ## Step 6: Preview the Result
