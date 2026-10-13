@@ -316,11 +316,10 @@ RUN pip install --no-cache-dir \
 - Click the green icon in the bottom-left corner
 - Select **Rebuild Container** from the menu
 - VS Code will rebuild the container with your new package (this takes 2-5 minutes)
-- To verify, open a Python terminal and type:
+- To verify, open a terminal (**Terminal > New Terminal**) and run:
 
-```python
-import plotly
-print(plotly.__version__)
+```bash
+python -c "import plotly; print(plotly.__version__)"
 ```
 
 If it displays the version without errors, the package is installed permanently.
@@ -336,7 +335,7 @@ If it displays the version without errors, the package is installed permanently.
 
 - **Docker Desktop not running** - Open Docker Desktop and wait for the green status indicator before reopening the container
 - **Container build fails** - Check your internet connection; the first build downloads images and packages. Click **Rebuild Container** to retry
-- **Port 8501 already in use** - Stop other apps using that port, or change the port in the Dockerfile and `devcontainer.json`
+- **Port 8501 already in use** - Stop other apps using that port, or pick another port (for example 8502): change it in the Dockerfile and `devcontainer.json`, rebuild the container, then start the app with `streamlit run app.py --server.port 8502`
 
 ## Workflow Overview
 
