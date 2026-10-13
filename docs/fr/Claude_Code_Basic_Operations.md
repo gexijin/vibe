@@ -92,7 +92,7 @@ Vous pouvez demander à Claude n'importe quoi sur votre code en langage naturel.
 
 ## Étape 5 : Slash Commands Essentielles
 
-Tapez `/` et appuyez sur Entrée pour voir toutes les commandes disponibles. Voici les plus importantes :
+Tapez `/` pour voir toutes les commandes disponibles. Voici les plus importantes :
 
 **Voir toutes les commandes :**
 
@@ -170,7 +170,7 @@ Expliquez le code dans @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude lira le notebook et expliquera ce qu'il fait, comment il fonctionne et ce que le code accomplit. Cela amène effectivement le fichier dans le contexte.
 
-Si vous travaillez avec Claude Code depuis VS Code et avez l'extension Claude Code installée, vous pouvez ajouter le fichier au contexte simplement en l'ouvrant. Vous verrez dans le coin inférieur droit de la fenêtre de commande qui affiche `In Nested_Pie_Chart.ipynb`. Alors Claude sait que vous parlez de ce fichier.
+Si vous travaillez avec Claude Code depuis VS Code et avez l'extension Claude Code installée, vous pouvez ajouter le fichier au contexte simplement en l'ouvrant. Vous verrez `In Nested_Pie_Chart.ipynb` dans le coin inférieur droit de la fenêtre Claude Code. Alors Claude sait que vous parlez de ce fichier.
 
 De plus, vous pouvez sélectionner quelques lignes de code et Claude affichera **3 lines selected**. Vous pouvez demander à Claude d'apporter des modifications rapides à ces lignes ou poser des questions. Par conséquent, je recommande vivement d'utiliser Claude Code depuis VS Code.
 
