@@ -82,7 +82,7 @@ Use any text editor to open the `stock-report.md` file from the `.claude/command
 
 If you have VS Code installed (recommended):
 - Start VS Code 
-- From **File**, choose **Open folder**, and select the project folder `Documents/test_claude`
+- From **File**, choose **Open Folder**, and select the project folder `Documents/test_claude`
 - From the file explorer, navigate to `.claude/commands` and click the file `stock-report.md` to open it
 
 Review the prompt and make changes to the instructions if you want.
@@ -95,7 +95,7 @@ First **quit** the current Claude Code session by pressing **Ctrl+C** twice. The
   ```
   claude
   ```
-Now test your new command with a real stock ticker:
+Now test your new command with a real company:
 
 ```
 /stock-report Apple
@@ -135,14 +135,14 @@ Let's modify the slash command to automatically save reports as markdown files. 
   ```
 - Open the report
 
-Claude generates the report and saves it as an markdown file named something like `Apple_2025-12-13.md`. Click the file in VS Code to view it.
+Claude generates the report and saves it as a markdown file named something like `Apple_2025-12-13.md`. Click the file in VS Code to view it.
 
 ## Step 9: Modify the Command through Claude
 
 You can ask Claude to edit the slash commands:
 
 ```
-Revise the stock-report slash command to save the report as a html file.
+Revise the stock-report slash command to save the report as an HTML file.
 ```
 
 Claude updates the command file. You can verify from the editor.
@@ -191,7 +191,7 @@ Then run the research paper command:
 ```
 
 Two key differences:
-- /research-paper was created at the end of an session by capturing human interaction, whereas /stock-report is created from scratch.
+- /research-paper was created at the end of a session by capturing human interaction, whereas /stock-report is created from scratch.
 - /research-paper interactively asks for inputs before drafting a paper.
 
 ## Next Steps
