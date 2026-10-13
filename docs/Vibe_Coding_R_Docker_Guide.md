@@ -39,11 +39,11 @@ You now have a local Git repository and a backup on GitHub.
 ## Step 2: Copy Docker Configuration
 
 - Go to https://github.com/gexijin/vibe
-  - **Note for ARM64 users (Apple Silicon Macs):** Use https://github.com/gexijin/vibe/tree/ARM64 instead
+  - **Note for Apple Silicon Macs:** The main version runs on Apple Silicon through Docker Desktop's built-in emulation. It works, but the first build and R itself are slower.
 - Click **Code**, then **Download ZIP**
 - Open File Explorer (Windows) or Finder (Mac) and go to your **Downloads** folder
 - Unzip the file: on Windows, right-click it and choose **Extract All**; on Mac, double-click it
-- Open the unzipped `vibe-main` folder (`vibe-ARM64` if you used the ARM64 link). On Windows it may contain another folder with the same name; open that one
+- Open the unzipped `vibe-main` folder. On Windows it may contain another folder with the same name; open that one
 - Find the `.devcontainer` folder
   - On Mac, Finder hides folders whose names start with a dot. Press **Cmd+Shift+.** (period) to show them
 - Copy the entire folder (it contains `Dockerfile` and `devcontainer.json`)
@@ -64,10 +64,10 @@ Your `nba-dashboard` folder should now contain:
 - Click **Select Folder** (Windows) or **Open** (Mac)
 - A notification appears in the bottom right: **Folder contains a Dev Container configuration file**
 - Click **Reopen in Container**
-- If you don't see the notification, click the green icon in bottom-left corner and select **Reopen in Container**
-- VS Code builds the Docker container (takes 3-5 minutes first time)
+- If you don't see the notification, click the **><** icon in the bottom-left corner and select **Reopen in Container**
+- VS Code builds the Docker container (takes 5-10 minutes the first time)
 - Watch the progress notification showing build steps
-- When complete, the green icon shows **Dev Container: R in Docker (AMD64)** (or **(ARM64)**)
+- When complete, the **><** icon in the bottom-left corner shows **Dev Container: R in Docker (AMD64)**
 
 ## Step 4: Start Claude Code
 
@@ -81,7 +81,9 @@ claude
 
 - A browser window opens for authentication
 - Click **Continue with Google** or **Continue with Email**
-- Log in with your Claude account (or create one)
+- Log in with your Claude account. Claude Code needs a paid Claude plan (such as Pro or Max) or an Anthropic Console account - the free plan doesn't include it
+- If the browser shows a code instead of saying you're done, copy the code, go back to the VS Code terminal and paste it at the `Paste code here if prompted` prompt, then press Enter
+- If no browser window opens, press `c` to copy the login link and paste it into your browser
 - After authentication succeeds, return to VS Code terminal
 - You'll see Claude's welcome message
 
@@ -148,12 +150,11 @@ Create a Shiny app in a file called app.R that shows an interactive table of NBA
 
 Test your dashboard to see if it works.
 
-- Look at the top right of the VS Code editor (where `app.R` is open)
+- In the VS Code Explorer (left sidebar), click `app.R` to open it
+- Look at the top right of the editor
 - Find the **▶** button with a dropdown arrow
 - Click the dropdown and select **Run Shiny App**
-- The app starts and a notification appears: **Open in Browser**
-- Click **Open in Browser**
-- The NBA dashboard opens in your web browser
+- The app starts and the dashboard opens in a preview tab inside VS Code (to use your regular browser, open the **Ports** tab at the bottom and click the globe icon next to the port)
 - Try moving the points slider—the table filters in real-time
 - Scroll through the player data
 - Commit changes if the app works
@@ -173,7 +174,7 @@ Add a bar chart below the table showing the top 15 players by points. Use differ
 - Press Enter
 - Claude updates `app.R` with visualization code
 - Click **Run Shiny App** again to reload the app
-- Refresh your browser
+- If the preview doesn't change, click the reload arrow at the top of the preview tab (or refresh your browser)
 - You now see a colorful bar chart and scatter plot
 - Move the slider—all visualizations update together
 
@@ -191,7 +192,7 @@ Add a dropdown menu to filter players by team. Put it at the top. When I select 
 
 - Press Enter
 - Claude adds the team filter
-- Refresh your browser
+- Click the reload arrow at the top of the preview tab (or refresh your browser)
 - Test the dropdown—select different teams like Lakers, Warriors, Celtics
 - Watch the table and charts update for each team
 
