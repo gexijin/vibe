@@ -433,6 +433,11 @@
 <body>
     <div class="lang-switch">
         <a href="../">English</a>
+        <a href="../zh/">中文</a>
+        <a href="../ja/">日本語</a>
+        <a href="../es/">Español</a>
+        <a class="active">Français</a>
+        <a href="../de/">Deutsch</a>
         <a href="../hi/">हिन्दी</a>
     </div>
     <div class="container">
@@ -533,7 +538,7 @@
             <p id="modal-desc"></p>
             <div class="modal-buttons">
                 <a id="modal-link" class="modal-btn">Commencer</a>
-                <button id="modal-complete" class="modal-btn-secondary">Marquer Terminé</button>
+                <button id="modal-complete" class="modal-btn-secondary">Marquer comme terminé</button>
             </div>
         </div>
     </div>
@@ -1145,7 +1150,7 @@
         // Update complete button state
         function updateCompleteButton() {
             const completed = isCompleted(currentNodeId);
-            modalComplete.textContent = completed ? '✓ Terminé' : 'Marquer Terminé';
+            modalComplete.textContent = completed ? '✓ Terminé' : 'Marquer comme terminé';
             modalComplete.classList.toggle('completed', completed);
         }
 
