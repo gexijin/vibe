@@ -48,8 +48,8 @@ Click the **Explorer** icon (top of Activity Bar) to see the file browser.
 ## Step 3: Open a Folder and Explore
 
 - Click **File** → **Open Folder**
-- Navigate to any existing folder on your computer (e.g., Documents)
-- Click **Open** (or **Select Folder**)
+- Go to your **Documents** folder and create a new empty folder for practice, such as `vscode_practice` (use the **New Folder** button in the window)
+- Select that new folder, then click **Open** (or **Select Folder**)
 - If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 The Explorer sidebar now shows your folder's files:
@@ -60,7 +60,7 @@ The Explorer sidebar now shows your folder's files:
 
 ## Step 4: Create a Markdown File
 
-- In Explorer, click the **New File** icon (page with +)
+- In Explorer, move your mouse over the folder name at the top, then click the **New File** icon (page with +) that appears
 - Name it `README.md`
 - Add this content:
 
@@ -133,7 +133,7 @@ VS Code includes [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilo
 
 GitHub Copilot will analyze your file and explain what it does. You can ask it to write new code, fix bugs, or answer questions like "How do I add more features?"
 
-**Tip:** For [inline editing](https://code.visualstudio.com/docs/copilot/copilot-chat), highlight code in any file and press `Ctrl+I` (Windows/Linux) or `Cmd+I` (Mac) to ask Copilot to modify, fix, or explain just that section.
+**Tip:** For [inline editing](https://code.visualstudio.com/docs/chat/inline-chat), highlight code in any file and press `Ctrl+I` (Windows/Linux) or `Cmd+I` (Mac) to ask Copilot to modify, fix, or explain just that section.
 
 ## How to Reopen Your Project
 
@@ -145,7 +145,7 @@ GitHub Copilot will analyze your file and explain what it does. You can ask it t
 
 - **Preview not showing:** Make sure Markdown Preview Enhanced extension is installed and you have a `.md` file open
 - **Terminal shows wrong directory:** Click the trash icon in terminal panel, then click **Terminal** → **New Terminal**
-- **Chat menu not visible:** GitHub Copilot Chat may need to be installed - click **Extensions** icon, search for "GitHub Copilot Chat", and install it
+- **Chat menu not visible:** AI features may be turned off. Open Settings (press `Ctrl+,` on Windows/Linux or `Cmd+,` on Mac), search for `disable AI features`, and untick it. Then hover over the Copilot icon in the Status Bar (bottom) and select **Use AI Features**
 - **Extensions not working:** Click **View** → **Command Palette**, type "reload window", and select **Developer: Reload Window**
 
 ## The Complete Workflow
