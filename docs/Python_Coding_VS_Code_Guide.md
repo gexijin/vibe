@@ -189,6 +189,7 @@ streamlit run app.py
 - A popup shows function signature, parameters, and documentation
 - Try typing `import ` and watch VS Code suggest package names
 - When you type a function call, IntelliSense shows parameter hints
+- When you're done, delete the unfinished lines you typed in this step (such as `iris.gr` and `import `) and save the file, so the script runs cleanly in the next step
 
 ## Step 11: Try Debugging
 
