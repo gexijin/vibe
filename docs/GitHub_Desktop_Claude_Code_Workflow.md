@@ -209,13 +209,13 @@ Notice the first failed sound attempt isn't there - you discarded it! Only worki
 
 ## Troubleshooting
 
-**"Authentication failed":** GitHub Desktop → File/Preferences → Accounts → Sign out and sign in again
+**"Authentication failed":** In GitHub Desktop, open **File → Options → Accounts** (Windows) or **GitHub Desktop → Settings → Accounts** (Mac), then sign out and sign in again
 
 **Claude says "not a git repository":** Make sure you're in the right folder (`cd ~/Documents/test_claude`)
 
 **Timer doesn't work:** Open browser console (right-click → **Inspect** → **Console**), copy errors, paste to Claude
 
-**Need help?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
+**Need help?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://code.claude.com/docs)
 
 ## The Complete Workflow
 
