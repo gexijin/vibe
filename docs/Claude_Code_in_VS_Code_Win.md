@@ -28,7 +28,7 @@ You've installed Claude Code on your Windows machine - now you want a visual edi
 
 ## Step 2: Start VS Code
 
-- Click the **Windows Start button** (bottom-left corner of your screen)
+- Click the **Windows Start button** (the Windows logo on your taskbar)
 - Type `Visual Studio Code` or `VS Code` in the search box
 - Click on **Visual Studio Code** when it appears in the search results
 - VS Code opens with a Welcome tab - you can close this tab
@@ -75,12 +75,12 @@ After closing VS Code, here's how to get back to your project:
 - Ask Claude Code to explain an existing codebase: "Explain what this project does"
 - Have Claude Code help you write new features: "Add a function that calculates the average of a list"
 - Use Claude Code to fix bugs: "This code gives an error, can you fix it?"
-- Try the Claude Code VS Code extension for a visual interface with inline diffs (search "Claude Code" in Extensions)
+- You already installed the Claude Code extension in the installation tutorial — click the Spark icon at the top-right of the editor to chat with Claude in a panel with inline diffs instead of the terminal
 
 ## Troubleshooting
 
-- **`claude` command not found** - Run `claude --version` in the VS Code terminal to check if Claude Code is installed; if not, follow the [installation tutorial](Install_CLAUDE_Code_Win.md) first
-- **Using WSL instead?** - If you set up the optional WSL/Ubuntu path, install the **WSL** extension from the Extensions sidebar, click the blue/green icon in the bottom-left corner, and select **Connect to WSL** before opening your project folder (accessed at `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
+- **`claude` is not recognized** - Close VS Code completely (all windows) and open it again, then open a new terminal and try `claude`. If it still fails, run `claude --version` in a regular PowerShell window; if that fails too, follow the [installation tutorial](Install_CLAUDE_Code_Win.md) first
+- **Using WSL instead?** - If you set up the optional WSL/Ubuntu path, install the **WSL** extension from the Extensions sidebar, click the **><** icon in the bottom-left corner, and select **Connect to WSL** before opening your project folder (accessed at `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
 
 ## Workflow Overview
 

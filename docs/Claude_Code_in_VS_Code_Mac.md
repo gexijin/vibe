@@ -52,11 +52,7 @@ You should now see `TEST_CLAUDE` in the Explorer panel on the left side.
   ```
   claude
   ```
-- The first time you do this, Claude Code asks you to log in:
-  1. Press Enter to open a browser window
-  2. Log in or create an account with Anthropic
-  3. Copy the code and paste it back in the terminal
-  4. Press Enter
+- If Claude Code asks you to log in, follow the login steps in the [installation tutorial](./Install_Claude_Code_MacOS). Claude Code needs a paid Claude plan (such as Pro or Max) or an Anthropic Console account — the free plan doesn't include it.
 - You'll see a welcome message and the Claude Code prompt
 - Now you can use Claude Code while editing files in VS Code
 
