@@ -30,7 +30,7 @@ You need R version 4.0 or higher for the best compatibility.
 
 - **macOS**:
   - Download from [CRAN macOS](https://cran.r-project.org/bin/macosx/) and run the .pkg installer
-  - Note whether you're using Intel (`/Library/Frameworks/R.framework/Resources/bin/R`) or Apple Silicon with Homebrew (`/opt/homebrew/bin/R`)
+  - The CRAN installer puts R at `/Library/Frameworks/R.framework/Resources/bin/R` on both Intel and Apple Silicon Macs (if you installed R with Homebrew instead, it's `/opt/homebrew/bin/R` on Apple Silicon)
   - If updating, the new version will replace the old one
 
 - **Linux**:
@@ -251,7 +251,7 @@ shinyApp(ui = ui, server = server)
 
 - **"R is not recognized" in VS Code terminal**: VS Code can't find R. Check your settings.json (Step 4) - verify the R path is correct and points to `R.exe` (Windows) or the R binary (Mac/Linux). Example paths:
   - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (adjust version number)
-  - macOS Intel: `/Library/Frameworks/R.framework/Resources/bin/R`
+  - macOS (CRAN installer, Intel or Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`
   - Linux: `/usr/bin/R`
   After fixing, restart VS Code completely.
