@@ -39,11 +39,12 @@ Vous disposez maintenant d'un dépôt Git local et d'une sauvegarde sur GitHub.
 
 ## Étape 2 : Copier la Configuration Docker
 
-Vous avez besoin du dossier `.devcontainer` du projet vibe pour configurer votre environnement Docker.
+Vous avez besoin du dossier `.devcontainer` du projet `python-docker-demo` que vous avez créé dans [Programmation Python dans VS Code via un Conteneur Docker](./Python_Coding_Docker_Guide). Il donne à ce projet le même environnement Python, avec pandas, matplotlib et Claude Code déjà installés.
 
 - Ouvrez l'Explorateur de fichiers (Windows) ou Finder (Mac)
-- Naviguez vers votre dossier de projet vibe (par exemple, `Documents/vibe`)
+- Naviguez vers votre dossier `python-docker-demo`
 - Trouvez le dossier `.devcontainer`
+  - Sur Mac, le Finder masque les dossiers dont le nom commence par un point. Appuyez sur **Cmd+Shift+.** (point) pour les afficher
 - Copiez l'intégralité du dossier (il contient `Dockerfile` et `devcontainer.json`)
 - Naviguez vers votre nouveau dossier `iris-analysis`
 - Collez le dossier `.devcontainer` à cet endroit
