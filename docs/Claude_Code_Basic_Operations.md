@@ -91,7 +91,7 @@ You can ask Claude anything about your code in natural language. It reads files 
 
 ## Step 5: Essential Slash Commands
 
-Type `/` and press Enter to see all available commands. Here are the most important ones:
+Type `/` to see all available commands. Here are the most important ones:
 
 **View all commands:**
 
@@ -169,7 +169,7 @@ Explain the code in @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude will read the notebook and explain what it does, how it works, and what the code accomplishes. This effectively brings the file to the context. 
 
-If you're working with Claude Code from VS Code and have the Claude Code extension installed, you can add the file to context simply by opening it. You will see in the lower right of the command windows that reads `In Nested_Pie_Chart.ipynb`. Then Claude knows you are talking about this file.
+If you're working with Claude Code from VS Code and have the Claude Code extension installed, you can add the file to context simply by opening it. You will see `In Nested_Pie_Chart.ipynb` in the lower right of the Claude Code window. Then Claude knows you are talking about this file.
 
 Furthermore, you can select a few lines of code and Claude will show **3 lines selected**. You can ask Claude to make quick changes to these lines or ask questions. Therefore, I highly recommend using Claude Code from VS Code. 
 
