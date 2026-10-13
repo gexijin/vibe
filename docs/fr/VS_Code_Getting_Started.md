@@ -124,7 +124,7 @@ Vérifiez l'Explorateur - le dossier `notes` apparaît ! Le terminal s'exécute 
 
 ## Étape 8 : Utiliser les Agents IA dans VS Code (Optionnel)
 
-VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat), un assistant IA qui peut expliquer, écrire et déboguer du code.
+VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview), un assistant IA qui peut expliquer, écrire et déboguer du code.
 
 - Ouvrez le fichier `README.md` (ou tout autre fichier de votre projet)
 - Cliquez sur **Chat** → **Open Chat** dans la barre de titre (ou appuyez sur `Ctrl+Alt+I` sur Windows/Linux, `Ctrl+Cmd+I` sur Mac)
