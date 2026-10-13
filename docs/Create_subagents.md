@@ -82,32 +82,22 @@ Your stock-picker subagent will:
 
 ## Step 4: Create the Stock Picker Subagent
 
-Type this command:
+Ask Claude to write the subagent file for you. Copy and paste this prompt:
 
 ```
-/agents
+Create a project subagent called stock-picker in .claude/agents/:
+- It takes two or more stocks
+- Uses the stock-report skill to do research
+- Score cards are created based on the categories of data collected
+- A final recommendation is given.
+Use the Sonnet model.
 ```
 
-You'll see the Claude Code agents interface showing existing subagents (if any) and options to **Create**, **Edit**, or **Delete** subagents.
+Claude creates the file `.claude/agents/stock-picker.md`. If Claude asks for permission to create the file, choose **Yes**.
 
-Now create your subagent:
-- Select **Create new subagent**
-- Select **Project**
-- Select **Generate with Claude (recommended)**
-- Paste the following for instructions:
+**Note:** In older versions of Claude Code, typing `/agents` opened a menu for creating subagents. In current versions, `/agents` only reminds you to ask Claude, which is what we just did.
 
-  ```
-  Create a markdown file for a new subagent called stock-picker:
-  - It takes two or more stocks
-  - Uses the stock-report skill to do research
-  - Score cards are created based on the categories of data collected
-  - A final recommendation is given.
-  ```
-- Press **Enter** on **[Continue]** to use **All tools**
-- Select **Sonnet** for model
-- Press **Enter** to randomly pick a color
-
-**What "All tools" means:** A subagent can be limited to only the tools it needs—for example, a research-only agent with just web search. This tutorial uses **All tools** since the stock-picker needs to research online and may write files. You can restrict this later by editing the subagent's file.
+**Tools:** A subagent can be limited to only the tools it needs—for example, a research-only agent with just web search. If the file has no `tools:` line, the subagent can use all tools, which the stock-picker needs to research online and write files.
 
 ## Step 5: Review What You Built (Reflection Checkpoint)
 
@@ -124,11 +114,12 @@ There is a **YAML frontmatter** at the top:
 ---
 name: stock-picker
 description: Compares multiple companies for investment decisions...
-skills: stock-report
+skills:
+  - stock-report
 ---
 ```
 
-This frontmatter (the section between `---` markers) tells Claude Code when to activate this subagent and which skills it can use.
+This frontmatter (the section between `---` markers) tells Claude Code when to use this subagent (`description`) and which skills to load into it from the start (`skills`).
 
 There is a **System prompt** below the frontmatter with your scoring methodology.
 
@@ -140,6 +131,8 @@ There is a **System prompt** below the frontmatter with your scoring methodology
 You can edit the file directly or ask Claude to update it.
 
 ## Step 6: Test the Subagent
+
+First **quit** Claude Code by pressing **Ctrl+C** twice, then type `claude` to start it again. Claude Code only notices a brand-new `.claude/agents/` folder after a restart.
 
 Now test your subagent with a real comparison. Type:
 
@@ -183,7 +176,7 @@ Now that you have a working stock-picker subagent, try these extensions:
 - **Subagent not activating**: Make sure your request mentions comparing companies or investment decisions. Try: "Use the stock-picker subagent to compare..."
 - **Skill not found**: Verify `.claude/skills/stock-report/SKILL.md` exists. Restart Claude Code if you just added it.
 - **Incomplete scores**: Ask the subagent to "continue" or "explain the scores for each category in more detail"
-- **Error creating subagent**: Check that the `.claude/agents/` folder exists. Claude Code should create it automatically.
+- **Subagent not found after creating it**: Check that `.claude/agents/stock-picker.md` exists. If it does, quit Claude Code (Ctrl+C twice) and start it again with `claude`. A brand-new `.claude/agents/` folder is only picked up after a restart.
 
 ## Workflow Overview
 
