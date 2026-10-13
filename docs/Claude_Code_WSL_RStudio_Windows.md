@@ -182,7 +182,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 ## Next Steps
 
 - Try asking Claude to add statistical tests (t-tests, ANOVA) to your analysis
-- Ask Claude to get a **Python version** of this code and prepare a Quarto document
+- Ask Claude to write a **Python version** of this code and prepare a Quarto document
 - Ask Claude to create functions for repetitive tasks in your R scripts
 - Use Claude to debug error messages when your R code doesn't run
 - Explore asking Claude to optimize slow R code for better performance

@@ -51,7 +51,7 @@ Git needs to know who you are for commit messages.
   git config --global user.email "your.email@example.com"
   ```
 
-Using your name and email helps you identify who made changes when multiple persons work on this.
+Using your name and email helps you identify who made changes when multiple people work on this.
 
 ## Step 4: Navigate to Your Documents Folder
 
@@ -211,7 +211,7 @@ Claude displays your commits in a readable format. You'll see:
 - Your initial timer app commit
 - The preset buttons (1-min and 5-min) commit
 - The sound notification commit
-- The snooze button.
+- The snooze button commit
 
 Notice the 15-minute button attempt isn't there—you discarded it!
 
