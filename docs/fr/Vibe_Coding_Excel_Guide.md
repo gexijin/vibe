@@ -102,7 +102,7 @@ Les nombres sont utiles, mais les graphiques racontent l'histoire en un coup d'�
 - Dans le terminal Claude Code, tapez :
 
 ```
-Ajoute à la feuille Dépenses un graphique en secteurs montrant la part totale de chaque catégorie dans les dépenses. Ajoute à la feuille Synthèse un graphique en barres comparant le Total des revenus et le Total des dépenses pour chaque mois.
+Ajoute à la feuille Dépenses un graphique en secteurs montrant la part totale de chaque catégorie dans les dépenses, avec une part par catégorie (les deux mois cumulés). Ajoute à la feuille Synthèse un graphique en barres comparant le Total des revenus et le Total des dépenses pour chaque mois.
 ```
 
 - Appuyez sur Entrée
@@ -133,7 +133,7 @@ Rendez la feuille plus facile à compléter sans fautes de frappe.
 - Dans le terminal Claude Code, tapez :
 
 ```
-Ajoute une validation des données à la colonne Catégorie de la feuille Dépenses pour qu'elle n'accepte que les valeurs d'une liste déroulante contenant les catégories existantes, plus « Autre ». Ajoute deux lignes vides en bas, prêtes pour de nouvelles saisies.
+Ajoute une validation des données à la colonne Catégorie de la feuille Dépenses pour qu'elle n'accepte que les valeurs d'une liste déroulante contenant les catégories existantes, plus « Autre ». Ajoute deux lignes vides juste au-dessus de la ligne Total, prêtes pour de nouvelles saisies, et assure-toi que le Total, les formules de la Synthèse, les totaux du graphique en secteurs et les règles de couleur les incluent.
 ```
 
 - Appuyez sur Entrée
