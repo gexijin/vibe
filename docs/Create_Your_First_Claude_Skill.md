@@ -57,9 +57,12 @@ claude
 
 Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
-## Step 3: Enable Auto-Approve for Edits
+## Step 3: Let Claude Edit Files Without Asking
 
-Press **Shift+Tab** to enable auto-approve mode for edits.
+Look at the status line just below the Claude Code prompt:
+
+- If it says **auto mode on** or **accept edits on**, you're all set
+- If it says **manual mode on**, press **Shift+Tab** until it says **accept edits on**
 
 This allows Claude to create and modify files without asking permission each time.
 
