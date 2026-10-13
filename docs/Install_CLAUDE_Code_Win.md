@@ -87,7 +87,7 @@ After the sidebar opens:
 - type: Explain this project to me
 - press Enter
 
-If Claude responds, you are ready to use it.
+If Claude responds, you are ready to use it. The first time, the sidebar may ask you to sign in instead: follow its prompts, or connect your account in Step 4 below and then try again.
 
 > Tip: If the sidebar is still missing, make sure the Claude Code extension is installed and that VS Code has been restarted.
 
