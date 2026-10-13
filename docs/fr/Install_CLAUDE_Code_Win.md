@@ -157,7 +157,7 @@ OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grand
    ```
 - Parcourez les modèles disponibles sur [openrouter.ai/models](https://openrouter.ai/models)
 - Le niveau gratuit vous donne 50 requêtes API par jour
-- Consultez le [guide officiel OpenRouter](https://openrouter.ai/docs/guides/claude-code-integration) pour plus de détails
+- Consultez le [guide officiel OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) pour plus de détails
 
 ### Option D. Utilisez l'API Anthropic via Azure Foundry
 

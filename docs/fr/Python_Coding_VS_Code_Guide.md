@@ -220,7 +220,7 @@ streamlit run app.py
 
 - **pip install échoue** : Assurez-vous que votre environnement virtuel est activé (recherchez `(.venv)` dans le terminal). Sur Linux, vous devrez peut-être installer d'abord `python3-venv`. Sur Windows, vérifiez que l'antivirus ne bloque pas pip.
 
-- **L'application Streamlit ne s'exécute pas** : Assurez-vous que streamlit est installé dans votre environnement virtuel (`pip list | grep streamlit`). Vérifiez le terminal pour les messages d'erreur. Assurez-vous qu'aucune autre application n'utilise le port 8501.
+- **L'application Streamlit ne s'exécute pas** : Assurez-vous que streamlit est installé dans votre environnement virtuel (`pip show streamlit`). Vérifiez le terminal pour les messages d'erreur. Assurez-vous qu'aucune autre application n'utilise le port 8501.
 
 ## Résumé du Flux de Travail
 

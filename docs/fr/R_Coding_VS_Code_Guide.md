@@ -38,7 +38,7 @@ Vous avez besoin de R version 4.0 ou supérieure pour une meilleure compatibilit
   - Utilisez votre gestionnaire de packages (par exemple, `sudo apt install r-base` sur Ubuntu)
   - Ou suivez les instructions [CRAN Linux](https://cran.r-project.org/bin/linux/)
 
-Vous configurerez VS Code pour trouver R à l'Étape 3, donc ne vous inquiétez pas si `R --version` ne fonctionne pas encore dans votre terminal.
+Vous configurerez VS Code pour trouver R à l'Étape 4, donc ne vous inquiétez pas si `R --version` ne fonctionne pas encore dans votre terminal.
 
 ## Étape 2 : Installer les Extensions R dans VS Code
 
@@ -231,7 +231,7 @@ shinyApp(ui = ui, server = server)
 - Survolez avec votre souris le mot `mean` dans votre code existant
 - Une fenêtre contextuelle affiche la documentation de la fonction et des exemples d'utilisation
 - Essayez de survoler `lm`, `summary`, ou `plot` pour voir leur documentation
-- Tapez `data$` et regardez VS Code suggérer les noms de colonnes (`x` et `y`)
+- Tapez `iris$` et regardez VS Code suggérer les noms de colonnes (`Sepal.Length`, `Species`, etc.)
 
 ## Étape 11 : Essayer Plus de Fonctionnalités
 

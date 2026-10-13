@@ -212,4 +212,4 @@ Le flux de travail est simple : écrivez ou modifiez du code avec Claude dans le
 
 ---
 
-Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 11 décembre 2024.
+Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 11 décembre 2025.

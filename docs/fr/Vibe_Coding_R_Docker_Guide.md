@@ -227,7 +227,7 @@ Le vibe coding brille lorsque vous itérez. Essayez d'ajouter des fonctionnalit�
 - « Ajoute une zone de recherche de joueur pour que je puisse taper le nom d'un joueur et accéder directement à lui »
 - « Affiche les logos des équipes à côté des noms d'équipes dans le menu déroulant »
 - « Ajoute un graphique linéaire montrant la tendance des points par match pour l'équipe sélectionnée »
-- « Rends le graphique à barres triable en cliquant sur les en-têtes de colonnes »
+- « Rends le tableau triable en cliquant sur les en-têtes de colonnes »
 - « Ajoute des infobulles au nuage de points montrant les noms des joueurs quand je survole »
 
 Après chaque fonctionnalité réussie :
