@@ -28,13 +28,13 @@ Sie benötigen Python 3.8 oder höher für die beste Kompatibilität mit moderne
 - **Windows**:
   - Gehen Sie zu [python.org/downloads/windows](https://www.python.org/downloads/windows/) und klicken Sie unter der neuesten Python 3-Version auf **Windows installer (64-bit)** (nicht auf den „install manager“)
   - Führen Sie das Installationsprogramm aus
-  - **Aktivieren Sie das Kontrollkästchen „Add python.exe to PATH"** bevor Sie auf Install Now klicken
+  - **Aktivieren Sie das Kontrollkästchen „Add python.exe to PATH“**, bevor Sie auf **Install Now** klicken
   - Notieren Sie den Installationsort (typischerweise `C:\Users\IhrName\AppData\Local\Programs\Python\Python312`)
 
 - **macOS**:
   - Laden Sie von [python.org](https://www.python.org/downloads/) herunter und führen Sie das Installationsprogramm aus
   - Öffnen Sie nach Abschluss des python.org-Installationsprogramms **Finder > Programme** (Applications) **> Python 3.x** und doppelklicken Sie auf **Install Certificates.command** (sonst schlägt das Laden von Daten aus dem Internet in Schritt 7 mit `CERTIFICATE_VERIFY_FAILED` fehl)
-  - Oder verwenden Sie Homebrew: Öffnen Sie Terminal und geben Sie `brew install python` ein
+  - Oder verwenden Sie Homebrew: Öffnen Sie das **Terminal** und geben Sie `brew install python` ein
   - Homebrew-Pfad: `/opt/homebrew/bin/python3` (Apple Silicon) oder `/usr/local/bin/python3` (Intel)
 
 - **Linux**:
@@ -129,7 +129,7 @@ plt.show()
 
 ## Schritt 8: Python-Code interaktiv ausführen
 
-- Mit geöffneter `analysis.py` klicken Sie auf die Schaltfläche **▶ Run Python File** in der oberen rechten Ecke
+- Klicken Sie bei geöffneter `analysis.py` auf die Schaltfläche **▶ Run Python File** in der oberen rechten Ecke
 - Oder klicken Sie mit der rechten Maustaste im Editor und wählen Sie **Run Python File in Terminal**
 - Beobachten Sie die Ausgabe im Terminal-Panel
 - Ein Histogramm-Fenster öffnet sich und zeigt Ihren Plot
@@ -185,7 +185,7 @@ streamlit run app.py
 
 ## Schritt 10: Codevervollständigung und IntelliSense verwenden
 
-- In `analysis.py` beginnen Sie auf einer neuen Zeile `iris.` zu tippen
+- Beginnen Sie in `analysis.py` auf einer neuen Zeile, `iris.` zu tippen
 - Ein Dropdown erscheint mit allen verfügbaren Methoden und Attributen
 - Geben Sie `iris.gr` ein und beobachten Sie, wie es `groupby()` vorschlägt
 - Bewegen Sie Ihre Maus über `pd.read_csv` in Ihrem bestehenden Code
@@ -196,7 +196,7 @@ streamlit run app.py
 
 ## Schritt 11: Debugging ausprobieren
 
-- In `analysis.py` klicken Sie links neben Zeilennummer 9 (die Zeile `print(iris.head())`), um einen Breakpoint zu setzen (roter Punkt erscheint)
+- Klicken Sie in `analysis.py` links neben die Zeilennummer 9 (die Zeile `print(iris.head())`), um einen Breakpoint zu setzen (roter Punkt erscheint)
 - Klicken Sie in der Menüleiste auf **Run**, dann auf **Start Debugging**
 - Wählen Sie **Python File**, wenn Sie dazu aufgefordert werden
 - Die Codeausführung pausiert am Breakpoint
@@ -213,7 +213,7 @@ streamlit run app.py
 
 ## Fehlerbehebung
 
-- **„Python is not recognized" im Terminal**: Python ist nicht in Ihrem System-PATH. Unter Windows installieren Sie Python neu und aktivieren Sie „Add python.exe to PATH". Unter Mac/Linux verwenden Sie `python3` statt `python`. Starten Sie VS Code nach der Korrektur neu.
+- **„Python is not recognized“ im Terminal**: Python ist nicht in Ihrem System-PATH. Unter Windows installieren Sie Python neu und aktivieren Sie „Add python.exe to PATH“. Unter Mac/Linux verwenden Sie `python3` statt `python`. Starten Sie VS Code nach der Korrektur neu.
 
 - **Kein Interpreter gefunden**: Klicken Sie auf den Interpreter-Selektor in der unteren rechten Ecke von VS Code, oder klicken Sie auf **View > Command Palette** und führen Sie `Python: Select Interpreter` aus. Wenn Ihre Python-Installation nicht erscheint, wählen Sie **Enter interpreter path** und navigieren Sie zu Ihrer Python-Ausführungsdatei.
 
@@ -232,7 +232,7 @@ streamlit run app.py
 VS Code bietet eine moderne, leichtgewichtige Umgebung für Python-Entwicklung mit diesen Vorteilen:
 
 - **Vereinheitlichte Umgebung**: Programmieren Sie Python, R, JavaScript und mehr in einem Editor
-- **Leistungsstarke IntelliSense**: Intelligente Vervollständigungen, Typprüfung und Auto-Imports über Pylance
+- **Leistungsstarkes IntelliSense**: Intelligente Vervollständigungen, Typprüfung und Auto-Imports über Pylance
 - **Integriertes Debugging**: Setzen Sie Breakpoints, inspizieren Sie Variablen und schreiten Sie durch Code
 - **Jupyter-Unterstützung**: Führen Sie Notebooks direkt in VS Code ohne separate Anwendungen aus
 - **Versionskontrolle**: Eingebaute Git-Integration zum Verfolgen von Änderungen

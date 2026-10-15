@@ -43,7 +43,7 @@ Falls VS Code bereits geöffnet ist, schließen Sie es und öffnen Sie es erneut
 - Suchen Sie nach `GrapeCity.gc-excelviewer`
 - Klicken Sie bei **Spreadsheet Viewer** von **MESCIUS** auf **Install**
 
-**Hinweis:** Diese Erweiterung hieß früher **Excel Viewer** von **GrapeCity**, und ältere Anleitungen und Videos verwenden eventuell noch diesen Namen. Eine Suche nach „Excel Viewer" zeigt inzwischen mehrere andere Erweiterungen an. Suchen Sie daher nach der oben genannten ID, um die richtige zu finden. Die ID beginnt weiterhin mit `GrapeCity` – das ist so gewollt. Auf der Marketplace-Seite steht, dass die Erweiterung nicht mehr aktiv weiterentwickelt wird; für die Vorschau der Dateien in diesem Tutorial funktioniert sie trotzdem einwandfrei.
+**Hinweis:** Diese Erweiterung hieß früher **Excel Viewer** von **GrapeCity**, und ältere Anleitungen und Videos verwenden eventuell noch diesen Namen. Eine Suche nach „Excel Viewer“ zeigt inzwischen mehrere andere Erweiterungen an. Suchen Sie daher nach der oben genannten ID, um die richtige zu finden. Die ID beginnt weiterhin mit `GrapeCity` – das ist so gewollt. Auf der Marketplace-Seite steht, dass die Erweiterung nicht mehr aktiv weiterentwickelt wird; für die Vorschau der Dateien in diesem Tutorial funktioniert sie trotzdem einwandfrei.
 
 Damit können Sie jede `.xlsx`-Datei anklicken und ihre Tabellenblätter, Zahlen und Formeln direkt in VS Code sehen. Das ist ideal für schnelle Kontrollen, aber Diagramme, farbige Hervorhebungen und Dropdown-Listen kann die Erweiterung nicht anzeigen – dafür öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets.
 
@@ -70,7 +70,7 @@ claude
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Erstelle eine Tabelle namens budget.xlsx mit den Spalten Kategorie, Monatsbetrag und Notizen. Füge 6 Beispiel-Ausgabenkategorien wie Miete, Lebensmittel und Nebenkosten mit realistischen Beträgen hinzu. Füge unten eine Zeile „Summe" hinzu, die die Spalte Monatsbetrag mit einer Formel addiert.
+Erstelle eine Tabelle namens budget.xlsx mit den Spalten Kategorie, Monatsbetrag und Notizen. Füge 6 Beispiel-Ausgabenkategorien wie Miete, Lebensmittel und Nebenkosten mit realistischen Beträgen hinzu. Füge unten eine Zeile „Summe“ hinzu, die die Spalte Monatsbetrag mit einer Formel addiert.
 ```
 
 - Drücken Sie Enter
@@ -133,7 +133,7 @@ Erstelle eine Datei messy_sales.csv mit 15 Zeilen Verkaufsdaten, die einige Prob
 ## Nächste Schritte
 
 - Bitten Sie Claude, eine Tabelle aus einer CSV-Datei zu erstellen, die Sie bereits haben (ziehen Sie sie zuerst in Ihren Projektordner)
-- Probieren Sie anspruchsvollere Anfragen aus: „Füge eine bedingte Formatierung hinzu, sodass jede Kategorie über $500 rot wird"
+- Probieren Sie anspruchsvollere Anfragen aus: „Füge eine bedingte Formatierung hinzu, sodass jede Kategorie über $500 rot wird“
 - Bitten Sie Claude, ein zweites Tabellenblatt hinzuzufügen, das die Daten aus dem ersten Blatt zusammenfasst
 - Kombinieren Sie dies mit [GitHub Desktop mit Claude Code verwenden](./GitHub_Desktop_Claude_Code_Workflow), um nach und nach Versionen Ihrer Tabellen zu speichern
 - Machen Sie weiter mit [Vibe Coding eines Budget-Trackers in Excel](./Vibe_Coding_Excel_Guide), um ein vollständiges Projekt mit mehreren Tabellenblättern zu erstellen
@@ -142,7 +142,7 @@ Erstelle eine Datei messy_sales.csv mit 15 Zeilen Verkaufsdaten, die einige Prob
 
 - **`budget.xlsx` öffnet sich als wirrer Text mit Symbolen (beginnend mit `PK`)**: VS Code zeigt die Rohdatei an, weil kein Tabellen-Viewer sie übernommen hat. Die Datei selbst ist in Ordnung – eine `.xlsx`-Datei ist ein komprimiertes Paket und kein reiner Text. Prüfen Sie, ob **Spreadsheet Viewer** von MESCIUS (`GrapeCity.gc-excelviewer`) installiert und aktiviert ist. Schließen Sie dann den Tab, klicken Sie im Explorer-Bereich mit der rechten Maustaste auf `budget.xlsx`, wählen Sie **Open With...** und dann **Excel Editor** (den Editor von Spreadsheet Viewer für `.xlsx`-Dateien). Wenn zusätzlich eine andere Tabellen-Erweiterung installiert ist, wählen Sie in derselben Liste **Configure default editor for '*.xlsx'...** und dann **Excel Editor**, damit die Datei künftig schon mit einem einfachen Klick darin geöffnet wird.
 - **Spreadsheet Viewer zeigt eine leere oder fehlerhafte Vorschau**: Schließen Sie den Tab und öffnen Sie die Datei erneut. Wenn es immer noch nicht funktioniert, öffnen Sie die Datei stattdessen in Excel, LibreOffice Calc oder Google Sheets – die Datei selbst ist in Ordnung, es handelt sich nur um einen Fehler in der Vorschau.
-- **Formelzellen sind leer statt eine Zahl anzuzeigen**: Das bedeutet meist, dass die Datei nach dem Schreiben nicht neu berechnet wurde. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt."
+- **Formelzellen sind leer statt eine Zahl anzuzeigen**: Das bedeutet meist, dass die Datei nach dem Schreiben nicht neu berechnet wurde. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt.“
 - **Die Änderungen von Claude werden nicht angezeigt**: Stellen Sie sicher, dass Sie sich dieselbe Datei ansehen, die Claude bearbeitet hat (prüfen Sie den Dateinamen, den Claude nennt). Schließen und öffnen Sie den Tab in VS Code erneut, um eine Aktualisierung zu erzwingen.
 - **„claude is not recognized“ im Terminal**: Claude Code ist nicht korrekt installiert. Sehen Sie sich die Installationsanleitung für [Windows](./Install_CLAUDE_Code_Win) oder [Mac](./Install_Claude_Code_MacOS) noch einmal an.
 - **Das Diagramm fehlt**: Der Spreadsheet Viewer kann keine Diagramme anzeigen. Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets. Wenn das Diagramm dort ebenfalls fehlt, bitten Sie Claude: „Das Kreisdiagramm fehlt in budget.xlsx – bitte füge es wieder hinzu.“

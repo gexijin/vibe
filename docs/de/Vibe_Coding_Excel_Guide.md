@@ -133,7 +133,7 @@ Machen Sie das Blatt leichter erweiterbar, ohne dass sich Tippfehler einschleich
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, sodass sie nur Werte aus einer Dropdown-Liste der vorhandenen Kategorien sowie „Sonstiges" akzeptiert. Füge direkt über der Zeile „Summe“ zwei leere Zeilen für neue Einträge hinzu und stelle sicher, dass die Summe, die Formeln im Blatt Übersicht, die Summen im Kreisdiagramm (mit einem Segment „Sonstiges“) und die Farbregeln diese Zeilen einbeziehen. Lass die leeren Zellen ungefärbt.
+Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, sodass sie nur Werte aus einer Dropdown-Liste der vorhandenen Kategorien sowie „Sonstiges“ akzeptiert. Füge direkt über der Zeile „Summe“ zwei leere Zeilen für neue Einträge hinzu und stelle sicher, dass die Summe, die Formeln im Blatt Übersicht, die Summen im Kreisdiagramm (mit einem Segment „Sonstiges“) und die Farbregeln diese Zeilen einbeziehen. Lass die leeren Zellen ungefärbt.
 ```
 
 - Drücken Sie Enter
@@ -179,7 +179,7 @@ Nach jeder erfolgreichen Funktion:
 
 **Schlüsselprinzipien:**
 
-- **Beschreiben Sie Ergebnisse, nicht die Umsetzung** - Sagen Sie „hebe Ausgaben über $500 hervor", nicht „verwende bedingte Formatierung mit einer CellIsRule"
+- **Beschreiben Sie Ergebnisse, nicht die Umsetzung** - Sagen Sie „hebe Ausgaben über $500 hervor“, nicht „verwende bedingte Formatierung mit einer CellIsRule“
 - **Iterieren Sie schnell** - Testen → verfeinern → testen → verfeinern
 - **Committen Sie funktionierende Versionen** - Speichern Sie jeden Erfolg, bevor Sie neue Funktionen ausprobieren
 - **Akzeptieren Sie Fehlschläge** - Wenn eine Formel oder ein Diagramm nicht richtig herauskommt, beschreiben Sie einfach das Problem und bitten Sie Claude, es zu beheben
@@ -191,13 +191,13 @@ Jedes Mal folgen Sie dem Muster: beschreiben → Datei prüfen → iterieren →
 
 - **Wenden Sie es auf Ihre eigenen Finanzen an** - Bitten Sie Claude, den Tracker mit Ihren echten Einnahme- und Ausgabenkategorien neu aufzubauen
 - **Importieren Sie echte Daten** - Legen Sie einen Kontoauszug als CSV in Ihren Projektordner und bitten Sie Claude, ihn in den Tracker einzuarbeiten
-- **Lernen Sie durch Fragen** - Wenn Claude eine Formel schreibt, fragen Sie „erkläre, was diese Formel macht", um Excel zu lernen
+- **Lernen Sie durch Fragen** - Wenn Claude eine Formel schreibt, fragen Sie „erkläre, was diese Formel macht“, um Excel zu lernen
 - **Teilen Sie Ihren Tracker** - Pushen Sie die fertige Datei auf GitHub, damit Sie (oder Familienmitglieder) jederzeit die neueste Version abrufen können
 - **Lesen Sie über Vibe Coding** - Besuchen Sie [IBMs Leitfaden](https://www.ibm.com/think/topics/vibe-coding), um mehr über diesen Programmierstil zu erfahren
 
 ## Fehlerbehebung
 
-- **Eine Formelzelle ist leer oder zeigt `None`** - Die Datei muss nach Änderungen neu berechnet werden. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt."
+- **Eine Formelzelle ist leer oder zeigt `None`** - Die Datei muss nach Änderungen neu berechnet werden. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt.“
 - **Diagramm wird nicht angezeigt** - Der Spreadsheet Viewer kann keine Diagramme anzeigen. Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets. Wenn das Diagramm dort ebenfalls fehlt, beschreiben Sie Claude das Problem und bitten Sie es, das Diagramm wieder hinzuzufügen.
 - **Claude macht Fehler** - Normal! Beschreiben Sie, was falsch aussieht, und bitten Sie Claude, es zu beheben. Vibe Coding beinhaltet Iteration und Debugging.
 - **Kann nicht auf GitHub pushen** - Stellen Sie sicher, dass Sie in GitHub Desktop angemeldet sind und das Repository veröffentlicht haben (Schritt 1). Überprüfen Sie Ihre Internetverbindung.
@@ -220,7 +220,7 @@ Nach dieser anfänglichen Einrichtung sieht Ihre tägliche Vibe-Coding-Routine s
 
 1. **Öffnen Sie VS Code** - Öffnen Sie Ihren Projektordner
 2. **Starten Sie Claude Code** - Geben Sie `claude` im Terminal ein
-3. **Beschreiben Sie Ihr Ziel** - „Füge eine Funktion hinzu, die..." oder „Korrigiere die Zeile, in der..."
+3. **Beschreiben Sie Ihr Ziel** - „Füge eine Funktion hinzu, die...“ oder „Korrigiere die Zeile, in der...“
 4. **Prüfen Sie die Datei** - Öffnen Sie sie im Spreadsheet Viewer oder in Excel/LibreOffice
 5. **Iterieren oder committen** - Wenn etwas nicht stimmt, beschreiben Sie die Korrektur; wenn es funktioniert, committen Sie mit GitHub Desktop
 6. **Pushen Sie regelmäßig** - Klicken Sie auf **Push origin**, um auf GitHub zu sichern

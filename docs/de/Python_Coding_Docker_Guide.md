@@ -6,7 +6,7 @@ lang: "de"
 
 # Python-Programmierung in VS Code über Docker-Container
 
-Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen, nur um dann Stunden mit dem Debuggen von „aber es funktioniert auf meinem Rechner"-Problemen zu verbringen? Docker-Container sind wie Frachtcontainer für Code – sie verpacken Ihre Python-Umgebung, Bibliotheken und Abhängigkeiten in eine versiegelte Box, die überall gleich funktioniert. Außerdem erhalten Sie Zugang zu Zehntausenden von vorgefertigten Images auf [Docker Hub](https://hub.docker.com/), wo Softwareentwickler fertige Umgebungen veröffentlichen und Ihnen den Schmerz manueller Softwareinstallation ersparen. Dieses Tutorial zeigt Ihnen, wie Sie Python in einer isolierten, reproduzierbaren Umgebung mit VS Code und Docker Desktop ausführen.
+Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen, nur um dann Stunden mit dem Debuggen von „aber auf meinem Rechner läuft es doch“-Problemen zu verbringen? Docker-Container sind wie Frachtcontainer für Code – sie verpacken Ihre Python-Umgebung, Bibliotheken und Abhängigkeiten in eine versiegelte Box, die überall gleich funktioniert. Außerdem erhalten Sie Zugang zu Zehntausenden von vorgefertigten Images auf [Docker Hub](https://hub.docker.com/), wo Softwareentwickler fertige Umgebungen veröffentlichen und Ihnen den Schmerz manueller Softwareinstallation ersparen. Dieses Tutorial zeigt Ihnen, wie Sie Python in einer isolierten, reproduzierbaren Umgebung mit VS Code und Docker Desktop ausführen.
 
 ## Wichtige Konzepte
 
@@ -115,30 +115,30 @@ EXPOSE 8501
 - Fügen Sie folgenden Inhalt ein:
 
 ```python
-# Einfache Datenanalyse mit dem Iris-Datensatz
+# Simple data analysis using the iris dataset
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 
-# Lade den Iris-Datensatz
+# Load the iris dataset
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 df['species'] = iris.target_names[iris.target]
 
-# Zeige die ersten Zeilen an
+# Display first few rows
 print(df.head())
 
-# Zusammenfassende Statistiken
-print("\nZusammenfassende Statistiken:")
+# Summary statistics
+print("\nSummary statistics:")
 print(df.describe())
 
-# Erstelle Histogramme
+# Create histograms
 plt.figure(figsize=(10, 6))
-plt.hist(df['sepal length (cm)'], bins=20, alpha=0.7, label='Kelchblattlänge')
-plt.hist(df['sepal width (cm)'], bins=20, alpha=0.7, label='Kelchblattbreite')
-plt.xlabel('Messung (cm)')
-plt.ylabel('Häufigkeit')
-plt.title('Iris Kelchblatt-Messungen')
+plt.hist(df['sepal length (cm)'], bins=20, alpha=0.7, label='Sepal Length')
+plt.hist(df['sepal width (cm)'], bins=20, alpha=0.7, label='Sepal Width')
+plt.xlabel('Measurement (cm)')
+plt.ylabel('Frequency')
+plt.title('Iris Sepal Measurements')
 plt.legend()
 plt.savefig('iris_histogram.png')
 ```
@@ -155,24 +155,24 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.title("Old Faithful Geysir-Daten")
+st.title("Old Faithful Geyser Data")
 
-# Schieberegler für die Anzahl der Bins
-bins = st.slider("Anzahl der Bins:", min_value=5, max_value=50, value=30)
+# Slider for number of bins
+bins = st.slider("Number of bins:", min_value=5, max_value=50, value=30)
 
-# Generiere Beispieldaten (simuliert Old Faithful Ausbruchsdauern)
+# Generate sample data (simulating Old Faithful eruption durations)
 np.random.seed(42)
 data = np.concatenate([
     np.random.normal(2, 0.5, 100),
     np.random.normal(4.5, 0.5, 150)
 ])
 
-# Erstelle Histogramm
+# Create histogram
 fig, ax = plt.subplots()
 ax.hist(data, bins=bins, edgecolor='black')
-ax.set_xlabel('Ausbruchsdauer (Minuten)')
-ax.set_ylabel('Häufigkeit')
-ax.set_title(f'Histogramm mit {bins} Bins')
+ax.set_xlabel('Eruption Duration (minutes)')
+ax.set_ylabel('Frequency')
+ax.set_title(f'Histogram with {bins} bins')
 
 st.pyplot(fig)
 ```
@@ -263,11 +263,11 @@ Lassen Sie uns die App modifizieren, um zu sehen, wie Entwicklung funktioniert.
 
 - Lassen Sie die App laufen
 - Bearbeiten Sie in VS Code `python/app.py`
-- Finden Sie Zeile 5: `st.title("Old Faithful Geysir-Daten")`
+- Finden Sie Zeile 5: `st.title("Old Faithful Geyser Data")`
 - Ändern Sie sie zu:
 
 ```python
-st.title("Meine erste Python-Docker-App")
+st.title("My First Python Docker App")
 ```
 
 - Klicken Sie auf **File > Save**
@@ -277,15 +277,13 @@ st.title("Meine erste Python-Docker-App")
 
 ## Schritt 13: Die Dockerfile verstehen (Optional)
 
-Lassen Sie uns untersuchen, wie die Dockerfile Ihre Umgebung konfiguriert.
-
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
 - Klicken Sie zum Öffnen der Datei
 - Sie sehen die vollständige Konfiguration
 
 **Wichtige Teile:**
 
-- `FROM python:3.12-slim` - Offizielles Python 3.12 Basis-Image (leichtgewichtiges Debian-basiertes)
+- `FROM python:3.12-slim` - Offizielles Python 3.12 Basis-Image (schlankes, Debian-basiertes Image)
 - `RUN apt-get install` - Linux-Systembibliotheken zum Erstellen von Python-Paketen
 - `RUN pip install --no-cache-dir ...` - Installiert Python-Pakete permanent
 - `RUN curl... && apt-get install -y nodejs` - Installiert Node.js, das für die Ausführung von Claude Code erforderlich ist
@@ -303,7 +301,7 @@ Nach der Änderung des Basis-Images müssen Sie den Container neu erstellen, um 
 
 ## Schritt 14: Python-Pakete im Docker-Image installieren (Optional)
 
-Pakete, die über pip im Terminal installiert werden (`pip install paket`), sind temporär und verschwinden, wenn Sie den Container neu erstellen. Um Pakete permanent zu machen, fügen Sie sie zur Dockerfile hinzu.
+Pakete, die über pip im Terminal installiert werden (`pip install package`), sind temporär und verschwinden, wenn Sie den Container neu erstellen. Um Pakete permanent zu machen, fügen Sie sie zur Dockerfile hinzu.
 
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
 - Klicken Sie zum Öffnen der Datei

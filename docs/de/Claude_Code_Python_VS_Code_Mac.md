@@ -80,7 +80,7 @@ print(iris_df.describe())
 - Geben Sie im Chat-Feld unten ein:
 
 ```
-Füge Code zu iris_analysis.py hinzu, um ein Streudiagramm der Kelchblattlänge vs. Breite zu erstellen, nach Art eingefärbt. Verwende seaborn.
+Füge Code zu iris_analysis.py hinzu, um ein Streudiagramm der Kelchblattlänge gegen die Kelchblattbreite zu erstellen, nach Art eingefärbt. Verwende seaborn.
 ```
 
 - Drücken Sie Enter zum Senden
@@ -104,7 +104,7 @@ Füge Code zu iris_analysis.py hinzu, um ein Streudiagramm der Kelchblattlänge 
 - Geben Sie im Claude-Chat-Panel ein:
 
 ```
-Entferne den Titel. Ändere den Markierungstyp nach Art. Ändere zum whitegrid-Stil.
+Entferne den Titel. Verwende für jede Art eine andere Markerform. Wechsle zum whitegrid-Stil.
 ```
 
 - Drücken Sie Enter
@@ -144,20 +144,20 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 
 ## Nächste Schritte
 
-- Bitten Sie Claude, ein Jupyter-Notebook zu erstellen: „Konvertiere dies in ein Jupyter-Notebook"
-- Verwenden Sie Claude, um Fehler zu debuggen: „Dieser Code gibt Fehler X, kannst du ihn beheben?"
-- Fordern Sie statistische Tests an: „Füge einen t-Test hinzu, der die Kelchblattlänge zwischen setosa und versicolor vergleicht"
-- Bitten Sie Claude, Code zu optimieren: „Mache diesen Code effizienter mit numpy-Vektorisierung"
-- Holen Sie Hilfe bei unbekannten Funktionen: „Erkläre, was pandas.groupby macht"
+- Bitten Sie Claude, ein Jupyter-Notebook zu erstellen: „Konvertiere dies in ein Jupyter-Notebook“
+- Verwenden Sie Claude, um Fehler zu debuggen: „Dieser Code gibt Fehler X, kannst du ihn beheben?“
+- Fordern Sie statistische Tests an: „Füge einen t-Test hinzu, der die Kelchblattlänge zwischen setosa und versicolor vergleicht“
+- Bitten Sie Claude, Code zu optimieren: „Mache diesen Code effizienter mit numpy-Vektorisierung“
+- Holen Sie Hilfe bei unbekannten Funktionen: „Erkläre, was pandas.groupby macht“
 
 ## Fehlerbehebung
 
 - **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
-- **„Cannot read Python file"-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.py` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
+- **Fehler „Cannot read Python file“** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.py` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
 - **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **Fehler „Paket nicht gefunden“** oder **`command not found: python`** - Stellen Sie sicher, dass das Terminal `(.venv)` anzeigt (falls nicht, schließen Sie es und öffnen Sie mit **View > Terminal** ein neues), und installieren Sie dann die erforderlichen Pakete: `pip install seaborn matplotlib scikit-learn pandas`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
 - **Codeänderungen werden nicht übernommen** - Wenn Claude um Erlaubnis gefragt hat, stellen Sie sicher, dass Sie die Änderung angenommen haben. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
-- **Plot wird nicht angezeigt** - Stellen Sie sicher, dass Sie ein Display haben. Auf manchen Systemen müssen Sie möglicherweise `plt.show()` am Ende hinzufügen oder `%matplotlib inline` in Jupyter verwenden.
+- **Plot wird nicht angezeigt** - Stellen Sie sicher, dass ein Bildschirm verfügbar ist. Auf manchen Systemen müssen Sie möglicherweise `plt.show()` am Ende hinzufügen oder `%matplotlib inline` in Jupyter verwenden.
 
 ## Workflow-Zusammenfassung
 

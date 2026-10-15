@@ -6,7 +6,7 @@ lang: "de"
 
 # Vibe Coding in Python mit Claude Code und Docker
 
-Sie haben Python-Code geschrieben, indem Sie jede Zeile selbst getippt haben. Aber was wäre, wenn Sie beschreiben könnten, was Sie wollen, in einfachem Deutsch, und der Code erscheint? Vibe Coding ist wie ein Gespräch mit Ihrem Computer – Sie beschreiben das Ergebnis, Claude Code baut es, Sie testen und verfeinern. Es ist keine Magie; es ist eine neue Art zu arbeiten, bei der Sie die Vision leiten und KI die Umsetzung übernimmt. Dieses Tutorial zeigt Ihnen, wie Sie den klassischen Iris-Blumendatensatz analysieren, indem Sie nur natürlichsprachliche Anfragen verwenden.
+Sie haben Python-Code geschrieben, indem Sie jede Zeile selbst getippt haben. Aber was wäre, wenn Sie beschreiben könnten, was Sie wollen, in einfachem Deutsch, und der Code erscheint? Vibe Coding ist wie ein Gespräch mit Ihrem Computer – Sie beschreiben das Ergebnis, Claude Code baut es, Sie testen und verfeinern. Es ist keine Magie; es ist eine neue Art zu arbeiten, bei der Sie die Richtung vorgeben und die KI die Umsetzung übernimmt. Dieses Tutorial zeigt Ihnen, wie Sie den klassischen Iris-Blumendatensatz analysieren, indem Sie nur natürlichsprachliche Anfragen verwenden.
 
 ## Wichtige Konzepte
 
@@ -257,7 +257,7 @@ Dieses Tutorial kombinierte mehrere Technologien in einem Workflow:
 - **pandas** - Datenmanipulation und -analyse
 - **matplotlib** - Erstellen von Visualisierungen
 
-Die Magie liegt nicht in einem einzelnen Tool – es ist, wie Vibe Coding Sie beschreiben lässt, was Sie wollen, und schnell iterieren. Sie sind von einem leeren Projekt zu einer vollständigen Datenanalyse mit mehreren Visualisierungen in 20 Minuten gekommen, ohne eine einzige Zeile Code manuell zu schreiben.
+Die Magie liegt nicht in einem einzelnen Tool – sondern darin, dass Sie mit Vibe Coding beschreiben können, was Sie wollen, und schnell iterieren. Sie sind von einem leeren Projekt zu einer vollständigen Datenanalyse mit mehreren Visualisierungen in 20 Minuten gekommen, ohne eine einzige Zeile Code manuell zu schreiben.
 
 
 ---
