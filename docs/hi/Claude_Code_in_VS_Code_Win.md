@@ -67,7 +67,7 @@ lang: "hi"
 VS Code बंद करने के बाद, अपने प्रोजेक्ट पर वापस जाने का तरीका यहाँ है:
 
 - **विकल्प A:** VS Code खोलें, **File > Open Recent** पर क्लिक करें, और `test_claude` चुनें
-- **विकल्प B:** **File Explorer** खोलें, `test_claude` फ़ोल्डर पर राइट-क्लिक करें, और **Open with Code** चुनें
+- **विकल्प B:** **File Explorer** खोलें, `test_claude` फ़ोल्डर पर राइट-क्लिक करें, और **Open with Code** चुनें (Windows 11 पर पहले **Show more options** पर क्लिक करें)। यह विकल्प तभी दिखता है जब VS Code इंस्टॉल करते समय **Add "Open with Code" action** पर टिक लगाया गया हो; नहीं तो विकल्प A का उपयोग करें
 
 ## अगले कदम
 
