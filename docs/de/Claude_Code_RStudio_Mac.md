@@ -46,7 +46,7 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 - Ein neues leeres Skript öffnet sich im oberen linken Bereich
 - Klicken Sie auf **File > Save** (oder drücken Sie **Command (⌘) + S**)
 - Nennen Sie die Datei: `iris.R`
-- Klicken Sie auf **Save**
+- Klicken Sie auf **Sichern** (englisch: **Save**)
 
 ## Schritt 4: Ersten Code manuell schreiben
 

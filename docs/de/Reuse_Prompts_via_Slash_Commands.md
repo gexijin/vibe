@@ -85,7 +85,7 @@ Verwenden Sie einen beliebigen Texteditor, um die Datei `stock-report.md` aus de
 
 Wenn Sie VS Code installiert haben (empfohlen):
 - Starten Sie VS Code
-- Wählen Sie unter **File** die Option **Open Folder** und wählen Sie den Projektordner `Documents/test_claude`
+- Wählen Sie unter **File** die Option **Open Folder** und wählen Sie den Projektordner `test_claude` im Ordner **Dokumente** (Documents)
 - Navigieren Sie im Datei-Explorer zu `.claude/commands` und klicken Sie auf die Datei `stock-report.md`, um sie zu öffnen
 
 Überprüfen Sie den Prompt und nehmen Sie bei Bedarf Änderungen an den Anweisungen vor.
@@ -94,7 +94,7 @@ Wenn Sie VS Code installiert haben (empfohlen):
 
 ## Schritt 5: Den Befehl testen
 
-**Beenden** Sie zuerst die aktuelle Claude Code-Sitzung, indem Sie zweimal **Strg+C** drücken. Starten Sie dann Claude neu, damit der neue Slash-Befehl geladen wird:
+**Beenden** Sie zuerst die aktuelle Claude Code-Sitzung, indem Sie zweimal **Strg+C** (Mac: **ctrl+C**) drücken. Starten Sie dann Claude neu, damit der neue Slash-Befehl geladen wird:
   ```
   claude
   ```
@@ -127,7 +127,7 @@ Lassen Sie uns den Slash-Befehl so modifizieren, dass Berichte automatisch als M
 
 ## Schritt 8: Befehl erneut ausführen
 
-- **Beenden** Sie zuerst die aktuelle Claude Code-Sitzung, indem Sie zweimal **Strg+C** drücken. Starten Sie dann Claude neu, damit der neue Slash-Befehl geladen wird:
+- **Beenden** Sie zuerst die aktuelle Claude Code-Sitzung, indem Sie zweimal **Strg+C** (Mac: **ctrl+C**) drücken. Starten Sie dann Claude neu, damit der neue Slash-Befehl geladen wird:
   ```
   claude
   ```
@@ -152,7 +152,7 @@ Claude aktualisiert die Befehlsdatei. Sie können dies im Editor überprüfen.
 
 ## Schritt 10: Den aktualisierten Befehl testen
 
-- **Beenden** Sie zuerst die aktuelle Claude Code-Sitzung, indem Sie zweimal **Strg+C** drücken. Starten Sie dann Claude neu, damit der neue Slash-Befehl geladen wird:
+- **Beenden** Sie zuerst die aktuelle Claude Code-Sitzung, indem Sie zweimal **Strg+C** (Mac: **ctrl+C**) drücken. Starten Sie dann Claude neu, damit der neue Slash-Befehl geladen wird:
   ```
   claude
   ```

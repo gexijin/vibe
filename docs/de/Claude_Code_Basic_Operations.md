@@ -133,7 +133,7 @@ Löscht das aktuelle Gespräch und beginnt von vorne. Verwenden Sie dies, wenn S
 /exit
 ```
 
-Beendet Ihre Sitzung und kehrt zu Ihrer normalen Terminal-Eingabeaufforderung zurück. Sie können auch zweimal **Strg + C** drücken.
+Beendet Ihre Sitzung und kehrt zu Ihrer normalen Terminal-Eingabeaufforderung zurück. Sie können auch zweimal **Strg + C** (Mac: **ctrl + C**) drücken.
 
 ## Schritt 6: Änderungen genehmigen und Tastenkombinationen nutzen
 
@@ -142,9 +142,9 @@ Neue Sitzungen starten normalerweise im Modus **Auto**, in dem Claude Routine-Ä
 Einige Tastenkombinationen machen das Arbeiten mit Claude Code außerdem schneller:
 
 - **Umschalt+Tab** - Zwischen den Modi wechseln (Auto, Manual, Accept Edits, Plan); der aktuelle Modus wird direkt unter der Eingabezeile angezeigt. Der Plan-Modus ist nützlich, um eine komplexe Aufgabe zu prüfen, bevor Claude etwas ändert
-- **Strg+C** - Brechen Sie die aktuelle Operation oder Claudes Antwort ab
+- **Strg+C** (Mac: **ctrl+C**) - Brechen Sie die aktuelle Operation oder Claudes Antwort ab
 - **Esc** - Claude mitten in der Antwort stoppen oder ein Menü schließen
-- **`\` und dann Enter** (oder **Strg+J**) - Fügen Sie eine neue Zeile in Ihre Nachricht ein, ohne sie zu senden
+- **`\` und dann Enter** (oder **Strg+J**, Mac: **ctrl+J**) - Fügen Sie eine neue Zeile in Ihre Nachricht ein, ohne sie zu senden
 
 ## Schritt 7: Immer eine CLAUDE.md-Datei erstellen
 

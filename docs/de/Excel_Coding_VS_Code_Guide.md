@@ -144,7 +144,7 @@ Erstelle eine Datei messy_sales.csv mit 15 Zeilen Verkaufsdaten, die einige Prob
 - **Spreadsheet Viewer zeigt eine leere oder fehlerhafte Vorschau**: Schließen Sie den Tab und öffnen Sie die Datei erneut. Wenn es immer noch nicht funktioniert, öffnen Sie die Datei stattdessen in Excel, LibreOffice Calc oder Google Sheets – die Datei selbst ist in Ordnung, es handelt sich nur um einen Fehler in der Vorschau.
 - **Formelzellen sind leer statt eine Zahl anzuzeigen**: Das bedeutet meist, dass die Datei nach dem Schreiben nicht neu berechnet wurde. Bitten Sie Claude: „Berechne budget.xlsx neu und bestätige, dass es keine Formelfehler gibt.“
 - **Die Änderungen von Claude werden nicht angezeigt**: Stellen Sie sicher, dass Sie sich dieselbe Datei ansehen, die Claude bearbeitet hat (prüfen Sie den Dateinamen, den Claude nennt). Schließen und öffnen Sie den Tab in VS Code erneut, um eine Aktualisierung zu erzwingen.
-- **„claude is not recognized“ im Terminal**: Claude Code ist nicht korrekt installiert. Sehen Sie sich die Installationsanleitung für [Windows](./Install_CLAUDE_Code_Win) oder [Mac](./Install_Claude_Code_MacOS) noch einmal an.
+- **„Die Benennung "claude" wurde nicht ... erkannt“** (englisch: „claude is not recognized“) **im Terminal**: Claude Code ist nicht korrekt installiert. Sehen Sie sich die Installationsanleitung für [Windows](./Install_CLAUDE_Code_Win) oder [Mac](./Install_Claude_Code_MacOS) noch einmal an.
 - **Das Diagramm fehlt**: Der Spreadsheet Viewer kann keine Diagramme anzeigen. Öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets. Wenn das Diagramm dort ebenfalls fehlt, bitten Sie Claude: „Das Kreisdiagramm fehlt in budget.xlsx – bitte füge es wieder hinzu.“
 
 ## Workflow-Zusammenfassung

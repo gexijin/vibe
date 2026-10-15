@@ -146,7 +146,7 @@ Die Antwort erklärt den wissenschaftlichen Konsens, den Ursprung des Mythos und
 - Klicken Sie mit der rechten Maustaste auf den Ordner und wählen Sie **Mit Code öffnen** (Open with Code; unter Windows 11 klicken Sie zuerst auf **Weitere Optionen anzeigen**). Wenn Sie diesen Eintrag nicht sehen, öffnen Sie VS Code und verwenden Sie stattdessen **File > Open Folder**
 
 **Mac:**
-- Öffnen Sie **Finder**, navigieren Sie zu `Documents/test_claude`
+- Öffnen Sie **Finder**, navigieren Sie zu **Dokumente** (Documents) > `test_claude`
 - Klicken Sie mit der rechten Maustaste auf den Ordner und wählen Sie **Öffnen mit > Visual Studio Code** (Open With)
 - Oder, wenn Sie den `code`-Befehl von VS Code eingerichtet haben, geben Sie `code .` im Terminal ein
 

@@ -181,7 +181,7 @@ streamlit run app.py
 - Beim ersten Start fragt Streamlit im Terminal nach einer `Email:`. Drücken Sie einfach `Enter`, um dies zu überspringen
 - Die App öffnet sich in Ihrem Browser (normalerweise unter `http://localhost:8501`)
 - Bewegen Sie den Schieberegler in der Seitenleiste und beobachten Sie, wie sich das Histogramm sofort aktualisiert
-- Drücken Sie `Strg+C` im Terminal, um die App zu stoppen
+- Drücken Sie `Strg+C` (Mac: `ctrl+C`) im Terminal, um die App zu stoppen
 
 ## Schritt 10: Codevervollständigung und IntelliSense verwenden
 
@@ -213,7 +213,7 @@ streamlit run app.py
 
 ## Fehlerbehebung
 
-- **„Python is not recognized“ im Terminal**: Python ist nicht in Ihrem System-PATH. Unter Windows installieren Sie Python neu und aktivieren Sie „Add python.exe to PATH“. Unter Mac/Linux verwenden Sie `python3` statt `python`. Starten Sie VS Code nach der Korrektur neu.
+- **„Die Benennung "python" wurde nicht ... erkannt“** (englisch: „Python is not recognized“) **im Terminal**: Python ist nicht in Ihrem System-PATH. Unter Windows installieren Sie Python neu und aktivieren Sie „Add python.exe to PATH“. Unter Mac/Linux verwenden Sie `python3` statt `python`. Starten Sie VS Code nach der Korrektur neu.
 
 - **Kein Interpreter gefunden**: Klicken Sie auf den Interpreter-Selektor in der unteren rechten Ecke von VS Code, oder klicken Sie auf **View > Command Palette** und führen Sie `Python: Select Interpreter` aus. Wenn Ihre Python-Installation nicht erscheint, wählen Sie **Enter interpreter path** und navigieren Sie zu Ihrer Python-Ausführungsdatei.
 

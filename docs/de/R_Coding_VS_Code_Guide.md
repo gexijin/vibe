@@ -54,7 +54,7 @@ Bevor Sie VS Code konfigurieren, müssen Sie wissen, wo R auf Ihrem System insta
 ### Für Windows-Benutzer
 
 1. Öffnen Sie den **Datei-Explorer**
-2. Navigieren Sie zu `C:\Program Files\R\`
+2. Navigieren Sie zu `C:\Program Files\R\` (im deutschen Datei-Explorer wird dieser Ordner als **Programme** angezeigt)
 3. Sie sehen einen Ordner wie `R-4.5.3` (Ihre Versionsnummer kann abweichen)
 4. Öffnen Sie diesen Ordner → Öffnen Sie den `bin`-Ordner
 5. Sie sehen dort `R.exe`
@@ -248,7 +248,7 @@ shinyApp(ui = ui, server = server)
 
 ## Fehlerbehebung
 
-- **„R is not recognized“ im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
+- **„Die Benennung "R" wurde nicht ... erkannt“** (englisch: „R is not recognized“) **im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
   - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (Versionsnummer anpassen)
   - macOS (CRAN-Installationsprogramm, Intel oder Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`

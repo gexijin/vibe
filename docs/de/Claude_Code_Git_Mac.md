@@ -230,7 +230,7 @@ Beachten Sie, dass der 15-Minuten-Schaltflächen-Versuch nicht da ist – Sie ha
 ## Schritt 17: Den Code untersuchen
 
 - Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Seitenquelltext anzeigen** (View Page Source) (oder drücken Sie `Option (⌥) + Command (⌘) + U`)
-- **Sie verwenden Safari?** Klicken Sie zuerst auf **Safari** > **Einstellungen** > **Erweitert** und aktivieren Sie **Funktionen für Webentwickler einblenden**. Klicken Sie dann mit der rechten Maustaste auf die Seite und wählen Sie **Seitenquelltext anzeigen**
+- **Sie verwenden Safari?** Klicken Sie zuerst auf **Safari** > **Einstellungen** > **Erweitert** und aktivieren Sie **Funktionen für Webentwickler anzeigen**. Klicken Sie dann mit der rechten Maustaste auf die Seite und wählen Sie **Seitenquelltext einblenden**
 - Sie können den Quellcode dafür sehen.
 - Fragen Sie in Claude Code:
   ```

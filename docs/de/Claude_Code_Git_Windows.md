@@ -67,7 +67,7 @@ Mit Name und E-Mail können Sie später erkennen, wer welche Änderung vorgenomm
 
 Sie sollten einen Pfad sehen, der auf `\Documents` endet.
 
-Wenn Sie `Cannot find path` sehen, wird Ihr Dokumente-Ordner wahrscheinlich von OneDrive gesichert. Führen Sie stattdessen `cd ~\OneDrive\Documents` aus.
+Wenn Sie `Cannot find path` sehen, wird Ihr Dokumente-Ordner wahrscheinlich von OneDrive gesichert. Führen Sie stattdessen `cd ~\OneDrive\Documents` aus. Auf deutschem Windows heißt dieser Ordner meist `OneDrive\Dokumente`; verwenden Sie dann `cd ~\OneDrive\Dokumente`.
 
 ## Schritt 5: Projektordner erstellen
 
@@ -255,7 +255,7 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 ## Fehlerbehebung
 
 - **„not a git repository“-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~\Documents\test_claude`)
-- **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html` (oder `C:\Users\IHR_BENUTZERNAME\OneDrive\Documents\test_claude\timer.html`, wenn Sie in Schritt 4 den OneDrive-Pfad verwendet haben)
+- **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html` (oder `C:\Users\IHR_BENUTZERNAME\OneDrive\Documents\test_claude\timer.html` – auf deutschem Windows meist `C:\Users\IHR_BENUTZERNAME\OneDrive\Dokumente\test_claude\timer.html` –, wenn Sie in Schritt 4 den OneDrive-Pfad verwendet haben)
 - **Befehl `git` nicht gefunden:** Schließen und öffnen Sie PowerShell nach der Installation von Git for Windows erneut, damit der PATH aktualisiert wird, und führen Sie dann noch einmal `git --version` aus
 - **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Konsole** (Console) klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
 

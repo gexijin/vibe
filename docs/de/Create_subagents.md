@@ -133,7 +133,7 @@ Sie können die Datei direkt bearbeiten oder Claude bitten, sie zu aktualisieren
 
 ## Schritt 6: Den Subagenten testen
 
-**Beenden** Sie zuerst Claude Code, indem Sie zweimal **Strg+C** drücken, und geben Sie dann `claude` ein, um es neu zu starten. Claude Code bemerkt einen ganz neuen `.claude/agents/`-Ordner erst nach einem Neustart.
+**Beenden** Sie zuerst Claude Code, indem Sie zweimal **Strg+C** (Mac: **ctrl+C**) drücken, und geben Sie dann `claude` ein, um es neu zu starten. Claude Code bemerkt einen ganz neuen `.claude/agents/`-Ordner erst nach einem Neustart.
 
 Testen Sie jetzt Ihren Subagenten mit einem echten Vergleich. Geben Sie ein:
 
@@ -177,7 +177,7 @@ Jetzt, da Sie einen funktionierenden Stock-Picker-Subagenten haben, versuchen Si
 - **Subagent aktiviert sich nicht**: Stellen Sie sicher, dass Ihre Anfrage das Vergleichen von Unternehmen oder Investitionsentscheidungen erwähnt. Versuchen Sie: „Verwende den stock-picker Subagenten zum Vergleich...“
 - **Skill nicht gefunden**: Überprüfen Sie, ob `.claude/skills/stock-report/SKILL.md` existiert. Starten Sie Claude Code neu, wenn Sie ihn gerade hinzugefügt haben.
 - **Unvollständige Bewertungen**: Bitten Sie den Subagenten, „weiterzumachen“ oder „die Bewertungen für jede Kategorie detaillierter zu erklären“
-- **Subagent nach dem Erstellen nicht gefunden**: Überprüfen Sie, ob `.claude/agents/stock-picker.md` existiert. Wenn ja, beenden Sie Claude Code (zweimal Strg+C) und starten Sie es mit `claude` neu. Ein ganz neuer `.claude/agents/`-Ordner wird erst nach einem Neustart erkannt.
+- **Subagent nach dem Erstellen nicht gefunden**: Überprüfen Sie, ob `.claude/agents/stock-picker.md` existiert. Wenn ja, beenden Sie Claude Code (zweimal Strg+C, Mac: ctrl+C) und starten Sie es mit `claude` neu. Ein ganz neuer `.claude/agents/`-Ordner wird erst nach einem Neustart erkannt.
 
 ## Workflow-Überblick
 

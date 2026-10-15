@@ -45,7 +45,7 @@ Das war's – Claude Code erkennt Git Bash beim Start automatisch.
    claude --version
    ```
 - Sie sollten die Versionsnummer von Claude Code sehen
-- Wenn stattdessen `'claude' is not recognized` erscheint (Claude wurde nicht gefunden), führen Sie diese zwei Zeilen in PowerShell aus, schließen Sie PowerShell, öffnen Sie es erneut und versuchen Sie `claude --version` noch einmal:
+- Wenn stattdessen „Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt“ (englisch: `'claude' is not recognized`) erscheint (Claude wurde nicht gefunden), führen Sie diese zwei Zeilen in PowerShell aus, schließen Sie PowerShell, öffnen Sie es erneut und versuchen Sie `claude --version` noch einmal:
    ```
    $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
    [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
@@ -235,7 +235,7 @@ Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Einige F
 
 - Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste) und geben Sie `PowerShell` ein
 - **Klicken Sie mit der rechten Maustaste** auf **Windows PowerShell** und klicken Sie auf **Als Administrator ausführen**
-- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?“
+- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass durch diese App Änderungen an Ihrem Gerät vorgenommen werden?“
 - Geben Sie im PowerShell-Fenster ein:
    ```
    wsl --install
@@ -301,7 +301,7 @@ Dieses integrierte Diagnosetool überprüft Ihre Installation und meldet häufig
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Wenn `'claude' is not recognized` erscheint (Claude wurde nicht gefunden), führen Sie diese zwei Zeilen in PowerShell aus und schließen und öffnen Sie PowerShell dann erneut:
+- Wenn „Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt“ (englisch: `'claude' is not recognized`) erscheint (Claude wurde nicht gefunden), führen Sie diese zwei Zeilen in PowerShell aus und schließen und öffnen Sie PowerShell dann erneut:
    ```
    $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
    [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')

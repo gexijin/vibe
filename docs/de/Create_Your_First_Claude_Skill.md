@@ -84,7 +84,7 @@ Claude analysiert Ihren bestehenden Slash-Befehl und konvertiert ihn in einen Sk
 
 Öffnen Sie VS Code und sehen Sie sich das Projekt an:
 - Klicken Sie auf **File > Open Folder**
-- Wählen Sie `Documents/test_claude`
+- Wählen Sie im Ordner **Dokumente** (Documents) den Ordner `test_claude`
 - Navigieren Sie im Datei-Explorer zu `.claude/skills/stock-report/`
 - Klicken Sie auf `SKILL.md`, um sie zu öffnen
 
@@ -190,7 +190,7 @@ Das Muster: Definieren Sie, wann Claude automatisch helfen soll, nicht nur Short
 
 - **Skill aktiviert sich nicht:** Überprüfen Sie das `description`-Feld in `SKILL.md` – es muss Auslösewörter enthalten, die mit Ihrer Frage zusammenhängen
 - **Skill aktiviert sich zu oft:** Machen Sie die Beschreibung spezifischer darüber, wann er verwendet werden soll
-- **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (ein versteckter Ordner: Der Explorer von VS Code zeigt ihn an; unter Windows wählen Sie im **Datei-Explorer** (File Explorer) **Ansicht > Einblenden > Ausgeblendete Elemente** (View > Show > Hidden items); im Finder auf dem Mac drücken Sie **Cmd+Shift+.**)
+- **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (ein versteckter Ordner: Der Explorer von VS Code zeigt ihn an; unter Windows wählen Sie im **Datei-Explorer** (File Explorer) **Ansicht > Anzeigen > Ausgeblendete Elemente** (View > Show > Hidden items); im Finder auf dem Mac drücken Sie **Cmd+Shift+.**)
 - **Änderungen an SKILL.md funktionieren nicht:** Skills werden normalerweise automatisch neu geladen, wenn sie geändert werden. Wenn der Ordner `.claude/skills/` erst während dieser Sitzung erstellt wurde, geben Sie `/reload-skills` ein (oder starten Sie Claude Code neu). Wenn es immer noch nicht funktioniert, überprüfen Sie die YAML-Formatierung
 
 ## Workflow-Überblick

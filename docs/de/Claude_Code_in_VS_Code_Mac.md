@@ -24,7 +24,7 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 
 - Öffnen Sie den **Finder** und gehen Sie zu **Programme**
 - Finden Sie **Visual Studio Code** und doppelklicken Sie darauf
-- Wenn Sie eine Warnung sehen „Visual Studio Code ist eine aus dem Internet heruntergeladene App“, klicken Sie auf **Öffnen**
+- Wenn Sie eine Warnung sehen „‚Visual Studio Code‘ ist eine aus dem Internet geladene App“, klicken Sie auf **Öffnen**
 - VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
 
 **Tipp:** Klicken Sie mit der rechten Maustaste auf VS Code im Dock und wählen Sie **Optionen > Im Dock behalten** für späteren schnellen Zugriff.
@@ -90,7 +90,7 @@ VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent norma
 
 - **Terminal zeigt „zsh“, aber Claude Code startet nicht** - Stellen Sie sicher, dass Claude Code korrekt installiert ist; führen Sie `claude --version` aus, um es zu überprüfen
 - **Befehl „code“ wird im Terminal nicht gefunden** - Klicken Sie in VS Code in der Menüleiste auf **View**, dann auf **Command Palette**, geben Sie „shell command“ ein und wählen Sie **Shell Command: Install 'code' command in PATH**
-- **VS Code öffnet sich nicht, weil es von einem nicht identifizierten Entwickler stammt** - Gehen Sie zu **Systemeinstellungen > Datenschutz & Sicherheit** und klicken Sie auf **Trotzdem öffnen**
+- **VS Code öffnet sich nicht, weil es von einem nicht identifizierten Entwickler stammt** - Gehen Sie zu **Systemeinstellungen > Datenschutz & Sicherheit** und klicken Sie auf **Dennoch öffnen**
 
 ## Workflow-Überblick
 
