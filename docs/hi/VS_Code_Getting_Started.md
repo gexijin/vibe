@@ -49,8 +49,8 @@ VS Code में पाँच मुख्य क्षेत्र हैं:
 ## चरण 3: एक फ़ोल्डर खोलें और एक्सप्लोर करें
 
 - **File** → **Open Folder** पर क्लिक करें
-- अपने कंप्यूटर पर किसी भी मौजूदा फ़ोल्डर पर जाएँ (जैसे, Documents)
-- **Open** (या **Select Folder**) पर क्लिक करें
+- अपने **Documents** फ़ोल्डर में जाएँ और अभ्यास के लिए एक नया खाली फ़ोल्डर बनाएँ, जैसे `vscode_practice` (विंडो में **New Folder** बटन का उपयोग करें)
+- उस नए फ़ोल्डर को चुनें, फिर **Open** (या **Select Folder**) पर क्लिक करें
 - अगर "Do you trust the authors?" पूछा जाए, तो **Yes, I trust the authors** पर क्लिक करें
 
 Explorer साइडबार अब आपके फ़ोल्डर की फ़ाइलें दिखाता है:
@@ -61,7 +61,7 @@ Explorer साइडबार अब आपके फ़ोल्डर की 
 
 ## चरण 4: एक Markdown फ़ाइल बनाएँ
 
-- Explorer में, **New File** आइकन (+ के साथ पेज) पर क्लिक करें
+- Explorer में, ऊपर फ़ोल्डर के नाम पर माउस ले जाएँ, फिर दिखने वाले **New File** आइकन (+ के साथ पेज) पर क्लिक करें
 - इसका नाम `README.md` रखें
 - यह सामग्री जोड़ें:
 
@@ -124,7 +124,7 @@ Explorer जाँचें - `notes` फ़ोल्डर दिखाई द�
 
 ## चरण 8: VS Code में AI एजेंट का उपयोग करें (वैकल्पिक)
 
-VS Code में [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview) शामिल है, एक AI असिस्टेंट जो कोड को समझा, लिख और डिबग कर सकता है।
+VS Code में [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat) शामिल है, एक AI असिस्टेंट जो कोड को समझा, लिख और डिबग कर सकता है।
 
 - `README.md` फ़ाइल खोलें (या अपने प्रोजेक्ट की कोई अन्य फ़ाइल)
 - टाइटल बार में **Chat** → **Open Chat** पर क्लिक करें (या Windows/Linux पर `Ctrl+Alt+I`, Mac पर `Ctrl+Cmd+I` दबाएँ)
@@ -134,7 +134,7 @@ VS Code में [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/
 
 GitHub Copilot आपकी फ़ाइल का विश्लेषण करेगा और बताएगा कि यह क्या करती है। आप इससे नया कोड लिखने, बग ठीक करने, या "मैं और सुविधाएँ कैसे जोड़ूँ?" जैसे सवालों के जवाब देने के लिए कह सकते हैं।
 
-**टिप:** [इनलाइन एडिटिंग](https://code.visualstudio.com/docs/copilot/copilot-chat) के लिए, किसी भी फ़ाइल में कोड हाइलाइट करें और उस हिस्से को बदलने, ठीक करने, या समझाने के लिए Copilot से कहने के लिए `Ctrl+I` (Windows/Linux) या `Cmd+I` (Mac) दबाएँ।
+**टिप:** [इनलाइन एडिटिंग](https://code.visualstudio.com/docs/chat/inline-chat) के लिए, किसी भी फ़ाइल में कोड हाइलाइट करें और उस हिस्से को बदलने, ठीक करने, या समझाने के लिए Copilot से कहने के लिए `Ctrl+I` (Windows/Linux) या `Cmd+I` (Mac) दबाएँ।
 
 ## अपना प्रोजेक्ट फिर से कैसे खोलें
 
@@ -146,7 +146,7 @@ GitHub Copilot आपकी फ़ाइल का विश्लेषण क�
 
 - **प्रीव्यू नहीं दिख रहा:** सुनिश्चित करें कि Markdown Preview Enhanced एक्सटेंशन इंस्टॉल है और आपकी कोई `.md` फ़ाइल खुली है
 - **टर्मिनल गलत डायरेक्टरी दिखा रहा है:** टर्मिनल पैनल में ट्रैश आइकन पर क्लिक करें, फिर **Terminal** → **New Terminal** पर क्लिक करें
-- **Chat मेनू नहीं दिख रहा:** GitHub Copilot Chat इंस्टॉल करना पड़ सकता है - **Extensions** आइकन पर क्लिक करें, "GitHub Copilot Chat" खोजें, और इसे इंस्टॉल करें
+- **Chat मेनू नहीं दिख रहा:** हो सकता है AI सुविधाएँ बंद हों। Settings खोलें (Windows/Linux पर `Ctrl+,` या Mac पर `Cmd+,` दबाएँ), `disable AI features` खोजें, और उसका टिक हटा दें। फिर स्टेटस बार (नीचे) में Copilot आइकन पर माउस ले जाएँ और **Use AI Features** चुनें
 - **एक्सटेंशन काम नहीं कर रहे:** **View** → **Command Palette** पर क्लिक करें, "reload window" टाइप करें, और **Developer: Reload Window** चुनें
 
 ## पूरा वर्कफ़्लो
