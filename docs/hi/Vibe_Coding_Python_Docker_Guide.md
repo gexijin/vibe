@@ -186,7 +186,7 @@ x-अक्ष पर petal length और y-अक्ष पर petal width क�
 - आपको हर लाइन समझने की ज़रूरत नहीं, बस संरचना का अंदाज़ा लगाएँ
 - जाँचें कि सभी PNG फ़ाइलें बन गई हैं: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - GitHub Desktop खोलें
-- आपको सभी नई फ़ाइलें सूचीबद्ध दिखेंगी (Python स्क्रिप्ट और PNG इमेज)
+- आपको नई PNG इमेज सूचीबद्ध दिखेंगी, साथ ही `iris_exploration.py` एक बदली हुई (changed) फ़ाइल के रूप में दिखेगी (Claude ने इसमें प्लॉट बनाने का कोड जोड़ा है)
 - नीचे बाईं ओर **Summary** फ़ील्ड में, टाइप करें:
 
 ```
