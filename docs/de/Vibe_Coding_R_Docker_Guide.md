@@ -101,7 +101,7 @@ Installiere das hoopR-Paket und lade aktuelle NBA-Spielerstatistiken. Zeige mir 
 ```
 
 - Drücken Sie Enter
-- Beobachten Sie Claude:
+- Beobachten Sie, was Claude tut:
   - Das hoopR-Paket installieren
   - R-Code zum Laden der Daten schreiben
   - Ein Skript erstellen, um die Top-Scorer anzuzeigen

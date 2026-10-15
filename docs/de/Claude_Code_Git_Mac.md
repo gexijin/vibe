@@ -6,7 +6,7 @@ lang: "de"
 
 # Claude Code mit lokaler Versionskontrolle für Mac
 
-Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
+Sie programmieren mit KI-Unterstützung. Die KI nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
 
 ## Wichtige Konzepte
 

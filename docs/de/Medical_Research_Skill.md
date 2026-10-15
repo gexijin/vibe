@@ -26,7 +26,7 @@ In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinis
 
 ## Schritt 1: Zum Projektordner navigieren
 
-Wenn Sie das [Slash-Commands-Tutorial](./Reuse_Prompts_via_Slash_Commands.md) abgeschlossen haben, existiert der `test_claude`-Ordner bereits. Diese Befehle funktionieren in beiden Fällen.
+Wenn Sie das [Slash-Befehle-Tutorial](./Reuse_Prompts_via_Slash_Commands.md) abgeschlossen haben, existiert der `test_claude`-Ordner bereits. Diese Befehle funktionieren in beiden Fällen.
 
 **Windows (PowerShell):**
 - Öffnen Sie **PowerShell** aus dem Startmenü

@@ -111,7 +111,7 @@ Entferne den Titel. Verwende für jede Art eine andere Markerform. Wechsle zum w
 - Claude aktualisiert den Code
 - Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Führen Sie den aktualisierten Code erneut aus: `python iris_analysis.py` im Terminal
-- Das Diagramm zeigt jetzt verschiedene Markierungsformen pro Art, keinen Titel und whitegrid-Stil
+- Das Diagramm zeigt jetzt verschiedene Markerformen pro Art, keinen Titel und whitegrid-Stil
 - Schließen Sie das Plot-Fenster, um fortzufahren
 
 ## Schritt 7: Claude um PCA-Analyse bitten

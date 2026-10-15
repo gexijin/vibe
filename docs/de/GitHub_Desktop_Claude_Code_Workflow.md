@@ -6,7 +6,7 @@ lang: "de"
 
 # GitHub Desktop mit Claude Code verwenden
 
-Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt. Sie können immer zurückgehen.
+Sie programmieren mit KI-Unterstützung. Die KI nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt. Sie können immer zurückgehen.
 
 Wenn Sie [GitHub Desktop](https://desktop.github.com) mit [Claude Code](https://claude.com/claude-code) kombinieren, erhalten Sie KI-Geschwindigkeit bei der Entwicklung mit professioneller Versionskontrolle.
 
@@ -176,7 +176,7 @@ Claude überprüft Änderungen, schreibt eine Commit-Nachricht, committet und pu
 
 **Wann verwenden:**
 - Manuelle Commits: Beim Lernen oder wenn Sie Kontrolle wollen
-- Claude-Commits: Beim schnellen Arbeiten und wenn Sie gute Nachrichten wollen
+- Claude-Commits: Beim schnellen Arbeiten und wenn Sie gute Commit-Nachrichten wollen
 
 ## Schritt 12: Claude bitten, Änderungen zusammenzufassen
 

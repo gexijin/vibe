@@ -17,7 +17,7 @@ Sie möchten Python-Code schreiben, sind sich aber nicht sicher, welchen Editor 
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [VS Code Grundlagen](./VS_Code_Getting_Started)
+- Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - Internetverbindung zum Herunterladen von Python und Paketen
 - 15-20 Minuten
 

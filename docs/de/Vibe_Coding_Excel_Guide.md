@@ -145,7 +145,7 @@ Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, soda
 Überprüfen Sie vor dem Committen, was Claude erstellt hat.
 
 - Klicken Sie sich im Spreadsheet Viewer durch alle drei Blätter – Einnahmen, Ausgaben, Übersicht
-- Sie müssen nicht jede Formel verstehen, aber bekommen Sie ein Gefühl für die Struktur
+- Sie müssen nicht jede Formel verstehen, sollten aber ein Gefühl für die Struktur bekommen
 - Öffnen Sie GitHub Desktop
 - Sie sehen `budget.xlsx` als geänderte Datei aufgelistet (eventuell sehen Sie auch Hilfsskripte, die Claude geschrieben hat, zum Beispiel eine `.py`-Datei – diese können Sie ebenfalls committen)
 - Geben Sie im **Summary**-Feld unten links ein:
@@ -168,7 +168,7 @@ Vibe Coding glänzt beim Iterieren. Versuchen Sie, Funktionen hinzuzufügen, ind
 - "Füge dem Blatt Übersicht eine Zeile Sparziel hinzu, die den Fortschritt in Richtung eines Sparziels von $500/Monat zeigt"
 - "Füge ein viertes Tabellenblatt hinzu, das einen Vergleich zum Vorjahr zeigt, sobald ich Daten für mehr Monate hinzufüge"
 - "Ändere die Farben des Kreisdiagramms in ein Blau-Grau-Farbschema"
-- "Füge zu jeder Formel eine Notiz mit einer Erklärung hinzu, damit ich lernen kann, was sie bewirken"
+- "Füge zu jeder Formel eine Notiz mit einer Erklärung hinzu, damit ich lernen kann, was die Formeln bewirken"
 - "Erstelle eine zweite Arbeitsmappe namens household_budget.xlsx für eine vierköpfige Familie mit mehr Kategorien"
 
 Nach jeder erfolgreichen Funktion:

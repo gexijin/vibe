@@ -32,7 +32,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 - Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in Ihrer Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 
 ## Schritt 3: Den Ordner in VS Code öffnen

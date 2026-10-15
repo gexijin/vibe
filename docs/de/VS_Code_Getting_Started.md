@@ -32,7 +32,7 @@ Sie möchten Code schreiben, aber der **Editor** von Windows (Notepad) oder Text
    - **Linux:** Folgen Sie den Anweisungen für Ihren Paketmanager
 - Starten Sie VS Code
 
-Sie sehen einen Willkommen-Tab mit Optionen für den Einstieg.
+Sie sehen einen **Welcome**-Tab mit Optionen für den Einstieg.
 
 ## Schritt 2: Die Oberfläche erkunden
 

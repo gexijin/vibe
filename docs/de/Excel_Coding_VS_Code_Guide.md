@@ -6,7 +6,7 @@ lang: "de"
 
 # Claude Code mit Excel in VS Code verwenden
 
-Sie möchten eine Tabelle erstellen – mit Formeln, Formatierung, vielleicht einem Diagramm –, aber keine Lust, sich durch die Menüs von Excel zu kämpfen. Stellen Sie sich Claude Code als Assistenten vor, der Excel in- und auswendig kennt: Sie beschreiben in einfachen Worten, was Sie möchten, und er erstellt eine echte `.xlsx`-Datei mit funktionierenden Formeln. Dieses Tutorial zeigt Ihnen, wie Sie in VS Code einen Projektordner einrichten und Claude Code Excel-Tabellen für Sie erstellen und bearbeiten lassen.
+Sie möchten eine Tabelle erstellen – mit Formeln, Formatierung, vielleicht einem Diagramm –, aber Sie haben keine Lust, sich durch die Menüs von Excel zu kämpfen. Stellen Sie sich Claude Code als Assistenten vor, der Excel in- und auswendig kennt: Sie beschreiben in einfachen Worten, was Sie möchten, und er erstellt eine echte `.xlsx`-Datei mit funktionierenden Formeln. Dieses Tutorial zeigt Ihnen, wie Sie in VS Code einen Projektordner einrichten und Claude Code Excel-Tabellen für Sie erstellen und bearbeiten lassen.
 
 ## Wichtige Konzepte
 

@@ -6,7 +6,7 @@ lang: "de"
 
 # Vibe Coding in Python mit Claude Code und Docker
 
-Sie haben Python-Code geschrieben, indem Sie jede Zeile selbst getippt haben. Aber was wäre, wenn Sie beschreiben könnten, was Sie wollen, in einfachem Deutsch, und der Code erscheint? Vibe Coding ist wie ein Gespräch mit Ihrem Computer – Sie beschreiben das Ergebnis, Claude Code baut es, Sie testen und verfeinern. Es ist keine Magie; es ist eine neue Art zu arbeiten, bei der Sie die Richtung vorgeben und die KI die Umsetzung übernimmt. Dieses Tutorial zeigt Ihnen, wie Sie den klassischen Iris-Blumendatensatz analysieren, indem Sie nur natürlichsprachliche Anfragen verwenden.
+Sie haben Python-Code geschrieben, indem Sie jede Zeile selbst getippt haben. Aber was wäre, wenn Sie in einfachem Deutsch beschreiben könnten, was Sie wollen, und zusehen, wie der Code entsteht? Vibe Coding ist wie ein Gespräch mit Ihrem Computer – Sie beschreiben das Ergebnis, Claude Code baut es, Sie testen und verfeinern. Es ist keine Magie; es ist eine neue Art zu arbeiten, bei der Sie die Richtung vorgeben und die KI die Umsetzung übernimmt. Dieses Tutorial zeigt Ihnen, wie Sie den klassischen Iris-Blumendatensatz analysieren, indem Sie nur natürlichsprachliche Anfragen verwenden.
 
 ## Wichtige Konzepte
 
@@ -98,7 +98,7 @@ Lade den Iris-Datensatz aus scikit-learn. Konvertiere ihn in einen Pandas-DataFr
 ```
 
 - Drücken Sie Enter
-- Beobachten Sie Claude:
+- Beobachten Sie, was Claude tut:
   - Python-Code zum Laden der Daten schreiben
   - Ein Skript mit korrekten Imports erstellen
   - Den Code ausführen, um Ihnen die Ergebnisse zu zeigen
@@ -185,7 +185,7 @@ Erstelle einen Box-Plot, der die Blütenblattlängen der drei Arten vergleicht. 
 
 - Klicken Sie im VS Code Explorer auf `iris_exploration.py`, um es zu öffnen
 - Überfliegen Sie den Code – beachten Sie die Imports, das Laden der Daten und die Plotting-Abschnitte
-- Sie müssen nicht jede Zeile verstehen, aber bekommen Sie ein Gefühl für die Struktur
+- Sie müssen nicht jede Zeile verstehen, sollten aber ein Gefühl für die Struktur bekommen
 - Prüfen Sie, dass alle PNG-Dateien erstellt wurden: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Öffnen Sie GitHub Desktop
 - Sie sehen die neuen PNG-Bilder aufgelistet, außerdem `iris_exploration.py` als geänderte Datei (Claude hat den Code für die Diagramme hinzugefügt)

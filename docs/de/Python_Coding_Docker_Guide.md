@@ -344,8 +344,8 @@ Diese Einrichtung gibt Ihnen eine professionelle Python-Entwicklungsumgebung:
 
 - **VS Code** bietet den Code-Editor mit Syntax-Hervorhebung, IntelliSense und Debugging
 - **Docker-Container** führt eine isolierte Linux-Umgebung mit Python und allen Abhängigkeiten aus
-- **Python official image** (`python:3.12-slim`) enthält Python, pip und wichtige Tools
-- **Dev Container config** (`.devcontainer/`) installiert automatisch VS Code-Erweiterungen für Python-Debugging und Sprachunterstützung
+- **Offizielles Python-Image** (`python:3.12-slim`) enthält Python, pip und wichtige Tools
+- **Dev-Container-Konfiguration** (`.devcontainer/`) installiert automatisch VS Code-Erweiterungen für Python-Debugging und Sprachunterstützung
 - **Port-Weiterleitung** ermöglicht Ihnen den Zugriff auf Web-Apps (Streamlit, Flask), die innerhalb des Containers laufen, von Ihrem Browser aus
 
 ## Täglicher Workflow

@@ -35,13 +35,13 @@ Für Windows:
 - Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo unten links in der Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 Für Mac:
 - Öffnen Sie den **Finder** und gehen Sie zu **Programme**
 - Finden Sie **Visual Studio Code** und doppelklicken Sie darauf
 - Wenn Sie eine Warnung sehen „‚Visual Studio Code‘ ist eine aus dem Internet geladene App“, klicken Sie auf **Öffnen**
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 ## Schritt 3: Den Ordner in VS Code öffnen
 Für Windows:

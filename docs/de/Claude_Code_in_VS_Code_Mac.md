@@ -25,7 +25,7 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 - Öffnen Sie den **Finder** und gehen Sie zu **Programme**
 - Finden Sie **Visual Studio Code** und doppelklicken Sie darauf
 - Wenn Sie eine Warnung sehen „‚Visual Studio Code‘ ist eine aus dem Internet geladene App“, klicken Sie auf **Öffnen**
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 **Tipp:** Klicken Sie mit der rechten Maustaste auf VS Code im Dock und wählen Sie **Optionen > Im Dock behalten** für späteren schnellen Zugriff.
 
