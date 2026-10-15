@@ -22,7 +22,7 @@ Claude Code ist ein KI-Assistent, der in Ihrem Terminal lebt und Ihnen beim Schr
 
 ## Schritt 1: Git for Windows installieren (optional, empfohlen)
 
-Git for Windows ist **empfohlen, aber optional**. Es fügt **Git Bash** hinzu, die Shell, die Claude Code zum Ausführen von Befehlen verwendet. Wenn Sie ihn überspringen, greift Claude Code stattdessen auf PowerShell zurück – Sie können also direkt zu Schritt 2 wechseln und Git bei Bedarf später installieren.
+Git for Windows ist **empfohlen, aber optional**. Es fügt **Git Bash** hinzu, die Shell, die Claude Code zum Ausführen von Befehlen verwendet. Wenn Sie diesen Schritt überspringen, greift Claude Code stattdessen auf PowerShell zurück – Sie können also direkt zu Schritt 2 wechseln und Git bei Bedarf später installieren.
 
 - Gehen Sie zu [git-scm.com/download/win](https://git-scm.com/download/win)
 - Klicken Sie oben auf der Seite auf **Click here to download** und öffnen Sie das Installationsprogramm, wenn der Download fertig ist
@@ -92,7 +92,7 @@ Das ist praktisch, weil Sie Ihren Code im Editor geöffnet lassen und Claude im 
 
 Wenn die Seitenleiste geöffnet ist:
 
-- Geben Sie ein: „Erkläre mir dieses Projekt“
+- Geben Sie ein: Erkläre mir dieses Projekt
 - Drücken Sie die **Eingabetaste**
 
 Wenn Claude antwortet, können Sie loslegen. Beim ersten Mal fordert die Seitenleiste Sie eventuell stattdessen auf, sich anzumelden: Folgen Sie den Anweisungen, oder verbinden Sie Ihr Konto in Schritt 4 weiter unten und versuchen Sie es dann erneut.
@@ -191,7 +191,7 @@ Sie sollten nun Claude Code mit Azure-bereitgestellten Claude-Modellen verwenden
 
 ## Schritt 5: Claude Code testen
 
-Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing".
+Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing“.
 
 ## Schritt 6: Auf Ihre Projekte zugreifen
 
@@ -224,10 +224,10 @@ Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Einige F
 - Klicken Sie in der linken Seitenleiste auf **CPU**
 - Suchen Sie die Zeile **Virtualisierung:** und prüfen Sie, ob dort **Aktiviert** steht
 
-**Wenn dort „Deaktiviert" steht:** Sie müssen die Virtualisierung im BIOS Ihres Computers aktivieren:
+**Wenn dort „Deaktiviert“ steht:** Sie müssen die Virtualisierung im BIOS Ihres Computers aktivieren:
 - Starten Sie Ihren Computer neu
 - Drücken Sie während des Starts die BIOS-Taste (normalerweise **F2**, **F10**, **Entf** oder **Esc**, je nach Computerhersteller)
-- Suchen Sie nach Einstellungen zu „Virtualization Technology", „Intel VT-x", „AMD-V" oder „SVM Mode"
+- Suchen Sie nach Einstellungen zu „Virtualization Technology“, „Intel VT-x“, „AMD-V“ oder „SVM Mode“
 - Aktivieren Sie diese Einstellungen
 - Speichern und verlassen Sie das BIOS (normalerweise **F10**)
 
@@ -235,19 +235,19 @@ Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Einige F
 
 - Klicken Sie auf die **Windows-Starttaste** und geben Sie `PowerShell` ein
 - **Klicken Sie mit der rechten Maustaste** auf **Windows PowerShell** und klicken Sie auf **Als Administrator ausführen**
-- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?"
+- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?“
 - Geben Sie im PowerShell-Fenster ein:
    ```
    wsl --install
    ```
-- Möglicherweise sehen Sie Meldungen wie „Installing: Windows Subsystem for Linux" und „Installing: Ubuntu"
+- Möglicherweise sehen Sie Meldungen wie „Installing: Windows Subsystem for Linux“ und „Installing: Ubuntu“
 - Wenn die Installation abgeschlossen ist, starten Sie Ihren Computer neu
 
 **Hinweis:** `wsl --install` erfordert Windows 10 Version 2004 oder höher oder Windows 11. Wenn der Befehl nicht erkannt wird, ist Ihre Windows-Version möglicherweise zu alt.
 
 ### b) Ubuntu einrichten
 
-Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu" im Titel erscheinen. Falls nicht, klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol).
+Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu“ im Titel erscheinen. Falls nicht, klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol).
 
 - Warten Sie auf die Meldung: `Enter new UNIX username:`
 - Geben Sie einen Benutzernamen ein (nur Kleinbuchstaben und Zahlen, keine Leerzeichen) – zum Beispiel `john`
@@ -307,13 +307,13 @@ Dieses integrierte Diagnosetool überprüft Ihre Installation und meldet häufig
    [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
    ```
 
-### „Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
-Dieser Fehler bedeutet, dass die Virtualisierung nicht aktiviert ist:
+### Fehlermeldung zur „VM-Plattform“ (Virtual Machine Platform) und zur Virtualisierung im BIOS
+Je nach Sprache Ihres Windows erscheint diese Meldung auf Englisch („Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS“) oder sinngemäß auf Deutsch: Sie sollen die Windows-Funktion „VM-Plattform“ aktivieren und sicherstellen, dass die Virtualisierung im BIOS aktiviert ist. Dieser Fehler bedeutet, dass die Virtualisierung nicht aktiviert ist:
 - Prüfen Sie im Task-Manager, ob die Virtualisierung aktiviert ist (siehe den optionalen WSL-Abschnitt oben)
 - Wenn sie deaktiviert ist, aktivieren Sie sie im BIOS Ihres Computers
 - Nach dem Aktivieren der Virtualisierung starten Sie Ihren Computer neu und versuchen Sie `wsl --install` erneut
 
-### „wsl --install" funktioniert nicht
+### `wsl --install` funktioniert nicht
 - Stellen Sie sicher, dass Sie PowerShell als Administrator ausführen
 - Stellen Sie sicher, dass Sie Windows 10 Version 2004+ oder Windows 11 haben
 - Führen Sie zuerst `wsl --update` aus, dann `wsl --install` erneut

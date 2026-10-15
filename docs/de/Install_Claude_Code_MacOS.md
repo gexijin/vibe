@@ -161,7 +161,7 @@ Sie sind fertig! So verwenden Sie Claude Code:
    claude
    ```
 - Es stellt Ihnen einige Fragen, bevor es bereit ist zum Chatten
-- Um zu testen, ob es funktioniert, stellen Sie eine allgemeine Frage wie „Erkläre mir Quantencomputing."
+- Um zu testen, ob es funktioniert, stellen Sie eine allgemeine Frage wie „Erkläre mir Quantencomputing.“
 
 ## Schritt 5: Zu Ihrem Projekt navigieren
 
