@@ -17,7 +17,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Docker Container के ज़रिए VS Code में Python कोडिंग](./Python_Coding_Docker_Guide)
+- पूरा किया हुआ [Docker कंटेनर के ज़रिए VS Code में Python कोडिंग](./Python_Coding_Docker_Guide)
 - पूरा किया हुआ [Claude Code के साथ GitHub Desktop का उपयोग करें](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 मिनट
 
@@ -39,7 +39,7 @@ lang: "hi"
 
 ## चरण 2: Docker कॉन्फ़िगरेशन कॉपी करें
 
-आपको उस `python-docker-demo` प्रोजेक्ट का `.devcontainer` फ़ोल्डर चाहिए, जिसे आपने [Docker Container के ज़रिए VS Code में Python कोडिंग](./Python_Coding_Docker_Guide) में बनाया था। इससे इस प्रोजेक्ट को वही Python एनवायरनमेंट मिलता है, जिसमें pandas, matplotlib और Claude Code पहले से इंस्टॉल हैं।
+आपको उस `python-docker-demo` प्रोजेक्ट का `.devcontainer` फ़ोल्डर चाहिए, जिसे आपने [Docker कंटेनर के ज़रिए VS Code में Python कोडिंग](./Python_Coding_Docker_Guide) में बनाया था। इससे इस प्रोजेक्ट को वही Python एनवायरनमेंट मिलता है, जिसमें pandas, matplotlib और Claude Code पहले से इंस्टॉल हैं।
 
 - File Explorer (Windows) या Finder (Mac) खोलें
 - अपने `python-docker-demo` फ़ोल्डर पर जाएँ

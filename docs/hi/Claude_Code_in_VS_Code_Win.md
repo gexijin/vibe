@@ -17,7 +17,7 @@ lang: "hi"
 ## आपको क्या चाहिए
 
 - [Windows पर Claude Code इंस्टॉल करना](./Install_CLAUDE_Code_Win) पूरा किया हो
-- [VS Code की मूल बातें](./VS_Code_Getting_Started) पूरा किया हो
+- [VS Code की मूल बातें](./VS_Code_Getting_Started) ट्यूटोरियल पूरा किया हो
 - 10-15 मिनट
 
 ## चरण 1: एक प्रोजेक्ट फ़ोल्डर बनाएँ

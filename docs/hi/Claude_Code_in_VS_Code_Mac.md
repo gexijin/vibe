@@ -17,7 +17,7 @@ lang: "hi"
 ## आपको क्या चाहिए
 
 - पूरा किया हुआ [Mac पर Claude Code इंस्टॉल करना](./Install_Claude_Code_MacOS)
-- पूरा किया हुआ [VS Code की बुनियादी बातें](./VS_Code_Getting_Started)
+- पूरा किया हुआ [VS Code की बुनियादी बातें](./VS_Code_Getting_Started) ट्यूटोरियल
 - 10-15 मिनट
 
 ## चरण 1: VS Code शुरू करें
