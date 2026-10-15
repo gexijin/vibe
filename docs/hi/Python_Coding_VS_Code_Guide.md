@@ -41,7 +41,7 @@ lang: "hi"
   - Python आमतौर पर पहले से इंस्टॉल होता है। `python3 --version` से वर्शन जाँचें
   - यदि ज़रूरत हो, तो पैकेज मैनेजर से इंस्टॉल करें: `sudo apt install python3 python3-pip python3-venv` (Ubuntu/Debian)
 
-एक terminal खोलकर और `python3 --version` या `python --version` टाइप करके इंस्टॉलेशन सत्यापित करें।
+एक टर्मिनल खोलकर और `python3 --version` या `python --version` टाइप करके इंस्टॉलेशन सत्यापित करें।
 
 ## चरण 2: VS Code में Python Extensions इंस्टॉल करें
 
@@ -81,12 +81,12 @@ Virtual environment आपके प्रोजेक्ट की डिपे
 - VS Code के एनवायरनमेंट बनाने की प्रतीक्षा करें (आपको एक `.venv` फ़ोल्डर दिखेगा)
 - VS Code आपके प्रोजेक्ट के लिए इस एनवायरनमेंट को अपने आप सक्रिय कर देगा
 
-जब एनवायरनमेंट सक्रिय होगा तो आपको अपने terminal प्रॉम्प्ट में `(.venv)` दिखेगा।
+जब एनवायरनमेंट सक्रिय होगा तो आपको अपने टर्मिनल प्रॉम्प्ट में `(.venv)` दिखेगा।
 
 ## चरण 6: ज़रूरी पैकेज इंस्टॉल करें
 
-- **View > Terminal** पर क्लिक करके VS Code में एक नया terminal खोलें
-- terminal में `(.venv)` दिखना चाहिए, जो बताता है कि आपका virtual environment सक्रिय है
+- **View > Terminal** पर क्लिक करके VS Code में एक नया टर्मिनल खोलें
+- टर्मिनल में `(.venv)` दिखना चाहिए, जो बताता है कि आपका virtual environment सक्रिय है
 - यह कमांड टाइप करके पैकेज इंस्टॉल करें:
 
 ```bash
@@ -131,7 +131,7 @@ plt.show()
 
 - `analysis.py` खुला होने पर, ऊपर-दाएँ कोने में **▶ Run Python File** बटन पर क्लिक करें
 - या एडिटर में राइट-क्लिक करें और **Run Python File in Terminal** चुनें
-- terminal पैनल में आउटपुट आते देखें
+- टर्मिनल पैनल में आउटपुट आते देखें
 - आपका प्लॉट दिखाने वाली एक हिस्टोग्राम विंडो पॉप अप होगी
 - आप विशिष्ट लाइनें भी चुन सकते हैं और उन्हें एक इंटरैक्टिव Python सेशन में चलाने के लिए `Shift+Enter` दबा सकते हैं
 
@@ -172,16 +172,16 @@ st.pyplot(fig)
 ```
 
 - फ़ाइल सेव करें
-- terminal खोलें और चलाएँ:
+- टर्मिनल खोलें और चलाएँ:
 
 ```bash
 streamlit run app.py
 ```
 
-- पहली बार Streamlit चलाने पर यह terminal में `Email:` पूछता है। इसे छोड़ने के लिए बस `Enter` दबाएँ
+- पहली बार Streamlit चलाने पर यह टर्मिनल में `Email:` पूछता है। इसे छोड़ने के लिए बस `Enter` दबाएँ
 - ऐप आपके ब्राउज़र में खुलता है (आमतौर पर `http://localhost:8501` पर)
 - साइडबार में स्लाइडर हिलाएँ और हिस्टोग्राम को तुरंत अपडेट होते देखें
-- ऐप रोकने के लिए terminal में `Ctrl+C` दबाएँ
+- ऐप रोकने के लिए टर्मिनल में `Ctrl+C` दबाएँ
 
 ## चरण 10: कोड कम्प्लीशन और IntelliSense का उपयोग करें
 
@@ -213,19 +213,19 @@ streamlit run app.py
 
 ## समस्या निवारण
 
-- **terminal में "Python is not recognized"**: Python आपके सिस्टम PATH में नहीं है। Windows पर, Python फिर से इंस्टॉल करें और "Add python.exe to PATH" चेक करें। Mac/Linux पर, `python` की बजाय `python3` का उपयोग करें। ठीक करने के बाद VS Code रीस्टार्ट करें।
+- **टर्मिनल में "Python is not recognized"**: Python आपके सिस्टम PATH में नहीं है। Windows पर, Python फिर से इंस्टॉल करें और "Add python.exe to PATH" चेक करें। Mac/Linux पर, `python` की बजाय `python3` का उपयोग करें। ठीक करने के बाद VS Code रीस्टार्ट करें।
 
 - **कोई इंटरप्रेटर नहीं मिला**: VS Code के नीचे-दाएँ कोने में इंटरप्रेटर सिलेक्टर पर क्लिक करें, या **View > Command Palette** पर क्लिक करके `Python: Select Interpreter` चलाएँ। यदि आपका Python इंस्टॉलेशन नहीं दिखता, तो **Enter interpreter path** चुनें और अपनी Python एक्ज़ीक्यूटेबल फ़ाइल तक ब्राउज़ करें।
 
-- **Virtual environment सक्रिय नहीं हो रहा**: जब आप terminal खोलते हैं तो VS Code को इसे अपने आप सक्रिय कर देना चाहिए। यदि नहीं होता, तो मैन्युअल रूप से सक्रिय करें: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`। अपने terminal प्रॉम्प्ट में `(.venv)` देखकर सत्यापित करें।
+- **Virtual environment सक्रिय नहीं हो रहा**: जब आप टर्मिनल खोलते हैं तो VS Code को इसे अपने आप सक्रिय कर देना चाहिए। यदि नहीं होता, तो मैन्युअल रूप से सक्रिय करें: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`। अपने टर्मिनल प्रॉम्प्ट में `(.venv)` देखकर सत्यापित करें।
 
 - **IntelliSense काम नहीं कर रहा**: सुनिश्चित करें कि Pylance इंस्टॉल और सक्षम है। जाँचें कि नीचे-दाएँ कोने में आपका चुना हुआ इंटरप्रेटर दिख रहा है। Pylance को शुरू होने के लिए फ़ाइल खोलने के बाद 10-20 सेकंड प्रतीक्षा करें। समस्या बनी रहने पर VS Code रीस्टार्ट करें।
 
-- **pip install विफल होता है**: सुनिश्चित करें कि आपका virtual environment सक्रिय है (terminal में `(.venv)` देखें)। Linux पर, आपको पहले `python3-venv` इंस्टॉल करने की ज़रूरत हो सकती है। Windows पर, जाँचें कि एंटीवायरस pip को ब्लॉक नहीं कर रहा।
+- **pip install विफल होता है**: सुनिश्चित करें कि आपका virtual environment सक्रिय है (टर्मिनल में `(.venv)` देखें)। Linux पर, आपको पहले `python3-venv` इंस्टॉल करने की ज़रूरत हो सकती है। Windows पर, जाँचें कि एंटीवायरस pip को ब्लॉक नहीं कर रहा।
 
 - **Mac पर `SSL: CERTIFICATE_VERIFY_FAILED`**: **Finder > Applications > Python 3.x** खोलें और **Install Certificates.command** पर डबल-क्लिक करें, फिर स्क्रिप्ट दोबारा चलाएँ।
 
-- **Streamlit ऐप नहीं चलता**: सुनिश्चित करें कि streamlit आपके virtual environment में इंस्टॉल है (`pip show streamlit`)। त्रुटि संदेशों के लिए terminal जाँचें। सुनिश्चित करें कि कोई अन्य ऐप पोर्ट 8501 का उपयोग नहीं कर रहा।
+- **Streamlit ऐप नहीं चलता**: सुनिश्चित करें कि streamlit आपके virtual environment में इंस्टॉल है (`pip show streamlit`)। त्रुटि संदेशों के लिए टर्मिनल जाँचें। सुनिश्चित करें कि कोई अन्य ऐप पोर्ट 8501 का उपयोग नहीं कर रहा।
 
 ## वर्कफ़्लो सारांश
 
