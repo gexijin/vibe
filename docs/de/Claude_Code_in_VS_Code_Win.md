@@ -17,7 +17,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code unter Windows installieren](./Install_CLAUDE_Code_Win)
-- Abgeschlossenes Tutorial [VS Code Grundlagen](./VS_Code_Getting_Started)
+- Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - 10-15 Minuten
 
 ## Schritt 1: Einen Projektordner erstellen
@@ -29,10 +29,10 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 
 ## Schritt 2: VS Code starten
 
-- Klicken Sie auf die **Windows-Starttaste** (unten links auf Ihrem Bildschirm)
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in Ihrer Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 
 ## Schritt 3: Den Ordner in VS Code öffnen
@@ -51,7 +51,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 5: Den Workflow testen
 
@@ -69,19 +69,19 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 
 - **Option A:** Öffnen Sie VS Code, klicken Sie auf **File > Open Recent** und wählen Sie `test_claude`
-- **Option B:** Öffnen Sie den **Datei-Explorer**, klicken Sie mit der rechten Maustaste auf den Ordner `test_claude` und wählen Sie **Open with Code**
+- **Option B:** Öffnen Sie den **Datei-Explorer**, klicken Sie mit der rechten Maustaste auf den Ordner `test_claude` und wählen Sie **Open with Code** (bei deutschsprachiger Installation **Mit Code öffnen**; unter Windows 11 klicken Sie zuerst auf **Weitere Optionen anzeigen**). Diese Option erscheint nur, wenn bei der Installation von VS Code die Option **Add "Open with Code" action to Windows Explorer directory context menu** (deutsch: **Aktion "Mit Code öffnen" dem Verzeichniskontextmenü von Windows-Explorer hinzufügen**) angehakt war; andernfalls verwenden Sie Option A
 
 ## Nächste Schritte
 
-- Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht"
-- Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet"
-- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?"
-- Probieren Sie die Claude Code VS Code-Erweiterung für eine visuelle Oberfläche mit Inline-Diffs aus (suchen Sie nach „Claude Code" in Extensions)
+- Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht“
+- Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet“
+- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?“
+- Die Claude Code-Erweiterung haben Sie bereits im Installations-Tutorial installiert – klicken Sie auf das Spark-Symbol oben rechts im Editor, um statt im Terminal in einem Panel mit Inline-Diffs mit Claude zu chatten
 
 ## Fehlerbehebung
 
-- **Befehl `claude` nicht gefunden** - Führen Sie `claude --version` im VS Code-Terminal aus, um zu prüfen, ob Claude Code installiert ist; wenn nicht, folgen Sie zuerst dem [Installations-Tutorial](Install_CLAUDE_Code_Win.md)
-- **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, installieren Sie die Erweiterung **WSL** über die Extensions-Seitenleiste, klicken Sie auf das blaue/grüne Symbol in der unteren linken Ecke und wählen Sie **Connect to WSL**, bevor Sie Ihren Projektordner öffnen (erreichbar unter `/mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude`)
+- **`claude` wird nicht erkannt** - Schließen Sie VS Code vollständig (alle Fenster) und öffnen Sie es erneut. Öffnen Sie dann ein neues Terminal und versuchen Sie `claude` noch einmal. Wenn es weiterhin nicht funktioniert, führen Sie `claude --version` in einem normalen PowerShell-Fenster aus; schlägt auch das fehl, folgen Sie zuerst dem [Installations-Tutorial](Install_CLAUDE_Code_Win.md)
+- **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, installieren Sie die Erweiterung **WSL** über die Extensions-Seitenleiste, klicken Sie auf das Symbol **><** in der unteren linken Ecke und wählen Sie **Connect to WSL**, bevor Sie Ihren Projektordner öffnen (erreichbar unter `/mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude`)
 
 ## Workflow-Überblick
 

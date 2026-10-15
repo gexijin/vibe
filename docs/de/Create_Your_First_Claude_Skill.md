@@ -12,6 +12,7 @@ Sie haben manuell `/stock-report AAPL` eingegeben, um Berichte zu generieren. Wa
 
 - **Skill** - Eine modell-aufgerufene Fähigkeit, die in `.claude/skills/` gespeichert ist und die Claude automatisch basierend auf dem Kontext aktiviert
 - **Modell-aufgerufen** - Claude entscheidet, wann der Skill verwendet werden soll, indem es seine Beschreibung liest, ohne dass Sie einen Befehl eingeben
+- **Weiterhin ein Slash-Befehl** - Sie können jeden Skill auch selbst ausführen, indem Sie `/skill-name` eingeben (zum Beispiel `/stock-report AAPL`). Wenn ein Skill und ein Slash-Befehl denselben Namen haben, wird der Skill verwendet
 - **SKILL.md** - Die Hauptdatei, die YAML-Frontmatter (Metadaten) und Anweisungen für Claude enthält
 
 ## Was Sie benötigen
@@ -56,11 +57,14 @@ Geben Sie ein:
 claude
 ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
-## Schritt 3: Auto-Genehmigung für Bearbeitungen aktivieren
+## Schritt 3: Claude Dateien ohne Rückfrage bearbeiten lassen
 
-Drücken Sie **Shift+Tab**, um den Auto-Genehmigungsmodus für Bearbeitungen zu aktivieren.
+Sehen Sie sich die Statuszeile direkt unter der Eingabezeile von Claude Code an:
+
+- Wenn dort **auto mode on** oder **accept edits on** steht, ist alles bereit
+- Wenn dort **manual mode on** steht, drücken Sie **Shift+Tab**, bis **accept edits on** angezeigt wird
 
 Dies ermöglicht Claude, Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen.
 
@@ -80,7 +84,7 @@ Claude analysiert Ihren bestehenden Slash-Befehl und konvertiert ihn in einen Sk
 
 Öffnen Sie VS Code und sehen Sie sich das Projekt an:
 - Klicken Sie auf **File > Open Folder**
-- Wählen Sie `Documents/test_claude`
+- Wählen Sie im Ordner **Dokumente** (Documents) den Ordner `test_claude`
 - Navigieren Sie im Datei-Explorer zu `.claude/skills/stock-report/`
 - Klicken Sie auf `SKILL.md`, um sie zu öffnen
 
@@ -98,7 +102,11 @@ Das `description`-Feld ist der Schlüssel – es sagt Claude genau, wann dieser 
 
 ## Schritt 6: Den Skill testen (ohne einen Befehl einzugeben)
 
-Anstatt `/stock-report AAPL` einzugeben, stellen Sie einfach eine natürliche Frage:
+Stellen Sie zuerst sicher, dass Claude Code den neuen Skill geladen hat. Geben Sie ein:
+```
+/reload-skills
+```
+Claude Code meldet, wie viele Skills verfügbar sind. Stellen Sie jetzt, anstatt `/stock-report AAPL` einzugeben, einfach eine natürliche Frage:
 ```
 Was macht Apple in letzter Zeit?
 ```
@@ -119,7 +127,7 @@ Beobachten Sie Claude bei der Arbeit – es sollte denselben umfassenden Bericht
 
 **Skill (Automatisch):**
 ```
-Erzähle mir über Teslas neueste Entwicklungen
+Erzähle mir von Teslas neuesten Entwicklungen
 ```
 oder
 ```
@@ -182,14 +190,14 @@ Das Muster: Definieren Sie, wann Claude automatisch helfen soll, nicht nur Short
 
 - **Skill aktiviert sich nicht:** Überprüfen Sie das `description`-Feld in `SKILL.md` – es muss Auslösewörter enthalten, die mit Ihrer Frage zusammenhängen
 - **Skill aktiviert sich zu oft:** Machen Sie die Beschreibung spezifischer darüber, wann er verwendet werden soll
-- **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (versteckter Ordner – aktivieren Sie „Versteckte Dateien anzeigen" in Ihrem Datei-Explorer)
-- **Änderungen an SKILL.md funktionieren nicht:** Skills werden automatisch geladen, wenn sie geändert werden – kein Neustart nötig. Wenn es immer noch nicht funktioniert, überprüfen Sie die YAML-Formatierung
+- **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (ein versteckter Ordner: Der Explorer von VS Code zeigt ihn an; unter Windows wählen Sie im **Datei-Explorer** (File Explorer) **Ansicht > Anzeigen > Ausgeblendete Elemente** (View > Show > Hidden items); im Finder auf dem Mac drücken Sie **Cmd+Shift+.**)
+- **Änderungen an SKILL.md funktionieren nicht:** Skills werden normalerweise automatisch neu geladen, wenn sie geändert werden. Wenn der Ordner `.claude/skills/` erst während dieser Sitzung erstellt wurde, geben Sie `/reload-skills` ein (oder starten Sie Claude Code neu). Wenn es immer noch nicht funktioniert, überprüfen Sie die YAML-Formatierung
 
 ## Workflow-Überblick
 
 - **Slash-Befehle** sind Shortcuts, die Sie manuell eingeben (wie Lesezeichen)
 - **Skills** sind Fähigkeiten, die Claude entdeckt und automatisch verwendet (wie ein Assistent, der Ihre Präferenzen kennt)
-- **Skill-Beschreibungen** fungieren als Anweisungen, die Claude sagen: „Verwende mich, wenn der Benutzer X sagt"
+- **Skill-Beschreibungen** fungieren als Anweisungen, die Claude sagen: „Verwende mich, wenn der Benutzer X sagt“
 - **Beide können koexistieren** - Verwenden Sie Slash-Befehle für schnelle, repetitive Aufgaben; verwenden Sie Skills für komplexe Workflows
 - **Skills skalieren besser** - Sie müssen sich keine Befehlsnamen merken; Claude entscheidet basierend auf dem Kontext
 

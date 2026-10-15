@@ -6,7 +6,7 @@ lang: "de"
 
 # Python-Programmierung in VS Code über Docker-Container
 
-Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen, nur um dann Stunden mit dem Debuggen von „aber es funktioniert auf meinem Rechner"-Problemen zu verbringen? Docker-Container sind wie Frachtcontainer für Code – sie verpacken Ihre Python-Umgebung, Bibliotheken und Abhängigkeiten in eine versiegelte Box, die überall gleich funktioniert. Außerdem erhalten Sie Zugang zu Zehntausenden von vorgefertigten Images auf [Docker Hub](https://hub.docker.com/), wo Softwareentwickler fertige Umgebungen veröffentlichen und Ihnen den Schmerz manueller Softwareinstallation ersparen. Dieses Tutorial zeigt Ihnen, wie Sie Python in einer isolierten, reproduzierbaren Umgebung mit VS Code und Docker Desktop ausführen.
+Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen, nur um dann Stunden mit dem Debuggen von „aber auf meinem Rechner läuft es doch“-Problemen zu verbringen? Docker-Container sind wie Frachtcontainer für Code – sie verpacken Ihre Python-Umgebung, Bibliotheken und Abhängigkeiten in eine versiegelte Box, die überall gleich funktioniert. Außerdem erhalten Sie Zugang zu Zehntausenden von vorgefertigten Images auf [Docker Hub](https://hub.docker.com/), wo Softwareentwickler fertige Umgebungen veröffentlichen und Ihnen den Schmerz manueller Softwareinstallation ersparen. Dieses Tutorial zeigt Ihnen, wie Sie Python in einer isolierten, reproduzierbaren Umgebung mit VS Code und Docker Desktop ausführen.
 
 ## Wichtige Konzepte
 
@@ -23,7 +23,7 @@ Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen,
 ## Schritt 1: Docker Desktop installieren
 
 - Besuchen Sie die [Docker Desktop Download-Seite](https://www.docker.com/products/docker-desktop/)
-- Klicken Sie auf **Download for Windows** (oder Mac/Linux je nach System)
+- Klicken Sie auf **Download Docker Desktop** und wählen Sie Ihr System (Windows, oder Mac - Apple Silicon für Macs mit M1/M2/M3/M4, oder Mac - Intel Chip für ältere Macs)
 - Führen Sie das Installationsprogramm aus und folgen Sie dem Assistenten
 - Wenn Sie dazu aufgefordert werden, aktivieren Sie WSL 2 (Windows-Benutzer) oder akzeptieren Sie die Standardeinstellungen
 - Starten Sie Docker Desktop nach der Installation
@@ -40,15 +40,17 @@ Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen,
 ## Schritt 3: Python-Projektordner erstellen
 
 - Erstellen Sie einen neuen Ordner auf Ihrem Computer namens `python-docker-demo`
-- Erstellen Sie darin einen Unterordner namens `.devcontainer`
-- Erstellen Sie darin einen Unterordner namens `python`
+- Klicken Sie in VS Code auf **File > Open Folder**
+- Navigieren Sie zum Ordner `python-docker-demo`, den Sie gerade erstellt haben
+- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
+- Bewegen Sie in der Explorer-Seitenleiste die Maus über die Überschrift **PYTHON-DOCKER-DEMO**, klicken Sie auf das Symbol **New Folder** und nennen Sie den Ordner `.devcontainer`
+- Klicken Sie in der Explorer-Seitenleiste auf eine leere Stelle unterhalb von `.devcontainer`, sodass nichts markiert ist, klicken Sie dann erneut auf das Symbol **New Folder** und nennen Sie den Ordner `python`
 - Ihre Struktur sollte so aussehen: `python-docker-demo/.devcontainer/` und `python-docker-demo/python/`
+
+Wir erstellen diese Ordner in VS Code, weil der Finder auf dem Mac keinen Ordnernamen erlaubt, der mit einem Punkt (`.`) beginnt.
 
 ## Schritt 4: Die Dockerfile erstellen
 
-- Klicken Sie in VS Code auf **File > Open Folder**
-- Navigieren Sie zum Ordner `python-docker-demo`, den Sie gerade erstellt haben
-- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Klicken Sie in der Explorer-Seitenleiste mit der rechten Maustaste auf den `.devcontainer`-Ordner
 - Klicken Sie auf **New File**
 - Nennen Sie sie `Dockerfile`
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -113,32 +115,32 @@ EXPOSE 8501
 - Fügen Sie folgenden Inhalt ein:
 
 ```python
-# Einfache Datenanalyse mit dem Iris-Datensatz
+# Simple data analysis using the iris dataset
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 
-# Lade den Iris-Datensatz
+# Load the iris dataset
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df['species'] = iris.target
+df['species'] = iris.target_names[iris.target]
 
-# Zeige die ersten Zeilen an
+# Display first few rows
 print(df.head())
 
-# Zusammenfassende Statistiken
-print("\nZusammenfassende Statistiken:")
+# Summary statistics
+print("\nSummary statistics:")
 print(df.describe())
 
-# Erstelle Histogramme
+# Create histograms
 plt.figure(figsize=(10, 6))
-plt.hist(df['sepal length (cm)'], bins=20, alpha=0.7, label='Kelchblattlänge')
-plt.hist(df['sepal width (cm)'], bins=20, alpha=0.7, label='Kelchblattbreite')
-plt.xlabel('Messung (cm)')
-plt.ylabel('Häufigkeit')
-plt.title('Iris Kelchblatt-Messungen')
+plt.hist(df['sepal length (cm)'], bins=20, alpha=0.7, label='Sepal Length')
+plt.hist(df['sepal width (cm)'], bins=20, alpha=0.7, label='Sepal Width')
+plt.xlabel('Measurement (cm)')
+plt.ylabel('Frequency')
+plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - Klicken Sie auf **File > Save**
@@ -153,24 +155,24 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.title("Old Faithful Geysir-Daten")
+st.title("Old Faithful Geyser Data")
 
-# Schieberegler für die Anzahl der Bins
-bins = st.slider("Anzahl der Bins:", min_value=5, max_value=50, value=30)
+# Slider for number of bins
+bins = st.slider("Number of bins:", min_value=5, max_value=50, value=30)
 
-# Generiere Beispieldaten (simuliert Old Faithful Ausbruchsdauern)
+# Generate sample data (simulating Old Faithful eruption durations)
 np.random.seed(42)
 data = np.concatenate([
     np.random.normal(2, 0.5, 100),
     np.random.normal(4.5, 0.5, 150)
 ])
 
-# Erstelle Histogramm
+# Create histogram
 fig, ax = plt.subplots()
 ax.hist(data, bins=bins, edgecolor='black')
-ax.set_xlabel('Ausbruchsdauer (Minuten)')
-ax.set_ylabel('Häufigkeit')
-ax.set_title(f'Histogramm mit {bins} Bins')
+ax.set_xlabel('Eruption Duration (minutes)')
+ax.set_ylabel('Frequency')
+ax.set_title(f'Histogram with {bins} bins')
 
 st.pyplot(fig)
 ```
@@ -179,11 +181,11 @@ st.pyplot(fig)
 
 ## Schritt 8: Im Container erneut öffnen
 
-- Klicken Sie auf das grüne Symbol in der unteren linken Ecke von VS Code
+- Klicken Sie auf das Symbol **><** in der unteren linken Ecke von VS Code
 - Wählen Sie **Reopen in Container** aus dem Menü
 - VS Code baut den Container (dies dauert beim ersten Mal 5-10 Minuten)
 - Sie sehen eine Fortschrittsanzeige mit den Build-Schritten
-- Nach Abschluss zeigt das grüne Symbol **Dev Container: Python in Docker** an
+- Nach Abschluss steht in der unteren linken Ecke **Dev Container: Python in Docker**
 
 ## Schritt 9: Die Container-Umgebung verstehen
 
@@ -201,10 +203,10 @@ Sie sehen `/workspaces/python-docker-demo` – das ist Ihr Projektordner innerha
 - Listen Sie die Dateien auf:
 
 ```bash
-ls
+ls -a
 ```
 
-Sie sehen die Ordner, die Sie erstellt haben: `.devcontainer/`, `python/`, usw.
+Sie sehen die Ordner, die Sie erstellt haben: `.devcontainer/`, `python/`, usw. (`-a` zeigt auch Ordner an, deren Name mit einem Punkt beginnt)
 
 - Versuchen Sie, ein Verzeichnis nach oben zu gehen:
 
@@ -233,7 +235,7 @@ Der Container hat Python mit Data-Science-Paketen vorinstalliert. Führen wir da
 - Fahren Sie fort, jede Zeile oder jeden Block einzeln mit `Shift+Enter` auszuführen
 - Wenn Sie `print(df.head())` ausführen, sehen Sie die ersten 5 Zeilen im Terminal
 - Wenn Sie `print(df.describe())` ausführen, sehen Sie statistische Zusammenfassungen
-- Wenn Sie den Histogramm-Code ausführen, öffnet sich ein Plot-Fenster mit der Visualisierung
+- Wenn Sie den Histogramm-Code ausführen, wird das Diagramm als `iris_histogram.png` in Ihrem Projektordner gespeichert (der Container hat keinen Bildschirm, daher können Diagramme nicht in einem Fenster geöffnet werden) – klicken Sie in der Explorer-Seitenleiste auf die Datei, um sie anzusehen
 
 ## Schritt 11: Die Streamlit-App ausführen
 
@@ -261,11 +263,11 @@ Lassen Sie uns die App modifizieren, um zu sehen, wie Entwicklung funktioniert.
 
 - Lassen Sie die App laufen
 - Bearbeiten Sie in VS Code `python/app.py`
-- Finden Sie Zeile 5: `st.title("Old Faithful Geysir-Daten")`
+- Finden Sie Zeile 5: `st.title("Old Faithful Geyser Data")`
 - Ändern Sie sie zu:
 
 ```python
-st.title("Meine erste Python-Docker-App")
+st.title("My First Python Docker App")
 ```
 
 - Klicken Sie auf **File > Save**
@@ -275,15 +277,13 @@ st.title("Meine erste Python-Docker-App")
 
 ## Schritt 13: Die Dockerfile verstehen (Optional)
 
-Lassen Sie uns untersuchen, wie die Dockerfile Ihre Umgebung konfiguriert.
-
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
 - Klicken Sie zum Öffnen der Datei
 - Sie sehen die vollständige Konfiguration
 
 **Wichtige Teile:**
 
-- `FROM python:3.12-slim` - Offizielles Python 3.12 Basis-Image (leichtgewichtiges Debian-basiertes)
+- `FROM python:3.12-slim` - Offizielles Python 3.12 Basis-Image (schlankes, Debian-basiertes Image)
 - `RUN apt-get install` - Linux-Systembibliotheken zum Erstellen von Python-Paketen
 - `RUN pip install --no-cache-dir ...` - Installiert Python-Pakete permanent
 - `RUN curl... && apt-get install -y nodejs` - Installiert Node.js, das für die Ausführung von Claude Code erforderlich ist
@@ -297,31 +297,30 @@ Lassen Sie uns untersuchen, wie die Dockerfile Ihre Umgebung konfiguriert.
 - `python:3.12-alpine` - Minimales Alpine Linux-basiertes Image (kleinste Dateigröße)
 - `jupyter/datascience-notebook` - Vorkonfiguriertes Jupyter mit Data-Science-Bibliotheken
 
-Nach der Änderung des Basis-Images müssen Sie den Container neu erstellen, um die Änderungen anzuwenden.
+Nach der Änderung des Basis-Images müssen Sie den Container neu erstellen, um die Änderungen anzuwenden. Hinweis: Mit dieser Dockerfile funktionieren nur Debian-basierte Images wie `python:3.12` und `python:3.12-slim`; Alpine- und Jupyter-Images brauchen eine andere Dockerfile.
 
 ## Schritt 14: Python-Pakete im Docker-Image installieren (Optional)
 
-Pakete, die über pip im Terminal installiert werden (`pip install paket`), sind temporär und verschwinden, wenn Sie den Container neu erstellen. Um Pakete permanent zu machen, fügen Sie sie zur Dockerfile hinzu.
+Pakete, die über pip im Terminal installiert werden (`pip install package`), sind temporär und verschwinden, wenn Sie den Container neu erstellen. Um Pakete permanent zu machen, fügen Sie sie zur Dockerfile hinzu.
 
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
 - Klicken Sie zum Öffnen der Datei
 - Finden Sie Zeile 10: `RUN pip install --no-cache-dir ...`
-- Fügen Sie `scikit-learn` zur Liste hinzu:
+- Fügen Sie `plotly` zur Liste hinzu:
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - Klicken Sie auf **File > Save**
-- Klicken Sie auf das grüne Symbol in der unteren linken Ecke
+- Klicken Sie auf das Symbol **><** in der unteren linken Ecke
 - Wählen Sie **Rebuild Container** aus dem Menü
 - VS Code erstellt den Container mit Ihrem neuen Paket neu (dies dauert 2-5 Minuten)
-- Um zu überprüfen, öffnen Sie ein Python-Terminal und geben Sie ein:
+- Um es zu überprüfen, öffnen Sie ein Terminal (**Terminal > New Terminal**) und führen Sie aus:
 
-```python
-import sklearn
-print(sklearn.__version__)
+```bash
+python -c "import plotly; print(plotly.__version__)"
 ```
 
 Wenn die Version ohne Fehler angezeigt wird, ist das Paket dauerhaft installiert.
@@ -329,7 +328,7 @@ Wenn die Version ohne Fehler angezeigt wird, ist das Paket dauerhaft installiert
 ## Nächste Schritte
 
 - **Erstellen Sie ein neues Python-Skript** - Erstellen Sie eine neue `.py`-Datei im `python/`-Ordner, schreiben Sie Datenanalyse-Code mit eingebauten Datensätzen oder laden Sie Ihre eigenen CSV-Dateien
-- **Installieren Sie Python-Pakete** - Fügen Sie Pakete hinzu, die Sie benötigen, indem Sie die Dockerfile (Zeile 9) bearbeiten und den Container neu erstellen
+- **Installieren Sie Python-Pakete** - Fügen Sie Pakete hinzu, die Sie benötigen, indem Sie die Dockerfile (Zeile 10) bearbeiten und den Container neu erstellen
 - **Erkunden Sie Data Science** - Probieren Sie Datenmanipulation mit pandas und Visualisierung mit matplotlib oder seaborn
 - **Erstellen Sie Web-Apps** - Erstellen Sie interaktive Dashboards mit Streamlit oder Flask
 
@@ -337,7 +336,7 @@ Wenn die Version ohne Fehler angezeigt wird, ist das Paket dauerhaft installiert
 
 - **Docker Desktop läuft nicht** - Öffnen Sie Docker Desktop und warten Sie auf den grünen Statusanzeiger, bevor Sie den Container erneut öffnen
 - **Container-Build schlägt fehl** - Überprüfen Sie Ihre Internetverbindung; der erste Build lädt Images und Pakete herunter. Klicken Sie auf **Rebuild Container**, um es erneut zu versuchen
-- **Port 8501 bereits in Verwendung** - Stoppen Sie andere Apps, die diesen Port verwenden, oder ändern Sie den Port in der Dockerfile und `devcontainer.json`
+- **Port 8501 bereits in Verwendung** - Stoppen Sie andere Apps, die diesen Port verwenden, oder wählen Sie einen anderen Port (zum Beispiel 8502): Ändern Sie ihn in der Dockerfile und in `devcontainer.json`, erstellen Sie den Container neu und starten Sie die App dann mit `streamlit run app.py --server.port 8502`
 
 ## Workflow-Überblick
 
@@ -345,8 +344,8 @@ Diese Einrichtung gibt Ihnen eine professionelle Python-Entwicklungsumgebung:
 
 - **VS Code** bietet den Code-Editor mit Syntax-Hervorhebung, IntelliSense und Debugging
 - **Docker-Container** führt eine isolierte Linux-Umgebung mit Python und allen Abhängigkeiten aus
-- **Python official image** (`python:3.12-slim`) enthält Python, pip und wichtige Tools
-- **Dev Container config** (`.devcontainer/`) installiert automatisch VS Code-Erweiterungen für Python-Debugging und Sprachunterstützung
+- **Offizielles Python-Image** (`python:3.12-slim`) enthält Python, pip und wichtige Tools
+- **Dev-Container-Konfiguration** (`.devcontainer/`) installiert automatisch VS Code-Erweiterungen für Python-Debugging und Sprachunterstützung
 - **Port-Weiterleitung** ermöglicht Ihnen den Zugriff auf Web-Apps (Streamlit, Flask), die innerhalb des Containers laufen, von Ihrem Browser aus
 
 ## Täglicher Workflow
@@ -355,10 +354,10 @@ Sobald alles eingerichtet ist, hier Ihre tägliche Routine:
 
 1. **Docker Desktop starten** - Öffnen Sie die App und warten Sie auf den grünen Statusanzeiger (Docker muss laufen)
 2. **VS Code öffnen** - Starten Sie VS Code und öffnen Sie Ihren Projektordner
-3. **Im Container erneut öffnen** - Falls nicht bereits im Container, klicken Sie auf das grüne Symbol (unten links) und wählen Sie **Reopen in Container**
+3. **Im Container erneut öffnen** - Falls nicht bereits im Container, klicken Sie auf das Symbol **><** in der unteren linken Ecke und wählen Sie **Reopen in Container**
 4. **Code schreiben und ausführen** - Bearbeiten Sie `.py`-Dateien, führen Sie sie Zeile für Zeile mit `Shift+Enter` aus, oder führen Sie Apps mit `streamlit run app.py` aus
 5. **Ihre Arbeit speichern** - Ihre Code-Dateien (`.py`, `.ipynb`) werden auf Ihrem Computer gespeichert und bleiben über Sitzungen hinweg erhalten
-6. **Committen und pushen** - Verwenden Sie GitHub Desktop, um Ihre Änderungen zu committen und in das Repository zu pushen
+6. **Committen und pushen** - Wenn Ihr Projekt ein GitHub-Repository ist (siehe [GitHub Desktop mit Claude Code verwenden](./GitHub_Desktop_Claude_Code_Workflow)), committen und pushen Sie Ihre Änderungen mit GitHub Desktop
 
 ---
 

@@ -16,7 +16,7 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [R in VS Code](./R_Coding_VS_Code_Guide) - R sollte in VS Code funktionieren
+- Abgeschlossenes Tutorial [R in VS Code ausführen](./R_Coding_VS_Code_Guide) - R sollte in VS Code funktionieren
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) - Claude Code CLI sollte installiert sein
 - Claude Pro/Max-Abonnement oder Anthropic-API-Schlüssel
 - 20-30 Minuten
@@ -36,14 +36,10 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 - Klicken Sie auf das **Extensions**-Symbol in der linken Seitenleiste (Symbol mit vier Quadraten)
 - Geben Sie im Suchfeld `Claude Code` ein
 - Finden Sie **Claude Code** von Anthropic und klicken Sie auf **Install**
-- Nach der Installation erscheint ein Claude-Symbol (Funkeln) in der linken Seitenleiste
-- Klicken Sie auf das Claude-Symbol, um das Chat-Panel zu öffnen
-- Klicken Sie auf **Sign in to Claude Code** im Chat-Panel
-- Wählen Sie Ihre Authentifizierungsmethode:
-  - **Claude Pro/Max-Benutzer**: Klicken Sie auf **Sign in with Claude.ai**, autorisieren Sie im Browser und kopieren Sie den Code zurück nach VS Code
-  - **API-Schlüssel-Benutzer**: Klicken Sie auf **Use API Key** und fügen Sie Ihren Anthropic-API-Schlüssel ein
-- Für detaillierte Authentifizierungsschritte siehe die Anleitung [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3)
-- Nach der Anmeldung sehen Sie „Ready to help" im Chat-Panel
+- Klicken Sie nach der Installation unten rechts in der Statusleiste des Fensters auf **✻ Claude Code**, um das Claude-Panel zu öffnen (sobald eine Datei geöffnet ist, können Sie auch das Spark-Symbol oben rechts im Editor verwenden)
+- Klicken Sie auf **Sign in** und schließen Sie die Anmeldung mit Ihrem Claude-Konto im Browser ab, der sich öffnet
+- Wenn Sie stattdessen einen API-Schlüssel verwenden, richten Sie ihn wie in [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3, Option B) beschrieben ein, beenden Sie dann VS Code und öffnen Sie es erneut
+- Nach der Anmeldung sehen Sie eine Checkliste **Learn Claude Code**. Sie können sie mit dem X schließen
 
 ## Schritt 3: Erstes R-Skript manuell erstellen
 
@@ -65,7 +61,7 @@ summary(iris)
 
 ## Schritt 4: Claude bitten, ein Streudiagramm hinzuzufügen
 
-- Klicken Sie auf das **Claude**-Symbol in der linken Seitenleiste, um das Chat-Panel zu öffnen
+- Klicken Sie auf das Spark-Symbol oben rechts im Editor (oder auf **✻ Claude Code** in der Statusleiste), um das Claude-Panel zu öffnen
 - Geben Sie im Chat-Feld unten ein:
 
 ```
@@ -82,7 +78,7 @@ Füge Code zu iris_analysis.R hinzu, um ein Streudiagramm von Kelchblattlänge v
 
 - Wählen Sie den gesamten Code in `iris_analysis.R` aus
 - Drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac)
-- Ein Streudiagramm erscheint in einem separaten Grafikfenster
+- Ein Streudiagramm erscheint in einem Plot-Tab innerhalb von VS Code
 - Sie sollten Punkte sehen, die nach Art gefärbt sind (setosa, versicolor, virginica)
 
 ## Schritt 6: Claude bitten, das Diagramm zu verfeinern
@@ -90,21 +86,21 @@ Füge Code zu iris_analysis.R hinzu, um ein Streudiagramm von Kelchblattlänge v
 - Geben Sie im Claude-Chat-Panel ein:
 
 ```
-Entferne den Titel. Ändere den Markertyp nach Art. Wechsle zum klassischen Theme.
+Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum klassischen Theme.
 ```
 
 - Drücken Sie Enter
 - Claude zeigt die aktualisierten Codeänderungen
 - Klicken Sie auf **Accept**
 - Führen Sie den aktualisierten Code erneut aus: Wählen Sie alles aus und drücken Sie `Strg+Enter` / `Cmd+Enter`
-- Das Diagramm zeigt jetzt verschiedene Markierungsformen pro Art, keinen Titel und das klassische Theme
+- Das Diagramm zeigt jetzt verschiedene Punktformen pro Art, keinen Titel und das klassische Theme
 
 ## Schritt 7: Claude um PCA-Analyse bitten
 
 - Geben Sie im Claude-Chat-Panel ein:
 
 ```
-Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und die Proben mit den ersten beiden Hauptkomponenten darzustellen.
+Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und die Proben mit den ersten beiden Hauptkomponenten darzustellen.
 ```
 
 - Drücken Sie Enter
@@ -128,16 +124,16 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 
 ## Nächste Schritte
 
-- Bitten Sie Claude, einen R-Markdown-Bericht zu erstellen: „Erstelle eine R-Markdown-Datei für diese Analyse"
-- Verwenden Sie Claude, um Fehler zu debuggen: „Dieser Code gibt Fehler X, kannst du ihn beheben?"
-- Fordern Sie statistische Tests an: „Füge einen t-Test hinzu, der die Kelchblattlänge zwischen setosa und versicolor vergleicht"
-- Bitten Sie Claude, Code zu optimieren: „Mache diese Schleife schneller durch Vektorisierung"
-- Holen Sie Hilfe bei unbekannten Funktionen: „Erkläre, was dplyr::mutate macht"
+- Bitten Sie Claude, einen R-Markdown-Bericht zu erstellen: „Erstelle eine R-Markdown-Datei für diese Analyse“
+- Verwenden Sie Claude, um Fehler zu debuggen: „Dieser Code gibt Fehler X, kannst du ihn beheben?“
+- Fordern Sie statistische Tests an: „Füge einen t-Test hinzu, der die Kelchblattlänge zwischen setosa und versicolor vergleicht“
+- Bitten Sie Claude, Code zu optimieren: „Mache diese Schleife schneller durch Vektorisierung“
+- Holen Sie Hilfe bei unbekannten Funktionen: „Erkläre, was dplyr::mutate macht“
 
 ## Fehlerbehebung
 
 - **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
-- **„Cannot read R file"-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.R` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
+- **„Cannot read R file“-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.R` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
 - **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **ggplot2 nicht gefunden** - Installieren Sie es im R-Terminal: `install.packages("ggplot2")`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
 - **Codeänderungen werden nicht übernommen** - Stellen Sie sicher, dass Sie auf **Accept** beim Diff klicken. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.

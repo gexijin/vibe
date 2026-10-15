@@ -16,7 +16,7 @@ Sie möchten R-Code schreiben, aber RStudio fühlt sich schwerfällig an oder Si
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [VS Code Grundlagen](./VS_Code_Getting_Started)
+- Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - Internetverbindung zum Herunterladen von R und Paketen
 - 10-15 Minuten
 
@@ -27,18 +27,18 @@ Sie benötigen R Version 4.0 oder höher für die beste Kompatibilität.
 - **Windows**:
   - Laden Sie das neueste R von [CRAN Windows](https://cran.r-project.org/bin/windows/base/) herunter und führen Sie das Installationsprogramm aus
   - Während der Installation **notieren Sie den Installationspfad** (zum Beispiel: `C:\Program Files\R\R-4.5.3`)
-  - Wenn Sie eine alte Version haben, deinstallieren Sie sie zuerst über Einstellungen > Apps
+  - Wenn Sie eine alte Version haben, deinstallieren Sie sie zuerst über **Einstellungen > Apps**
 
 - **macOS**:
   - Laden Sie von [CRAN macOS](https://cran.r-project.org/bin/macosx/) herunter und führen Sie das .pkg-Installationsprogramm aus
-  - Beachten Sie, ob Sie Intel (`/Library/Frameworks/R.framework/Resources/bin/R`) oder Apple Silicon mit Homebrew (`/opt/homebrew/bin/R`) verwenden
+  - Das CRAN-Installationsprogramm legt R sowohl auf Intel- als auch auf Apple-Silicon-Macs unter `/Library/Frameworks/R.framework/Resources/bin/R` ab (wenn Sie R stattdessen mit Homebrew installiert haben, liegt es auf Apple Silicon unter `/opt/homebrew/bin/R`)
   - Beim Aktualisieren ersetzt die neue Version die alte
 
 - **Linux**:
   - Verwenden Sie Ihren Paketmanager (z.B. `sudo apt install r-base` unter Ubuntu)
   - Oder folgen Sie den [CRAN Linux](https://cran.r-project.org/bin/linux/) Anweisungen
 
-Sie konfigurieren VS Code in Schritt 3 so, dass es R findet, also machen Sie sich keine Sorgen, wenn `R --version` in Ihrem Terminal noch nicht funktioniert.
+Sie konfigurieren VS Code in Schritt 4 so, dass es R findet, also machen Sie sich keine Sorgen, wenn `R --version` in Ihrem Terminal noch nicht funktioniert.
 
 ## Schritt 2: R-Erweiterungen in VS Code installieren
 
@@ -54,7 +54,7 @@ Bevor Sie VS Code konfigurieren, müssen Sie wissen, wo R auf Ihrem System insta
 ### Für Windows-Benutzer
 
 1. Öffnen Sie den **Datei-Explorer**
-2. Navigieren Sie zu `C:\Program Files\R\`
+2. Navigieren Sie zu `C:\Program Files\R\` (im deutschen Datei-Explorer wird dieser Ordner als **Programme** angezeigt)
 3. Sie sehen einen Ordner wie `R-4.5.3` (Ihre Versionsnummer kann abweichen)
 4. Öffnen Sie diesen Ordner → Öffnen Sie den `bin`-Ordner
 5. Sie sehen dort `R.exe`
@@ -88,12 +88,10 @@ which R
 
 ## Schritt 4: VS Code konfigurieren, um R zu finden
 
-- Klicken Sie in VS Code auf das **Zahnrad-Symbol** in der unteren linken Ecke
-- Wählen Sie **Settings** aus dem Menü
-- In der Suchleiste oben geben Sie `r.rpath.windows` (Windows), `r.rpath.mac` (macOS) oder `r.rpath.linux` (Linux) ein
-- Sie sollten die Einstellung erscheinen sehen. Klicken Sie auf **Edit in settings.json** unter der Einstellung
+- Klicken Sie in VS Code auf **View > Command Palette**
+- Geben Sie `Preferences: Open User Settings (JSON)` ein und wählen Sie es aus
 - Die Datei settings.json öffnet sich
-- Fügen Sie die entsprechende Konfiguration für Ihre Plattform innerhalb der geschweiften Klammern `{}` hinzu
+- Fügen Sie die Zeile für Ihre Plattform innerhalb der geschweiften Klammern `{}` hinzu. Wenn dort bereits andere Zeilen stehen, achten Sie darauf, dass die Zeile über Ihrer mit einem Komma endet
 
 **Für Windows**, fügen Sie diese Zeile hinzu (ersetzen Sie `R-4.5.3` durch Ihre Version aus Schritt 3):
 
@@ -140,7 +138,7 @@ install.packages("shiny")
 
 - Warten Sie, bis die Installation abgeschlossen ist (kann einige Minuten dauern)
 - Geben Sie `q()` ein und drücken Sie Enter, um R zu beenden
-- Geben Sie `n` ein, wenn Sie nach dem Speichern des Arbeitsbereichs gefragt werden
+- R wird sofort beendet (falls Sie gefragt werden, ob der Arbeitsbereich gespeichert werden soll, geben Sie `n` ein)
 
 Das einfache Eingeben von `R` in einem normalen Terminal funktioniert nicht, es sei denn, R ist in Ihrem System-PATH. Die R-Erweiterung verwendet Ihre `r.rpath`-Einstellung, um R zu finden.
 
@@ -172,9 +170,9 @@ hist(iris$Sepal.Length)
 
 ## Schritt 8: R-Code interaktiv ausführen
 
-- Mit geöffneter `analysis.R` wählen Sie eine Codezeile aus und drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um sie auszuführen
+- Wählen Sie bei geöffneter `analysis.R` eine Codezeile aus und drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um sie auszuführen
 - Wenn Sie kein Terminal offen haben, öffnet das erste `Strg+Enter` / `Cmd+Enter` ein R-Terminal. Das zweite führt den Code aus.
-- Beobachten Sie die Ausgabe im Terminal und der Plot öffnet sich in einem separaten Fenster
+- Beobachten Sie die Ausgabe im Terminal. Das Histogramm öffnet sich in einem Plot-Tab innerhalb von VS Code, neben Ihrem Skript
 - Sie können auch alle Zeilen auswählen und sie auf die gleiche Weise ausführen.
 
 ## Schritt 9: Eine einfache Shiny-App erstellen
@@ -226,18 +224,18 @@ shinyApp(ui = ui, server = server)
 
 ## Schritt 10: Codevervollständigung und Hover-Hilfe verwenden
 
-- In `analysis.R` beginnen Sie auf einer neuen Zeile `mea` zu tippen
+- Beginnen Sie in `analysis.R` in einer neuen Zeile, `mea` zu tippen
 - Ein Dropdown erscheint mit Vorschlägen – wählen Sie `mean()` durch Drücken von Enter
 - Bewegen Sie Ihre Maus über das Wort `mean` in Ihrem bestehenden Code
 - Ein Popup zeigt die Funktionsdokumentation und Anwendungsbeispiele
-- Versuchen Sie, über `lm`, `summary` oder `plot` zu hovern, um deren Dokumentation zu sehen
-- Geben Sie `data$` ein und beobachten Sie, wie VS Code Spaltennamen (`x` und `y`) vorschlägt
+- Fahren Sie mit der Maus über `lm`, `summary` oder `plot`, um deren Dokumentation zu sehen
+- Geben Sie `iris$` ein und beobachten Sie, wie VS Code Spaltennamen (`Sepal.Length`, `Species` usw.) vorschlägt
 
 ## Schritt 11: Weitere Funktionen ausprobieren
 
 - **Markdown-Integration**: Erstellen Sie eine R-Markdown-Datei (`.Rmd`), um Code, Ausgabe und Text zu mischen
 - **Code-Formatierung**: Klicken Sie mit der rechten Maustaste in Ihr R-Skript und wählen Sie **Format Document**, um Code automatisch zu formatieren
-- **Debugging**: Setzen Sie Breakpoints durch Klicken links neben Zeilennummern, dann führen Sie Code im Debug-Modus aus
+- **Debugging**: Installieren Sie die [R Debugger-Erweiterung](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger) und folgen Sie deren Einrichtungsseite, um Breakpoints zu setzen und Code Schritt für Schritt auszuführen
 - **Git-Integration**: Verwenden Sie VS Codes eingebaute Git-Funktionen, um Ihre R-Projekte zu versionieren
 
 ## Nächste Schritte
@@ -250,9 +248,9 @@ shinyApp(ui = ui, server = server)
 
 ## Fehlerbehebung
 
-- **„R is not recognized" im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – verifizieren Sie, dass der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
+- **„Die Benennung "R" wurde nicht ... erkannt“** (englisch: „R is not recognized“) **im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
   - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (Versionsnummer anpassen)
-  - macOS Intel: `/Library/Frameworks/R.framework/Resources/bin/R`
+  - macOS (CRAN-Installationsprogramm, Intel oder Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`
   - Linux: `/usr/bin/R`
   Starten Sie VS Code nach der Korrektur vollständig neu.
@@ -261,7 +259,7 @@ shinyApp(ui = ui, server = server)
 
 - **Codevervollständigung funktioniert nicht**: Stellen Sie sicher, dass languageserver erfolgreich installiert wurde (Schritt 5). Starten Sie VS Code nach der Installation neu. Warten Sie 10-20 Sekunden nach dem Öffnen einer R-Datei, bis der Sprachserver initialisiert ist. Überprüfen Sie das Output-Panel (View > Output > R Language Server) auf Fehler.
 
-- **Plots erscheinen nicht**: Plots öffnen sich in separaten Fenstern mit R's Standard-Grafikgerät. Stellen Sie sicher, dass Sie einen Fenstermanager verfügbar haben. Auf manchen Systemen müssen Sie möglicherweise X11 (macOS) installieren oder sicherstellen, dass Grafikunterstützung aktiviert ist.
+- **Plots erscheinen nicht**: Plots öffnen sich in einem Tab innerhalb von VS Code. Wenn nichts erscheint, stellen Sie sicher, dass Sie R mit **R: Create R Terminal** gestartet haben (nicht durch Eingabe von `R` in einem normalen Terminal), und führen Sie dann die `hist()`-Zeile erneut aus.
 
 - **Shiny-App wird nicht ausgeführt**: Stellen Sie sicher, dass die Shiny-Erweiterung installiert ist (Schritt 2), das shiny-Paket installiert ist (Schritt 5) und Ihre Datei `app.R` heißt. Überprüfen Sie das Terminal auf Fehlermeldungen. Die Run-Schaltfläche erscheint nur, wenn VS Code die Datei als Shiny-App erkennt.
 

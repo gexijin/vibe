@@ -17,15 +17,15 @@ Sie haben Claude Code auf Ihrem Mac installiert – jetzt möchten Sie einen vis
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS)
-- Abgeschlossenes Tutorial [VS Code Grundlagen](./VS_Code_Getting_Started)
+- Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - 10-15 Minuten
 
 ## Schritt 1: VS Code starten
 
 - Öffnen Sie den **Finder** und gehen Sie zu **Programme**
 - Finden Sie **Visual Studio Code** und doppelklicken Sie darauf
-- Wenn Sie eine Warnung sehen „Visual Studio Code ist eine aus dem Internet heruntergeladene App", klicken Sie auf **Öffnen**
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- Wenn Sie eine Warnung sehen „‚Visual Studio Code‘ ist eine aus dem Internet geladene App“, klicken Sie auf **Öffnen**
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 **Tipp:** Klicken Sie mit der rechten Maustaste auf VS Code im Dock und wählen Sie **Optionen > Im Dock behalten** für späteren schnellen Zugriff.
 
@@ -53,12 +53,8 @@ Sie sollten nun `TEST_CLAUDE` im Explorer-Panel auf der linken Seite sehen.
   ```
   claude
   ```
-- Beim ersten Mal fordert Claude Code Sie auf, sich anzumelden:
-  1. Drücken Sie Enter, um ein Browserfenster zu öffnen
-  2. Melden Sie sich bei Anthropic an oder erstellen Sie ein Konto
-  3. Kopieren Sie den Code und fügen Sie ihn im Terminal ein
-  4. Drücken Sie Enter
-- Sie sehen eine Willkommensnachricht und die Claude Code-Eingabeaufforderung
+- Wenn Claude Code Sie auffordert, sich anzumelden, folgen Sie den Anmeldeschritten im [Installations-Tutorial](./Install_Claude_Code_MacOS). Claude Code erfordert einen kostenpflichtigen Claude-Plan (z. B. Pro oder Max) oder ein Anthropic Console-Konto – der kostenlose Plan enthält Claude Code nicht.
+- Sie sehen eine Willkommensnachricht und die Eingabezeile von Claude Code
 - Jetzt können Sie Claude Code verwenden, während Sie Dateien in VS Code bearbeiten
 
 **Hinweis:** Sie müssen sich nur einmal anmelden – bei späteren Sitzungen sehen Sie direkt die Willkommensnachricht.
@@ -79,22 +75,22 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 
 - **Option A:** Öffnen Sie VS Code, klicken Sie auf **File > Open Recent** und wählen Sie `test_claude`
-- **Option B:** Öffnen Sie Terminal, navigieren Sie mit `cd ~/Documents/test_claude` zu Ihrem Projekt und geben Sie `code .` ein
+- **Option B:** Öffnen Sie die App **Terminal**, navigieren Sie mit `cd ~/Documents/test_claude` zu Ihrem Projekt und geben Sie `code .` ein
 
 VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent normalerweise am schnellsten.
 
 ## Nächste Schritte
 
-- Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht"
-- Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet"
-- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler, kannst du ihn beheben?"
-- Probieren Sie die Claude Code VS Code-Erweiterung für eine visuelle Oberfläche mit Inline-Diffs aus (suchen Sie nach „Claude Code" in Extensions)
+- Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht“
+- Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet“
+- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler, kannst du ihn beheben?“
+- Probieren Sie die Claude Code VS Code-Erweiterung für eine visuelle Oberfläche mit Inline-Diffs aus (suchen Sie nach „Claude Code“ in Extensions)
 
 ## Fehlerbehebung
 
-- **Terminal zeigt „zsh", aber Claude Code startet nicht** - Stellen Sie sicher, dass Claude Code korrekt installiert ist; führen Sie `claude --version` aus, um es zu überprüfen
-- **Befehl „code" wird im Terminal nicht gefunden** - Klicken Sie in VS Code in der Menüleiste auf **View**, dann auf **Command Palette**, geben Sie „shell command" ein und wählen Sie **Shell Command: Install 'code' command in PATH**
-- **VS Code öffnet sich nicht, weil es von einem nicht identifizierten Entwickler stammt** - Gehen Sie zu **Systemeinstellungen > Datenschutz & Sicherheit** und klicken Sie auf **Trotzdem öffnen**
+- **Terminal zeigt „zsh“, aber Claude Code startet nicht** - Stellen Sie sicher, dass Claude Code korrekt installiert ist; führen Sie `claude --version` aus, um es zu überprüfen
+- **Befehl „code“ wird im Terminal nicht gefunden** - Klicken Sie in VS Code in der Menüleiste auf **View**, dann auf **Command Palette**, geben Sie „shell command“ ein und wählen Sie **Shell Command: Install 'code' command in PATH**
+- **VS Code öffnet sich nicht, weil es von einem nicht identifizierten Entwickler stammt** - Gehen Sie zu **Systemeinstellungen > Datenschutz & Sicherheit** und klicken Sie auf **Dennoch öffnen**
 
 ## Workflow-Überblick
 

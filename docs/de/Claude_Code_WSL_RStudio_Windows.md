@@ -22,7 +22,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 
 ## Schritt 1: RStudio unter Windows öffnen
 
-- Klicken Sie auf die **Windows-Starttaste**
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Symbol in der Taskleiste)
 - Geben Sie `RStudio` in das Suchfeld ein
 - Klicken Sie auf **RStudio**, um es zu öffnen
 - Das RStudio-Fenster öffnet sich mit mehreren Bereichen
@@ -34,7 +34,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 - Wählen Sie **New Directory**
 - Wählen Sie **New Project**
 - Geben Sie als **Directory name** ein: `test_claude`
-- Klicken Sie auf **Browse** neben „Create project as subdirectory of:"
+- Klicken Sie auf **Browse** neben „Create project as subdirectory of:“
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
 - Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Klicken Sie auf **Create Project**
@@ -44,9 +44,9 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 
 - Klicken Sie in RStudio auf **File > New File > R Script**
 - Ein neues leeres Skript öffnet sich im oberen linken Bereich
-- Klicken Sie auf **File > Save** (oder das Speichern-Symbol)
+- Klicken Sie auf **File > Save** (oder auf das Speichern-Symbol)
 - Nennen Sie die Datei: `iris.R`
-- Klicken Sie auf **Save**
+- Klicken Sie auf **Speichern** (englisch: **Save**)
 
 ## Schritt 4: Ersten Code manuell schreiben
 
@@ -64,7 +64,7 @@ summary(iris)
 
 ## Schritt 5: PowerShell öffnen
 
-- Klicken Sie auf die **Windows-Starttaste**
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Symbol in der Taskleiste)
 - Geben Sie `PowerShell` in das Suchfeld ein
 - Klicken Sie auf **Windows PowerShell**, um es zu öffnen
 
@@ -87,7 +87,7 @@ summary(iris)
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 8: Claude um ein Streudiagramm bitten
 
@@ -105,7 +105,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 - Wechseln Sie zurück zu RStudio (klicken Sie auf das RStudio-Fenster)
 - Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Yes**, um sie neu zu laden
-- Wenn keine Aufforderung erscheint, klicken Sie auf **File > Reopen with Encoding > UTF-8**
+- Wenn der neue Code nicht angezeigt wird, klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**
 - Markieren Sie den gesamten Code und klicken Sie auf **Run**
 - Ein Streudiagramm erscheint im **Plots**-Bereich (unten rechts)
 - Wenn Sie einen Fehler zu ggplot2 erhalten, installieren Sie es durch Eingabe von `install.packages("ggplot2")` im Console-Bereich
@@ -115,7 +115,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
-  Entferne den Titel. Ändere den Markierungstyp nach Art. Wechsle zum klassischen Theme.
+  Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum klassischen Theme.
   ```
 
 ## Schritt 11: Das verfeinerte Diagramm ansehen
@@ -123,7 +123,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Wechseln Sie zu RStudio
 - Laden Sie die Datei neu, wenn Sie dazu aufgefordert werden
 - Markieren Sie den aktualisierten Code und klicken Sie auf **Run**
-- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Markierungsformen für jede Art und mit dem klassischen Theme
+- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Punktformen für jede Art und mit dem klassischen Theme
 
 
 ## Schritt 12: Claude um PCA-Plot bitten
@@ -131,7 +131,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
-  Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und die Proben unter Verwendung der ersten beiden Hauptkomponenten zu plotten.
+  Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und die Proben mithilfe der ersten beiden Hauptkomponenten zu plotten.
   ```
 
 ## Schritt 13: Die PCA-Analyse ausführen
@@ -167,16 +167,17 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Klicken Sie auf **File > Open File...**
 - Wählen Sie `iris_report.Rmd` und klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf die **Knit**-Schaltfläche (mit einem Wollknäuel-Symbol) oben im Skriptbereich
+- Wenn RStudio meldet, dass Pakete wie **rmarkdown** benötigt werden, klicken Sie auf **Install** (oder **Yes**), warten Sie, bis die Installation abgeschlossen ist, und klicken Sie dann erneut auf **Knit**
 - RStudio generiert einen HTML-Bericht
 - Der Bericht öffnet sich in einem neuen Fenster und zeigt Ihre vollständige Analyse mit erzählendem Text
 - Die HTML-Datei wird in Ihrem Projektordner gespeichert
 
 ## Fehlerbehebung
 
-- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding > UTF-8**, um die Datei manuell neu zu laden.
-- **„claude: command not found"** - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Versuchen Sie, ein neues PowerShell-Fenster zu öffnen.
+- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**, um die Datei manuell neu zu laden.
+- **„Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt“** (englisch: „The term 'claude' is not recognized“) - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Schließen Sie PowerShell, öffnen Sie ein neues Fenster und versuchen Sie es erneut.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
-- **Fehler: „cannot change working directory"** - Ihr Windows-Pfad enthält Leerzeichen. In Schritt 6, setzen Sie den Pfad in Anführungszeichen: `cd "~\Documents\Ihr Name\test_claude"`
+- **„Der Pfad ... kann nicht gefunden werden, da er nicht vorhanden ist“** (englisch: „Cannot find path ... because it does not exist“) **in Schritt 6** - Ihr Projekt liegt möglicherweise in einem anderen Ordner. In RStudio zeigt der Pfad oben im **Files**-Bereich, wo sich `test_claude` befindet. Wenn Ihr Ordner **Dokumente** (Documents) über OneDrive gesichert wird, versuchen Sie `cd ~\OneDrive\Documents\test_claude`. Auf deutschem Windows heißt dieser Ordner meist `OneDrive\Dokumente`; verwenden Sie dann `cd ~\OneDrive\Dokumente\test_claude`. Wenn der Pfad Leerzeichen enthält, setzen Sie ihn in Anführungszeichen, zum Beispiel: `cd "C:\Users\Ihr Name\OneDrive\Documents\test_claude"`
 - **Claude Code ist bei der ersten Anfrage langsam** - Warten Sie 30-60 Sekunden, bis Claude initialisiert ist. Nachfolgende Anfragen werden schneller sein.
 - **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, öffnen Sie in den Schritten 5-16 statt PowerShell die App **Ubuntu** und navigieren Sie mit `cd /mnt/c/Users/IhrBenutzername/Documents/test_claude` zu Ihrem Projekt
 

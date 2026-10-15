@@ -8,24 +8,25 @@ lang: "de"
 
 Mit der medizinischen Forschung Schritt zu halten bedeutet, sich durch dichte wissenschaftliche Arbeiten voller Fachjargon zu kämpfen. Ein Claude Skill ist wie ein Forschungsassistent, der Hunderte von Artikeln liest und sie in einfachem Deutsch erklärt – anstatt Stunden damit zu verbringen, PubMed zu durchsuchen und Fachsprache zu entschlüsseln, stellen Sie eine einfache Frage und erhalten eine klare Zusammenfassung basierend auf der neuesten Wissenschaft.
 
-In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinische Literatur durchsucht. Wir erstellen zuerst ein Python-Skript, das PubMed abfragt. Das Beste daran? Sie können Claude bitten, die ganze Arbeit zu erledigen! Es hat einen Skill, der Skills erstellt!
+In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinische Literatur durchsucht. Wir erstellen zuerst ein Python-Skript, das PubMed abfragt. Das Beste daran? Sie können Claude bitten, die ganze Arbeit zu erledigen! Claude weiß auch, wie man Skills schreibt.
 
 ## Wichtige Konzepte
 
 - **Claude Skill** - Ein spezialisiertes Tool, das die Fähigkeiten von Claude Code mit benutzerdefinierten Anweisungen, Code und Dokumentation erweitert, gespeichert in `.claude/skills/`
 - **PubMed** - Kostenlose Datenbank mit 35+ Millionen biomedizinischen Forschungsarbeiten, gepflegt von der US National Library of Medicine
 - **Biopython** - Python-Bibliothek, die Tools zur programmgesteuerten Abfrage der PubMed-Datenbank bereitstellt
-- **Auto-Edit-Modus** - Funktion, die mit Shift+Tab aktiviert wird und Claude erlaubt, mehrere Dateiänderungen vorzunehmen, ohne jedes Mal um Erlaubnis zu fragen
+- **Accept-Edits-Modus** - Ein Modus (umgeschaltet mit Shift+Tab), der Claude erlaubt, mehrere Dateiänderungen vorzunehmen, ohne jedes Mal um Erlaubnis zu fragen
 
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code in VS Code unter Windows](./Claude_Code_in_VS_Code_Win.md) oder [Claude Code in VS Code auf dem Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Python installiert (siehe [Python-Programmierung in VS Code](./Python_Coding_VS_Code_Guide.md)). Wenn Sie es nicht haben, bietet Claude Ihnen an, bei der Installation zu helfen.
 - Internetverbindung für PubMed-Suchen
 - 15-20 Minuten
 
 ## Schritt 1: Zum Projektordner navigieren
 
-Wenn Sie das [Slash-Commands-Tutorial](./Reuse_Prompts_via_Slash_Commands.md) abgeschlossen haben, existiert der `test_claude`-Ordner bereits. Diese Befehle funktionieren in beiden Fällen.
+Wenn Sie das [Slash-Befehle-Tutorial](./Reuse_Prompts_via_Slash_Commands.md) abgeschlossen haben, existiert der `test_claude`-Ordner bereits. Diese Befehle funktionieren in beiden Fällen.
 
 **Windows (PowerShell):**
 - Öffnen Sie **PowerShell** aus dem Startmenü
@@ -54,13 +55,16 @@ Geben Sie diesen Befehl ein:
 claude
 ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
-## Schritt 3: Auto-Edit-Modus aktivieren
+## Schritt 3: Claude Dateien ohne Rückfrage bearbeiten lassen
 
-Drücken Sie **Shift+Tab**, um den Auto-Edit-Modus zu aktivieren. Sie sehen eine Bestätigungsmeldung.
+Sehen Sie sich die Statuszeile direkt unter der Eingabezeile von Claude Code an:
 
-Der Auto-Edit-Modus ermöglicht Claude, mehrere Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen. Dies ist wichtig für das Erstellen von Skills, die das Erstellen vieler Dateien beinhalten.
+- Wenn dort **auto mode on** oder **accept edits on** steht, ist alles bereit
+- Wenn dort **manual mode on** steht, drücken Sie **Shift+Tab**, bis **accept edits on** angezeigt wird
+
+Dies ermöglicht Claude, mehrere Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen. Das ist wichtig, weil beim Erstellen von Skills viele Dateien angelegt werden.
 
 ## Schritt 4: Das PubMed-Suchskript erstellen
 
@@ -108,7 +112,7 @@ Dies dauert 2-3 Minuten, während Claude umfassende Dokumentation schreibt.
 
 ## Schritt 7: Den Skill testen
 
-Stellen Sie eine Forschungsfrage in einfacher Sprache:
+Geben Sie zuerst `/reload-skills` ein, damit Claude Code den neuen Skill lädt. Stellen Sie dann eine Forschungsfrage in einfacher Sprache:
 
 ```
 Kann ich mit der Keto-Diät abnehmen?
@@ -139,12 +143,12 @@ Die Antwort erklärt den wissenschaftlichen Konsens, den Ursprung des Mythos und
 
 **Windows:**
 - Öffnen Sie den **Datei-Explorer**, navigieren Sie zu `C:\Users\IHR_BENUTZERNAME\Documents\test_claude`
-- Klicken Sie mit der rechten Maustaste auf den Ordner und wählen Sie **Mit Code öffnen**
+- Klicken Sie mit der rechten Maustaste auf den Ordner und wählen Sie **Mit Code öffnen** (Open with Code; unter Windows 11 klicken Sie zuerst auf **Weitere Optionen anzeigen**). Wenn Sie diesen Eintrag nicht sehen, öffnen Sie VS Code und verwenden Sie stattdessen **File > Open Folder**
 
 **Mac:**
-- Öffnen Sie **Finder**, navigieren Sie zu `Documents/test_claude`
-- Klicken Sie mit der rechten Maustaste auf den Ordner und wählen Sie **Mit Visual Studio Code öffnen**
-- Oder geben Sie einfach ``` code . ``` im Terminal ein
+- Öffnen Sie **Finder**, navigieren Sie zu **Dokumente** (Documents) > `test_claude`
+- Klicken Sie mit der rechten Maustaste auf den Ordner und wählen Sie **Öffnen mit > Visual Studio Code** (Open With)
+- Oder, wenn Sie den `code`-Befehl von VS Code eingerichtet haben, geben Sie `code .` im Terminal ein
 
 In VS Code:
 - Erweitern Sie `.claude/skills/medical-research/` im Datei-Explorer
@@ -173,7 +177,7 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 
 **Andere verfügbare Skills aus Anthropics Repository:**
 - Durchsuchen Sie den vollständigen Katalog unter [github.com/anthropics/skills](https://github.com/anthropics/skills)
-- Fragen Sie Claude „Welche Skills sind im Anthropic Repository verfügbar?", um die aktuelle Liste zu sehen
+- Fragen Sie Claude „Welche Skills sind im Anthropic Repository verfügbar?“, um die aktuelle Liste zu sehen
 
 ## Nächste Schritte
 
@@ -185,13 +189,13 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 ## Fehlerbehebung
 
 - **Biopython nicht installiert:** Claude installiert Biopython automatisch, wenn es das Skript erstellt. Wenn Sie beim Testen Importfehler sehen, bitten Sie Claude, Biopython manuell mit `pip install biopython` zu installieren
-- **Skript nicht gefunden:** Überprüfen Sie, ob der Auto-Edit-Modus aktiviert war (Shift+Tab) – Claude braucht die Erlaubnis, Dateien zu erstellen
-- **Skill aktiviert sich nicht:** Der Skill sollte sofort nach der Erstellung funktionieren – versuchen Sie, die Frage erneut zu stellen oder überprüfen Sie, ob SKILL.md den korrekten `name: medical-research` in der Kopfzeile hat
+- **Skript nicht gefunden:** Überprüfen Sie, ob die Statuszeile **accept edits on** oder **auto mode on** anzeigt (mit Shift+Tab wechseln Sie den Modus) – Claude braucht die Erlaubnis, Dateien zu erstellen
+- **Skill aktiviert sich nicht:** Geben Sie `/reload-skills` ein (oder starten Sie Claude Code neu) und stellen Sie die Frage dann erneut. Überprüfen Sie außerdem, ob SKILL.md `name: medical-research` in der Kopfzeile hat
 
 ## Workflow-Überblick
 
 - **Claude Skills** sind mächtiger als Slash-Befehle – sie kombinieren Code, Dokumentation und benutzerdefinierte Anweisungen
-- **Auto-Edit-Modus** (Shift+Tab) rationalisiert die Erstellung, indem wiederholte Berechtigungsabfragen vermieden werden
+- **Accept-Edits-Modus** (Shift+Tab) vereinfacht die Erstellung, weil wiederholte Berechtigungsabfragen entfallen
 - **Eigenständige Verpackung** – Skripte befinden sich innerhalb von Skill-Ordnern, was sie portabel und teilbar macht
 - **Automatische Aktivierung** – Skills werden basierend auf Fragemustern ausgelöst (Forschungsfragen aktivieren medical-research)
 - **Natürlichsprachliche Schnittstelle** – Stellen Sie natürliche Fragen, ohne die technischen Details zu kennen
@@ -201,7 +205,7 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 | Merkmal | Skills | Slash-Befehle |
 |---------|--------|----------------|
 | **Was es enthält** | Prompts, Code, Daten und Dokumentation | Nur Prompts |
-| **Aktivierung** | Wird automatisch geladen, wenn relevant | Manuell ausgelöst mit `/befehl` |
+| **Aktivierung** | Automatisch, wenn relevant, oder manuell mit `/skill-name` | Manuell ausgelöst mit `/befehl` |
 | **Anwendungsfall** | Komplexe Workflows, die Code-Ausführung erfordern | Schnelle Prompt-Vorlagen und Workflows |
 | **Dateispeicherort** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **Struktur** | Mehrere Dateien (SKILL.md, README.md, Code-Dateien) | Einzelne `.md`-Datei pro Befehl |

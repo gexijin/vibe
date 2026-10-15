@@ -2,11 +2,11 @@
 title: "Wie Claude Code mir half, diese Tutorials zu erstellen"
 lang: "de"
 ---
-[Startseite](./index.html)
+[Startseite](./)
 
 # Wie Claude Code mir half, diese Tutorials zu erstellen
 
-Mitte Dezember 2025 verbrachte ich 2 Stunden damit, meiner Forschungsassistentin per Zoom bei der Installation von Claude Code zu helfen. Mir wurde klar, dass jemand wie sie spezifische, praxisnahe Anleitungen braucht, also machte ich mich daran, umfassende Tutorials für Claude Code zu erstellen. Mein Ziel: praxisnahe, fokussierte Tutorials, die komplette Anfänger Schritt für Schritt durch echte Aufgaben führen. Keine Theorieabhandlungen. Keine umfassenden Referenzhandbücher. Einfach nur „tun Sie dies, dann das, dann das", bis Sie etwas Konkretes erreicht haben.
+Mitte Dezember 2025 verbrachte ich 2 Stunden damit, meiner Forschungsassistentin per Zoom bei der Installation von Claude Code zu helfen. Mir wurde klar, dass jemand wie sie spezifische, praxisnahe Anleitungen braucht, also machte ich mich daran, umfassende Tutorials für Claude Code zu erstellen. Mein Ziel: praxisnahe, fokussierte Tutorials, die komplette Anfänger Schritt für Schritt durch echte Aufgaben führen. Keine Theorieabhandlungen. Keine umfassenden Referenzhandbücher. Einfach nur „tun Sie dies, dann das, dann das“, bis Sie etwas Konkretes erreicht haben.
 
 Was als ein paar Dokumentationsdateien begann, entwickelte sich schnell zu einer mehrsprachigen Lernplattform mit über 100 Tutorial-Dokumenten. Das Geheimnis? Ich habe sie nicht alle manuell geschrieben. Stattdessen habe ich eine Reihe von benutzerdefinierten Slash-Befehlen (im Wesentlichen wiederverwendbare Prompts) erstellt, die Claude Code in eine automatisierte Dokumentationsfabrik verwandelten – eine, die konsequent Tutorials in meinem praxisnahen, schrittweisen Stil produziert.
 
@@ -20,7 +20,7 @@ Ich erstellte fünf spezialisierte Slash-Befehle, die den gesamten Tutorial-Lebe
 
 ### [`/tutorial`](../assets/commands/tutorial.md) - Der Tutorial-Generator
 
-Ich erstellte die ersten Tutorials manuell durch interaktives Prompten mit Claude. Verfeinerte den Prozess durch Iteration und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
+Ich erstellte die ersten Tutorials manuell durch interaktives Prompten mit Claude, verfeinerte den Prozess Schritt für Schritt und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
 
 Dies ist genau das Muster, das in meinem [Forschungsarbeit-Tutorial](./Writing_Research_Paper_Claude_Code.md) beschrieben wird: Gehen Sie den Workflow manuell durch, dann bitten Sie im letzten Schritt Claude, ihn als wiederverwendbaren Befehl zu speichern, der den bewährten Workflow erfasst:
 
@@ -41,7 +41,7 @@ Der Befehl erzwingt eine konsistente Struktur über alle Tutorials hinweg. Jedes
 
 ### [`/review-tutorial`](../assets/commands/review-tutorial.md) - Der Qualitätskontroll-Bot
 
-Bei diesem bat ich Claude einfach, „einen Slash-Befehl zum Überprüfen von Tutorials zu erstellen". Keine detaillierten Spezifikationen. Claude generierte einen umfassenden dreiphasigen Workflow mit über 30 Qualitätskriterien, organisiert in Kategorien:
+Bei diesem bat ich Claude einfach, „einen Slash-Befehl zum Überprüfen von Tutorials zu erstellen“. Keine detaillierten Spezifikationen. Claude generierte einen umfassenden dreiphasigen Workflow mit über 30 Qualitätskriterien, organisiert in Kategorien:
 
 - **Inhaltsqualität**: Titel, Hook, Schlüsselkonzepte, Voraussetzungen, Schrittfluss, nächste Schritte, Fehlerbehebung
 - **Formatierungsstandards**: Home-Link, Schrittüberschriften, Aufzählungspunkte, Fett/Backticks, Codeblöcke, Absätze
@@ -55,7 +55,7 @@ Der Befehl präsentiert Ergebnisse in einem strukturierten Bericht und wendet da
 
 Die japanischen Übersetzungen kamen zuerst – ohne Slash-Befehl. Ich bat Claude Code einfach, alle Tutorials in einem einzigen Prompt ins Japanische zu übersetzen. Claude erzeugte automatisch 8 Subagenten, die parallel liefen und jeweils verschiedene Tutorials gleichzeitig bearbeiteten.
 
-Für folgende Sprachen bat ich Claude, „einen Slash-Befehl zum Übersetzen von Tutorials ins Chinesische zu erstellen" – keine spezifischen Richtlinien. Claude generierte einen sechsphasigen Workflow mit umfassenden Regeln:
+Für die weiteren Sprachen bat ich Claude, „einen Slash-Befehl zum Übersetzen von Tutorials ins Chinesische zu erstellen“ – keine spezifischen Richtlinien. Claude generierte einen sechsphasigen Workflow mit umfassenden Regeln:
 
 - **Übersetzungsregeln**: Codeblöcke, technische Begriffe (Git, Docker, VS Code), Dateipfade und URLs in Englisch belassen; Anleitungstext, Überschriften und Erklärungen übersetzen
 - **Sprachrichtlinien**: Ton- und Stilregeln, gängige technische Übersetzungen (Click = 点击, Install = 安装), formelle Anredekonventionen
@@ -81,7 +81,7 @@ Die Qualitätsüberprüfung ist gründlich – für Japanisch prüft sie natürl
 
 Nach dem Synchronisieren der Übersetzungen mit den englischen Originalen fügte ich einen letzten Polierschritt hinzu: jedes übersetzte Dokument einzeln auf Sprachqualität bearbeiten, ohne mit dem Englischen zu vergleichen. Dieser Schritt konzentriert sich ausschließlich darauf, den Text für Muttersprachler natürlich klingen zu lassen.
 
-Ich verwendete Prompts in der Zielsprache. Anstatt Claude auf Englisch zu bitten, „dieses japanische Dokument zu polieren", verwendete ich ChatGPT, um die Prompts auf Japanisch, Chinesisch oder Spanisch zu schreiben. Dies schien bessere Ergebnisse zu liefern – Claude schien in dieser Sprache natürlicher zu denken, wenn die Anweisungen auch in dieser Sprache waren.
+Ich verwendete Prompts in der Zielsprache. Anstatt Claude auf Englisch zu bitten, „dieses japanische Dokument zu polieren“, verwendete ich ChatGPT, um die Prompts auf Japanisch, Chinesisch oder Spanisch zu schreiben. Dies schien bessere Ergebnisse zu liefern – Claude schien in dieser Sprache natürlicher zu denken, wenn die Anweisungen auch in dieser Sprache waren.
 
 Zum Beispiel verwendete ich zum Polieren chinesischer Dokumente:
 "修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents." Für Spanisch: "Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." Für Japanisch: "@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
@@ -96,7 +96,7 @@ Die Kombination von Slash-Befehlen für strukturierte Workflows und Subagenten f
 
 ## Die Ergebnisse
 
-In weniger als zwei Wochen erstellte ich über 20 englische Tutorials zu Themen vom Anfänger- bis Fortgeschrittenenniveau, 81 übersetzte Tutorials in 3 Sprachen, konsistente Qualität durch automatisierte Review-Prozesse und wartbare Dokumentation mit Synchronisierungstools für Übersetzungen.
+In weniger als zwei Wochen erstellte ich über 20 englische Tutorials zu Themen vom Anfänger- bis Fortgeschrittenenniveau, 81 übersetzte Tutorials in fünf Sprachen, konsistente Qualität durch automatisierte Review-Prozesse und wartbare Dokumentation mit Synchronisierungstools für Übersetzungen.
 
 Alle Tutorials folgen derselben Struktur, demselben Schreibstil und denselben Formatierungskonventionen – weil sie durch denselben systematischen Prozess generiert wurden.
 
@@ -106,7 +106,7 @@ Alle Tutorials folgen derselben Struktur, demselben Schreibstil und denselben Fo
 - **Strukturieren Sie Befehle als mehrphasige Workflows.** Sagen Sie Claude, wie es das Problem durchdenken soll, nicht nur was es tun soll.
 - **Bauen Sie Qualitätskontrolle in den Prozess ein.** Erstellen Sie einen Review-Befehl neben Ihrem Generierungsbefehl.
 - **Machen Sie Befehle kollaborativ, nicht autonom.** Fügen Sie Genehmigungsschritte ein. Claude erledigt die mühsamen Teile; Sie treffen strategische Entscheidungen.
-- **Verwenden Sie Subagenten für Batch-Verarbeitung.** Wenn Sie viele Dokumente verarbeiten, sagen Sie explizit „Use subagents" in Ihrem Prompt. Drücken Sie zuerst Shift+Tab, um den Auto-Accept-Modus zu aktivieren – Subagenten fragen nicht nach Berechtigungen, was parallele Verarbeitung nahtlos macht.
+- **Verwenden Sie Subagenten für Batch-Verarbeitung.** Wenn Sie viele Dokumente verarbeiten, sagen Sie explizit „Use subagents“ in Ihrem Prompt. Achten Sie vorher darauf, dass die Statuszeile **accept edits on** oder **auto mode on** anzeigt (mit Shift+Tab wechseln Sie den Modus) – Subagenten verwenden denselben Modus, halten also nur selten an, um nach einer Erlaubnis zu fragen, was parallele Verarbeitung deutlich reibungsloser macht.
 
 ## Fazit
 
@@ -125,14 +125,14 @@ Das ist die Kraft systematischer Automatisierung.
 ---
 
 **P.S.** Dieser Blogbeitrag wurde selbst von Claude Code durch iteratives Prompten erstellt:
-1. „Überprüfe meinen Commit-Verlauf und schreibe einen Blogbeitrag darüber, wie ich diese Tutorials erstellt habe, mit Schwerpunkt auf meiner Verwendung von Slash-Befehlen zur Automatisierung."
-2. „Reflektiere, dass der /tutorial-Befehl zuerst aus manuellem interaktivem Prompten entstanden ist."
-3. „Betone meinen Tutorial-Stil: praxisnah, fokussiert, Schritt für Schritt."
-4. „Füge hinzu, dass japanische Übersetzungen zuerst kamen, ohne Slash-Befehle, und dass Claude 8 Subagenten parallel verwendet hat."
-5. „Füge hinzu, dass Claude die Übersetzungs-Slash-Befehle ohne spezifische Richtlinien geschrieben hat, und die Verwendung von Subagenten."
-6. „Verlinke auf die gespeicherten Befehle in docs/assets/commands."
-7. „Schreibe mit weniger Aufzählungspunkten um."
-8. „Lies tatsächlich die Slash-Befehle und füge Details hinzu."
-9. „Fasse unsere Interaktion zusammen. Füge ein P.S. darüber hinzu, wie dieser Blog generiert wurde."
+1. „Überprüfe meinen Commit-Verlauf und schreibe einen Blogbeitrag darüber, wie ich diese Tutorials erstellt habe, mit Schwerpunkt auf meiner Verwendung von Slash-Befehlen zur Automatisierung.“
+2. „Reflektiere, dass der /tutorial-Befehl zuerst aus manuellem interaktivem Prompten entstanden ist.“
+3. „Betone meinen Tutorial-Stil: praxisnah, fokussiert, Schritt für Schritt.“
+4. „Füge hinzu, dass japanische Übersetzungen zuerst kamen, ohne Slash-Befehle, und dass Claude 8 Subagenten parallel verwendet hat.“
+5. „Füge hinzu, dass Claude die Übersetzungs-Slash-Befehle ohne spezifische Richtlinien geschrieben hat, und die Verwendung von Subagenten.“
+6. „Verlinke auf die gespeicherten Befehle in docs/assets/commands.“
+7. „Schreibe mit weniger Aufzählungspunkten um.“
+8. „Lies tatsächlich die Slash-Befehle und füge Details hinzu.“
+9. „Fasse unsere Interaktion zusammen. Füge ein P.S. darüber hinzu, wie dieser Blog generiert wurde.“
 
 Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 15. Dezember 2025.

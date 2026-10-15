@@ -22,9 +22,9 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 
 ## Schritt 1: RStudio auf dem Mac öffnen
 
-- Klicken Sie auf **Launchpad** in Ihrem Dock (das Symbol mit dem Punkteraster)
-- Geben Sie `RStudio` in das Suchfeld ein
-- Klicken Sie auf **RStudio**, um es zu öffnen
+- Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
+- Geben Sie `RStudio` ein
+- Drücken Sie die **Return**-Taste (↩), um es zu öffnen
 - Das RStudio-Fenster öffnet sich mit mehreren Bereichen
 
 ## Schritt 2: Ein neues R-Projekt erstellen
@@ -34,7 +34,7 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 - Wählen Sie **New Directory**
 - Wählen Sie **New Project**
 - Geben Sie als **Directory name** ein: `test_claude`
-- Klicken Sie auf **Browse** neben „Create project as subdirectory of:"
+- Klicken Sie auf **Browse** neben „Create project as subdirectory of:“
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
 - Klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf **Create Project**
@@ -46,7 +46,7 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 - Ein neues leeres Skript öffnet sich im oberen linken Bereich
 - Klicken Sie auf **File > Save** (oder drücken Sie **Command (⌘) + S**)
 - Nennen Sie die Datei: `iris.R`
-- Klicken Sie auf **Save**
+- Klicken Sie auf **Sichern** (englisch: **Save**)
 
 ## Schritt 4: Ersten Code manuell schreiben
 
@@ -64,8 +64,8 @@ summary(iris)
 
 ## Schritt 5: Terminal öffnen
 
-- Öffnen Sie den **Finder** und klicken Sie in der linken Seitenleiste auf **Programme**
-- Öffnen Sie den Ordner **Dienstprogramme**
+- Öffnen Sie den **Finder** und klicken Sie in der linken Seitenleiste auf **Programme** (Applications)
+- Öffnen Sie den Ordner **Dienstprogramme** (Utilities)
 - Doppelklicken Sie auf **Terminal**
 - Das Terminal-Fenster öffnet sich
 
@@ -90,7 +90,7 @@ summary(iris)
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 8: Claude um ein Streudiagramm bitten
 
@@ -108,7 +108,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 
 - Wechseln Sie zurück zu RStudio (klicken Sie auf das RStudio-Fenster oder drücken Sie **Command (⌘) + Tab**)
 - Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Yes**, um sie neu zu laden
-- Wenn keine Aufforderung erscheint, klicken Sie auf **File > Reopen with Encoding > UTF-8**
+- Wenn der neue Code nicht angezeigt wird, klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**
 - Markieren Sie den gesamten Code und klicken Sie auf **Run**
 - Ein Streudiagramm erscheint im **Plots**-Bereich (unten rechts)
 - Wenn Sie einen Fehler zu ggplot2 erhalten, installieren Sie es durch Eingabe von `install.packages("ggplot2")` im Console-Bereich
@@ -118,7 +118,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 - Wechseln Sie zum Terminal (drücken Sie **Command (⌘) + Tab** oder klicken Sie auf das Terminal-Fenster)
 - Geben Sie diese Anfrage ein:
   ```
-  Entferne den Titel. Ändere die Markierungsart nach Art. Wechsle zum Classic-Theme.
+  Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum Classic-Theme.
   ```
 
 ## Schritt 11: Das verfeinerte Diagramm ansehen
@@ -126,7 +126,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 - Wechseln Sie zu RStudio
 - Laden Sie die Datei neu, wenn Sie dazu aufgefordert werden
 - Markieren Sie den aktualisierten Code und klicken Sie auf **Run**
-- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Markierungsformen für jede Art und im Classic-Theme
+- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Punktformen für jede Art und im Classic-Theme
 
 ## Schritt 12: Claude um PCA-Plot bitten
 
@@ -169,16 +169,17 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 - Klicken Sie auf **File > Open File...**
 - Wählen Sie `iris_report.Rmd` und klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf die **Knit**-Schaltfläche (mit einem Wollknäuel-Symbol) oben im Skriptbereich
+- Wenn RStudio meldet, dass Pakete wie **rmarkdown** benötigt werden, klicken Sie auf **Install** (oder **Yes**), warten Sie, bis die Installation abgeschlossen ist, und klicken Sie dann erneut auf **Knit**
 - RStudio generiert einen HTML-Bericht
 - Der Bericht öffnet sich in einem neuen Fenster und zeigt Ihre vollständige Analyse mit erzählendem Text
 - Die HTML-Datei wird in Ihrem Projektordner gespeichert
 
 ## Fehlerbehebung
 
-- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding > UTF-8**, um die Datei manuell neu zu laden, oder schließen Sie die Datei und öffnen Sie sie erneut.
-- **„claude: command not found"** - Stellen Sie sicher, dass Sie die [Installationsanleitung](./Install_Claude_Code_MacOS) abgeschlossen haben. Versuchen Sie, ein neues Terminal-Fenster zu öffnen, oder schließen Sie Terminal vollständig (**Command (⌘) + Q**) und öffnen Sie es erneut.
+- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**, um die Datei manuell neu zu laden, oder schließen Sie die Datei und öffnen Sie sie erneut.
+- **„claude: command not found“** - Stellen Sie sicher, dass Sie die [Installationsanleitung](./Install_Claude_Code_MacOS) abgeschlossen haben. Versuchen Sie, ein neues Terminal-Fenster zu öffnen, oder schließen Sie Terminal vollständig (**Command (⌘) + Q**) und öffnen Sie es erneut.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
-- **„No such file or directory"** - Überprüfen Sie, ob Sie den Pfad in Schritt 6 korrekt eingegeben haben. Versuchen Sie den Drag-and-Drop-Trick: Ziehen Sie den test_claude-Ordner aus dem Finder ins Terminal, nachdem Sie `cd ` (mit einem Leerzeichen) eingegeben haben.
+- **„No such file or directory“** - Überprüfen Sie, ob Sie den Pfad in Schritt 6 korrekt eingegeben haben. Versuchen Sie den Drag-and-Drop-Trick: Ziehen Sie den test_claude-Ordner aus dem Finder ins Terminal, nachdem Sie `cd ` (mit einem Leerzeichen) eingegeben haben.
 - **Claude Code ist bei der ersten Anfrage langsam** - Warten Sie 30-60 Sekunden, bis Claude initialisiert ist. Nachfolgende Anfragen werden schneller sein.
 
 ## Mac-Tastenkombinationen
@@ -211,4 +212,4 @@ Der Workflow ist einfach: Schreiben oder bearbeiten Sie Code mit Claude im Termi
 
 ---
 
-Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 11. Dezember 2024.
+Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 11. Dezember 2025.

@@ -20,7 +20,7 @@ Das ist etwas anderes als **Claude Code**, das Werkzeug, das in den übrigen Tut
 
 - Einen Computer mit Windows 10 (oder neuer) oder einen Mac (macOS 11 Big Sur oder neuer)
 - Eine Internetverbindung
-- Ein kostenloses oder kostenpflichtiges Claude.ai-Konto (falls Sie noch keines haben, können Sie es während der Einrichtung erstellen)
+- Ein kostenloses oder kostenpflichtiges Claude.ai-Konto (wie Sie eines erstellen, erfahren Sie unter [Was ist Anthropic und was ist Claude?](./What_Is_Anthropic_And_Claude.md))
 - 5 Minuten
 
 ## Schritt 1: Das Installationsprogramm herunterladen
@@ -41,7 +41,7 @@ Das ist etwas anderes als **Claude Code**, das Werkzeug, das in den übrigen Tut
 
 - Öffnen Sie die heruntergeladene Datei
 - Ziehen Sie das **Claude**-Symbol in den Ordner **Programme** (englisch: **Applications**), wenn Sie dazu aufgefordert werden
-- Öffnen Sie **Claude** aus Ihrem **Programme**-Ordner oder über das Launchpad
+- Öffnen Sie **Claude** aus Ihrem **Programme**-Ordner (oder drücken Sie **Command (⌘) + Leertaste**, geben Sie `Claude` ein und drücken Sie die **Return**-Taste)
 
 ## Schritt 3: Anmelden
 
@@ -76,7 +76,7 @@ Für das alltägliche Chatten mit Claude Desktop brauchen Sie nichts davon – e
 ## Fehlerbehebung
 
 - **Windows blockiert das Installationsprogramm mit der Meldung „Der Computer wurde durch Windows geschützt“ („Windows protected your PC“)** – Das ist die übliche SmartScreen-Warnung von Windows bei neuen Downloads und betrifft nicht nur Claude. Klicken Sie auf **Weitere Informationen** (**More info**) und dann auf **Trotzdem ausführen** (**Run anyway**), wenn Sie der Quelle vertrauen (der offiziellen Seite claude.ai/download).
-- **Der Mac meldet, dass die App „nicht geöffnet werden kann, da sie von einem nicht verifizierten Entwickler stammt“** – Das ist Gatekeeper, eine übliche Sicherheitsprüfung von macOS. Klicken Sie mit der rechten Maustaste (oder bei gedrückter control-Taste) auf die Claude-App, wählen Sie **Öffnen** (**Open**) und bestätigen Sie.
+- **Der Mac öffnet die App nicht oder fragt, ob Sie sie wirklich öffnen möchten** – Das ist Gatekeeper, eine übliche Sicherheitsprüfung von macOS für Apps, die aus dem Internet geladen wurden. Wenn eine Rückfrage erscheint, klicken Sie auf **Öffnen** (Open). Wenn macOS die App stattdessen blockiert, öffnen Sie **Systemeinstellungen > Datenschutz & Sicherheit** (System Settings > Privacy & Security), scrollen Sie nach unten und klicken Sie neben der Meldung zu Claude auf **Dennoch öffnen** (Open Anyway). (Ab macOS 15 Sequoia funktioniert es dafür nicht mehr, mit der rechten Maustaste auf die App zu klicken und **Öffnen** zu wählen.)
 - **Die Anmeldung funktioniert nicht** – Prüfen Sie Ihre Internetverbindung und testen Sie zuerst, ob Sie sich im Browser auf [claude.ai](https://claude.ai) anmelden können.
 - **Die App startet nach der Installation nicht** – Starten Sie Ihren Computer neu und versuchen Sie dann erneut, Claude zu öffnen. Falls das nicht hilft, laden Sie das Installationsprogramm erneut von [claude.ai/download](https://claude.ai/download) herunter.
 
