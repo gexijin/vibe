@@ -26,13 +26,14 @@ lang: "hi"
 आधुनिक पैकेजों के साथ सर्वोत्तम संगतता के लिए आपको Python 3.8 या उससे ऊपर की ज़रूरत है।
 
 - **Windows**:
-  - [python.org](https://www.python.org/downloads/) से नवीनतम Python डाउनलोड करें
+  - [python.org/downloads/windows](https://www.python.org/downloads/windows/) पर जाएँ और नवीनतम Python 3 रिलीज़ के नीचे **Windows installer (64-bit)** पर क्लिक करें ("install manager" पर नहीं)
   - इंस्टॉलर चलाएँ
   - Install Now पर क्लिक करने से पहले **"Add python.exe to PATH" बॉक्स को चेक करें**
   - इंस्टॉलेशन स्थान नोट करें (आमतौर पर `C:\Users\YourName\AppData\Local\Programs\Python\Python312`)
 
 - **macOS**:
   - [python.org](https://www.python.org/downloads/) से डाउनलोड करें और इंस्टॉलर चलाएँ
+  - python.org इंस्टॉलर पूरा होने के बाद, **Finder > Applications > Python 3.x** खोलें और **Install Certificates.command** पर डबल-क्लिक करें (वरना चरण 7 में इंटरनेट से डेटा लोड करते समय `CERTIFICATE_VERIFY_FAILED` एरर आएगा)
   - या Homebrew उपयोग करें: Terminal खोलें और `brew install python` टाइप करें
   - Homebrew पाथ: `/opt/homebrew/bin/python3` (Apple Silicon) या `/usr/local/bin/python3` (Intel)
 
@@ -177,6 +178,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- पहली बार Streamlit चलाने पर यह terminal में `Email:` पूछता है। इसे छोड़ने के लिए बस `Enter` दबाएँ
 - ऐप आपके ब्राउज़र में खुलता है (आमतौर पर `http://localhost:8501` पर)
 - साइडबार में स्लाइडर हिलाएँ और हिस्टोग्राम को तुरंत अपडेट होते देखें
 - ऐप रोकने के लिए terminal में `Ctrl+C` दबाएँ
@@ -220,6 +222,8 @@ streamlit run app.py
 - **IntelliSense काम नहीं कर रहा**: सुनिश्चित करें कि Pylance इंस्टॉल और सक्षम है। जाँचें कि नीचे-दाएँ कोने में आपका चुना हुआ इंटरप्रेटर दिख रहा है। Pylance को शुरू होने के लिए फ़ाइल खोलने के बाद 10-20 सेकंड प्रतीक्षा करें। समस्या बनी रहने पर VS Code रीस्टार्ट करें।
 
 - **pip install विफल होता है**: सुनिश्चित करें कि आपका virtual environment सक्रिय है (terminal में `(.venv)` देखें)। Linux पर, आपको पहले `python3-venv` इंस्टॉल करने की ज़रूरत हो सकती है। Windows पर, जाँचें कि एंटीवायरस pip को ब्लॉक नहीं कर रहा।
+
+- **Mac पर `SSL: CERTIFICATE_VERIFY_FAILED`**: **Finder > Applications > Python 3.x** खोलें और **Install Certificates.command** पर डबल-क्लिक करें, फिर स्क्रिप्ट दोबारा चलाएँ।
 
 - **Streamlit ऐप नहीं चलता**: सुनिश्चित करें कि streamlit आपके virtual environment में इंस्टॉल है (`pip show streamlit`)। त्रुटि संदेशों के लिए terminal जाँचें। सुनिश्चित करें कि कोई अन्य ऐप पोर्ट 8501 का उपयोग नहीं कर रहा।
 
