@@ -36,14 +36,10 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 - Klicken Sie auf das **Extensions**-Symbol in der linken Seitenleiste (Symbol mit vier Quadraten)
 - Geben Sie im Suchfeld `Claude Code` ein
 - Finden Sie **Claude Code** von Anthropic und klicken Sie auf **Install**
-- Nach der Installation erscheint ein Claude-Symbol (Funkeln) in der linken Seitenleiste
-- Klicken Sie auf das Claude-Symbol, um das Chat-Panel zu öffnen
-- Klicken Sie auf **Sign in to Claude Code** im Chat-Panel
-- Wählen Sie Ihre Authentifizierungsmethode:
-  - **Claude Pro/Max-Benutzer**: Klicken Sie auf **Sign in with Claude.ai**, autorisieren Sie im Browser und kopieren Sie den Code zurück nach VS Code
-  - **API-Schlüssel-Benutzer**: Klicken Sie auf **Use API Key** und fügen Sie Ihren Anthropic-API-Schlüssel ein
-- Für detaillierte Authentifizierungsschritte siehe die Anleitung [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3)
-- Nach der Anmeldung sehen Sie „Ready to help" im Chat-Panel
+- Klicken Sie nach der Installation unten rechts in der Statusleiste des Fensters auf **✻ Claude Code**, um das Claude-Panel zu öffnen (sobald eine Datei geöffnet ist, können Sie auch das Spark-Symbol oben rechts im Editor verwenden)
+- Klicken Sie auf **Sign in** und schließen Sie die Anmeldung mit Ihrem Claude-Konto im Browser ab, der sich öffnet
+- Wenn Sie stattdessen einen API-Schlüssel verwenden, richten Sie ihn wie in [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3, Option B) beschrieben ein, beenden Sie dann VS Code und öffnen Sie es erneut
+- Nach der Anmeldung sehen Sie eine Checkliste **Learn Claude Code**. Sie können sie mit dem X schließen
 
 ## Schritt 3: Erstes R-Skript manuell erstellen
 
@@ -65,7 +61,7 @@ summary(iris)
 
 ## Schritt 4: Claude bitten, ein Streudiagramm hinzuzufügen
 
-- Klicken Sie auf das **Claude**-Symbol in der linken Seitenleiste, um das Chat-Panel zu öffnen
+- Klicken Sie auf das Spark-Symbol oben rechts im Editor (oder auf **✻ Claude Code** in der Statusleiste), um das Claude-Panel zu öffnen
 - Geben Sie im Chat-Feld unten ein:
 
 ```
@@ -82,7 +78,7 @@ Füge Code zu iris_analysis.R hinzu, um ein Streudiagramm von Kelchblattlänge v
 
 - Wählen Sie den gesamten Code in `iris_analysis.R` aus
 - Drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac)
-- Ein Streudiagramm erscheint in einem separaten Grafikfenster
+- Ein Streudiagramm erscheint in einem Plot-Tab innerhalb von VS Code
 - Sie sollten Punkte sehen, die nach Art gefärbt sind (setosa, versicolor, virginica)
 
 ## Schritt 6: Claude bitten, das Diagramm zu verfeinern

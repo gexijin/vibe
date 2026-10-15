@@ -40,11 +40,11 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 ## Schritt 2: Docker-Konfiguration kopieren
 
 - Gehen Sie zu https://github.com/gexijin/vibe
-  - **Hinweis für ARM64-Benutzer (Apple Silicon Macs):** Verwenden Sie stattdessen https://github.com/gexijin/vibe/tree/ARM64
+  - **Hinweis für Apple-Silicon-Macs:** Die Hauptversion läuft auf Apple Silicon über die eingebaute Emulation von Docker Desktop. Das funktioniert, aber der erste Build und R selbst sind langsamer.
 - Klicken Sie auf **Code** und dann auf **Download ZIP**
 - Öffnen Sie den **Datei-Explorer** (File Explorer, Windows) oder den Finder (Mac) und gehen Sie zu Ihrem Ordner **Downloads**
 - Entpacken Sie die Datei: Klicken Sie unter Windows mit der rechten Maustaste darauf und wählen Sie **Alle extrahieren** (Extract All); auf dem Mac doppelklicken Sie darauf
-- Öffnen Sie den entpackten Ordner `vibe-main` (`vibe-ARM64`, wenn Sie den ARM64-Link verwendet haben). Unter Windows kann er einen weiteren Ordner mit demselben Namen enthalten; öffnen Sie diesen
+- Öffnen Sie den entpackten Ordner `vibe-main`. Unter Windows kann er einen weiteren Ordner mit demselben Namen enthalten; öffnen Sie diesen
 - Finden Sie den `.devcontainer`-Ordner
   - Auf dem Mac blendet der Finder Ordner aus, deren Name mit einem Punkt beginnt. Drücken Sie **Cmd+Shift+.** (Punkt), um sie anzuzeigen
 - Kopieren Sie den gesamten Ordner (er enthält `Dockerfile` und `devcontainer.json`)
@@ -65,10 +65,10 @@ Ihr `nba-dashboard`-Ordner sollte jetzt enthalten:
 - Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
 - Eine Benachrichtigung erscheint unten rechts: **Folder contains a Dev Container configuration file**
 - Klicken Sie auf **Reopen in Container**
-- Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das grüne Symbol in der unteren linken Ecke und wählen Sie **Reopen in Container**
-- VS Code baut den Docker-Container (dauert beim ersten Mal 3-5 Minuten)
+- Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das **><**-Symbol in der unteren linken Ecke und wählen Sie **Reopen in Container**
+- VS Code baut den Docker-Container (dauert beim ersten Mal 5-10 Minuten)
 - Beobachten Sie die Fortschrittsanzeige mit den Build-Schritten
-- Nach Abschluss zeigt das grüne Symbol **Dev Container: R in Docker (AMD64)** (oder **(ARM64)**) an
+- Nach Abschluss zeigt das **><**-Symbol in der unteren linken Ecke **Dev Container: R in Docker (AMD64)** an
 
 ## Schritt 4: Claude Code starten
 
@@ -82,7 +82,9 @@ claude
 
 - Ein Browserfenster öffnet sich zur Authentifizierung
 - Klicken Sie auf **Continue with Google** oder **Continue with Email**
-- Melden Sie sich mit Ihrem Claude-Konto an (oder erstellen Sie eines)
+- Melden Sie sich mit Ihrem Claude-Konto an. Claude Code benötigt ein kostenpflichtiges Claude-Abo (zum Beispiel Pro oder Max) oder ein Anthropic-Console-Konto – der kostenlose Plan enthält es nicht
+- Wenn der Browser einen Code anzeigt, statt zu melden, dass Sie fertig sind, kopieren Sie den Code, wechseln Sie zurück zum VS Code-Terminal, fügen Sie ihn bei der Aufforderung `Paste code here if prompted` ein und drücken Sie Enter
+- Wenn sich kein Browserfenster öffnet, drücken Sie `c`, um den Anmeldelink zu kopieren, und fügen Sie ihn in Ihren Browser ein
 - Nach erfolgreicher Authentifizierung kehren Sie zum VS Code-Terminal zurück
 - Sie sehen Claudes Willkommensnachricht
 
@@ -149,12 +151,11 @@ Erstelle eine Shiny-App in einer Datei namens app.R, die eine interaktive Tabell
 
 Testen Sie Ihr Dashboard, um zu sehen, ob es funktioniert.
 
-- Schauen Sie oben rechts im VS Code-Editor (wo `app.R` geöffnet ist)
+- Klicken Sie im VS Code Explorer (linke Seitenleiste) auf `app.R`, um die Datei zu öffnen
+- Schauen Sie oben rechts in den Editor
 - Finden Sie die **▶**-Schaltfläche mit einem Dropdown-Pfeil
 - Klicken Sie auf das Dropdown und wählen Sie **Run Shiny App**
-- Die App startet und eine Benachrichtigung erscheint: **Open in Browser**
-- Klicken Sie auf **Open in Browser**
-- Das NBA-Dashboard öffnet sich in Ihrem Webbrowser
+- Die App startet und das Dashboard öffnet sich in einem Vorschau-Tab innerhalb von VS Code (um Ihren normalen Browser zu verwenden, öffnen Sie unten den Tab **Ports** und klicken Sie auf das Globus-Symbol neben dem Port)
 - Versuchen Sie, den Punkte-Schieberegler zu bewegen – die Tabelle filtert in Echtzeit
 - Scrollen Sie durch die Spielerdaten
 - Committen Sie Änderungen, wenn die App funktioniert
@@ -174,7 +175,7 @@ Füge unterhalb der Tabelle ein Balkendiagramm hinzu, das die Top 15 Spieler nac
 - Drücken Sie Enter
 - Claude aktualisiert `app.R` mit Visualisierungscode
 - Klicken Sie erneut auf **Run Shiny App**, um die App neu zu laden
-- Aktualisieren Sie Ihren Browser
+- Wenn sich die Vorschau nicht ändert, klicken Sie oben im Vorschau-Tab auf den Pfeil zum Neuladen (oder aktualisieren Sie Ihren Browser)
 - Sie sehen jetzt ein buntes Balkendiagramm und ein Streudiagramm
 - Bewegen Sie den Schieberegler – alle Visualisierungen aktualisieren sich zusammen
 
@@ -192,7 +193,7 @@ Füge ein Dropdown-Menü hinzu, um Spieler nach Team zu filtern. Platziere es ob
 
 - Drücken Sie Enter
 - Claude fügt den Team-Filter hinzu
-- Aktualisieren Sie Ihren Browser
+- Klicken Sie oben im Vorschau-Tab auf den Pfeil zum Neuladen (oder aktualisieren Sie Ihren Browser)
 - Testen Sie das Dropdown – wählen Sie verschiedene Teams wie Lakers, Warriors, Celtics
 - Beobachten Sie, wie Tabelle und Diagramme sich für jedes Team aktualisieren
 
@@ -228,7 +229,7 @@ Vibe Coding glänzt beim Iterieren. Versuchen Sie, Funktionen hinzuzufügen, ind
 - "Füge ein Suchfeld für Spieler hinzu, damit ich einen Spielernamen eingeben und zu ihm springen kann"
 - "Zeige die Team-Logos neben den Teamnamen im Dropdown"
 - "Füge ein Liniendiagramm hinzu, das den Punkte-pro-Spiel-Trend für das ausgewählte Team zeigt"
-- "Mache das Balkendiagramm sortierbar, indem man auf Spaltenüberschriften klickt"
+- "Mache die Tabelle sortierbar, indem man auf Spaltenüberschriften klickt"
 - "Füge Tooltips zum Streudiagramm hinzu, die Spielernamen zeigen, wenn ich darüber fahre"
 
 Nach jedem erfolgreichen Feature:

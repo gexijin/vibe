@@ -108,7 +108,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 
 - Wechseln Sie zurück zu RStudio (klicken Sie auf das RStudio-Fenster oder drücken Sie **Command (⌘) + Tab**)
 - Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Yes**, um sie neu zu laden
-- Wenn keine Aufforderung erscheint, klicken Sie auf **File > Reopen with Encoding > UTF-8**
+- Wenn der neue Code nicht angezeigt wird, klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**
 - Markieren Sie den gesamten Code und klicken Sie auf **Run**
 - Ein Streudiagramm erscheint im **Plots**-Bereich (unten rechts)
 - Wenn Sie einen Fehler zu ggplot2 erhalten, installieren Sie es durch Eingabe von `install.packages("ggplot2")` im Console-Bereich
@@ -169,13 +169,14 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 - Klicken Sie auf **File > Open File...**
 - Wählen Sie `iris_report.Rmd` und klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf die **Knit**-Schaltfläche (mit einem Wollknäuel-Symbol) oben im Skriptbereich
+- Wenn RStudio meldet, dass Pakete wie **rmarkdown** benötigt werden, klicken Sie auf **Install** (oder **Yes**), warten Sie, bis die Installation abgeschlossen ist, und klicken Sie dann erneut auf **Knit**
 - RStudio generiert einen HTML-Bericht
 - Der Bericht öffnet sich in einem neuen Fenster und zeigt Ihre vollständige Analyse mit erzählendem Text
 - Die HTML-Datei wird in Ihrem Projektordner gespeichert
 
 ## Fehlerbehebung
 
-- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding > UTF-8**, um die Datei manuell neu zu laden, oder schließen Sie die Datei und öffnen Sie sie erneut.
+- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**, um die Datei manuell neu zu laden, oder schließen Sie die Datei und öffnen Sie sie erneut.
 - **„claude: command not found"** - Stellen Sie sicher, dass Sie die [Installationsanleitung](./Install_Claude_Code_MacOS) abgeschlossen haben. Versuchen Sie, ein neues Terminal-Fenster zu öffnen, oder schließen Sie Terminal vollständig (**Command (⌘) + Q**) und öffnen Sie es erneut.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
 - **„No such file or directory"** - Überprüfen Sie, ob Sie den Pfad in Schritt 6 korrekt eingegeben haben. Versuchen Sie den Drag-and-Drop-Trick: Ziehen Sie den test_claude-Ordner aus dem Finder ins Terminal, nachdem Sie `cd ` (mit einem Leerzeichen) eingegeben haben.
@@ -211,4 +212,4 @@ Der Workflow ist einfach: Schreiben oder bearbeiten Sie Code mit Claude im Termi
 
 ---
 
-Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 11. Dezember 2024.
+Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 11. Dezember 2025.

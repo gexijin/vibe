@@ -105,7 +105,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 
 - Wechseln Sie zurück zu RStudio (klicken Sie auf das RStudio-Fenster)
 - Möglicherweise sehen Sie eine Aufforderung, dass die Datei geändert wurde – klicken Sie auf **Yes**, um sie neu zu laden
-- Wenn keine Aufforderung erscheint, klicken Sie auf **File > Reopen with Encoding > UTF-8**
+- Wenn der neue Code nicht angezeigt wird, klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**
 - Markieren Sie den gesamten Code und klicken Sie auf **Run**
 - Ein Streudiagramm erscheint im **Plots**-Bereich (unten rechts)
 - Wenn Sie einen Fehler zu ggplot2 erhalten, installieren Sie es durch Eingabe von `install.packages("ggplot2")` im Console-Bereich
@@ -167,13 +167,14 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Klicken Sie auf **File > Open File...**
 - Wählen Sie `iris_report.Rmd` und klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf die **Knit**-Schaltfläche (mit einem Wollknäuel-Symbol) oben im Skriptbereich
+- Wenn RStudio meldet, dass Pakete wie **rmarkdown** benötigt werden, klicken Sie auf **Install** (oder **Yes**), warten Sie, bis die Installation abgeschlossen ist, und klicken Sie dann erneut auf **Knit**
 - RStudio generiert einen HTML-Bericht
 - Der Bericht öffnet sich in einem neuen Fenster und zeigt Ihre vollständige Analyse mit erzählendem Text
 - Die HTML-Datei wird in Ihrem Projektordner gespeichert
 
 ## Fehlerbehebung
 
-- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding > UTF-8**, um die Datei manuell neu zu laden.
+- **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**, um die Datei manuell neu zu laden.
 - **„Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt"** (englisch: „The term 'claude' is not recognized") - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Schließen Sie PowerShell, öffnen Sie ein neues Fenster und versuchen Sie es erneut.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
 - **„Der Pfad ... kann nicht gefunden werden, da er nicht vorhanden ist"** (englisch: „Cannot find path ... because it does not exist") **in Schritt 6** - Ihr Projekt liegt möglicherweise in einem anderen Ordner. In RStudio zeigt der Pfad oben im **Files**-Bereich, wo sich `test_claude` befindet. Wenn Ihr Ordner **Dokumente** (Documents) über OneDrive gesichert wird, versuchen Sie `cd ~\OneDrive\Documents\test_claude`. Wenn der Pfad Leerzeichen enthält, setzen Sie ihn in Anführungszeichen, zum Beispiel: `cd "C:\Users\Ihr Name\OneDrive\Documents\test_claude"`
