@@ -127,7 +127,7 @@ Beobachten Sie Claude bei der Arbeit – es sollte denselben umfassenden Bericht
 
 **Skill (Automatisch):**
 ```
-Erzähle mir über Teslas neueste Entwicklungen
+Erzähle mir von Teslas neuesten Entwicklungen
 ```
 oder
 ```

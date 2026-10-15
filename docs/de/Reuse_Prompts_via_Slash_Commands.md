@@ -179,7 +179,7 @@ Dieselbe Befehlsstruktur recherchiert jetzt Tesla stattdessen.
 
 ## Schritt 12: Einen anderen Slash-Befehl ausprobieren (Optional)
 
-Wenn Sie das Tutorial [Eine Forschungsarbeit schreiben](./Writing_Research_Paper_Claude_Code.md) abgeschlossen haben, sollten Sie einen `/research-paper`-Befehl haben. Testen Sie ihn mit einem neuen Thema.
+Wenn Sie das Tutorial [Eine Forschungsarbeit mit Claude Code schreiben](./Writing_Research_Paper_Claude_Code.md) abgeschlossen haben, sollten Sie einen `/research-paper`-Befehl haben. Testen Sie ihn mit einem neuen Thema.
 
 Löschen Sie zuerst Claudes Gedächtnis, um frisch zu beginnen:
 

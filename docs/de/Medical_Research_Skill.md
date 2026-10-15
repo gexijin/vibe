@@ -64,7 +64,7 @@ Sehen Sie sich die Statuszeile direkt unter der Claude Code-Eingabeaufforderung 
 - Wenn dort **auto mode on** oder **accept edits on** steht, ist alles bereit
 - Wenn dort **manual mode on** steht, drücken Sie **Shift+Tab**, bis **accept edits on** angezeigt wird
 
-Dies ermöglicht Claude, mehrere Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen. Dies ist wichtig für das Erstellen von Skills, die das Erstellen vieler Dateien beinhalten.
+Dies ermöglicht Claude, mehrere Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen. Das ist wichtig, weil beim Erstellen von Skills viele Dateien angelegt werden.
 
 ## Schritt 4: Das PubMed-Suchskript erstellen
 
@@ -195,7 +195,7 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 ## Workflow-Überblick
 
 - **Claude Skills** sind mächtiger als Slash-Befehle – sie kombinieren Code, Dokumentation und benutzerdefinierte Anweisungen
-- **Accept-Edits-Modus** (Shift+Tab) rationalisiert die Erstellung, indem wiederholte Berechtigungsabfragen vermieden werden
+- **Accept-Edits-Modus** (Shift+Tab) vereinfacht die Erstellung, weil wiederholte Berechtigungsabfragen entfallen
 - **Eigenständige Verpackung** – Skripte befinden sich innerhalb von Skill-Ordnern, was sie portabel und teilbar macht
 - **Automatische Aktivierung** – Skills werden basierend auf Fragemustern ausgelöst (Forschungsfragen aktivieren medical-research)
 - **Natürlichsprachliche Schnittstelle** – Stellen Sie natürliche Fragen, ohne die technischen Details zu kennen

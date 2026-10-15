@@ -63,14 +63,14 @@ Sie sollten `stock-report` in der Ausgabe sehen. Dieser Skill recherchiert Unter
 
 Wenn Sie ihn nicht sehen, sollten die Skill-Dateien in `.claude/skills/stock-report/` (Projektebene) sein. Wenn der Ordner ganz fehlt, gehen Sie zurück und schließen Sie zuerst das Tutorial [Ihren ersten Claude Skill erstellen](./Create_Your_First_Claude_Skill.md) in genau diesem Projektordner ab.
 
-## Schritt 3: Die Subagent vs Skill-Architektur verstehen
+## Schritt 3: Das Zusammenspiel von Subagent und Skill verstehen
 
 So arbeiten Subagenten und Skills zusammen:
 
 | Komponente | Zweck | Beispiel |
 |-----------|---------|---------|
 | **Skill** | Sammelt Rohdaten über ein Unternehmen | „Generiere Bericht für Apple: Produkte, Finanzen, Management, Analysten" |
-| **Subagent** | Verwendet Skill-Daten, um ein Ziel zu erreichen | „Hole Berichte für Apple und Microsoft, bewerte beide, empfehle in welches investiert werden soll" |
+| **Subagent** | Verwendet Skill-Daten, um ein Ziel zu erreichen | „Hole Berichte für Apple und Microsoft, bewerte beide, empfiehl, in welches investiert werden soll" |
 
 **Wichtiger Unterschied:**
 - **Skill = Tool**, das Recherche durchführt

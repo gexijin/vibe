@@ -20,7 +20,7 @@ Ich erstellte fünf spezialisierte Slash-Befehle, die den gesamten Tutorial-Lebe
 
 ### [`/tutorial`](../assets/commands/tutorial.md) - Der Tutorial-Generator
 
-Ich erstellte die ersten Tutorials manuell durch interaktives Prompten mit Claude. Verfeinerte den Prozess durch Iteration und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
+Ich erstellte die ersten Tutorials manuell durch interaktives Prompten mit Claude, verfeinerte den Prozess Schritt für Schritt und bat dann Claude, den funktionierenden Prozess in einen Slash-Befehl zu kodifizieren.
 
 Dies ist genau das Muster, das in meinem [Forschungsarbeit-Tutorial](./Writing_Research_Paper_Claude_Code.md) beschrieben wird: Gehen Sie den Workflow manuell durch, dann bitten Sie im letzten Schritt Claude, ihn als wiederverwendbaren Befehl zu speichern, der den bewährten Workflow erfasst:
 
@@ -55,7 +55,7 @@ Der Befehl präsentiert Ergebnisse in einem strukturierten Bericht und wendet da
 
 Die japanischen Übersetzungen kamen zuerst – ohne Slash-Befehl. Ich bat Claude Code einfach, alle Tutorials in einem einzigen Prompt ins Japanische zu übersetzen. Claude erzeugte automatisch 8 Subagenten, die parallel liefen und jeweils verschiedene Tutorials gleichzeitig bearbeiteten.
 
-Für folgende Sprachen bat ich Claude, „einen Slash-Befehl zum Übersetzen von Tutorials ins Chinesische zu erstellen" – keine spezifischen Richtlinien. Claude generierte einen sechsphasigen Workflow mit umfassenden Regeln:
+Für die weiteren Sprachen bat ich Claude, „einen Slash-Befehl zum Übersetzen von Tutorials ins Chinesische zu erstellen" – keine spezifischen Richtlinien. Claude generierte einen sechsphasigen Workflow mit umfassenden Regeln:
 
 - **Übersetzungsregeln**: Codeblöcke, technische Begriffe (Git, Docker, VS Code), Dateipfade und URLs in Englisch belassen; Anleitungstext, Überschriften und Erklärungen übersetzen
 - **Sprachrichtlinien**: Ton- und Stilregeln, gängige technische Übersetzungen (Click = 点击, Install = 安装), formelle Anredekonventionen
