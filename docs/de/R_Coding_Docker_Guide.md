@@ -140,11 +140,11 @@ Lassen Sie uns die App modifizieren, um zu sehen, wie Entwicklung funktioniert.
 
 - Lassen Sie die App laufen
 - Bearbeiten Sie in VS Code `R/app.R`
-- Finden Sie Zeile 16: `titlePanel("Old Faithful Geyser Data")`
-- Ändern Sie sie zu:
+- Finden Sie Zeile 16: `titlePanel("Old Faithful Geyser Data"),`
+- Ändern Sie nur den Text in den Anführungszeichen und lassen Sie das Komma am Zeilenende stehen:
 
 ```r
-titlePanel("My First R Docker App")
+titlePanel("My First R Docker App"),
 ```
 
 - Speichern Sie die Datei (**File > Save**)
