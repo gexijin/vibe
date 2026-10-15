@@ -42,7 +42,7 @@ Claude Code के साथ एक सिंपल टाइमर ऐप ब�
 - भरें:
   - **Name:** `test_claude`
   - **Description:** `A timer app built with Claude Code`
-  - **Local Path:** Documents फ़ोल्डर
+  - **Local Path:** **Choose...** पर क्लिक करें और अपना **Documents** फ़ोल्डर चुनें (डिफ़ॉल्ट रूप से यहाँ Documents के अंदर का `GitHub` फ़ोल्डर होता है, इसलिए इसे बदलें)
   - **"Initialize this repository with a README"** को **चेक करें**
 - **Create Repository** पर क्लिक करें
 - ऊपर **Publish repository** पर क्लिक करें
@@ -143,7 +143,7 @@ commit करने से पहले हमेशा AI-जनरेटेड
 
 ## चरण 9: गलत बदलावों को हटाएं (Discard)
 
-कभी-कभी AI हमें गलत रास्ते पर ले जाता है और हमें अपने आखिरी commit (सेव पॉइंट) से फिर से शुरू करना पड़ता है।
+कभी-कभी AI हमें गलत रास्ते पर ले जाता है, और हमें अपने आखिरी commit (सेव पॉइंट) से फिर से शुरू करना पड़ता है।
 
 - **GitHub Desktop** खोलें
 - **Branch** मेनू → **Discard All Changes** पर क्लिक करें
@@ -182,7 +182,7 @@ Claude बदलावों की जांच करेगा, एक commit 
 
 - Claude Code में:
   ```
-  मैंने कौन सी फ़ाइलें बदली हैं?
+  मेरे आखिरी commit में क्या बदला?
   ```
 
 Claude आपके बदलावों को सरल भाषा में समझाता है।
@@ -193,10 +193,10 @@ Claude आपके बदलावों को सरल भाषा मे�
 
 - **GitHub Desktop** में, **History** टैब पर क्लिक करें
 
-आपको दिखेगा:
-- Initial commit (README)
-- Create initial timer app
-- Add improved sound notification (यह मैसेज Claude ने लिखा था, इसलिए आपके यहाँ इसके शब्द थोड़े अलग हो सकते हैं)
+आपको दिखेगा (सबसे नया सबसे ऊपर):
+- साउंड नोटिफिकेशन के लिए Claude का commit (इसके शब्द अलग-अलग हो सकते हैं)
+- Create initial timer app with start/stop functionality
+- Initial commit
 
 ध्यान दें कि पहला असफल साउंड प्रयास वहां नहीं है - आपने उसे हटा दिया था! केवल काम करने वाला कोड ही आपके commit में पहुंचा।
 
