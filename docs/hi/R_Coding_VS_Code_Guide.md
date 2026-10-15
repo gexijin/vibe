@@ -31,7 +31,7 @@ lang: "hi"
 
 - **macOS**:
   - [CRAN macOS](https://cran.r-project.org/bin/macosx/) से डाउनलोड करें और .pkg इंस्टॉलर चलाएँ
-  - नोट करें कि आप Intel (`/Library/Frameworks/R.framework/Resources/bin/R`) उपयोग कर रहे हैं या Homebrew के साथ Apple Silicon (`/opt/homebrew/bin/R`)
+  - CRAN इंस्टॉलर Intel और Apple Silicon, दोनों तरह के Mac पर R को `/Library/Frameworks/R.framework/Resources/bin/R` में रखता है (अगर आपने R को Homebrew से इंस्टॉल किया है, तो Apple Silicon पर यह `/opt/homebrew/bin/R` है)
   - अगर अपडेट कर रहे हैं, तो नया वर्शन पुराने की जगह ले लेगा
 
 - **Linux**:
@@ -252,7 +252,7 @@ shinyApp(ui = ui, server = server)
 
 - **VS Code टर्मिनल में "R is not recognized"**: VS Code को R नहीं मिल रहा है। अपना settings.json जाँचें (चरण 4) - सत्यापित करें कि R पाथ सही है और `R.exe` (Windows) या R बाइनरी (Mac/Linux) की ओर इशारा करता है। उदाहरण पाथ:
   - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (वर्शन नंबर एडजस्ट करें)
-  - macOS Intel: `/Library/Frameworks/R.framework/Resources/bin/R`
+  - macOS (CRAN इंस्टॉलर, Intel या Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`
   - Linux: `/usr/bin/R`
   ठीक करने के बाद, VS Code को पूरी तरह से रीस्टार्ट करें।
