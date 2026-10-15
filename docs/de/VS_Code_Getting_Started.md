@@ -49,8 +49,8 @@ Klicken Sie auf das **Explorer**-Symbol (oben in der Aktivitätsleiste), um den 
 ## Schritt 3: Einen Ordner öffnen und erkunden
 
 - Klicken Sie auf **File** → **Open Folder**
-- Navigieren Sie zu einem beliebigen vorhandenen Ordner auf Ihrem Computer (z.B. Dokumente)
-- Klicken Sie auf **Öffnen** oder **Ordner auswählen** (englisch: **Open** / **Select Folder**)
+- Gehen Sie zu Ihrem Ordner **Dokumente** (Documents) und erstellen Sie einen neuen, leeren Übungsordner, z. B. `vscode_practice` (verwenden Sie dazu die Schaltfläche **Neuer Ordner** im Fenster)
+- Wählen Sie diesen neuen Ordner aus und klicken Sie dann auf **Öffnen** oder **Ordner auswählen** (englisch: **Open** / **Select Folder**)
 - Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 Die Explorer-Seitenleiste zeigt nun die Dateien Ihres Ordners:
@@ -61,7 +61,7 @@ Die Explorer-Seitenleiste zeigt nun die Dateien Ihres Ordners:
 
 ## Schritt 4: Eine Markdown-Datei erstellen
 
-- Klicken Sie im Explorer auf das **New File**-Symbol (Seite mit +)
+- Bewegen Sie im Explorer die Maus über den Ordnernamen ganz oben und klicken Sie dann auf das **New File**-Symbol (Seite mit +), das dort erscheint
 - Nennen Sie sie `README.md`
 - Fügen Sie diesen Inhalt hinzu:
 
@@ -124,7 +124,7 @@ Prüfen Sie den Explorer – der `notes`-Ordner erscheint! Das Terminal läuft i
 
 ## Schritt 8: KI-Agenten in VS Code verwenden (Optional)
 
-VS Code enthält [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat), einen KI-Assistenten, der Code erklären, schreiben und debuggen kann.
+VS Code enthält [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat), einen KI-Assistenten, der Code erklären, schreiben und debuggen kann.
 
 - Öffnen Sie die Datei `README.md` (oder eine andere Datei in Ihrem Projekt)
 - Klicken Sie in der Titelleiste auf **Chat** → **Open Chat** (oder drücken Sie `Strg+Alt+I` unter Windows/Linux, `Ctrl+Cmd+I` auf Mac)
@@ -134,7 +134,7 @@ VS Code enthält [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilo
 
 GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es bitten, neuen Code zu schreiben, Fehler zu beheben oder Fragen zu beantworten wie „Wie füge ich weitere Funktionen hinzu?"
 
-**Tipp:** Für [Inline-Bearbeitung](https://code.visualstudio.com/docs/copilot/copilot-chat) markieren Sie Code in einer beliebigen Datei und drücken Sie `Strg+I` (Windows/Linux) oder `Cmd+I` (Mac), um Copilot zu bitten, nur diesen Abschnitt zu ändern, zu reparieren oder zu erklären.
+**Tipp:** Für [Inline-Bearbeitung](https://code.visualstudio.com/docs/chat/inline-chat) markieren Sie Code in einer beliebigen Datei und drücken Sie `Strg+I` (Windows/Linux) oder `Cmd+I` (Mac), um Copilot zu bitten, nur diesen Abschnitt zu ändern, zu reparieren oder zu erklären.
 
 ## So öffnen Sie Ihr Projekt erneut
 
@@ -146,7 +146,7 @@ GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es b
 
 - **Vorschau wird nicht angezeigt:** Stellen Sie sicher, dass die Markdown Preview Enhanced-Erweiterung installiert ist und Sie eine `.md`-Datei geöffnet haben
 - **Terminal zeigt falsches Verzeichnis:** Klicken Sie auf das Papierkorb-Symbol im Terminal-Panel, dann klicken Sie auf **Terminal** → **New Terminal**
-- **Chat-Menü nicht sichtbar:** GitHub Copilot Chat muss möglicherweise installiert werden – klicken Sie auf das **Extensions**-Symbol, suchen Sie nach „GitHub Copilot Chat" und installieren Sie es
+- **Chat-Menü nicht sichtbar:** Die KI-Funktionen sind möglicherweise ausgeschaltet. Öffnen Sie die Einstellungen (drücken Sie `Strg+,` unter Windows/Linux oder `Cmd+,` auf dem Mac), suchen Sie nach `disable AI features` und entfernen Sie das Häkchen. Bewegen Sie dann die Maus über das Copilot-Symbol in der Statusleiste (unten) und wählen Sie **Use AI Features**
 - **Erweiterungen funktionieren nicht:** Klicken Sie auf **View** → **Command Palette**, geben Sie „reload window" ein und wählen Sie **Developer: Reload Window**
 
 ## Der komplette Workflow

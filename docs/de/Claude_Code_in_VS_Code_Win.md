@@ -29,7 +29,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 
 ## Schritt 2: VS Code starten
 
-- Klicken Sie auf die **Windows-Starttaste** (unten links auf Ihrem Bildschirm)
+- Klicken Sie auf die **Windows-Starttaste** (das Windows-Logo in Ihrer Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
 - VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
@@ -76,12 +76,12 @@ Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 - Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht"
 - Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet"
 - Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?"
-- Probieren Sie die Claude Code VS Code-Erweiterung für eine visuelle Oberfläche mit Inline-Diffs aus (suchen Sie nach „Claude Code" in Extensions)
+- Die Claude Code-Erweiterung haben Sie bereits im Installations-Tutorial installiert – klicken Sie auf das Spark-Symbol oben rechts im Editor, um statt im Terminal in einem Panel mit Inline-Diffs mit Claude zu chatten
 
 ## Fehlerbehebung
 
-- **Befehl `claude` nicht gefunden** - Führen Sie `claude --version` im VS Code-Terminal aus, um zu prüfen, ob Claude Code installiert ist; wenn nicht, folgen Sie zuerst dem [Installations-Tutorial](Install_CLAUDE_Code_Win.md)
-- **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, installieren Sie die Erweiterung **WSL** über die Extensions-Seitenleiste, klicken Sie auf das blaue/grüne Symbol in der unteren linken Ecke und wählen Sie **Connect to WSL**, bevor Sie Ihren Projektordner öffnen (erreichbar unter `/mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude`)
+- **`claude` wird nicht erkannt** - Schließen Sie VS Code vollständig (alle Fenster) und öffnen Sie es erneut. Öffnen Sie dann ein neues Terminal und versuchen Sie `claude` noch einmal. Wenn es weiterhin nicht funktioniert, führen Sie `claude --version` in einem normalen PowerShell-Fenster aus; schlägt auch das fehl, folgen Sie zuerst dem [Installations-Tutorial](Install_CLAUDE_Code_Win.md)
+- **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, installieren Sie die Erweiterung **WSL** über die Extensions-Seitenleiste, klicken Sie auf das Symbol **><** in der unteren linken Ecke und wählen Sie **Connect to WSL**, bevor Sie Ihren Projektordner öffnen (erreichbar unter `/mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude`)
 
 ## Workflow-Überblick
 
