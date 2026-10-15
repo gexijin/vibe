@@ -24,7 +24,7 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 
 - Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
 - Geben Sie `RStudio` ein
-- Drücken Sie die **Return**-Taste (Zeilenschalter), um es zu öffnen
+- Drücken Sie die **Return**-Taste (↩), um es zu öffnen
 - Das RStudio-Fenster öffnet sich mit mehreren Bereichen
 
 ## Schritt 2: Ein neues R-Projekt erstellen
@@ -64,8 +64,8 @@ summary(iris)
 
 ## Schritt 5: Terminal öffnen
 
-- Öffnen Sie den **Finder** und klicken Sie in der linken Seitenleiste auf **Programme**
-- Öffnen Sie den Ordner **Dienstprogramme**
+- Öffnen Sie den **Finder** und klicken Sie in der linken Seitenleiste auf **Programme** (Applications)
+- Öffnen Sie den Ordner **Dienstprogramme** (Utilities)
 - Doppelklicken Sie auf **Terminal**
 - Das Terminal-Fenster öffnet sich
 
@@ -118,7 +118,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 - Wechseln Sie zum Terminal (drücken Sie **Command (⌘) + Tab** oder klicken Sie auf das Terminal-Fenster)
 - Geben Sie diese Anfrage ein:
   ```
-  Entferne den Titel. Ändere die Markierungsart nach Art. Wechsle zum Classic-Theme.
+  Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum Classic-Theme.
   ```
 
 ## Schritt 11: Das verfeinerte Diagramm ansehen
@@ -126,7 +126,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 - Wechseln Sie zu RStudio
 - Laden Sie die Datei neu, wenn Sie dazu aufgefordert werden
 - Markieren Sie den aktualisierten Code und klicken Sie auf **Run**
-- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Markierungsformen für jede Art und im Classic-Theme
+- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Punktformen für jede Art und im Classic-Theme
 
 ## Schritt 12: Claude um PCA-Plot bitten
 

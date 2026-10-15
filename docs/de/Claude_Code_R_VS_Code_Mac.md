@@ -16,7 +16,7 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [R in VS Code](./R_Coding_VS_Code_Guide) - R sollte in VS Code funktionieren
+- Abgeschlossenes Tutorial [R in VS Code ausführen](./R_Coding_VS_Code_Guide) - R sollte in VS Code funktionieren
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) - Claude Code CLI sollte installiert sein
 - Claude Pro/Max-Abonnement oder Anthropic-API-Schlüssel
 - 20-30 Minuten
@@ -86,21 +86,21 @@ Füge Code zu iris_analysis.R hinzu, um ein Streudiagramm von Kelchblattlänge v
 - Geben Sie im Claude-Chat-Panel ein:
 
 ```
-Entferne den Titel. Ändere den Markertyp nach Art. Wechsle zum klassischen Theme.
+Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum klassischen Theme.
 ```
 
 - Drücken Sie Enter
 - Claude zeigt die aktualisierten Codeänderungen
 - Klicken Sie auf **Accept**
 - Führen Sie den aktualisierten Code erneut aus: Wählen Sie alles aus und drücken Sie `Strg+Enter` / `Cmd+Enter`
-- Das Diagramm zeigt jetzt verschiedene Markierungsformen pro Art, keinen Titel und das klassische Theme
+- Das Diagramm zeigt jetzt verschiedene Punktformen pro Art, keinen Titel und das klassische Theme
 
 ## Schritt 7: Claude um PCA-Analyse bitten
 
 - Geben Sie im Claude-Chat-Panel ein:
 
 ```
-Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und die Proben mit den ersten beiden Hauptkomponenten darzustellen.
+Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und die Proben mit den ersten beiden Hauptkomponenten darzustellen.
 ```
 
 - Drücken Sie Enter

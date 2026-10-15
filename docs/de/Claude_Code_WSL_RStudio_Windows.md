@@ -22,7 +22,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 
 ## Schritt 1: RStudio unter Windows öffnen
 
-- Klicken Sie auf die **Windows-Starttaste**
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Symbol in der Taskleiste)
 - Geben Sie `RStudio` in das Suchfeld ein
 - Klicken Sie auf **RStudio**, um es zu öffnen
 - Das RStudio-Fenster öffnet sich mit mehreren Bereichen
@@ -44,7 +44,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 
 - Klicken Sie in RStudio auf **File > New File > R Script**
 - Ein neues leeres Skript öffnet sich im oberen linken Bereich
-- Klicken Sie auf **File > Save** (oder das Speichern-Symbol)
+- Klicken Sie auf **File > Save** (oder auf das Speichern-Symbol)
 - Nennen Sie die Datei: `iris.R`
 - Klicken Sie auf **Save**
 
@@ -64,7 +64,7 @@ summary(iris)
 
 ## Schritt 5: PowerShell öffnen
 
-- Klicken Sie auf die **Windows-Starttaste**
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Symbol in der Taskleiste)
 - Geben Sie `PowerShell` in das Suchfeld ein
 - Klicken Sie auf **Windows PowerShell**, um es zu öffnen
 
@@ -115,7 +115,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
-  Entferne den Titel. Ändere den Markierungstyp nach Art. Wechsle zum klassischen Theme.
+  Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum klassischen Theme.
   ```
 
 ## Schritt 11: Das verfeinerte Diagramm ansehen
@@ -123,7 +123,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Wechseln Sie zu RStudio
 - Laden Sie die Datei neu, wenn Sie dazu aufgefordert werden
 - Markieren Sie den aktualisierten Code und klicken Sie auf **Run**
-- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Markierungsformen für jede Art und mit dem klassischen Theme
+- Das Diagramm sollte jetzt ohne Titel angezeigt werden, mit verschiedenen Punktformen für jede Art und mit dem klassischen Theme
 
 
 ## Schritt 12: Claude um PCA-Plot bitten
@@ -131,7 +131,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 - Wechseln Sie zu PowerShell
 - Geben Sie diese Anfrage ein:
   ```
-  Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und die Proben unter Verwendung der ersten beiden Hauptkomponenten zu plotten.
+  Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und die Proben mithilfe der ersten beiden Hauptkomponenten zu plotten.
   ```
 
 ## Schritt 13: Die PCA-Analyse ausführen

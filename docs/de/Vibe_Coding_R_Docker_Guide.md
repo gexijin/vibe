@@ -122,7 +122,7 @@ Bevor Sie ein Dashboard bauen, verstehen Sie, welche Daten Sie haben.
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Zeige mir welche Spalten in diesen NBA-Daten verfügbar sind. Erstelle dann eine Zusammenfassung mit: Anzahl der Spieler, Anzahl der Teams, durchschnittliche Punkte pro Spieler, und wer die meisten Assists und Rebounds hat.
+Zeige mir, welche Spalten in diesen NBA-Daten verfügbar sind. Erstelle dann eine Zusammenfassung mit: Anzahl der Spieler, Anzahl der Teams, durchschnittliche Punkte pro Spieler, und wer die meisten Assists und Rebounds hat.
 ```
 
 - Drücken Sie Enter
@@ -205,7 +205,7 @@ Sie bauen ein professionelles Dashboard durch ein Gespräch.
 
 - Klicken Sie im VS Code Explorer auf `app.R`, um es zu öffnen
 - Überfliegen Sie den Code – beachten Sie das UI-Layout, die Server-Logik und den Plotting-Code
-- Sie müssen nicht jede Zeile verstehen, aber bekommen Sie ein Gefühl für die Struktur
+- Sie müssen nicht jede Zeile verstehen, sollten aber ein Gefühl für die Struktur bekommen
 - Öffnen Sie GitHub Desktop
 - Sie sehen `app.R` in der Liste (als neue Datei oder als geändert, falls Sie sie bereits in einem früheren Schritt committet haben)
 - Das rechte Panel zeigt den hinzugefügten Code in Grün
@@ -236,7 +236,7 @@ Nach jedem erfolgreichen Feature:
 - Testen Sie es im Browser
 - Wenn es funktioniert, committen Sie mit GitHub Desktop
 - Wenn es nicht funktioniert, sagen Sie Claude den Fehler und bitten Sie um Korrektur
-- Wenn behoben, committen Sie die funktionierende Version
+- Sobald der Fehler behoben ist, committen Sie die funktionierende Version
 
 
 **Schlüsselprinzipien:**
@@ -286,7 +286,7 @@ Nach dieser ersten Einrichtung wird Ihre tägliche Vibe-Coding-Routine:
 2. **VS Code öffnen** - Öffnen Sie Ihr Projekt, öffnen Sie im Container neu falls nötig
 3. **Claude Code starten** - Geben Sie `claude` im Terminal ein
 4. **Beschreiben Sie Ihr Ziel** - „Füge eine Funktion hinzu, die …“ oder „Behebe den Fehler, bei dem …“
-5. **Testen Sie die Änderungen** - Führen Sie Ihre App aus, prüfen Sie ob sie funktioniert
+5. **Testen Sie die Änderungen** - Führen Sie Ihre App aus, prüfen Sie, ob sie funktioniert
 6. **Iterieren oder committen** - Wenn kaputt, beschreiben Sie die Korrektur; wenn funktioniert, committen Sie mit GitHub Desktop
 7. **Regelmäßig pushen** - Klicken Sie auf **Push origin**, um auf GitHub zu sichern
 

@@ -16,7 +16,7 @@ Sie möchten R-Code schreiben, aber RStudio fühlt sich schwerfällig an oder Si
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [VS Code Grundlagen](./VS_Code_Getting_Started)
+- Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - Internetverbindung zum Herunterladen von R und Paketen
 - 10-15 Minuten
 
@@ -27,7 +27,7 @@ Sie benötigen R Version 4.0 oder höher für die beste Kompatibilität.
 - **Windows**:
   - Laden Sie das neueste R von [CRAN Windows](https://cran.r-project.org/bin/windows/base/) herunter und führen Sie das Installationsprogramm aus
   - Während der Installation **notieren Sie den Installationspfad** (zum Beispiel: `C:\Program Files\R\R-4.5.3`)
-  - Wenn Sie eine alte Version haben, deinstallieren Sie sie zuerst über Einstellungen > Apps
+  - Wenn Sie eine alte Version haben, deinstallieren Sie sie zuerst über **Einstellungen > Apps**
 
 - **macOS**:
   - Laden Sie von [CRAN macOS](https://cran.r-project.org/bin/macosx/) herunter und führen Sie das .pkg-Installationsprogramm aus
@@ -170,7 +170,7 @@ hist(iris$Sepal.Length)
 
 ## Schritt 8: R-Code interaktiv ausführen
 
-- Mit geöffneter `analysis.R` wählen Sie eine Codezeile aus und drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um sie auszuführen
+- Wählen Sie bei geöffneter `analysis.R` eine Codezeile aus und drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um sie auszuführen
 - Wenn Sie kein Terminal offen haben, öffnet das erste `Strg+Enter` / `Cmd+Enter` ein R-Terminal. Das zweite führt den Code aus.
 - Beobachten Sie die Ausgabe im Terminal. Das Histogramm öffnet sich in einem Plot-Tab innerhalb von VS Code, neben Ihrem Skript
 - Sie können auch alle Zeilen auswählen und sie auf die gleiche Weise ausführen.
@@ -224,11 +224,11 @@ shinyApp(ui = ui, server = server)
 
 ## Schritt 10: Codevervollständigung und Hover-Hilfe verwenden
 
-- In `analysis.R` beginnen Sie auf einer neuen Zeile `mea` zu tippen
+- Beginnen Sie in `analysis.R` in einer neuen Zeile, `mea` zu tippen
 - Ein Dropdown erscheint mit Vorschlägen – wählen Sie `mean()` durch Drücken von Enter
 - Bewegen Sie Ihre Maus über das Wort `mean` in Ihrem bestehenden Code
 - Ein Popup zeigt die Funktionsdokumentation und Anwendungsbeispiele
-- Versuchen Sie, über `lm`, `summary` oder `plot` zu hovern, um deren Dokumentation zu sehen
+- Fahren Sie mit der Maus über `lm`, `summary` oder `plot`, um deren Dokumentation zu sehen
 - Geben Sie `iris$` ein und beobachten Sie, wie VS Code Spaltennamen (`Sepal.Length`, `Species` usw.) vorschlägt
 
 ## Schritt 11: Weitere Funktionen ausprobieren
@@ -248,7 +248,7 @@ shinyApp(ui = ui, server = server)
 
 ## Fehlerbehebung
 
-- **„R is not recognized" im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – verifizieren Sie, dass der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
+- **„R is not recognized" im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
   - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (Versionsnummer anpassen)
   - macOS (CRAN-Installationsprogramm, Intel oder Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`

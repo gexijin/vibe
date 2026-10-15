@@ -17,8 +17,8 @@ Haben Sie schon einmal versucht, Ihren R-Code mit einem Kollegen zu teilen, nur 
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [R-Programmierung in VS Code](./R_Coding_VS_Code_Guide)
-- Abgeschlossenes Tutorial [GitHub Desktop Grundlagen](./Github_desktop)
+- Abgeschlossenes Tutorial [R in VS Code ausführen](./R_Coding_VS_Code_Guide)
+- Abgeschlossenes Tutorial [Erste Schritte mit Versionskontrolle](./Github_desktop)
 - 20-25 Minuten
 
 ## Schritt 1: Docker Desktop installieren
@@ -67,7 +67,7 @@ Haben Sie schon einmal versucht, Ihren R-Code mit einem Kollegen zu teilen, nur 
 
 **Apple-Silicon-Macs:** Dieses Image ist für Intel/AMD-Prozessoren gebaut. Docker Desktop führt es per Emulation aus. Daher sind der erste Build und R selbst langsamer, aber alles funktioniert.
 
-**Hinweis:** Der Container enthält automatisch die R-Erweiterung und das languageserver-Paket. Die Dockerfile und devcontainer.json erledigen das für Sie.
+**Hinweis:** Der Container enthält automatisch die R-Erweiterung und das languageserver-Paket. Das Dockerfile und die devcontainer.json erledigen das für Sie.
 
 ## Schritt 6: Die Container-Umgebung verstehen
 
@@ -110,7 +110,7 @@ cd vibe
 Der Container hat R mit gängigen Paketen vorinstalliert. Führen wir ein einfaches Datenanalyse-Skript aus.
 
 - Navigieren Sie im VS Code Explorer zu `R/iris_analysis.R`
-- Klicken Sie zum Öffnen der Datei
+- Klicken Sie darauf, um die Datei zu öffnen
 - Sie sehen R-Code, der den Iris-Datensatz analysiert
 - Klicken Sie in das Terminal, das Sie in Schritt 6 geöffnet haben, geben Sie `R` ein und drücken Sie **Enter**. R startet und Sie sehen eine `>`-Eingabeaufforderung (dieser Container ist so eingerichtet, dass Code an das gerade verwendete Terminal gesendet wird, deshalb muss R dort zuerst laufen)
 - Klicken Sie wieder in `iris_analysis.R` und wählen Sie die erste Zeile aus: `data(iris)`
@@ -126,7 +126,7 @@ Der Container hat R mit gängigen Paketen vorinstalliert. Führen wir ein einfac
 Das Projekt enthält eine Demo-Shiny-App, die ein interaktives Histogramm erstellt.
 
 - Navigieren Sie im VS Code Explorer zu `R/app.R`
-- Klicken Sie zum Öffnen der Datei
+- Klicken Sie darauf, um die Datei zu öffnen
 - Sie sehen Code für eine Shiny-Webanwendung
 - Schauen Sie oben rechts im Editor-Fenster nach einer **▶**-Schaltfläche
 - Klicken Sie auf den Dropdown-Pfeil daneben und wählen Sie **Run Shiny App**
@@ -155,7 +155,7 @@ titlePanel("My First R Docker App")
 ## Schritt 10: Das Dockerfile verstehen (Optional)
 
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
-- Klicken Sie zum Öffnen der Datei
+- Klicken Sie darauf, um die Datei zu öffnen
 - Sie sehen die vollständige Konfiguration:
 
 ```dockerfile
@@ -207,11 +207,11 @@ Nach Änderung des Basis-Images müssen Sie den Container neu erstellen, um die 
 
 ## Schritt 11: R-Pakete im Docker-Image installieren (Optional)
 
-Über die R-Konsole installierte Pakete (`install.packages()`) sind temporär und verschwinden, wenn Sie den Container neu erstellen. Um Pakete permanent zu machen, fügen Sie sie der Dockerfile hinzu.
+Über die R-Konsole installierte Pakete (`install.packages()`) sind temporär und verschwinden, wenn Sie den Container neu erstellen. Um Pakete permanent zu machen, fügen Sie sie dem Dockerfile hinzu.
 
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
-- Klicken Sie zum Öffnen der Datei
-- Fügen Sie eine neue Zeile unterhalb der anderen 'install.packages'-Zeilen hinzu, um das `data.table`-Paket zu installieren:
+- Klicken Sie darauf, um die Datei zu öffnen
+- Fügen Sie eine neue Zeile unterhalb der anderen `install.packages`-Zeilen hinzu, um das `data.table`-Paket zu installieren:
 ```dockerfile
 RUN R -q -e 'install.packages("data.table", repos="https://cloud.r-project.org")'
 ```
@@ -231,7 +231,7 @@ Wenn es ohne Fehler geladen wird, ist das Paket permanent installiert.
 ## Nächste Schritte
 
 - **Erstellen Sie ein neues R-Skript** - Erstellen Sie eine neue `.R`-Datei im `R/`-Ordner, schreiben Sie Datenanalyse-Code mit eingebauten Datensätzen wie `mtcars` oder `iris`
-- **Installieren Sie R-Pakete** - Fügen Sie Pakete hinzu, die Sie benötigen, indem Sie die Dockerfile bearbeiten und den Container neu erstellen
+- **Installieren Sie R-Pakete** - Fügen Sie Pakete hinzu, die Sie benötigen, indem Sie das Dockerfile bearbeiten und den Container neu erstellen
 - **Erkunden Sie tidyverse** - Probieren Sie Datenmanipulation mit `dplyr` und Visualisierung mit `ggplot2` mit Beispieldatensätzen
 
 ## Fehlerbehebung
@@ -245,8 +245,8 @@ Diese Einrichtung gibt Ihnen eine professionelle R-Entwicklungsumgebung:
 
 - **VS Code** bietet den Code-Editor mit Syntax-Hervorhebung und IntelliSense
 - **Docker-Container** führt eine isolierte Linux-Umgebung mit R und allen Abhängigkeiten aus
-- **Rocker image** (`rocker/shiny-verse`) enthält R, Shiny, tidyverse und Entwicklertools
-- **Dev Container config** (`.devcontainer/`) installiert automatisch VS Code-Erweiterungen für R und Shiny
+- **Rocker-Image** (`rocker/shiny-verse`) enthält R, Shiny, tidyverse und Entwicklertools
+- **Dev-Container-Konfiguration** (`.devcontainer/`) installiert automatisch VS Code-Erweiterungen für R und Shiny
 - **Port-Weiterleitung** ermöglicht Ihnen den Zugriff auf die Shiny-App, die innerhalb des Containers läuft, von Ihrem Browser aus
 
 ## Täglicher Workflow
