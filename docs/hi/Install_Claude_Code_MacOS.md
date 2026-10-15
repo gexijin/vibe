@@ -32,9 +32,9 @@ Claude Code एक AI सहायक है जो आपके Terminal मे
 
 ## चरण 1: Terminal खोलें
 
-- अपने Dock में **Launchpad** आइकन पर क्लिक करें (रंगीन वर्गों वाला आइकन)
-- ऊपर दिए गए सर्च बॉक्स में `Terminal` टाइप करें
-- **Terminal** पर क्लिक करें (एक काला वर्गाकार आइकन)
+- Spotlight सर्च खोलने के लिए **Command (⌘) + Space** दबाएँ
+- `Terminal` टाइप करें
+- **Return** दबाएँ (या नतीजों में **Terminal** पर क्लिक करें, एक काला वर्गाकार आइकन)
 - एक ब्लिंक करते कर्सर के साथ Terminal विंडो खुल जाएगी
 
 **सुझाव:** अगले चरणों के लिए Terminal को खुला रखें।
@@ -143,6 +143,7 @@ export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # अपने रिसोर्स के डिप्लॉयमेंट नामों पर मॉडल सेट करें
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
@@ -200,9 +201,9 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 Terminal बंद करने के बाद, इसे फिर से खोलने का तरीका यहाँ है:
 
-- अपने Dock में **Launchpad** आइकन पर क्लिक करें (रंगीन वर्गों वाला आइकन)
-- ऊपर दिए गए सर्च बॉक्स में `Terminal` टाइप करें
-- **Terminal** पर क्लिक करें
+- Spotlight सर्च खोलने के लिए **Command (⌘) + Space** दबाएँ
+- `Terminal` टाइप करें
+- **Return** दबाएँ
 - एक Terminal विंडो खुल जाएगी
 
 ## समस्या निवारण
