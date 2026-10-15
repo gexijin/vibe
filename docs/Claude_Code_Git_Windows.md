@@ -253,7 +253,7 @@ Remember: Test after each feature, commit after each success, discard failures.
 
 ## Troubleshooting
 
-- **"not a git repository" error:** Make sure you're in the test_claude folder (`cd ~\Documents\test_claude`)
+- **"not a git repository" error:** Make sure you're in the test_claude folder (`cd ~\Documents\test_claude`, or `cd ~\OneDrive\Documents\test_claude` if you used the OneDrive path in Step 4)
 - **Can't find timer.html in Windows:** The file is at `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` (or `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html` if you used the OneDrive path in Step 4)
 - **`git` command not found:** Close and reopen PowerShell after installing Git for Windows so the PATH updates, then run `git --version` again
 - **Timer doesn't work:** Open browser console (right-click the page, select **Inspect**, click **Console** tab), copy any red error messages, paste them to Claude
