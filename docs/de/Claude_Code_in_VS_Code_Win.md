@@ -69,7 +69,7 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 
 - **Option A:** Öffnen Sie VS Code, klicken Sie auf **File > Open Recent** und wählen Sie `test_claude`
-- **Option B:** Öffnen Sie den **Datei-Explorer**, klicken Sie mit der rechten Maustaste auf den Ordner `test_claude` und wählen Sie **Open with Code**
+- **Option B:** Öffnen Sie den **Datei-Explorer**, klicken Sie mit der rechten Maustaste auf den Ordner `test_claude` und wählen Sie **Open with Code** (bei deutschsprachiger Installation **Mit Code öffnen**; unter Windows 11 klicken Sie zuerst auf **Weitere Optionen anzeigen**). Diese Option erscheint nur, wenn bei der Installation von VS Code die Option **Add "Open with Code" action** (Aktion „Mit Code öffnen“ hinzufügen) angehakt war; andernfalls verwenden Sie Option A
 
 ## Nächste Schritte
 

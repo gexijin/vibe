@@ -141,7 +141,7 @@ Wenn Claude eine Datei bearbeiten oder einen Befehl ausführen möchte, zeigt es
 
 Einige Tastenkombinationen machen das Arbeiten mit Claude Code außerdem schneller:
 
-- **Umschalt+Tab** - Zwischen den Modi wechseln (Manual, Accept Edits, Plan) - Der Plan-Modus ist nützlich, um eine komplexe Aufgabe zu prüfen, bevor Claude etwas ändert
+- **Umschalt+Tab** - Zwischen den Modi wechseln (Auto, Manual, Accept Edits, Plan); der aktuelle Modus wird direkt unter der Eingabezeile angezeigt. Der Plan-Modus ist nützlich, um eine komplexe Aufgabe zu prüfen, bevor Claude etwas ändert
 - **Strg+C** - Brechen Sie die aktuelle Operation oder Claudes Antwort ab
 - **Esc** - Claude mitten in der Antwort stoppen oder ein Menü schließen
 - **`\` und dann Enter** (oder **Strg+J**) - Fügen Sie eine neue Zeile in Ihre Nachricht ein, ohne sie zu senden
