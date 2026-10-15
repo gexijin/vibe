@@ -86,7 +86,7 @@ Sie sehen `(.venv)` in Ihrer Terminal-Eingabeaufforderung, wenn die Umgebung akt
 
 - Öffnen Sie ein neues Terminal in VS Code durch Klicken auf **View > Terminal**
 - Das Terminal sollte `(.venv)` anzeigen, was darauf hinweist, dass Ihre virtuelle Umgebung aktiv ist
-- Installieren Sie Pakete durch Eingabe dieser Befehle:
+- Installieren Sie die Pakete, indem Sie diesen Befehl eingeben:
 
 ```bash
 pip install pandas matplotlib streamlit
@@ -190,6 +190,7 @@ streamlit run app.py
 - Ein Popup zeigt Funktionssignatur, Parameter und Dokumentation
 - Versuchen Sie `import ` zu tippen und beobachten Sie, wie VS Code Paketnamen vorschlägt
 - Wenn Sie einen Funktionsaufruf eingeben, zeigt IntelliSense Parameter-Hinweise an
+- Wenn Sie fertig sind, löschen Sie die unfertigen Zeilen, die Sie in diesem Schritt getippt haben (zum Beispiel `iris.gr` und `import `), und speichern Sie die Datei, damit das Skript im nächsten Schritt ohne Fehler läuft
 
 ## Schritt 11: Debugging ausprobieren
 

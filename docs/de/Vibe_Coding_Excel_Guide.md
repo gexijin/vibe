@@ -102,7 +102,7 @@ Zahlen sind nützlich, aber Diagramme erzählen die Geschichte auf einen Blick.
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Füge dem Blatt Ausgaben ein Kreisdiagramm hinzu, das den Gesamtanteil jeder Kategorie an den Ausgaben zeigt. Füge dem Blatt Übersicht ein Balkendiagramm hinzu, das Gesamteinnahmen und Gesamtausgaben für jeden Monat vergleicht.
+Füge dem Blatt Ausgaben ein Kreisdiagramm hinzu, das den Gesamtanteil jeder Kategorie an den Ausgaben zeigt, mit einem Segment pro Kategorie (beide Monate zusammengefasst). Füge dem Blatt Übersicht ein Balkendiagramm hinzu, das Gesamteinnahmen und Gesamtausgaben für jeden Monat vergleicht.
 ```
 
 - Drücken Sie Enter
@@ -133,7 +133,7 @@ Machen Sie das Blatt leichter erweiterbar, ohne dass sich Tippfehler einschleich
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, sodass sie nur Werte aus einer Dropdown-Liste der vorhandenen Kategorien sowie „Sonstiges" akzeptiert. Füge unten zwei leere Zeilen für neue Einträge hinzu.
+Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, sodass sie nur Werte aus einer Dropdown-Liste der vorhandenen Kategorien sowie „Sonstiges" akzeptiert. Füge direkt über der Zeile „Summe“ zwei leere Zeilen für neue Einträge hinzu und stelle sicher, dass die Summe, die Formeln im Blatt Übersicht, die Summen im Kreisdiagramm (mit einem Segment „Sonstiges“) und die Farbregeln diese Zeilen einbeziehen. Lass die leeren Zellen ungefärbt.
 ```
 
 - Drücken Sie Enter

@@ -42,7 +42,7 @@ Sie haben Python in VS Code eingerichtet und können Code manuell schreiben. Jet
 - Wählen Sie Ihre Authentifizierungsmethode:
   - **Claude Pro/Max-Benutzer**: Klicken Sie auf **Sign in with Claude.ai**, autorisieren Sie im Browser und kopieren Sie den Code zurück nach VS Code
   - **API-Schlüssel-Benutzer**: Klicken Sie auf **Use API Key** und fügen Sie Ihren Anthropic-API-Schlüssel ein
-- Für detaillierte Authentifizierungsschritte siehe die Anleitung [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 5)
+- Für detaillierte Authentifizierungsschritte siehe die Anleitung [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3)
 - Nach der Anmeldung sehen Sie „Ready to help" im Chat-Panel
 
 ## Schritt 3: Erstes Python-Skript manuell erstellen
@@ -68,7 +68,9 @@ print(iris_df.describe())
 ```
 
 - Speichern Sie die Datei durch Klicken auf **File > Save**
-- Öffnen Sie das Python-Terminal: Klicken Sie in der Menüleiste auf **View**, dann auf **Terminal**
+- Erstellen Sie eine virtuelle Umgebung wie in Schritt 5 von [Python-Programmierung in VS Code](./Python_Coding_VS_Code_Guide): Klicken Sie auf **View > Command Palette**, geben Sie `Python: Create Environment` ein, wählen Sie **Venv** und dann Ihre Python-Version
+- Warten Sie, bis der Ordner `.venv` im Explorer erscheint
+- Öffnen Sie ein Terminal: Klicken Sie in der Menüleiste auf **View**, dann auf **Terminal**. Am Anfang der Eingabezeile sollte `(.venv)` stehen
 - Installieren Sie die Pakete, die dieses Skript benötigt:
   ```
   pip install scikit-learn pandas
@@ -157,7 +159,7 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 - **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
 - **„Cannot read Python file"-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.py` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
 - **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
-- **Paket nicht gefunden-Fehler** - Installieren Sie erforderliche Pakete im Terminal: `pip install seaborn matplotlib scikit-learn pandas`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
+- **Fehler „Paket nicht gefunden“** oder **`command not found: python`** - Stellen Sie sicher, dass das Terminal `(.venv)` anzeigt (falls nicht, schließen Sie es und öffnen Sie mit **View > Terminal** ein neues), und installieren Sie dann die erforderlichen Pakete: `pip install seaborn matplotlib scikit-learn pandas`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
 - **Codeänderungen werden nicht übernommen** - Stellen Sie sicher, dass Sie auf **Accept** beim Diff klicken. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
 - **Plot wird nicht angezeigt** - Stellen Sie sicher, dass Sie ein Display haben. Auf manchen Systemen müssen Sie möglicherweise `plt.show()` am Ende hinzufügen oder `%matplotlib inline` in Jupyter verwenden.
 

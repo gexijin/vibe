@@ -39,11 +39,12 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 
 ## Schritt 2: Docker-Konfiguration kopieren
 
-Sie benötigen den `.devcontainer`-Ordner aus dem Vibe-Projekt, um Ihre Docker-Umgebung einzurichten.
+Sie benötigen den `.devcontainer`-Ordner aus dem Projekt `python-docker-demo`, das Sie in [Python-Programmierung in VS Code über Docker](./Python_Coding_Docker_Guide) erstellt haben. Er gibt diesem Projekt dieselbe Python-Umgebung, in der pandas, matplotlib und Claude Code bereits installiert sind.
 
 - Öffnen Sie den Datei-Explorer (Windows) oder Finder (Mac)
-- Navigieren Sie zu Ihrem Vibe-Projektordner (z.B. `Documents/vibe`)
+- Navigieren Sie zu Ihrem Ordner `python-docker-demo`
 - Finden Sie den `.devcontainer`-Ordner
+  - Auf dem Mac blendet der Finder Ordner aus, deren Name mit einem Punkt beginnt. Drücken Sie **Cmd+Shift+.** (Punkt), um sie anzuzeigen
 - Kopieren Sie den gesamten Ordner (er enthält `Dockerfile` und `devcontainer.json`)
 - Navigieren Sie zu Ihrem neuen `iris-analysis`-Ordner
 - Fügen Sie den `.devcontainer`-Ordner dort ein
@@ -185,7 +186,7 @@ Erstelle einen Box-Plot, der die Blütenblattlängen der drei Arten vergleicht. 
 - Sie müssen nicht jede Zeile verstehen, aber bekommen Sie ein Gefühl für die Struktur
 - Prüfen Sie, dass alle PNG-Dateien erstellt wurden: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Öffnen Sie GitHub Desktop
-- Sie sehen alle neuen Dateien aufgelistet (das Python-Skript und die PNG-Bilder)
+- Sie sehen die neuen PNG-Bilder aufgelistet, außerdem `iris_exploration.py` als geänderte Datei (Claude hat den Code für die Diagramme hinzugefügt)
 - Geben Sie im **Summary**-Feld unten links ein:
 
 ```

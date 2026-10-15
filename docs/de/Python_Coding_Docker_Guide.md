@@ -40,15 +40,17 @@ Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen,
 ## Schritt 3: Python-Projektordner erstellen
 
 - Erstellen Sie einen neuen Ordner auf Ihrem Computer namens `python-docker-demo`
-- Erstellen Sie darin einen Unterordner namens `.devcontainer`
-- Erstellen Sie darin einen Unterordner namens `python`
+- Klicken Sie in VS Code auf **File > Open Folder**
+- Navigieren Sie zum Ordner `python-docker-demo`, den Sie gerade erstellt haben
+- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
+- Bewegen Sie in der Explorer-Seitenleiste die Maus über die Überschrift **PYTHON-DOCKER-DEMO**, klicken Sie auf das Symbol **New Folder** und nennen Sie den Ordner `.devcontainer`
+- Klicken Sie in der Explorer-Seitenleiste auf eine leere Stelle unterhalb von `.devcontainer`, sodass nichts markiert ist, klicken Sie dann erneut auf das Symbol **New Folder** und nennen Sie den Ordner `python`
 - Ihre Struktur sollte so aussehen: `python-docker-demo/.devcontainer/` und `python-docker-demo/python/`
+
+Wir erstellen diese Ordner in VS Code, weil der Finder auf dem Mac keinen Ordnernamen erlaubt, der mit einem Punkt (`.`) beginnt.
 
 ## Schritt 4: Die Dockerfile erstellen
 
-- Klicken Sie in VS Code auf **File > Open Folder**
-- Navigieren Sie zum Ordner `python-docker-demo`, den Sie gerade erstellt haben
-- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Klicken Sie in der Explorer-Seitenleiste mit der rechten Maustaste auf den `.devcontainer`-Ordner
 - Klicken Sie auf **New File**
 - Nennen Sie sie `Dockerfile`
@@ -65,7 +67,7 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
@@ -138,7 +140,7 @@ plt.xlabel('Messung (cm)')
 plt.ylabel('Häufigkeit')
 plt.title('Iris Kelchblatt-Messungen')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - Klicken Sie auf **File > Save**
@@ -201,10 +203,10 @@ Sie sehen `/workspaces/python-docker-demo` – das ist Ihr Projektordner innerha
 - Listen Sie die Dateien auf:
 
 ```bash
-ls
+ls -a
 ```
 
-Sie sehen die Ordner, die Sie erstellt haben: `.devcontainer/`, `python/`, usw.
+Sie sehen die Ordner, die Sie erstellt haben: `.devcontainer/`, `python/`, usw. (`-a` zeigt auch Ordner an, deren Name mit einem Punkt beginnt)
 
 - Versuchen Sie, ein Verzeichnis nach oben zu gehen:
 
@@ -233,7 +235,7 @@ Der Container hat Python mit Data-Science-Paketen vorinstalliert. Führen wir da
 - Fahren Sie fort, jede Zeile oder jeden Block einzeln mit `Shift+Enter` auszuführen
 - Wenn Sie `print(df.head())` ausführen, sehen Sie die ersten 5 Zeilen im Terminal
 - Wenn Sie `print(df.describe())` ausführen, sehen Sie statistische Zusammenfassungen
-- Wenn Sie den Histogramm-Code ausführen, öffnet sich ein Plot-Fenster mit der Visualisierung
+- Wenn Sie den Histogramm-Code ausführen, wird das Diagramm als `iris_histogram.png` in Ihrem Projektordner gespeichert (der Container hat keinen Bildschirm, daher können Diagramme nicht in einem Fenster geöffnet werden) – klicken Sie in der Explorer-Seitenleiste auf die Datei, um sie anzusehen
 
 ## Schritt 11: Die Streamlit-App ausführen
 
@@ -306,22 +308,21 @@ Pakete, die über pip im Terminal installiert werden (`pip install paket`), sind
 - Navigieren Sie im VS Code Explorer zu `.devcontainer/Dockerfile`
 - Klicken Sie zum Öffnen der Datei
 - Finden Sie Zeile 10: `RUN pip install --no-cache-dir ...`
-- Fügen Sie `scikit-learn` zur Liste hinzu:
+- Fügen Sie `plotly` zur Liste hinzu:
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - Klicken Sie auf **File > Save**
 - Klicken Sie auf das grüne Symbol in der unteren linken Ecke
 - Wählen Sie **Rebuild Container** aus dem Menü
 - VS Code erstellt den Container mit Ihrem neuen Paket neu (dies dauert 2-5 Minuten)
-- Um zu überprüfen, öffnen Sie ein Python-Terminal und geben Sie ein:
+- Um es zu überprüfen, öffnen Sie ein Terminal (**Terminal > New Terminal**) und führen Sie aus:
 
-```python
-import sklearn
-print(sklearn.__version__)
+```bash
+python -c "import plotly; print(plotly.__version__)"
 ```
 
 Wenn die Version ohne Fehler angezeigt wird, ist das Paket dauerhaft installiert.
@@ -329,7 +330,7 @@ Wenn die Version ohne Fehler angezeigt wird, ist das Paket dauerhaft installiert
 ## Nächste Schritte
 
 - **Erstellen Sie ein neues Python-Skript** - Erstellen Sie eine neue `.py`-Datei im `python/`-Ordner, schreiben Sie Datenanalyse-Code mit eingebauten Datensätzen oder laden Sie Ihre eigenen CSV-Dateien
-- **Installieren Sie Python-Pakete** - Fügen Sie Pakete hinzu, die Sie benötigen, indem Sie die Dockerfile (Zeile 9) bearbeiten und den Container neu erstellen
+- **Installieren Sie Python-Pakete** - Fügen Sie Pakete hinzu, die Sie benötigen, indem Sie die Dockerfile (Zeile 10) bearbeiten und den Container neu erstellen
 - **Erkunden Sie Data Science** - Probieren Sie Datenmanipulation mit pandas und Visualisierung mit matplotlib oder seaborn
 - **Erstellen Sie Web-Apps** - Erstellen Sie interaktive Dashboards mit Streamlit oder Flask
 
@@ -337,7 +338,7 @@ Wenn die Version ohne Fehler angezeigt wird, ist das Paket dauerhaft installiert
 
 - **Docker Desktop läuft nicht** - Öffnen Sie Docker Desktop und warten Sie auf den grünen Statusanzeiger, bevor Sie den Container erneut öffnen
 - **Container-Build schlägt fehl** - Überprüfen Sie Ihre Internetverbindung; der erste Build lädt Images und Pakete herunter. Klicken Sie auf **Rebuild Container**, um es erneut zu versuchen
-- **Port 8501 bereits in Verwendung** - Stoppen Sie andere Apps, die diesen Port verwenden, oder ändern Sie den Port in der Dockerfile und `devcontainer.json`
+- **Port 8501 bereits in Verwendung** - Stoppen Sie andere Apps, die diesen Port verwenden, oder wählen Sie einen anderen Port (zum Beispiel 8502): Ändern Sie ihn in der Dockerfile und in `devcontainer.json`, erstellen Sie den Container neu und starten Sie die App dann mit `streamlit run app.py --server.port 8502`
 
 ## Workflow-Überblick
 
