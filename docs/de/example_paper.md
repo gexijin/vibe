@@ -50,7 +50,7 @@ Die strukturelle Diskrepanz zwischen individuellen Tools und systemischen Barrie
 
 Das KI-Produktivitätsparadoxon löst sich auf, wenn wir erkennen, dass individuelle Ermächtigung mit systemischer Ausgrenzung koexistiert. Mikrostudien, die Aufgabenleistung messen, übersehen die Makro-Selektionseffekte, die bestimmen, wer profitiert. Die Belege von Stanford, dem IWF und der OECD konvergieren zu einem beunruhigenden Schluss: KI verschlechtert die Ungleichheit in Bezug auf Geschlecht, Alter, Unternehmensgröße und Geografie [3, 4, 9, 11]. Die Auswirkung von Technologie hängt von ihrer Verteilung ab, nicht nur von ihrer Fähigkeit. Drei gleichzeitige Selektionsmechanismen – Zugangsungleichheit, Wissensungleichheit und Chancenungleichheit – verwandeln KI von einem demokratisierenden Werkzeug in eine stratifizierende Kraft.
 
-Politische Entscheidungsträger müssen über alle drei Barrieren hinweg handeln. Regierungen sollten die KI-Einführung für kleine Unternehmen durch Steuergutschriften subventionieren und die 3,3-fache Einführungslücke schließen. Bildungseinrichtungen müssen KI-Alphabetisierung in Lehrpläne integrieren und gezielte Umschulungsprogramme für Frauen in administrativen Rollen starten, um die fünfundsiebzigprozentige Wissenslücke zu adressieren. Arbeitgeber müssen strukturierte Einstiegspositionen schaffen, die KI-Tools mit menschlichem Mentoring kombinieren, um das Erfahrungs-Catch-22 zu verhindern. Das Zeitfenster für Interventionen verengt sich, da sich die Lücken alle paar Jahre verdoppeln [11]. Ohne bewusstes Handeln wird das individuelle Versprechen der KI zur kollektiven Gefahr.
+Politische Entscheidungsträger müssen über alle drei Barrieren hinweg handeln. Regierungen sollten die KI-Einführung für kleine Unternehmen durch Steuergutschriften subventionieren und die 3,3-fache Einführungslücke schließen. Bildungseinrichtungen müssen KI-Alphabetisierung in Lehrpläne integrieren und gezielte Umschulungsprogramme für Frauen in administrativen Rollen starten, um die Wissensunterschiede anzugehen, auf die fünfundsiebzig Prozent der geschlechtsspezifischen Lücke zurückgehen. Arbeitgeber müssen strukturierte Einstiegspositionen schaffen, die KI-Tools mit menschlichem Mentoring kombinieren, um das Erfahrungs-Catch-22 zu verhindern. Das Zeitfenster für Interventionen wird kleiner: Die Einführungslücken in der EU haben sich zwischen 2021 und 2024 ungefähr verdoppelt [11]. Ohne bewusstes Handeln wird das individuelle Versprechen der KI zur kollektiven Gefahr.
 
 ## Referenzen
 
@@ -68,7 +68,7 @@ Politische Entscheidungsträger müssen über alle drei Barrieren hinweg handeln
 
 [7] Stanford HAI. (2025). „The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
 
-[8] Anthropic. (2024). „Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). „Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
 
 [9] OECD. (2024). „What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
 

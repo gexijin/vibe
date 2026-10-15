@@ -48,11 +48,12 @@ Für Windows:
 - Klicken Sie in der Menüleiste auf **File**, dann auf **Open Folder**
 - Navigieren Sie in **Dokumente** zum `test_claude`-Ordner und wählen Sie ihn aus
 - Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**). VS Code lädt mit Ihrem `test_claude`-Ordner neu
+- Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 Für Mac:
 - Klicken Sie in VS Code in der Menüleiste auf **File**, dann auf **Open Folder**
 - Navigieren Sie zum und wählen Sie den `test_claude`-Ordner
-- Klicken Sie auf **Öffnen** bzw. **Open** (Mac) oder **OK** (Windows)
+- Klicken Sie auf **Öffnen** (englisch: **Open**)
 - Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 ## Schritt 4: Claude Code starten
@@ -131,7 +132,7 @@ Recherche und meinem gewählten Ansatz. Verwende Aufzählungspunkte für den nar
 Speichern als outlines.md
 ```
 
-Überprüfen Sie die Gliederung und bitten Sie Claude bei Bedarf um Anpassungen (z.B. „Lass Abschnitt 2 mehr auf Fallstudien fokussieren" oder „Füge einen Abschnitt über Einschränkungen hinzu").
+Überprüfen Sie die Gliederungen in `outlines.md` und bitten Sie Claude bei Bedarf um Anpassungen (z.B. „Lass Abschnitt 2 mehr auf Fallstudien fokussieren" oder „Füge einen Abschnitt über Einschränkungen hinzu").
 
 ## Schritt 10: Die Arbeit entwerfen
 
@@ -242,7 +243,7 @@ Erstelle einen Slash-Befehl namens /research-paper, der mich durch
 diesen gesamten Workflow führt. Speichere ihn, damit ich ihn für zukünftige Forschungsarbeiten zu verschiedenen Themen verwenden kann.
 ```
 
-Claude erstellt einen benutzerdefinierten Slash-Befehl in Ihrem `.claude/commands/`-Ordner. Es ist eine Markdown-Datei mit einem Prompt. Sie können Ihre nächste Forschungsarbeit einfach durch Eingabe von `/research-paper [Ihr Thema]` starten!
+Claude erstellt einen benutzerdefinierten Slash-Befehl, normalerweise in Ihrem `.claude/commands/`-Ordner (oder in `.claude/skills/research-paper/`). Es ist eine Markdown-Datei mit einem Prompt. Sie können Ihre nächste Forschungsarbeit einfach durch Eingabe von `/research-paper [Ihr Thema]` starten!
 
 ## Schritt 18: Feedback einholen
 
