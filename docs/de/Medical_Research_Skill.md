@@ -8,7 +8,7 @@ lang: "de"
 
 Mit der medizinischen Forschung Schritt zu halten bedeutet, sich durch dichte wissenschaftliche Arbeiten voller Fachjargon zu kämpfen. Ein Claude Skill ist wie ein Forschungsassistent, der Hunderte von Artikeln liest und sie in einfachem Deutsch erklärt – anstatt Stunden damit zu verbringen, PubMed zu durchsuchen und Fachsprache zu entschlüsseln, stellen Sie eine einfache Frage und erhalten eine klare Zusammenfassung basierend auf der neuesten Wissenschaft.
 
-In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinische Literatur durchsucht. Wir erstellen zuerst ein Python-Skript, das PubMed abfragt. Das Beste daran? Sie können Claude bitten, die ganze Arbeit zu erledigen! Es hat einen Skill, der Skills erstellt!
+In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinische Literatur durchsucht. Wir erstellen zuerst ein Python-Skript, das PubMed abfragt. Das Beste daran? Sie können Claude bitten, die ganze Arbeit zu erledigen! Claude weiß auch, wie man Skills schreibt.
 
 ## Wichtige Konzepte
 
@@ -20,6 +20,7 @@ In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinis
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code in VS Code unter Windows](./Claude_Code_in_VS_Code_Win.md) oder [Claude Code in VS Code auf dem Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Python installiert (siehe [Python-Programmierung in VS Code](./Python_Coding_VS_Code_Guide.md)). Wenn Sie es nicht haben, bietet Claude Ihnen an, bei der Installation zu helfen.
 - Internetverbindung für PubMed-Suchen
 - 15-20 Minuten
 
@@ -111,7 +112,7 @@ Dies dauert 2-3 Minuten, während Claude umfassende Dokumentation schreibt.
 
 ## Schritt 7: Den Skill testen
 
-Stellen Sie eine Forschungsfrage in einfacher Sprache:
+Geben Sie zuerst `/reload-skills` ein, damit Claude Code den neuen Skill lädt. Stellen Sie dann eine Forschungsfrage in einfacher Sprache:
 
 ```
 Kann ich mit der Keto-Diät abnehmen?
@@ -189,7 +190,7 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 
 - **Biopython nicht installiert:** Claude installiert Biopython automatisch, wenn es das Skript erstellt. Wenn Sie beim Testen Importfehler sehen, bitten Sie Claude, Biopython manuell mit `pip install biopython` zu installieren
 - **Skript nicht gefunden:** Überprüfen Sie, ob die Statuszeile **accept edits on** oder **auto mode on** anzeigt (mit Shift+Tab wechseln Sie den Modus) – Claude braucht die Erlaubnis, Dateien zu erstellen
-- **Skill aktiviert sich nicht:** Der Skill sollte sofort nach der Erstellung funktionieren – versuchen Sie, die Frage erneut zu stellen oder überprüfen Sie, ob SKILL.md den korrekten `name: medical-research` in der Kopfzeile hat
+- **Skill aktiviert sich nicht:** Geben Sie `/reload-skills` ein (oder starten Sie Claude Code neu) und stellen Sie die Frage dann erneut. Überprüfen Sie außerdem, ob SKILL.md `name: medical-research` in der Kopfzeile hat
 
 ## Workflow-Überblick
 
@@ -204,7 +205,7 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 | Merkmal | Skills | Slash-Befehle |
 |---------|--------|----------------|
 | **Was es enthält** | Prompts, Code, Daten und Dokumentation | Nur Prompts |
-| **Aktivierung** | Wird automatisch geladen, wenn relevant | Manuell ausgelöst mit `/befehl` |
+| **Aktivierung** | Automatisch, wenn relevant, oder manuell mit `/skill-name` | Manuell ausgelöst mit `/befehl` |
 | **Anwendungsfall** | Komplexe Workflows, die Code-Ausführung erfordern | Schnelle Prompt-Vorlagen und Workflows |
 | **Dateispeicherort** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **Struktur** | Mehrere Dateien (SKILL.md, README.md, Code-Dateien) | Einzelne `.md`-Datei pro Befehl |

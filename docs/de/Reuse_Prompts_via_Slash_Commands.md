@@ -8,7 +8,7 @@ lang: "de"
 
 Sind Sie es leid, immer wieder dieselben detaillierten Prompts einzugeben? Benutzerdefinierte Slash-Befehle ermöglichen es Ihnen, komplexe Anweisungen als wiederverwendbare Shortcuts zu speichern. Wie das Erstellen von Tastaturkürzeln für Ihre häufigsten Aufgaben verwandeln Slash-Befehle lange Prompts in einfache Befehle wie `/stock-report Apple`, die sofort umfassende Berichte generieren.
 
-Das Beste daran? Wir verwenden Claude, um den detaillierten Prompt zu schreiben und den Skill zu erstellen. Ja, Claude ist sehr gut darin, sich...selbst zu prompten.
+Das Beste daran? Wir verwenden Claude, um den detaillierten Prompt zu schreiben und den Slash-Befehl zu erstellen. Ja, Claude ist sehr gut darin, sich...selbst zu prompten.
 
 ## Wichtige Konzepte
 
@@ -30,7 +30,7 @@ Das Beste daran? Wir verwenden Claude, um den detaillierten Prompt zu schreiben 
 - Geben Sie diese Befehle ein:
   ```
   cd ~\Documents
-  mkdir test_claude
+  mkdir -Force test_claude
   cd test_claude
   ```
 
@@ -39,9 +39,11 @@ Das Beste daran? Wir verwenden Claude, um den detaillierten Prompt zu schreiben 
 - Geben Sie diese Befehle ein:
   ```bash
   cd ~/Documents
-  mkdir test_claude
+  mkdir -p test_claude
   cd test_claude
   ```
+
+Wenn der Ordner bereits existiert, verwenden diese Befehle ihn einfach weiter.
 
 ## Schritt 2: Claude Code starten
 
@@ -64,15 +66,16 @@ Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial be
 Anstatt Dateien manuell zu erstellen, lassen Sie Claude die Arbeit machen. Geben Sie diesen Prompt ein:
 
 ```
-Erstelle einen Slash-Befehl namens stock-report, der Berichte über die jüngsten Entwicklungen eines Unternehmens generiert, das über Name oder Ticker-Symbol identifiziert wird.
+Erstelle einen Slash-Befehl in .claude/commands/ namens stock-report, der Berichte über die jüngsten Entwicklungen eines Unternehmens generiert, das über Name oder Ticker-Symbol identifiziert wird.
 Beinhalte:
 - Produkt- oder Serviceneuigkeiten
 - Neuigkeiten zum Managementteam
 - Aktuelle Finanzberichte
 - Analystenberichte
 ```
-Wenn Sie gefragt werden, erteilen Sie Claude die Erlaubnis, die Datei zu erstellen.
+Wenn Claude um Erlaubnis bittet, die Datei zu erstellen, wählen Sie **Yes**.
 Claude erstellt einen detaillierten Prompt und speichert ihn als `stock-report.md` im `.claude/commands/`-Ordner.
+(Falls Claude ihn stattdessen als `.claude/skills/stock-report/SKILL.md` gespeichert hat, funktioniert das genauso. Öffnen Sie in den nächsten Schritten dann diese Datei.)
 
 **Hinweis:** Wir verwenden durchgehend das Markdown-Format: in Prompts, Berichten und Slash-Befehlen. Markdown ist KI-freundlich und kann leicht als einfache Textdateien bearbeitet werden.
 
@@ -160,7 +163,7 @@ Claude aktualisiert die Befehlsdatei. Sie können dies im Editor überprüfen.
   /stock-report AAPL
   ```
 
-Claude erstellt eine Datei mit einem Namen wie `Apple_2025-12-13.html`. Klicken Sie auf diese Datei im Datei-Explorer unter Windows oder Mac, um sie in Ihrem Standardbrowser zu öffnen.
+Claude erstellt eine Datei mit einem Namen wie `Apple_2025-12-13.html`. Doppelklicken Sie auf diese Datei im **Datei-Explorer** (Windows) oder im **Finder** (Mac), um sie in Ihrem Standardbrowser zu öffnen.
 
 ## Schritt 11: Slash-Befehl wiederverwenden (Optional)
 
@@ -213,7 +216,7 @@ Jetzt, da Sie Slash-Befehle verstehen, erstellen Sie mehr benutzerdefinierte Bef
 - **Benutzerdefinierte Slash-Befehle** sparen Zeit, indem sie komplexe Prompts in einfache Shortcuts verwandeln
 - **Argumente** machen Befehle flexibel für verschiedene Eingaben (Aktienticker, Themen, Dateien)
 - **Claude erstellt Befehle** - Sie müssen keine Markdown-Dateien manuell schreiben; beschreiben Sie einfach, was Sie wollen
-- **Befehle sind wiederverwendbar** - Einmal erstellt, verwenden Sie sie in verschiedenen Projekten und Sitzungen
+- **Befehle sind wiederverwendbar** - Einmal erstellt, können Sie sie in jeder Sitzung in diesem Projektordner verwenden. Um einen Befehl in all Ihren Projekten zu nutzen, bitten Sie Claude, ihn in Ihren persönlichen Ordner `~/.claude/commands/` zu verschieben
 - **Befehle kombinieren** - Bauen Sie eine Bibliothek spezialisierter Befehle für verschiedene Aufgaben auf
 
 ---

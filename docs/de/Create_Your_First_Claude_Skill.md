@@ -12,6 +12,7 @@ Sie haben manuell `/stock-report AAPL` eingegeben, um Berichte zu generieren. Wa
 
 - **Skill** - Eine modell-aufgerufene Fähigkeit, die in `.claude/skills/` gespeichert ist und die Claude automatisch basierend auf dem Kontext aktiviert
 - **Modell-aufgerufen** - Claude entscheidet, wann der Skill verwendet werden soll, indem es seine Beschreibung liest, ohne dass Sie einen Befehl eingeben
+- **Weiterhin ein Slash-Befehl** - Sie können jeden Skill auch selbst ausführen, indem Sie `/skill-name` eingeben (zum Beispiel `/stock-report AAPL`). Wenn ein Skill und ein Slash-Befehl denselben Namen haben, wird der Skill verwendet
 - **SKILL.md** - Die Hauptdatei, die YAML-Frontmatter (Metadaten) und Anweisungen für Claude enthält
 
 ## Was Sie benötigen
@@ -101,7 +102,11 @@ Das `description`-Feld ist der Schlüssel – es sagt Claude genau, wann dieser 
 
 ## Schritt 6: Den Skill testen (ohne einen Befehl einzugeben)
 
-Anstatt `/stock-report AAPL` einzugeben, stellen Sie einfach eine natürliche Frage:
+Stellen Sie zuerst sicher, dass Claude Code den neuen Skill geladen hat. Geben Sie ein:
+```
+/reload-skills
+```
+Claude Code meldet, wie viele Skills verfügbar sind. Stellen Sie jetzt, anstatt `/stock-report AAPL` einzugeben, einfach eine natürliche Frage:
 ```
 Was macht Apple in letzter Zeit?
 ```
@@ -186,7 +191,7 @@ Das Muster: Definieren Sie, wann Claude automatisch helfen soll, nicht nur Short
 - **Skill aktiviert sich nicht:** Überprüfen Sie das `description`-Feld in `SKILL.md` – es muss Auslösewörter enthalten, die mit Ihrer Frage zusammenhängen
 - **Skill aktiviert sich zu oft:** Machen Sie die Beschreibung spezifischer darüber, wann er verwendet werden soll
 - **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (ein versteckter Ordner: Der Explorer von VS Code zeigt ihn an; unter Windows wählen Sie im **Datei-Explorer** (File Explorer) **Ansicht > Einblenden > Ausgeblendete Elemente** (View > Show > Hidden items); im Finder auf dem Mac drücken Sie **Cmd+Shift+.**)
-- **Änderungen an SKILL.md funktionieren nicht:** Skills werden automatisch geladen, wenn sie geändert werden – kein Neustart nötig. Wenn es immer noch nicht funktioniert, überprüfen Sie die YAML-Formatierung
+- **Änderungen an SKILL.md funktionieren nicht:** Skills werden normalerweise automatisch neu geladen, wenn sie geändert werden. Wenn der Ordner `.claude/skills/` erst während dieser Sitzung erstellt wurde, geben Sie `/reload-skills` ein (oder starten Sie Claude Code neu). Wenn es immer noch nicht funktioniert, überprüfen Sie die YAML-Formatierung
 
 ## Workflow-Überblick
 

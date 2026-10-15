@@ -2,7 +2,7 @@
 title: "Wie Claude Code mir half, diese Tutorials zu erstellen"
 lang: "de"
 ---
-[Startseite](./index.html)
+[Startseite](./)
 
 # Wie Claude Code mir half, diese Tutorials zu erstellen
 
@@ -106,7 +106,7 @@ Alle Tutorials folgen derselben Struktur, demselben Schreibstil und denselben Fo
 - **Strukturieren Sie Befehle als mehrphasige Workflows.** Sagen Sie Claude, wie es das Problem durchdenken soll, nicht nur was es tun soll.
 - **Bauen Sie Qualitätskontrolle in den Prozess ein.** Erstellen Sie einen Review-Befehl neben Ihrem Generierungsbefehl.
 - **Machen Sie Befehle kollaborativ, nicht autonom.** Fügen Sie Genehmigungsschritte ein. Claude erledigt die mühsamen Teile; Sie treffen strategische Entscheidungen.
-- **Verwenden Sie Subagenten für Batch-Verarbeitung.** Wenn Sie viele Dokumente verarbeiten, sagen Sie explizit „Use subagents" in Ihrem Prompt. Achten Sie vorher darauf, dass die Statuszeile **accept edits on** oder **auto mode on** anzeigt (mit Shift+Tab wechseln Sie den Modus) – Subagenten fragen nicht nach Berechtigungen, was parallele Verarbeitung nahtlos macht.
+- **Verwenden Sie Subagenten für Batch-Verarbeitung.** Wenn Sie viele Dokumente verarbeiten, sagen Sie explizit „Use subagents" in Ihrem Prompt. Achten Sie vorher darauf, dass die Statuszeile **accept edits on** oder **auto mode on** anzeigt (mit Shift+Tab wechseln Sie den Modus) – Subagenten verwenden denselben Modus, halten also nur selten an, um nach einer Erlaubnis zu fragen, was parallele Verarbeitung deutlich reibungsloser macht.
 
 ## Fazit
 
