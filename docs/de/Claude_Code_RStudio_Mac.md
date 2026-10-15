@@ -22,9 +22,9 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 
 ## Schritt 1: RStudio auf dem Mac öffnen
 
-- Klicken Sie auf **Launchpad** in Ihrem Dock (das Symbol mit dem Punkteraster)
-- Geben Sie `RStudio` in das Suchfeld ein
-- Klicken Sie auf **RStudio**, um es zu öffnen
+- Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
+- Geben Sie `RStudio` ein
+- Drücken Sie die **Return**-Taste (Zeilenschalter), um es zu öffnen
 - Das RStudio-Fenster öffnet sich mit mehreren Bereichen
 
 ## Schritt 2: Ein neues R-Projekt erstellen

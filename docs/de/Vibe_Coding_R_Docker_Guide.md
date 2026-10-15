@@ -42,10 +42,11 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 - Gehen Sie zu https://github.com/gexijin/vibe
   - **Hinweis für ARM64-Benutzer (Apple Silicon Macs):** Verwenden Sie stattdessen https://github.com/gexijin/vibe/tree/ARM64
 - Klicken Sie auf **Code** und dann auf **Download ZIP**
-- Öffnen Sie den Datei-Explorer (Windows) oder Finder (Mac)
-- Entpacken Sie die Datei im Download-Ordner
-- Navigieren Sie zu Ihrem Vibe-Projektordner (z.B. `Documents/vibe`)
+- Öffnen Sie den **Datei-Explorer** (File Explorer, Windows) oder den Finder (Mac) und gehen Sie zu Ihrem Ordner **Downloads**
+- Entpacken Sie die Datei: Klicken Sie unter Windows mit der rechten Maustaste darauf und wählen Sie **Alle extrahieren** (Extract All); auf dem Mac doppelklicken Sie darauf
+- Öffnen Sie den entpackten Ordner `vibe-main` (`vibe-ARM64`, wenn Sie den ARM64-Link verwendet haben). Unter Windows kann er einen weiteren Ordner mit demselben Namen enthalten; öffnen Sie diesen
 - Finden Sie den `.devcontainer`-Ordner
+  - Auf dem Mac blendet der Finder Ordner aus, deren Name mit einem Punkt beginnt. Drücken Sie **Cmd+Shift+.** (Punkt), um sie anzuzeigen
 - Kopieren Sie den gesamten Ordner (er enthält `Dockerfile` und `devcontainer.json`)
 - Navigieren Sie zu Ihrem neuen `nba-dashboard`-Ordner
 - Fügen Sie den `.devcontainer`-Ordner dort ein
@@ -67,7 +68,7 @@ Ihr `nba-dashboard`-Ordner sollte jetzt enthalten:
 - Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das grüne Symbol in der unteren linken Ecke und wählen Sie **Reopen in Container**
 - VS Code baut den Docker-Container (dauert beim ersten Mal 3-5 Minuten)
 - Beobachten Sie die Fortschrittsanzeige mit den Build-Schritten
-- Nach Abschluss zeigt das grüne Symbol **Dev Container: R in Docker** an
+- Nach Abschluss zeigt das grüne Symbol **Dev Container: R in Docker (AMD64)** (oder **(ARM64)**) an
 
 ## Schritt 4: Claude Code starten
 
@@ -205,8 +206,8 @@ Sie bauen ein professionelles Dashboard durch ein Gespräch.
 - Überfliegen Sie den Code – beachten Sie das UI-Layout, die Server-Logik und den Plotting-Code
 - Sie müssen nicht jede Zeile verstehen, aber bekommen Sie ein Gefühl für die Struktur
 - Öffnen Sie GitHub Desktop
-- Sie sehen `app.R` als neue Datei aufgelistet
-- Das rechte Panel zeigt den gesamten Code in Grün (neue Hinzufügungen)
+- Sie sehen `app.R` in der Liste (als neue Datei oder als geändert, falls Sie sie bereits in einem früheren Schritt committet haben)
+- Das rechte Panel zeigt den hinzugefügten Code in Grün
 - Geben Sie im **Summary**-Feld unten links ein:
 
 ```
