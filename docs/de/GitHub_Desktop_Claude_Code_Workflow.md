@@ -41,7 +41,7 @@ Erstellen Sie eine einfache Timer-App mit Claude Code und verfolgen Sie alle Än
 - Klicken Sie auf **File** → **New Repository**
 - Füllen Sie aus:
   - **Name:** `test_claude`
-  - **Description:** `Eine Timer-App erstellt mit Claude Code`
+  - **Description:** `Eine mit Claude Code erstellte Timer-App`
   - **Local Path:** Klicken Sie auf **Choose...** und wählen Sie Ihren Ordner **Dokumente** (Documents) aus (standardmäßig ist hier ein Ordner `GitHub` innerhalb von Dokumente eingetragen – ändern Sie das also)
   - **Aktivieren Sie** „Initialize this repository with a README"
 - Klicken Sie auf **Create Repository**
@@ -62,13 +62,13 @@ Sie haben jetzt ein lokales Projekt und ein Cloud-Backup auf GitHub.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und das Eingabefeld von Claude Code.
 
 - Geben Sie diese Anfrage ein:
 
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
-  Sie sollte haben:
+  Sie soll Folgendes enthalten:
   - Ein Eingabefeld zum Einstellen der Minuten
   - Start- und Stopp-Schaltflächen
   - Eine Anzeige mit der verbleibenden Zeit im MM:SS-Format
@@ -92,14 +92,14 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
 
 ## Schritt 4: Fehler beheben (falls nötig)
 
-- Öffnen Sie die Browser-Konsole (Rechtsklick auf Seite → **Untersuchen** → Tab **Console**)
+- Öffnen Sie die Browser-Konsole (Rechtsklick auf Seite → **Untersuchen** → Tab **Konsole** (Console))
 - Kopieren Sie alle roten Fehlermeldungen
 - Gehen Sie zurück zu Claude Code in Ihrem Terminal
 - Fügen Sie den Fehler ein:
   ```
   Ich sehe diesen Fehler: [Fehler einfügen]. Kannst du ihn beheben?
   ```
-- Aktualisieren Sie den Browser (klicken Sie auf die Neu laden-Schaltfläche oder Rechtsklick → **Neu laden**) und testen Sie erneut
+- Aktualisieren Sie den Browser (klicken Sie auf die Schaltfläche zum Neuladen oder Rechtsklick → **Neu laden**) und testen Sie erneut
 
 ## Schritt 5: Änderungen überprüfen
 
@@ -112,7 +112,7 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
 
 ## Schritt 6: Manuell committen
 
-- Geben Sie unten links im **Summary-Feld** ein:
+- Geben Sie unten links in das Feld **Summary** ein:
   ```
   Erstelle erste Timer-App mit Start/Stopp-Funktionalität
   ```
@@ -132,7 +132,7 @@ Ihr Code ist jetzt in der Cloud gesichert.
 
 ## Schritt 8: Tonbenachrichtigung hinzufügen
 
-- Im Claude Code-Terminal:
+- In Claude Code im Terminal:
   ```
   Füge eine Tonbenachrichtigung hinzu, wenn der Timer Null erreicht. Verwende den
   eingebauten Browser-Signalton oder erstelle einen einfachen Audio-Alarm.
@@ -146,7 +146,7 @@ Ihr Code ist jetzt in der Cloud gesichert.
 Manchmal führt uns KI auf den falschen Weg und wir müssen von unserem letzten Commit (Speicherpunkt) neu beginnen.
 
 - Öffnen Sie **GitHub Desktop**
-- Klicken Sie auf **Branch**-Menü → **Discard All Changes**
+- Klicken Sie auf das Menü **Branch** → **Discard All Changes**
 - Klicken Sie auf **Discard Changes** zur Bestätigung
 - Browser aktualisieren – der Timer funktioniert ohne den Ton!
 
@@ -163,7 +163,7 @@ Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherp
 - Sofort testen (Browser aktualisieren, 0.1 Minuten setzen, Start)
 
 **Wenn es funktioniert:** Weiter zu Schritt 11.
-**Wenn nicht:** Fehler zu Claude einfügen oder erneut versuchen.
+**Wenn nicht:** Fehler in Claude Code einfügen oder erneut versuchen.
 
 ## Schritt 11: Claude committen und pushen lassen
 
@@ -215,7 +215,7 @@ Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie hab
 
 **Claude sagt „not a git repository":** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
 
-**Timer funktioniert nicht:** Browser-Konsole öffnen (Rechtsklick → **Untersuchen** → **Console**), Fehler kopieren, zu Claude einfügen
+**Timer funktioniert nicht:** Browser-Konsole öffnen (Rechtsklick → **Untersuchen** → **Konsole**), Fehler kopieren und in Claude Code einfügen
 
 **Brauchen Sie Hilfe?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://code.claude.com/docs)
 

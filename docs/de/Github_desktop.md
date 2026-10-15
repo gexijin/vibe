@@ -73,7 +73,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 
 ## Schritt 6: Ihre erste Änderung vornehmen
 
-- Öffnen Sie `README.md` in einem beliebigen Texteditor (Notepad, TextEdit oder VS Code)
+- Öffnen Sie `README.md` in einem beliebigen Texteditor (**Editor** (Notepad) unter Windows, **TextEdit** auf dem Mac oder VS Code)
 - Ersetzen Sie den Inhalt mit:
   ```
   # Mein erstes Projekt
@@ -87,7 +87,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
   - Speicherpunkte (Commits) erstellt
   - Meine Arbeit auf GitHub sichert
   ```
-- Klicken Sie auf **Datei** → **Speichern**
+- Klicken Sie auf **Datei** → **Speichern** (in TextEdit: **Ablage** → **Sichern**)
 
 ## Schritt 7: Ihren ersten Commit erstellen (Speicherpunkt)
 

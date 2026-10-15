@@ -55,7 +55,7 @@ Sie sollten etwas wie `git version 2.39.0` sehen.
 
 ## Schritt 3: Git mit Ihrer Identität konfigurieren
 
-Git muss wissen, wer Sie sind, für Commit-Nachrichten.
+Git muss für Commit-Nachrichten wissen, wer Sie sind.
 
 - Legen Sie Ihren Namen und Ihre E-Mail fest (kann fiktiv sein):
   ```
@@ -63,7 +63,7 @@ Git muss wissen, wer Sie sind, für Commit-Nachrichten.
   git config --global user.email "ihre.email@beispiel.com"
   ```
 
-Die Verwendung Ihres Namens und Ihrer E-Mail hilft Ihnen zu identifizieren, wer Änderungen vorgenommen hat, wenn mehrere Personen daran arbeiten.
+Mit Name und E-Mail können Sie später erkennen, wer welche Änderung vorgenommen hat, wenn mehrere Personen am Projekt arbeiten.
 
 ## Schritt 4: Zu Ihrem Dokumente-Ordner navigieren
 
@@ -89,7 +89,7 @@ Sie sollten `/Users/IHR_BENUTZERNAME/Documents` sehen.
   cd test_claude
   ```
 
-Hier wird Ihr Projekt leben.
+Hier wird Ihr Projekt gespeichert.
 
 ## Schritt 6: Claude Code starten
 
@@ -98,7 +98,7 @@ Hier wird Ihr Projekt leben.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und das Eingabefeld von Claude Code.
 
 ## Schritt 7: Claude bitten, Git zu initialisieren
 
@@ -115,7 +115,7 @@ Claude initialisiert ein Git-Repository in Ihrem Ordner (dauert 2-5 Sekunden). S
 
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
-  Sie soll haben:
+  Sie soll Folgendes enthalten:
   - Ein Eingabefeld zum Einstellen der Minuten
   - Start- und Stopp-Schaltflächen
   - Eine Anzeige, die die verbleibende Zeit im Format MM:SS zeigt
@@ -221,7 +221,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
 
 Claude zeigt Ihre Commits in einem lesbaren Format an. Sie sehen:
 - Ihren ursprünglichen Timer-App-Commit
-- Den Preset-Schaltflächen (1-min und 5-min) Commit
+- Den Commit mit den Preset-Schaltflächen (1 und 5 Minuten)
 - Den Tonbenachrichtigungs-Commit
 - Den Schlummer-Schaltflächen-Commit
 
@@ -229,7 +229,7 @@ Beachten Sie, dass der 15-Minuten-Schaltflächen-Versuch nicht da ist – Sie ha
 
 ## Schritt 17: Den Code untersuchen
 
-- Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Quelltext anzeigen** (oder drücken Sie `Option (⌥) + Command (⌘) + U`)
+- Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Seitenquelltext anzeigen** (View Page Source) (oder drücken Sie `Option (⌥) + Command (⌘) + U`)
 - **Sie verwenden Safari?** Klicken Sie zuerst auf **Safari** > **Einstellungen** > **Erweitert** und aktivieren Sie **Funktionen für Webentwickler einblenden**. Klicken Sie dann mit der rechten Maustaste auf die Seite und wählen Sie **Seitenquelltext anzeigen**
 - Sie können den Quellcode dafür sehen.
 - Fragen Sie in Claude Code:
@@ -264,11 +264,11 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 - **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~/Documents/test_claude`)
 - **timer.html im Finder nicht gefunden:** Die Datei ist unter `/Users/IHR_BENUTZERNAME/Documents/test_claude/timer.html`
 - **Git-Befehle funktionieren nicht:** Stellen Sie sicher, dass Sie Schritt 2 abgeschlossen und Git installiert haben
-- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, dann auf den Tab **Console** klicken; in Safari schalten Sie zuerst die Funktionen für Webentwickler ein, wie in Schritt 17 gezeigt, und wählen dann **Element-Informationen**), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
+- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, dann auf den Tab **Konsole** (Console) klicken; in Safari schalten Sie zuerst die Funktionen für Webentwickler ein, wie in Schritt 17 gezeigt, und wählen dann **Element-Informationen**), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
 
 ## Was Sie Claude fragen können
 
-- `Welche Dateien habe ich geändert?` - Uncommittete Änderungen sehen
+- `Welche Dateien habe ich geändert?` - Noch nicht committete Änderungen sehen
 - `Zeige mir das Diff` - Genau sehen, welcher Code sich geändert hat
 - `Erkläre, was der Timer-Code macht` - Die Implementierung verstehen
 - `Erstelle einen Branch namens experiment` - Riskante Änderungen sicher ausprobieren

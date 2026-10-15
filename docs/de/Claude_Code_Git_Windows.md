@@ -44,7 +44,7 @@ Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. 
 
 ## Schritt 3: Git mit Ihrer Identität konfigurieren
 
-Git muss wissen, wer Sie sind, für Commit-Nachrichten.
+Git muss für Commit-Nachrichten wissen, wer Sie sind.
 
 - Legen Sie Ihren Namen und Ihre E-Mail fest (kann fiktiv sein):
   ```
@@ -52,7 +52,7 @@ Git muss wissen, wer Sie sind, für Commit-Nachrichten.
   git config --global user.email "ihre.email@beispiel.com"
   ```
 
-Die Verwendung Ihres Namens und Ihrer E-Mail hilft Ihnen zu identifizieren, wer Änderungen vorgenommen hat, wenn mehrere Personen daran arbeiten.
+Mit Name und E-Mail können Sie später erkennen, wer welche Änderung vorgenommen hat, wenn mehrere Personen am Projekt arbeiten.
 
 ## Schritt 4: Zu Ihrem Dokumente-Ordner navigieren
 
@@ -80,7 +80,7 @@ Wenn Sie `Cannot find path` sehen, wird Ihr Dokumente-Ordner wahrscheinlich von 
   cd test_claude
   ```
 
-Hier wird Ihr Projekt leben.
+Hier wird Ihr Projekt gespeichert.
 
 ## Schritt 6: Claude Code starten
 
@@ -89,7 +89,7 @@ Hier wird Ihr Projekt leben.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und das Eingabefeld von Claude Code.
 
 ## Schritt 7: Claude bitten, Git zu initialisieren
 
@@ -106,7 +106,7 @@ Claude initialisiert ein Git-Repository in Ihrem Ordner (dauert 2-5 Sekunden). S
 
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
-  Sie sollte haben:
+  Sie soll Folgendes enthalten:
   - Ein Eingabefeld zum Einstellen der Minuten
   - Start- und Stopp-Schaltflächen
   - Eine Anzeige mit der verbleibenden Zeit im MM:SS-Format
@@ -116,7 +116,7 @@ Claude erstellt `timer.html` (dauert 10-30 Sekunden) mit dem CSS- und JavaScript
 
 ## Schritt 9: Den Timer testen
 
-- Öffnen Sie den Windows Datei-Explorer
+- Öffnen Sie den **Datei-Explorer** (File Explorer) von Windows
 - Navigieren Sie zu `Dokumente\test_claude`
 - Doppelklicken Sie auf `timer.html`, um sie in Ihrem Browser zu öffnen
 - Testen Sie den Timer:
@@ -148,7 +148,7 @@ Sie haben Ihren ersten Speicherpunkt erstellt! Sie können immer zu dieser funkt
   ```
   Füge zwei Schaltflächen oben hinzu. Wenn ich darauf klicke, starten automatisch 1- und 5-Minuten-Timer.
   ```
-- Aktualisieren Sie Ihren Browser-Tab (drücken Sie `F5` oder `Ctrl + R`)
+- Aktualisieren Sie Ihren Browser-Tab (drücken Sie `F5` oder `Strg + R`)
 - Testen Sie: Klicken Sie auf die **5 min**-Schaltfläche
 - Wenn es funktioniert, committen Sie die Änderungen:
   ```
@@ -164,7 +164,7 @@ Wir haben einen 2. Speicherpunkt erstellt. Diese Version hat die zwei funktionie
   ```
   Füge eine 15-Minuten-Schaltfläche hinzu.
   ```
-- Aktualisieren Sie Ihren Browser-Tab (drücken Sie `F5` oder `Ctrl + R`)
+- Aktualisieren Sie Ihren Browser-Tab (drücken Sie `F5` oder `Strg + R`)
 - Testen Sie: Klicken Sie auf die **15 min**-Schaltfläche
 
 **Für dieses Tutorial:** Tun Sie so, als würde die 15-Minuten-Schaltfläche nicht korrekt funktionieren. Committen Sie noch nicht – wir üben das Verwerfen schlechter Änderungen.
@@ -215,7 +215,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
 
 Claude zeigt Ihre Commits in einem lesbaren Format an. Sie sehen:
 - Ihren ursprünglichen Timer-App-Commit
-- Den Preset-Schaltflächen (1-min und 5-min) Commit
+- Den Commit mit den Preset-Schaltflächen (1 und 5 Minuten)
 - Den Tonbenachrichtigungs-Commit
 - Den Schlummer-Schaltflächen-Commit
 
@@ -223,7 +223,7 @@ Beachten Sie, dass der 15-Minuten-Schaltflächen-Versuch nicht da ist – Sie ha
 
 ## Schritt 17: Den Code untersuchen
 
-- Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Quelltext anzeigen**
+- Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Seitenquelltext anzeigen** (View Page Source)
 - Sie können den Quellcode dafür sehen.
 - Fragen Sie in Claude Code:
   ```
@@ -257,11 +257,11 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 - **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~\Documents\test_claude`)
 - **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html` (oder `C:\Users\IHR_BENUTZERNAME\OneDrive\Documents\test_claude\timer.html`, wenn Sie in Schritt 4 den OneDrive-Pfad verwendet haben)
 - **Befehl `git` nicht gefunden:** Schließen und öffnen Sie PowerShell nach der Installation von Git for Windows erneut, damit der PATH aktualisiert wird, und führen Sie dann noch einmal `git --version` aus
-- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Console** klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
+- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Konsole** (Console) klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
 
 ## Was Sie Claude fragen können
 
-- `Welche Dateien habe ich geändert?` - Uncommittete Änderungen sehen
+- `Welche Dateien habe ich geändert?` - Noch nicht committete Änderungen sehen
 - `Zeige mir die Unterschiede` - Genau sehen, welcher Code sich geändert hat
 - `Erkläre, was der Timer-Code macht` - Die Implementierung verstehen
 - `Erstelle einen Branch namens experiment` - Riskante Änderungen sicher ausprobieren
