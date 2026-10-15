@@ -26,7 +26,6 @@ lang: "hi"
 
 - **Spotlight:** `Command (⌘) + Space` दबाएँ, `Terminal` टाइप करें, Enter दबाएँ
 - **Finder:** **Applications** > **Utilities** > **Terminal** खोलें
-- **Launchpad:** Dock में **Launchpad** पर क्लिक करें, `Terminal` खोजें
 
 आपको `$` या `%` पर खत्म होने वाला एक कमांड प्रॉम्प्ट दिखेगा।
 

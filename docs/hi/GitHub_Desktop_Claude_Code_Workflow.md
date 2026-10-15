@@ -211,13 +211,13 @@ Claude आपके बदलावों को सरल भाषा मे�
 
 ## समस्या निवारण
 
-**"Authentication failed":** GitHub Desktop → File/Preferences → Accounts → साइन आउट करें और फिर से साइन इन करें
+**"Authentication failed":** GitHub Desktop में **File → Options → Accounts** (Windows) या **GitHub Desktop → Settings → Accounts** (Mac) खोलें, फिर साइन आउट करें और दोबारा साइन इन करें
 
 **Claude कहता है "not a git repository":** सुनिश्चित करें कि आप सही फ़ोल्डर में हैं (`cd ~/Documents/test_claude`)
 
 **टाइमर काम नहीं कर रहा:** ब्राउज़र कंसोल खोलें (राइट-क्लिक → **Inspect** → **Console**), एरर कॉपी करें, Claude को पेस्ट करें
 
-**मदद चाहिए?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
+**मदद चाहिए?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://code.claude.com/docs)
 
 ## पूरा वर्कफ़्लो
 
