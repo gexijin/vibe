@@ -71,7 +71,7 @@ Bitten Sie Claude, Ihr Thema zu recherchieren. Kopieren und fügen Sie diesen Pr
 
 ```
 Ich schreibe eine Forschungsarbeit von etwa 1.000 Wörtern über die Einführung von KI am Arbeitsplatz.
-Suche nach aktuellen Daten (2023-2025) zu:
+Suche nach aktuellen Daten (aus den letzten zwei Jahren) zu:
 - Produktivitätssteigerungen durch KI-Tools
 - Sorgen über Arbeitsplatzverluste und Statistiken
 - Praxisbeispiele von Unternehmen
@@ -296,7 +296,7 @@ Der Slash-Befehl führt Sie automatisch durch den gesamten Workflow! Vergessen S
 
 ## Fehlerbehebung
 
-- **Claude-Suchergebnisse scheinen veraltet:** Geben Sie „Suche nach Daten von 2024-2025 zu [Thema]" an
+- **Claude-Suchergebnisse scheinen veraltet:** Nennen Sie einen Zeitraum, zum Beispiel „Suche nach Daten aus den letzten zwei Jahren zu [Thema]“
 - **Entwurf ist zu lang/kurz:** Sagen Sie Claude: „Mache dies ungefähr 1.000 Wörter lang"
 - **Dateien nicht gefunden:** Geben Sie im Terminal `ls` ein, um alle Dateien im aktuellen Ordner aufzulisten
 
