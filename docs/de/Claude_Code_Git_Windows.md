@@ -212,7 +212,7 @@ Claude zeigt Ihre Commits in einem lesbaren Format an. Sie sehen:
 - Ihren ursprünglichen Timer-App-Commit
 - Den Preset-Schaltflächen (1-min und 5-min) Commit
 - Den Tonbenachrichtigungs-Commit
-- Die Schlummer-Schaltfläche.
+- Den Schlummer-Schaltflächen-Commit
 
 Beachten Sie, dass der 15-Minuten-Schaltflächen-Versuch nicht da ist – Sie haben ihn verworfen!
 

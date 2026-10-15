@@ -210,13 +210,13 @@ Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie hab
 
 ## Fehlerbehebung
 
-**„Authentication failed":** GitHub Desktop → File/Preferences → Accounts → **Sign out**, dann erneut **Sign in**
+**„Authentication failed":** Öffnen Sie in GitHub Desktop **File → Options → Accounts** (Windows) bzw. **GitHub Desktop → Settings → Accounts** (Mac), melden Sie sich dann ab (**Sign out**) und wieder an (**Sign in**)
 
 **Claude sagt „not a git repository":** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
 
 **Timer funktioniert nicht:** Browser-Konsole öffnen (Rechtsklick → **Untersuchen** → **Console**), Fehler kopieren, zu Claude einfügen
 
-**Brauchen Sie Hilfe?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
+**Brauchen Sie Hilfe?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://code.claude.com/docs)
 
 ## Der komplette Workflow
 

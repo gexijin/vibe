@@ -26,7 +26,6 @@ Wählen Sie eine dieser Methoden:
 
 - **Spotlight:** Drücken Sie `Command (⌘) + Leertaste`, geben Sie `Terminal` ein, drücken Sie Enter
 - **Finder:** Öffnen Sie **Programme** > **Dienstprogramme** > **Terminal**
-- **Launchpad:** Klicken Sie auf **Launchpad** im Dock, suchen Sie nach `Terminal`
 
 Sie sehen eine Eingabeaufforderung, die mit `$` oder `%` endet.
 
