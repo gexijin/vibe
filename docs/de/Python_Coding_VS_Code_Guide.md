@@ -26,13 +26,14 @@ Sie möchten Python-Code schreiben, sind sich aber nicht sicher, welchen Editor 
 Sie benötigen Python 3.8 oder höher für die beste Kompatibilität mit modernen Paketen.
 
 - **Windows**:
-  - Laden Sie das neueste Python von [python.org](https://www.python.org/downloads/) herunter
+  - Gehen Sie zu [python.org/downloads/windows](https://www.python.org/downloads/windows/) und klicken Sie unter der neuesten Python 3-Version auf **Windows installer (64-bit)** (nicht auf den „install manager“)
   - Führen Sie das Installationsprogramm aus
   - **Aktivieren Sie das Kontrollkästchen „Add python.exe to PATH"** bevor Sie auf Install Now klicken
   - Notieren Sie den Installationsort (typischerweise `C:\Users\IhrName\AppData\Local\Programs\Python\Python312`)
 
 - **macOS**:
   - Laden Sie von [python.org](https://www.python.org/downloads/) herunter und führen Sie das Installationsprogramm aus
+  - Öffnen Sie nach Abschluss des python.org-Installationsprogramms **Finder > Programme** (Applications) **> Python 3.x** und doppelklicken Sie auf **Install Certificates.command** (sonst schlägt das Laden von Daten aus dem Internet in Schritt 7 mit `CERTIFICATE_VERIFY_FAILED` fehl)
   - Oder verwenden Sie Homebrew: Öffnen Sie Terminal und geben Sie `brew install python` ein
   - Homebrew-Pfad: `/opt/homebrew/bin/python3` (Apple Silicon) oder `/usr/local/bin/python3` (Intel)
 
@@ -177,6 +178,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- Beim ersten Start fragt Streamlit im Terminal nach einer `Email:`. Drücken Sie einfach `Enter`, um dies zu überspringen
 - Die App öffnet sich in Ihrem Browser (normalerweise unter `http://localhost:8501`)
 - Bewegen Sie den Schieberegler in der Seitenleiste und beobachten Sie, wie sich das Histogramm sofort aktualisiert
 - Drücken Sie `Strg+C` im Terminal, um die App zu stoppen
@@ -221,7 +223,9 @@ streamlit run app.py
 
 - **pip install schlägt fehl**: Stellen Sie sicher, dass Ihre virtuelle Umgebung aktiviert ist (suchen Sie nach `(.venv)` im Terminal). Unter Linux müssen Sie möglicherweise zuerst `python3-venv` installieren. Unter Windows überprüfen Sie, ob kein Antivirenprogramm pip blockiert.
 
-- **Streamlit-App wird nicht ausgeführt**: Stellen Sie sicher, dass streamlit in Ihrer virtuellen Umgebung installiert ist (`pip list | grep streamlit`). Überprüfen Sie das Terminal auf Fehlermeldungen. Stellen Sie sicher, dass keine andere App Port 8501 verwendet.
+- **`SSL: CERTIFICATE_VERIFY_FAILED` auf dem Mac**: Öffnen Sie **Finder > Programme** (Applications) **> Python 3.x**, doppelklicken Sie auf **Install Certificates.command** und führen Sie das Skript dann erneut aus.
+
+- **Streamlit-App wird nicht ausgeführt**: Stellen Sie sicher, dass streamlit in Ihrer virtuellen Umgebung installiert ist (`pip show streamlit`). Überprüfen Sie das Terminal auf Fehlermeldungen. Stellen Sie sicher, dass keine andere App Port 8501 verwendet.
 
 ## Workflow-Zusammenfassung
 

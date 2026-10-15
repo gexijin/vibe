@@ -147,7 +147,7 @@ Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, soda
 - Klicken Sie sich im Spreadsheet Viewer durch alle drei Blätter – Einnahmen, Ausgaben, Übersicht
 - Sie müssen nicht jede Formel verstehen, aber bekommen Sie ein Gefühl für die Struktur
 - Öffnen Sie GitHub Desktop
-- Sie sehen `budget.xlsx` als geänderte Datei aufgelistet
+- Sie sehen `budget.xlsx` als geänderte Datei aufgelistet (eventuell sehen Sie auch Hilfsskripte, die Claude geschrieben hat, zum Beispiel eine `.py`-Datei – diese können Sie ebenfalls committen)
 - Geben Sie im **Summary**-Feld unten links ein:
 
 ```

@@ -23,7 +23,7 @@ Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen,
 ## Schritt 1: Docker Desktop installieren
 
 - Besuchen Sie die [Docker Desktop Download-Seite](https://www.docker.com/products/docker-desktop/)
-- Klicken Sie auf **Download for Windows** (oder Mac/Linux je nach System)
+- Klicken Sie auf **Download Docker Desktop** und wählen Sie Ihr System (Windows, oder Mac - Apple Silicon für Macs mit M1/M2/M3/M4, oder Mac - Intel Chip für ältere Macs)
 - Führen Sie das Installationsprogramm aus und folgen Sie dem Assistenten
 - Wenn Sie dazu aufgefordert werden, aktivieren Sie WSL 2 (Windows-Benutzer) oder akzeptieren Sie die Standardeinstellungen
 - Starten Sie Docker Desktop nach der Installation
@@ -123,7 +123,7 @@ from sklearn.datasets import load_iris
 # Lade den Iris-Datensatz
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df['species'] = iris.target
+df['species'] = iris.target_names[iris.target]
 
 # Zeige die ersten Zeilen an
 print(df.head())
@@ -181,11 +181,11 @@ st.pyplot(fig)
 
 ## Schritt 8: Im Container erneut öffnen
 
-- Klicken Sie auf das grüne Symbol in der unteren linken Ecke von VS Code
+- Klicken Sie auf das Symbol **><** in der unteren linken Ecke von VS Code
 - Wählen Sie **Reopen in Container** aus dem Menü
 - VS Code baut den Container (dies dauert beim ersten Mal 5-10 Minuten)
 - Sie sehen eine Fortschrittsanzeige mit den Build-Schritten
-- Nach Abschluss zeigt das grüne Symbol **Dev Container: Python in Docker** an
+- Nach Abschluss steht in der unteren linken Ecke **Dev Container: Python in Docker**
 
 ## Schritt 9: Die Container-Umgebung verstehen
 
@@ -299,7 +299,7 @@ Lassen Sie uns untersuchen, wie die Dockerfile Ihre Umgebung konfiguriert.
 - `python:3.12-alpine` - Minimales Alpine Linux-basiertes Image (kleinste Dateigröße)
 - `jupyter/datascience-notebook` - Vorkonfiguriertes Jupyter mit Data-Science-Bibliotheken
 
-Nach der Änderung des Basis-Images müssen Sie den Container neu erstellen, um die Änderungen anzuwenden.
+Nach der Änderung des Basis-Images müssen Sie den Container neu erstellen, um die Änderungen anzuwenden. Hinweis: Mit dieser Dockerfile funktionieren nur Debian-basierte Images wie `python:3.12` und `python:3.12-slim`; Alpine- und Jupyter-Images brauchen eine andere Dockerfile.
 
 ## Schritt 14: Python-Pakete im Docker-Image installieren (Optional)
 
@@ -316,7 +316,7 @@ RUN pip install --no-cache-dir \
 ```
 
 - Klicken Sie auf **File > Save**
-- Klicken Sie auf das grüne Symbol in der unteren linken Ecke
+- Klicken Sie auf das Symbol **><** in der unteren linken Ecke
 - Wählen Sie **Rebuild Container** aus dem Menü
 - VS Code erstellt den Container mit Ihrem neuen Paket neu (dies dauert 2-5 Minuten)
 - Um es zu überprüfen, öffnen Sie ein Terminal (**Terminal > New Terminal**) und führen Sie aus:
@@ -356,10 +356,10 @@ Sobald alles eingerichtet ist, hier Ihre tägliche Routine:
 
 1. **Docker Desktop starten** - Öffnen Sie die App und warten Sie auf den grünen Statusanzeiger (Docker muss laufen)
 2. **VS Code öffnen** - Starten Sie VS Code und öffnen Sie Ihren Projektordner
-3. **Im Container erneut öffnen** - Falls nicht bereits im Container, klicken Sie auf das grüne Symbol (unten links) und wählen Sie **Reopen in Container**
+3. **Im Container erneut öffnen** - Falls nicht bereits im Container, klicken Sie auf das Symbol **><** in der unteren linken Ecke und wählen Sie **Reopen in Container**
 4. **Code schreiben und ausführen** - Bearbeiten Sie `.py`-Dateien, führen Sie sie Zeile für Zeile mit `Shift+Enter` aus, oder führen Sie Apps mit `streamlit run app.py` aus
 5. **Ihre Arbeit speichern** - Ihre Code-Dateien (`.py`, `.ipynb`) werden auf Ihrem Computer gespeichert und bleiben über Sitzungen hinweg erhalten
-6. **Committen und pushen** - Verwenden Sie GitHub Desktop, um Ihre Änderungen zu committen und in das Repository zu pushen
+6. **Committen und pushen** - Wenn Ihr Projekt ein GitHub-Repository ist (siehe [GitHub Desktop mit Claude Code verwenden](./GitHub_Desktop_Claude_Code_Workflow)), committen und pushen Sie Ihre Änderungen mit GitHub Desktop
 
 ---
 

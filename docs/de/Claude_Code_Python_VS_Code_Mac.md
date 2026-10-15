@@ -36,14 +36,10 @@ Sie haben Python in VS Code eingerichtet und können Code manuell schreiben. Jet
 - Klicken Sie auf das **Extensions**-Symbol in der linken Seitenleiste (Symbol mit vier Quadraten)
 - Geben Sie im Suchfeld `Claude Code` ein
 - Finden Sie **Claude Code** von Anthropic und klicken Sie auf **Install**
-- Nach der Installation erscheint ein Claude-Symbol (Funkeln) in der linken Seitenleiste
-- Klicken Sie auf das Claude-Symbol, um das Chat-Panel zu öffnen
-- Klicken Sie auf **Sign in to Claude Code** im Chat-Panel
-- Wählen Sie Ihre Authentifizierungsmethode:
-  - **Claude Pro/Max-Benutzer**: Klicken Sie auf **Sign in with Claude.ai**, autorisieren Sie im Browser und kopieren Sie den Code zurück nach VS Code
-  - **API-Schlüssel-Benutzer**: Klicken Sie auf **Use API Key** und fügen Sie Ihren Anthropic-API-Schlüssel ein
+- Klicken Sie nach der Installation unten rechts im VS Code-Fenster (in der Statusleiste) auf **✻ Claude Code**, um das Claude-Panel zu öffnen
+- Beim ersten Mal erscheint ein Anmeldebildschirm: Klicken Sie auf **Sign in**, bestätigen Sie den Zugriff in Ihrem Browser und kehren Sie dann zu VS Code zurück
 - Für detaillierte Authentifizierungsschritte siehe die Anleitung [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3)
-- Nach der Anmeldung sehen Sie „Ready to help" im Chat-Panel
+- Nach der Anmeldung sehen Sie im Panel eine Checkliste **Learn Claude Code** und unten ein Eingabefeld
 
 ## Schritt 3: Erstes Python-Skript manuell erstellen
 
@@ -62,7 +58,7 @@ iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 iris_df['species'] = iris.target_names[iris.target]
 
 # Display structure
-print(iris_df.info())
+iris_df.info()
 print("\nSummary statistics:")
 print(iris_df.describe())
 ```
@@ -80,7 +76,7 @@ print(iris_df.describe())
 
 ## Schritt 4: Claude bitten, ein Streudiagramm hinzuzufügen
 
-- Klicken Sie auf das **Claude**-Symbol in der linken Seitenleiste, um das Chat-Panel zu öffnen
+- Öffnen Sie das Claude-Panel (Spark-Symbol oben rechts in der geöffneten Datei oder **✻ Claude Code** unten rechts)
 - Geben Sie im Chat-Feld unten ein:
 
 ```
@@ -88,12 +84,12 @@ Füge Code zu iris_analysis.py hinzu, um ein Streudiagramm der Kelchblattlänge 
 ```
 
 - Drücken Sie Enter zum Senden
-- Claude liest Ihre Datei und schlägt Änderungen vor – Sie sehen ein Diff mit neuem Code zum Hinzufügen
-- Klicken Sie auf **Accept**, um die Änderungen zu übernehmen
+- Claude liest Ihre Datei und bearbeitet sie – der neue Code erscheint in `iris_analysis.py`
+- Wenn Claude ein Diff zeigt und um Erlaubnis fragt, nehmen Sie die Änderung an
 - Der seaborn/matplotlib-Code erscheint in Ihrer Datei
-- Wenn Sie die erforderlichen Pakete nicht haben, führen Sie im Terminal aus:
+- Installieren Sie die Diagramm-Pakete, die Claudes Code verwendet (sie wurden in Schritt 3 nicht installiert). Führen Sie im Terminal (mit `(.venv)` am Anfang der Zeile) aus:
   ```
-  pip install seaborn matplotlib scikit-learn pandas
+  pip install seaborn matplotlib
   ```
 
 ## Schritt 5: Den aktualisierten Code ausführen
@@ -112,8 +108,8 @@ Entferne den Titel. Ändere den Markierungstyp nach Art. Ändere zum whitegrid-S
 ```
 
 - Drücken Sie Enter
-- Claude zeigt die aktualisierten Codeänderungen
-- Klicken Sie auf **Accept**
+- Claude aktualisiert den Code
+- Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Führen Sie den aktualisierten Code erneut aus: `python iris_analysis.py` im Terminal
 - Das Diagramm zeigt jetzt verschiedene Markierungsformen pro Art, keinen Titel und whitegrid-Stil
 - Schließen Sie das Plot-Fenster, um fortzufahren
@@ -128,7 +124,7 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 
 - Drücken Sie Enter
 - Claude fügt PCA-Code zu Ihrem Skript hinzu
-- Klicken Sie auf **Accept**
+- Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Führen Sie den Code aus: `python iris_analysis.py` im Terminal
 - Ein PCA-Plot erscheint, der Proben auf PC1 und PC2 projiziert zeigt, gefärbt nach Art
 - Schließen Sie das Plot-Fenster, wenn Sie fertig sind
@@ -142,8 +138,8 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 ```
 
 - Drücken Sie Enter
-- Claude überprüft den Code und schlägt Kommentare vor, die jeden Abschnitt erklären
-- Klicken Sie auf **Accept**
+- Claude überprüft den Code und fügt Kommentare hinzu, die jeden Abschnitt erklären
+- Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Ihr Skript hat jetzt klare Kommentare, die das Laden der Daten, die Visualisierung und die PCA-Analyse erklären
 
 ## Nächste Schritte
@@ -160,7 +156,7 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 - **„Cannot read Python file"-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.py` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
 - **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **Fehler „Paket nicht gefunden“** oder **`command not found: python`** - Stellen Sie sicher, dass das Terminal `(.venv)` anzeigt (falls nicht, schließen Sie es und öffnen Sie mit **View > Terminal** ein neues), und installieren Sie dann die erforderlichen Pakete: `pip install seaborn matplotlib scikit-learn pandas`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
-- **Codeänderungen werden nicht übernommen** - Stellen Sie sicher, dass Sie auf **Accept** beim Diff klicken. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
+- **Codeänderungen werden nicht übernommen** - Wenn Claude um Erlaubnis gefragt hat, stellen Sie sicher, dass Sie die Änderung angenommen haben. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
 - **Plot wird nicht angezeigt** - Stellen Sie sicher, dass Sie ein Display haben. Auf manchen Systemen müssen Sie möglicherweise `plt.show()` am Ende hinzufügen oder `%matplotlib inline` in Jupyter verwenden.
 
 ## Workflow-Zusammenfassung

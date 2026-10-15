@@ -59,13 +59,13 @@ Ihr `iris-analysis`-Ordner sollte jetzt enthalten:
 - Öffnen Sie VS Code
 - Klicken Sie auf **File > Open Folder**
 - Navigieren Sie zum `iris-analysis`-Ordner
-- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
+- Klicken Sie auf **Ordner auswählen** (Windows) oder **Öffnen** (Mac) – bei englischer Anzeige heißen die Schaltflächen **Select Folder** bzw. **Open**
 - Eine Benachrichtigung erscheint unten rechts: **Folder contains a Dev Container configuration file**
 - Klicken Sie auf **Reopen in Container**
-- Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das grüne Symbol in der unteren linken Ecke und wählen Sie **Reopen in Container**
+- Wenn Sie die Benachrichtigung nicht sehen, klicken Sie auf das Symbol **><** in der unteren linken Ecke und wählen Sie **Reopen in Container**
 - VS Code baut den Docker-Container (dauert beim ersten Mal 3-5 Minuten)
 - Beobachten Sie die Fortschrittsanzeige mit den Build-Schritten
-- Nach Abschluss zeigt das grüne Symbol **Dev Container: Python in Docker** an
+- Nach Abschluss steht in der unteren linken Ecke **Dev Container: Python in Docker**
 
 ## Schritt 4: Claude Code starten
 
@@ -79,7 +79,9 @@ claude
 
 - Ein Browserfenster öffnet sich zur Authentifizierung
 - Klicken Sie auf **Continue with Google** oder **Continue with Email**
-- Melden Sie sich mit Ihrem Claude-Konto an (oder erstellen Sie eines)
+- Melden Sie sich mit Ihrem Claude-Konto an. Claude Code erfordert ein kostenpflichtiges Claude-Abo (wie Pro oder Max) oder ein Konto in der Anthropic Console – der kostenlose Tarif enthält es nicht
+- Wenn der Browser einen Code anzeigt, statt zu melden, dass Sie fertig sind, kopieren Sie den Code, wechseln Sie zurück zum VS Code-Terminal, fügen Sie ihn bei der Aufforderung **Paste code here if prompted** ein und drücken Sie **Enter** (das kommt in einem Container häufig vor)
+- Wenn sich kein Browserfenster öffnet, drücken Sie `c`, um den Anmeldelink zu kopieren, und fügen Sie ihn in Ihren Browser ein
 - Nach erfolgreicher Authentifizierung kehren Sie zum VS Code-Terminal zurück
 - Sie sehen Claudes Willkommensnachricht
 
@@ -241,7 +243,7 @@ Jedes Mal folgen Sie dem Muster: beschreiben → testen → iterieren → commit
 - **Import-Fehler** - Der Docker-Container sollte pandas, matplotlib und scikit-learn vorinstalliert haben. Wenn nicht, bitten Sie Claude, sie mit pip zu installieren.
 - **Claude macht Fehler** - Normal! Kopieren Sie die Fehlermeldung, fügen Sie sie bei Claude ein und sagen Sie "behebe diesen Fehler." Vibe Coding beinhaltet Iteration und Debugging.
 - **Kann nicht auf GitHub pushen** - Stellen Sie sicher, dass Sie in GitHub Desktop angemeldet sind und das Repository veröffentlicht haben (Schritt 1). Überprüfen Sie Ihre Internetverbindung.
-- **Container startet nicht** - Stellen Sie sicher, dass Docker Desktop läuft (grüner Statusanzeiger). Versuchen Sie, auf das grüne Symbol in VS Code zu klicken und **Rebuild Container** zu wählen.
+- **Container startet nicht** - Stellen Sie sicher, dass Docker Desktop läuft (grüner Statusanzeiger). Versuchen Sie, unten links in VS Code auf das Symbol **><** zu klicken und **Rebuild Container** zu wählen.
 
 ## Workflow-Überblick
 

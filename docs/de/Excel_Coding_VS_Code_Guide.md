@@ -43,7 +43,7 @@ Falls VS Code bereits geöffnet ist, schließen Sie es und öffnen Sie es erneut
 - Suchen Sie nach `GrapeCity.gc-excelviewer`
 - Klicken Sie bei **Spreadsheet Viewer** von **MESCIUS** auf **Install**
 
-**Hinweis:** Diese Erweiterung hieß früher **Excel Viewer** von **GrapeCity**, und ältere Anleitungen und Videos verwenden eventuell noch diesen Namen. Eine Suche nach „Excel Viewer" zeigt inzwischen mehrere andere Erweiterungen an. Suchen Sie daher nach der oben genannten ID, um die richtige zu finden. Die ID beginnt weiterhin mit `GrapeCity` – das ist so gewollt.
+**Hinweis:** Diese Erweiterung hieß früher **Excel Viewer** von **GrapeCity**, und ältere Anleitungen und Videos verwenden eventuell noch diesen Namen. Eine Suche nach „Excel Viewer" zeigt inzwischen mehrere andere Erweiterungen an. Suchen Sie daher nach der oben genannten ID, um die richtige zu finden. Die ID beginnt weiterhin mit `GrapeCity` – das ist so gewollt. Auf der Marketplace-Seite steht, dass die Erweiterung nicht mehr aktiv weiterentwickelt wird; für die Vorschau der Dateien in diesem Tutorial funktioniert sie trotzdem einwandfrei.
 
 Damit können Sie jede `.xlsx`-Datei anklicken und ihre Tabellenblätter, Zahlen und Formeln direkt in VS Code sehen. Das ist ideal für schnelle Kontrollen, aber Diagramme, farbige Hervorhebungen und Dropdown-Listen kann die Erweiterung nicht anzeigen – dafür öffnen Sie die Datei in Excel, LibreOffice Calc oder Google Sheets.
 
@@ -75,7 +75,7 @@ Erstelle eine Tabelle namens budget.xlsx mit den Spalten Kategorie, Monatsbetrag
 
 - Drücken Sie Enter
 - Beobachten Sie, wie Claude ein Python-Skript schreibt, es ausführt und `budget.xlsx` in Ihrem Projektordner erzeugt
-- Claude bittet um Erlaubnis, bevor es Befehle ausführt oder Hilfswerkzeuge installiert (wie `openpyxl`, eine Python-Erweiterung für Tabellen) – wählen Sie **Yes**, damit es weitermachen kann
+- Wenn Claude um Erlaubnis bittet, Befehle auszuführen oder Hilfswerkzeuge zu installieren (wie `openpyxl`, eine Python-Erweiterung für Tabellen), wählen Sie **Yes**, damit es weitermachen kann
 - Wenn Claude meldet, dass Python nicht installiert ist oder nicht gefunden wird, gehen Sie zurück zu Schritt 1 und schließen und öffnen Sie VS Code danach erneut
 
 ## Schritt 6: Das Ergebnis ansehen
