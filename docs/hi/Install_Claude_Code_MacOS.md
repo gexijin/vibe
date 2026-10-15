@@ -26,7 +26,6 @@ Claude Code एक AI सहायक है जो आपके Terminal मे
 
 - एक Mac कंप्यूटर (macOS 13.0 Ventura या नया)
 - इंटरनेट कनेक्शन
-- अपने कंप्यूटर पर एडमिनिस्ट्रेटर एक्सेस
 - Claude Pro/Max सब्सक्रिप्शन या API कुंजी
 - 5 - 10 मिनट
 
@@ -53,6 +52,11 @@ curl -fsSL https://claude.ai/install.sh | bash
    claude --version
    ```
 - आपको Claude Code का वर्शन नंबर दिखना चाहिए
+- अगर इसके बजाय `zsh: command not found: claude` दिखे, तो ये दो लाइनें चलाएँ (ये आपके Mac को बताती हैं कि Claude Code कहाँ मिलेगा), फिर दोबारा `claude --version` आज़माएँ:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 **विकल्प: Homebrew से इंस्टॉल करें**
 
@@ -71,13 +75,10 @@ brew install --cask claude-code
    ```
    claude
    ```
-- Claude एक ब्राउज़र खोलने की कोशिश करता है। यदि यह अपने आप नहीं खुलता, तो Terminal में दिखाए गए URL को कॉपी करके अपने ब्राउज़र में पेस्ट करें।
+- Claude एक ब्राउज़र खोलने की कोशिश करता है। यदि यह अपने आप नहीं खुलता, तो लॉगिन लिंक कॉपी करने के लिए **c** दबाएँ, फिर उसे अपने ब्राउज़र में पेस्ट करें।
 - अपने Claude.ai खाते में लॉगिन करें (यह अपने आप भी हो सकता है)
-- **Authorize** पर क्लिक करें
-- जब एक लंबा कोड दिखाई दे तो **Copy Code** पर क्लिक करें
-- वापस Terminal विंडो पर जाएँ
-- Terminal में पेस्ट करने के लिए: मेनू बार में **Edit** पर क्लिक करें, फिर **Paste** पर क्लिक करें
-- आपको एक सफलता संदेश दिखना चाहिए
+- **Authorize** पर क्लिक करें। ब्राउज़र में दिखना चाहिए कि आप लॉग इन हो गए हैं, और Terminal में एक सफलता संदेश दिखता है।
+- केवल तभी, जब ब्राउज़र इसके बजाय एक लंबा कोड दिखाए, **Copy Code** पर क्लिक करें, वापस Terminal पर जाएँ, उसे **Paste code here if prompted** पर पेस्ट करें (**Command (⌘) + V** दबाएँ), और **Return** दबाएँ।
 - सेटअप पूरा करने के लिए निर्देशों का पालन करें
 
 ### विकल्प B. Anthropic API कुंजी का उपयोग करें
@@ -99,7 +100,7 @@ brew install --cask claude-code
 
 **नोट:** यदि आप zsh के बजाय bash वाले पुराने Mac का उपयोग कर रहे हैं, तो ऊपर दिए गए कमांड में `~/.zshrc` की जगह `~/.bash_profile` लिखें।
 
-### विकल्प C. OpenRouter API का उपयोग करें (मुफ़्त शुरुआत!)
+### विकल्प C. OpenRouter API का उपयोग करें (जितना उपयोग, उतना भुगतान)
 
 OpenRouter एक यूनिफाइड API गेटवे है जो एक ही API कुंजी के ज़रिए 500+ बड़े लैंग्वेज मॉडलों तक पहुँच प्रदान करता है। यह Claude Code का उपयोग करने का एक किफ़ायती तरीका हो सकता है, क्योंकि आप केवल उपयोग के लिए भुगतान करते हैं और विभिन्न कीमतों वाले मॉडलों में से चुन सकते हैं।
 
@@ -128,7 +129,9 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - उपलब्ध मॉडल [openrouter.ai/models](https://openrouter.ai/models) पर ब्राउज़ करें
-- फ्री टियर आपको प्रतिदिन 50 API रिक्वेस्ट देता है
+- फ्री (`:free`) मॉडलों की सीमा प्रतिदिन 50 रिक्वेस्ट है, जिन्हें Claude Code का एक ही काम जल्दी खत्म कर सकता है
+- ऊपर दिखाए गए मॉडल पेड मॉडल हैं — इनका उपयोग करने से पहले [openrouter.ai/models](https://openrouter.ai/models) पर इनकी कीमत देख लें
+- OpenRouter के ज़रिए Claude Code के ठीक से काम करने की गारंटी केवल Anthropic मॉडलों के साथ है
 - अधिक जानकारी के लिए [आधिकारिक OpenRouter गाइड](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) देखें
 
 
@@ -224,7 +227,11 @@ claude doctor
 - Terminal को पूरी तरह बंद करें (मेनू बार में **Terminal** पर क्लिक करें, फिर **Quit Terminal**)
 - Terminal फिर से खोलें
 - यह जाँचने के लिए `claude --version` आज़माएँ कि यह इंस्टॉल है या नहीं
-- इंस्टॉलेशन कमांड फिर से चलाने की कोशिश करें: `curl -fsSL https://claude.ai/install.sh | bash`
+- अगर फिर भी `command not found` दिखे, तो ये दो लाइनें चलाएँ, फिर दोबारा `claude --version` आज़माएँ:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 ### प्रमाणीकरण विफल होता है
 - सुनिश्चित करें कि आपके पास सक्रिय Claude Pro/Max सब्सक्रिप्शन या वैध API कुंजी है
