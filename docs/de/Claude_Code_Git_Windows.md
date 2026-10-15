@@ -6,7 +6,7 @@ lang: "de"
 
 # Claude Code mit lokaler Versionskontrolle für Windows
 
-Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal sind die Änderungen brillant. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit"), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
+Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal sind die Änderungen brillant. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
 
 ## Wichtige Konzepte
 
@@ -126,7 +126,7 @@ Claude erstellt `timer.html` (dauert 10-30 Sekunden) mit dem CSS- und JavaScript
 
 **Sie sehen `test_claude` nicht?** Wenn OneDrive Ihre Dokumente sichert, zeigt der Datei-Explorer einen anderen Dokumente-Ordner an. Klicken Sie in die Adressleiste des Datei-Explorers, fügen Sie `%USERPROFILE%\Documents\test_claude` ein und drücken Sie **Enter**.
 
-**Wenn etwas nicht funktioniert:** Beschreiben Sie in Claude Code den Fehler: „Ich sehe diesen Fehler: [beschreiben Sie, was passiert ist]. Kannst du das reparieren?"
+**Wenn etwas nicht funktioniert:** Beschreiben Sie in Claude Code den Fehler: „Ich sehe diesen Fehler: [beschreiben Sie, was passiert ist]. Kannst du das reparieren?“
 
 ## Schritt 10: Claude bitten zu committen
 
@@ -254,7 +254,7 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 
 ## Fehlerbehebung
 
-- **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~\Documents\test_claude`)
+- **„not a git repository“-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~\Documents\test_claude`)
 - **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html` (oder `C:\Users\IHR_BENUTZERNAME\OneDrive\Documents\test_claude\timer.html`, wenn Sie in Schritt 4 den OneDrive-Pfad verwendet haben)
 - **Befehl `git` nicht gefunden:** Schließen und öffnen Sie PowerShell nach der Installation von Git for Windows erneut, damit der PATH aktualisiert wird, und führen Sie dann noch einmal `git --version` aus
 - **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Konsole** (Console) klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein

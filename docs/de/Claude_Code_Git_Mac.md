@@ -6,7 +6,7 @@ lang: "de"
 
 # Claude Code mit lokaler Versionskontrolle für Mac
 
-Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit"), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
+Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
 
 ## Wichtige Konzepte
 
@@ -40,7 +40,7 @@ Mac hat Git oft vorinstalliert. Lassen Sie uns prüfen:
 
 **Wenn Sie eine Versionsnummer sehen** (wie `git version 2.39.0`), ist Git bereits installiert – fahren Sie mit Schritt 3 fort.
 
-**Wenn Sie „command not found" sehen** oder ein Popup zur Installation von Entwicklertools erscheint:
+**Wenn Sie „command not found“ sehen** oder ein Popup zur Installation von Entwicklertools erscheint:
 - Klicken Sie im Popup auf **Installieren**, oder führen Sie aus:
   ```
   xcode-select --install
@@ -133,7 +133,7 @@ Claude erstellt `timer.html` (dauert 10-30 Sekunden) mit dem CSS- und JavaScript
   - Klicken Sie auf **Start**
   - Beobachten Sie den Countdown
 
-**Wenn etwas nicht funktioniert:** Beschreiben Sie in Claude Code den Fehler: „Ich sehe diesen Fehler: [beschreiben Sie, was passiert ist]. Kannst du das beheben?"
+**Wenn etwas nicht funktioniert:** Beschreiben Sie in Claude Code den Fehler: „Ich sehe diesen Fehler: [beschreiben Sie, was passiert ist]. Kannst du das beheben?“
 
 ## Schritt 10: Claude bitten zu committen
 
@@ -261,7 +261,7 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 
 ## Fehlerbehebung
 
-- **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~/Documents/test_claude`)
+- **„not a git repository“-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~/Documents/test_claude`)
 - **timer.html im Finder nicht gefunden:** Die Datei ist unter `/Users/IHR_BENUTZERNAME/Documents/test_claude/timer.html`
 - **Git-Befehle funktionieren nicht:** Stellen Sie sicher, dass Sie Schritt 2 abgeschlossen und Git installiert haben
 - **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, dann auf den Tab **Konsole** (Console) klicken; in Safari schalten Sie zuerst die Funktionen für Webentwickler ein, wie in Schritt 17 gezeigt, und wählen dann **Element-Informationen**), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein

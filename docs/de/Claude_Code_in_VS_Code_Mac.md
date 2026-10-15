@@ -54,7 +54,7 @@ Sie sollten nun `TEST_CLAUDE` im Explorer-Panel auf der linken Seite sehen.
   claude
   ```
 - Wenn Claude Code Sie auffordert, sich anzumelden, folgen Sie den Anmeldeschritten im [Installations-Tutorial](./Install_Claude_Code_MacOS). Claude Code erfordert einen kostenpflichtigen Claude-Plan (z. B. Pro oder Max) oder ein Anthropic Console-Konto – der kostenlose Plan enthält Claude Code nicht.
-- Sie sehen eine Willkommensnachricht und die Claude Code-Eingabeaufforderung
+- Sie sehen eine Willkommensnachricht und die Eingabezeile von Claude Code
 - Jetzt können Sie Claude Code verwenden, während Sie Dateien in VS Code bearbeiten
 
 **Hinweis:** Sie müssen sich nur einmal anmelden – bei späteren Sitzungen sehen Sie direkt die Willkommensnachricht.

@@ -248,7 +248,7 @@ shinyApp(ui = ui, server = server)
 
 ## Fehlerbehebung
 
-- **„R is not recognized" im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
+- **„R is not recognized“ im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
   - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (Versionsnummer anpassen)
   - macOS (CRAN-Installationsprogramm, Intel oder Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`

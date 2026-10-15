@@ -6,7 +6,7 @@ lang: "de"
 
 # GitHub Desktop mit Claude Code verwenden
 
-Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit"), erstellen Sie einen Wiederherstellungspunkt. Sie können immer zurückgehen.
+Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt. Sie können immer zurückgehen.
 
 Wenn Sie [GitHub Desktop](https://desktop.github.com) mit [Claude Code](https://claude.com/claude-code) kombinieren, erhalten Sie KI-Geschwindigkeit bei der Entwicklung mit professioneller Versionskontrolle.
 
@@ -43,7 +43,7 @@ Erstellen Sie eine einfache Timer-App mit Claude Code und verfolgen Sie alle Än
   - **Name:** `test_claude`
   - **Description:** `Eine mit Claude Code erstellte Timer-App`
   - **Local Path:** Klicken Sie auf **Choose...** und wählen Sie Ihren Ordner **Dokumente** (Documents) aus (standardmäßig ist hier ein Ordner `GitHub` innerhalb von Dokumente eingetragen – ändern Sie das also)
-  - **Aktivieren Sie** „Initialize this repository with a README"
+  - **Aktivieren Sie** „Initialize this repository with a README“
 - Klicken Sie auf **Create Repository**
 - Klicken Sie oben auf **Publish repository**
 - Klicken Sie auf **Publish Repository**
@@ -120,8 +120,8 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
 
 Sie haben einen Speicherpunkt erstellt!
 
-**Gute Commit-Nachrichten:** „Erstelle erste Timer-App", „Behebe Start-Schaltfläche"
-**Schlechte Commit-Nachrichten:** „Änderungen", „Update", „asdf"
+**Gute Commit-Nachrichten:** „Erstelle erste Timer-App“, „Behebe Start-Schaltfläche“
+**Schlechte Commit-Nachrichten:** „Änderungen“, „Update“, „asdf“
 
 ## Schritt 7: Auf GitHub pushen
 
@@ -211,9 +211,9 @@ Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie hab
 
 ## Fehlerbehebung
 
-**„Authentication failed":** Öffnen Sie in GitHub Desktop **File → Options → Accounts** (Windows) bzw. **GitHub Desktop → Settings → Accounts** (Mac), melden Sie sich dann ab (**Sign out**) und wieder an (**Sign in**)
+**„Authentication failed“:** Öffnen Sie in GitHub Desktop **File → Options → Accounts** (Windows) bzw. **GitHub Desktop → Settings → Accounts** (Mac), melden Sie sich dann ab (**Sign out**) und wieder an (**Sign in**)
 
-**Claude sagt „not a git repository":** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
+**Claude sagt „not a git repository“:** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
 
 **Timer funktioniert nicht:** Browser-Konsole öffnen (Rechtsklick → **Untersuchen** → **Konsole**), Fehler kopieren und in Claude Code einfügen
 

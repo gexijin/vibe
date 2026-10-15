@@ -124,16 +124,16 @@ Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und 
 
 ## Nächste Schritte
 
-- Bitten Sie Claude, einen R-Markdown-Bericht zu erstellen: „Erstelle eine R-Markdown-Datei für diese Analyse"
-- Verwenden Sie Claude, um Fehler zu debuggen: „Dieser Code gibt Fehler X, kannst du ihn beheben?"
-- Fordern Sie statistische Tests an: „Füge einen t-Test hinzu, der die Kelchblattlänge zwischen setosa und versicolor vergleicht"
-- Bitten Sie Claude, Code zu optimieren: „Mache diese Schleife schneller durch Vektorisierung"
-- Holen Sie Hilfe bei unbekannten Funktionen: „Erkläre, was dplyr::mutate macht"
+- Bitten Sie Claude, einen R-Markdown-Bericht zu erstellen: „Erstelle eine R-Markdown-Datei für diese Analyse“
+- Verwenden Sie Claude, um Fehler zu debuggen: „Dieser Code gibt Fehler X, kannst du ihn beheben?“
+- Fordern Sie statistische Tests an: „Füge einen t-Test hinzu, der die Kelchblattlänge zwischen setosa und versicolor vergleicht“
+- Bitten Sie Claude, Code zu optimieren: „Mache diese Schleife schneller durch Vektorisierung“
+- Holen Sie Hilfe bei unbekannten Funktionen: „Erkläre, was dplyr::mutate macht“
 
 ## Fehlerbehebung
 
 - **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
-- **„Cannot read R file"-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.R` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
+- **„Cannot read R file“-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.R` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
 - **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **ggplot2 nicht gefunden** - Installieren Sie es im R-Terminal: `install.packages("ggplot2")`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
 - **Codeänderungen werden nicht übernommen** - Stellen Sie sicher, dass Sie auf **Accept** beim Diff klicken. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.

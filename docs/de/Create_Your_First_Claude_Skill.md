@@ -57,11 +57,11 @@ Geben Sie ein:
 claude
 ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 3: Claude Dateien ohne Rückfrage bearbeiten lassen
 
-Sehen Sie sich die Statuszeile direkt unter der Claude Code-Eingabeaufforderung an:
+Sehen Sie sich die Statuszeile direkt unter der Eingabezeile von Claude Code an:
 
 - Wenn dort **auto mode on** oder **accept edits on** steht, ist alles bereit
 - Wenn dort **manual mode on** steht, drücken Sie **Shift+Tab**, bis **accept edits on** angezeigt wird
@@ -197,7 +197,7 @@ Das Muster: Definieren Sie, wann Claude automatisch helfen soll, nicht nur Short
 
 - **Slash-Befehle** sind Shortcuts, die Sie manuell eingeben (wie Lesezeichen)
 - **Skills** sind Fähigkeiten, die Claude entdeckt und automatisch verwendet (wie ein Assistent, der Ihre Präferenzen kennt)
-- **Skill-Beschreibungen** fungieren als Anweisungen, die Claude sagen: „Verwende mich, wenn der Benutzer X sagt"
+- **Skill-Beschreibungen** fungieren als Anweisungen, die Claude sagen: „Verwende mich, wenn der Benutzer X sagt“
 - **Beide können koexistieren** - Verwenden Sie Slash-Befehle für schnelle, repetitive Aufgaben; verwenden Sie Skills für komplexe Workflows
 - **Skills skalieren besser** - Sie müssen sich keine Befehlsnamen merken; Claude entscheidet basierend auf dem Kontext
 

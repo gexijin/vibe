@@ -33,7 +33,7 @@ Das war's – Claude Code erkennt Git Bash beim Start automatisch.
 
 ## Schritt 2: Claude Code installieren
 
-- Klicken Sie auf die **Windows-Starttaste**
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste)
 - Geben Sie `PowerShell` ein und klicken Sie auf **Windows PowerShell**
 - Geben Sie im PowerShell-Fenster ein:
    ```
@@ -233,7 +233,7 @@ Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Einige F
 
 **Jetzt WSL installieren:**
 
-- Klicken Sie auf die **Windows-Starttaste** und geben Sie `PowerShell` ein
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste) und geben Sie `PowerShell` ein
 - **Klicken Sie mit der rechten Maustaste** auf **Windows PowerShell** und klicken Sie auf **Als Administrator ausführen**
 - Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?“
 - Geben Sie im PowerShell-Fenster ein:
@@ -247,7 +247,7 @@ Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Einige F
 
 ### b) Ubuntu einrichten
 
-Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu“ im Titel erscheinen. Falls nicht, klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol).
+Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu“ im Titel erscheinen. Falls nicht, klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste), geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol).
 
 - Warten Sie auf die Meldung: `Enter new UNIX username:`
 - Geben Sie einen Benutzernamen ein (nur Kleinbuchstaben und Zahlen, keine Leerzeichen) – zum Beispiel `john`
@@ -319,7 +319,7 @@ Je nach Sprache Ihres Windows erscheint diese Meldung auf Englisch („Please en
 - Führen Sie zuerst `wsl --update` aus, dann `wsl --install` erneut
 
 ### Ubuntu-Fenster öffnet sich nach dem Neustart nicht
-- Klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App, um sie manuell zu starten
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste), geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App, um sie manuell zu starten
 
 ## Benötigen Sie Hilfe?
 

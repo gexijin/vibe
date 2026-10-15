@@ -32,7 +32,7 @@ Alles über dieses Projekt passiert in diesem Ordner.
 
 ## Schritt 2: VS Code starten
 Für Windows:
-- Klicken Sie auf die **Windows-Starttaste** (unten links auf Ihrem Bildschirm)
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo unten links in der Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
 - VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
@@ -64,7 +64,7 @@ Für Mac:
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 5: Erste Recherche
 

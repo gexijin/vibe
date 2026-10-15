@@ -28,7 +28,7 @@ Sie möchten Investitionsmöglichkeiten vergleichen, aber die Recherche mehrerer
 Ihr `stock-report` Skill befindet sich im selben Projektordner, den Sie für das Skill-Tutorial verwendet haben – öffnen Sie diesen Ordner erneut, anstatt einen neuen anzulegen.
 
 **Windows (PowerShell):**
-- Klicken Sie auf die **Windows-Starttaste**, geben Sie `PowerShell` ein und öffnen Sie es
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste), geben Sie `PowerShell` ein und öffnen Sie es
 - Geben Sie diesen Befehl ein:
   ```powershell
   cd ~/Documents/test_claude
@@ -49,7 +49,7 @@ Ihr `stock-report` Skill befindet sich im selben Projektordner, den Sie für das
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 2: Überprüfen, ob der Aktienberichts-Skill existiert
 
@@ -69,8 +69,8 @@ So arbeiten Subagenten und Skills zusammen:
 
 | Komponente | Zweck | Beispiel |
 |-----------|---------|---------|
-| **Skill** | Sammelt Rohdaten über ein Unternehmen | „Generiere Bericht für Apple: Produkte, Finanzen, Management, Analysten" |
-| **Subagent** | Verwendet Skill-Daten, um ein Ziel zu erreichen | „Hole Berichte für Apple und Microsoft, bewerte beide, empfiehl, in welches investiert werden soll" |
+| **Skill** | Sammelt Rohdaten über ein Unternehmen | „Generiere Bericht für Apple: Produkte, Finanzen, Management, Analysten“ |
+| **Subagent** | Verwendet Skill-Daten, um ein Ziel zu erreichen | „Hole Berichte für Apple und Microsoft, bewerte beide, empfiehl, in welches investiert werden soll“ |
 
 **Wichtiger Unterschied:**
 - **Skill = Tool**, das Recherche durchführt
@@ -168,15 +168,15 @@ Der Subagent zeigt dies möglicherweise im Terminal an oder generiert eine Markd
 
 Jetzt, da Sie einen funktionierenden Stock-Picker-Subagenten haben, versuchen Sie diese Erweiterungen:
 
-- **3+ Aktien vergleichen**: „Vergleiche AAPL, MSFT und GOOGL", um zu sehen, wie der Subagent mehr Optionen handhabt
+- **3+ Aktien vergleichen**: „Vergleiche AAPL, MSFT und GOOGL“, um zu sehen, wie der Subagent mehr Optionen handhabt
 - **Bewertungsgewichte anpassen**: Bearbeiten Sie die Subagenten-Datei, um zu ändern, wie stark jede Kategorie zählt (z.B. machen Sie Wachstum zu 40%, wenn Sie Wachstumsaktien bevorzugen)
-- **Andere Subagenten erstellen**: Bauen Sie einen „code-reviewer" Subagenten, „bug-hunter" Subagenten oder „document-writer" Subagenten für verschiedene Aufgaben
+- **Andere Subagenten erstellen**: Bauen Sie einen „code-reviewer“ Subagenten, „bug-hunter“ Subagenten oder „document-writer“ Subagenten für verschiedene Aufgaben
 
 ## Fehlerbehebung
 
-- **Subagent aktiviert sich nicht**: Stellen Sie sicher, dass Ihre Anfrage das Vergleichen von Unternehmen oder Investitionsentscheidungen erwähnt. Versuchen Sie: „Verwende den stock-picker Subagenten zum Vergleich..."
+- **Subagent aktiviert sich nicht**: Stellen Sie sicher, dass Ihre Anfrage das Vergleichen von Unternehmen oder Investitionsentscheidungen erwähnt. Versuchen Sie: „Verwende den stock-picker Subagenten zum Vergleich...“
 - **Skill nicht gefunden**: Überprüfen Sie, ob `.claude/skills/stock-report/SKILL.md` existiert. Starten Sie Claude Code neu, wenn Sie ihn gerade hinzugefügt haben.
-- **Unvollständige Bewertungen**: Bitten Sie den Subagenten, „weiterzumachen" oder „die Bewertungen für jede Kategorie detaillierter zu erklären"
+- **Unvollständige Bewertungen**: Bitten Sie den Subagenten, „weiterzumachen“ oder „die Bewertungen für jede Kategorie detaillierter zu erklären“
 - **Subagent nach dem Erstellen nicht gefunden**: Überprüfen Sie, ob `.claude/agents/stock-picker.md` existiert. Wenn ja, beenden Sie Claude Code (zweimal Strg+C) und starten Sie es mit `claude` neu. Ein ganz neuer `.claude/agents/`-Ordner wird erst nach einem Neustart erkannt.
 
 ## Workflow-Überblick

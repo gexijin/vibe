@@ -55,11 +55,11 @@ Geben Sie diesen Befehl ein:
 claude
 ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 3: Claude Dateien ohne Rückfrage bearbeiten lassen
 
-Sehen Sie sich die Statuszeile direkt unter der Claude Code-Eingabeaufforderung an:
+Sehen Sie sich die Statuszeile direkt unter der Eingabezeile von Claude Code an:
 
 - Wenn dort **auto mode on** oder **accept edits on** steht, ist alles bereit
 - Wenn dort **manual mode on** steht, drücken Sie **Shift+Tab**, bis **accept edits on** angezeigt wird
@@ -177,7 +177,7 @@ Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, 
 
 **Andere verfügbare Skills aus Anthropics Repository:**
 - Durchsuchen Sie den vollständigen Katalog unter [github.com/anthropics/skills](https://github.com/anthropics/skills)
-- Fragen Sie Claude „Welche Skills sind im Anthropic Repository verfügbar?", um die aktuelle Liste zu sehen
+- Fragen Sie Claude „Welche Skills sind im Anthropic Repository verfügbar?“, um die aktuelle Liste zu sehen
 
 ## Nächste Schritte
 

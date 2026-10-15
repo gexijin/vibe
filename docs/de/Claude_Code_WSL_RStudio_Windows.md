@@ -34,7 +34,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 - Wählen Sie **New Directory**
 - Wählen Sie **New Project**
 - Geben Sie als **Directory name** ein: `test_claude`
-- Klicken Sie auf **Browse** neben „Create project as subdirectory of:"
+- Klicken Sie auf **Browse** neben „Create project as subdirectory of:“
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
 - Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
 - Klicken Sie auf **Create Project**
@@ -87,7 +87,7 @@ summary(iris)
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 8: Claude um ein Streudiagramm bitten
 
@@ -175,9 +175,9 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge vs. -breit
 ## Fehlerbehebung
 
 - **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**, um die Datei manuell neu zu laden.
-- **„Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt"** (englisch: „The term 'claude' is not recognized") - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Schließen Sie PowerShell, öffnen Sie ein neues Fenster und versuchen Sie es erneut.
+- **„Die Benennung “claude" wurde nicht als Name eines Cmdlet ... erkannt"** (englisch: „The term 'claude' is not recognized“) - Stellen Sie sicher, dass Sie die Installationsanleitung abgeschlossen haben. Schließen Sie PowerShell, öffnen Sie ein neues Fenster und versuchen Sie es erneut.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
-- **„Der Pfad ... kann nicht gefunden werden, da er nicht vorhanden ist"** (englisch: „Cannot find path ... because it does not exist") **in Schritt 6** - Ihr Projekt liegt möglicherweise in einem anderen Ordner. In RStudio zeigt der Pfad oben im **Files**-Bereich, wo sich `test_claude` befindet. Wenn Ihr Ordner **Dokumente** (Documents) über OneDrive gesichert wird, versuchen Sie `cd ~\OneDrive\Documents\test_claude`. Wenn der Pfad Leerzeichen enthält, setzen Sie ihn in Anführungszeichen, zum Beispiel: `cd "C:\Users\Ihr Name\OneDrive\Documents\test_claude"`
+- **„Der Pfad ... kann nicht gefunden werden, da er nicht vorhanden ist“** (englisch: „Cannot find path ... because it does not exist“) **in Schritt 6** - Ihr Projekt liegt möglicherweise in einem anderen Ordner. In RStudio zeigt der Pfad oben im **Files**-Bereich, wo sich `test_claude` befindet. Wenn Ihr Ordner **Dokumente** (Documents) über OneDrive gesichert wird, versuchen Sie `cd ~\OneDrive\Documents\test_claude`. Wenn der Pfad Leerzeichen enthält, setzen Sie ihn in Anführungszeichen, zum Beispiel: `cd "C:\Users\Ihr Name\OneDrive\Documents\test_claude"`
 - **Claude Code ist bei der ersten Anfrage langsam** - Warten Sie 30-60 Sekunden, bis Claude initialisiert ist. Nachfolgende Anfragen werden schneller sein.
 - **Sie verwenden stattdessen WSL?** - Wenn Sie den optionalen WSL/Ubuntu-Weg eingerichtet haben, öffnen Sie in den Schritten 5-16 statt PowerShell die App **Ubuntu** und navigieren Sie mit `cd /mnt/c/Users/IhrBenutzername/Documents/test_claude` zu Ihrem Projekt
 

@@ -34,7 +34,7 @@ Sie haben RStudio auf dem Mac zum Ausführen von R-Code und Claude Code für KI-
 - Wählen Sie **New Directory**
 - Wählen Sie **New Project**
 - Geben Sie als **Directory name** ein: `test_claude`
-- Klicken Sie auf **Browse** neben „Create project as subdirectory of:"
+- Klicken Sie auf **Browse** neben „Create project as subdirectory of:“
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
 - Klicken Sie auf **Öffnen** (englisch: **Open**)
 - Klicken Sie auf **Create Project**
@@ -90,7 +90,7 @@ summary(iris)
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 8: Claude um ein Streudiagramm bitten
 
@@ -177,9 +177,9 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
 ## Fehlerbehebung
 
 - **RStudio zeigt Dateiänderungen nicht an** - Klicken Sie auf **File > Reopen with Encoding...**, wählen Sie **UTF-8** und klicken Sie auf **OK**, um die Datei manuell neu zu laden, oder schließen Sie die Datei und öffnen Sie sie erneut.
-- **„claude: command not found"** - Stellen Sie sicher, dass Sie die [Installationsanleitung](./Install_Claude_Code_MacOS) abgeschlossen haben. Versuchen Sie, ein neues Terminal-Fenster zu öffnen, oder schließen Sie Terminal vollständig (**Command (⌘) + Q**) und öffnen Sie es erneut.
+- **„claude: command not found“** - Stellen Sie sicher, dass Sie die [Installationsanleitung](./Install_Claude_Code_MacOS) abgeschlossen haben. Versuchen Sie, ein neues Terminal-Fenster zu öffnen, oder schließen Sie Terminal vollständig (**Command (⌘) + Q**) und öffnen Sie es erneut.
 - **Plots erscheinen nicht** - Stellen Sie sicher, dass ggplot2 installiert ist. Führen Sie `install.packages("ggplot2")` in der RStudio-Konsole aus, wenn nötig.
-- **„No such file or directory"** - Überprüfen Sie, ob Sie den Pfad in Schritt 6 korrekt eingegeben haben. Versuchen Sie den Drag-and-Drop-Trick: Ziehen Sie den test_claude-Ordner aus dem Finder ins Terminal, nachdem Sie `cd ` (mit einem Leerzeichen) eingegeben haben.
+- **„No such file or directory“** - Überprüfen Sie, ob Sie den Pfad in Schritt 6 korrekt eingegeben haben. Versuchen Sie den Drag-and-Drop-Trick: Ziehen Sie den test_claude-Ordner aus dem Finder ins Terminal, nachdem Sie `cd ` (mit einem Leerzeichen) eingegeben haben.
 - **Claude Code ist bei der ersten Anfrage langsam** - Warten Sie 30-60 Sekunden, bis Claude initialisiert ist. Nachfolgende Anfragen werden schneller sein.
 
 ## Mac-Tastenkombinationen

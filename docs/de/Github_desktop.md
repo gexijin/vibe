@@ -6,7 +6,7 @@ lang: "de"
 
 # Erste Schritte mit Versionskontrolle
 
-Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen. Sie können sich nicht erinnern, was Sie geändert haben, und wünschen sich, Sie könnten zum funktionierenden Stand zurückkehren. Versionskontrolle ist wie Speicherpunkte in einem Videospiel – jedes Mal, wenn Sie Ihre Arbeit „committen", erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. [GitHub](https://github.com) speichert Ihre Speicherpunkte in der Cloud, sodass Ihr Code sicher gesichert und von jedem Computer aus zugänglich ist.
+Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen. Sie können sich nicht erinnern, was Sie geändert haben, und wünschen sich, Sie könnten zum funktionierenden Stand zurückkehren. Versionskontrolle ist wie Speicherpunkte in einem Videospiel – jedes Mal, wenn Sie Ihre Arbeit „committen“, erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. [GitHub](https://github.com) speichert Ihre Speicherpunkte in der Cloud, sodass Ihr Code sicher gesichert und von jedem Computer aus zugänglich ist.
 
 ## Wichtige Konzepte
 
@@ -100,7 +100,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 
 - Klicken Sie auf die blaue Schaltfläche **Publish repository** oben
 - Behalten Sie den Namen bei
-- Deaktivieren Sie „Keep this code private", wenn Sie möchten, dass andere es sehen können (optional)
+- Deaktivieren Sie „Keep this code private“, wenn Sie möchten, dass andere es sehen können (optional)
 - Klicken Sie auf **Publish Repository**
 
 Ihr Code ist jetzt online gesichert unter: `https://github.com/IHR-BENUTZERNAME/mein-erstes-projekt`
@@ -115,7 +115,7 @@ Ihr Code ist jetzt online gesichert unter: `https://github.com/IHR-BENUTZERNAME/
 
 - **Kann mich nicht bei GitHub anmelden** - Überprüfen Sie Ihre Internetverbindung. Versuchen Sie, sich zuerst auf github.com anzumelden, um zu verifizieren, dass Ihre Anmeldedaten funktionieren.
 - **Änderungen erscheinen nicht in GitHub Desktop** - Stellen Sie sicher, dass Sie Ihre Dateien gespeichert haben. Klicken Sie kurz in ein anderes Programm und dann wieder in GitHub Desktop, oder starten Sie GitHub Desktop neu.
-- **Push schlägt fehl mit „rejected"-Fehler** - Jemand anderes hat Änderungen gepusht. Klicken Sie auf **Fetch origin**, dann auf **Pull origin** und danach erneut auf **Push origin**.
+- **Push schlägt fehl mit „rejected“-Fehler** - Jemand anderes hat Änderungen gepusht. Klicken Sie auf **Fetch origin**, dann auf **Pull origin** und danach erneut auf **Push origin**.
 
 ## Workflow-Überblick
 
