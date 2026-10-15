@@ -16,7 +16,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- [VS Code में R](./R_Coding_VS_Code_Guide) ट्यूटोरियल पूरा किया हो - R को VS Code में काम करना चाहिए
+- [VS Code में R चलाएँ](./R_Coding_VS_Code_Guide) ट्यूटोरियल पूरा किया हो - R को VS Code में काम करना चाहिए
 - [Mac पर Claude Code इंस्टॉल करना](./Install_Claude_Code_MacOS) ट्यूटोरियल पूरा किया हो - Claude Code CLI इंस्टॉल होना चाहिए
 - Claude Pro/Max सब्सक्रिप्शन या Anthropic API key
 - 20-30 मिनट
