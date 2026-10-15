@@ -17,7 +17,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 
 ## Was Sie benötigen
 
-- Windows-, macOS- oder Linux-Computer
+- Ein Windows- oder Mac-Computer (GitHub Desktop läuft nicht unter Linux)
 - Internetverbindung
 - E-Mail-Adresse für GitHub-Konto
 - 15-20 Minuten
@@ -49,7 +49,8 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 
 - Öffnen Sie GitHub Desktop
 - Klicken Sie auf **Sign in to GitHub.com**
-- Ihr Browser öffnet sich – klicken Sie auf **Authorize desktop**
+- Ihr Browser öffnet sich – melden Sie sich an, falls Sie dazu aufgefordert werden, und klicken Sie dann auf **Authorize desktop**
+- Wenn Ihr Browser fragt, ob **GitHub Desktop** geöffnet werden soll, klicken Sie auf **Öffnen** bzw. **Zulassen** (Open / Allow)
 - Kehren Sie zu GitHub Desktop zurück
 - Klicken Sie auf **Finish**, um die Einrichtung abzuschließen
 
@@ -113,8 +114,8 @@ Ihr Code ist jetzt online gesichert unter: `https://github.com/IHR-BENUTZERNAME/
 ## Fehlerbehebung
 
 - **Kann mich nicht bei GitHub anmelden** - Überprüfen Sie Ihre Internetverbindung. Versuchen Sie, sich zuerst auf github.com anzumelden, um zu verifizieren, dass Ihre Anmeldedaten funktionieren.
-- **Änderungen erscheinen nicht in GitHub Desktop** - Stellen Sie sicher, dass Sie Ihre Dateien gespeichert haben. Klicken Sie auf **Repository** → **Refresh** oder starten Sie GitHub Desktop neu.
-- **Push schlägt fehl mit „rejected"-Fehler** - Jemand anderes hat Änderungen gepusht. Klicken Sie zuerst auf **Fetch origin**, dann versuchen Sie erneut zu pushen.
+- **Änderungen erscheinen nicht in GitHub Desktop** - Stellen Sie sicher, dass Sie Ihre Dateien gespeichert haben. Klicken Sie kurz in ein anderes Programm und dann wieder in GitHub Desktop, oder starten Sie GitHub Desktop neu.
+- **Push schlägt fehl mit „rejected"-Fehler** - Jemand anderes hat Änderungen gepusht. Klicken Sie auf **Fetch origin**, dann auf **Pull origin** und danach erneut auf **Push origin**.
 
 ## Workflow-Überblick
 

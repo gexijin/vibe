@@ -42,7 +42,7 @@ Erstellen Sie eine einfache Timer-App mit Claude Code und verfolgen Sie alle Än
 - Füllen Sie aus:
   - **Name:** `test_claude`
   - **Description:** `Eine Timer-App erstellt mit Claude Code`
-  - **Local Path:** Dokumente-Ordner
+  - **Local Path:** Klicken Sie auf **Choose...** und wählen Sie Ihren Ordner **Dokumente** (Documents) aus (standardmäßig ist hier ein Ordner `GitHub` innerhalb von Dokumente eingetragen – ändern Sie das also)
   - **Aktivieren Sie** „Initialize this repository with a README"
 - Klicken Sie auf **Create Repository**
 - Klicken Sie oben auf **Publish repository**
@@ -65,6 +65,7 @@ Sie haben jetzt ein lokales Projekt und ein Cloud-Backup auf GitHub.
 Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
 
 - Geben Sie diese Anfrage ein:
+
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
   Sie sollte haben:
@@ -181,7 +182,7 @@ Claude überprüft Änderungen, schreibt eine Commit-Nachricht, committet und pu
 
 - In Claude Code:
   ```
-  Welche Dateien habe ich geändert?
+  Was hat mein letzter Commit geändert?
   ```
 
 Claude erklärt Ihre Änderungen in einfacher Sprache.
@@ -192,10 +193,10 @@ Claude erklärt Ihre Änderungen in einfacher Sprache.
 
 - Klicken Sie in **GitHub Desktop** auf den Tab **History**
 
-Sie sehen:
-- Initial commit (README)
+Sie sehen (der neueste steht oben):
+- Claudes Commit für die Tonbenachrichtigung (der Wortlaut ist jedes Mal anders; Claude schreibt die Nachricht möglicherweise auf Englisch oder auf Deutsch)
 - Erstelle erste Timer-App mit Start/Stopp-Funktionalität
-- Claudes Commit für die Tonbenachrichtigung (Claude schreibt die Nachricht möglicherweise auf Englisch, z. B. „Add improved sound notification“, oder auf Deutsch)
+- Initial commit
 
 Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie haben ihn verworfen! Nur funktionierender Code hat es in Ihre Commits geschafft.
 

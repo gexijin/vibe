@@ -18,7 +18,7 @@ Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien 
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS)
-- 30 Minuten
+- 20-30 Minuten
 
 ## Schritt 1: Terminal öffnen
 
@@ -111,7 +111,8 @@ Claude initialisiert ein Git-Repository in Ihrem Ordner (dauert 2-5 Sekunden). S
 
 ## Schritt 8: Die Timer-App erstellen
 
-- Geben Sie in Claude Code ein:
+- Kopieren Sie in Claude Code diese gesamte Anfrage und fügen Sie sie ein (beim Einfügen bleiben alle Zeilen zusammen; wenn Sie Enter drücken, würde sie zu früh abgeschickt):
+
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
   Sie soll haben:
@@ -182,7 +183,7 @@ Manchmal funktioniert KI-Code nicht und Sie müssen von Ihrem letzten Speicherpu
   ```
   Verwirf diese Änderungen.
   ```
-- Claude zeigt ein Menü mit Optionen wie **Yes** und **No** an – wählen Sie mit den Pfeiltasten **Yes** aus (oder drücken Sie die Zahl neben **Yes**) und drücken Sie dann **Enter**
+- Claude bittet Sie meist zuerst um eine Bestätigung. Wenn ein Menü erscheint, wählen Sie **Yes** (mit den Pfeiltasten oder der Zahl daneben) und drücken Sie **Enter**. Wenn Claude in einer Nachricht nachfragt, tippen Sie `ja, verwirf die Änderungen an timer.html` und drücken Sie **Enter**
 - Aktualisieren Sie Ihren Browser – die 15-Minuten-Schaltfläche verschwindet
 
 Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioniert wieder mit nur den 1- und 5-Minuten-Schaltflächen!
@@ -229,6 +230,7 @@ Beachten Sie, dass der 15-Minuten-Schaltflächen-Versuch nicht da ist – Sie ha
 ## Schritt 17: Den Code untersuchen
 
 - Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Quelltext anzeigen** (oder drücken Sie `Option (⌥) + Command (⌘) + U`)
+- **Sie verwenden Safari?** Klicken Sie zuerst auf **Safari** > **Einstellungen** > **Erweitert** und aktivieren Sie **Funktionen für Webentwickler einblenden**. Klicken Sie dann mit der rechten Maustaste auf die Seite und wählen Sie **Seitenquelltext anzeigen**
 - Sie können den Quellcode dafür sehen.
 - Fragen Sie in Claude Code:
   ```
@@ -262,7 +264,7 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 - **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~/Documents/test_claude`)
 - **timer.html im Finder nicht gefunden:** Die Datei ist unter `/Users/IHR_BENUTZERNAME/Documents/test_claude/timer.html`
 - **Git-Befehle funktionieren nicht:** Stellen Sie sicher, dass Sie Schritt 2 abgeschlossen und Git installiert haben
-- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, dann auf den Tab **Console** klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
+- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, dann auf den Tab **Console** klicken; in Safari schalten Sie zuerst die Funktionen für Webentwickler ein, wie in Schritt 17 gezeigt, und wählen dann **Element-Informationen**), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
 
 ## Was Sie Claude fragen können
 
@@ -270,7 +272,7 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 - `Zeige mir das Diff` - Genau sehen, welcher Code sich geändert hat
 - `Erkläre, was der Timer-Code macht` - Die Implementierung verstehen
 - `Erstelle einen Branch namens experiment` - Riskante Änderungen sicher ausprobieren
-- `Gehe zurück zum vorherigen Commit` - Alles seit dem letzten Commit rückgängig machen
+- `Mach alles seit meinem letzten Commit rückgängig` - Änderungen verwerfen, die Sie noch nicht gespeichert haben
 
 Claude erledigt alle Git-Operationen durch natürliche Sprache – keine Befehle zum Auswendiglernen!
 
@@ -280,6 +282,6 @@ Claude erledigt alle Git-Operationen durch natürliche Sprache – keine Befehle
 - **Entwicklung:** Claude schreibt Code, Sie testen im Browser
 - **Versionskontrolle:** Claude erledigt alle Git-Operationen über einfache Anfragen
 - **Sicherheit:** Schlechte Änderungen jederzeit verwerfen, zu jedem vorherigen Commit zurückkehren
-- **Lokal:** Alles bleibt auf Ihrem Computer, kein Konto oder Internet erforderlich
+- **Lokal:** Ihr Git-Verlauf bleibt auf Ihrem Computer – kein GitHub-Konto nötig (Claude Code selbst braucht trotzdem Internet und Ihr Claude-Konto)
 
 Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 8. Dezember 2025.
