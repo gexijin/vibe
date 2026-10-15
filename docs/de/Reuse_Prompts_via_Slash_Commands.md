@@ -82,7 +82,7 @@ Verwenden Sie einen beliebigen Texteditor, um die Datei `stock-report.md` aus de
 
 Wenn Sie VS Code installiert haben (empfohlen):
 - Starten Sie VS Code
-- Wählen Sie unter **File** die Option **Open folder** und wählen Sie den Projektordner `Documents/test_claude`
+- Wählen Sie unter **File** die Option **Open Folder** und wählen Sie den Projektordner `Documents/test_claude`
 - Navigieren Sie im Datei-Explorer zu `.claude/commands` und klicken Sie auf die Datei `stock-report.md`, um sie zu öffnen
 
 Überprüfen Sie den Prompt und nehmen Sie bei Bedarf Änderungen an den Anweisungen vor.
@@ -95,7 +95,7 @@ Wenn Sie VS Code installiert haben (empfohlen):
   ```
   claude
   ```
-Testen Sie jetzt Ihren neuen Befehl mit einem echten Aktienticker:
+Testen Sie jetzt Ihren neuen Befehl mit einem echten Unternehmen:
 
 ```
 /stock-report Apple

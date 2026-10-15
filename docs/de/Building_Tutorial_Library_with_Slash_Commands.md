@@ -96,7 +96,7 @@ Die Kombination von Slash-Befehlen für strukturierte Workflows und Subagenten f
 
 ## Die Ergebnisse
 
-In weniger als zwei Wochen erstellte ich über 20 englische Tutorials zu Themen vom Anfänger- bis Fortgeschrittenenniveau, 81 übersetzte Tutorials in 3 Sprachen, konsistente Qualität durch automatisierte Review-Prozesse und wartbare Dokumentation mit Synchronisierungstools für Übersetzungen.
+In weniger als zwei Wochen erstellte ich über 20 englische Tutorials zu Themen vom Anfänger- bis Fortgeschrittenenniveau, 81 übersetzte Tutorials in fünf Sprachen, konsistente Qualität durch automatisierte Review-Prozesse und wartbare Dokumentation mit Synchronisierungstools für Übersetzungen.
 
 Alle Tutorials folgen derselben Struktur, demselben Schreibstil und denselben Formatierungskonventionen – weil sie durch denselben systematischen Prozess generiert wurden.
 
@@ -106,7 +106,7 @@ Alle Tutorials folgen derselben Struktur, demselben Schreibstil und denselben Fo
 - **Strukturieren Sie Befehle als mehrphasige Workflows.** Sagen Sie Claude, wie es das Problem durchdenken soll, nicht nur was es tun soll.
 - **Bauen Sie Qualitätskontrolle in den Prozess ein.** Erstellen Sie einen Review-Befehl neben Ihrem Generierungsbefehl.
 - **Machen Sie Befehle kollaborativ, nicht autonom.** Fügen Sie Genehmigungsschritte ein. Claude erledigt die mühsamen Teile; Sie treffen strategische Entscheidungen.
-- **Verwenden Sie Subagenten für Batch-Verarbeitung.** Wenn Sie viele Dokumente verarbeiten, sagen Sie explizit „Use subagents" in Ihrem Prompt. Drücken Sie zuerst Shift+Tab, um den Auto-Accept-Modus zu aktivieren – Subagenten fragen nicht nach Berechtigungen, was parallele Verarbeitung nahtlos macht.
+- **Verwenden Sie Subagenten für Batch-Verarbeitung.** Wenn Sie viele Dokumente verarbeiten, sagen Sie explizit „Use subagents" in Ihrem Prompt. Achten Sie vorher darauf, dass die Statuszeile **accept edits on** oder **auto mode on** anzeigt (mit Shift+Tab wechseln Sie den Modus) – Subagenten fragen nicht nach Berechtigungen, was parallele Verarbeitung nahtlos macht.
 
 ## Fazit
 

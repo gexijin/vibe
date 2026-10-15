@@ -58,9 +58,12 @@ claude
 
 Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
 
-## Schritt 3: Auto-Genehmigung für Bearbeitungen aktivieren
+## Schritt 3: Claude Dateien ohne Rückfrage bearbeiten lassen
 
-Drücken Sie **Shift+Tab**, um den Auto-Genehmigungsmodus für Bearbeitungen zu aktivieren.
+Sehen Sie sich die Statuszeile direkt unter der Claude Code-Eingabeaufforderung an:
+
+- Wenn dort **auto mode on** oder **accept edits on** steht, ist alles bereit
+- Wenn dort **manual mode on** steht, drücken Sie **Shift+Tab**, bis **accept edits on** angezeigt wird
 
 Dies ermöglicht Claude, Dateien zu erstellen und zu ändern, ohne jedes Mal um Erlaubnis zu fragen.
 
@@ -182,7 +185,7 @@ Das Muster: Definieren Sie, wann Claude automatisch helfen soll, nicht nur Short
 
 - **Skill aktiviert sich nicht:** Überprüfen Sie das `description`-Feld in `SKILL.md` – es muss Auslösewörter enthalten, die mit Ihrer Frage zusammenhängen
 - **Skill aktiviert sich zu oft:** Machen Sie die Beschreibung spezifischer darüber, wann er verwendet werden soll
-- **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (versteckter Ordner – aktivieren Sie „Versteckte Dateien anzeigen" in Ihrem Datei-Explorer)
+- **Skill-Ordner nicht gefunden:** Skills befinden sich in `.claude/skills/` (ein versteckter Ordner: Der Explorer von VS Code zeigt ihn an; unter Windows wählen Sie im **Datei-Explorer** (File Explorer) **Ansicht > Einblenden > Ausgeblendete Elemente** (View > Show > Hidden items); im Finder auf dem Mac drücken Sie **Cmd+Shift+.**)
 - **Änderungen an SKILL.md funktionieren nicht:** Skills werden automatisch geladen, wenn sie geändert werden – kein Neustart nötig. Wenn es immer noch nicht funktioniert, überprüfen Sie die YAML-Formatierung
 
 ## Workflow-Überblick
