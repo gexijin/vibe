@@ -6,7 +6,7 @@ lang: "de"
 
 # Erste Schritte mit VS Code
 
-Sie möchten Code schreiben, aber Notepad oder TextEdit fühlt sich einschränkend an. Sie brauchen etwas, das Ihnen hilft, schneller zu programmieren – mit Syntax-Hervorhebung, Autovervollständigung und integrierten Tools. **VS Code ist wie ein intelligentes Notizbuch für Code** – es versteht, was Sie schreiben, und hilft Ihnen dabei. [Visual Studio Code](https://code.visualstudio.com) ist kostenlos, läuft auf jedem Betriebssystem und wird von Millionen von Entwicklern verwendet.
+Sie möchten Code schreiben, aber der **Editor** von Windows (Notepad) oder TextEdit wirkt einschränkend. Sie brauchen etwas, das Ihnen hilft, schneller zu programmieren – mit Syntax-Hervorhebung, Autovervollständigung und integrierten Tools. **VS Code ist wie ein intelligentes Notizbuch für Code** – es versteht, was Sie schreiben, und hilft Ihnen dabei. [Visual Studio Code](https://code.visualstudio.com) ist kostenlos, läuft auf jedem Betriebssystem und wird von Millionen von Entwicklern verwendet.
 
 ## Wichtige Konzepte
 
@@ -27,7 +27,7 @@ Sie möchten Code schreiben, aber Notepad oder TextEdit fühlt sich einschränke
 - Gehen Sie zu [code.visualstudio.com](https://code.visualstudio.com)
 - Klicken Sie auf die Schaltfläche **Download** (es erkennt Ihr Betriebssystem)
 - Führen Sie das Installationsprogramm aus:
-   - **Windows:** Doppelklicken Sie auf die `.exe`, klicken Sie durch die Eingabeaufforderungen auf **Weiter**
+   - **Windows:** Doppelklicken Sie auf die `.exe` und klicken Sie sich mit **Weiter** (Next) durch die Installationsschritte
    - **Mac:** Öffnen Sie die `.dmg`, ziehen Sie VS Code in **Programme**
    - **Linux:** Folgen Sie den Anweisungen für Ihren Paketmanager
 - Starten Sie VS Code
@@ -129,10 +129,10 @@ VS Code enthält [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilo
 - Öffnen Sie die Datei `README.md` (oder eine andere Datei in Ihrem Projekt)
 - Klicken Sie in der Titelleiste auf **Chat** → **Open Chat** (oder drücken Sie `Strg+Alt+I` unter Windows/Linux, `Ctrl+Cmd+I` auf Mac)
 - Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem **GitHub-Konto** an (ein kostenloser Plan ist verfügbar)
-- Geben Sie im Chat-Panel ein: „Erkläre diese Datei"
-- Drücken Sie **Eingabe**
+- Geben Sie im Chat-Panel ein: „Erkläre diese Datei“
+- Drücken Sie **Enter**
 
-GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es bitten, neuen Code zu schreiben, Fehler zu beheben oder Fragen zu beantworten wie „Wie füge ich weitere Funktionen hinzu?"
+GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es bitten, neuen Code zu schreiben, Fehler zu beheben oder Fragen zu beantworten wie „Wie füge ich weitere Funktionen hinzu?“
 
 **Tipp:** Für [Inline-Bearbeitung](https://code.visualstudio.com/docs/chat/inline-chat) markieren Sie Code in einer beliebigen Datei und drücken Sie `Strg+I` (Windows/Linux) oder `Cmd+I` (Mac), um Copilot zu bitten, nur diesen Abschnitt zu ändern, zu reparieren oder zu erklären.
 
@@ -146,8 +146,8 @@ GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es b
 
 - **Vorschau wird nicht angezeigt:** Stellen Sie sicher, dass die Markdown Preview Enhanced-Erweiterung installiert ist und Sie eine `.md`-Datei geöffnet haben
 - **Terminal zeigt falsches Verzeichnis:** Klicken Sie auf das Papierkorb-Symbol im Terminal-Panel, dann klicken Sie auf **Terminal** → **New Terminal**
-- **Chat-Menü nicht sichtbar:** Die KI-Funktionen sind möglicherweise ausgeschaltet. Öffnen Sie die Einstellungen (drücken Sie `Strg+,` unter Windows/Linux oder `Cmd+,` auf dem Mac), suchen Sie nach `disable AI features` und entfernen Sie das Häkchen. Bewegen Sie dann die Maus über das Copilot-Symbol in der Statusleiste (unten) und wählen Sie **Use AI Features**
-- **Erweiterungen funktionieren nicht:** Klicken Sie auf **View** → **Command Palette**, geben Sie „reload window" ein und wählen Sie **Developer: Reload Window**
+- **Chat-Menü nicht sichtbar:** Die KI-Funktionen sind möglicherweise ausgeschaltet. Öffnen Sie die **Settings** (Einstellungen; drücken Sie `Strg+,` unter Windows/Linux oder `Cmd+,` auf dem Mac), suchen Sie nach `disable AI features` und entfernen Sie das Häkchen. Bewegen Sie dann die Maus über das Copilot-Symbol in der Statusleiste (unten) und wählen Sie **Use AI Features**
+- **Erweiterungen funktionieren nicht:** Klicken Sie auf **View** → **Command Palette**, geben Sie „reload window“ ein und wählen Sie **Developer: Reload Window**
 
 ## Der komplette Workflow
 
@@ -162,7 +162,7 @@ GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es b
 
 - **Andere Dateitypen ausprobieren:** Erstellen Sie `.html`-, `.css`-, `.js`- oder `.py`-Dateien und sehen Sie VS Codes Syntax-Hervorhebung
 - **KI-Funktionen erkunden:** Bitten Sie KI, Code zu schreiben, Fehler zu beheben oder Verbesserungen für Ihre Projekte vorzuschlagen
-- **Weitere Erweiterungen installieren:** Probieren Sie „Prettier" für Auto-Formatierung oder „GitLens" für Git-Funktionen
+- **Weitere Erweiterungen installieren:** Probieren Sie „Prettier“ für Auto-Formatierung oder „GitLens“ für Git-Funktionen
 - **Tastenkürzel lernen:** Klicken Sie auf **Help** → **Keyboard Shortcuts Reference**, um Ihren Workflow zu beschleunigen
 
 ---

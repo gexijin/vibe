@@ -17,7 +17,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code unter Windows installieren](./Install_CLAUDE_Code_Win)
-- Abgeschlossenes Tutorial [VS Code Grundlagen](./VS_Code_Getting_Started)
+- Abgeschlossenes Tutorial [Erste Schritte mit VS Code](./VS_Code_Getting_Started)
 - 10-15 Minuten
 
 ## Schritt 1: Einen Projektordner erstellen
@@ -29,7 +29,7 @@ Sie haben Claude Code auf Ihrem Windows-Rechner installiert – jetzt möchten S
 
 ## Schritt 2: VS Code starten
 
-- Klicken Sie auf die **Windows-Starttaste** (das Windows-Logo in Ihrer Taskleiste)
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in Ihrer Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
 - VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
@@ -73,9 +73,9 @@ Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 
 ## Nächste Schritte
 
-- Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht"
-- Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet"
-- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?"
+- Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht“
+- Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet“
+- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?“
 - Die Claude Code-Erweiterung haben Sie bereits im Installations-Tutorial installiert – klicken Sie auf das Spark-Symbol oben rechts im Editor, um statt im Terminal in einem Panel mit Inline-Diffs mit Claude zu chatten
 
 ## Fehlerbehebung

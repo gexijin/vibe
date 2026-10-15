@@ -56,7 +56,7 @@ Passen Sie den Pfad an, falls Sie es woanders entpackt haben.
 
 ## Schritt 3: Claude Code aus dem Ordner starten
 
-In Ihrem Terminal (stellen Sie sicher, dass Sie sich im Ordner data_projects befinden), geben Sie ein:
+Geben Sie in Ihrem Terminal Folgendes ein (stellen Sie sicher, dass Sie sich im Ordner data_projects befinden):
 
 ```bash
 claude
@@ -112,7 +112,7 @@ Zeigt Dokumentation zur Verwendung von Claude Code an.
 
 
 **Kontextverbrauch prüfen:**
-Es ist wichtig, den Kontext zu verwalten, Claudes „Arbeitsspeicher".
+Es ist wichtig, den Kontext zu verwalten, Claudes „Arbeitsspeicher“.
 
 ```
 /context
@@ -194,7 +194,7 @@ Claude kann auf vielfältige Weise Aktionen ausführen, indem es Terminal-Befehl
   ```
 - Daten finden und herunterladen
   ```
-  Lade den Weindatenqualitätsdatensatz von UCI herunter. Lege ihn in einen neuen Ordner namens wine.
+  Lade den Wine-Quality-Datensatz von UCI herunter. Lege ihn in einen neuen Ordner namens wine.
   ```
 
 - Code ausführen
@@ -220,7 +220,7 @@ Jetzt, da Sie die Grundlagen kennen, probieren Sie diese selbst aus:
 
 ## Fehlerbehebung
 
-- **„Command not found"-Fehler** - Claude Code ist nicht installiert oder nicht in Ihrem PATH. Folgen Sie erneut dem Installations-Tutorial für [Windows](Install_CLAUDE_Code_Win.md) oder [Mac](Install_Claude_Code_MacOS.md), oder führen Sie das Installationsprogramm direkt erneut aus: `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) oder `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
+- **„Command not found“-Fehler** - Claude Code ist nicht installiert oder nicht in Ihrem PATH. Folgen Sie erneut dem Installations-Tutorial für [Windows](Install_CLAUDE_Code_Win.md) oder [Mac](Install_Claude_Code_MacOS.md), oder führen Sie das Installationsprogramm direkt erneut aus: `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) oder `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude gibt veraltete Informationen** - Löschen Sie den Kontext mit `/clear` und fragen Sie erneut. Lange Gespräche können Claudes Speicher füllen.
 - **Dateiänderungen funktionieren nicht** - Stellen Sie sicher, dass Sie Schreibrechte in Ihrem Projektordner haben. Wenn Claude um Erlaubnis fragt, wählen Sie im angezeigten Menü **Yes** aus.
 - **Kontext füllt sich schnell** - Verwenden Sie `/context`, um die Nutzung zu überprüfen. Wenn er fast voll ist, verwenden Sie `/clear`, um ein neues Gespräch mit einer sauberen Ausgangslage zu beginnen.
