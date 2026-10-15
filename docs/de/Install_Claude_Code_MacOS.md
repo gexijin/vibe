@@ -32,9 +32,9 @@ Diese Anleitung führt Sie Schritt für Schritt durch die Installation, mit deta
 
 ## Schritt 1: Terminal öffnen
 
-- Klicken Sie auf das **Launchpad**-Symbol in Ihrem Dock (das Symbol mit den bunten Quadraten)
-- Geben Sie `Terminal` in das Suchfeld oben ein
-- Klicken Sie auf **Terminal** (ein schwarzes quadratisches Symbol)
+- Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
+- Geben Sie `Terminal` ein
+- Drücken Sie die **Return**-Taste (oder klicken Sie in den Ergebnissen auf **Terminal**, ein schwarzes quadratisches Symbol)
 - Ein Terminal-Fenster öffnet sich mit einem blinkenden Cursor
 
 **Tipp:** Lassen Sie Terminal für die nächsten Schritte geöffnet.
@@ -143,6 +143,7 @@ export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
 export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
 export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
@@ -200,9 +201,9 @@ Claude Code, das über den nativen Installer installiert wurde, aktualisiert sic
 
 Nach dem Schließen von Terminal können Sie es so wieder öffnen:
 
-- Klicken Sie auf das **Launchpad**-Symbol in Ihrem Dock (das Symbol mit den bunten Quadraten)
-- Geben Sie `Terminal` in das Suchfeld oben ein
-- Klicken Sie auf **Terminal**
+- Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
+- Geben Sie `Terminal` ein
+- Drücken Sie die **Return**-Taste
 - Ein Terminal-Fenster öffnet sich
 
 ## Fehlerbehebung

@@ -88,7 +88,7 @@ Wenn die Seitenleiste geöffnet ist:
 - Geben Sie ein: „Erkläre mir dieses Projekt“
 - Drücken Sie die **Eingabetaste**
 
-Wenn Claude antwortet, können Sie loslegen.
+Wenn Claude antwortet, können Sie loslegen. Beim ersten Mal fordert die Seitenleiste Sie eventuell stattdessen auf, sich anzumelden: Folgen Sie den Anweisungen, oder verbinden Sie Ihr Konto in Schritt 4 weiter unten und versuchen Sie es dann erneut.
 
 > Tipp: Wenn die Seitenleiste immer noch fehlt, prüfen Sie, ob die Claude Code-Erweiterung installiert ist und VS Code neu gestartet wurde.
 
