@@ -139,11 +139,11 @@ Let's modify the app to see how development works.
 
 - Keep the app running
 - In VS Code, edit `R/app.R`
-- Find line 16: `titlePanel("Old Faithful Geyser Data")`
-- Change it to:
+- Find line 16: `titlePanel("Old Faithful Geyser Data"),`
+- Change only the text inside the quotes, and keep the comma at the end of the line:
 
 ```r
-titlePanel("My First R Docker App")
+titlePanel("My First R Docker App"),
 ```
 
 - Save the file (**File > Save**)
