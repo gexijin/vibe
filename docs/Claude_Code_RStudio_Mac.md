@@ -107,7 +107,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 
 - Switch back to RStudio (click the RStudio window or press **Command (⌘) + Tab**)
 - You may see a prompt saying the file has changed - click **Yes** to reload
-- If no prompt appears, click **File > Reopen with Encoding > UTF-8**
+- If the new code doesn't show up, click **File > Reopen with Encoding...**, choose **UTF-8**, and click **OK**
 - Highlight all code and click **Run**
 - A scatter plot appears in the **Plots** pane (bottom-right)
 - If you get an error about ggplot2, install it by typing `install.packages("ggplot2")` in the Console pane
@@ -169,13 +169,14 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
 - Click **File > Open File...**
 - Select `iris_report.Rmd` and click **Open**
 - Click the **Knit** button (with a yarn ball icon) at the top of the script pane
+- If RStudio says packages such as **rmarkdown** are required, click **Install** (or **Yes**) and wait for it to finish, then click **Knit** again
 - RStudio will generate an HTML report
 - The report opens in a new window showing your complete analysis with narrative text
 - The HTML file is saved in your project folder
 
 ## Troubleshooting
 
-- **RStudio doesn't show file changes** - Click **File > Reopen with Encoding > UTF-8** to manually reload the file, or close and reopen the file.
+- **RStudio doesn't show file changes** - Click **File > Reopen with Encoding...**, choose **UTF-8**, and click **OK** to manually reload the file, or close and reopen the file.
 - **"claude: command not found"** - Make sure you completed the [installation guide](./Install_Claude_Code_MacOS). Try opening a fresh Terminal window, or close Terminal completely (**Command (⌘) + Q**) and reopen it.
 - **Plots not appearing** - Make sure ggplot2 is installed. Run `install.packages("ggplot2")` in RStudio Console if needed.
 - **"No such file or directory"** - Check that you typed the path correctly in Step 6. Try using the drag-and-drop trick: drag the test_claude folder from Finder into Terminal after typing `cd ` (with a space).
@@ -211,4 +212,4 @@ The workflow is simple: write or edit code with Claude in Terminal, then immedia
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2024.
+Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 11, 2025.

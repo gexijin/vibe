@@ -35,14 +35,10 @@ You've set up R in VS Code and can write code manually. Now you want AI to help 
 - Click the **Extensions** icon in the left sidebar (four squares icon)
 - In the search box, type `Claude Code`
 - Find **Claude Code** by Anthropic and click **Install**
-- After installation, a Claude icon (sparkle) appears in the left sidebar
-- Click the Claude icon to open the chat panel
-- Click **Sign in to Claude Code** in the chat panel
-- Choose your authentication method:
-  - **Claude Pro/Max users**: Click **Sign in with Claude.ai**, authorize in browser, and copy the code back to VS Code
-  - **API key users**: Click **Use API Key** and paste your Anthropic API key
-- For detailed authentication steps, see the [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) guide (Step 3)
-- Once signed in, you'll see "Ready to help" in the chat panel
+- After installation, click **✻ Claude Code** in the status bar at the bottom-right of the window to open the Claude panel (once a file is open, you can also use the Spark icon at the top-right of the editor)
+- Click **Sign in** and finish signing in with your Claude account in the browser that opens
+- If you use an API key instead, set it up as shown in [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) (Step 3, Option B), then quit VS Code and open it again
+- Once signed in, you'll see a **Learn Claude Code** checklist. You can close it with the X
 
 ## Step 3: Create Initial R Script Manually
 
@@ -64,7 +60,7 @@ summary(iris)
 
 ## Step 4: Ask Claude to Add Scatter Plot
 
-- Click the **Claude** icon in the left sidebar to open the chat panel
+- Click the Spark icon at the top-right of the editor (or **✻ Claude Code** in the status bar) to open the Claude panel
 - In the chat box at the bottom, type:
 
 ```
@@ -81,7 +77,7 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 
 - Select all code in `iris_analysis.R`
 - Press `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (Mac)
-- A scatter plot appears in a separate graphics window
+- A scatter plot appears in a plot tab inside VS Code
 - You should see points colored by species (setosa, versicolor, virginica)
 
 ## Step 6: Ask Claude to Refine Plot
