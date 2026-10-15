@@ -20,7 +20,7 @@ Das ist etwas anderes als **Claude Code**, das Werkzeug, das in den übrigen Tut
 
 - Einen Computer mit Windows 10 (oder neuer) oder einen Mac (macOS 11 Big Sur oder neuer)
 - Eine Internetverbindung
-- Ein kostenloses oder kostenpflichtiges Claude.ai-Konto (falls Sie noch keines haben, können Sie es während der Einrichtung erstellen)
+- Ein kostenloses oder kostenpflichtiges Claude.ai-Konto (wie Sie eines erstellen, erfahren Sie unter [Was ist Anthropic und was ist Claude?](./What_Is_Anthropic_And_Claude.md))
 - 5 Minuten
 
 ## Schritt 1: Das Installationsprogramm herunterladen

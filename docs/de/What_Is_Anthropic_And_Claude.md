@@ -25,9 +25,9 @@ Bevor Sie etwas installieren, ist es hilfreich zu wissen, was Sie da eigentlich 
 
 - Gehen Sie zu [claude.ai](https://claude.ai)
 - Klicken Sie auf **Sign up**
-- Geben Sie Ihre E-Mail-Adresse ein und klicken Sie auf **Continue**
-- Sehen Sie in Ihrem E-Mail-Postfach nach einem Bestätigungscode und geben Sie ihn ein
-- Folgen Sie den Anweisungen auf dem Bildschirm, um Ihr Konto fertig zu erstellen
+- Geben Sie Ihre E-Mail-Adresse ein und klicken Sie auf **Continue with email** (oder klicken Sie auf **Continue with Google**)
+- Öffnen Sie die E-Mail von Anthropic und klicken Sie auf den Link darin (wenn Sie die E-Mail auf einem anderen Gerät öffnen, zum Beispiel auf Ihrem Smartphone, wird ein Code angezeigt – geben Sie diesen Code auf Ihrem Computer ein)
+- Folgen Sie den Anweisungen auf dem Bildschirm, um Ihr Konto fertig zu erstellen (möglicherweise werden Sie nach einer Telefonnummer gefragt, an die ein Code per SMS geschickt wird)
 
 ## Schritt 2: Ihre erste Nachricht senden
 
@@ -51,19 +51,19 @@ Claude merkt sich, worüber Sie in derselben Unterhaltung bereits gesprochen hab
 
 ## Schritt 4: Die Modellauswahl finden
 
-- Suchen Sie oben im Chatfenster nach einer Schaltfläche, auf der ein Modellname steht (zum Beispiel „Claude“)
-- Klicken Sie darauf, um eine kurze Liste der verfügbaren Modelle zu sehen
+- Suchen Sie unten rechts im Nachrichtenfeld, neben dem Senden-Pfeil, nach einer Schaltfläche, auf der ein Modellname steht (zum Beispiel „Sonnet“)
+- Klicken Sie darauf, um eine kurze Liste der verfügbaren Modelle zu sehen (klicken Sie auf **More models**, um die übrigen zu sehen)
 - Sie müssen hier nichts ändern – merken Sie sich nur, dass es dieses Menü gibt, denn in einigen späteren Tutorials werden Sie gebeten, ein bestimmtes Modell auszuwählen
 
 ## Nächste Schritte
 
-- **Claude Code installieren**: Holen Sie sich denselben KI-Assistenten in Ihre Programmierprojekte – mit [Claude Code unter Windows installieren](Install_CLAUDE_Code_Win) oder [Claude Code auf dem Mac installieren](Install_Claude_Code_MacOS)
+- **Claude Code installieren**: Holen Sie sich denselben KI-Assistenten in Ihre Programmierprojekte – mit [Claude Code unter Windows installieren](Install_CLAUDE_Code_Win) oder [Claude Code auf dem Mac installieren](Install_Claude_Code_MacOS). Claude Code erfordert ein kostenpflichtiges Claude-Abo (zum Beispiel Pro oder Max) oder ein Konto in der Anthropic Console – im kostenlosen Abo ist es nicht enthalten.
 - **Weiter chatten**: Bitten Sie Claude, Ihnen bei der Planung von etwas zu helfen, an dem Sie gerade arbeiten – einer E-Mail, einem Rezept oder einer Lernübersicht
 - **Einen schwierigeren Prompt ausprobieren**: Bitten Sie Claude, zwei Möglichkeiten für eine anstehende Entscheidung zu vergleichen, und sehen Sie, wie Claude seine Überlegungen erklärt
 
 ## Fehlerbehebung
 
-- **Keine Bestätigungs-E-Mail erhalten** - Sehen Sie in Ihrem Spam- oder Junk-Ordner nach; warten Sie eine Minute und klicken Sie bei Bedarf auf **Resend code**
+- **Keine Anmelde-E-Mail erhalten** - Sehen Sie in Ihrem Spam- oder Junk-Ordner nach; warten Sie eine Minute, gehen Sie dann zurück zu [claude.ai](https://claude.ai) und geben Sie Ihre E-Mail-Adresse erneut ein
 - **Seite lädt nicht oder sieht fehlerhaft aus** - Laden Sie die Seite neu oder probieren Sie einen anderen Browser wie Chrome oder Firefox
 - **Sie wissen nicht, was Sie eintippen sollen** - Fangen Sie einfach an: Bitten Sie Claude, ein Thema zu erklären, das Sie interessiert, oder lassen Sie sich bei etwas helfen, das Sie heute ohnehin erledigen
 
