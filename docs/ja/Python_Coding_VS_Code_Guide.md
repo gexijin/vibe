@@ -23,16 +23,17 @@ Pythonを書きたいけど、どのエディターを使えばいい？PyCharm�
 
 ## ステップ1：Python本体をインストール
 
-最新のパッケージとの互換性を確保するため、Python 3.8以降が必要です。
+pandasやStreamlitなどのパッケージの最新バージョンをインストールできるように、Python 3.11以降（python.orgの最新バージョンが最適）が必要です。
 
 - **Windows**:
-  - [python.org](https://www.python.org/downloads/)から最新のPythonをダウンロードします
+  - [python.org/downloads/windows](https://www.python.org/downloads/windows/)にアクセスし、最新のPython 3リリースの下にある**Windows installer (64-bit)**をクリックします（「install manager」ではありません）
   - インストーラーを実行します
   - **「Add python.exe to PATH」のチェックボックスにチェックを入れてから**、Install Nowをクリックします
-  - インストール場所を確認します（通常は`C:\Users\YourName\AppData\Local\Programs\Python\Python312`）
+  - インストール場所を確認します（通常は`C:\Users\YourName\AppData\Local\Programs\Python\Python312`。数字はPythonのバージョンに対応します）
 
 - **macOS**:
   - [python.org](https://www.python.org/downloads/)からダウンロードしてインストーラーを実行します
+  - python.orgのインストーラーが完了したら、**Finder > アプリケーション > Python 3.x**を開き、**Install Certificates.command**をダブルクリックします（これをしないと、ステップ7でインターネットからデータを読み込むときに`CERTIFICATE_VERIFY_FAILED`で失敗します）
   - またはHomebrewを使用：ターミナルを開いて`brew install python`と入力します
   - Homebrewのパス：`/opt/homebrew/bin/python3`（Apple Silicon）または`/usr/local/bin/python3`（Intel）
 
@@ -55,7 +56,7 @@ Python拡張機能には、デバッグ、インテリセンス、コードフ�
 
 - コンピューター上に新しいフォルダーを作成します（例：`my-python-project`）
 - VS Codeで、**File > Open Folder**（ファイル > フォルダーを開く）をクリックし、新しく作成したフォルダーを選択します
-- トップメニューの**File > New File**（ファイル > 新しいファイル）をクリックします
+- トップメニューの**File > New File...**（ファイル > 新しいファイル...）をクリックします。ウィンドウ上部に一覧が表示されるので、**Python File**を選択します
 - **File > Save**（ファイル > 保存）をクリックしてファイルを`analysis.py`として保存します
 
 ## ステップ4：Pythonインタープリタを選択
@@ -129,14 +130,14 @@ plt.show()
 ## ステップ8：Pythonコードをインタラクティブに実行
 
 - `analysis.py`を開いた状態で、右上隅の**▶ Run Python File**（Python ファイルの実行）ボタンをクリックします
-- またはエディター内で右クリックし、**Run Python File in Terminal**（ターミナルで Python ファイルを実行する）を選択します
+- またはエディター内で右クリックし、**Run Python > Run Python File in Terminal**（ターミナルで Python ファイルを実行する）を選択します
 - 出力がターミナルパネルに表示されるのを確認します
 - ヒストグラムを表示するウィンドウがポップアップします
 - 特定の行を選択して`Shift+Enter`を押すと、その行だけをインタラクティブなPythonセッションで実行できます
 
 ## ステップ9：シンプルなStreamlitアプリを作成
 
-- 新しいファイルを作成します：**File > New File**（ファイル > 新しいファイル）
+- 新しいファイルを作成します：**File > New File...**（ファイル > 新しいファイル...）をクリックし、ウィンドウ上部の一覧から**Python File**を選択します
 - `app.py`として保存します
 - 次のコードを入力します：
 
@@ -177,6 +178,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- 初めてStreamlitを実行すると、ターミナルで`Email:`の入力を求められます。`Enter`を押すだけでスキップできます
 - アプリがブラウザで開きます（通常は`http://localhost:8501`）
 - サイドバーのスライダーを動かすと、ヒストグラムが即座に更新されます
 - アプリを停止するには、ターミナルで`Ctrl+C`を押します
@@ -190,6 +192,7 @@ streamlit run app.py
 - 関数のシグネチャ、パラメータ、ドキュメントを表示するポップアップが表示されます
 - `import `と入力すると、VS Codeがパッケージ名を提案します
 - 関数呼び出しを入力すると、インテリセンスがパラメータヒントを表示します
+- 終わったら、このステップで入力した途中の行（`iris.gr`や`import `など）を削除してファイルを保存し、次のステップでスクリプトがきれいに実行されるようにします
 
 ## ステップ11：デバッグを試す
 
@@ -219,6 +222,8 @@ streamlit run app.py
 - **インテリセンスが動作しない**：Pylanceがインストールされ、有効になっていることを確認します。右下隅に選択したインタープリタが表示されていることを確認します。Pylanceの初期化のために、ファイルを開いてから10〜20秒待ちます。問題が解決しない場合はVS Codeを再起動します。
 
 - **pip installが失敗する**：仮想環境がアクティブになっていることを確認します（ターミナルに`(.venv)`が表示されているか確認）。Linuxでは、最初に`python3-venv`をインストールする必要がある場合があります。Windowsでは、ウイルス対策ソフトがpipをブロックしていないか確認します。
+
+- **Macで`SSL: CERTIFICATE_VERIFY_FAILED`が出る**：**Finder > アプリケーション > Python 3.x**を開いて**Install Certificates.command**をダブルクリックし、スクリプトをもう一度実行します。
 
 - **Streamlitアプリが実行されない**：streamlitが仮想環境にインストールされていることを確認します（`pip show streamlit`）。エラーメッセージがないかターミナルを確認します。他のアプリがポート8501を使用していないことを確認します。
 

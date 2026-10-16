@@ -50,7 +50,7 @@ AIツールは個々の労働者の生産性を8〜36%向上させる一方で�
 
 AI生産性パラドックスは、個人のエンパワーメントがシステム的排除と共存することを認識すると解決する。タスクパフォーマンスを測定するマイクロレベルの研究は、誰が利益を得るかを決定するマクロレベルの選択効果を見逃している。スタンフォード大学、IMF、OECDからの証拠は、厄介な結論に収束する：AIは性別、年齢、企業規模、地理にわたって不平等を悪化させている[3, 4, 9, 11]。技術の影響は、その能力だけでなく、その分布に依存する。3つの同時選択メカニズム—アクセスの不平等、知識の不平等、機会の不平等—がAIを民主化するツールから階層化する力に変換する。
 
-政策立案者は3つすべての障壁にわたって行動しなければならない。政府は税額控除を通じて小企業のAI採用を補助し、3.3倍の採用ギャップを埋めるべきである。教育機関はAIリテラシーをカリキュラムに統合し、事務職の女性向けに的を絞った再スキルプログラムを開始し、75%の知識ギャップに対処しなければならない。雇用主は、AIツールと人間のメンターシップを組み合わせた構造化された初級レベルのポジションを作成し、経験のキャッチ22を防止しなければならない。介入の機会は、ギャップが数年ごとに倍増するにつれて狭まっている[11]。意図的な行動がなければ、AIの個人的な可能性は集団的な危機になる。
+政策立案者は3つすべての障壁にわたって行動しなければならない。政府は税額控除を通じて小企業のAI採用を補助し、3.3倍の採用ギャップを埋めるべきである。教育機関はAIリテラシーをカリキュラムに統合し、事務職の女性向けに的を絞った再スキルプログラムを開始し、性別格差の75%の背景にある知識の違いに対処しなければならない。雇用主は、AIツールと人間のメンターシップを組み合わせた構造化された初級レベルのポジションを作成し、経験のキャッチ22を防止しなければならない。介入の機会は狭まっている。EUの採用ギャップは2021年から2024年の間におよそ倍増した[11]。意図的な行動がなければ、AIの個人的な可能性は集団的な危機になる。
 
 ## 参考文献
 
@@ -68,7 +68,7 @@ AI生産性パラドックスは、個人のエンパワーメントがシステ
 
 [7] Stanford HAI. (2025). "The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
 
-[8] Anthropic. (2024). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
 
 [9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
 
