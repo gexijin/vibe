@@ -16,7 +16,7 @@ You're working on a project and make changes that break everything. You can't re
 
 ## What You'll Need
 
-- Windows, macOS, or Linux computer
+- A Windows or Mac computer (GitHub Desktop doesn't run on Linux)
 - Internet connection
 - Email address for GitHub account
 - 15-20 minutes
@@ -48,7 +48,8 @@ You're working on a project and make changes that break everything. You can't re
 
 - Open GitHub Desktop
 - Click **Sign in to GitHub.com**
-- Your browser opens—click **Authorize desktop**
+- Your browser opens—sign in if asked, then click **Authorize desktop**
+- If your browser asks to open **GitHub Desktop**, click **Open** (or **Allow**)
 - Return to GitHub Desktop
 - Click **Finish** to complete setup
 
@@ -112,8 +113,8 @@ Your code is now backed up online at: `https://github.com/YOUR-USERNAME/my-first
 ## Troubleshooting
 
 - **Can't sign in to GitHub** - Check your internet connection. Try signing in at github.com first to verify your credentials work.
-- **Changes don't appear in GitHub Desktop** - Make sure you saved your files. Click **Repository** → **Refresh** or restart GitHub Desktop.
-- **Push fails with "rejected" error** - Someone else pushed changes. Click **Fetch origin** first, then try pushing again.
+- **Changes don't appear in GitHub Desktop** - Make sure you saved your files. Click on another app and then back on GitHub Desktop, or restart GitHub Desktop.
+- **Push fails with "rejected" error** - Someone else pushed changes. Click **Fetch origin**, then **Pull origin**, then click **Push origin** again.
 
 ## Workflow Overview
 
