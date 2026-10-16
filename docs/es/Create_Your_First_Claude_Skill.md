@@ -12,6 +12,7 @@ Ha estado escribiendo manualmente `/stock-report AAPL` para generar informes. ¿
 
 - **Skill** - Capacidad almacenada en `.claude/skills/` que Claude activa automáticamente según el contexto
 - **Invocación por modelo** - Claude decide cuándo usar la Skill leyendo su descripción, sin necesidad de escribir un comando
+- **Sigue siendo un comando slash** - También puede ejecutar cualquier Skill usted mismo escribiendo `/nombre-de-la-skill` (por ejemplo `/stock-report AAPL`). Si una Skill y un comando slash tienen el mismo nombre, se usa la Skill
 - **SKILL.md** - Archivo principal que contiene metadatos YAML e instrucciones para Claude
 
 ## Lo que necesitará
@@ -58,9 +59,12 @@ claude
 
 Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
-## Paso 3: Active la aprobación automática de ediciones
+## Paso 3: Permita que Claude edite archivos sin preguntar
 
-Presione **Shift+Tab** para habilitar el modo de aprobación automática de ediciones.
+Mire la línea de estado justo debajo del prompt de Claude Code:
+
+- Si dice **auto mode on** o **accept edits on**, todo está listo
+- Si dice **manual mode on**, presione **Shift+Tab** hasta que diga **accept edits on**
 
 Esto permite que Claude cree y modifique archivos sin solicitar permiso cada vez.
 
@@ -98,7 +102,11 @@ El campo `description` es clave: le indica a Claude exactamente cuándo activar 
 
 ## Paso 6: Pruebe la Skill (sin escribir un comando)
 
-En lugar de escribir `/stock-report AAPL`, simplemente haga una pregunta natural:
+Primero, asegúrese de que Claude Code haya cargado la nueva Skill. Escriba:
+```
+/reload-skills
+```
+Claude Code informa cuántas Skills están disponibles. Ahora, en lugar de escribir `/stock-report AAPL`, simplemente haga una pregunta natural:
 ```
 ¿Qué está pasando con Apple últimamente?
 ```
@@ -157,7 +165,7 @@ Actualiza la Skill stock-report para que solo se active cuando mencione explíci
 "analizar" o "informe" junto con el nombre de una empresa.
 ```
 
-Claude actualiza el campo `description` en `SKILL.md`. Pruebe la diferencia:
+Claude actualiza el campo `description` en `SKILL.md`. Escriba `/reload-skills` para que Claude Code detecte el cambio y luego pruebe la diferencia:
 ```
 ¿Qué está haciendo Apple?
 ```
@@ -182,8 +190,8 @@ El patrón: defina cuándo Claude debe ayudar automáticamente, no solo atajos q
 
 - **La Skill no se activa:** Verifique el campo `description` en `SKILL.md`: debe incluir palabras clave relacionadas con su pregunta
 - **La Skill se activa con demasiada frecuencia:** Haga la descripción más específica sobre cuándo usarla
-- **No encuentra la carpeta de la Skill:** Las Skills están en `.claude/skills/` (carpeta oculta: habilite "Mostrar archivos ocultos" en su explorador de archivos)
-- **Los cambios en SKILL.md no funcionan:** Las Skills se cargan automáticamente al modificarse: no es necesario reiniciar. Si persiste el problema, verifique el formato YAML
+- **No encuentra la carpeta de la Skill:** Las Skills están en `.claude/skills/` (una carpeta oculta: el Explorer de VS Code la muestra; o bien, en File Explorer de Windows elija **View > Show > Hidden items**; en Finder de Mac presione **Cmd+Shift+.**)
+- **Los cambios en SKILL.md no funcionan:** Las Skills normalmente se recargan automáticamente al modificarse. Si la carpeta `.claude/skills/` se creó durante esta sesión, escriba `/reload-skills` (o reinicie Claude Code). Si persiste el problema, verifique el formato YAML
 
 ## Resumen del flujo de trabajo
 

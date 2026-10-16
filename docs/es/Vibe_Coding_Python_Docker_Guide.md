@@ -59,13 +59,13 @@ Su carpeta `iris-analysis` ahora debe contener:
 - Abra VS Code
 - Haga clic en **File > Open Folder**
 - Navegue a la carpeta `iris-analysis`
-- Haga clic en **Select Folder**
+- Haga clic en **Select Folder** (Windows) u **Open** (Mac)
 - Aparece una notificación en la parte inferior derecha: **Folder contains a Dev Container configuration file**
 - Haga clic en **Reopen in Container**
-- Si no ve la notificación, haga clic en el ícono verde en la esquina inferior izquierda y seleccione **Reopen in Container**
+- Si no ve la notificación, haga clic en el ícono **><** en la esquina inferior izquierda y seleccione **Reopen in Container**
 - VS Code construye el contenedor Docker (toma 3-5 minutos la primera vez)
 - Observe la notificación de progreso mostrando los pasos de construcción
-- Cuando se complete, el ícono verde muestra **Dev Container: Python in Docker**
+- Cuando se complete, la esquina inferior izquierda muestra **Dev Container: Python in Docker**
 
 ## Paso 4: Iniciar Claude Code
 
@@ -79,7 +79,9 @@ claude
 
 - Se abre una ventana del navegador para autenticación
 - Haga clic en **Continue with Google** o **Continue with Email**
-- Inicie sesión con su cuenta de Claude (o cree una)
+- Inicie sesión con su cuenta de Claude. Claude Code requiere un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no lo incluye
+- Si el navegador muestra un código en lugar de indicar que ya terminó, copie el código, vuelva a la terminal de VS Code, péguelo en el prompt **Paste code here if prompted** y presione **Enter** (esto es común dentro de un contenedor)
+- Si no se abre ninguna ventana del navegador, presione `c` para copiar el enlace de inicio de sesión y péguelo en su navegador
 - Después de que la autenticación sea exitosa, regrese a la terminal de VS Code
 - Verá el mensaje de bienvenida de Claude
 
@@ -186,7 +188,7 @@ Antes de hacer commit, revise lo que Claude construyó.
 - No necesita entender cada línea, pero obtenga una idea de la estructura
 - Verifique que todos los archivos PNG fueron creados: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Abra GitHub Desktop
-- Verá todos los archivos nuevos listados (el script Python y las imágenes PNG)
+- Verá listadas las nuevas imágenes PNG, además de `iris_exploration.py` como archivo modificado (Claude agregó el código de los gráficos)
 - En el campo **Summary** en la parte inferior izquierda, escriba:
 
 ```
@@ -241,7 +243,7 @@ Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 - **Errores de importación** - El contenedor de Docker debe tener pandas, matplotlib y scikit-learn preinstalados. Si no, solicite a Claude que los instale con pip.
 - **Claude comete errores** - ¡Es normal! Copie el mensaje de error, péguelo a Claude y diga "corrige este error". Vibe coding incluye iteración y depuración.
 - **No puede hacer push a GitHub** - Asegúrese de haber iniciado sesión en GitHub Desktop y publicado el repositorio (Paso 1). Verifique su conexión a internet.
-- **El contenedor no inicia** - Asegúrese de que Docker Desktop esté ejecutándose (indicador de estado verde). Intente hacer clic en el ícono verde en VS Code y seleccionar **Rebuild Container**.
+- **El contenedor no inicia** - Asegúrese de que Docker Desktop esté ejecutándose (indicador de estado verde). Intente hacer clic en el ícono **><** en la esquina inferior izquierda de VS Code y seleccionar **Rebuild Container**.
 
 ## Resumen del Flujo de Trabajo
 

@@ -59,11 +59,13 @@ lang: "es"
 
 - Busque una notificación en la parte inferior derecha: **Folder contains a Dev Container configuration file**
 - Haga clic en **Reopen in Container**
-- Si no ve la notificación, haga clic en el icono verde en la esquina inferior izquierda
+- Si no ve la notificación, haga clic en el icono **><** en la esquina inferior izquierda
 - Seleccione **Reopen in Container** del menú
 - VS Code construirá el contenedor (esto toma 5-10 minutos la primera vez)
 - Verá una notificación de progreso mostrando los pasos de construcción
-- Cuando se complete, el icono verde mostrará **Dev Container: R in Docker (AMD64)**
+- Cuando se complete, el icono **><** en la esquina inferior izquierda mostrará **Dev Container: R in Docker (AMD64)**
+
+**Macs con Apple Silicon:** Esta imagen está construida para procesadores Intel/AMD. Docker Desktop la ejecuta mediante emulación, así que la primera construcción y el propio R son más lentos, pero todo funciona.
 
 **Nota:** El contenedor incluye automáticamente la extensión R y el paquete languageserver. El Dockerfile y devcontainer.json se encargan de esto por usted.
 
@@ -86,7 +88,7 @@ Verá `/workspaces/vibe` - esta es su carpeta de proyecto dentro del contenedor.
 ls
 ```
 
-Verá los mismos archivos del proyecto: `R/`, `.devcontainer/`, `README.md`, etc.
+Verá los mismos archivos del proyecto: `R/`, `docs/`, `README.md`, etc. (las carpetas que empiezan con un punto, como `.devcontainer/`, están ocultas; `ls -a` las muestra)
 
 - Intente subir un directorio:
 
@@ -110,13 +112,14 @@ El contenedor tiene R preinstalado con paquetes comunes. Ejecutemos un script si
 - En VS Code Explorer, navegue hasta `R/iris_analysis.R`
 - Haga clic para abrir el archivo
 - Verá código R que analiza el conjunto de datos iris
-- Seleccione la primera línea: `data(iris)`
+- Haga clic en **View > Command Palette**, escriba `R: Create R Terminal` y presione **Enter**. Se abre una terminal R en la parte inferior con un prompt `>` (este contenedor envía su código a la terminal que esté usando, así que mantenga seleccionada esta terminal R)
+- Si VS Code le pide instalar el paquete **sess**, haga clic en **Yes** (o **Install bundled sess**) y espere a que termine. Esto permite que VS Code muestre sus gráficos
+- Haga clic de nuevo en `iris_analysis.R` y seleccione la primera línea: `data(iris)`
 - Presione `Ctrl+Enter` (Windows/Linux) o `Cmd+Enter` (Mac) para ejecutarla
-- Si no tiene una terminal R abierta, la primera vez crea una, la segunda vez ejecuta el código
 - Continúe ejecutando cada línea, una a la vez
 - Cuando ejecute `head(iris)`, verá las primeras 6 filas en la terminal
 - Cuando ejecute `summary(iris)`, verá resúmenes estadísticos
-- Cuando ejecute los comandos `hist()`, se abrirán gráficos de histograma en ventanas separadas
+- Cuando ejecute los comandos `hist()`, el histograma aparece en una pestaña de gráficos dentro de VS Code
 - También puede seleccionar múltiples líneas y ejecutarlas juntas con `Ctrl+Enter` o `Cmd+Enter`
 
 ## Paso 8: Ejecutar la Aplicación
@@ -128,10 +131,8 @@ El proyecto incluye una aplicación Shiny de demostración que crea un histogram
 - Verá código para una aplicación web Shiny
 - Busque en la parte superior derecha de la ventana del editor un botón **▶**
 - Haga clic en la flecha desplegable junto a él y seleccione **Run Shiny App**
-- La aplicación se iniciará y VS Code reenviará automáticamente el puerto 3838
-- Aparece una notificación: **Open in Browser**
-- Haga clic en **Open in Browser**
-- La aplicación Shiny se abre en su navegador web
+- La aplicación se inicia y se abre en una pestaña de vista previa dentro de VS Code
+- Para abrirla en su navegador web habitual, haga clic en la pestaña **Ports** del panel inferior y luego en el icono del globo junto al puerto reenviado
 - Mueva el control deslizante para cambiar los intervalos del histograma - el gráfico se actualiza en tiempo real
 
 ## Paso 9: Hacer un Cambio Simple
@@ -140,16 +141,16 @@ Modifiquemos la aplicación para ver cómo funciona el desarrollo.
 
 - Mantenga la aplicación en ejecución
 - En VS Code, edite `R/app.R`
-- Encuentre la línea 16: `titlePanel("Old Faithful Geyser Data")`
-- Cámbiela a:
+- Encuentre la línea 16: `titlePanel("Old Faithful Geyser Data"),`
+- Cambie solo el texto entre comillas y mantenga la coma al final de la línea:
 
 ```r
-titlePanel("My First R Docker App")
+titlePanel("My First R Docker App"),
 ```
 
 - Guarde el archivo (**File > Save**)
 - La extensión Shiny recargará automáticamente la aplicación
-- Actualice su navegador (o puede actualizarse automáticamente)
+- Si la vista previa no se actualiza sola, haga clic en la flecha de recarga en la parte superior de la pestaña de vista previa (o actualice su navegador)
 - El título ahora muestra su texto personalizado
 
 ## Paso 10: Comprender el Dockerfile (Opcional)
@@ -175,8 +176,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
     
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Give shiny passwordless sudo for updating Claude Code from VS Code
 RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
@@ -192,7 +194,7 @@ EXPOSE 3838
 - `RUN apt-get install` - Bibliotecas del sistema Linux para paquetes R
 - `RUN R -q -e 'install.packages(...)'` - Instala paquetes R permanentemente
 - `RUN curl... && apt-get install -y nodejs` - Instala Node.js, necesario para ejecutar Claude Code
-- `RUN npm install -g @anthropic-ai/claude-code` - Instala Claude Code globalmente para asistencia con IA
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - Instala Claude Code globalmente para asistencia con IA (la primera parte permite que Claude Code termine de configurarse, algo que las versiones más recientes de npm bloquean de otro modo)
 - `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - Permite que el usuario del contenedor ejecute `sudo claude update` sin pedir contraseña
 - `EXPOSE 3838` - Abre el puerto 3838 para aplicaciones Shiny
 
@@ -217,7 +219,7 @@ RUN R -q -e 'install.packages("data.table", repos="https://cloud.r-project.org")
 ```
 
 - Guarde el archivo (**File > Save**)
-- Haga clic en el icono verde en la esquina inferior izquierda
+- Haga clic en el icono **><** en la esquina inferior izquierda
 - Seleccione **Rebuild Container** del menú
 - VS Code reconstruirá el contenedor con su nuevo paquete (toma 2-5 minutos)
 - Para verificar, abra una terminal R y escriba:
@@ -238,7 +240,6 @@ Si se carga sin errores, el paquete está instalado permanentemente.
 
 - **Docker Desktop no está en ejecución** - Abra Docker Desktop y espere el indicador de estado verde antes de reabrir el contenedor
 - **La construcción del contenedor falla** - Verifique su conexión a internet; la primera construcción descarga ~2GB. Haga clic en **Rebuild Container** para reintentar
-- **El puerto 3838 ya está en uso** - Detenga otras aplicaciones que usen ese puerto, o cambie el puerto en `.devcontainer/devcontainer.json`
 
 ## Resumen del Flujo de Trabajo
 
@@ -247,7 +248,7 @@ Esta configuración proporciona un entorno profesional de desarrollo en R:
 - **VS Code** proporciona el editor de código con resaltado de sintaxis e IntelliSense
 - **Docker container** ejecuta un entorno Linux aislado con R y todas las dependencias
 - **Rocker image** (`rocker/shiny-verse`) incluye R, Shiny, tidyverse y herramientas de desarrollo
-- **Dev Container config** (`.devcontainer/`) instala automáticamente extensiones de VS Code para depuración de R y soporte de lenguaje
+- **Dev Container config** (`.devcontainer/`) instala automáticamente extensiones de VS Code para R y Shiny
 - **Port forwarding** permite acceder a la aplicación Shiny que se ejecuta dentro del contenedor desde su navegador
 
 ## Flujo de Trabajo Diario
@@ -256,7 +257,7 @@ Una vez que todo esté configurado, aquí está su rutina diaria:
 
 1. **Iniciar Docker Desktop** - Abra la aplicación y espere el indicador de estado verde (Docker debe estar en ejecución)
 2. **Abrir VS Code** - Inicie VS Code y abra su carpeta de proyecto
-3. **Reabrir en Contenedor** - Si aún no está en el contenedor, haga clic en el icono verde (inferior izquierdo) y seleccione **Reopen in Container**
+3. **Reabrir en Contenedor** - Si aún no está en el contenedor, haga clic en el icono **><** (inferior izquierdo) y seleccione **Reopen in Container**
 4. **Escribir y ejecutar código** - Edite archivos `.R`, ejecute línea por línea con `Ctrl+Enter`/`Cmd+Enter`, o ejecute aplicaciones Shiny con el botón **▶ Run Shiny App**
 5. **Guardar su trabajo** - Sus archivos de código (`.R`, `.Rmd`) se guardan en su computadora y persisten entre sesiones
 6. **Hacer commit y push** - Use GitHub Desktop para hacer commit de sus cambios y hacer push al repositorio
@@ -276,7 +277,7 @@ Docker Desktop realiza varias tareas importantes:
 - **Construye contenedores** - Docker usa el Dockerfile y la configuración de Dev Container de este proyecto para crear un contenedor preparado para programar en R.
 - **Inicia y detiene contenedores** - Puede abrir, pausar, reiniciar o detener el contenedor cuando lo necesite.
 - **Conecta los contenedores con sus archivos** - La carpeta de su proyecto está disponible dentro del contenedor, así que puede editar archivos en VS Code mientras el código se ejecuta en el contenedor.
-- **Conecta los contenedores con su navegador** - Cuando la aplicación Shiny usa el puerto 3838, Docker Desktop y VS Code trabajan juntos para que esa aplicación esté disponible en su navegador web.
+- **Conecta los contenedores con su navegador** - Cuando la aplicación Shiny se ejecuta dentro del contenedor, Docker Desktop y VS Code trabajan juntos para que esa aplicación esté disponible en su navegador web.
 
 ### Cómo encaja Docker Desktop en este tutorial
 

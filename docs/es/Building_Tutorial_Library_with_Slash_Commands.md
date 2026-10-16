@@ -2,6 +2,8 @@
 title: "Cómo Claude Code me ayudó a crear estos tutoriales"
 lang: "es"
 ---
+[Inicio](index.html)
+
 # Cómo Claude Code me ayudó a crear estos tutoriales
 
 A mediados de diciembre de 2025, pasé 2 horas tratando de ayudar a mi asistente de investigación a instalar Claude Code por Zoom. Me di cuenta de que alguien como ella necesita instrucciones específicas y prácticas, así que me propuse crear tutoriales completos para Claude Code. Mi objetivo: tutoriales prácticos y enfocados que guíen a principiantes completos a través de tareas reales paso a paso. Sin volcados de teoría. Sin manuales de referencia exhaustivos. Solo "haz esto, después esto, después esto" hasta lograr algo concreto.
@@ -92,7 +94,7 @@ La combinación de comandos slash para flujos de trabajo estructurados y subagen
 
 ## Los resultados
 
-En menos de dos semanas, creé más de 20 tutoriales en inglés que cubren temas de principiante a intermedio, 81 tutoriales traducidos en 3 idiomas, calidad consistente mediante procesos de revisión automatizados, y documentación mantenible con herramientas de sincronización para traducciones.
+En menos de dos semanas, creé más de 20 tutoriales en inglés que cubren temas de principiante a intermedio, 81 tutoriales traducidos en cinco idiomas, calidad consistente mediante procesos de revisión automatizados, y documentación mantenible con herramientas de sincronización para traducciones.
 
 Todos los tutoriales siguen la misma estructura, estilo de escritura y convenciones de formato porque fueron generados por el mismo proceso sistemático.
 
@@ -102,7 +104,7 @@ Todos los tutoriales siguen la misma estructura, estilo de escritura y convencio
 - **Estructura los comandos como flujos de trabajo de múltiples fases.** Dile a Claude cómo pensar el problema, no solo qué hacer.
 - **Incorpora el control de calidad en el proceso.** Crea un comando de revisión junto con tu comando de generación.
 - **Haz los comandos colaborativos, no autónomos.** Incluye pasos de aprobación. Claude maneja las partes tediosas; tú tomas las decisiones estratégicas.
-- **Usa subagentes para procesamiento por lotes.** Al procesar muchos documentos, di explícitamente "Use subagents" en tu prompt. Presiona Shift+Tab primero para habilitar el modo de aceptación automática—los subagentes no pedirán permisos, haciendo el procesamiento paralelo más fluido.
+- **Usa subagentes para procesamiento por lotes.** Al procesar muchos documentos, di explícitamente "Use subagents" en tu prompt. Primero asegúrate de que la línea de estado muestre **accept edits on** o **auto mode on** (presiona Shift+Tab para cambiar)—los subagentes usan el mismo modo, así que rara vez se detienen a pedir permiso, lo que hace el procesamiento paralelo mucho más fluido.
 
 ## Conclusión
 
@@ -116,7 +118,7 @@ Ese es el poder de la automatización sistemática.
 
 ---
 
-*¿Quieres ver los comandos slash que construí? Revisa la [carpeta de comandos](../assets/commands/). La biblioteca completa de tutoriales está disponible en el [sitio de documentación del proyecto](https://github.com/gexijin/vibe/tree/main/docs).*
+*¿Quieres ver los comandos slash que construí? Revisa la [carpeta de comandos](https://github.com/gexijin/vibe/tree/main/docs/assets/commands). La biblioteca completa de tutoriales está disponible en el [sitio de documentación del proyecto](https://github.com/gexijin/vibe/tree/main/docs).*
 
 ---
 

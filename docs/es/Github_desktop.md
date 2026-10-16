@@ -17,7 +17,7 @@ Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda q
 
 ## Lo Que Necesitará
 
-- Computadora con Windows, macOS o Linux
+- Una computadora con Windows o Mac (GitHub Desktop no funciona en Linux)
 - Conexión a Internet
 - Dirección de correo electrónico para cuenta de GitHub
 - 15-20 minutos
@@ -49,13 +49,14 @@ Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda q
 
 - Abra GitHub Desktop
 - Haga clic en **Sign in to GitHub.com**
-- Su navegador se abre—haga clic en **Authorize desktop**
+- Su navegador se abre—inicie sesión si se le pide y luego haga clic en **Authorize desktop**
+- Si su navegador le pregunta si desea abrir **GitHub Desktop**, haga clic en **Open** (o **Allow**)
 - Vuelva a GitHub Desktop
 - Haga clic en **Finish** para completar la configuración
 
 ## Paso 4: Crear Su Primer Repositorio
 
-- En GitHub Desktop, haga clic en **Create a New Repository on your Hard Drive**
+- En GitHub Desktop, haga clic en **Create a New Repository on your Local Drive**
 - Complete el formulario:
   - **Name:** `mi-primer-proyecto` (o cualquier nombre que desee)
   - **Description:** `Aprendiendo control de versiones` (opcional)
@@ -93,7 +94,7 @@ Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda q
 - Vuelva a GitHub Desktop
 - Verá sus cambios resaltados en el lado derecho (verde = agregado, rojo = eliminado)
 - En la parte inferior izquierda, escriba un mensaje de commit: `Actualizar README con descripción del proyecto`
-- Haga clic en el botón azul **Commit to main**
+- Haga clic en el botón azul **Commit 1 file to main** (el número coincide con la cantidad de archivos que cambió)
 
 ## Paso 8: Enviar a GitHub (Respaldar en la Nube)
 
@@ -113,14 +114,14 @@ Su código ahora está respaldado en línea en: `https://github.com/SU-USUARIO/m
 ## Solución de Problemas
 
 - **No puede iniciar sesión en GitHub** - Verifique su conexión a Internet. Intente iniciar sesión primero en github.com para confirmar que sus credenciales funcionen.
-- **Los cambios no aparecen en GitHub Desktop** - Asegúrese de haber guardado sus archivos. Haga clic en **Repository** → **Refresh** o reinicie GitHub Desktop.
-- **El envío falla con error "rejected"** - Alguien más envió cambios. Primero haga clic en **Fetch origin**, luego intente enviar nuevamente.
+- **Los cambios no aparecen en GitHub Desktop** - Asegúrese de haber guardado sus archivos. Haga clic en otra aplicación y luego de vuelta en GitHub Desktop, o reinicie GitHub Desktop.
+- **El envío falla con error "rejected"** - Alguien más envió cambios. Haga clic en **Fetch origin**, luego en **Pull origin** y después haga clic en **Push origin** de nuevo.
 
 ## Descripción General del Flujo de Trabajo
 
 - Realice cambios en los archivos de su proyecto
 - Revise los cambios en GitHub Desktop (verde = agregado, rojo = eliminado)
-- Escriba un mensaje de commit descriptivo y haga clic en **Commit to main**
+- Escriba un mensaje de commit descriptivo y haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 1 file to main**)
 - Haga clic en **Push origin** para respaldar en GitHub
 - Repita
 

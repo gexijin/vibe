@@ -18,7 +18,7 @@ Está programando con asistencia de IA. Esta hace cambios en sus archivos. A vec
 ## Lo Que Necesitará
 
 - Haber completado [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS)
-- 30 minutos
+- 20-30 minutos
 
 ## Paso 1: Abra Terminal
 
@@ -26,7 +26,6 @@ Elija uno de estos métodos:
 
 - **Spotlight:** Presione `Command (⌘) + Space`, escriba `Terminal`, presione Enter
 - **Finder:** Abra **Applications** > **Utilities** > **Terminal**
-- **Launchpad:** Haga clic en **Launchpad** en el Dock, busque `Terminal`
 
 Verá un prompt de comando que termina con `$` o `%`.
 
@@ -110,9 +109,12 @@ Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalaci
 
 Claude inicializa un repositorio Git en su carpeta (toma 2-5 segundos). ¡Ahora tiene control de versiones!
 
+Si Claude pide permiso, muestra un pequeño menú con **Yes** y **No**. Use las teclas de flecha para elegir **Yes** y presione **Enter**. Es posible que vea esto varias veces en este tutorial.
+
 ## Paso 8: Construya la Aplicación de Temporizador
 
-- En Claude Code, escriba:
+- En Claude Code, copie y pegue toda esta solicitud (al pegarla, todas las líneas se mantienen juntas; presionar Enter la enviaría antes de tiempo):
+
   ```
   Crea una aplicación simple de temporizador en un solo archivo llamado timer.html.
   Debe tener:
@@ -183,7 +185,7 @@ A veces el código de IA no funciona y necesita volver a empezar desde su últim
   ```
   descarta estos cambios
   ```
-- Claude muestra un menú con opciones como **Yes** y **No**: use las teclas de flecha (o presione el número junto a **Yes**) para seleccionarla y luego presione **Enter**
+- Normalmente Claude le pedirá que confirme primero. Si muestra un menú, elija **Yes** (con las teclas de flecha o el número junto a esa opción) y presione **Enter**. Si lo pregunta en un mensaje, escriba `sí, descarta los cambios en timer.html` y presione **Enter**
 - Actualice su navegador—el botón de 15 minutos desaparece
 
 Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona de nuevo con solo los botones de 1 y 5 minutos!
@@ -194,7 +196,7 @@ Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona
   ```
   Agrega una notificación de sonido cuando se acabe el tiempo
   ```
-- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 0.1 minutos)
+- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 1 minuto)
 - Si funciona, haga commit de los cambios:
   ```
   Guarda estos cambios
@@ -206,7 +208,7 @@ Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona
   ```
   El sonido debe continuar hasta que haga clic en un botón para posponerlo
   ```
-- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 0.1 minutos)
+- Actualice el navegador y pruebe después de que Claude termine (configure el temporizador para 1 minuto)
 - Si funciona, haga commit de los cambios:
   ```
   Guarda estos cambios
@@ -230,6 +232,7 @@ Claude muestra sus commits en un formato legible. Verá:
 ## Paso 17: Examine el Código
 
 - En el navegador que muestra la aplicación, haga clic derecho y seleccione **View Page Source** (o presione `Option (⌥) + Command (⌘) + U`)
+- **¿Usa Safari?** Primero haga clic en **Safari** > **Settings** > **Advanced** y marque **Show features for web developers**. Luego haga clic derecho en la página y elija **Show Page Source**
 - Puede ver el código fuente.
 - En Claude Code, pregunte:
   ```
@@ -263,7 +266,7 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 - **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd ~/Documents/test_claude`)
 - **No puede encontrar timer.html en Finder:** El archivo está en `/Users/SU_USUARIO/Documents/test_claude/timer.html`
 - **Los comandos de Git no funcionan:** Asegúrese de haber completado el Paso 2 e instalado Git
-- **El temporizador no funciona:** Abra la consola del navegador (haga clic derecho en la página, seleccione **Inspect**, luego haga clic en la pestaña **Console**), copie cualquier mensaje de error en rojo y péguelo en Claude
+- **El temporizador no funciona:** Abra la consola del navegador (haga clic derecho en la página, seleccione **Inspect**, luego haga clic en la pestaña **Console**; en Safari, primero active las funciones para desarrolladores como se indica en el Paso 17 y luego elija **Inspect Element**), copie cualquier mensaje de error en rojo y péguelo en Claude
 
 ## Lo Que Puede Pedirle a Claude
 
@@ -271,7 +274,7 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 - `muéstrame las diferencias` - Ver exactamente qué código cambió
 - `explica qué hace el código del temporizador` - Entender la implementación
 - `crea una rama llamada experimento` - Probar cambios arriesgados de forma segura
-- `vuelve al commit anterior` - Deshacer todo desde el último commit
+- `deshaz todo desde mi último commit` - Descartar los cambios que aún no ha guardado
 
 ¡Claude maneja todas las operaciones de Git mediante lenguaje natural—no hay comandos que memorizar!
 
@@ -281,6 +284,6 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 - **Desarrollo:** Claude escribe código, usted prueba en el navegador
 - **Control de Versiones:** Claude maneja todas las operaciones de Git mediante solicitudes simples
 - **Seguridad:** Descarte cambios malos en cualquier momento, vuelva a cualquier commit anterior
-- **Local:** Todo permanece en su computadora, no se requiere cuenta ni internet
+- **Local:** Su historial de Git permanece en su computadora, sin necesidad de una cuenta de GitHub (Claude Code en sí todavía necesita internet y su cuenta de Claude)
 
 Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 8 de diciembre de 2025.
