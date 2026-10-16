@@ -46,7 +46,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Claude Code के इंस्टॉल होने की प्रतीक्षा करें (1-2 मिनट)
-- आपको कुछ प्रोग्रेस मैसेज दिख सकते हैं - यह सामान्य है
+- डाउनलोड के दौरान विंडो में कोई मैसेज न दिखे — यह सामान्य है, बस प्रतीक्षा करें
 - इंस्टॉलेशन पूरा होने पर, Terminal बंद करके फिर से खोलें, फिर इसे टाइप करके जाँचें:
    ```
    claude --version
@@ -97,6 +97,7 @@ brew install --cask claude-code
    ```
    `your-api-key-here` को अपनी वास्तविक API कुंजी से बदलें
 - बदलाव लागू होने के लिए Terminal बंद करके फिर से खोलें
+- `claude` टाइप करके Claude Code शुरू करें। पहली बार, यह पूछता है कि क्या आप उसे मिली API कुंजी का उपयोग करना चाहते हैं। **Yes** चुनें। (अगर गलती से **No** चुन लें, तो `/config` टाइप करें और **Use custom API key** चालू करें।)
 
 **नोट:** यदि आप zsh के बजाय bash वाले पुराने Mac का उपयोग कर रहे हैं, तो ऊपर दिए गए कमांड में `~/.zshrc` की जगह `~/.bash_profile` लिखें।
 
@@ -111,9 +112,9 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - Claude Code शुरू करें:
    ```
@@ -135,7 +136,7 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
 - अधिक जानकारी के लिए [आधिकारिक OpenRouter गाइड](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) देखें
 
 
-### विकल्प D. Azure Foundry के ज़रिए Anthropic API का उपयोग करें
+### विकल्प D. Microsoft Foundry (Azure) के ज़रिए Anthropic API का उपयोग करें
 
 यह विकल्प उन संगठनों के लिए है जो Azure-होस्टेड Claude मॉडलों का उपयोग करते हैं। Terminal विंडो में, एनवायरनमेंट वेरिएबल परिभाषित करने के लिए यह कोड पेस्ट करें (Claude शुरू करने से पहले):
 ```
@@ -144,13 +145,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure रिसोर्स का नाम
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # अपने रिसोर्स के डिप्लॉयमेंट नामों पर मॉडल सेट करें
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
 export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **नोट:** `xxxx-eastus2` को अपने Foundry Resource के नाम से बदलें (पूरा बेस URL इस्तेमाल न करें)। `your_api_key` को अपने Azure पोर्टल की पूरी API कुंजी से बदलें।
+
+फिर `claude` टाइप करके Claude Code शुरू करें।
 
 ## चरण 4: Claude Code का परीक्षण करें
 

@@ -39,7 +39,7 @@ Git for Windows **अनुशंसित है, लेकिन वैकल�
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- इंस्टॉलेशन पूरा होने की प्रतीक्षा करें
+- इंस्टॉलेशन पूरा होने की प्रतीक्षा करें (डाउनलोड के दौरान एक मिनट तक विंडो में कुछ भी न दिखे — यह सामान्य है)
 - PowerShell बंद करके फिर से खोलें, फिर इसे टाइप करके जाँचें:
    ```
    claude --version
@@ -130,6 +130,7 @@ Claude Code साइडबार वह जगह है जहाँ आप �
    ```
    claude
    ```
+- पहली बार, Claude Code पूछता है कि क्या आप उसे मिली API कुंजी का उपयोग करना चाहते हैं। **Yes** चुनें। (अगर गलती से **No** चुन लें, तो `/config` टाइप करें और **Use custom API key** चालू करें।)
 
 ### विकल्प C. OpenRouter API का उपयोग करें (जितना उपयोग, उतना भुगतान)
 
@@ -141,10 +142,10 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
    ```
    setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
    setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
-   setx ANTHROPIC_API_KEY ""
-   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
-   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
-   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
+   [Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', $null, 'User')
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "~anthropic/claude-sonnet-latest"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "~anthropic/claude-opus-latest"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "~anthropic/claude-haiku-latest"
    ```
 - PowerShell बंद करके फिर से खोलें, फिर Claude Code शुरू करें:
    ```
@@ -154,7 +155,7 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
 
 **नोट्स:**
 - `your-openrouter-api-key` को अपनी वास्तविक OpenRouter API कुंजी से बदलें
-- `ANTHROPIC_API_KEY` को स्पष्ट रूप से खाली सेट किया जाना चाहिए
+- `ANTHROPIC_API_KEY` वाली लाइन किसी भी सेव की गई Anthropic API कुंजी को हटा देती है, क्योंकि OpenRouter का उपयोग करते समय यह सेट नहीं होनी चाहिए
 - वैकल्पिक मॉडलों का उपयोग करने के लिए, उनमें **टूल यूज़ क्षमताएँ** होनी चाहिए। आप मॉडल इस तरह ओवरराइड कर सकते हैं:
    ```
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
@@ -165,7 +166,7 @@ OpenRouter एक यूनिफाइड API गेटवे है जो ए
 - OpenRouter के ज़रिए Claude Code के ठीक से काम करने की गारंटी केवल Anthropic मॉडलों के साथ है
 - अधिक जानकारी के लिए [आधिकारिक OpenRouter गाइड](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) देखें
 
-### विकल्प D. Azure Foundry के ज़रिए Anthropic API का उपयोग करें
+### विकल्प D. Microsoft Foundry (Azure) के ज़रिए Anthropic API का उपयोग करें
 
 PowerShell में, एनवायरनमेंट वेरिएबल परिभाषित करने के लिए यह कोड पेस्ट करें:
 ```
@@ -174,8 +175,8 @@ setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure रिसोर्स का नाम
 setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # अपने रिसोर्स के डिप्लॉयमेंट नामों पर मॉडल सेट करें
-setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
-setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-8"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
 setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
 setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
@@ -199,6 +200,7 @@ claude
    ```
    cd ~/Documents/test_claude
    ```
+   `test_claude` को अपने असली प्रोजेक्ट फ़ोल्डर के नाम से बदलें। सुझाव: `cd ` (एक स्पेस के साथ) टाइप करें, File Explorer से फ़ोल्डर को PowerShell विंडो में खींचकर छोड़ें ताकि उसका पूरा पाथ पेस्ट हो जाए, और **Enter** दबाएँ।
 - फिर Claude शुरू करें:
    ```
    claude
@@ -271,7 +273,7 @@ claude
    ```
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
    ```
-- Ubuntu टर्मिनल में `claude` टाइप करके और ब्राउज़र लॉगिन का पालन करके अपना खाता कनेक्ट करें (यह चरण 4, विकल्प A जैसा ही है)। यदि आप इसके बजाय API कुंजी उपयोग करते हैं, तो इसे `export ANTHROPIC_API_KEY="your-api-key-here"` से सेट करें (WSL Linux कमांड इस्तेमाल करता है, `setx` नहीं)
+- Ubuntu टर्मिनल में `claude` टाइप करके और ब्राउज़र लॉगिन का पालन करके अपना खाता कनेक्ट करें (यह चरण 4, विकल्प A जैसा ही है)। यदि आप इसके बजाय API कुंजी उपयोग करते हैं, तो इसे `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` से सेव करें (WSL Linux कमांड इस्तेमाल करता है, `setx` नहीं)
 - WSL से किसी Windows प्रोजेक्ट फ़ोल्डर को खोलने के लिए:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude

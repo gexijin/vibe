@@ -102,7 +102,7 @@ Claude स्क्रिप्ट चलाता है और ब्रेस
 - skill फ़ोल्डर के भीतर pubmed_search.py स्क्रिप्ट शामिल करे
 ```
 
-Claude पूरी skill संरचना बनाता है:
+Claude skill संरचना बनाता है। सटीक फ़ाइलें अलग हो सकती हैं, उदाहरण के लिए:
 - `.claude/skills/medical-research/pubmed_search.py` - सर्च स्क्रिप्ट
 - `.claude/skills/medical-research/SKILL.md` - Claude के लिए skill उपयोग करने के निर्देश
 - `.claude/skills/medical-research/README.md` - उपयोगकर्ता दस्तावेज़ीकरण
@@ -153,7 +153,7 @@ skill संरचना देखने के लिए VS Code खोले�
 VS Code में:
 - फ़ाइल एक्सप्लोरर में `.claude/skills/medical-research/` विस्तारित करें
 - Claude के लिए विस्तृत निर्देश देखने के लिए `SKILL.md` खोलें
-- उपयोगकर्ता दस्तावेज़ीकरण देखने के लिए `README.md` खोलें
+- उपयोगकर्ता दस्तावेज़ीकरण देखने के लिए `README.md` खोलें (अगर Claude ने इसे बनाया हो)
 - Python कोड देखने के लिए `pubmed_search.py` खोलें
 
 **नोट:** skill पूरी तरह स्व-निहित (self-contained) है - सारा कोड और दस्तावेज़ीकरण एक ही फ़ोल्डर में रहता है।
@@ -165,15 +165,16 @@ Anthropic पहले से बनी skills का एक रिपॉज़�
 - रिपॉज़िटरी से कोई skill इंस्टॉल करने के लिए, बस Claude से कहें:
 
   ```
-  Anthropic के रिपॉज़िटरी से document skill इंस्टॉल करें
+  github.com/anthropics/skills से docx, pdf, pptx, और xlsx skills को मेरे .claude/skills/ फ़ोल्डर में इंस्टॉल करें
   ```
-- यह skill आज़माएँ:
+- जब Claude काम पूरा कर ले, तो `/reload-skills` टाइप करें ताकि Claude Code नई skills लोड कर ले
+- इनमें से कोई एक आज़माएँ:
   ```
   Claude Skills पर एक PowerPoint प्रेजेंटेशन बनाएँ।
   ```
 
 
-**document skill** आपको PDF, Word, PowerPoint, और Excel फ़ाइलें पढ़ने और लिखने में मदद करती है। Claude skill को आपके `.claude/skills/` फ़ोल्डर में क्लोन कर देगा।
+ये **document skills** Claude को Word, PDF, PowerPoint, और Excel फ़ाइलें पढ़ने और लिखने में मदद करती हैं। Claude इन्हें आपके `.claude/skills/` फ़ोल्डर में कॉपी कर देता है।
 
 **Anthropic के रिपॉज़िटरी से उपलब्ध अन्य skills:**
 - पूरी सूची [github.com/anthropics/skills](https://github.com/anthropics/skills) पर ब्राउज़ करें
