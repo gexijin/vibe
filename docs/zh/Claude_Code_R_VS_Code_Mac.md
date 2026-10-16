@@ -18,7 +18,7 @@ lang: "zh"
 
 - 完成[在VS Code中使用R](./R_Coding_VS_Code_Guide)教程 - R已在VS Code中正常工作
 - 完成[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)教程 - Claude Code CLI已安装
-- Claude Pro/Max订阅或Anthropic API密钥
+- 付费Claude套餐（如Pro或Max）或Anthropic Console账户——免费套餐不包含Claude Code
 - 20-30分钟
 
 ## 步骤1：打开VS Code并创建R项目
@@ -35,20 +35,16 @@ lang: "zh"
 
 - 点击左侧边栏的**Extensions**图标（四个方块图标）
 - 在搜索框中输入`Claude Code`
-- 找到Anthropic的**Claude Code**并点击**Install**
-- 安装完成后，左侧边栏会出现Claude图标（星星图标）
-- 点击Claude图标打开聊天面板
-- 点击聊天面板中的**Sign in to Claude Code**
-- 选择身份验证方法：
-  - **Claude Pro/Max用户**：点击**Sign in with Claude.ai**，在浏览器中授权，然后将代码复制回VS Code
-  - **API密钥用户**：点击**Use API Key**并粘贴Anthropic API密钥
-- 详细身份验证步骤请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)指南（步骤3）
-- 登录后，聊天面板会显示"Ready to help"
+- 找到Anthropic的**Claude Code for VS Code**并点击**Install**
+- 安装完成后，点击窗口右下角状态栏中的**✻ Claude Code**打开Claude面板（打开文件后，也可以使用编辑器右上角的Spark图标）
+- 点击**Sign in**，在打开的浏览器中使用你的Claude账户完成登录
+- 如果你改用API密钥，请按照[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)（步骤3，选项B）进行设置，然后退出VS Code并重新打开
+- 登录后，你会看到**Learn Claude Code**清单。可以点击X关闭它
 
 ## 步骤3：手动创建初始R脚本
 
-- 点击菜单栏中的**File > New File**
-- 点击**Select a language**并输入`R`，然后选择**R**
+- 点击菜单栏中的**File > New File...**
+- 在窗口顶部出现的列表中，选择**R Document**
 - 点击**File > Save**保存文件，将其命名为`iris_analysis.R`
 - 输入以下代码：
 
@@ -65,7 +61,7 @@ summary(iris)
 
 ## 步骤4：让Claude添加散点图
 
-- 点击左侧边栏的**Claude**图标打开聊天面板
+- 点击编辑器右上角的Spark图标（或状态栏中的**✻ Claude Code**）打开Claude面板
 - 在底部聊天框中输入：
 
 ```
@@ -73,8 +69,8 @@ summary(iris)
 ```
 
 - 按Enter发送
-- Claude会读取文件并建议更改——以差异对比显示要添加的新代码
-- 点击**Accept**应用更改
+- Claude会读取并编辑文件——新代码会出现在`iris_analysis.R`中
+- 如果Claude显示差异对比并请求权限，请接受更改
 - ggplot2代码会出现在文件中
 - 如果尚未安装ggplot2，在R终端中运行`install.packages("ggplot2")`
 
@@ -82,7 +78,7 @@ summary(iris)
 
 - 选择`iris_analysis.R`中的所有代码
 - 按`Ctrl+Enter`（Windows/Linux）或`Cmd+Enter`（Mac）
-- 散点图会出现在单独的图形窗口中
+- 散点图会出现在VS Code内的绘图标签页中
 - 应该看到按物种（setosa、versicolor、virginica）着色的点
 
 ## 步骤6：让Claude优化图形
@@ -95,7 +91,7 @@ summary(iris)
 
 - 按Enter
 - Claude会显示更新后的代码更改
-- 点击**Accept**
+- 如有询问，接受更改
 - 再次运行更新后的代码：选择全部并按`Ctrl+Enter` / `Cmd+Enter`
 - 现在图形显示每个物种使用不同的标记形状，没有标题，并使用经典主题
 
@@ -109,7 +105,7 @@ summary(iris)
 
 - 按Enter
 - Claude会向脚本添加PCA代码
-- 点击**Accept**
+- 如有询问，接受更改
 - 运行所有代码：选择全部并按`Ctrl+Enter` / `Cmd+Enter`
 - 会出现PCA图，显示样本投影到PC1和PC2上，按物种着色
 
@@ -123,7 +119,7 @@ summary(iris)
 
 - 按Enter
 - Claude会审查代码并建议添加解释各部分的注释
-- 点击**Accept**
+- 如有询问，接受更改
 - 脚本现在有了清晰的注释，解释了数据加载、可视化和PCA分析
 
 ## 下一步
@@ -138,9 +134,9 @@ summary(iris)
 
 - **Claude扩展未显示** - 安装后重启VS Code。点击**View > Extensions**验证已安装。
 - **"Cannot read R file"错误** - 确保使用`.R`扩展名保存文件。Claude需要已保存的文件才能读取。
-- **身份验证失败** - 验证Claude Pro/Max订阅或API密钥是否有效。身份验证故障排除请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)。
+- **身份验证失败** - 验证你的付费Claude套餐或Anthropic Console账户是否有效。身份验证故障排除请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)。
 - **找不到ggplot2** - 在R终端中安装：`install.packages("ggplot2")`。运行代码前等待安装完成。
-- **代码更改未应用** - 确保在差异对比上点击了**Accept**。如果不起作用，尝试手动复制Claude建议的代码。
+- **代码更改未应用** - 如果Claude请求了权限，确保你已接受更改。如果不起作用，尝试手动复制Claude建议的代码。
 
 ## 工作流程总结
 

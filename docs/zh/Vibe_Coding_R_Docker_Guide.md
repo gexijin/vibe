@@ -40,12 +40,13 @@ Vibe 编程就像与计算机对话——你描述想要的结果,Claude Code �
 ## 步骤 2:复制 Docker 配置
 
 - 访问 https://github.com/gexijin/vibe
-  - **ARM64 用户注意(Apple Silicon Mac):** 请使用 https://github.com/gexijin/vibe/tree/ARM64
-- 点击 **Code** 并下载 Zip
-- 打开文件资源管理器(Windows)或访达(Mac)
-- 在下载文件夹中解压文件
-- 导航到你的 vibe 项目文件夹(如 `Documents/vibe`)
+  - **Apple Silicon Mac 用户注意:** 主版本可以通过 Docker Desktop 内置的模拟功能在 Apple Silicon 上运行。它能正常工作,但首次构建和 R 本身会慢一些。
+- 点击 **Code**,然后点击 **Download ZIP**
+- 打开文件资源管理器(Windows)或访达(Mac),进入你的 **下载**(Downloads)文件夹
+- 解压文件:在 Windows 上,右键点击它并选择 **全部解压缩**(Extract All);在 Mac 上,双击它
+- 打开解压后的 `vibe-main` 文件夹。在 Windows 上,它里面可能还有一个同名文件夹;请打开那个文件夹
 - 找到 `.devcontainer` 文件夹
+  - 在 Mac 上,访达会隐藏名称以点开头的文件夹。按 **Cmd+Shift+.**(句点)即可显示它们
 - 复制整个文件夹(包含 `Dockerfile` 和 `devcontainer.json`)
 - 导航到新建的 `nba-dashboard` 文件夹
 - 将 `.devcontainer` 文件夹粘贴到这里
@@ -64,10 +65,10 @@ Vibe 编程就像与计算机对话——你描述想要的结果,Claude Code �
 - 点击 **Select Folder**(Windows)或 **Open**(Mac)
 - 右下角出现通知:**Folder contains a Dev Container configuration file**
 - 点击 **Reopen in Container**
-- 如果没看到通知,点击左下角的绿色图标,选择 **Reopen in Container**
-- VS Code 构建 Docker 容器(首次需要 3-5 分钟)
+- 如果没看到通知,点击左下角的 **><** 图标,选择 **Reopen in Container**
+- VS Code 构建 Docker 容器(首次需要 5-10 分钟)
 - 观察显示构建步骤的进度通知
-- 完成后,绿色图标显示 **Dev Container: R in Docker**
+- 完成后,左下角的 **><** 图标显示 **Dev Container: R in Docker (AMD64)**
 
 ## 步骤 4:启动 Claude Code
 
@@ -81,8 +82,11 @@ claude
 
 - 浏览器窗口打开进行身份验证
 - 点击 **Continue with Google** 或 **Continue with Email**
-- 使用你的 Claude 账户登录(或创建一个)
+- 使用你的 Claude 账户登录。Claude Code 需要付费 Claude 套餐(如 Pro 或 Max)或 Anthropic Console 账户——免费套餐不包含 Claude Code
+- 如果浏览器显示的是一段代码,而不是提示你已完成,请复制该代码,回到 VS Code 终端,在 `Paste code here if prompted` 提示处粘贴,然后按 Enter
+- 如果没有打开浏览器窗口,按 `c` 复制登录链接,然后粘贴到浏览器中
 - 身份验证成功后,返回 VS Code 终端
+- 如果询问你是否信任此文件夹中的文件,选择 **Yes**
 - 你将看到 Claude 的欢迎消息
 
 Claude Code 现在已准备就绪,可接受你的请求。
@@ -94,7 +98,7 @@ Claude Code 现在已准备就绪,可接受你的请求。
 - 在 Claude Code 终端中,输入:
 
 ```
-安装 hoopR 包并加载当前 NBA 球员统计数据。显示本赛季总得分前 10 的球员。以漂亮的表格形式展示。
+安装 hoopR 包并加载有数据的最近一个赛季的 NBA 球员统计数据。显示总得分前 10 的球员。以漂亮的表格形式展示。
 ```
 
 - 按 Enter
@@ -124,7 +128,7 @@ Claude Code 现在已准备就绪,可接受你的请求。
 
 - 按 Enter
 - Claude 探索数据集并展示有趣的统计数据
-- 查看输出以了解可用的列,如:player_name、team、points、assists、rebounds、field_goal_percentage 等
+- 查看输出以了解可用的列,如球员姓名、球队、得分、助攻和篮板
 
 这种探索帮助你决定在仪表板中放置什么内容。
 
@@ -148,12 +152,11 @@ Claude Code 现在已准备就绪,可接受你的请求。
 
 测试仪表板以查看它是否工作。
 
-- 查看 VS Code 编辑器右上角(`app.R` 打开的位置)
+- 在 VS Code 资源管理器(左侧边栏)中,点击 `app.R` 打开它
+- 查看编辑器右上角
 - 找到带下拉箭头的 **▶** 按钮
 - 点击下拉菜单并选择 **Run Shiny App**
-- 应用启动,出现通知:**Open in Browser**
-- 点击 **Open in Browser**
-- NBA 仪表板在你的网络浏览器中打开
+- 应用启动,仪表板会在 VS Code 内的预览标签页中打开(如果想使用常用的浏览器,打开底部的 **Ports** 标签,点击端口旁边的地球图标)
 - 尝试移动得分滑块——表格实时过滤
 - 滚动浏览球员数据
 - 如果应用正常工作,提交更改
@@ -173,7 +176,7 @@ Claude Code 现在已准备就绪,可接受你的请求。
 - 按 Enter
 - Claude 使用可视化代码更新 `app.R`
 - 再次点击 **Run Shiny App** 重新加载应用
-- 刷新你的浏览器
+- 如果预览没有变化,点击预览标签页顶部的重新加载箭头(或刷新浏览器)
 - 你现在看到彩色柱状图和散点图
 - 移动滑块——所有可视化一起更新
 
@@ -191,7 +194,7 @@ Claude Code 现在已准备就绪,可接受你的请求。
 
 - 按 Enter
 - Claude 添加球队过滤器
-- 刷新你的浏览器
+- 点击预览标签页顶部的重新加载箭头(或刷新浏览器)
 - 测试下拉菜单——选择不同的球队,如 Lakers、Warriors、Celtics
 - 观察每个球队的表格和图表更新
 
@@ -205,15 +208,15 @@ Claude Code 现在已准备就绪,可接受你的请求。
 - 浏览代码——注意 UI 布局、服务器逻辑和绘图代码
 - 你不需要理解每一行,但要了解结构
 - 打开 GitHub Desktop
-- 你将看到 `app.R` 列为新文件
-- 右侧面板显示所有绿色代码(新添加)
+- 你将看到 `app.R` 列在其中(作为新文件;如果你在之前的步骤中已经提交过,则显示为已更改)
+- 右侧面板以绿色显示新增的代码
 - 在左下角的 **Summary** 字段中,输入:
 
 ```
 Create NBA dashboard with team filter and visualizations
 ```
 
-- 点击 **Commit to main**
+- 点击底部的蓝色提交按钮(显示类似 **Commit 1 file to main** 的文字)
 - 点击 **Push origin** 备份到 GitHub
 
 你已保存了第一个可用版本!

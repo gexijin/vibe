@@ -87,7 +87,7 @@ summary(iris)
   claude
   ```
 
-按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
+按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。如果Claude Code询问你是否信任此文件夹中的文件，选择**Yes**并按Enter。
 
 ## 步骤8：请求Claude创建散点图
 
@@ -97,7 +97,7 @@ summary(iris)
 在 iris.R 中添加代码，创建萼片长度与宽度的散点图，按物种着色。使用 ggplot2。
 ```
 - Claude Code将读取`iris.R`文件并添加可视化代码
-- 被询问时，通过选择适当的选项授予Claude编辑iris.R文件的权限
+- 如果Claude请求编辑`iris.R`的权限，选择**Yes**（使用方向键，然后按Enter）
 - 等待Claude完成（将看到确认消息）
 
 
@@ -105,7 +105,7 @@ summary(iris)
 
 - 切换回RStudio（点击RStudio窗口）
 - 可能会看到提示说文件已更改——点击**Yes**重新加载
-- 如果没有出现提示，点击**File > Reopen with Encoding > UTF-8**
+- 如果新代码没有显示，点击**File > Reopen with Encoding...**，选择**UTF-8**，然后点击**OK**
 - 选中所有代码并点击**Run**
 - 散点图出现在**Plots**面板（右下角）
 - 如果出现关于ggplot2的错误，在Console面板中输入`install.packages("ggplot2")`来安装它
@@ -157,7 +157,7 @@ summary(iris)
   ```
   为这个分析创建一个新的 R Markdown 文件。保存为 iris_report.Rmd
   ```
-- Claude将请求你的权限来创建此文件
+- 如果Claude请求创建此文件的权限，选择**Yes**
 - Claude将在项目文件夹中创建一个新的`.Rmd`文件
 
 
@@ -167,23 +167,24 @@ summary(iris)
 - 点击**File > Open File...**
 - 选择`iris_report.Rmd`并点击**Open**
 - 点击脚本面板顶部的**Knit**按钮（带有毛线球图标）
+- 如果RStudio提示需要**rmarkdown**等包，点击**Install**（或**Yes**）并等待安装完成，然后再次点击**Knit**
 - RStudio将生成HTML报告
 - 报告在新窗口中打开，显示完整分析和叙述文本
 - HTML文件保存在项目文件夹中
 
 ## 故障排除
 
-- **RStudio不显示文件更改** - 点击**File > Reopen with Encoding > UTF-8**手动重新加载文件。
-- **"claude: command not found"** - 确保已完成安装指南。尝试打开一个新的PowerShell窗口。
+- **RStudio不显示文件更改** - 点击**File > Reopen with Encoding...**，选择**UTF-8**，然后点击**OK**手动重新加载文件。
+- **"The term 'claude' is not recognized"** - 确保已完成安装指南。关闭PowerShell并打开一个新窗口，然后重试。
 - **图表未显示** - 确保已安装ggplot2。如需要，在RStudio Console中运行`install.packages("ggplot2")`。
-- **错误："cannot change working directory"** - Windows路径包含空格。在步骤6中，将路径用引号括起来，例如：`cd "C:\Users\Your Name\Documents\test_claude"`
+- **步骤6中出现"Cannot find path ... because it does not exist"** - 你的项目可能位于其他文件夹中。在RStudio中，**Files**面板顶部的路径会显示`test_claude`所在的位置。如果你的“文档”文件夹由OneDrive备份，请尝试`cd ~\OneDrive\Documents\test_claude`。如果路径包含空格，请将其用引号括起来，例如：`cd "C:\Users\Your Name\OneDrive\Documents\test_claude"`
 - **Claude Code首次请求时很慢** - 等待30-60秒让Claude初始化。后续请求会更快。
 - **改用WSL？** - 如果你选择了可选的WSL/Ubuntu方式，请在步骤5-16中打开**Ubuntu**应用而不是PowerShell，并使用`cd /mnt/c/Users/YourUsername/Documents/test_claude`导航到你的项目
 
 ## 下一步
 
 - 尝试请求Claude向分析添加统计检验（t检验、ANOVA）
-- 请求Claude获取此代码的**Python版本**并准备一个Quarto文档
+- 请求Claude编写此代码的**Python版本**并准备一个Quarto文档
 - 请求Claude为R脚本中的重复性任务创建函数
 - 使用Claude在R代码无法运行时调试错误消息
 - 探索请求Claude优化运行缓慢的R代码以获得更好的性能

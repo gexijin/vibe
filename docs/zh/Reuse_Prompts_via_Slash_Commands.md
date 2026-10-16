@@ -30,7 +30,7 @@ lang: "zh"
 - 输入以下命令:
   ```
   cd ~\Documents
-  mkdir test_claude
+  mkdir -Force test_claude
   cd test_claude
   ```
 
@@ -39,9 +39,11 @@ lang: "zh"
 - 输入以下命令:
   ```bash
   cd ~/Documents
-  mkdir test_claude
+  mkdir -p test_claude
   cd test_claude
   ```
+
+如果文件夹已存在,这些命令会直接使用它。
 
 ## 步骤 2:启动 Claude Code
 
@@ -64,7 +66,7 @@ lang: "zh"
 无需手动创建文件,让 Claude 来完成。输入此提示词:
 
 ```
-创建一个名为 stock-report 的 slash command,用于生成
+在 .claude/commands/ 中创建一个名为 stock-report 的 slash command,用于生成
 通过公司名称或股票代码识别的公司近期发展报告。
 包含:
 - 产品或服务新闻
@@ -72,8 +74,9 @@ lang: "zh"
 - 近期财务报告
 - 分析师报告
 ```
-当被询问时,授权 Claude 创建文件。
+如果 Claude 请求创建文件的权限,选择 **Yes**。
 Claude 会创建详细提示词,并保存为 `stock-report.md` 到 `.claude/commands/` 文件夹。
+(如果 Claude 将其保存为 `.claude/skills/stock-report/SKILL.md`,效果也一样。在接下来的步骤中打开那个文件即可。)
 
 **注意:** 我们在所有地方都使用 Markdown 格式:提示词、报告和 slash command。Markdown 对 AI 友好,可以轻松作为纯文本文件编辑。
 
@@ -83,7 +86,7 @@ Claude 会创建详细提示词,并保存为 `stock-report.md` 到 `.claude/comm
 
 如果安装了 VS Code(推荐):
 - 启动 VS Code
-- 从 **File** 菜单,选择 **Open folder**,选择项目文件夹 `Documents/test_claude`
+- 从 **File** 菜单,选择 **Open Folder**,选择项目文件夹 `Documents/test_claude`
 - 从文件资源管理器,导航到 `.claude/commands` 并点击文件 `stock-report.md` 打开
 
 查看提示词,如需要可以修改指令。
@@ -96,7 +99,7 @@ Claude 会创建详细提示词,并保存为 `stock-report.md` 到 `.claude/comm
   ```
   claude
   ```
-现在用真实股票代码测试新命令:
+现在用真实的公司测试新命令:
 
 ```
 /stock-report Apple
@@ -143,7 +146,7 @@ Claude 生成报告并保存为名为 `Apple_2025-12-13.md` 之类的 markdown �
 可以让 Claude 编辑 slash command:
 
 ```
-修改 stock-report slash command,将报告保存为 html 文件。
+修改 stock-report slash command,将报告保存为 HTML 文件。
 ```
 
 Claude 更新命令文件。可以从编辑器验证。
@@ -165,7 +168,7 @@ Claude 创建名为 `Apple_2025-12-13.html` 之类的文件。在文件资源管
 
 ## 步骤 11:重复使用 slash command(可选)
 
-slash command 中的 `$ARGUMENTS` 关键字充当占位符。输入 `/stock-report AAPL` 时,Claude 在执行提示词前会用 `AAPL` 替换 `$ARGUMENTS`。
+slash command 中的 `$ARGUMENTS` 关键字充当占位符。输入 `/stock-report AAPL` 时,Claude 在执行提示词前会用 `AAPL` 替换 `$ARGUMENTS`。(如果命令文件中不包含 `$ARGUMENTS`,Claude Code 会直接把你输入的内容添加到提示词末尾,所以仍然有效。)
 
 尝试另一个股票代码:
 
@@ -214,7 +217,7 @@ slash command 中的 `$ARGUMENTS` 关键字充当占位符。输入 `/stock-repo
 - **自定义 slash command** 通过将复杂提示词转化为简单快捷方式来节省时间
 - **参数**使命令能够灵活处理不同输入(股票代码、主题、文件)
 - **Claude 构建命令** - 无需手动编写 Markdown 文件;只需描述想要什么
-- **命令可重复使用** - 一旦创建,就可以在项目和会话中使用
+- **命令可重复使用** - 一旦创建,就可以在此项目文件夹的每个会话中使用。要在所有项目中使用某个命令,让 Claude 把它移到你的个人 `~/.claude/commands/` 文件夹
 - **组合命令** - 为不同任务构建专业命令库
 
 ---

@@ -43,7 +43,7 @@ Claude 是通过编写小的 Python 程序来生成电子表格的，所以你�
 - 搜索 `GrapeCity.gc-excelviewer`
 - 在 **MESCIUS** 发布的 **Spreadsheet Viewer** 上点击 **Install**
 
-**注意**：这个扩展以前叫 **GrapeCity** 发布的 **Excel Viewer**，一些旧的教程和视频可能还在使用这个名字。现在搜索“Excel Viewer”会出现好几个其他扩展，所以请用上面的 ID 搜索，才能找到正确的那个。ID 仍然以 `GrapeCity` 开头——这是正常的。
+**注意**：这个扩展以前叫 **GrapeCity** 发布的 **Excel Viewer**，一些旧的教程和视频可能还在使用这个名字。现在搜索“Excel Viewer”会出现好几个其他扩展，所以请用上面的 ID 搜索，才能找到正确的那个。ID 仍然以 `GrapeCity` 开头——这是正常的。它的 Marketplace 页面显示该扩展已不再积极维护；不过用来预览本教程中的文件仍然完全没问题。
 
 安装后，你只需点击任意 `.xlsx` 文件，就能直接在 VS Code 中查看它的工作表、数字和公式。它很适合快速核对，但无法显示图表、彩色高亮或下拉列表——要查看这些内容，请用 Excel、LibreOffice Calc 或 Google Sheets 打开文件。
 
@@ -75,7 +75,7 @@ claude
 
 - 按 Enter
 - 看着 Claude 编写并运行一个 Python 脚本，在你的项目文件夹中生成 `budget.xlsx`
-- Claude 在运行命令或安装辅助工具（比如 `openpyxl`，一个用于处理电子表格的 Python 插件）之前会请求你的许可——选择 **Yes** 让它继续
+- 如果 Claude 请求许可来运行命令或安装辅助工具（比如 `openpyxl`，一个用于处理电子表格的 Python 插件），选择 **Yes** 让它继续
 - 如果 Claude 提示没有安装 Python 或找不到 Python，请回到步骤 1，然后关闭并重新打开 VS Code
 
 ## 步骤 6：预览结果

@@ -17,7 +17,7 @@ lang: "zh"
 
 ## 你需要准备的
 
-- Windows、macOS 或 Linux 电脑
+- 一台 Windows 或 Mac 电脑（GitHub Desktop 不支持 Linux）
 - 互联网连接
 - 用于创建 GitHub 账户的电子邮箱
 - 15-20 分钟
@@ -49,13 +49,14 @@ lang: "zh"
 
 - 打开 GitHub Desktop
 - 点击 **Sign in to GitHub.com**
-- 你的浏览器会打开——点击 **Authorize desktop**
+- 你的浏览器会打开——如有要求请先登录，然后点击 **Authorize desktop**
+- 如果浏览器询问是否打开 **GitHub Desktop**，点击 **打开**（Open）或 **允许**（Allow）
 - 返回 GitHub Desktop
 - 点击 **Finish** 完成设置
 
 ## 第 4 步：创建你的第一个仓库
 
-- 在 GitHub Desktop 中，点击 **Create a New Repository on your Hard Drive**
+- 在 GitHub Desktop 中，点击 **Create a New Repository on your Local Drive**
 - 填写表单：
   - **Name：** `my-first-project`(或任何你喜欢的名字)
   - **Description：** `Learning version control`(可选)
@@ -93,7 +94,7 @@ lang: "zh"
 - 返回 GitHub Desktop
 - 你会在右侧看到高亮显示的变更(绿色 = 添加的内容，红色 = 删除的内容)
 - 在左下角，输入提交消息：`Updated README with project description`
-- 点击蓝色的 **Commit to main** 按钮
+- 点击蓝色的 **Commit 1 file to main** 按钮（数字与你修改的文件数量一致）
 
 ## 第 8 步：推送到 GitHub(备份到云端)
 
@@ -113,14 +114,14 @@ lang: "zh"
 ## 故障排除
 
 - **无法登录 GitHub** - 检查互联网连接。先尝试在 github.com 登录以验证凭据是否有效。
-- **变更没有出现在 GitHub Desktop 中** - 确保已保存文件。点击 **Repository** → **Refresh** 或重启 GitHub Desktop。
-- **推送失败并显示"rejected"错误** - 有其他人推送了变更。先点击 **Fetch origin**，然后再尝试推送。
+- **变更没有出现在 GitHub Desktop 中** - 确保已保存文件。先点击其他应用，再切换回 GitHub Desktop，或者重启 GitHub Desktop。
+- **推送失败并显示"rejected"错误** - 有其他人推送了变更。点击 **Fetch origin**，然后点击 **Pull origin**，再点击 **Push origin**。
 
 ## 工作流程概览
 
 - 对项目文件进行修改
 - 在 GitHub Desktop 中查看变更(绿色 = 添加的内容，红色 = 删除的内容)
-- 写一条描述性的提交消息并点击 **Commit to main**
+- 写一条描述性的提交消息，然后点击底部的蓝色提交按钮（显示类似 **Commit 1 file to main** 的文字）
 - 点击 **Push origin** 备份到 GitHub
 - 重复以上步骤
 

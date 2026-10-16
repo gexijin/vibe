@@ -83,32 +83,22 @@ lang: "zh"
 
 ## 步骤4：创建股票选择器Subagent
 
-输入以下命令：
+让Claude为你编写subagent文件。复制并粘贴以下提示词：
 
 ```
-/agents
+在 .claude/agents/ 中创建一个名为 stock-picker 的项目 subagent：
+- 它接受两只或更多股票
+- 使用 stock-report skill 进行研究
+- 根据收集的数据类别创建评分卡
+- 给出最终推荐。
+使用 Sonnet 模型。
 ```
 
-会看到Claude Code agents界面，显示现有的subagent（如果有的话）以及**Create**（创建）、**Edit**（编辑）或**Delete**（删除）subagent的选项。
+Claude会创建文件`.claude/agents/stock-picker.md`。如果Claude请求创建该文件的权限，选择**Yes**。
 
-现在创建你的subagent：
-- 选择**Create new subagent**
-- 选择**Project**
-- 选择**Generate with Claude (recommended)**
-- 粘贴以下指令：
+**注意：**在旧版本的Claude Code中，输入`/agents`会打开一个用于创建subagent的菜单。在当前版本中，`/agents`只会提醒你直接让Claude创建，也就是我们刚才的做法。
 
-  ```
-  为名为 stock-picker 的新 subagent 创建一个 markdown 文件：
-  - 它接受两只或更多股票
-  - 使用 stock-report skill 进行研究
-  - 根据收集的数据类别创建评分卡
-  - 给出最终推荐。
-  ```
-- 在**[Continue]**上按**Enter**以使用**All tools**
-- 选择**Sonnet**作为模型
-- 按**Enter**随机选择一种颜色
-
-**"All tools"是什么意思：**subagent可以被限制为只使用它需要的工具——例如，一个只做研究的agent只需要网络搜索。本教程使用**All tools**，因为stock-picker需要在线研究，还可能需要写入文件。之后可以通过编辑subagent的文件来限制工具。
+**工具：**subagent可以被限制为只使用它需要的工具——例如，一个只做研究的agent只需要网络搜索。如果文件中没有`tools:`这一行，subagent就可以使用所有工具，而stock-picker正需要在线研究和写入文件。
 
 ## 步骤5：查看你构建的内容（反思检查点）
 
@@ -125,11 +115,13 @@ Claude将显示位于`.claude/agents/stock-picker.md`的subagent文件。会看�
 ---
 name: stock-picker
 description: Compares multiple companies for investment decisions...
-skills: stock-report
+skills:
+  - stock-report
+model: sonnet
 ---
 ```
 
-这个frontmatter（`---`标记之间的部分）告诉Claude Code何时激活这个subagent以及它可以使用哪些skill。
+这个frontmatter（`---`标记之间的部分）告诉Claude Code何时使用这个subagent（`description`）、从一开始就为它加载哪些skill（`skills`），以及它运行在哪个Claude模型上（`model`）。
 
 frontmatter下方有一个**系统提示词**，包含你的评分方法。
 
@@ -141,6 +133,8 @@ frontmatter下方有一个**系统提示词**，包含你的评分方法。
 可以直接编辑文件或让Claude更新它。
 
 ## 步骤6：测试Subagent
+
+首先按两次**Ctrl+C** **退出**Claude Code，然后输入`claude`重新启动。Claude Code只有在重启后才会识别新建的`.claude/agents/`文件夹。
 
 现在用真实的比较来测试subagent。输入：
 
@@ -184,7 +178,7 @@ subagent可能会在终端中显示这些内容，或生成一个包含完整报
 - **Subagent未激活**：确保请求提到了比较公司或投资决策。尝试："使用 stock-picker subagent 比较..."
 - **找不到Skill**：验证`.claude/skills/stock-report/SKILL.md`是否存在。如果刚添加，请重启Claude Code。
 - **评分不完整**：让subagent "继续"或"更详细地解释每个类别的分数"
-- **创建subagent时出错**：检查`.claude/agents/`文件夹是否存在。Claude Code应该会自动创建它。
+- **创建后找不到subagent**：检查`.claude/agents/stock-picker.md`是否存在。如果存在，退出Claude Code（按两次Ctrl+C），然后用`claude`重新启动。新建的`.claude/agents/`文件夹只有在重启后才会被识别。
 
 ## 工作流程概述
 
