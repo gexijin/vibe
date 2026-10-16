@@ -25,7 +25,6 @@ This guide walks you through installation step by step, with detailed instructio
 
 - A Mac computer (macOS 13.0 Ventura or newer)
 - Internet connection
-- Administrator access on your computer
 - Claude Pro/Max subscription or API key
 - 5 - 10 minutes
 
@@ -52,6 +51,11 @@ curl -fsSL https://claude.ai/install.sh | bash
    claude --version
    ```
 - You should see the version number of Claude Code
+- If you see `zsh: command not found: claude` instead, run these two lines (they tell your Mac where to find Claude Code), then try `claude --version` again:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 **Alternative: Install with Homebrew**
 
@@ -70,13 +74,10 @@ brew install --cask claude-code
    ```
    claude
    ```
-- Claude tries to open a browser. If it doesn't open automatically, copy the URL shown in Terminal and paste it into your browser.
+- Claude tries to open a browser. If it doesn't open automatically, press **c** to copy the login link, then paste it into your browser.
 - Log in to your Claude.ai account (this may happen automatically)
-- Click **Authorize**
-- Click **Copy Code** when a long code appears
-- Go back to the Terminal window
-- To paste in Terminal: Click **Edit** in the menu bar, then click **Paste**
-- You should see a success message
+- Click **Authorize**. The browser should say you're logged in, and Terminal shows a success message.
+- Only if the browser shows a long code instead, click **Copy Code**, go back to Terminal, paste it at **Paste code here if prompted** (press **Command (⌘) + V**), and press **Return**.
 - Follow the instructions to complete the setup
 
 ### Option B. Use Anthropic API key
@@ -98,7 +99,7 @@ If you have an Anthropic API key instead of a Claude subscription:
 
 **Note:** If you're using an older Mac with bash instead of zsh, replace `~/.zshrc` with `~/.bash_profile` in the command above.
 
-### Option C. Use OpenRouter API (starts for free!)
+### Option C. Use OpenRouter API (pay as you go)
 
 OpenRouter is a unified API gateway that provides access to 500+ large language models through a single API key. This can be an economical way to use Claude Code, as you pay only for usage and can choose from models at various price points.
 
@@ -127,8 +128,10 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - Browse available models at [openrouter.ai/models](https://openrouter.ai/models)
-- Free tier gives you 50 API requests per day
-- See the [official OpenRouter guide](https://openrouter.ai/docs/guides/claude-code-integration) for more details
+- Free (`:free`) models are limited to 50 requests per day, which a single Claude Code task can use up quickly
+- The models shown above are paid models — check their prices at [openrouter.ai/models](https://openrouter.ai/models) before using them
+- Claude Code is only guaranteed to work with Anthropic models through OpenRouter
+- See the [official OpenRouter guide](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) for more details
 
 
 ### Option D. Use Anthropic API via Azure Foundry
@@ -223,7 +226,11 @@ It checks your installation and reports any issues.
 - Close Terminal completely (click **Terminal** in the menu bar, then **Quit Terminal**)
 - Open Terminal again
 - Try `claude --version` to check if it's installed
-- Try running the installation command again: `curl -fsSL https://claude.ai/install.sh | bash`
+- If it still says `command not found`, run these two lines, then try `claude --version` again:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 ### Authentication fails
 - Make sure you have an active Claude Pro/Max subscription or valid API key
