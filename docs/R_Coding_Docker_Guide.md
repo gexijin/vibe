@@ -111,7 +111,8 @@ The container has R pre-installed with common packages. Let's run a simple data 
 - In VS Code Explorer, navigate to `R/iris_analysis.R`
 - Click to open the file
 - You'll see R code that analyzes the iris dataset
-- Click in the terminal you opened in Step 6, type `R` and press **Enter**. You'll see R start up and a `>` prompt (this container is set up to send code to the terminal you are using, so R must be running there first)
+- Click **View > Command Palette**, type `R: Create R Terminal`, and press **Enter**. An R terminal opens at the bottom with a `>` prompt (this container sends your code to the terminal you are using, so keep this R terminal selected)
+- If VS Code asks to install the **sess** package, click **Yes** (or **Install bundled sess**) and wait for it to finish. It lets VS Code show your plots
 - Click back in `iris_analysis.R` and select the first line: `data(iris)`
 - Press `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (Mac) to run it
 - Continue running each line one at a time
@@ -174,8 +175,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
     
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Give shiny passwordless sudo for updating Claude Code from VS Code
 RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
@@ -191,7 +193,7 @@ EXPOSE 3838
 - `RUN apt-get install` - Linux system libraries for R packages
 - `RUN R -q -e 'install.packages(...)'` - Permanently installs R packages
 - `RUN curl... && apt-get install -y nodejs` - Installs Node.js, required to run Claude Code
-- `RUN npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance (the first part lets Claude Code finish setting itself up, which newer versions of npm otherwise block)
 - `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - Lets the container's user run `sudo claude update` without a password prompt
 - `EXPOSE 3838` - Opens port 3838 for Shiny apps
 

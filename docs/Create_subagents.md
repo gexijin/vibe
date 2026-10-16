@@ -116,10 +116,11 @@ name: stock-picker
 description: Compares multiple companies for investment decisions...
 skills:
   - stock-report
+model: sonnet
 ---
 ```
 
-This frontmatter (the section between `---` markers) tells Claude Code when to use this subagent (`description`) and which skills to load into it from the start (`skills`).
+This frontmatter (the section between `---` markers) tells Claude Code when to use this subagent (`description`) and which skills to load into it from the start (`skills`), and which Claude model it runs on (`model`).
 
 There is a **System prompt** below the frontmatter with your scoring methodology.
 

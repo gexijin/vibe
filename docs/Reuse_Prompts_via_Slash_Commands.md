@@ -167,7 +167,7 @@ Claude creates a file named something like `Apple_2025-12-13.html`. Double-click
 
 ## Step 11: Reuse slash command (Optional)
 
-The `$ARGUMENTS` keyword in your slash command acts as a placeholder. When you type `/stock-report AAPL`, Claude replaces `$ARGUMENTS` with `AAPL` before executing the prompt.
+The `$ARGUMENTS` keyword in your slash command acts as a placeholder. When you type `/stock-report AAPL`, Claude replaces `$ARGUMENTS` with `AAPL` before executing the prompt. (If your command file doesn't contain `$ARGUMENTS`, Claude Code simply adds what you typed to the end of the prompt, so it still works.)
 
 Try another ticker:
 

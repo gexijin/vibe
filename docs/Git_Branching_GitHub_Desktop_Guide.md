@@ -94,7 +94,7 @@ Because you typed the real name `index.html`, VS Code saves it correctly—no ex
 - Return to **GitHub Desktop**
 - You'll see **two** files listed on the left: `index.html` and `heartatk4R.txt`
 - At the bottom left, type a commit message: `Add dashboard and data`
-- Click the blue **Commit to main** button
+- Click the blue **Commit 2 files to main** button (the number matches how many files you changed)
 
 Git now tracks both your code and your data.
 
@@ -111,7 +111,7 @@ Git now tracks both your code and your data.
 - Save the file (**Ctrl+S** or **Cmd+S**)
 - Refresh the browser, load `heartatk4R.txt` again, and try the dropdown
 - In GitHub Desktop, type a commit message: `Add sex filter`
-- If it works, click **Commit to main**
+- If it works, click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
 
 ## Step 9: View Your History
 
@@ -134,7 +134,7 @@ Separate files keep the project organized—and it's how real apps (including Re
 - Refresh the browser and load `heartatk4R.txt`—the dashboard should look exactly the same as before
 - In GitHub Desktop, you'll see `index.html` changed plus two new files (`style.css` and `app.js`)
 - Type a commit message: `Split into separate files`
-- Click **Commit to main**
+- Click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
 
 ## Step 11: Create a Branch to Experiment
 
@@ -156,7 +156,7 @@ You're now working on a copy. Anything you do here won't affect `main`.
 - For each file it gives you: click that file in VS Code's Explorer, select all (**Ctrl+A**/**Cmd+A**), paste the new version over it, and save
 - Refresh the browser and load `heartatk4R.txt` again to see the chart
 - In GitHub Desktop, commit with the message: `Add death rate chart`
-- Click **Commit to add-chart**
+- Click the blue commit button at the bottom (it reads like **Commit 1 file to add-chart**)
 
 ## Step 13: Switch Back to main and See the Difference
 
@@ -174,7 +174,7 @@ If you like the chart and want to keep it:
 - Make sure you're on **main** (check the **Current Branch** button)
 - Click **Branch** in the menu bar → **Merge into Current Branch**
 - Select **add-chart**
-- Click **Merge add-chart into main**
+- Click **Create a merge commit** (older versions of GitHub Desktop call this button **Merge add-chart into main**)
 - Refresh the browser and load the data—the chart is now part of `main`
 
 ## Next Steps
@@ -190,7 +190,7 @@ If you like the chart and want to keep it:
 - **Dashboard looks plain or broken after splitting files** - Make sure `style.css` and `app.js` are in the same folder as `index.html`, named exactly, and that you saved all three (an unsaved file shows a dot ● next to its name in the VS Code tab).
 - **Numbers show `NaN`** - Tell ChatGPT: "Some values are NA and some numbers have leading zeros—skip NA and convert text to numbers."
 - **Double-clicking `index.html` opens the browser, not the editor** - That's expected—double-click is for testing. To edit, click the file in VS Code's Explorer panel instead.
-- **Switching branches asks about my changes** - Commit your changes first. If GitHub Desktop prompts when switching, choose **Leave my changes on the current branch**.
+- **Switching branches asks about my changes** - Commit your changes first. If GitHub Desktop prompts when switching, choose **Leave my changes on add-chart** (it shows your current branch name), then click **Switch branch**.
 
 ## Workflow Overview
 

@@ -74,12 +74,14 @@ Docker runs your code in isolated containers that work the same on every machine
 - Click **Download for Windows**
 - Run the downloaded installer
 - Follow the installation wizard and accept the defaults (keep **Use WSL 2 instead of Hyper-V** checked. If Docker Desktop says WSL needs installing or updating, open PowerShell as administrator, run `wsl --update`, then restart your computer.)
-- After installation, launch **Docker Desktop**
+- If the installer asks you to **Close and restart** (or log out), do that first
+- Docker Desktop does not start on its own. Click the **Windows Start button**, type `Docker`, and click **Docker Desktop**
+- Click **Accept** on the Docker Subscription Service Agreement. If it asks you to sign in, you can click **Skip**
 - Wait for the Docker engine to start (you'll see a green status indicator in the bottom left)
 
 **Verify Docker works:**
 
-- In PowerShell, type:
+- Close any open PowerShell windows, then open a new PowerShell window and type:
   ```
   docker run hello-world
   ```

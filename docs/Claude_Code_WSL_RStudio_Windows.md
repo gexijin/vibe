@@ -86,7 +86,7 @@ summary(iris)
   claude
   ```
 
-Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt.
+Log in with your Claude subscription following the [installation tutorial](Install_CLAUDE_Code_Win.md). After logging in, you'll see a welcome message and the Claude Code prompt. If Claude Code asks whether you trust the files in this folder, choose **Yes** and press Enter.
 
 ## Step 8: Ask Claude for a Scatter Plot
 
@@ -96,7 +96,7 @@ If Claude Code is slow or unresponsive, just wait for it to initialize. Then, ty
 Add code to iris.R to create a scatter plot of sepal length vs. width, colored by species. Use ggplot2. 
 ```
 - Claude Code will read your `iris.R` file and add the visualization code
-- When asked, give Claude permission to edit the iris.R file by selecting the appropriate option
+- If Claude asks for permission to edit `iris.R`, choose **Yes** (use the arrow keys, then press Enter)
 - Wait for Claude to finish (you'll see a confirmation message)
 
 
@@ -156,7 +156,7 @@ Add code to iris.R to create a scatter plot of sepal length vs. width, colored b
   ```
   Create a new R Markdown file for this analysis. Save as iris_report.Rmd
   ```
-- Claude will ask you for permission to create this file.
+- If Claude asks for permission to create this file, choose **Yes**.
 - Claude will create a new `.Rmd` file in your project folder
 
 
