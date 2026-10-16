@@ -18,7 +18,7 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 
 - Abgeschlossenes Tutorial [R in VS Code ausführen](./R_Coding_VS_Code_Guide) - R sollte in VS Code funktionieren
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) - Claude Code CLI sollte installiert sein
-- Claude Pro/Max-Abonnement oder Anthropic-API-Schlüssel
+- Ein kostenpflichtiger Claude-Plan (z. B. Pro oder Max) oder ein Anthropic-Console-Konto – der kostenlose Plan enthält Claude Code nicht
 - 20-30 Minuten
 
 ## Schritt 1: VS Code öffnen und R-Projekt erstellen
@@ -35,7 +35,7 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 
 - Klicken Sie auf das **Extensions**-Symbol in der linken Seitenleiste (Symbol mit vier Quadraten)
 - Geben Sie im Suchfeld `Claude Code` ein
-- Finden Sie **Claude Code** von Anthropic und klicken Sie auf **Install**
+- Finden Sie **Claude Code for VS Code** von Anthropic und klicken Sie auf **Install**
 - Klicken Sie nach der Installation unten rechts in der Statusleiste des Fensters auf **✻ Claude Code**, um das Claude-Panel zu öffnen (sobald eine Datei geöffnet ist, können Sie auch das Spark-Symbol oben rechts im Editor verwenden)
 - Klicken Sie auf **Sign in** und schließen Sie die Anmeldung mit Ihrem Claude-Konto im Browser ab, der sich öffnet
 - Wenn Sie stattdessen einen API-Schlüssel verwenden, richten Sie ihn wie in [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3, Option B) beschrieben ein, beenden Sie dann VS Code und öffnen Sie es erneut
@@ -43,8 +43,8 @@ Sie haben R in VS Code eingerichtet und können Code manuell schreiben. Jetzt m�
 
 ## Schritt 3: Erstes R-Skript manuell erstellen
 
-- Klicken Sie in der Menüleiste auf **File > New File**
-- Klicken Sie auf **Select a language** und geben Sie `R` ein, dann wählen Sie **R**
+- Klicken Sie in der Menüleiste auf **File > New File...**
+- Wählen Sie in der Liste, die oben im Fenster erscheint, **R Document**
 - Speichern Sie die Datei durch Klicken auf **File > Save**, nennen Sie sie `iris_analysis.R`
 - Geben Sie diesen Code ein:
 
@@ -69,8 +69,8 @@ Füge Code zu iris_analysis.R hinzu, um ein Streudiagramm von Kelchblattlänge v
 ```
 
 - Drücken Sie Enter zum Senden
-- Claude liest Ihre Datei und schlägt Änderungen vor – Sie sehen ein Diff mit neuem Code zum Hinzufügen
-- Klicken Sie auf **Accept**, um die Änderungen zu übernehmen
+- Claude liest Ihre Datei und bearbeitet sie – der neue Code erscheint in `iris_analysis.R`
+- Wenn Claude ein Diff zeigt und um Erlaubnis fragt, nehmen Sie die Änderung an
 - Der ggplot2-Code erscheint in Ihrer Datei
 - Wenn Sie ggplot2 nicht installiert haben, führen Sie `install.packages("ggplot2")` im R-Terminal aus
 
@@ -91,7 +91,7 @@ Entferne den Titel. Verwende für jede Art eine andere Punktform. Wechsle zum kl
 
 - Drücken Sie Enter
 - Claude zeigt die aktualisierten Codeänderungen
-- Klicken Sie auf **Accept**
+- Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Führen Sie den aktualisierten Code erneut aus: Wählen Sie alles aus und drücken Sie `Strg+Enter` / `Cmd+Enter`
 - Das Diagramm zeigt jetzt verschiedene Punktformen pro Art, keinen Titel und das klassische Theme
 
@@ -105,7 +105,7 @@ Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und 
 
 - Drücken Sie Enter
 - Claude fügt PCA-Code zu Ihrem Skript hinzu
-- Klicken Sie auf **Accept**
+- Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Führen Sie den gesamten Code aus: Wählen Sie alles aus und drücken Sie `Strg+Enter` / `Cmd+Enter`
 - Ein PCA-Plot erscheint, der Proben auf PC1 und PC2 projiziert zeigt, gefärbt nach Art
 
@@ -119,7 +119,7 @@ Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und 
 
 - Drücken Sie Enter
 - Claude überprüft den Code und schlägt Kommentare vor, die jeden Abschnitt erklären
-- Klicken Sie auf **Accept**
+- Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Ihr Skript hat jetzt klare Kommentare, die das Laden der Daten, die Visualisierung und die PCA-Analyse erklären
 
 ## Nächste Schritte
@@ -134,9 +134,9 @@ Füge Code hinzu, um eine PCA für die numerischen Variablen durchzuführen und 
 
 - **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
 - **„Cannot read R file“-Fehler** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.R` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
-- **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
+- **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr kostenpflichtiger Claude-Plan oder Ihr Anthropic-Console-Konto aktiv ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **ggplot2 nicht gefunden** - Installieren Sie es im R-Terminal: `install.packages("ggplot2")`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
-- **Codeänderungen werden nicht übernommen** - Stellen Sie sicher, dass Sie auf **Accept** beim Diff klicken. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
+- **Codeänderungen werden nicht übernommen** - Wenn Claude um Erlaubnis gefragt hat, stellen Sie sicher, dass Sie die Änderung angenommen haben. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
 
 ## Workflow-Zusammenfassung
 

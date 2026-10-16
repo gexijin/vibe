@@ -90,7 +90,7 @@ summary(iris)
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code. Wenn Claude Code fragt, ob Sie den Dateien in diesem Ordner vertrauen, wählen Sie **Yes** und drücken Sie Enter.
 
 ## Schritt 8: Claude um ein Streudiagramm bitten
 
@@ -100,7 +100,7 @@ Wenn Claude Code langsam ist oder nicht reagiert, warten Sie einfach, bis es ini
 Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die Kelchblattbreite zu erstellen, gefärbt nach Art. Verwende ggplot2.
 ```
 - Claude Code liest Ihre `iris.R`-Datei und fügt den Visualisierungscode hinzu
-- Wenn Sie gefragt werden, geben Sie Claude die Erlaubnis, die iris.R-Datei zu bearbeiten, indem Sie die entsprechende Option wählen
+- Wenn Claude um Erlaubnis bittet, `iris.R` zu bearbeiten, wählen Sie **Yes** (mit den Pfeiltasten, dann Enter drücken)
 - Warten Sie, bis Claude fertig ist (Sie sehen eine Bestätigungsnachricht)
 
 
@@ -159,7 +159,7 @@ Füge Code zu iris.R hinzu, um ein Streudiagramm der Kelchblattlänge gegen die 
   ```
   Erstelle eine neue R-Markdown-Datei für diese Analyse. Speichere sie als iris_report.Rmd
   ```
-- Claude wird Sie um Erlaubnis bitten, diese Datei zu erstellen
+- Wenn Claude um Erlaubnis bittet, diese Datei zu erstellen, wählen Sie **Yes**
 - Claude erstellt eine neue `.Rmd`-Datei in Ihrem Projektordner
 
 

@@ -24,7 +24,7 @@ Bevor Sie etwas installieren, ist es hilfreich zu wissen, was Sie da eigentlich 
 ## Schritt 1: Ein kostenloses Claude-Konto erstellen
 
 - Gehen Sie zu [claude.ai](https://claude.ai)
-- Klicken Sie auf **Sign up**
+- Wenn Sie eine Schaltfläche **Sign up** oder **Try Claude** sehen, klicken Sie darauf (andernfalls gelangen Sie direkt zu den Anmeldeoptionen)
 - Geben Sie Ihre E-Mail-Adresse ein und klicken Sie auf **Continue with email** (oder klicken Sie auf **Continue with Google**)
 - Öffnen Sie die E-Mail von Anthropic und klicken Sie auf den Link darin (wenn Sie die E-Mail auf einem anderen Gerät öffnen, zum Beispiel auf Ihrem Smartphone, wird ein Code angezeigt – geben Sie diesen Code auf Ihrem Computer ein)
 - Folgen Sie den Anweisungen auf dem Bildschirm, um Ihr Konto fertig zu erstellen (möglicherweise werden Sie nach einer Telefonnummer gefragt, an die ein Code per SMS geschickt wird)

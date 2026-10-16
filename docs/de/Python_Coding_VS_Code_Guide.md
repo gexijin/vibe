@@ -23,13 +23,13 @@ Sie möchten Python-Code schreiben, sind sich aber nicht sicher, welchen Editor 
 
 ## Schritt 1: Python installieren
 
-Sie benötigen Python 3.8 oder höher für die beste Kompatibilität mit modernen Paketen.
+Sie benötigen Python 3.11 oder höher (am besten die neueste Version von python.org), damit sich die neuesten Versionen von Paketen wie pandas und Streamlit installieren lassen.
 
 - **Windows**:
   - Gehen Sie zu [python.org/downloads/windows](https://www.python.org/downloads/windows/) und klicken Sie unter der neuesten Python 3-Version auf **Windows installer (64-bit)** (nicht auf den „install manager“)
   - Führen Sie das Installationsprogramm aus
   - **Aktivieren Sie das Kontrollkästchen „Add python.exe to PATH“**, bevor Sie auf **Install Now** klicken
-  - Notieren Sie den Installationsort (typischerweise `C:\Users\IhrName\AppData\Local\Programs\Python\Python312`)
+  - Notieren Sie den Installationsort (typischerweise `C:\Users\IhrName\AppData\Local\Programs\Python\Python312` – die Zahl entspricht Ihrer Python-Version)
 
 - **macOS**:
   - Laden Sie von [python.org](https://www.python.org/downloads/) herunter und führen Sie das Installationsprogramm aus
@@ -56,7 +56,7 @@ Die Python-Erweiterung enthält Unterstützung für Debugging, IntelliSense, Cod
 
 - Erstellen Sie einen neuen Ordner auf Ihrem Computer (z.B. `mein-python-projekt`)
 - Klicken Sie in VS Code auf **File > Open Folder** und wählen Sie Ihren neuen Ordner
-- Klicken Sie im oberen Menü auf **File > New File**
+- Klicken Sie im oberen Menü auf **File > New File...**. Oben im Fenster erscheint eine Liste – wählen Sie **Python File**
 - Speichern Sie die Datei als `analysis.py` durch Klicken auf **File > Save**
 
 ## Schritt 4: Python-Interpreter auswählen
@@ -130,14 +130,14 @@ plt.show()
 ## Schritt 8: Python-Code interaktiv ausführen
 
 - Klicken Sie bei geöffneter `analysis.py` auf die Schaltfläche **▶ Run Python File** in der oberen rechten Ecke
-- Oder klicken Sie mit der rechten Maustaste im Editor und wählen Sie **Run Python File in Terminal**
+- Oder klicken Sie mit der rechten Maustaste im Editor und wählen Sie **Run Python > Run Python File in Terminal**
 - Beobachten Sie die Ausgabe im Terminal-Panel
 - Ein Histogramm-Fenster öffnet sich und zeigt Ihren Plot
 - Sie können auch bestimmte Zeilen auswählen und `Shift+Enter` drücken, um nur diese Zeilen in einer interaktiven Python-Sitzung auszuführen
 
 ## Schritt 9: Eine einfache Streamlit-App erstellen
 
-- Erstellen Sie eine neue Datei: **File > New File**
+- Erstellen Sie eine neue Datei: Klicken Sie auf **File > New File...** und wählen Sie dann **Python File** aus der Liste oben im Fenster
 - Speichern Sie sie als `app.py`
 - Geben Sie diesen Code ein:
 

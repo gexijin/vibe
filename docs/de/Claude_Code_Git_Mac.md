@@ -109,6 +109,8 @@ Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](
 
 Claude initialisiert ein Git-Repository in Ihrem Ordner (dauert 2-5 Sekunden). Sie haben jetzt Versionskontrolle!
 
+Wenn Claude um Erlaubnis fragt, zeigt es ein kleines Menü mit **Yes** und **No**. Wählen Sie mit den Pfeiltasten **Yes** und drücken Sie **Enter**. Das kann in diesem Tutorial einige Male vorkommen.
+
 ## Schritt 8: Die Timer-App erstellen
 
 - Kopieren Sie in Claude Code diese gesamte Anfrage und fügen Sie sie ein (beim Einfügen bleiben alle Zeilen zusammen; wenn Sie Enter drücken, würde sie zu früh abgeschickt):
@@ -194,7 +196,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
   ```
   Füge eine Tonbenachrichtigung hinzu, wenn die Zeit abgelaufen ist.
   ```
-- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 0.1 Minuten)
+- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 1 Minute)
 - Wenn es funktioniert, committen Sie die Änderungen:
   ```
   Speichere diese Änderungen.
@@ -206,7 +208,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
   ```
   Der Ton soll weiterlaufen, bis ich eine Schaltfläche zum Schlummern drücke.
   ```
-- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 0.1 Minuten)
+- Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 1 Minute)
 - Wenn es funktioniert, committen Sie die Änderungen:
   ```
   Speichere diese Änderungen.

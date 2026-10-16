@@ -167,7 +167,7 @@ Claude erstellt eine Datei mit einem Namen wie `Apple_2025-12-13.html`. Doppelkl
 
 ## Schritt 11: Slash-Befehl wiederverwenden (Optional)
 
-Das Schlüsselwort `$ARGUMENTS` in Ihrem Slash-Befehl fungiert als Platzhalter. Wenn Sie `/stock-report AAPL` eingeben, ersetzt Claude `$ARGUMENTS` durch `AAPL`, bevor der Prompt ausgeführt wird.
+Das Schlüsselwort `$ARGUMENTS` in Ihrem Slash-Befehl fungiert als Platzhalter. Wenn Sie `/stock-report AAPL` eingeben, ersetzt Claude `$ARGUMENTS` durch `AAPL`, bevor der Prompt ausgeführt wird. (Wenn Ihre Befehlsdatei kein `$ARGUMENTS` enthält, hängt Claude Code Ihre Eingabe einfach an das Ende des Prompts an, sodass es trotzdem funktioniert.)
 
 Versuchen Sie einen anderen Ticker:
 

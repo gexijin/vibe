@@ -27,7 +27,7 @@ Sie möchten Code schreiben, aber der **Editor** von Windows (Notepad) oder Text
 - Gehen Sie zu [code.visualstudio.com](https://code.visualstudio.com)
 - Klicken Sie auf die Schaltfläche **Download** (es erkennt Ihr Betriebssystem)
 - Führen Sie das Installationsprogramm aus:
-   - **Windows:** Doppelklicken Sie auf die `.exe` und klicken Sie sich mit **Weiter** (Next) durch die Installationsschritte
+   - **Windows:** Doppelklicken Sie auf die `.exe` und klicken Sie sich mit **Weiter** (Next) durch die Installationsschritte. Aktivieren Sie im Schritt **Zusätzliche Aufgaben auswählen** (Select Additional Tasks) außerdem die Option, „Mit Code öffnen“ zum Verzeichniskontextmenü von Windows-Explorer hinzuzufügen (Add "Open with Code" action to Windows Explorer directory context menu), damit Sie Projektordner später direkt aus dem Datei-Explorer öffnen können
    - **Mac:** Öffnen Sie die `.dmg`, ziehen Sie VS Code in **Programme**
    - **Linux:** Folgen Sie den Anweisungen für Ihren Paketmanager
 - Starten Sie VS Code

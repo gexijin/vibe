@@ -56,7 +56,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 
 ## Schritt 4: Ihr erstes Repository erstellen
 
-- Klicken Sie in GitHub Desktop auf **Create a New Repository on your Hard Drive**
+- Klicken Sie in GitHub Desktop auf **Create a New Repository on your Local Drive**
 - Füllen Sie das Formular aus:
   - **Name:** `mein-erstes-projekt` (oder einen beliebigen Namen)
   - **Description:** `Versionskontrolle lernen` (optional)
@@ -94,7 +94,7 @@ Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen
 - Kehren Sie zu GitHub Desktop zurück
 - Sie sehen Ihre Änderungen auf der rechten Seite hervorgehoben (grün = hinzugefügt, rot = entfernt)
 - Geben Sie unten links eine Commit-Nachricht ein: `README mit Projektbeschreibung aktualisiert`
-- Klicken Sie auf die blaue Schaltfläche **Commit to main**
+- Klicken Sie auf die blaue Schaltfläche **Commit 1 file to main** (die Zahl entspricht der Anzahl der geänderten Dateien)
 
 ## Schritt 8: Auf GitHub pushen (In die Cloud sichern)
 
@@ -121,7 +121,7 @@ Ihr Code ist jetzt online gesichert unter: `https://github.com/IHR-BENUTZERNAME/
 
 - Nehmen Sie Änderungen an Ihren Projektdateien vor
 - Überprüfen Sie Änderungen in GitHub Desktop (grün = hinzugefügt, rot = entfernt)
-- Schreiben Sie eine beschreibende Commit-Nachricht und klicken Sie auf **Commit to main**
+- Schreiben Sie eine beschreibende Commit-Nachricht und klicken Sie unten auf die blaue Commit-Schaltfläche (sie lautet etwa **Commit 1 file to main**)
 - Klicken Sie auf **Push origin**, um auf GitHub zu sichern
 - Wiederholen
 

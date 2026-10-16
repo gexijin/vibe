@@ -57,6 +57,7 @@ Sie haben jetzt ein lokales Projekt und ein Cloud-Backup auf GitHub.
   ```
   cd ~/Documents/test_claude
   ```
+  Wenn Sie unter Windows `Cannot find path` sehen, wird Ihr Dokumente-Ordner von OneDrive gesichert. Führen Sie stattdessen `cd ~/OneDrive/Documents/test_claude` aus (auf deutschem Windows meist `cd ~/OneDrive/Dokumente/test_claude`)
 - Starten Sie Claude Code:
   ```
   claude
@@ -88,6 +89,7 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
   - Beobachten Sie den Countdown
 
 **Wenn es funktioniert:** Gehen Sie zu Schritt 5.
+
 **Wenn etwas nicht funktioniert:** Fahren Sie mit Schritt 4 fort.
 
 ## Schritt 4: Fehler beheben (falls nötig)
@@ -116,7 +118,7 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
   ```
   Erstelle erste Timer-App mit Start/Stopp-Funktionalität
   ```
-- Klicken Sie auf **Commit to main**
+- Klicken Sie unten auf die blaue Commit-Schaltfläche (sie lautet etwa **Commit 1 file to main**)
 
 Sie haben einen Speicherpunkt erstellt!
 
@@ -137,7 +139,7 @@ Ihr Code ist jetzt in der Cloud gesichert.
   Füge eine Tonbenachrichtigung hinzu, wenn der Timer Null erreicht. Verwende den
   eingebauten Browser-Signalton oder erstelle einen einfachen Audio-Alarm.
   ```
-- Testen Sie: Browser aktualisieren, Timer auf 0.1 Minuten setzen, Start klicken
+- Testen Sie: Browser aktualisieren, Timer auf 1 Minute setzen, Start klicken
 
 **Für dieses Tutorial:** Tun Sie so, als würde der Ton nicht gut funktionieren. Committen Sie noch nicht!
 
@@ -147,7 +149,7 @@ Manchmal führt uns KI auf den falschen Weg und wir müssen von unserem letzten 
 
 - Öffnen Sie **GitHub Desktop**
 - Klicken Sie auf das Menü **Branch** → **Discard All Changes**
-- Klicken Sie auf **Discard Changes** zur Bestätigung
+- Klicken Sie auf **Discard All Changes** zur Bestätigung
 - Browser aktualisieren – der Timer funktioniert ohne den Ton!
 
 Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherpunkt zurückgekehrt.
@@ -160,9 +162,10 @@ Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherp
   Audioelement mit einem einfachen Signalton, der über die Web Audio API erzeugt wird. Stelle
   sicher, dass Browser-Autoplay-Einschränkungen elegant behandelt werden.
   ```
-- Sofort testen (Browser aktualisieren, 0.1 Minuten setzen, Start)
+- Sofort testen (Browser aktualisieren, 1 Minute setzen, Start)
 
 **Wenn es funktioniert:** Weiter zu Schritt 11.
+
 **Wenn nicht:** Fehler in Claude Code einfügen oder erneut versuchen.
 
 ## Schritt 11: Claude committen und pushen lassen
@@ -173,6 +176,8 @@ Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherp
   ```
 
 Claude überprüft Änderungen, schreibt eine Commit-Nachricht, committet und pusht (10-20 Sekunden).
+
+**Wenn Claude meldet, dass der Push fehlgeschlagen ist** (zum Beispiel `could not read Username` oder `git` wird nicht erkannt): Wechseln Sie zu **GitHub Desktop**. Wenn dort noch geänderte Dateien aufgelistet sind, committen Sie sie selbst (wie in Schritt 6). Klicken Sie dann oben auf **Push origin** – GitHub Desktop ist bereits bei GitHub angemeldet.
 
 **Wann verwenden:**
 - Manuelle Commits: Beim Lernen oder wenn Sie Kontrolle wollen

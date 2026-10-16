@@ -165,7 +165,7 @@ Aktualisiere den stock-report Skill so, dass er sich nur aktiviert, wenn ich exp
 "analysiere" oder "Bericht" zusammen mit einem Unternehmensnamen erwähne.
 ```
 
-Claude aktualisiert das `description`-Feld in `SKILL.md`. Testen Sie den Unterschied:
+Claude aktualisiert das `description`-Feld in `SKILL.md`. Geben Sie `/reload-skills` ein, damit Claude Code die Änderung übernimmt, und testen Sie dann den Unterschied:
 ```
 Was macht Apple so?
 ```

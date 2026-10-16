@@ -17,7 +17,7 @@ Schreiben Sie Forschungsarbeiten mit Claude Code als Assistent für Recherche, B
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [VS Code für Claude Code unter Windows einrichten](./Claude_Code_in_VS_Code_Win) oder [Claude Code aus VS Code auf dem Mac verwenden](./Claude_Code_in_VS_Code_Mac)
+- Abgeschlossenes Tutorial [VS Code für Claude Code unter Windows einrichten](./Claude_Code_in_VS_Code_Win.md) oder [Claude Code aus VS Code auf dem Mac verwenden](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 Minuten
 
 ## Schritt 1: Einen Projektordner erstellen
@@ -243,7 +243,7 @@ Erstelle einen Slash-Befehl namens /research-paper, der mich durch
 diesen gesamten Workflow führt. Speichere ihn, damit ich ihn für zukünftige Forschungsarbeiten zu verschiedenen Themen verwenden kann.
 ```
 
-Claude erstellt einen benutzerdefinierten Slash-Befehl, normalerweise in Ihrem `.claude/commands/`-Ordner (oder in `.claude/skills/research-paper/`). Es ist eine Markdown-Datei mit einem Prompt. Sie können Ihre nächste Forschungsarbeit einfach durch Eingabe von `/research-paper [Ihr Thema]` starten!
+Claude erstellt einen benutzerdefinierten Slash-Befehl, normalerweise in Ihrem `.claude/commands/`-Ordner (oder in `.claude/skills/research-paper/`). Es ist eine Markdown-Datei mit einem Prompt. Bevor Sie ihn zum ersten Mal verwenden, geben Sie `/reload-skills` ein (oder beenden Sie Claude Code und starten Sie es neu), damit der neue Befehl geladen wird. Dann können Sie Ihre nächste Forschungsarbeit einfach durch Eingabe von `/research-paper [Ihr Thema]` starten!
 
 ## Schritt 18: Feedback einholen
 
