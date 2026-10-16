@@ -23,7 +23,7 @@ AI की मदद से कोडिंग सीखना शुरुआत
 
 ## चरण 1: अपना टर्मिनल खोलें
 
-- **Windows**: Windows की दबाएँ, `PowerShell` टाइप करें, और PowerShell खोलने के लिए Enter दबाएँ
+- **Windows**: Windows key (Windows लोगो वाली कुंजी) दबाएँ, `PowerShell` टाइप करें, और PowerShell खोलने के लिए Enter दबाएँ
 - **Mac**: `Cmd+Space` दबाएँ, `Terminal` टाइप करें, और Enter दबाएँ
 
 **नोट:** अगर आपने Windows इंस्टॉल ट्यूटोरियल में नेटिव इंस्टॉल की जगह वैकल्पिक WSL/Ubuntu वाला तरीका अपनाया है, तो इसकी जगह **Ubuntu** ऐप खोलें और नीचे के चरणों में Linux-स्टाइल पथ (जैसे `/mnt/c/Users/YourName/...`) का उपयोग करें।

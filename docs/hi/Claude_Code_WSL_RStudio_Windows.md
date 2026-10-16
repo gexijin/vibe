@@ -174,7 +174,7 @@ iris.R में sepal length बनाम width का एक स्कैट�
 - **RStudio फ़ाइल में बदलाव नहीं दिखा रहा** - फ़ाइल को मैन्युअल रूप से रीलोड करने के लिए **File > Reopen with Encoding...** पर क्लिक करें, **UTF-8** चुनें, और **OK** पर क्लिक करें।
 - **"The term 'claude' is not recognized"** - सुनिश्चित करें कि आपने इंस्टॉलेशन गाइड पूरी की है। PowerShell बंद करें और एक नई विंडो खोलें, फिर दोबारा कोशिश करें।
 - **प्लॉट नहीं दिख रहे** - सुनिश्चित करें कि ggplot2 इंस्टॉल है। ज़रूरत पड़ने पर RStudio Console में `install.packages("ggplot2")` चलाएँ।
-- **चरण 6 में "Cannot find path ... because it does not exist"** - हो सकता है आपका प्रोजेक्ट किसी दूसरे फ़ोल्डर में हो। RStudio में, **Files** पेन के ऊपर दिखने वाला पाथ बताता है कि `test_claude` कहाँ है। अगर आपका Documents फ़ोल्डर OneDrive में बैकअप होता है, तो `cd ~\OneDrive\Documents\test_claude` आज़माएँ। अगर पाथ में स्पेस हैं, तो उसे कोटेशन में रखें, उदाहरण के लिए: `cd "C:\Users\Your Name\OneDrive\Documents\test_claude"`
+- **चरण 6 में "Cannot find path ... because it does not exist"** - हो सकता है आपका प्रोजेक्ट किसी दूसरे फ़ोल्डर में हो। RStudio में, **Files** पैनल के ऊपर दिखने वाला पाथ बताता है कि `test_claude` कहाँ है। अगर आपका Documents फ़ोल्डर OneDrive में बैकअप होता है, तो `cd ~\OneDrive\Documents\test_claude` आज़माएँ। अगर पाथ में स्पेस हैं, तो उसे कोटेशन में रखें, उदाहरण के लिए: `cd "C:\Users\Your Name\OneDrive\Documents\test_claude"`
 - **Claude Code पहली रिक्वेस्ट पर धीमा है** - Claude के शुरू होने के लिए 30-60 सेकंड प्रतीक्षा करें। बाद की रिक्वेस्ट तेज़ होंगी।
 - **WSL का उपयोग कर रहे हैं?** - अगर आपने वैकल्पिक WSL/Ubuntu वाला तरीका अपनाया है, तो चरण 5-16 में PowerShell की जगह **Ubuntu** ऐप खोलें, और `cd /mnt/c/Users/YourUsername/Documents/test_claude` से अपने प्रोजेक्ट पर जाएँ
 

@@ -26,7 +26,7 @@ lang: "hi"
 ## चरण 1: एक प्रोजेक्ट फ़ोल्डर बनाएँ
 
 **Windows (PowerShell):**
-- स्टार्ट मेनू से **PowerShell** खोलें
+- Start मेनू से **PowerShell** खोलें
 - ये कमांड टाइप करें:
   ```
   cd ~\Documents

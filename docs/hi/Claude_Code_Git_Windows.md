@@ -17,7 +17,7 @@ lang: "hi"
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Windows पर Claude Code इंस्टॉल करना](./Install_CLAUDE_Code_Win)
+- पूरा किया हुआ [Windows पर Claude Code इंस्टॉल करें](./Install_CLAUDE_Code_Win) ट्यूटोरियल
 - 20-30 मिनट
 
 ## चरण 1: PowerShell खोलें
@@ -227,7 +227,7 @@ Claude आपके कमिट को पढ़ने योग्य फ़�
 - आप इसका सोर्स कोड देख सकते हैं
 - Claude Code में पूछें
   ```
-  इस कोड को समझाएँ। बस बड़ी तस्वीर।
+  इस कोड को समझाएँ। बस मोटे तौर पर।
   ```
 
 ## पूरा वर्कफ़्लो
@@ -254,7 +254,7 @@ Claude आपके कमिट को पढ़ने योग्य फ़�
 
 ## समस्या निवारण
 
-- **"not a git repository" त्रुटि:** सुनिश्चित करें कि आप test_claude फ़ोल्डर में हैं (`cd ~\Documents\test_claude`)
+- **"not a git repository" त्रुटि:** सुनिश्चित करें कि आप test_claude फ़ोल्डर में हैं (`cd ~\Documents\test_claude`, या `cd ~\OneDrive\Documents\test_claude`, अगर आपने चरण 4 में OneDrive वाला पथ इस्तेमाल किया था)
 - **Windows में timer.html नहीं मिल रही:** फ़ाइल यहाँ है `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` (या `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html`, अगर आपने चरण 4 में OneDrive वाला पथ इस्तेमाल किया था)
 - **`git` कमांड नहीं मिला:** Git for Windows इंस्टॉल करने के बाद PowerShell बंद करके फिर से खोलें ताकि PATH अपडेट हो जाए, फिर `git --version` दोबारा चलाएँ
 - **टाइमर काम नहीं कर रहा:** ब्राउज़र कंसोल खोलें (पेज पर राइट-क्लिक करें, **Inspect** चुनें, फिर **Console** टैब पर क्लिक करें), किसी भी लाल त्रुटि संदेश को कॉपी करें, उन्हें Claude को दें

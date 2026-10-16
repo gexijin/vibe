@@ -28,7 +28,7 @@ Vibe coding अपने कंप्यूटर के साथ बातच�
 - विवरण भरें:
   - **Name:** `budget-dashboard`
   - **Description:** `Personal budget tracker built with vibe coding`
-  - **Local Path:** एक स्थान चुनें (जैसे, Documents या work फ़ोल्डर)
+  - **Local Path:** एक स्थान चुनें (जैसे, Documents या आपके काम का फ़ोल्डर)
   - **Initialize this repository with a README** को चेक करें
 - **Create Repository** पर क्लिक करें
 - ऊपर **Publish repository** पर क्लिक करें
