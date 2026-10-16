@@ -25,7 +25,7 @@ Claude Code est un assistant IA qui vit dans votre terminal et vous aide à écr
 Git for Windows est **recommandé, mais optionnel**. Il ajoute **Git Bash**, le shell que Claude Code utilise pour exécuter des commandes. Si vous l'ignorez, Claude Code utilisera PowerShell à la place : passez alors directement à l'Étape 2 et installez Git plus tard si vous le souhaitez.
 
 - Allez sur [git-scm.com/download/win](https://git-scm.com/download/win)
-- Le téléchargement devrait démarrer automatiquement — ouvrez le programme d'installation une fois terminé
+- Cliquez sur **Click here to download** en haut de la page, puis ouvrez le programme d'installation une fois le téléchargement terminé
 - Cliquez sur **Next** pour avancer dans l'installation, en acceptant les options par défaut
 - Cliquez sur **Install**, puis sur **Finish**
 
@@ -39,14 +39,21 @@ C'est tout — Claude Code détectera Git Bash automatiquement à son démarrage
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Attendez que l'installation se termine
+- Attendez que l'installation se termine (la fenêtre peut rester vide pendant une minute le temps du téléchargement — c'est normal)
 - Fermez et rouvrez PowerShell, puis vérifiez en tapant :
    ```
    claude --version
    ```
 - Vous devriez voir le numéro de version de Claude Code
+- Si vous voyez plutôt `'claude' is not recognized`, exécutez ces deux lignes dans PowerShell, puis fermez et rouvrez PowerShell et réessayez `claude --version` :
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
-## Étape 3 : Ouvrir Claude Code dans VS Code
+## Étape 3 : (Optionnel) Ouvrir Claude Code dans VS Code
+
+Passez cette étape si vous n'avez pas encore VS Code — vous pourrez l'installer plus tard avec [Premiers Pas avec VS Code](VS_Code_Getting_Started) puis revenir ici.
 
 Maintenant que Claude Code est installé, vous pouvez l'utiliser dans VS Code, et pas seulement dans le terminal. C'est souvent la façon la plus simple de travailler, car vous pouvez lire des fichiers, modifier du code et demander de l'aide sans quitter votre éditeur.
 
@@ -59,12 +66,12 @@ Voyez la barre latérale (sidebar) de Claude Code comme une fenêtre de discussi
 3. Cliquez sur l'icône **Extensions** si vous ne voyez pas encore le panneau Claude Code
 4. Recherchez Claude Code dans la marketplace des extensions
 5. Cliquez sur **Install** si l'extension n'est pas encore installée
-6. Après l'installation, cherchez l'icône Claude Code dans la barre latérale gauche
+6. Après l'installation, cherchez l'icône Spark de Claude Code dans la barre latérale gauche, ou cliquez sur **✻ Claude Code** dans le coin inférieur droit de la fenêtre
 
 Si vous ne voyez pas l'icône Claude Code, essayez ceci :
 
 1. Appuyez sur **Ctrl + Maj + P**
-2. Tapez : Claude Code: Open Sidebar
+2. Tapez : Claude Code: Open in Side Bar
 3. Cliquez sur l'option correspondante dans la liste
 
 Si elle n'apparaît toujours pas, fermez VS Code puis rouvrez-le. Parfois, l'extension a besoin d'un redémarrage avant que la barre latérale s'affiche.
@@ -88,7 +95,7 @@ Une fois la barre latérale ouverte :
 - tapez : « Explique-moi ce projet »
 - appuyez sur **Entrée**
 
-Si Claude répond, vous êtes prêt à l'utiliser.
+Si Claude répond, vous êtes prêt à l'utiliser. La première fois, la barre latérale peut plutôt vous demander de vous connecter : suivez ses instructions, ou connectez votre compte à l'Étape 4 ci-dessous puis réessayez.
 
 > Astuce : si la barre latérale est toujours absente, vérifiez que l'extension Claude Code est installée et que VS Code a bien été redémarré.
 
@@ -100,13 +107,10 @@ Si Claude répond, vous êtes prêt à l'utiliser.
    ```
    claude
    ```
-- Claude essaie d'ouvrir un navigateur. S'il ne peut pas s'ouvrir automatiquement, maintenez **Ctrl** enfoncé et cliquez sur l'URL longue pour l'ouvrir dans un navigateur. Vous pouvez aussi copier l'URL et la coller dans un navigateur externe.
+- Claude essaie d'ouvrir un navigateur. S'il ne peut pas s'ouvrir automatiquement, appuyez sur **c** pour copier le lien de connexion, puis collez-le dans votre navigateur.
 - Connectez-vous à votre compte Claude.ai (cela peut se produire automatiquement si vous utilisez Chrome)
-- Cliquez sur **Authorize**
-- Cliquez sur **Copy Code** lorsqu'un long code apparaît
-- Retournez à la fenêtre du terminal
-- Pour coller dans le terminal : **Faites un clic droit** et sélectionnez **Coller** (ou appuyez sur **Ctrl+Maj+V**)
-- Vous devriez voir un message de succès
+- Cliquez sur **Authorize**. Le navigateur devrait indiquer que vous êtes connecté, et PowerShell affiche un message de succès.
+- Uniquement si le navigateur affiche plutôt un long code (cela se produit dans WSL/Ubuntu) : cliquez sur **Copy Code**, retournez au terminal, collez-le à l'invite **Paste code here if prompted** (**clic droit** ou **Ctrl+V**), puis appuyez sur **Entrée**.
 - Suivez les instructions pour terminer la configuration
 
 Les options basées sur une API ci-dessous se configurent dans **PowerShell** avec la commande `setx`, qui enregistre un paramètre de façon permanente. Après un `setx`, **fermez et rouvrez PowerShell** pour appliquer le changement, puis lancez `claude`.
@@ -126,8 +130,9 @@ Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
    ```
    claude
    ```
+- La première fois, Claude Code vous demande si vous voulez utiliser la clé API qu'il a trouvée. Choisissez **Yes**. (Si vous choisissez **No** par erreur, tapez `/config` et activez **Use custom API key**.)
 
-### Option C. Utilisez l'API OpenRouter (commencez gratuitement !)
+### Option C. Utilisez l'API OpenRouter (paiement à l'usage)
 
 OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. Cela peut être une façon économique d'utiliser Claude Code : vous ne payez qu'à l'usage et choisissez parmi des modèles de différentes gammes de prix.
 
@@ -137,10 +142,10 @@ OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grand
    ```
    setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
    setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
-   setx ANTHROPIC_API_KEY ""
-   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
-   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
-   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
+   [Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', $null, 'User')
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "~anthropic/claude-sonnet-latest"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "~anthropic/claude-opus-latest"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "~anthropic/claude-haiku-latest"
    ```
 - Fermez et rouvrez PowerShell, puis lancez Claude Code :
    ```
@@ -150,16 +155,18 @@ OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grand
 
 **Remarques :**
 - Remplacez `your-openrouter-api-key` par votre véritable clé API OpenRouter
-- `ANTHROPIC_API_KEY` doit être explicitement défini comme vide
+- La ligne `ANTHROPIC_API_KEY` supprime toute clé API Anthropic enregistrée, qui ne doit pas être définie lorsque vous utilisez OpenRouter
 - Pour utiliser d'autres modèles, ceux-ci doivent prendre en charge les **capacités d'utilisation d'outils**. Vous pouvez remplacer les modèles avec :
    ```
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
    ```
 - Parcourez les modèles disponibles sur [openrouter.ai/models](https://openrouter.ai/models)
-- Le niveau gratuit vous donne 50 requêtes API par jour
+- Les modèles gratuits (`:free`) sont limités à 50 requêtes par jour, qu'une seule tâche Claude Code peut épuiser rapidement
+- Les modèles indiqués ci-dessus sont payants — vérifiez leurs prix sur [openrouter.ai/models](https://openrouter.ai/models) avant de les utiliser
+- Le fonctionnement de Claude Code via OpenRouter n'est garanti qu'avec les modèles Anthropic
 - Consultez le [guide officiel OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) pour plus de détails
 
-### Option D. Utilisez l'API Anthropic via Azure Foundry
+### Option D. Utilisez l'API Anthropic via Microsoft Foundry (Azure)
 
 Dans PowerShell, collez ce code pour définir les variables d'environnement :
 ```
@@ -168,8 +175,8 @@ setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure resource name
 setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # Set models to your resource's deployment names
-setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
-setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-8"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
 setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
 setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
@@ -193,6 +200,7 @@ Vous êtes prêt ! Tapez `claude` dans PowerShell et posez une question généra
    ```
    cd ~/Documents/test_claude
    ```
+   Remplacez `test_claude` par le nom réel de votre dossier de projet. Astuce : tapez `cd ` (avec un espace), faites glisser le dossier depuis l'Explorateur de fichiers dans la fenêtre PowerShell pour coller son chemin complet, puis appuyez sur **Entrée**.
 - Puis démarrez Claude :
    ```
    claude
@@ -205,7 +213,7 @@ Vous êtes prêt ! Tapez `claude` dans PowerShell et posez une question généra
 
 ## Étape 7 : (Optionnel) Installer WSL2 pour l'expérience complète sous Linux
 
-Pour la plupart des utilisateurs, la configuration native ci-dessus suffit largement. Cela dit, Claude Code fonctionne mieux sous Linux. WSL2 exécute un véritable système Linux dans Windows et ajoute le **sandboxing de l'outil Bash** (une fonctionnalité de sécurité) ainsi qu'une meilleure compatibilité avec les outils Linux. La configuration est plus longue et impose un redémarrage : ne le faites que si vous voulez l'expérience complète sous Linux.
+Pour la plupart des utilisateurs, la configuration native ci-dessus suffit largement. Cela dit, certaines fonctionnalités ne marchent que sous Linux. WSL2 exécute un véritable système Linux dans Windows et ajoute le **sandboxing de l'outil Bash** (une fonctionnalité de sécurité) ainsi qu'une meilleure compatibilité avec les outils Linux. La configuration est plus longue et impose un redémarrage : ne le faites que si vous voulez l'expérience complète sous Linux.
 
 ### a) Vérifier la virtualisation et installer WSL
 
@@ -214,7 +222,7 @@ Pour la plupart des utilisateurs, la configuration native ci-dessus suffit large
 - **Faites un clic droit** sur la barre des tâches (la barre en bas de votre écran)
 - Cliquez sur **Gestionnaire des tâches** dans le menu
 - Si le Gestionnaire des tâches s'ouvre dans une petite fenêtre, cliquez sur **Plus de détails** en bas
-- Cliquez sur l'onglet **Performances** en haut
+- Cliquez sur **Performances** (un onglet en haut sous Windows 10, ou une icône dans le menu de gauche sous Windows 11)
 - Cliquez sur **Processeur** dans la barre latérale gauche
 - Trouvez la ligne qui indique **Virtualisation :** et vérifiez si elle indique **Activé**
 
@@ -257,11 +265,15 @@ Après le redémarrage, une fenêtre de terminal avec "Ubuntu" dans le titre dev
    ```
    curl -fsSL https://claude.ai/install.sh | bash
    ```
-- Vérifiez en tapant :
+- Fermez la fenêtre Ubuntu, rouvrez **Ubuntu** depuis le menu Démarrer, puis vérifiez en tapant :
    ```
    claude --version
    ```
-- Connectez votre compte en tapant `claude` dans le terminal Ubuntu et en suivant la connexion via le navigateur (comme à l'Étape 4, Option A). Si vous utilisez plutôt une clé API, définissez-la avec `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL utilise des commandes Linux, pas `setx`)
+- Si vous voyez toujours `command not found`, exécutez cette ligne, puis réessayez `claude --version` :
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+   ```
+- Connectez votre compte en tapant `claude` dans le terminal Ubuntu et en suivant la connexion via le navigateur (comme à l'Étape 4, Option A). Si vous utilisez plutôt une clé API, enregistrez-la avec `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` (WSL utilise des commandes Linux, pas `setx`)
 - Pour ouvrir un dossier de projet Windows depuis WSL :
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
@@ -291,7 +303,11 @@ Cet outil de diagnostic intégré vérifie votre installation et signale les pro
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Assurez-vous que votre PATH inclut le répertoire d'installation de Claude
+- Si vous voyez `'claude' is not recognized`, exécutez ces deux lignes dans PowerShell, puis fermez et rouvrez PowerShell :
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 Cette erreur signifie que la virtualisation n'est pas activée :

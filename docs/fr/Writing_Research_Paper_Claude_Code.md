@@ -17,7 +17,7 @@ Rédigez des articles de recherche en utilisant Claude Code comme assistant pour
 
 ## Ce dont vous aurez besoin
 
-- Avoir terminé [Claude Code dans VS Code sur Windows](./Claude_Code_in_VS_Code_Win) ou [Claude Code dans VS Code sur Mac](./Claude_Code_in_VS_Code_Mac)
+- Avoir terminé [Claude Code dans VS Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Claude Code dans VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
 - 30 à 40 minutes
 
 ## Étape 1 : Créer un dossier de projet
@@ -48,6 +48,7 @@ Pour Windows :
 - Cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
 - Naviguez vers le dossier `test_claude` dans **Documents** et sélectionnez-le
 - Cliquez sur **Select Folder**. VS Code se recharge avec votre dossier `test_claude`
+- Si on vous demande « Do you trust the authors? », cliquez sur **Yes, I trust the authors**
 
 Pour Mac :
 - Dans VS Code, cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
@@ -71,7 +72,7 @@ Demandez à Claude de rechercher votre sujet. Copiez et collez ce prompt dans Cl
 
 ```
 J'écris un article de recherche d'environ 1 000 mots sur l'adoption de l'IA en milieu de travail.
-Recherche des données récentes (2023-2025) sur :
+Recherche des données récentes (des deux dernières années) sur :
 - Les gains de productivité grâce aux outils d'IA
 - Les préoccupations et statistiques sur le déplacement d'emplois
 - Des études de cas réelles d'entreprises
@@ -131,7 +132,7 @@ ciblée et mon angle choisi. Utilise des puces pour le flux narratif.
 Enregistre sous outlines.md
 ```
 
-Examinez le plan et demandez à Claude de l'ajuster si nécessaire (par exemple, « Fais en sorte que la section 2 se concentre davantage sur les études de cas » ou « Ajoute une section sur les limites »).
+Examinez les plans dans `outlines.md` et demandez à Claude de l'ajuster si nécessaire (par exemple, « Fais en sorte que la section 2 se concentre davantage sur les études de cas » ou « Ajoute une section sur les limites »).
 
 ## Étape 10 : Rédiger l'article
 
@@ -242,7 +243,7 @@ Crée une commande slash appelée /research-paper qui me guide à travers
 tout ce workflow. Enregistre-la pour que je puisse l'utiliser pour de futurs articles de recherche sur divers sujets.
 ```
 
-Claude créera une commande slash personnalisée dans votre dossier `.claude/commands/`. C'est un fichier Markdown contenant un prompt. Vous pouvez démarrer votre prochain article de recherche en tapant simplement `/research-paper [votre sujet]` !
+Claude créera une commande slash personnalisée, généralement dans votre dossier `.claude/commands/` (ou `.claude/skills/research-paper/`). C'est un fichier Markdown contenant un prompt. Avant de l'utiliser pour la première fois, tapez `/reload-skills` (ou quittez Claude Code et relancez-le) pour que la nouvelle commande soit chargée. Ensuite, vous pouvez démarrer votre prochain article de recherche en tapant simplement `/research-paper [votre sujet]` !
 
 ## Étape 18 : Obtenir des commentaires
 
@@ -296,7 +297,7 @@ La commande slash vous guidera automatiquement à travers tout le workflow ! N'o
 
 ## Dépannage
 
-- **Les résultats de recherche de Claude semblent obsolètes :** Spécifiez « recherche des données 2024-2025 sur [sujet] »
+- **Les résultats de recherche de Claude semblent obsolètes :** Demandez une période précise, par exemple « recherche des données des deux dernières années sur [sujet] »
 - **Le brouillon est trop long/court :** Dites à Claude : « Fais en sorte que ce soit environ 1 000 mots »
 - **Impossible de trouver les fichiers :** Dans le terminal, tapez `ls` pour lister tous les fichiers du dossier actuel
 

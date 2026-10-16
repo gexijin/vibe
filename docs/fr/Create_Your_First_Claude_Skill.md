@@ -12,6 +12,7 @@ Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. E
 
 - **Compétence (Skill)** - Une capacité invoquée par le modèle stockée dans `.claude/skills/` que Claude active automatiquement en fonction du contexte
 - **Invoquée par le modèle (model-invoked)** - Claude décide quand utiliser la Compétence en lisant sa description, sans que vous tapiez une commande
+- **Toujours une commande slash** - Vous pouvez aussi exécuter n'importe quelle Compétence vous-même en tapant `/nom-de-la-competence` (par exemple `/stock-report AAPL`). Si une Compétence et une commande slash portent le même nom, c'est la Compétence qui est utilisée
 - **SKILL.md** - Le fichier principal contenant le frontmatter YAML (métadonnées) et les instructions pour Claude
 
 ## Ce Dont Vous Aurez Besoin
@@ -58,9 +59,12 @@ claude
 
 Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
-## Étape 3 : Activez l'Approbation Automatique pour les Modifications
+## Étape 3 : Laissez Claude Modifier les Fichiers Sans Demander
 
-Appuyez sur **Shift+Tab** pour activer le mode d'approbation automatique des modifications.
+Regardez la ligne d'état juste sous l'invite Claude Code :
+
+- Si elle indique **auto mode on** ou **accept edits on**, tout est prêt
+- Si elle indique **manual mode on**, appuyez sur **Shift+Tab** jusqu'à ce qu'elle indique **accept edits on**
 
 Cela permet à Claude de créer et de modifier des fichiers sans demander la permission à chaque fois.
 
@@ -98,7 +102,11 @@ Le champ `description` est la clé—il indique à Claude exactement quand activ
 
 ## Étape 6 : Testez la Compétence (Sans Taper de Commande)
 
-Au lieu de taper `/stock-report AAPL`, posez simplement une question naturelle :
+Assurez-vous d'abord que Claude Code a chargé la nouvelle Compétence. Tapez :
+```
+/reload-skills
+```
+Claude Code indique combien de Compétences sont disponibles. Maintenant, au lieu de taper `/stock-report AAPL`, posez simplement une question naturelle :
 ```
 Que se passe-t-il avec Apple ces derniers temps ?
 ```
@@ -157,7 +165,7 @@ Mets à jour la Compétence stock-report pour qu'elle ne s'active que quand je m
 « analyser » ou « rapport » avec un nom d'entreprise.
 ```
 
-Claude met à jour le champ `description` dans `SKILL.md`. Testez la différence :
+Claude met à jour le champ `description` dans `SKILL.md`. Tapez `/reload-skills` pour que Claude Code prenne en compte la modification, puis testez la différence :
 ```
 Que fait Apple ?
 ```
@@ -182,8 +190,8 @@ Le principe : Définissez quand Claude devrait automatiquement aider, pas seulem
 
 - **La Compétence ne s'active pas :** Vérifiez le champ `description` dans `SKILL.md`—il doit inclure des mots déclencheurs liés à votre question
 - **La Compétence s'active trop souvent :** Précisez davantage dans la description quand l'utiliser
-- **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché). Dans l'**Explorateur de fichiers** de Windows, activez **Affichage > Afficher > Éléments masqués** ; dans le **Finder** sur Mac, appuyez sur **Cmd+Maj+.** pour l'afficher
-- **Les modifications de SKILL.md ne fonctionnent pas :** Les Compétences se chargent automatiquement lorsqu'elles sont modifiées—aucun redémarrage nécessaire. Si cela ne fonctionne toujours pas, vérifiez le formatage YAML
+- **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché : l'Explorateur de VS Code l'affiche ; sinon, dans l'**Explorateur de fichiers** de Windows, activez **Affichage > Afficher > Éléments masqués** ; dans le **Finder** sur Mac, appuyez sur **Cmd+Maj+.** pour l'afficher)
+- **Les modifications de SKILL.md ne fonctionnent pas :** Les Compétences se rechargent généralement automatiquement lorsqu'elles sont modifiées. Si le dossier `.claude/skills/` a été créé pendant cette session, tapez `/reload-skills` (ou redémarrez Claude Code). Si cela ne fonctionne toujours pas, vérifiez le formatage YAML
 
 ## Aperçu du Flux de Travail
 

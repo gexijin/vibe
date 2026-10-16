@@ -87,7 +87,7 @@ summary(iris)
   claude
   ```
 
-Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_CLAUDE_Code_Win.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code. Si Claude Code vous demande si vous faites confiance aux fichiers de ce dossier, choisissez **Yes** et appuyez sur Entrée.
 
 ## Étape 8 : Demander à Claude un Nuage de Points
 
@@ -97,7 +97,7 @@ Si Claude Code est lent ou ne répond pas, attendez simplement qu'il s'initialis
 Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 - Claude Code va lire votre fichier `iris.R` et ajouter le code de visualisation
-- Lorsqu'on vous le demande, donnez à Claude la permission de modifier le fichier iris.R en sélectionnant l'option appropriée
+- Si Claude demande la permission de modifier `iris.R`, choisissez **Yes** (utilisez les touches fléchées, puis appuyez sur Entrée)
 - Attendez que Claude ait terminé (vous verrez un message de confirmation)
 
 
@@ -105,7 +105,7 @@ Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. large
 
 - Revenez à RStudio (cliquez sur la fenêtre RStudio)
 - Vous pourriez voir un message indiquant que le fichier a changé - cliquez sur **Yes** pour recharger
-- Si aucun message n'apparaît, cliquez sur **File > Reopen with Encoding > UTF-8**
+- Si le nouveau code n'apparaît pas, cliquez sur **File > Reopen with Encoding...**, choisissez **UTF-8**, puis cliquez sur **OK**
 - Sélectionnez tout le code et cliquez sur **Run**
 - Un nuage de points apparaît dans le panneau **Plots** (en bas à droite)
 - Si vous obtenez une erreur concernant ggplot2, installez-le en tapant `install.packages("ggplot2")` dans le panneau Console
@@ -157,7 +157,7 @@ Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. large
   ```
   Crée un nouveau fichier R Markdown pour cette analyse. Enregistre-le sous iris_report.Rmd
   ```
-- Claude vous demandera la permission de créer ce fichier.
+- Si Claude demande la permission de créer ce fichier, choisissez **Yes**.
 - Claude va créer un nouveau fichier `.Rmd` dans votre dossier de projet
 
 
@@ -167,23 +167,24 @@ Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. large
 - Cliquez sur **File > Open File...**
 - Sélectionnez `iris_report.Rmd` et cliquez sur **Open**
 - Cliquez sur le bouton **Knit** (avec une icône de pelote de laine) en haut du panneau de script
+- Si RStudio indique que des packages tels que **rmarkdown** sont nécessaires, cliquez sur **Install** (ou **Yes**) et attendez la fin de l'installation, puis cliquez à nouveau sur **Knit**
 - RStudio va générer un rapport HTML
 - Le rapport s'ouvre dans une nouvelle fenêtre montrant votre analyse complète avec du texte narratif
 - Le fichier HTML est enregistré dans votre dossier de projet
 
 ## Dépannage
 
-- **RStudio n'affiche pas les modifications de fichier** - Cliquez sur **File > Reopen with Encoding > UTF-8** pour recharger manuellement le fichier.
-- **"claude: command not found"** - Assurez-vous d'avoir terminé le guide d'installation. Essayez d'ouvrir une nouvelle fenêtre PowerShell.
+- **RStudio n'affiche pas les modifications de fichier** - Cliquez sur **File > Reopen with Encoding...**, choisissez **UTF-8**, puis cliquez sur **OK** pour recharger manuellement le fichier.
+- **"The term 'claude' is not recognized"** - Assurez-vous d'avoir terminé le guide d'installation. Fermez PowerShell et ouvrez une nouvelle fenêtre, puis réessayez.
 - **Les graphiques n'apparaissent pas** - Assurez-vous que ggplot2 est installé. Exécutez `install.packages("ggplot2")` dans la Console RStudio si nécessaire.
-- **Erreur : "cannot change working directory"** - Votre chemin Windows contient des espaces. À l'Étape 6, encadrez le chemin avec des guillemets, par exemple : `cd "C:\Users\Votre Nom\Documents\test_claude"`
+- **"Cannot find path ... because it does not exist" à l'Étape 6** - Votre projet se trouve peut-être dans un autre dossier. Dans RStudio, le chemin affiché en haut du panneau **Files** indique où se trouve `test_claude`. Si votre dossier Documents est sauvegardé par OneDrive, essayez `cd ~\OneDrive\Documents\test_claude`. Si le chemin contient des espaces, encadrez-le avec des guillemets, par exemple : `cd "C:\Users\Votre Nom\OneDrive\Documents\test_claude"`
 - **Claude Code est lent à la première requête** - Attendez 30 à 60 secondes pour que Claude s'initialise. Les requêtes suivantes seront plus rapides.
 - **Vous utilisez WSL ?** - Si vous avez suivi le parcours optionnel WSL/Ubuntu, ouvrez l'application **Ubuntu** au lieu de PowerShell aux Étapes 5 à 16, et naviguez vers votre projet avec `cd /mnt/c/Users/VotreNomUtilisateur/Documents/test_claude`
 
 ## Prochaines Étapes
 
 - Essayez de demander à Claude d'ajouter des tests statistiques (tests t, ANOVA) à votre analyse
-- Demandez à Claude d'obtenir une **version Python** de ce code et de préparer un document Quarto
+- Demandez à Claude d'écrire une **version Python** de ce code et de préparer un document Quarto
 - Demandez à Claude de créer des fonctions pour les tâches répétitives dans vos scripts R
 - Utilisez Claude pour déboguer les messages d'erreur lorsque votre code R ne s'exécute pas
 - Demandez à Claude d'optimiser du code R lent pour en améliorer les performances

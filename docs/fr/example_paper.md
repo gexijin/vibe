@@ -52,7 +52,7 @@ Le décalage structurel entre les outils individuels et les obstacles systémiqu
 
 Le paradoxe de la productivité de l'IA se résout lorsque nous reconnaissons que l'autonomisation individuelle coexiste avec l'exclusion systémique. Les études au niveau micro mesurant la performance des tâches manquent les effets de sélection au niveau macro qui déterminent qui en bénéficie. Les preuves de Stanford, du FMI et de l'OCDE convergent vers une conclusion troublante : l'IA aggrave l'inégalité en termes de genre, d'âge, de taille d'entreprise et de géographie [3, 4, 9, 11]. L'impact de la technologie dépend de sa distribution, pas seulement de sa capacité. Trois mécanismes de sélection simultanés—l'inégalité d'accès, l'inégalité de connaissance et l'inégalité des opportunités—transforment l'IA d'un outil démocratisant en une force stratifiante.
 
-Les décideurs politiques doivent agir sur les trois obstacles. Les gouvernements devraient subventionner l'adoption de l'IA pour les petites entreprises par le biais de crédits d'impôt, comblant l'écart d'adoption de 3,3 fois. Les institutions éducatives doivent intégrer la littératie de l'IA dans les programmes et lancer des programmes de requalification ciblés pour les femmes dans les rôles administratifs, abordant l'écart de connaissances de soixante-quinze pour cent. Les employeurs doivent créer des postes de niveau débutant structurés combinant les outils d'IA avec un mentorat humain, empêchant le dilemme d'expérience. La fenêtre d'intervention se rétrécit alors que les écarts doublent en l'espace de quelques années [11]. Sans action délibérée, la promesse individuelle de l'IA deviendra un péril collectif.
+Les décideurs politiques doivent agir sur les trois obstacles. Les gouvernements devraient subventionner l'adoption de l'IA pour les petites entreprises par le biais de crédits d'impôt, comblant l'écart d'adoption de 3,3 fois. Les institutions éducatives doivent intégrer la littératie de l'IA dans les programmes et lancer des programmes de requalification ciblés pour les femmes dans les rôles administratifs, abordant les différences de connaissances à l'origine de soixante-quinze pour cent de l'écart entre les genres. Les employeurs doivent créer des postes de niveau débutant structurés combinant les outils d'IA avec un mentorat humain, empêchant le dilemme d'expérience. La fenêtre d'intervention se rétrécit : les écarts d'adoption dans l'UE ont environ doublé entre 2021 et 2024 [11]. Sans action délibérée, la promesse individuelle de l'IA deviendra un péril collectif.
 
 ## Références
 
@@ -70,7 +70,7 @@ Les décideurs politiques doivent agir sur les trois obstacles. Les gouvernement
 
 [7] Stanford HAI. (2025). "The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
 
-[8] Anthropic. (2024). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
 
 [9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
 

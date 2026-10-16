@@ -53,11 +53,7 @@ Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau **Explorer** sur le c
   ```
   claude
   ```
-- La première fois, Claude Code vous demande de vous connecter :
-  1. Appuyez sur Entrée pour ouvrir une fenêtre de navigateur
-  2. Connectez-vous ou créez un compte Anthropic
-  3. Copiez le code et collez-le dans le terminal
-  4. Appuyez sur Entrée
+- Si Claude Code vous demande de vous connecter, suivez les étapes de connexion du [tutoriel d'installation](./Install_Claude_Code_MacOS). Claude Code nécessite un abonnement Claude payant (comme Pro ou Max) ou un compte Anthropic Console — l'offre gratuite ne l'inclut pas.
 - Vous verrez un message de bienvenue et l'invite Claude Code
 - Vous pouvez maintenant utiliser Claude Code tout en modifiant des fichiers dans VS Code
 
@@ -88,7 +84,7 @@ VS Code mémorise vos dossiers récents, donc l'Option A avec Open Recent est g�
 - Demandez à Claude Code d'expliquer une base de code existante : « Explique ce que fait ce projet »
 - Demandez à Claude Code de vous aider à écrire de nouvelles fonctionnalités : « Ajoute une fonction qui calcule la moyenne d'une liste »
 - Utilisez Claude Code pour corriger des bugs : « Ce code donne une erreur, peux-tu le corriger ? »
-- Essayez l'extension Claude Code VS Code pour une interface visuelle qui affiche les modifications directement dans le code (recherchez "Claude Code" dans Extensions)
+- Essayez l'extension Claude Code pour un panneau de discussion visuel qui affiche les modifications directement dans le code. Lancer `claude` dans le terminal de VS Code l'installe généralement pour vous (sinon, recherchez "Claude Code" dans Extensions). Ouvrez n'importe quel fichier, puis cliquez sur l'icône Spark en haut à droite de l'éditeur
 
 ## Dépannage
 

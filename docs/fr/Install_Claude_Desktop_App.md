@@ -18,9 +18,9 @@ C'est différent de **Claude Code**, l'outil utilisé dans le reste de ces tutor
 
 ## Ce dont vous aurez besoin
 
-- Un ordinateur Windows 10 (ou plus récent) ou un Mac (macOS 11 Big Sur ou plus récent)
+- Un ordinateur Windows 10 (ou plus récent) ou un Mac (macOS 13 Ventura ou plus récent)
 - Une connexion Internet
-- Un compte Claude.ai gratuit ou payant (vous pouvez en créer un pendant l'installation si vous n'en avez pas)
+- Un compte Claude.ai gratuit ou payant (consultez [Qu'est-ce qu'Anthropic et Claude ?](./What_Is_Anthropic_And_Claude.md) pour en créer un)
 - 5 minutes
 
 ## Étape 1 : Télécharger le programme d'installation
@@ -41,7 +41,7 @@ C'est différent de **Claude Code**, l'outil utilisé dans le reste de ces tutor
 
 - Ouvrez le fichier téléchargé
 - Faites glisser l'icône **Claude** dans le dossier **Applications** lorsque cela vous est demandé
-- Ouvrez **Claude** depuis votre dossier **Applications** ou depuis le Launchpad
+- Ouvrez **Claude** depuis votre dossier **Applications** (ou appuyez sur **Commande (⌘) + Espace**, tapez `Claude`, puis appuyez sur **Retour**)
 
 ## Étape 3 : Se connecter
 
@@ -62,7 +62,7 @@ Claude Desktop ne sert pas qu'à discuter. Selon votre abonnement :
 
 - **Chat** — disponible avec tous les abonnements, y compris Free (gratuit)
 - **Claude Code** — les abonnements Pro, Max, Team et Enterprise peuvent lancer Claude Code depuis Claude Desktop, sans ouvrir de terminal séparé
-- **Claude Cowork** — avec les abonnements payants, permet à Claude de travailler sur des tâches en plusieurs étapes avec accès à vos fichiers locaux
+- **Claude Cowork** — avec les abonnements payants, permet à Claude de travailler sur des tâches en plusieurs étapes avec accès à vos fichiers locaux. Anthropic est en train d'intégrer Cowork au chat classique, donc les versions récentes peuvent ne plus afficher d'onglet Cowork séparé — demandez simplement à Claude dans le chat
 - **Desktop Extensions** — une fonctionnalité avancée qui connecte Claude à vos applications et fichiers locaux grâce à un répertoire d'extensions installables ; inutile pour démarrer
 
 Vous n'avez besoin d'aucune de ces fonctionnalités pour utiliser Claude Desktop au quotidien — elles valent la peine d'être explorées une fois que vous serez à l'aise avec les bases.
@@ -76,7 +76,7 @@ Vous n'avez besoin d'aucune de ces fonctionnalités pour utiliser Claude Desktop
 ## Dépannage
 
 - **Windows bloque le programme d'installation avec le message « Windows a protégé votre ordinateur » (« Windows protected your PC »)** — C'est l'avertissement SmartScreen standard de Windows pour les nouveaux téléchargements ; il n'est pas propre à Claude. Cliquez sur **Informations complémentaires** (**More info**), puis sur **Exécuter quand même** (**Run anyway**), si vous faites confiance à la source (la page officielle claude.ai/download).
-- **Le Mac indique que l'application « ne peut pas être ouverte car elle provient d'un développeur non identifié »** — C'est Gatekeeper, une vérification de sécurité standard de macOS. Faites un clic droit (ou Contrôle-clic) sur l'application Claude, choisissez **Ouvrir** (**Open**), puis confirmez.
+- **Le Mac refuse d'ouvrir l'application, ou vous demande si vous êtes sûr de vouloir l'ouvrir** — C'est Gatekeeper, une vérification de sécurité standard de macOS pour les applications téléchargées depuis Internet. Si une demande s'affiche, cliquez sur **Ouvrir** (**Open**). Si macOS bloque plutôt l'application, ouvrez **Réglages Système > Confidentialité et sécurité** (**System Settings > Privacy & Security**), faites défiler vers le bas et cliquez sur **Ouvrir quand même** (**Open Anyway**) à côté du message concernant Claude (sur macOS 15 Sequoia et versions ultérieures, faire un clic droit sur l'application et choisir **Ouvrir** ne fonctionne plus dans ce cas).
 - **La connexion ne fonctionne pas** — Vérifiez votre connexion Internet, et assurez-vous d'abord de pouvoir vous connecter sur [claude.ai](https://claude.ai) dans un navigateur.
 - **L'application ne se lance pas après l'installation** — Redémarrez votre ordinateur, puis essayez à nouveau d'ouvrir Claude. Si cela ne suffit pas, téléchargez de nouveau le programme d'installation depuis [claude.ai/download](https://claude.ai/download).
 
