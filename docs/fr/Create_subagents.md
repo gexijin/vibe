@@ -83,32 +83,22 @@ Votre sous-agent de sélection d'actions va :
 
 ## Étape 4 : Créer le Sous-Agent de Sélection d'Actions
 
-Tapez cette commande :
+Demandez à Claude d'écrire le fichier du sous-agent pour vous. Copiez et collez ce prompt :
 
 ```
-/agents
+Crée un sous-agent de projet appelé stock-picker dans .claude/agents/ :
+- Il prend deux actions ou plus
+- Utilise le skill stock-report pour faire des recherches
+- Des fiches de notation sont créées en fonction des catégories de données collectées
+- Une recommandation finale est donnée.
+Utilise le modèle Sonnet.
 ```
 
-Vous verrez l'interface des agents de Claude Code montrant les sous-agents existants (le cas échéant) et les options **Create**, **Edit** ou **Delete** pour créer, modifier ou supprimer des sous-agents.
+Claude crée le fichier `.claude/agents/stock-picker.md`. Si Claude demande la permission de créer le fichier, choisissez **Yes**.
 
-Maintenant créez votre sous-agent :
-- Sélectionnez **Create new subagent**
-- Sélectionnez **Project**
-- Sélectionnez **Generate with Claude (recommended)**
-- Collez ce qui suit pour les instructions :
+**Remarque :** Dans les anciennes versions de Claude Code, taper `/agents` ouvrait un menu pour créer des sous-agents. Dans les versions actuelles, `/agents` vous rappelle seulement de le demander à Claude, ce que nous venons de faire.
 
-  ```
-  Crée un fichier markdown pour un nouveau sous-agent appelé stock-picker :
-  - Il prend deux actions ou plus
-  - Utilise le skill stock-report pour faire des recherches
-  - Des fiches de notation sont créées en fonction des catégories de données collectées
-  - Une recommandation finale est donnée.
-  ```
-- Appuyez sur **Entrée** sur **[Continue]** pour utiliser **All tools**
-- Sélectionnez **Sonnet** pour le modèle
-- Appuyez sur **Entrée** pour choisir une couleur aléatoirement
-
-**Ce que signifie « All tools » :** Un sous-agent peut être limité aux seuls outils dont il a besoin, par exemple un agent dédié uniquement à la recherche, avec seulement la recherche web. Ce tutoriel utilise **All tools** car le stock-picker doit faire des recherches en ligne et peut écrire des fichiers. Vous pourrez restreindre cela plus tard en modifiant le fichier du sous-agent.
+**Outils :** Un sous-agent peut être limité aux seuls outils dont il a besoin, par exemple un agent dédié uniquement à la recherche, avec seulement la recherche web. Si le fichier n'a pas de ligne `tools:`, le sous-agent peut utiliser tous les outils, ce dont le stock-picker a besoin pour faire des recherches en ligne et écrire des fichiers.
 
 ## Étape 5 : Examiner ce que Vous Avez Construit (Point de Réflexion)
 
@@ -125,11 +115,13 @@ Il y a un **frontmatter YAML** en haut :
 ---
 name: stock-picker
 description: Compares multiple companies for investment decisions...
-skills: stock-report
+skills:
+  - stock-report
+model: sonnet
 ---
 ```
 
-Ce frontmatter (la section entre les marqueurs `---`) indique à Claude Code quand activer ce sous-agent et quels skills il peut utiliser.
+Ce frontmatter (la section entre les marqueurs `---`) indique à Claude Code quand utiliser ce sous-agent (`description`), quels skills charger dans celui-ci dès le départ (`skills`), et sur quel modèle Claude il s'exécute (`model`).
 
 Il y a un **prompt système** sous le frontmatter avec votre méthodologie d'évaluation.
 
@@ -141,6 +133,8 @@ Il y a un **prompt système** sous le frontmatter avec votre méthodologie d'év
 Vous pouvez modifier le fichier directement ou demander à Claude de le mettre à jour.
 
 ## Étape 6 : Tester le Sous-Agent
+
+Commencez par **quitter** Claude Code en appuyant deux fois sur **Ctrl+C**, puis tapez `claude` pour le redémarrer. Claude Code ne remarque un tout nouveau dossier `.claude/agents/` qu'après un redémarrage.
 
 Maintenant testez votre sous-agent avec une vraie comparaison. Tapez :
 
@@ -184,7 +178,7 @@ Maintenant que vous avez un sous-agent de sélection d'actions fonctionnel, essa
 - **Le sous-agent ne s'active pas** : Assurez-vous que votre demande mentionne la comparaison d'entreprises ou les décisions d'investissement. Essayez : « Utilise le sous-agent stock-picker pour comparer... »
 - **Skill non trouvé** : Vérifiez que `.claude/skills/stock-report/SKILL.md` existe. Redémarrez Claude Code si vous venez de l'ajouter.
 - **Scores incomplets** : Demandez au sous-agent : « continue » ou « explique plus en détail les scores de chaque catégorie »
-- **Erreur lors de la création du sous-agent** : Vérifiez que le dossier `.claude/agents/` existe. Claude Code devrait le créer automatiquement.
+- **Sous-agent introuvable après sa création** : Vérifiez que `.claude/agents/stock-picker.md` existe. Si c'est le cas, quittez Claude Code (Ctrl+C deux fois) et redémarrez-le avec `claude`. Un tout nouveau dossier `.claude/agents/` n'est pris en compte qu'après un redémarrage.
 
 ## Vue d'Ensemble du Flux de Travail
 

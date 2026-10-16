@@ -2,6 +2,8 @@
 title: "Comment Claude Code m'a aidé à créer ces tutoriels"
 lang: "fr"
 ---
+[Accueil](./)
+
 # Comment Claude Code m'a aidé à créer ces tutoriels
 
 Mi-décembre 2025, j'ai passé 2 heures sur Zoom à essayer d'aider mon assistante de recherche à installer Claude Code. J'ai compris qu'une personne comme elle avait besoin d'instructions précises et pratiques, alors je me suis lancé dans la création de tutoriels complets pour Claude Code. Mon objectif : des tutoriels pratiques et ciblés qui guident les débutants complets à travers des tâches réelles, étape par étape. Pas de théorie en masse. Pas de manuels de référence exhaustifs. Juste « faites ceci, puis cela, puis ceci » jusqu'à ce que vous ayez accompli quelque chose de concret.
@@ -94,7 +96,7 @@ La combinaison de commandes slash pour les flux de travail structurés et de sou
 
 ## Les Résultats
 
-En moins de deux semaines, j'ai créé plus de 20 tutoriels anglais couvrant des sujets de niveau débutant à intermédiaire, 81 tutoriels traduits dans 3 langues, une qualité constante grâce à des processus de révision automatisés, et une documentation maintenable avec des outils de synchronisation pour les traductions.
+En moins de deux semaines, j'ai créé plus de 20 tutoriels anglais couvrant des sujets de niveau débutant à intermédiaire, 81 tutoriels traduits dans cinq langues, une qualité constante grâce à des processus de révision automatisés, et une documentation maintenable avec des outils de synchronisation pour les traductions.
 
 Tous les tutoriels suivent la même structure, le même style d'écriture et les mêmes conventions de formatage — parce qu'ils ont été générés par le même processus systématique.
 
@@ -104,7 +106,7 @@ Tous les tutoriels suivent la même structure, le même style d'écriture et les
 - **Structurez les commandes comme des flux de travail multiphases.** Dites à Claude comment réfléchir au problème, pas seulement quoi faire.
 - **Intégrez le contrôle qualité dans le processus.** Créez une commande de révision en parallèle de votre commande de génération.
 - **Rendez les commandes collaboratives, pas autonomes.** Incluez des étapes d'approbation. Claude gère les parties fastidieuses ; vous prenez les décisions stratégiques.
-- **Utilisez les sous-agents pour le traitement par lot.** Lors du traitement de nombreux documents, dites explicitement « Use subagents » dans votre prompt. Appuyez d'abord sur Shift+Tab pour activer le mode d'acceptation automatique — les sous-agents ne demanderont pas de permissions, rendant le traitement parallèle fluide.
+- **Utilisez les sous-agents pour le traitement par lot.** Lors du traitement de nombreux documents, dites explicitement « Use subagents » dans votre prompt. Assurez-vous d'abord que la ligne d'état affiche **accept edits on** ou **auto mode on** (appuyez sur Shift+Tab pour basculer) — les sous-agents utilisent le même mode, ils s'arrêtent donc rarement pour demander une permission, ce qui rend le traitement parallèle beaucoup plus fluide.
 
 ## Conclusion
 
@@ -118,7 +120,7 @@ C'est le pouvoir de l'automatisation systématique.
 
 ---
 
-*Vous voulez voir les commandes slash que j'ai créées ? Consultez le [dossier commands](../assets/commands/). La bibliothèque complète de tutoriels est disponible sur le [site de documentation du projet](https://github.com/gexijin/vibe/tree/main/docs).*
+*Vous voulez voir les commandes slash que j'ai créées ? Consultez le [dossier commands](https://github.com/gexijin/vibe/tree/main/docs/assets/commands). La bibliothèque complète de tutoriels est disponible sur le [site de documentation du projet](https://github.com/gexijin/vibe/tree/main/docs).*
 
 ---
 

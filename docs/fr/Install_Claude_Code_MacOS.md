@@ -26,15 +26,14 @@ Ce guide vous accompagne pas à pas dans l'installation, avec des instructions d
 
 - Un ordinateur Mac (macOS 13.0 Ventura ou plus récent)
 - Connexion Internet
-- Accès administrateur sur votre ordinateur
 - Abonnement Claude Pro/Max ou clé API
 - 5 à 10 minutes
 
 ## Étape 1 : Ouvrir Terminal
 
-- Cliquez sur l'icône **Launchpad** dans votre Dock (l'icône avec des carrés colorés)
-- Tapez `Terminal` dans la zone de recherche en haut
-- Cliquez sur **Terminal** (une icône carrée noire)
+- Appuyez sur **Command (⌘) + Espace** pour ouvrir la recherche Spotlight
+- Tapez `Terminal`
+- Appuyez sur **Retour** (ou cliquez sur **Terminal**, une icône carrée noire, dans les résultats)
 - Une fenêtre Terminal s'ouvrira avec un curseur clignotant
 
 **Astuce :** Gardez Terminal ouvert pour les prochaines étapes.
@@ -47,12 +46,17 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Attendez que Claude Code s'installe (1 à 2 minutes)
-- Vous pouvez voir des messages de progression - c'est normal
+- La fenêtre peut n'afficher aucun message pendant le téléchargement — c'est normal, patientez simplement
 - Lorsque l'installation est terminée, fermez et rouvrez Terminal, puis vérifiez en tapant :
    ```
    claude --version
    ```
 - Vous devriez voir le numéro de version de Claude Code
+- Si vous voyez plutôt `zsh: command not found: claude`, exécutez ces deux lignes (elles indiquent à votre Mac où trouver Claude Code), puis réessayez `claude --version` :
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 **Alternative : Installer avec Homebrew**
 
@@ -71,13 +75,10 @@ brew install --cask claude-code
    ```
    claude
    ```
-- Claude essaie d'ouvrir un navigateur. S'il ne s'ouvre pas automatiquement, copiez l'URL affichée dans Terminal et collez-la dans votre navigateur.
+- Claude essaie d'ouvrir un navigateur. S'il ne s'ouvre pas automatiquement, appuyez sur **c** pour copier le lien de connexion, puis collez-le dans votre navigateur.
 - Connectez-vous à votre compte Claude.ai (cela peut se produire automatiquement)
-- Cliquez sur **Authorize**
-- Cliquez sur **Copy Code** lorsqu'un long code apparaît
-- Retournez à la fenêtre Terminal
-- Pour coller dans Terminal : Cliquez sur **Édition** dans la barre de menus, puis cliquez sur **Coller**
-- Vous devriez voir un message de succès
+- Cliquez sur **Authorize**. Le navigateur devrait indiquer que vous êtes connecté, et Terminal affiche un message de succès.
+- Uniquement si le navigateur affiche plutôt un long code, cliquez sur **Copy Code**, retournez dans Terminal, collez-le à **Paste code here if prompted** (appuyez sur **Command (⌘) + V**), puis appuyez sur **Retour**.
 - Suivez les instructions pour terminer la configuration
 
 ### Option B. Utilisez la clé API Anthropic
@@ -96,10 +97,11 @@ Si vous avez une clé API Anthropic au lieu d'un abonnement Claude :
    ```
    Remplacez `your-api-key-here` par votre clé API réelle
 - Fermez et rouvrez Terminal pour que les modifications prennent effet
+- Démarrez Claude Code en tapant `claude`. La première fois, il vous demande si vous voulez utiliser la clé API qu'il a trouvée. Choisissez **Yes**. (Si vous choisissez **No** par erreur, tapez `/config` et activez **Use custom API key**.)
 
 **Remarque :** Si vous utilisez un Mac plus ancien avec bash au lieu de zsh, remplacez `~/.zshrc` par `~/.bash_profile` dans la commande ci-dessus.
 
-### Option C. Utilisez l'API OpenRouter (commencez gratuitement !)
+### Option C. Utilisez l'API OpenRouter (paiement à l'usage)
 
 OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grands modèles de langage via une seule clé API. Cela peut être un moyen économique d'utiliser Claude Code, car vous ne payez que pour l'utilisation et pouvez choisir parmi des modèles à différents niveaux de prix.
 
@@ -110,9 +112,9 @@ OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grand
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - Démarrez Claude Code :
    ```
@@ -128,11 +130,13 @@ OpenRouter est une passerelle API unifiée qui donne accès à plus de 500 grand
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - Parcourez les modèles disponibles sur [openrouter.ai/models](https://openrouter.ai/models)
-- Le niveau gratuit vous donne 50 requêtes API par jour
+- Les modèles gratuits (`:free`) sont limités à 50 requêtes par jour, qu'une seule tâche Claude Code peut épuiser rapidement
+- Les modèles indiqués ci-dessus sont payants — vérifiez leurs prix sur [openrouter.ai/models](https://openrouter.ai/models) avant de les utiliser
+- Le fonctionnement de Claude Code n'est garanti qu'avec les modèles Anthropic via OpenRouter
 - Consultez le [guide officiel OpenRouter](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) pour plus de détails
 
 
-### Option D. Utilisez l'API Anthropic via Azure Foundry
+### Option D. Utilisez l'API Anthropic via Microsoft Foundry (Azure)
 
 Cette option est destinée aux organisations utilisant des modèles Claude hébergés sur Azure. Dans la fenêtre Terminal, collez ce code pour définir les variables d'environnement (avant de démarrer Claude) :
 ```
@@ -141,12 +145,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **Remarque :** Remplacez `xxxx-eastus2` par le nom de votre ressource Foundry (n'utilisez pas l'URL de base complète). Remplacez `your_api_key` par votre clé API complète depuis votre portail Azure.
+
+Démarrez ensuite Claude Code en tapant `claude`.
 
 ## Étape 4 : Tester Claude Code
 
@@ -200,9 +207,9 @@ Claude Code installé via l'installateur natif se met à jour automatiquement en
 
 Après avoir fermé Terminal, voici comment l'ouvrir à nouveau :
 
-- Cliquez sur l'icône **Launchpad** dans votre Dock (l'icône avec des carrés colorés)
-- Tapez `Terminal` dans la zone de recherche en haut
-- Cliquez sur **Terminal**
+- Appuyez sur **Command (⌘) + Espace** pour ouvrir la recherche Spotlight
+- Tapez `Terminal`
+- Appuyez sur **Retour**
 - Une fenêtre Terminal s'ouvrira
 
 ## Dépannage
@@ -223,7 +230,11 @@ Elle vérifie votre installation et signale tout problème.
 - Fermez Terminal complètement (cliquez sur **Terminal** dans la barre de menus, puis **Quitter Terminal**)
 - Ouvrez Terminal à nouveau
 - Essayez `claude --version` pour vérifier si Claude Code est installé
-- Essayez d'exécuter à nouveau la commande d'installation : `curl -fsSL https://claude.ai/install.sh | bash`
+- S'il indique toujours `command not found`, exécutez ces deux lignes, puis réessayez `claude --version` :
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 ### L'authentification échoue
 - Assurez-vous d'avoir un abonnement Claude Pro/Max actif ou une clé API valide

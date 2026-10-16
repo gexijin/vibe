@@ -29,7 +29,7 @@ Vous avez installé Claude Code sur votre machine Windows - vous souhaitez maint
 
 ## Étape 2 : Démarrer VS Code
 
-- Cliquez sur le **bouton Démarrer de Windows** (coin inférieur gauche de votre écran)
+- Cliquez sur le **bouton Démarrer de Windows** (le logo Windows dans votre barre des tâches)
 - Tapez `Visual Studio Code` ou `VS Code` dans la zone de recherche
 - Cliquez sur **Visual Studio Code** lorsqu'il apparaît dans les résultats de recherche
 - VS Code s'ouvre avec un onglet de bienvenue - vous pouvez fermer cet onglet
@@ -69,19 +69,19 @@ Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installati
 Après avoir fermé VS Code, voici comment revenir à votre projet :
 
 - **Option A :** Ouvrez VS Code, cliquez sur **File > Open Recent**, et sélectionnez `test_claude`
-- **Option B :** Ouvrez **l'Explorateur de fichiers**, faites un clic droit sur le dossier `test_claude`, et sélectionnez **Open with Code**
+- **Option B :** Ouvrez **l'Explorateur de fichiers**, faites un clic droit sur le dossier `test_claude`, et sélectionnez **Open with Code** (sous Windows 11, cliquez d'abord sur **Afficher d'autres options**). Cette option n'apparaît que si **Add "Open with Code" action** a été coché lors de l'installation de VS Code ; sinon, utilisez l'Option A
 
 ## Prochaines Étapes
 
 - Demandez à Claude Code d'expliquer une base de code existante : « Explique ce que fait ce projet »
 - Demandez à Claude Code de vous aider à écrire de nouvelles fonctionnalités : « Ajoute une fonction qui calcule la moyenne d'une liste »
 - Utilisez Claude Code pour corriger des bugs : « Ce code donne une erreur, peux-tu le corriger ? »
-- Essayez l'extension VS Code de Claude Code pour une interface visuelle qui affiche les modifications directement dans le code (recherchez « Claude Code » dans Extensions)
+- Essayez l'extension Claude Code pour un panneau de discussion visuel qui affiche les modifications directement dans le code. Lancer `claude` dans le terminal de VS Code l'installe généralement pour vous (sinon, recherchez « Claude Code » dans Extensions). Ouvrez n'importe quel fichier, puis cliquez sur l'icône Spark en haut à droite de l'éditeur
 
 ## Dépannage
 
-- **Commande `claude` introuvable** - Exécutez `claude --version` dans le terminal de VS Code pour vérifier si Claude Code est installé ; sinon, suivez d'abord le [tutoriel d'installation](Install_CLAUDE_Code_Win.md)
-- **Vous utilisez WSL ?** - Si vous avez suivi le parcours optionnel WSL/Ubuntu, installez l'extension **WSL** depuis la barre latérale Extensions, cliquez sur l'icône bleue/verte dans le coin inférieur gauche, et sélectionnez **Connect to WSL** avant d'ouvrir votre dossier de projet (accessible à `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
+- **`claude` n'est pas reconnu** - Fermez complètement VS Code (toutes les fenêtres) et rouvrez-le, puis ouvrez un nouveau terminal et réessayez `claude`. Si cela échoue encore, exécutez `claude --version` dans une fenêtre PowerShell normale ; si cela échoue aussi, suivez d'abord le [tutoriel d'installation](Install_CLAUDE_Code_Win.md)
+- **Vous utilisez WSL ?** - Si vous avez suivi le parcours optionnel WSL/Ubuntu, installez l'extension **WSL** depuis la barre latérale Extensions, cliquez sur l'icône **><** dans le coin inférieur gauche, et sélectionnez **Connect to WSL** avant d'ouvrir votre dossier de projet (accessible à `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
 
 ## Aperçu du Flux de Travail
 

@@ -24,10 +24,10 @@ Avant d'installer quoi que ce soit, il est utile de savoir ce que vous installez
 ## Étape 1 : Créer un Compte Claude Gratuit
 
 - Allez sur [claude.ai](https://claude.ai)
-- Cliquez sur **Sign up**
-- Tapez votre adresse e-mail et cliquez sur **Continue**
-- Consultez vos e-mails pour trouver un code de vérification et saisissez-le
-- Suivez les instructions à l'écran pour terminer la création de votre compte
+- Si vous voyez un bouton **Sign up** ou **Try Claude**, cliquez dessus (sinon, vous arriverez directement aux options de connexion)
+- Tapez votre adresse e-mail et cliquez sur **Continue with email** (ou cliquez sur **Continue with Google**)
+- Ouvrez l'e-mail d'Anthropic et cliquez sur le lien qu'il contient (si vous l'ouvrez sur un autre appareil, comme votre téléphone, il affiche un code — tapez ce code sur votre ordinateur)
+- Suivez les instructions à l'écran pour terminer la création de votre compte (on peut vous demander un numéro de téléphone pour recevoir un code par SMS)
 
 ## Étape 2 : Envoyer Votre Premier Message
 
@@ -51,19 +51,19 @@ Claude se souvient de ce dont vous avez déjà parlé dans la même conversation
 
 ## Étape 4 : Trouver le Sélecteur de Modèle
 
-- Regardez en haut de la fenêtre de conversation : vous y trouverez un bouton affichant le nom d'un modèle (par exemple, « Claude »)
-- Cliquez dessus pour voir une courte liste des modèles disponibles
+- Regardez en bas à droite de la zone de message, à côté de la flèche d'envoi : vous y trouverez un bouton affichant le nom d'un modèle (par exemple, « Sonnet »)
+- Cliquez dessus pour voir une courte liste des modèles disponibles (cliquez sur **More models** pour voir les autres)
 - Vous n'avez rien à changer ici — sachez simplement que ce menu existe, car certains tutoriels suivants vous demanderont de choisir un modèle précis
 
 ## Prochaines Étapes
 
-- **Installer Claude Code** : Utilisez ce même assistant IA dans vos projets de code avec [Installer Claude Code sur Windows](Install_CLAUDE_Code_Win) ou [Installer Claude Code sur Mac](Install_Claude_Code_MacOS)
+- **Installer Claude Code** : Utilisez ce même assistant IA dans vos projets de code avec [Installer Claude Code sur Windows](Install_CLAUDE_Code_Win) ou [Installer Claude Code sur Mac](Install_Claude_Code_MacOS). Claude Code nécessite un abonnement Claude payant (comme Pro ou Max) ou un compte Anthropic Console — l'offre gratuite ne l'inclut pas.
 - **Continuer à discuter** : Demandez à Claude de vous aider à planifier quelque chose sur lequel vous travaillez déjà — un e-mail, une recette ou une fiche de révision
 - **Essayer un prompt plus difficile** : Demandez à Claude de comparer deux options pour une décision que vous devez prendre, et voyez comment il explique son raisonnement
 
 ## Dépannage
 
-- **Vous n'avez pas reçu l'e-mail de vérification** - Vérifiez votre dossier de spam ou de courrier indésirable ; attendez une minute et cliquez sur **Resend code** si nécessaire
+- **Vous n'avez pas reçu l'e-mail d'inscription** - Vérifiez votre dossier de spam ou de courrier indésirable ; attendez une minute, puis retournez sur [claude.ai](https://claude.ai) et saisissez à nouveau votre adresse e-mail
 - **La page ne se charge pas ou s'affiche mal** - Actualisez la page, ou essayez un autre navigateur comme Chrome ou Firefox
 - **Vous ne savez pas quoi taper** - Commencez simplement : demandez à Claude d'expliquer un sujet qui vous intéresse, ou demandez de l'aide pour quelque chose que vous faites déjà aujourd'hui
 

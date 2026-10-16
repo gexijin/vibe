@@ -18,7 +18,7 @@ Vous codez avec l'assistance de l'IA. Elle apporte des modifications à vos fich
 ## Ce Dont Vous Aurez Besoin
 
 - Avoir terminé [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS)
-- 30 minutes
+- 20-30 minutes
 
 ## Étape 1 : Ouvrir Terminal
 
@@ -26,7 +26,6 @@ Choisissez l'une de ces méthodes :
 
 - **Spotlight :** Appuyez sur `Command (⌘) + Espace`, tapez `Terminal`, appuyez sur Entrée
 - **Finder :** Ouvrez **Applications** > **Utilitaires** > **Terminal**
-- **Launchpad :** Cliquez sur **Launchpad** dans le Dock, recherchez `Terminal`
 
 Vous verrez une invite de commande se terminant par `$` ou `%`.
 
@@ -110,9 +109,11 @@ Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installati
 
 Claude initialise un dépôt Git dans votre dossier (prend 2-5 secondes). Vous avez maintenant le contrôle de version !
 
+Si Claude demande la permission, il affiche un petit menu avec **Yes** et **No**. Utilisez les touches fléchées pour choisir **Yes** et appuyez sur **Entrée**. Vous verrez peut-être cela plusieurs fois dans ce tutoriel.
+
 ## Étape 8 : Créer l'Application de Minuterie
 
-- Dans Claude Code, tapez :
+- Dans Claude Code, copiez et collez toute cette demande (coller garde toutes les lignes ensemble ; appuyer sur Entrée l'enverrait trop tôt) :
 
   ```
   Crée une application de minuterie simple dans un seul fichier appelé timer.html.
@@ -184,7 +185,7 @@ Parfois, le code de l'IA ne fonctionne pas et vous devez recommencer à partir d
   ```
   Abandonne ces modifications.
   ```
-- Claude affiche un menu avec des options comme **Yes** et **No** — utilisez les touches fléchées (ou appuyez sur le numéro à côté de **Yes**) pour le sélectionner, puis appuyez sur **Entrée**
+- Claude vous demandera généralement de confirmer d'abord. S'il affiche un menu, choisissez **Yes** (touches fléchées ou le numéro à côté) et appuyez sur **Entrée**. S'il le demande dans un message, tapez `oui, abandonne les modifications de timer.html` et appuyez sur **Entrée**
 - Actualisez votre navigateur—le bouton 15 minutes disparaît
 
 Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie fonctionne à nouveau avec seulement les boutons 1 et 5 minutes !
@@ -195,7 +196,7 @@ Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie f
   ```
   Ajoute une notification sonore quand le temps est écoulé.
   ```
-- Actualisez le navigateur et testez une fois que Claude a terminé (réglez la minuterie sur 0.1 minutes)
+- Actualisez le navigateur et testez une fois que Claude a terminé (réglez la minuterie sur 1 minute)
 - Si cela fonctionne, faites un commit des modifications :
   ```
   Enregistre ces modifications.
@@ -207,7 +208,7 @@ Claude rejette les nouvelles modifications que nous n'aimons pas. La minuterie f
   ```
   Le son doit continuer jusqu'à ce que je clique sur un bouton pour l'arrêter (snooze).
   ```
-- Actualisez le navigateur et testez une fois que Claude a terminé (réglez la minuterie sur 0.1 minutes)
+- Actualisez le navigateur et testez une fois que Claude a terminé (réglez la minuterie sur 1 minute)
 - Si cela fonctionne, faites un commit des modifications :
   ```
   Enregistre ces modifications.
@@ -231,6 +232,7 @@ Remarquez que la tentative du bouton 15 minutes n'y est pas—vous l'avez abando
 ## Étape 17 : Examiner le Code
 
 - Dans le navigateur qui affiche l'application, faites un clic droit et sélectionnez **Afficher le code source de la page** (ou appuyez sur `Option (⌥) + Command (⌘) + U`)
+- **Vous utilisez Safari ?** Cliquez d'abord sur **Safari** > **Réglages** > **Avancées** et cochez **Afficher les fonctionnalités pour les développeurs web**. Ensuite, faites un clic droit sur la page et choisissez **Afficher le code source de la page**
 - Vous voyez le code source de l'application.
 - Dans Claude Code, demandez
   ```
@@ -264,7 +266,7 @@ N'oubliez pas : Testez après chaque fonctionnalité, committez après chaque su
 - **Erreur « not a git repository » :** Assurez-vous d'être dans le dossier test_claude (`cd ~/Documents/test_claude`)
 - **Impossible de trouver timer.html dans Finder :** Le fichier se trouve à `/Users/VOTRE_NOM_UTILISATEUR/Documents/test_claude/timer.html`
 - **Les commandes Git ne fonctionnent pas :** Assurez-vous d'avoir terminé l'Étape 2 et installé Git
-- **La minuterie ne fonctionne pas :** Ouvrez la console du navigateur (clic droit sur la page, sélectionnez **Inspecter**, puis cliquez sur l'onglet **Console**), copiez tous les messages d'erreur en rouge, collez-les dans Claude
+- **La minuterie ne fonctionne pas :** Ouvrez la console du navigateur (clic droit sur la page, sélectionnez **Inspecter**, puis cliquez sur l'onglet **Console** ; dans Safari, activez d'abord les fonctionnalités pour les développeurs comme indiqué à l'Étape 17, puis choisissez **Inspecter l'élément**), copiez tous les messages d'erreur en rouge, collez-les dans Claude
 
 ## Ce Que Vous Pouvez Demander à Claude
 
@@ -272,7 +274,7 @@ N'oubliez pas : Testez après chaque fonctionnalité, committez après chaque su
 - « Montre-moi les différences » - Voir exactement quel code a changé
 - « Explique ce que fait le code de la minuterie » - Comprendre l'implémentation
 - « Crée une branche appelée essai » - Essayer des modifications risquées en toute sécurité
-- « Reviens au commit précédent » - Annuler tout depuis le dernier commit
+- « Annule tout depuis mon dernier commit » - Rejeter les modifications que vous n'avez pas encore enregistrées
 
 Claude gère toutes les opérations Git en langage naturel—aucune commande à mémoriser !
 
@@ -282,6 +284,6 @@ Claude gère toutes les opérations Git en langage naturel—aucune commande à 
 - **Développement :** Claude écrit le code, vous testez dans le navigateur
 - **Contrôle de Version :** Claude gère toutes les opérations Git via de simples demandes
 - **Sécurité :** Abandonnez les mauvaises modifications à tout moment, revenez à n'importe quel commit précédent
-- **Local :** Tout reste sur votre ordinateur, aucun compte ni connexion Internet requis
+- **Local :** Votre historique Git reste sur votre ordinateur — aucun compte GitHub nécessaire (Claude Code lui-même a toujours besoin d'Internet et de votre compte Claude)
 
 Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 8 décembre 2025.

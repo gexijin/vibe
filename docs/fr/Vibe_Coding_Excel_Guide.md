@@ -147,7 +147,7 @@ Avant de committer, examinez ce que Claude a construit.
 - Dans Spreadsheet Viewer, parcourez les trois feuilles : Revenus, Dépenses, Synthèse
 - Vous n'avez pas besoin de comprendre chaque formule, mais ayez une idée de la structure
 - Ouvrez GitHub Desktop
-- Vous verrez `budget.xlsx` listé comme fichier modifié
+- Vous verrez `budget.xlsx` listé comme fichier modifié (vous verrez peut-être aussi des scripts auxiliaires écrits par Claude, comme un fichier `.py` - vous pouvez aussi les committer)
 - Dans le champ **Summary** en bas à gauche, tapez :
 
 ```

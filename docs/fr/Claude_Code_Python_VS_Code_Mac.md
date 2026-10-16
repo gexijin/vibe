@@ -18,7 +18,7 @@ Vous avez configuré Python dans VS Code et pouvez écrire du code manuellement.
 
 - Avoir terminé le tutoriel [Programmation Python dans VS Code](./Python_Coding_VS_Code_Guide) - Python doit fonctionner dans VS Code
 - Avoir terminé le tutoriel [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) - Claude Code CLI doit être installé
-- Abonnement Claude Pro/Max ou clé API Anthropic
+- Un forfait Claude payant (comme Pro ou Max) ou un compte Anthropic Console — le forfait gratuit n'inclut pas Claude Code
 - 20-30 minutes
 
 ## Étape 1 : Ouvrir VS Code et Créer un Projet Python
@@ -35,20 +35,16 @@ Vous avez configuré Python dans VS Code et pouvez écrire du code manuellement.
 
 - Cliquez sur l'icône **Extensions** dans la barre latérale gauche (icône de quatre carrés)
 - Dans la zone de recherche, tapez `Claude Code`
-- Trouvez **Claude Code** par Anthropic et cliquez sur **Install**
-- Après l'installation, une icône Claude (étincelle) apparaît dans la barre latérale gauche
-- Cliquez sur l'icône Claude pour ouvrir le panneau de chat
-- Cliquez sur **Sign in to Claude Code** dans le panneau de chat
-- Choisissez votre méthode d'authentification :
-  - **Utilisateurs Claude Pro/Max** : Cliquez sur **Sign in with Claude.ai**, autorisez dans le navigateur, et copiez le code dans VS Code
-  - **Utilisateurs de clé API** : Cliquez sur **Use API Key** et collez votre clé API Anthropic
+- Trouvez **Claude Code for VS Code** par Anthropic et cliquez sur **Install**
+- Après l'installation, cliquez sur **✻ Claude Code** dans le coin inférieur droit de la fenêtre VS Code (la barre d'état) pour ouvrir le panneau Claude
+- La première fois, un écran de connexion apparaît : cliquez sur **Sign in**, approuvez l'accès dans votre navigateur, puis revenez à VS Code
 - Pour les étapes d'authentification détaillées, consultez le guide [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) (Étape 3)
-- Une fois connecté, vous verrez "Ready to help" dans le panneau de chat
+- Une fois connecté, vous verrez une liste de contrôle **Learn Claude Code** et une zone de saisie en bas du panneau
 
 ## Étape 3 : Créer un Script Python Initial Manuellement
 
-- Cliquez sur **File > New File** dans la barre de menu
-- Cliquez sur **Select a language** et tapez `Python`, puis sélectionnez **Python**
+- Cliquez sur **File > New File...** dans la barre de menu
+- Dans la liste qui apparaît en haut de la fenêtre, choisissez **Python File**
 - Enregistrez le fichier en cliquant sur **File > Save**, nommez-le `iris_analysis.py`
 - Tapez ce code :
 
@@ -62,13 +58,15 @@ iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 iris_df['species'] = iris.target_names[iris.target]
 
 # Display structure
-print(iris_df.info())
+iris_df.info()
 print("\nSummary statistics:")
 print(iris_df.describe())
 ```
 
 - Enregistrez le fichier en cliquant sur **File > Save**
-- Ouvrez le terminal Python : cliquez sur **View** dans la barre de menu, puis sur **Terminal**
+- Créez un environnement virtuel, comme à l'Étape 5 de [Programmation Python dans VS Code](./Python_Coding_VS_Code_Guide) : cliquez sur **View > Command Palette**, tapez `Python: Create Environment`, choisissez **Venv**, puis sélectionnez votre version de Python
+- Attendez que le dossier `.venv` apparaisse dans l'Explorer
+- Ouvrez un terminal : cliquez sur **View** dans la barre de menu, puis sur **Terminal**. Vous devriez voir `(.venv)` au début de l'invite
 - Installez les packages dont ce script a besoin :
   ```
   pip install scikit-learn pandas
@@ -78,7 +76,7 @@ print(iris_df.describe())
 
 ## Étape 4 : Demander à Claude d'Ajouter un Nuage de Points
 
-- Cliquez sur l'icône **Claude** dans la barre latérale gauche pour ouvrir le panneau de chat
+- Ouvrez le panneau Claude (icône Spark en haut à droite du fichier ouvert, ou **✻ Claude Code** dans le coin inférieur droit)
 - Dans la zone de chat en bas, tapez :
 
 ```
@@ -86,12 +84,12 @@ Ajoute du code à iris_analysis.py pour créer un nuage de points de la longueur
 ```
 
 - Appuyez sur Entrée pour envoyer
-- Claude lit votre fichier et propose des modifications - vous verrez un aperçu des modifications (diff) montrant le nouveau code à ajouter
-- Cliquez sur **Accept** pour appliquer les modifications
+- Claude lit votre fichier et le modifie - le nouveau code apparaît dans `iris_analysis.py`
+- Si Claude affiche un aperçu des modifications (diff) et demande une autorisation, acceptez la modification
 - Le code seaborn/matplotlib apparaît dans votre fichier
-- Si vous n'avez pas les packages requis, exécutez dans le terminal :
+- Installez les packages de graphiques utilisés par le code de Claude (ils n'ont pas été installés à l'Étape 3). Dans le terminal (avec `(.venv)` affiché), exécutez :
   ```
-  pip install seaborn matplotlib scikit-learn pandas
+  pip install seaborn matplotlib
   ```
 
 ## Étape 5 : Exécuter le Code Mis à Jour
@@ -110,8 +108,8 @@ Supprime le titre. Change le type de marqueur par espèce. Passe au style whiteg
 ```
 
 - Appuyez sur Entrée
-- Claude montre les modifications de code mises à jour
-- Cliquez sur **Accept**
+- Claude met à jour le code
+- Si on vous le demande, acceptez la modification
 - Exécutez à nouveau le code mis à jour : `python iris_analysis.py` dans le terminal
 - Le graphique s'affiche maintenant avec différentes formes de marqueurs par espèce, sans titre, et dans le style whitegrid
 - Fermez la fenêtre du graphique pour continuer
@@ -126,9 +124,9 @@ Ajoute du code pour effectuer une ACP sur les variables numériques et tracer le
 
 - Appuyez sur Entrée
 - Claude ajoute le code de l'ACP à votre script
-- Cliquez sur **Accept**
+- Si on vous le demande, acceptez la modification
 - Exécutez le code : `python iris_analysis.py` dans le terminal
-- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
+- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce (si la fenêtre du nuage de points de l'Étape 6 s'ouvre d'abord, fermez-la et le graphique d'ACP apparaît ensuite)
 - Fermez la fenêtre du graphique lorsque vous avez terminé
 
 ## Étape 8 : Demander à Claude de Réviser et Commenter
@@ -140,8 +138,8 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 ```
 
 - Appuyez sur Entrée
-- Claude révise le code et suggère des commentaires expliquant chaque section
-- Cliquez sur **Accept**
+- Claude révise le code et ajoute des commentaires expliquant chaque section
+- Si on vous le demande, acceptez la modification
 - Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'ACP
 
 ## Prochaines Étapes
@@ -156,9 +154,9 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 
 - **L'extension Claude ne s'affiche pas** - Redémarrez VS Code après l'installation. Cliquez sur **View > Extensions** pour vérifier qu'elle est installée.
 - **Erreur "Cannot read Python file"** - Assurez-vous d'avoir enregistré le fichier avec l'extension `.py`. Claude a besoin de fichiers enregistrés pour les lire.
-- **L'authentification a échoué** - Vérifiez que votre abonnement Claude Pro/Max est actif ou que votre clé API est valide. Consultez [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
-- **Erreurs de package introuvable** - Installez les packages requis dans le terminal : `pip install seaborn matplotlib scikit-learn pandas`. Attendez que l'installation soit terminée avant d'exécuter le code.
-- **Les modifications de code ne s'appliquent pas** - Assurez-vous de cliquer sur **Accept** dans l'aperçu des modifications. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
+- **L'authentification a échoué** - Vérifiez que votre forfait Claude payant ou votre compte Anthropic Console est actif. Consultez [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
+- **Erreurs de package introuvable** ou **`command not found: python`** - Assurez-vous que le terminal affiche `(.venv)` (sinon, fermez-le et ouvrez-en un nouveau avec **View > Terminal**), puis installez les packages requis : `pip install seaborn matplotlib scikit-learn pandas`. Attendez que l'installation soit terminée avant d'exécuter le code.
+- **Les modifications de code ne s'appliquent pas** - Si Claude a demandé une autorisation, assurez-vous d'avoir accepté la modification. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
 - **Le graphique ne s'affiche pas** - Assurez-vous d'avoir un affichage. Sur certains systèmes, vous devrez peut-être ajouter `plt.show()` à la fin ou utiliser `%matplotlib inline` dans Jupyter.
 
 ## Résumé du Flux de Travail

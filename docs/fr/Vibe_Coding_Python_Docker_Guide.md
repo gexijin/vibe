@@ -62,10 +62,10 @@ Votre dossier `iris-analysis` devrait maintenant contenir :
 - Cliquez sur **Select Folder** (Windows) ou **Open** (Mac)
 - Une notification apparaît en bas à droite : **Folder contains a Dev Container configuration file**
 - Cliquez sur **Reopen in Container**
-- Si vous ne voyez pas la notification, cliquez sur l'icône verte dans le coin inférieur gauche et sélectionnez **Reopen in Container**
+- Si vous ne voyez pas la notification, cliquez sur l'icône **><** dans le coin inférieur gauche et sélectionnez **Reopen in Container**
 - VS Code construit le conteneur Docker (prend 3 à 5 minutes la première fois)
 - Observez la notification de progression montrant les étapes de construction
-- Une fois terminé, l'icône verte affiche **Dev Container: Python in Docker**
+- Une fois terminé, le coin inférieur gauche affiche **Dev Container: Python in Docker**
 
 ## Étape 4 : Démarrer Claude Code
 
@@ -79,7 +79,9 @@ claude
 
 - Une fenêtre de navigateur s'ouvre pour l'authentification
 - Cliquez sur **Continue with Google** ou **Continue with Email**
-- Connectez-vous avec votre compte Claude (ou créez-en un)
+- Connectez-vous avec votre compte Claude. Claude Code nécessite un abonnement Claude payant (comme Pro ou Max) ou un compte Anthropic Console - l'offre gratuite ne l'inclut pas
+- Si le navigateur affiche un code au lieu d'indiquer que c'est terminé, copiez le code, retournez au terminal VS Code, collez-le à l'invite **Paste code here if prompted**, puis appuyez sur **Entrée** (c'est fréquent à l'intérieur d'un conteneur)
+- Si aucune fenêtre de navigateur ne s'ouvre, appuyez sur `c` pour copier le lien de connexion et collez-le dans votre navigateur
 - Après la réussite de l'authentification, retournez au terminal VS Code
 - Vous verrez le message de bienvenue de Claude
 
@@ -186,7 +188,7 @@ Avant de faire le commit, examinez ce que Claude a construit.
 - Vous n'avez pas besoin de comprendre chaque ligne, mais ayez une idée de la structure
 - Vérifiez que tous les fichiers PNG ont été créés : `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Ouvrez GitHub Desktop
-- Vous verrez tous les nouveaux fichiers listés (le script Python et les images PNG)
+- Vous verrez les nouvelles images PNG listées, ainsi que `iris_exploration.py` en tant que fichier modifié (Claude y a ajouté le code des graphiques)
 - Dans le champ **Summary** en bas à gauche, tapez :
 
 ```
@@ -241,7 +243,7 @@ Après chaque fonctionnalité réussie :
 - **Erreurs d'importation** - Le conteneur Docker devrait avoir pandas, matplotlib et scikit-learn pré-installés. Si ce n'est pas le cas, demandez à Claude de les installer avec pip.
 - **Claude fait des erreurs** - Normal ! Copiez le message d'erreur, collez-le à Claude et dites « corrige cette erreur ». Le vibe coding inclut l'itération et le débogage.
 - **Impossible de pousser vers GitHub** - Assurez-vous que vous êtes connecté à GitHub Desktop et que vous avez publié le dépôt (Étape 1). Vérifiez votre connexion Internet.
-- **Le conteneur ne démarre pas** - Assurez-vous que Docker Desktop est en cours d'exécution (indicateur d'état vert). Essayez de cliquer sur l'icône verte dans VS Code et de sélectionner **Rebuild Container**.
+- **Le conteneur ne démarre pas** - Assurez-vous que Docker Desktop est en cours d'exécution (indicateur d'état vert). Essayez de cliquer sur l'icône **><** dans le coin inférieur gauche de VS Code et de sélectionner **Rebuild Container**.
 
 ## Aperçu du Flux de Travail
 
