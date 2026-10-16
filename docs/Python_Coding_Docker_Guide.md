@@ -22,7 +22,7 @@ Ever tried to share your Python code with a colleague, only to spend hours debug
 ## Step 1: Install Docker Desktop
 
 - Visit [Docker Desktop download page](https://www.docker.com/products/docker-desktop/)
-- Click **Download for Windows** (or Mac/Linux based on your system)
+- Click **Download Docker Desktop** and choose your system (Windows, or Mac - Apple Silicon for M1/M2/M3/M4 Macs, or Mac - Intel Chip for older Macs)
 - Run the installer and follow the installation wizard
 - When prompted, enable WSL 2 (Windows users) or accept default settings
 - After installation, launch Docker Desktop
@@ -122,7 +122,7 @@ from sklearn.datasets import load_iris
 # Load the iris dataset
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df['species'] = iris.target
+df['species'] = iris.target_names[iris.target]
 
 # Display first few rows
 print(df.head())
@@ -180,11 +180,11 @@ st.pyplot(fig)
 
 ## Step 8: Reopen in Container
 
-- Click the green icon in the bottom-left corner of VS Code
+- Click the **><** icon in the bottom-left corner of VS Code
 - Select **Reopen in Container** from the menu
 - VS Code will build the container (this takes 5-10 minutes the first time)
 - You'll see a progress notification showing the build steps
-- When complete, the green icon will show **Dev Container: Python in Docker**
+- When complete, the bottom-left corner will show **Dev Container: Python in Docker**
 
 ## Step 9: Understand the Container Environment
 
@@ -296,7 +296,7 @@ st.title("My First Python Docker App")
 - `python:3.12-alpine` - Minimal Alpine Linux-based image (smallest size)
 - `jupyter/datascience-notebook` - Pre-configured Jupyter with data science libraries
 
-After changing the base image, rebuild the container to apply changes.
+After changing the base image, rebuild the container to apply changes. Note: only Debian-based images such as `python:3.12` and `python:3.12-slim` work with this Dockerfile as written; Alpine images and Jupyter images need a different Dockerfile.
 
 ## Step 14: Install Python Packages in the Docker Image (Optional)
 
@@ -313,7 +313,7 @@ RUN pip install --no-cache-dir \
 ```
 
 - Click **File > Save**
-- Click the green icon in the bottom-left corner
+- Click the **><** icon in the bottom-left corner
 - Select **Rebuild Container** from the menu
 - VS Code will rebuild the container with your new package (this takes 2-5 minutes)
 - To verify, open a terminal (**Terminal > New Terminal**) and run:
@@ -353,10 +353,10 @@ Once everything is set up, here's your daily routine:
 
 1. **Start Docker Desktop** - Open the app and wait for the green status indicator (Docker must be running)
 2. **Open VS Code** - Launch VS Code and open your project folder
-3. **Reopen in Container** - If not already in the container, click the green icon (bottom-left) and select **Reopen in Container**
+3. **Reopen in Container** - If not already in the container, click the **><** icon in the bottom-left corner and select **Reopen in Container**
 4. **Write and run code** - Edit `.py` files, run line-by-line with `Shift+Enter`, or run apps with `streamlit run app.py`
 5. **Save your work** - Your code files (`.py`, `.ipynb`) are saved to your computer and persist across sessions
-6. **Commit and push** - Use GitHub Desktop to commit your changes and push to the repository
+6. **Commit and push** - If your project is a GitHub repository (see [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)), use GitHub Desktop to commit your changes and push them
 
 ---
 

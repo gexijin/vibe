@@ -35,14 +35,10 @@ You've set up Python in VS Code and can write code manually. Now you want AI to 
 - Click the **Extensions** icon in the left sidebar (four squares icon)
 - In the search box, type `Claude Code`
 - Find **Claude Code** by Anthropic and click **Install**
-- After installation, a Claude icon (sparkle) appears in the left sidebar
-- Click the Claude icon to open the chat panel
-- Click **Sign in to Claude Code** in the chat panel
-- Choose your authentication method:
-  - **Claude Pro/Max users**: Click **Sign in with Claude.ai**, authorize in browser, and copy the code back to VS Code
-  - **API key users**: Click **Use API Key** and paste your Anthropic API key
+- After installation, click **✻ Claude Code** in the bottom-right corner of the VS Code window (the status bar) to open the Claude panel
+- The first time, a sign-in screen appears: click **Sign in**, approve access in your browser, then return to VS Code
 - For detailed authentication steps, see the [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) guide (Step 3)
-- Once signed in, you'll see "Ready to help" in the chat panel
+- Once signed in, you'll see a **Learn Claude Code** checklist and a prompt box at the bottom of the panel
 
 ## Step 3: Create Initial Python Script Manually
 
@@ -61,7 +57,7 @@ iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 iris_df['species'] = iris.target_names[iris.target]
 
 # Display structure
-print(iris_df.info())
+iris_df.info()
 print("\nSummary statistics:")
 print(iris_df.describe())
 ```
@@ -79,7 +75,7 @@ print(iris_df.describe())
 
 ## Step 4: Ask Claude to Add Scatter Plot
 
-- Click the **Claude** icon in the left sidebar to open the chat panel
+- Open the Claude panel (Spark icon at the top-right of the open file, or **✻ Claude Code** in the bottom-right corner)
 - In the chat box at the bottom, type:
 
 ```
@@ -87,12 +83,12 @@ Add code to iris_analysis.py to create a scatter plot of sepal length vs. width,
 ```
 
 - Press Enter to send
-- Claude reads your file and proposes changes - you'll see a diff showing new code to add
-- Click **Accept** to apply the changes
+- Claude reads your file and edits it - the new code appears in `iris_analysis.py`
+- If Claude shows a diff and asks for permission, accept the change
 - The seaborn/matplotlib code appears in your file
-- If you don't have the required packages, run in terminal:
+- Install the plotting packages Claude's code uses (they weren't installed in Step 3). In the terminal (with `(.venv)` showing), run:
   ```
-  pip install seaborn matplotlib scikit-learn pandas
+  pip install seaborn matplotlib
   ```
 
 ## Step 5: Run the Updated Code
@@ -111,8 +107,8 @@ Remove title. Change marker type by species. Change to the whitegrid style.
 ```
 
 - Press Enter
-- Claude shows the updated code changes
-- Click **Accept**
+- Claude updates the code
+- If asked, accept the change
 - Run the updated code again: `python iris_analysis.py` in the terminal
 - The plot now displays with different marker shapes per species, no title, and whitegrid style
 - Close the plot window to continue
@@ -127,7 +123,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 
 - Press Enter
 - Claude adds PCA code to your script
-- Click **Accept**
+- If asked, accept the change
 - Run the code: `python iris_analysis.py` in the terminal
 - A PCA plot appears showing samples projected onto PC1 and PC2, colored by species
 - Close the plot window when done
@@ -141,8 +137,8 @@ Review the entire script for correctness. Add comments when necessary.
 ```
 
 - Press Enter
-- Claude reviews the code and suggests comments explaining each section
-- Click **Accept**
+- Claude reviews the code and adds comments explaining each section
+- If asked, accept the change
 - Your script now has clear comments explaining the data loading, visualization, and PCA analysis
 
 ## Next Steps
@@ -159,7 +155,7 @@ Review the entire script for correctness. Add comments when necessary.
 - **"Cannot read Python file" error** - Make sure you saved the file with `.py` extension. Claude needs saved files to read them.
 - **Authentication failed** - Verify your Claude Pro/Max subscription is active or your API key is valid. See [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) for authentication troubleshooting.
 - **Package not found errors** or **`command not found: python`** - Make sure the terminal shows `(.venv)` (if not, close it and open a new one with **View > Terminal**), then install the required packages: `pip install seaborn matplotlib scikit-learn pandas`. Wait for installation to complete before running code.
-- **Code changes not applying** - Make sure to click **Accept** on the diff. If it's not working, try copying Claude's suggested code manually.
+- **Code changes not applying** - If Claude asked for permission, make sure you accepted the change. If it's not working, try copying Claude's suggested code manually.
 - **Plot not showing** - Make sure you have a display. On some systems you may need to add `plt.show()` at the end or use `%matplotlib inline` in Jupyter.
 
 ## Workflow Summary
