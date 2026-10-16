@@ -23,7 +23,7 @@ lang: "zh"
 ## 步骤 1:安装 Docker Desktop
 
 - 访问 [Docker Desktop 下载页面](https://www.docker.com/products/docker-desktop/)
-- 点击 **Download for Windows**(或根据你的系统选择 Mac/Linux)
+- 点击 **Download Docker Desktop** 并选择你的系统(Windows;M1/M2/M3/M4 Mac 选择 Mac - Apple Silicon;较旧的 Mac 选择 Mac - Intel Chip)
 - 运行安装程序并按照安装向导操作
 - 出现提示时,启用 WSL 2(Windows 用户)或接受默认设置
 - 安装完成后,启动 Docker Desktop
@@ -74,8 +74,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Expose Streamlit port
 EXPOSE 8501
@@ -123,7 +124,7 @@ from sklearn.datasets import load_iris
 # Load the iris dataset
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df['species'] = iris.target
+df['species'] = iris.target_names[iris.target]
 
 # Display first few rows
 print(df.head())
@@ -181,11 +182,11 @@ st.pyplot(fig)
 
 ## 步骤 8:在容器中重新打开
 
-- 点击 VS Code 左下角的绿色图标
+- 点击 VS Code 左下角的 **><** 图标
 - 从菜单中选择 **Reopen in Container**
 - VS Code 将构建容器(第一次需要 5-10 分钟)
 - 会看到进度通知显示构建步骤
-- 完成后,绿色图标将显示 **Dev Container: Python in Docker**
+- 完成后,左下角将显示 **Dev Container: Python in Docker**
 
 ## 步骤 9:了解容器环境
 
@@ -229,7 +230,7 @@ cd python-docker-demo
 
 - 在 VS Code 的 Explorer(资源管理器)中,导航到 `python/iris_analysis.py`
 - 点击打开文件
-- 选择第一行:`import pandas as pd`
+- 点击第 2 行 `import pandas as pd`(第 1 行只是注释)
 - 按 `Shift+Enter` 在交互式 Python 终端中运行
 - 底部会打开 Python 终端
 - 继续使用 `Shift+Enter` 逐行或逐块运行
@@ -286,8 +287,8 @@ st.title("My First Python Docker App")
 - `FROM python:3.12-slim` - 官方 Python 3.12 基础镜像(基于 Debian 的轻量级版本)
 - `RUN apt-get install` - 用于构建 Python 包的 Linux 系统库
 - `RUN pip install --no-cache-dir ...` - 永久安装 Python 包
-- `RUN curl... && apt-get install -y nodejs` - 安装 Node.js,运行 Claude Code 所需
-- `RUN npm install -g @anthropic-ai/claude-code` - 全局安装 Claude Code 以获得 AI 辅助
+- `RUN curl... && apt-get install -y nodejs` - 安装 Node.js 和 npm,下一行会用它们来安装 Claude Code
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - 全局安装 Claude Code 以获得 AI 辅助(第一部分让 Claude Code 能够完成自身的设置,否则较新版本的 npm 会阻止这一步)
 - `EXPOSE 8501` - 为 Streamlit 应用打开端口 8501
 
 **可使用的其他 Python 镜像:**
@@ -295,9 +296,9 @@ st.title("My First Python Docker App")
 - `python:3.12` - 完整的 Python 镜像,包含更多工具(体积更大)
 - `python:3.12-slim` - 带有 Python 和 pip 的轻量级镜像(我们正在使用的)
 - `python:3.12-alpine` - 基于 Alpine Linux 的最小镜像(体积最小)
-- `jupyter/datascience-notebook` - 预配置的 Jupyter,包含数据科学库
+- `quay.io/jupyter/datascience-notebook` - 预配置的 Jupyter,包含数据科学库
 
-更改基础镜像后,重新构建容器以应用更改。
+更改基础镜像后,重新构建容器以应用更改。注意:只有基于 Debian 的镜像(如 `python:3.12` 和 `python:3.12-slim`)可以直接使用本 Dockerfile;Alpine 镜像和 Jupyter 镜像需要不同的 Dockerfile。
 
 ## 步骤 14:在 Docker 镜像中安装 Python 包(可选)
 
@@ -314,14 +315,13 @@ RUN pip install --no-cache-dir \
 ```
 
 - 点击 **File > Save**
-- 点击左下角的绿色图标
+- 点击左下角的 **><** 图标
 - 从菜单中选择 **Rebuild Container**
 - VS Code 将使用新包重新构建容器(需要 2-5 分钟)
-- 要验证,打开 Python 终端并输入:
+- 要验证,打开终端(**Terminal > New Terminal**)并运行:
 
-```python
-import plotly
-print(plotly.__version__)
+```bash
+python -c "import plotly; print(plotly.__version__)"
 ```
 
 如果显示版本号且没有错误,则包已永久安装。
@@ -337,7 +337,7 @@ print(plotly.__version__)
 
 - **Docker Desktop 未运行** - 打开 Docker Desktop 并等待绿色状态指示器出现,然后再重新打开容器
 - **容器构建失败** - 检查互联网连接;第一次构建会下载镜像和包。点击 **Rebuild Container** 重试
-- **端口 8501 已被占用** - 停止使用该端口的其他应用,或在 Dockerfile 和 `devcontainer.json` 中更改端口
+- **端口 8501 已被占用** - 停止使用该端口的其他应用,或选择另一个端口(例如 8502):在 Dockerfile 和 `devcontainer.json` 中修改端口,重新构建容器,然后用 `streamlit run app.py --server.port 8502` 启动应用
 
 ## 工作流程概述
 
@@ -355,10 +355,10 @@ print(plotly.__version__)
 
 1. **启动 Docker Desktop** - 打开应用并等待绿色状态指示器(Docker 必须运行)
 2. **打开 VS Code** - 启动 VS Code 并打开项目文件夹
-3. **在容器中重新打开** - 如果尚未在容器中,点击绿色图标(左下角)并选择 **Reopen in Container**
+3. **在容器中重新打开** - 如果尚未在容器中,点击左下角的 **><** 图标并选择 **Reopen in Container**
 4. **编写和运行代码** - 编辑 `.py` 文件,使用 `Shift+Enter` 逐行运行,或使用 `streamlit run app.py` 运行应用
 5. **保存工作** - 代码文件(`.py`、`.ipynb`)保存到计算机,并在会话之间持久存在
-6. **提交并推送** - 使用 GitHub Desktop 提交更改并推送到存储库
+6. **提交并推送** - 如果你的项目是 GitHub 存储库(参见[将 GitHub Desktop 与 Claude Code 结合使用](./GitHub_Desktop_Claude_Code_Workflow)),使用 GitHub Desktop 提交更改并推送
 
 ---
 

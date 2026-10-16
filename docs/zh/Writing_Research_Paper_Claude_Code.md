@@ -17,7 +17,7 @@ lang: "zh"
 
 ## 准备工作
 
-- 完成 [Windows 上 VS Code 中的 Claude Code](./Claude_Code_in_VS_Code_Win) 或 [Mac 上 VS Code 中的 Claude Code](./Claude_Code_in_VS_Code_Mac)
+- 完成 [Windows 上 VS Code 中的 Claude Code](./Claude_Code_in_VS_Code_Win.md) 或 [Mac 上 VS Code 中的 Claude Code](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 分钟
 
 ## 步骤 1:创建项目文件夹
@@ -48,6 +48,7 @@ Windows 系统:
 - 点击菜单栏中的 **File**(文件),然后点击 **Open Folder**(打开文件夹)
 - 导航到**文档**并选择 `test_claude` 文件夹
 - 点击**选择文件夹**。VS Code 将重新加载你的 `test_claude` 文件夹
+- 如果提示"Do you trust the authors?"(你信任作者吗?),请点击 **Yes, I trust the authors**
 
 Mac 系统:
 - 在 VS Code 中,点击菜单栏中的 **File**(文件),然后点击 **Open Folder**(打开文件夹)
@@ -71,7 +72,7 @@ Mac 系统:
 
 ```
 我正在撰写一篇约 1,000 字的关于职场 AI 采用的研究论文。
-搜索最近的数据(2023-2025)关于:
+搜索最近的数据(最近两年)关于:
 - AI 工具带来的生产力提升
 - 工作岗位替代的担忧和统计数据
 - 来自公司的真实案例研究
@@ -131,7 +132,7 @@ Claude 找到针对性信息。
 保存为 outlines.md
 ```
 
-查看大纲并根据需要让 Claude 进行调整(如"让第 2 部分更多地关注案例研究"或"添加关于局限性的部分")。
+查看 `outlines.md` 中的大纲并根据需要让 Claude 进行调整(如"让第 2 部分更多地关注案例研究"或"添加关于局限性的部分")。
 
 ## 步骤 10:起草论文
 
@@ -242,7 +243,7 @@ Claude 将添加摘要。查看并编辑以确保准确捕捉论文的精髓。
 整个工作流程。保存它,以便我可以将其用于未来关于各种主题的研究论文。
 ```
 
-Claude 将在你的 `.claude/commands/` 文件夹中创建自定义斜杠命令。它是一个包含提示的 Markdown 文件。你可以通过简单地输入 `/research-paper [你的主题]` 来开始你的下一篇研究论文!
+Claude 将创建自定义斜杠命令,通常位于你的 `.claude/commands/` 文件夹中(或 `.claude/skills/research-paper/`)。它是一个包含提示的 Markdown 文件。首次使用前,输入 `/reload-skills`(或退出 Claude Code 后重新启动)以加载新命令。然后你就可以通过简单地输入 `/research-paper [你的主题]` 来开始你的下一篇研究论文!
 
 ## 步骤 18:获取反馈
 
@@ -297,7 +298,7 @@ Claude 会点评你的论文,而不会因为论文是它自己写的而受到影
 
 ## 故障排除
 
-- **Claude 搜索结果似乎过时:** 指定"搜索 2024-2025 年关于[主题]的数据"
+- **Claude 搜索结果似乎过时:** 指定时间范围,例如"搜索最近两年关于[主题]的数据"
 - **草稿太长/太短:** 告诉 Claude:"使其大约为 1,000 字"
 - **找不到文件:** 在终端中,输入 `ls` 列出当前文件夹中的所有文件
 

@@ -47,7 +47,7 @@ cd data_projects
 - 在浏览器访问[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)
 - 点击右上方的绿色**Code**按钮
 - 点击**Download ZIP**
-- 将ZIP文件解压到你的“下载”（Downloads）文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。
+- 将ZIP文件解压到你的“下载”（Downloads）文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。在Windows上，**Extract All**（全部解压缩）可能会生成“文件夹套文件夹”的结构（data_projects-main → data_projects-main）。打开它：如果里面只看到另一个**data_projects-main**文件夹，请把这个内层文件夹移到“下载”文件夹中，并将其重命名为**data_projects**。
 - 在Terminal中导航到解压后的文件夹：
   ```
   cd ~/Downloads/data_projects
@@ -136,11 +136,11 @@ Claude会检查Git历史（如果可用）并告诉你最近的提交。
 
 ## 步骤6：批准更改并使用快捷键
 
-当Claude想要编辑文件或运行命令时，会显示一个小菜单，其中有**Yes**和**No**等选项。用方向键选中你的选择，然后按**Enter**。
+新会话通常以**Auto**模式启动，在此模式下Claude会直接处理常规的编辑和命令，无需询问。如果Claude请求权限，会显示一个小菜单，其中有**Yes**和**No**等选项。用方向键选中你的选择，然后按**Enter**。如果你想亲自批准每一项更改，请按**Shift+Tab**，直到提示框下方的模式显示为**Manual**。
 
 另外，一些键盘快捷键能让使用Claude Code更快：
 
-- **Shift+Tab** - 在不同模式之间循环切换（Manual、Accept Edits、Plan）- 处理复杂任务时，Plan模式可以让你在Claude做任何修改之前先审查计划
+- **Shift+Tab** - 在不同模式之间循环切换（Auto、Manual、Accept Edits、Plan）；当前模式显示在提示框正下方。处理复杂任务时，Plan模式可以让你在Claude做任何修改之前先审查计划
 - **Ctrl+C** - 取消当前操作或Claude的响应
 - **Esc** - 中途停止Claude的响应，或关闭菜单
 - **`\`然后按Enter**（或**Ctrl+J**）- 在消息中添加新行而不发送
@@ -174,9 +174,9 @@ Claude将读取该笔记本并解释它的作用、工作原理以及代码实�
 此外，你可以选择几行代码，Claude会显示**3 lines selected**（已选择3行）。你可以要求Claude快速修改这些行或提出问题。因此，强烈建议在VS Code中使用Claude Code。
 
 
-## 步骤9：使用Linux命令执行操作
+## 步骤9：使用终端命令执行操作
 
-Claude可以运行Linux命令来执行各种操作。
+Claude可以运行终端命令（Mac/Linux上为Bash，Windows上为Git Bash或PowerShell）来执行各种操作。
 
 - 安装软件
   ```
@@ -204,7 +204,7 @@ Claude可以运行Linux命令来执行各种操作。
 
 Claude会安装软件、排查错误、管理环境——都是自动完成。
 
-你基本拥有了一个Linux bash命令专家。只要管理好权限并批准操作，就能非常高效。
+你基本拥有了一个终端命令专家。只要管理好权限并批准操作，就能非常高效。
 
 ## 下一步
 
@@ -219,7 +219,7 @@ Claude会安装软件、排查错误、管理环境——都是自动完成。
 
 - **"Command not found"（命令未找到）错误** - Claude Code未安装或不在PATH中。重新按照[Windows](Install_CLAUDE_Code_Win.md)或[Mac](Install_Claude_Code_MacOS.md)安装教程操作，或直接重新运行安装程序：`irm https://claude.ai/install.ps1 | iex`（Windows PowerShell）或`curl -fsSL https://claude.ai/install.sh | bash`（Mac/WSL）
 - **Claude给出过时信息** - 使用`/clear`清除上下文并重新询问。长对话会填满Claude的内存
-- **文件更改不起作用** - 确保在项目文件夹中有写权限。Claude会在修改文件前请求批准——在弹出的菜单中选择**Yes**
+- **文件更改不起作用** - 确保在项目文件夹中有写权限。如果Claude请求批准，在弹出的菜单中选择**Yes**
 - **上下文快速填满** - 使用`/context`检查使用情况。接近满时，使用`/clear`开始全新对话
 
 ## 工作流程概述
@@ -229,7 +229,7 @@ Claude会安装软件、排查错误、管理环境——都是自动完成。
 - 在项目文件夹中使用`claude`启动
 - 用自然语言提问
 - Claude根据需要读取文件并响应
-- 请求代码更改——Claude在修改文件前会请求权限
+- 请求代码更改——如果Claude请求权限，选择**Yes**
 - 更换话题或上下文满时使用`/clear`
 - 完成后使用`/exit`
 

@@ -26,12 +26,12 @@ lang: "zh"
 
 - **Windows**:
   - 从 [CRAN Windows](https://cran.r-project.org/bin/windows/base/) 下载最新 R 并运行安装程序
-  - 安装时,**记住安装路径**(如:`C:\Program Files\R\R-4.5.3`)
+  - 安装时,**记住安装路径**(如:`C:\Program Files\R\R-4.6.1`)
   - 如有旧版本,先通过"设置 > 应用"卸载
 
 - **macOS**:
   - 从 [CRAN macOS](https://cran.r-project.org/bin/macosx/) 下载并运行 .pkg 安装程序
-  - 记住使用的是 Intel(`/Library/Frameworks/R.framework/Resources/bin/R`)还是通过 Homebrew 安装 R 的 Apple Silicon(`/opt/homebrew/bin/R`)
+  - 无论是 Intel 还是 Apple Silicon Mac,CRAN 安装程序都会把 R 安装在 `/Library/Frameworks/R.framework/Resources/bin/R`(如果你改用 Homebrew 安装 R,在 Apple Silicon 上则位于 `/opt/homebrew/bin/R`)
   - 如是更新,新版本会替换旧版本
 
 - **Linux**:
@@ -55,12 +55,12 @@ lang: "zh"
 
 1. 打开**文件资源管理器**
 2. 导航至 `C:\Program Files\R\`
-3. 会看到类似 `R-4.5.3` 的文件夹(你的版本号可能不同)
+3. 会看到类似 `R-4.6.1` 的文件夹(你的版本号可能不同)
 4. 打开该文件夹 → 打开 `bin` 文件夹
 5. 会看到 `R.exe`
-6. 完整路径为:`C:\Program Files\R\R-4.5.3\bin\R.exe`
+6. 完整路径为:`C:\Program Files\R\R-4.6.1\bin\R.exe`
 
-**记住版本号**(如 `R-4.5.3`)——步骤 4 需要用到。
+**记住版本号**(如 `R-4.6.1`)——步骤 4 需要用到。
 
 ### macOS 用户
 
@@ -88,17 +88,15 @@ which R
 
 ## 步骤 4:配置 VS Code 以找到 R
 
-- VS Code 中,点击左下角的**齿轮图标**
-- 从菜单选择 **Settings**(设置)
-- 在顶部搜索栏,输入 `r.rpath.windows`(Windows)、`r.rpath.mac`(macOS)或 `r.rpath.linux`(Linux)
-- 会看到该设置出现。点击设置下方的 **Edit in settings.json**(在 settings.json 中编辑)
+- VS Code 中,点击 **View > Command Palette**
+- 输入 `Preferences: Open User Settings (JSON)` 并选择它
 - settings.json 文件会打开
-- 在花括号 `{}` 内为你的平台添加相应配置
+- 在花括号 `{}` 内添加适合你平台的那一行。如果里面已有其他行,确保你添加的这行上方那一行以逗号结尾
 
-**对于 Windows**,添加此行(将 `R-4.5.3` 替换为你在步骤 3 中的版本):
+**对于 Windows**,添加此行(将 `R-4.6.1` 替换为你在步骤 3 中的版本):
 
 ```json
-"r.rpath.windows": "C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe",
+"r.executablePath": "C:\\Program Files\\R\\R-4.6.1\\bin\\R.exe",
 ```
 
 **为什么用两个反斜杠(`\\`)?** 在 JSON 文件中,反斜杠 `\` 是特殊字符(称为转义字符)。要在实际文件路径中表示单个反斜杠,必须输入两个反斜杠 `\\`。因此,`C:\Program Files` 在 settings.json 中变成 `C:\\Program Files`。
@@ -106,19 +104,19 @@ which R
 **对于 macOS**,添加以下行之一:
 
 ```json
-"r.rpath.mac": "/Library/Frameworks/R.framework/Resources/bin/R",
+"r.executablePath": "/Library/Frameworks/R.framework/Resources/bin/R",
 ```
 
 或者,如果在 Apple Silicon 上通过 Homebrew 安装 R:
 
 ```json
-"r.rpath.mac": "/opt/homebrew/bin/R",
+"r.executablePath": "/opt/homebrew/bin/R",
 ```
 
 **对于 Linux**,添加:
 
 ```json
-"r.rpath.linux": "/usr/bin/R",
+"r.executablePath": "/usr/bin/R",
 ```
 
 - 点击 **File > Save** 保存文件
@@ -130,6 +128,7 @@ which R
 - 输入 `R: Create R Terminal` 并选择
 - R 控制台会出现在底部终端面板
   - 应该会看到 R 启动并显示版本信息
+  - 如果 VS Code 询问是否安装 **sess** 包,点击 **Yes**(或 **Install bundled sess**)并等待安装完成。它让 VS Code 能够显示你的图形和变量
   - 如出现错误,仔细检查步骤 4 中的 settings.json 配置并重启 VS Code
 - 逐个输入以下命令安装包:
 
@@ -140,15 +139,15 @@ install.packages("shiny")
 
 - 等待安装完成(可能需要几分钟)
 - 输入 `q()` 并按 Enter 退出 R
-- 询问是否保存工作空间时,输入 `n`
+- R 会立即关闭(如果询问是否保存工作空间,输入 `n`)
 
-仅在常规终端输入 `R` 不起作用,除非 R 在系统 PATH 中。R 扩展使用 `r.rpath` 设置找到 R。
+仅在常规终端输入 `R` 不起作用,除非 R 在系统 PATH 中。R 扩展使用 `r.executablePath` 设置找到 R。
 
 ## 步骤 6:创建你的 R 项目
 
 - 在计算机上创建新文件夹(如 `my-r-project`)
 - VS Code 中,点击 **File > Open Folder** 选择你的新文件夹
-- 点击顶部菜单的 **File > New File**
+- 点击顶部菜单的 **File > New File...**,然后从窗口顶部的列表中选择 **R Document**
 - 点击 **File > Save** 将文件保存为 `analysis.R`
 
 ## 步骤 7:编写你的第一个 R 脚本
@@ -174,12 +173,12 @@ hist(iris$Sepal.Length)
 
 - 打开 `analysis.R`,选择一行代码,按 `Ctrl+Enter`(Windows/Linux)或 `Cmd+Enter`(Mac)运行
 - 如果没有打开终端,第一次 `Ctrl+Enter` / `Cmd+Enter` 会打开 R 终端。第二次会运行代码。
-- 输出会出现在终端,图形会在单独窗口打开
+- 输出会出现在终端。直方图会在 VS Code 内脚本旁边的绘图标签页中打开
 - 也可以选择所有行,用相同方式运行
 
 ## 步骤 9:创建一个简单的 Shiny 应用
 
-- 在项目文件夹创建新文件:**File > New File**
+- 在项目文件夹创建新文件:点击 **File > New File...**,然后选择 **R Document**
 - 保存为 `app.R`
 - 输入以下代码:
 
@@ -228,16 +227,16 @@ shinyApp(ui = ui, server = server)
 
 - 在 `analysis.R` 新行开始输入 `mea`
 - 会出现带建议的下拉菜单——按 Enter 选择 `mean()`
-- 鼠标悬停在现有代码中的单词 `mean` 上
+- 鼠标悬停在你刚输入的单词 `mean` 上
 - 会出现弹出窗口,显示函数文档和使用示例
-- 尝试悬停在 `lm`、`summary` 或 `plot` 上查看文档
+- 尝试悬停在脚本中的 `summary` 或 `hist` 上查看文档
 - 输入 `iris$`,观察 VS Code 建议列名(`Sepal.Length`、`Species` 等)
 
 ## 步骤 11:尝试更多功能
 
 - **Markdown 集成**:创建 R Markdown 文件(`.Rmd`)以混合代码、输出和文本
 - **代码格式化**:在 R 脚本中右键选择 **Format Document**(格式化文档)以自动格式化代码
-- **调试**:点击行号左侧设置断点,然后在调试模式下运行代码
+- **调试**:安装 [R Debugger 扩展](https://marketplace.visualstudio.com/items?itemName=RDebugger.r-debugger),并按照其设置页面的说明添加断点、逐步执行代码
 - **Git 集成**:使用 VS Code 内置 Git 功能对 R 项目进行版本控制
 
 ## 下一步
@@ -251,17 +250,17 @@ shinyApp(ui = ui, server = server)
 ## 故障排除
 
 - **VS Code 终端中"无法识别 R"**:VS Code 找不到 R。检查 settings.json(步骤 4)——验证 R 路径是否正确并指向 `R.exe`(Windows)或 R 二进制文件(Mac/Linux)。示例路径:
-  - Windows:`C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe`(调整版本号)
-  - macOS Intel:`/Library/Frameworks/R.framework/Resources/bin/R`
+  - Windows:`C:\\Program Files\\R\\R-4.6.1\\bin\\R.exe`(调整版本号)
+  - macOS(CRAN 安装程序,Intel 或 Apple Silicon):`/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew:`/opt/homebrew/bin/R`
   - Linux:`/usr/bin/R`
   修复后,完全重启 VS Code。
 
-- **settings 中的 R 版本不匹配**:如果更新了 R 但 VS Code 仍在使用旧版本,更新 settings.json 中 `r.rpath` 配置的版本号以匹配新 R 安装(参见步骤 3 找到当前安装路径)。
+- **settings 中的 R 版本不匹配**:如果更新了 R 但 VS Code 仍在使用旧版本,更新 settings.json 中 `r.executablePath` 这一行的版本号以匹配新 R 安装(参见步骤 3 找到当前安装路径)。
 
 - **代码补全不起作用**:确保 languageserver 已成功安装(步骤 5)。安装后重启 VS Code。打开 R 文件后等 10-20 秒让语言服务器初始化。检查输出面板(View > Output > R Language Server)中的错误。
 
-- **图形未显示**:图形会使用 R 默认图形设备在单独窗口打开。确保有可用的窗口管理器。某些系统上,可能需要安装 X11(macOS)或确保启用了图形支持。
+- **图形未显示**:图形会在 VS Code 内的标签页中打开。如果什么都没出现,确保你是通过 **R: Create R Terminal** 启动 R 的(而不是在普通终端中输入 `R`),然后重新运行 `hist()` 那一行。
 
 - **Shiny 应用无法运行**:确保已安装 Shiny 扩展(步骤 2)、已安装 shiny 包(步骤 5)且文件名为 `app.R`。检查终端错误消息。仅当 VS Code 将文件识别为 Shiny 应用时,运行按钮才会出现。
 

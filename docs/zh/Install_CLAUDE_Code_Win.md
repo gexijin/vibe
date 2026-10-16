@@ -24,7 +24,8 @@ Claude Code 是一款运行在终端里的 AI 助手，能帮你编写、调试�
 
 Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命令时使用的 shell **Git Bash**。如果跳过，Claude Code 会改用 PowerShell，因此你也可以直接进入步骤 2，以后再装 Git。
 
-- 访问 [git-scm.com/download/win](https://git-scm.com/download/win)，页面通常会自动开始下载，完成后打开安装程序
+- 访问 [git-scm.com/download/win](https://git-scm.com/download/win)
+- 点击页面顶部的 **Click here to download**，下载完成后打开安装程序
 - 一路点击 **Next**，保持默认选项
 - 点击 **Install**，最后点击 **Finish**
 
@@ -37,14 +38,21 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- 等待安装完成
+- 等待安装完成（下载期间窗口可能会有一分钟左右没有任何显示——这是正常的）
 - 关闭并重新打开 PowerShell，输入以下命令验证：
    ```
    claude --version
    ```
 - 此时应该会显示 Claude Code 的版本号
+- 如果看到的是 `'claude' is not recognized`，请在 PowerShell 中运行下面两行，然后关闭并重新打开 PowerShell，再试一次 `claude --version`：
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
-## 步骤 3：在 VS Code 中打开 Claude Code
+## 步骤 3：（可选）在 VS Code 中打开 Claude Code
+
+如果你还没有 VS Code，可以跳过这一步——以后可以通过 [VS Code 入门指南](VS_Code_Getting_Started.md) 安装，再回来继续。
 
 装好 Claude Code 之后，除了在终端里用，你还可以在 VS Code 里使用它。这通常是最方便的方式，因为不用离开编辑器，就能查看文件、修改代码、向它求助。
 
@@ -57,12 +65,12 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
 3. 如果还没看到 Claude Code 面板，点击 **Extensions** 图标
 4. 在扩展市场里搜索 Claude Code
 5. 如果还没安装，点击 **Install**
-6. 安装完成后，在左侧边栏找到 Claude Code 图标
+6. 安装完成后，在左侧边栏找到 Claude Code 的 Spark 图标，或点击窗口右下角的 **✻ Claude Code**
 
 如果看不到 Claude Code 图标，可以试试这样做：
 
 1. 按 **Ctrl + Shift + P**
-2. 输入：Claude Code: Open Sidebar
+2. 输入：Claude Code: Open in Side Bar
 3. 点击列表中对应的选项
 
 如果还是没有出现，关掉 VS Code 再重新打开。有时扩展需要重启一次，侧边栏才会显示出来。
@@ -86,7 +94,7 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
 - 输入：Explain this project to me
 - 按 **Enter**
 
-如果 Claude 回复了，就说明可以开始使用了。
+如果 Claude 回复了，就说明可以开始使用了。第一次使用时，侧边栏可能会先要求你登录：按照它的提示操作，或者先完成下面步骤 4 连接账户，然后再试。
 
 > 提示：如果侧边栏还是不见踪影，请确认 Claude Code 扩展已经安装，并且已经重启过 VS Code。
 
@@ -98,12 +106,11 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
    ```
    claude
    ```
-- Claude 会尝试打开浏览器。如果没能自动打开，按住 **Ctrl** 点击那一长串网址，或把网址复制到浏览器里打开
+- Claude 会尝试打开浏览器。如果没能自动打开，按 **c** 复制登录链接，然后粘贴到浏览器里打开
 - 登录 Claude.ai 账户（用 Chrome 的话可能会自动登录）
-- 点击 **Authorize**
-- 看到一长串代码后，点击 **Copy Code**
-- 回到终端窗口，**右键单击**后选择**粘贴**（或按 **Ctrl+Shift+V**）
-- 看到成功提示后，按照提示完成后续设置
+- 点击 **Authorize**。浏览器应该会显示你已登录，PowerShell 中也会显示成功提示
+- 只有当浏览器显示一长串代码时（在 WSL/Ubuntu 中会出现这种情况），才需要点击 **Copy Code**，回到终端，在 **Paste code here if prompted** 处粘贴（**右键单击**或按 **Ctrl+V**），然后按 **Enter**
+- 按照提示完成后续设置
 
 下面几种基于 API 的方式都在 **PowerShell** 里完成，用到的 `setx` 命令会把设置永久保存。运行 `setx` 之后，记得**先关闭再重新打开 PowerShell** 让设置生效，然后再启动 `claude`。
 
@@ -120,8 +127,9 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
    ```
    claude
    ```
+- 第一次启动时，Claude Code 会询问你是否要使用它找到的 API 密钥。选择 **Yes**。（如果不小心选了 **No**，输入 `/config` 并打开 **Use custom API key**。）
 
-### 选项 C. 使用 OpenRouter API（可免费开始！）
+### 选项 C. 使用 OpenRouter API（按用量付费）
 
 OpenRouter 是一个统一的 API 网关，用一个密钥就能访问 500 多种大语言模型。它按用量计费，还能在不同价位的模型之间挑选，是一种比较省钱的 Claude Code 使用方式。
 
@@ -131,10 +139,10 @@ OpenRouter 是一个统一的 API 网关，用一个密钥就能访问 500 多�
    ```
    setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
    setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
-   setx ANTHROPIC_API_KEY ""
-   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
-   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
-   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
+   [Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', $null, 'User')
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "~anthropic/claude-sonnet-latest"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "~anthropic/claude-opus-latest"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "~anthropic/claude-haiku-latest"
    ```
 - 关闭并重新打开 PowerShell，再启动 Claude Code：
    ```
@@ -144,16 +152,18 @@ OpenRouter 是一个统一的 API 网关，用一个密钥就能访问 500 多�
 
 **注意：**
 - 把 `your-openrouter-api-key` 换成你自己的 OpenRouter API 密钥
-- `ANTHROPIC_API_KEY` 必须明确设为空值
+- `ANTHROPIC_API_KEY` 那一行会删除已保存的 Anthropic API 密钥——使用 OpenRouter 时不能设置该密钥
 - 想换用其他模型，它们必须支持**工具调用（tool use）功能**。可以这样覆盖默认模型：
    ```
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
    ```
 - 可用模型可在 [openrouter.ai/models](https://openrouter.ai/models) 查看
-- 免费套餐每天有 50 次 API 请求额度
+- 免费（`:free`）模型每天限 50 次请求，一个 Claude Code 任务就可能很快用完
+- 上面列出的都是付费模型——使用前请在 [openrouter.ai/models](https://openrouter.ai/models) 查看价格
+- 通过 OpenRouter 使用时，只有 Anthropic 模型能保证与 Claude Code 正常配合
 - 更多细节见[官方 OpenRouter 指南](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)
 
-### 选项 D. 通过 Azure Foundry 使用 Anthropic API
+### 选项 D. 通过 Microsoft Foundry（Azure）使用 Anthropic API
 
 在 PowerShell 里粘贴下面这段代码，定义相应的环境变量：
 ```
@@ -162,8 +172,8 @@ setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure resource name
 setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # Set models to your resource's deployment names
-setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
-setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-8"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
 setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
 setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
@@ -187,6 +197,7 @@ claude
    ```
    cd ~/Documents/test_claude
    ```
+   把 `test_claude` 换成你实际的项目文件夹名称。提示：输入 `cd `（带一个空格），从文件资源管理器把文件夹拖到 PowerShell 窗口中即可粘贴它的完整路径，然后按 **Enter**。
 - 然后启动 Claude：
    ```
    claude
@@ -198,7 +209,7 @@ claude
 
 ## 步骤 7：（可选）安装 WSL2 以获得完整的 Linux 体验
 
-对大多数人来说，上面的原生设置已经够用了。不过 Claude Code 在 Linux 下会跑得更顺：WSL2 能在 Windows 里运行真正的 Linux 系统，带来 **Bash 工具沙盒**（一项安全特性），也能和各种 Linux 工具链配合得更好。它配置更花时间，还要重启电脑，所以只有在你确实想要完整 Linux 体验时再做这一步。
+对大多数人来说，上面的原生设置已经够用了。不过有些功能只能在 Linux 下使用。WSL2 能在 Windows 里运行真正的 Linux 系统，带来 **Bash 工具沙盒**（一项安全特性），也能和各种 Linux 工具链配合得更好。它配置更花时间，还要重启电脑，所以只有在你确实想要完整 Linux 体验时再做这一步。
 
 ### a) 检查虚拟化并安装 WSL
 
@@ -206,7 +217,7 @@ claude
 
 - **右键单击**任务栏（屏幕最下方的那条栏），在菜单里点击**任务管理器**
 - 如果打开的是精简窗口，点击底部的**详细信息**
-- 依次点击顶部的**性能**选项卡和左侧的 **CPU**
+- 点击**性能**（在 Windows 10 上是顶部的选项卡，在 Windows 11 上是左侧菜单中的图标），然后点击左侧的 **CPU**
 - 找到**虚拟化：**那一行，看它是否显示**已启用**
 
 **如果显示"已禁用"：**你需要进入电脑的 BIOS 设置开启虚拟化：
@@ -244,11 +255,15 @@ claude
    ```
    curl -fsSL https://claude.ai/install.sh | bash
    ```
-- 输入以下命令验证：
+- 关闭 Ubuntu 窗口，从开始菜单重新打开 **Ubuntu**，然后输入以下命令验证：
    ```
    claude --version
    ```
-- 输入 `claude`，按浏览器登录流程连接账户（和步骤 4 的选项 A 一样）。如果改用 API 密钥，则用 `export ANTHROPIC_API_KEY="your-api-key-here"` 来设置（WSL 里用的是 Linux 命令，而不是 `setx`）
+- 如果仍然看到 `command not found`，运行下面这一行，然后再试一次 `claude --version`：
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+   ```
+- 输入 `claude`，按浏览器登录流程连接账户（和步骤 4 的选项 A 一样）。如果改用 API 密钥，则用 `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` 来保存（WSL 里用的是 Linux 命令，而不是 `setx`）
 - 要在 WSL 中打开 Windows 上的项目文件夹（把 `Username` 换成你实际的 Windows 用户名）：
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
@@ -277,7 +292,11 @@ claude doctor
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- 确认 PATH 环境变量里包含 Claude 的安装目录
+- 如果看到 `'claude' is not recognized`，请在 PowerShell 中运行下面两行，然后关闭并重新打开 PowerShell：
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
 ### "Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
 这个错误说明虚拟化还没开启：

@@ -22,9 +22,9 @@ lang: "zh"
 
 ## 步骤 1：在 Mac 上打开 RStudio
 
-- 点击 Dock 中的 **启动台**（Launchpad，网格点图标）
-- 在搜索框中输入 `RStudio`
-- 点击 **RStudio** 打开
+- 按 **Command (⌘) + Space** 打开 Spotlight 搜索
+- 输入 `RStudio`
+- 按 **Return** 打开
 - RStudio 窗口打开，显示多个窗格
 
 ## 步骤 2：创建新的 R 项目
@@ -89,7 +89,7 @@ summary(iris)
   claude
   ```
 
-按照[安装教程](Install_Claude_Code_MacOS.md)使用你的 Claude 订阅登录。登录后，你将看到欢迎消息和 Claude Code 提示符。
+按照[安装教程](Install_Claude_Code_MacOS.md)使用你的 Claude 订阅登录。登录后，你将看到欢迎消息和 Claude Code 提示符。如果 Claude Code 询问你是否信任此文件夹中的文件，选择 **Yes** 并按 Enter。
 
 ## 步骤 8：请求 Claude 创建散点图
 
@@ -99,7 +99,7 @@ summary(iris)
 在 iris.R 中添加代码，创建萼片长度与宽度的散点图，按物种着色。使用 ggplot2。
 ```
 - Claude Code 读取 `iris.R` 文件并添加可视化代码
-- 询问时，通过选择适当选项给 Claude 权限编辑 iris.R 文件
+- 如果 Claude 请求编辑 `iris.R` 的权限，选择 **Yes**（使用方向键，然后按 Enter）
 - 等待 Claude 完成（你会看到确认消息）
 
 
@@ -107,7 +107,7 @@ summary(iris)
 
 - 切换回 RStudio（点击 RStudio 窗口或按 **Command (⌘) + Tab**）
 - 可能会看到文件已更改的提示，点击 **Yes** 重新加载
-- 如无提示，点击 **File > Reopen with Encoding > UTF-8**
+- 如果新代码没有显示，点击 **File > Reopen with Encoding...**，选择 **UTF-8**，然后点击 **OK**
 - 选中所有代码，点击 **Run**
 - 散点图出现在 **Plots** 窗格（右下方）
 - 如收到 ggplot2 错误，在 Console 窗格输入 `install.packages("ggplot2")` 安装
@@ -158,7 +158,7 @@ summary(iris)
   ```
   为这个分析创建一个新的 R Markdown 文件。保存为 iris_report.Rmd
   ```
-- Claude 请求你的权限来创建此文件
+- 如果 Claude 请求创建此文件的权限，选择 **Yes**
 - Claude 在项目文件夹中创建新的 `.Rmd` 文件
 
 
@@ -168,13 +168,14 @@ summary(iris)
 - 点击 **File > Open File...**
 - 选择 `iris_report.Rmd`，点击 **Open**
 - 点击脚本窗格顶部的 **Knit** 按钮（毛线球图标）
+- 如果 RStudio 提示需要 **rmarkdown** 等包，点击 **Install**（或 **Yes**）并等待安装完成，然后再次点击 **Knit**
 - RStudio 生成 HTML 报告
 - 报告在新窗口打开，显示完整分析和叙述性文本
 - HTML 文件保存在项目文件夹中
 
 ## 故障排除
 
-- **RStudio 不显示文件更改** - 点击 **File > Reopen with Encoding > UTF-8** 手动重新加载文件，或关闭并重新打开文件
+- **RStudio 不显示文件更改** - 点击 **File > Reopen with Encoding...**，选择 **UTF-8**，然后点击 **OK** 手动重新加载文件，或关闭并重新打开文件
 - **"claude: command not found"** - 确保完成 [安装指南](./Install_Claude_Code_MacOS)，尝试打开新 Terminal 窗口，或完全关闭 Terminal（**Command (⌘) + Q**）并重新打开
 - **图表未出现** - 确保已安装 ggplot2，如需要在 RStudio Console 中运行 `install.packages("ggplot2")`
 - **"No such file or directory"** - 检查步骤 6 中是否正确输入路径，尝试使用拖放：在输入 `cd ` 后（带空格），将 test_claude 文件夹从访达（Finder）拖到 Terminal
@@ -191,7 +192,7 @@ summary(iris)
 ## 下一步
 
 - 请求 Claude 向分析中添加统计检验（t 检验、方差分析）
-- 请求 Claude 获取此代码的 **Python 版本**并准备 Quarto 文档
+- 请求 Claude 编写此代码的 **Python 版本**并准备 Quarto 文档
 - 请求 Claude 为 R 脚本中的重复任务创建函数
 - 用 Claude 调试 R 代码无法运行时的错误消息
 - 探索请求 Claude 优化慢速 R 代码以获得更好性能

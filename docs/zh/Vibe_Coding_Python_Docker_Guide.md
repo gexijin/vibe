@@ -62,10 +62,10 @@ lang: "zh"
 - 点击 **Select Folder**(Windows)或 **Open**(Mac)
 - 右下角出现通知:**Folder contains a Dev Container configuration file**
 - 点击 **Reopen in Container**
-- 如果没看到通知,点击左下角的绿色图标,选择 **Reopen in Container**
+- 如果没看到通知,点击左下角的 **><** 图标,选择 **Reopen in Container**
 - VS Code 构建 Docker 容器(首次需要 3-5 分钟)
 - 观察显示构建步骤的进度通知
-- 完成后,绿色图标显示 **Dev Container: Python in Docker**
+- 完成后,左下角显示 **Dev Container: Python in Docker**
 
 ## 步骤 4:启动 Claude Code
 
@@ -79,7 +79,9 @@ claude
 
 - 浏览器窗口打开进行身份验证
 - 点击 **Continue with Google** 或 **Continue with Email**
-- 使用你的 Claude 账户登录(或创建一个)
+- 使用你的 Claude 账户登录。Claude Code 需要付费 Claude 套餐(如 Pro 或 Max)或 Anthropic Console 账户——免费套餐不包含 Claude Code
+- 如果浏览器显示的是一段代码,而不是提示你已完成,请复制该代码,回到 VS Code 终端,在 **Paste code here if prompted** 提示处粘贴,然后按 **Enter**(在容器中这种情况很常见)
+- 如果没有打开浏览器窗口,按 `c` 复制登录链接,然后粘贴到浏览器中
 - 身份验证成功后,返回 VS Code 终端
 - 你将看到 Claude 的欢迎消息
 
@@ -186,7 +188,7 @@ Claude Code 现在已准备就绪,可接收你的请求。
 - 你不需要理解每一行,但要了解结构
 - 检查是否创建了所有 PNG 文件:`petal_length_histogram.png`、`petal_scatter.png`、`species_boxplot.png`
 - 打开 GitHub Desktop
-- 你将看到列出的所有新文件(Python 脚本和 PNG 图像)
+- 你将看到列出的新 PNG 图像,以及作为已更改文件的 `iris_exploration.py`(Claude 添加了绘图代码)
 - 在左下角的 **Summary** 字段中,输入:
 
 ```
@@ -241,7 +243,7 @@ Vibe 编程在迭代时更显威力。尝试通过描述来添加功能:
 - **导入错误** - Docker 容器应该预装了 pandas、matplotlib 和 scikit-learn。如果没有,要求 Claude 使用 pip 安装它们。
 - **Claude 犯错误** - 正常!复制错误消息,粘贴给 Claude,并说"修复此错误。"Vibe 编程包括迭代和调试。
 - **无法推送到 GitHub** - 确保你已登录 GitHub Desktop 并发布了仓库(步骤 1)。检查互联网连接。
-- **容器无法启动** - 确保 Docker Desktop 正在运行(绿色状态指示器)。尝试点击 VS Code 中的绿色图标并选择 **Rebuild Container**。
+- **容器无法启动** - 确保 Docker Desktop 正在运行(绿色状态指示器)。尝试点击 VS Code 左下角的 **><** 图标并选择 **Rebuild Container**。
 
 ## 工作流程概述
 

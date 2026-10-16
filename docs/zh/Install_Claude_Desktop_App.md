@@ -18,9 +18,9 @@ Claude Desktop 是一款适用于 Windows 和 Mac 的独立聊天应用。打开
 
 ## 你需要准备的内容
 
-- 一台 Windows 10（或更新版本）电脑，或一台 Mac（macOS 11 Big Sur 或更新版本）
+- 一台 Windows 10（或更新版本）电脑，或一台 Mac（macOS 13 Ventura 或更新版本）
 - 网络连接
-- 一个免费或付费的 Claude.ai 账户（如果还没有，可以在设置过程中创建）
+- 一个免费或付费的 Claude.ai 账户（创建方法请参阅[什么是 Anthropic 和 Claude？](./What_Is_Anthropic_And_Claude.md)）
 - 5 分钟
 
 ## 步骤 1：下载安装程序
@@ -41,7 +41,7 @@ Claude Desktop 是一款适用于 Windows 和 Mac 的独立聊天应用。打开
 
 - 打开下载的文件
 - 出现提示时，将 **Claude** 图标拖到**应用程序**文件夹中
-- 从**应用程序**文件夹或启动台打开 **Claude**
+- 从**应用程序**文件夹打开 **Claude**（或按 **Command (⌘) + Space**，输入 `Claude`，然后按 **Return**）
 
 ## 步骤 3：登录
 
@@ -62,7 +62,7 @@ Claude Desktop 不只是用来聊天。根据你的套餐不同，还可以使�
 
 - **Chat（聊天）**——所有套餐都可用，包括免费套餐
 - **Claude Code**——Pro、Max、Team 和 Enterprise 套餐可以直接在 Claude Desktop 中启动 Claude Code，无需另外打开终端
-- **Claude Cowork**——付费套餐可用，让 Claude 在可以访问本地文件的情况下完成多步骤任务
+- **Claude Cowork**——付费套餐可用，让 Claude 在可以访问本地文件的情况下完成多步骤任务。Anthropic 正在把 Cowork 合并到普通聊天中，因此较新的版本可能不再显示单独的 Cowork 标签页——直接在聊天中向 Claude 提出即可
 - **Desktop Extensions（桌面扩展）**——一项高级功能，通过可安装扩展的目录将 Claude 连接到本地应用和文件；入门时不需要
 
 日常聊天用不到这些功能——等你熟悉了基本操作之后，再去探索它们也不迟。
@@ -76,7 +76,7 @@ Claude Desktop 不只是用来聊天。根据你的套餐不同，还可以使�
 ## 故障排除
 
 - **Windows 显示"Windows 已保护你的电脑"并阻止安装程序**——这是 Windows 对新下载文件的标准 SmartScreen 警告，并不是 Claude 特有的。如果你信任来源（官方的 claude.ai/download 页面），请点击**更多信息**，然后点击**仍要运行**。
-- **Mac 提示应用"无法打开，因为它来自身份不明的开发者"**——这是 macOS 的 Gatekeeper 标准安全检查。右键点击（或按住 Control 键点击）Claude 应用，选择**打开**，然后确认。
+- **Mac 无法打开应用，或询问你是否确定要打开它**——这是 macOS 的 Gatekeeper，对从互联网下载的应用进行的标准安全检查。如果看到提示，点击**打开**。如果 macOS 直接阻止了该应用，请打开**系统设置 > 隐私与安全性**，向下滚动，在关于 Claude 的消息旁点击**仍要打开**（在 macOS 15 Sequoia 及更高版本中，右键点击应用并选择**打开**的方法已不再适用于这种情况）。
 - **无法登录**——检查网络连接，并先确认你能在浏览器中登录 [claude.ai](https://claude.ai)。
 - **安装后应用无法启动**——重启电脑，然后再次尝试打开 Claude。如果仍然不行，请从 [claude.ai/download](https://claude.ai/download) 重新下载安装程序。
 

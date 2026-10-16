@@ -27,7 +27,7 @@ lang: "zh"
 - 访问 [code.visualstudio.com](https://code.visualstudio.com)
 - 点击 **Download** 按钮(会自动检测你的操作系统)
 - 运行安装程序:
-   - **Windows:** 双击 `.exe` 文件,在提示中点击 **Next**
+   - **Windows:** 双击 `.exe` 文件,在提示中点击 **Next**。在 **Select Additional Tasks** 界面中,还要勾选 **Add "Open with Code" action to Windows Explorer directory context menu**,这样以后就可以从文件资源管理器打开项目文件夹
    - **Mac:** 打开 `.dmg` 文件,将 VS Code 拖到**应用程序**(Applications)文件夹
    - **Linux:** 根据你的包管理器遵循相应说明
 - 启动 VS Code
@@ -49,8 +49,8 @@ VS Code 有五个主要区域:
 ## 步骤 3:打开文件夹并浏览
 
 - 点击 **File** → **Open Folder**
-- 导航到计算机上的任何现有文件夹(如 文档/文稿 文件夹)
-- 点击 **Open**(或 **Select Folder**)
+- 进入你的 **文档/文稿** 文件夹,新建一个用于练习的空文件夹,例如 `vscode_practice`(使用窗口中的 **新建文件夹** 按钮)
+- 选中这个新文件夹,然后点击 **Open**(或 **Select Folder**)
 - 如果提示"Do you trust the authors?",点击 **Yes, I trust the authors**
 
 Explorer 侧边栏现在显示你文件夹中的文件:
@@ -61,7 +61,7 @@ Explorer 侧边栏现在显示你文件夹中的文件:
 
 ## 步骤 4:创建 Markdown 文件
 
-- 在 Explorer 中,点击 **New File** 图标(带 + 的页面图标)
+- 在 Explorer 中,将鼠标移到顶部的文件夹名称上,然后点击出现的 **New File** 图标(带 + 的页面图标)
 - 将其命名为 `README.md`
 - 添加以下内容:
 
@@ -124,7 +124,7 @@ mkdir notes
 
 ## 步骤 8:在 VS Code 中使用 AI Agent(可选)
 
-VS Code 包含 [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview),这是一个可以解释、编写和调试代码的 AI 助手。
+VS Code 包含 [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat),这是一个可以解释、编写和调试代码的 AI 助手。
 
 - 打开 `README.md` 文件(或项目中的任何其他文件)
 - 点击标题栏中的 **Chat** → **Open Chat**(或在 Windows/Linux 上按 `Ctrl+Alt+I`,在 Mac 上按 `Ctrl+Cmd+I`)
@@ -134,7 +134,7 @@ VS Code 包含 [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/cha
 
 GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编写新代码、修复错误,或回答诸如"如何添加更多功能?"之类的问题。
 
-**提示:** 对于[内联编辑](https://code.visualstudio.com/docs/copilot/copilot-chat),在任何文件中高亮显示代码并按 `Ctrl+I`(Windows/Linux)或 `Cmd+I`(Mac),要求 Copilot 仅修改、修复或解释该部分。
+**提示:** 对于[内联编辑](https://code.visualstudio.com/docs/chat/inline-chat),在任何文件中高亮显示代码并按 `Ctrl+I`(Windows/Linux)或 `Cmd+I`(Mac),要求 Copilot 仅修改、修复或解释该部分。
 
 ## 如何重新打开项目
 
@@ -146,7 +146,7 @@ GitHub Copilot 会分析你的文件并解释其功能。你可以要求它编�
 
 - **预览未显示:** 确保已安装 Markdown Preview Enhanced 扩展,并且你打开了 `.md` 文件
 - **Terminal 显示错误目录:** 点击终端面板中的垃圾桶图标,然后点击 **Terminal** → **New Terminal**
-- **Chat 菜单不可见:** 可能需要安装 GitHub Copilot Chat——点击 **Extensions** 图标,搜索"GitHub Copilot Chat",然后安装
+- **Chat 菜单不可见:** AI 功能可能被关闭了。打开设置(Windows/Linux 按 `Ctrl+,`,Mac 按 `Cmd+,`),搜索 `disable AI features` 并取消勾选。然后将鼠标悬停在底部状态栏的 Copilot 图标上,选择 **Use AI Features**
 - **Extensions 无法工作:** 点击 **View** → **Command Palette**,输入"reload window",并选择 **Developer: Reload Window**
 
 ## 完整工作流程

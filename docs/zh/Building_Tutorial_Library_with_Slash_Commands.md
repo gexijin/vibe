@@ -2,6 +2,8 @@
 title: "Claude Code如何帮我创建这些教程"
 lang: "zh"
 ---
+[首页](./)
+
 # Claude Code如何帮我创建这些教程
 
 2025年12月中旬，我花了2小时通过Zoom帮研究助理安装Claude Code。我意识到像她这样的用户需要具体的实操指导，于是着手为Claude Code创建综合教程。目标明确：实用、聚焦、一步步引导零基础用户完成任务。不堆理论，不写全面参考手册，只讲"做这个，再做那个"，直到完成具体目标。
@@ -103,7 +105,7 @@ Opus 4.5等更强模型似乎也有帮助。这个润色步骤捕捉到了那些
 - **命令设计为多阶段流程。** 告诉Claude如何思考问题，而非只告诉做什么
 - **质量控制内置于流程。** 生成命令配套审查命令
 - **协作而非全自动。** 包含批准步骤，Claude处理繁琐部分，你做战略决策
-- **使用子代理进行批量处理。** 处理多个文档时，在提示中明确说"Use subagents"。先按 Shift+Tab 启用自动接受模式——子代理不会请求权限，让并行处理更加顺畅。
+- **使用子代理进行批量处理。** 处理多个文档时，在提示中明确说"Use subagents"。先确认状态栏显示 **accept edits on** 或 **auto mode on**（按 Shift+Tab 切换）——子代理使用相同的模式，因此很少会停下来请求权限，让并行处理顺畅得多。
 
 ## 结论
 
@@ -117,7 +119,7 @@ Opus 4.5等更强模型似乎也有帮助。这个润色步骤捕捉到了那些
 
 ---
 
-*想查看我构建的斜杠命令？访问[commands文件夹](../assets/commands/)。完整教程库在[项目文档站点](https://github.com/gexijin/vibe/tree/main/docs)。*
+*想查看我构建的斜杠命令？访问[commands文件夹](https://github.com/gexijin/vibe/tree/main/docs/assets/commands)。完整教程库在[项目文档站点](https://github.com/gexijin/vibe/tree/main/docs)。*
 
 ---
 

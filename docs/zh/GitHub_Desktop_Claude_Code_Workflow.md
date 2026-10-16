@@ -42,7 +42,7 @@ lang: "zh"
 - 填写：
   - **Name：** `test_claude`
   - **Description：** `A timer app built with Claude Code`
-  - **Local Path：** Documents 文件夹
+  - **Local Path：** 点击 **Choose...** 并选择你的 **Documents**（文稿/文档）文件夹（默认是 Documents 里的一个 `GitHub` 文件夹，所以需要修改）
   - **勾选** "Initialize this repository with a README"
 - 点击 **Create Repository**
 - 点击顶部的 **Publish repository**
@@ -57,6 +57,7 @@ lang: "zh"
   ```
   cd ~/Documents/test_claude
   ```
+  在 Windows 上，如果看到 `Cannot find path`，说明你的“文档”文件夹由 OneDrive 备份。请改为运行 `cd ~/OneDrive/Documents/test_claude`
 - 启动 Claude Code：
   ```
   claude
@@ -88,6 +89,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
   - 观察倒计时
 
 **如果正常工作：** 跳到步骤 5。
+
 **如果出现问题：** 继续步骤 4。
 
 ## 步骤 4：修复错误(如果需要)
@@ -116,7 +118,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
   ```
   Create initial timer app with start/stop functionality
   ```
-- 点击 **Commit to main**
+- 点击底部的蓝色提交按钮（显示类似 **Commit 1 file to main** 的文字）
 
 你已创建了一个保存点！
 
@@ -136,7 +138,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
   ```
   当计时器归零时添加声音通知。使用浏览器内置的蜂鸣声或创建一个简单的音频提示。
   ```
-- 测试：刷新浏览器，设置计时器为 0.1 分钟，点击开始（Start）
+- 测试：刷新浏览器，设置计时器为 1 分钟，点击开始（Start）
 
 **对于本教程：** 假装声音效果不理想。先不要提交！
 
@@ -146,7 +148,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
 
 - 打开 **GitHub Desktop**
 - 点击 **Branch** 菜单 → **Discard All Changes**
-- 点击 **Discard Changes** 确认
+- 点击 **Discard All Changes** 确认
 - 刷新浏览器 - 计时器在没有声音的情况下正常工作！
 
 你刚刚丢弃了有问题的代码，回到了上一个保存点。
@@ -157,9 +159,10 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
   ```
   当计时器归零时添加声音通知。这次使用 HTML5 audio 元素，配合 Web Audio API 生成简单的蜂鸣声。确保能优雅地处理浏览器自动播放限制。
   ```
-- 立即测试(刷新浏览器，设置 0.1 分钟，点击开始)
+- 立即测试(刷新浏览器，设置 1 分钟，点击开始)
 
 **如果正常工作：** 继续步骤 11。
+
 **如果不行：** 将错误粘贴给 Claude 或重试。
 
 ## 步骤 11：让 Claude 提交并推送
@@ -171,6 +174,8 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
 
 Claude 将检查更改、编写提交消息、提交并推送(10-20 秒)。
 
+**如果 Claude 说推送失败**（例如 `could not read Username`，或无法识别 `git`）：切换到 **GitHub Desktop**。如果它仍列出已更改的文件，请自己提交它们（如步骤 6 所示）。然后点击顶部的 **Push origin**——GitHub Desktop 已经登录了 GitHub。
+
 **何时使用：**
 - 手动提交：学习时或想要控制时
 - Claude 提交：快速工作并想要好的提交消息时
@@ -179,7 +184,7 @@ Claude 将检查更改、编写提交消息、提交并推送(10-20 秒)。
 
 - 在 Claude Code 中：
   ```
-  我修改了哪些文件？
+  我上一次提交更改了什么？
   ```
 
 Claude 用通俗易懂的语言解释你的更改。
@@ -190,10 +195,10 @@ Claude 用通俗易懂的语言解释你的更改。
 
 - 在 **GitHub Desktop** 中，点击 **History** 标签
 
-你将看到：
-- Initial commit(README)
-- Create initial timer app
-- Add improved sound notification
+你将看到（最新的在最上面）：
+- Claude 为声音通知所做的提交（具体措辞会有所不同）
+- Create initial timer app with start/stop functionality
+- Initial commit
 
 注意第一次失败的声音尝试不在其中 - 你丢弃了它！只有可以工作的代码被提交了。
 
@@ -209,13 +214,13 @@ Claude 用通俗易懂的语言解释你的更改。
 
 ## 故障排除
 
-**"Authentication failed"：** GitHub Desktop → File/Preferences → Accounts → 退出登录后重新登录
+**"Authentication failed"：** 在 GitHub Desktop 中，打开 **File → Options → Accounts**（Windows）或 **GitHub Desktop → Settings → Accounts**（Mac），然后退出登录并重新登录
 
 **Claude 显示 "not a git repository"：** 确保你在正确的文件夹中(`cd ~/Documents/test_claude`)
 
 **计时器不工作：** 打开浏览器控制台(右键点击 → **检查** → **Console**)，复制错误，粘贴给 Claude
 
-**需要帮助？** [GitHub Desktop 文档](https://docs.github.com/en/desktop) • [Claude Code 文档](https://docs.anthropic.com/en/docs/claude-code)
+**需要帮助？** [GitHub Desktop 文档](https://docs.github.com/en/desktop) • [Claude Code 文档](https://code.claude.com/docs)
 
 ## 完整工作流程
 
