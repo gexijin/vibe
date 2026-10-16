@@ -43,6 +43,13 @@
       background: transparent;
       padding: 0;
     }
+    /* Let long URLs and inline paths wrap so pages don't scroll sideways on phones */
+    main {
+      overflow-wrap: break-word;
+    }
+    :not(pre) > code {
+      overflow-wrap: anywhere;
+    }
   </style>
 </head>
 <body>
