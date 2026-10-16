@@ -85,6 +85,7 @@ claude
 - If the browser shows a code instead of saying you're done, copy the code, go back to the VS Code terminal and paste it at the `Paste code here if prompted` prompt, then press Enter
 - If no browser window opens, press `c` to copy the login link and paste it into your browser
 - After authentication succeeds, return to VS Code terminal
+- If asked whether you trust the files in this folder, choose **Yes**
 - You'll see Claude's welcome message
 
 Claude Code is now running and ready for your requests.
@@ -96,7 +97,7 @@ Now the fun begins. Instead of looking up documentation, just describe what you 
 - In the Claude Code terminal, type:
 
 ```
-Install the hoopR package and load current NBA player statistics. Show me the top 10 players by total points scored this season. Display it as a nice table.
+Install the hoopR package and load NBA player statistics for the most recent season that has data. Show me the top 10 players by total points scored. Display it as a nice table.
 ```
 
 - Press Enter
@@ -126,7 +127,7 @@ Show me what columns are available in this NBA data. Then create a summary showi
 
 - Press Enter
 - Claude explores the dataset and shows you interesting statistics
-- Look at the output to see available columns like: player_name, team, points, assists, rebounds, field_goal_percentage, etc.
+- Look at the output to see the available columns, such as player name, team, points, assists, and rebounds
 
 This exploration helps you decide what to put in your dashboard.
 
@@ -214,7 +215,7 @@ Before committing, review what Claude built.
 Create NBA dashboard with team filter and visualizations
 ```
 
-- Click **Commit to main**
+- Click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
 - Click **Push origin** to back up to GitHub
 
 You've saved your first working version!

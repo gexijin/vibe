@@ -73,8 +73,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Expose Streamlit port
 EXPOSE 8501
@@ -228,7 +229,7 @@ The container has Python pre-installed with data science packages. Let's run the
 
 - In VS Code Explorer, navigate to `python/iris_analysis.py`
 - Click to open the file
-- Select the first line: `import pandas as pd`
+- Click on line 2, `import pandas as pd` (line 1 is just a comment)
 - Press `Shift+Enter` to run it in an interactive Python terminal
 - A Python terminal opens at the bottom
 - Continue running each line or block one at a time with `Shift+Enter`
@@ -285,8 +286,8 @@ st.title("My First Python Docker App")
 - `FROM python:3.12-slim` - Official Python 3.12 base image (lightweight Debian-based)
 - `RUN apt-get install` - Linux system libraries for building Python packages
 - `RUN pip install --no-cache-dir ...` - Permanently installs Python packages
-- `RUN curl... && apt-get install -y nodejs` - Installs Node.js, required to run Claude Code
-- `RUN npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance
+- `RUN curl... && apt-get install -y nodejs` - Installs Node.js and npm, which the next line uses to install Claude Code
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance (the first part lets Claude Code finish setting itself up, which newer versions of npm otherwise block)
 - `EXPOSE 8501` - Opens port 8501 for Streamlit apps
 
 **Other Python images you can use:**
@@ -294,7 +295,7 @@ st.title("My First Python Docker App")
 - `python:3.12` - Full Python image with more tools (larger size)
 - `python:3.12-slim` - Lightweight image with Python and pip (what we're using)
 - `python:3.12-alpine` - Minimal Alpine Linux-based image (smallest size)
-- `jupyter/datascience-notebook` - Pre-configured Jupyter with data science libraries
+- `quay.io/jupyter/datascience-notebook` - Pre-configured Jupyter with data science libraries
 
 After changing the base image, rebuild the container to apply changes. Note: only Debian-based images such as `python:3.12` and `python:3.12-slim` work with this Dockerfile as written; Alpine images and Jupyter images need a different Dockerfile.
 

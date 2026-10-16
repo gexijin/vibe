@@ -108,6 +108,8 @@ Log in with your Claude subscription following the [installation tutorial](Insta
 
 Claude initializes a Git repository in your folder (takes 2-5 seconds). You now have version control!
 
+If Claude asks for permission, it shows a small menu with **Yes** and **No**. Use the arrow keys to pick **Yes** and press **Enter**. You may see this a few times in this tutorial.
+
 ## Step 8: Build the Timer App
 
 - In Claude Code, copy and paste this whole request (pasting keeps all the lines together; pressing Enter would send it early):
@@ -193,7 +195,7 @@ Claude throws away the new changes we don't like. The timer works again with jus
   ```
   Add a sound notification when time is up.
   ```
-- Refresh browser and test after Claude is done (set timer for 0.1 minutes)
+- Refresh browser and test after Claude is done (set timer for 1 minute)
 - If it works, commit the changes:
   ```
   Save these changes.
@@ -205,7 +207,7 @@ Claude throws away the new changes we don't like. The timer works again with jus
   ```
   The sound should continue until I click a button to snooze it.
   ```
-- Refresh browser and test after Claude is done (set timer for 0.1 minutes)
+- Refresh browser and test after Claude is done (set timer for 1 minute)
 - If it works, commit the changes:
   ```
   Save these changes.

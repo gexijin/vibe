@@ -75,7 +75,7 @@ After closing VS Code, here's how to get back to your project:
 - Ask Claude Code to explain an existing codebase: "Explain what this project does"
 - Have Claude Code help you write new features: "Add a function that calculates the average of a list"
 - Use Claude Code to fix bugs: "This code gives an error, can you fix it?"
-- You already installed the Claude Code extension in the installation tutorial — click the Spark icon at the top-right of the editor to chat with Claude in a panel with inline diffs instead of the terminal
+- Try the Claude Code extension for a visual chat panel with inline diffs. Running `claude` in VS Code's terminal usually installs it for you (if not, search "Claude Code" in Extensions). Open any file, then click the Spark icon at the top-right of the editor
 
 ## Troubleshooting
 

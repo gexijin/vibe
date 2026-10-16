@@ -17,7 +17,7 @@ This is different from **Claude Code**, the tool used in the rest of these tutor
 
 ## What You'll Need
 
-- A Windows 10 (or newer) or Mac (macOS 11 Big Sur or newer) computer
+- A Windows 10 (or newer) or Mac (macOS 13 Ventura or newer) computer
 - Internet connection
 - A free or paid Claude.ai account (see [What Is Anthropic and Claude?](./What_Is_Anthropic_And_Claude.md) to create one)
 - 5 minutes
@@ -61,7 +61,7 @@ Claude Desktop isn't just for chatting. Depending on your plan:
 
 - **Chat** — available on every plan, including Free
 - **Claude Code** — Pro, Max, Team, and Enterprise plans can launch Claude Code from inside Claude Desktop, without opening a separate terminal
-- **Claude Cowork** — on paid plans, lets Claude work on multi-step tasks with access to local files
+- **Claude Cowork** — on paid plans, lets Claude work on multi-step tasks with access to local files. Anthropic is merging Cowork into regular chat, so newer versions may not show a separate Cowork tab — just ask Claude in chat
 - **Desktop Extensions** — an advanced feature that connects Claude to local apps and files through a directory of installable extensions; not needed to get started
 
 You don't need any of these to use Claude Desktop for everyday chatting — they're worth exploring once you're comfortable with the basics.

@@ -164,7 +164,7 @@ Update the stock-report Skill to only activate when I explicitly mention
 "analyze" or "report" along with a company name.
 ```
 
-Claude updates the `description` field in `SKILL.md`. Test the difference:
+Claude updates the `description` field in `SKILL.md`. Type `/reload-skills` so Claude Code picks up the change, then test the difference:
 ```
 What's Apple doing?
 ```

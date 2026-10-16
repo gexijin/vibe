@@ -45,7 +45,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Wait for Claude Code to install (1-2 minutes)
-- You may see some progress messages - this is normal
+- The window may show no messages while it downloads — this is normal, just wait
 - When installation is complete, close and reopen Terminal, then verify by typing:
    ```
    claude --version
@@ -96,6 +96,7 @@ If you have an Anthropic API key instead of a Claude subscription:
    ```
    Replace `your-api-key-here` with your actual API key
 - Close and reopen Terminal for the changes to take effect
+- Start Claude Code by typing `claude`. The first time, it asks whether you want to use the API key it found. Choose **Yes**. (If you pick **No** by mistake, type `/config` and turn on **Use custom API key**.)
 
 **Note:** If you're using an older Mac with bash instead of zsh, replace `~/.zshrc` with `~/.bash_profile` in the command above.
 
@@ -110,9 +111,9 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - Start Claude Code:
    ```
@@ -134,7 +135,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 - See the [official OpenRouter guide](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) for more details
 
 
-### Option D. Use Anthropic API via Azure Foundry
+### Option D. Use Anthropic API via Microsoft Foundry (Azure)
 
 This option is for organizations using Azure-hosted Claude models. In the Terminal window, paste this code to define environment variables (before starting Claude):
 ```
@@ -143,13 +144,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
 export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **Note:** Replace `xxxx-eastus2` with your Foundry Resource name (do not use the entire base URL). Replace `your_api_key` with your complete API key from your Azure portal.
+
+Then start Claude Code by typing `claude`.
 
 ## Step 4: Test Claude Code
 

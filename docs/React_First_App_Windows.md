@@ -18,6 +18,7 @@ You'll use two programs: **PowerShell** to create and run the app, and **VS Code
 
 ## What You'll Need
 
+- *(Recommended)* Finish [Version Control with GitHub Desktop: Build a Data Dashboard](./Git_Branching_GitHub_Desktop_Guide.md) first. This tutorial rebuilds that dashboard in React
 - A Windows computer with [VS Code](./VS_Code_Getting_Started.md) installed
 - A free [ChatGPT](https://chat.openai.com) account
 - *(Optional)* [GitHub Desktop](./Github_desktop.md) to save your work
@@ -64,6 +65,7 @@ Type this command and press **Enter**:
 npm create vite@latest heart-react -- --template react --no-interactive
 ```
 
+- If you see red text saying **running scripts is disabled on this system**, use the matching fix under [Troubleshooting](#troubleshooting), then run the command again
 - If it asks **Ok to proceed? (y)**, type `y` and press **Enter**
 - When it finishes, it prints `Done. Now run:` followed by three commands. You'll run them in the next step.
 
@@ -135,7 +137,7 @@ npm run dev
 
 That instant update is what React is all about: you change a value, React updates the screen for you.
 
-## Step 10: Save Your Work with GitHub Desktop
+## Step 10: Save Your Work with GitHub Desktop (Optional)
 
 - Open **GitHub Desktop**
 - Click **File** → **Add Local Repository**

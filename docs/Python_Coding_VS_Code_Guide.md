@@ -22,13 +22,13 @@ You want to write Python code but aren't sure which editor to use, or you're loo
 
 ## Step 1: Install Python
 
-You need Python 3.8 or higher for the best compatibility with modern packages.
+You need Python 3.11 or higher (the latest version from python.org is best) so the newest versions of packages like pandas and Streamlit install.
 
 - **Windows**:
   - Go to [python.org/downloads/windows](https://www.python.org/downloads/windows/) and, under the latest Python 3 release, click **Windows installer (64-bit)** (not the "install manager")
   - Run the installer
   - **Check the box "Add python.exe to PATH"** before clicking Install Now
-  - Note the installation location (typically `C:\Users\YourName\AppData\Local\Programs\Python\Python312`)
+  - Note the installation location (typically `C:\Users\YourName\AppData\Local\Programs\Python\Python312` — the number matches your Python version)
 
 - **macOS**:
   - Download from [python.org](https://www.python.org/downloads/) and run the installer
@@ -55,7 +55,7 @@ The Python extension includes support for debugging, IntelliSense, code formatti
 
 - Create a new folder on your computer (e.g., `my-python-project`)
 - In VS Code, click **File > Open Folder** and select your new folder
-- Click **File > New File** in the top menu
+- Click **File > New File...** in the top menu. A list appears at the top of the window — choose **Python File**
 - Save the file as `analysis.py` by clicking **File > Save**
 
 ## Step 4: Select Python Interpreter
@@ -129,14 +129,14 @@ plt.show()
 ## Step 8: Run Python Code Interactively
 
 - With `analysis.py` open, click the **▶ Run Python File** button in the top-right corner
-- Or right-click in the editor and select **Run Python File in Terminal**
+- Or right-click in the editor and select **Run Python > Run Python File in Terminal**
 - Watch the output appear in the terminal panel
 - A histogram window will pop up showing your plot
 - You can also select specific lines and press `Shift+Enter` to run just those lines in an interactive Python session
 
 ## Step 9: Create a Simple Streamlit App
 
-- Create a new file: **File > New File**
+- Create a new file: click **File > New File...**, then choose **Python File** from the list at the top of the window
 - Save it as `app.py`
 - Type this code:
 

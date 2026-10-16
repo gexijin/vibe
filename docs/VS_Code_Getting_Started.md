@@ -26,7 +26,7 @@ You want to write code, but Notepad or TextEdit feels limiting. You need somethi
 - Go to [code.visualstudio.com](https://code.visualstudio.com)
 - Click the **Download** button (it detects your OS)
 - Run the installer:
-   - **Windows:** Double-click the `.exe`, click **Next** through the prompts
+   - **Windows:** Double-click the `.exe` and click **Next** through the prompts. On the **Select Additional Tasks** screen, also tick **Add "Open with Code" action to Windows Explorer directory context menu** so you can open project folders from File Explorer later
    - **Mac:** Open the `.dmg`, drag VS Code to **Applications**
    - **Linux:** Follow instructions for your package manager
 - Launch VS Code

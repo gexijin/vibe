@@ -17,7 +17,7 @@ You've set up R in VS Code and can write code manually. Now you want AI to help 
 
 - Finished [R in VS Code](./R_Coding_VS_Code_Guide) tutorial - R should be working in VS Code
 - Finished [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) tutorial - Claude Code CLI should be installed
-- Claude Pro/Max subscription or Anthropic API key
+- A paid Claude plan (such as Pro or Max) or an Anthropic Console account — the free plan doesn't include Claude Code
 - 20-30 minutes
 
 ## Step 1: Open VS Code and Create R Project
@@ -34,7 +34,7 @@ You've set up R in VS Code and can write code manually. Now you want AI to help 
 
 - Click the **Extensions** icon in the left sidebar (four squares icon)
 - In the search box, type `Claude Code`
-- Find **Claude Code** by Anthropic and click **Install**
+- Find **Claude Code for VS Code** by Anthropic and click **Install**
 - After installation, click **✻ Claude Code** in the status bar at the bottom-right of the window to open the Claude panel (once a file is open, you can also use the Spark icon at the top-right of the editor)
 - Click **Sign in** and finish signing in with your Claude account in the browser that opens
 - If you use an API key instead, set it up as shown in [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) (Step 3, Option B), then quit VS Code and open it again
@@ -42,8 +42,8 @@ You've set up R in VS Code and can write code manually. Now you want AI to help 
 
 ## Step 3: Create Initial R Script Manually
 
-- Click **File > New File** in the menu bar
-- Click **Select a language** and type `R`, then select **R**
+- Click **File > New File...** in the menu bar
+- In the list that appears at the top of the window, choose **R Document**
 - Save the file by clicking **File > Save**, name it `iris_analysis.R`
 - Type this code:
 
@@ -68,8 +68,8 @@ Add code to iris_analysis.R to create a scatter plot of sepal length vs. width, 
 ```
 
 - Press Enter to send
-- Claude reads your file and proposes changes - you'll see a diff showing new code to add
-- Click **Accept** to apply the changes
+- Claude reads your file and edits it - the new code appears in `iris_analysis.R`
+- If Claude shows a diff and asks for permission, accept the change
 - The ggplot2 code appears in your file
 - If you don't have ggplot2 installed, run `install.packages("ggplot2")` in the R terminal
 
@@ -90,7 +90,7 @@ Remove title. Change marker type by species. Change to the classic theme.
 
 - Press Enter
 - Claude shows the updated code changes
-- Click **Accept**
+- If asked, accept the change
 - Run the updated code again: select all and press `Ctrl+Enter` / `Cmd+Enter`
 - The plot now displays with different marker shapes per species, no title, and classic theme
 
@@ -104,7 +104,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 
 - Press Enter
 - Claude adds PCA code to your script
-- Click **Accept**
+- If asked, accept the change
 - Run all code: select all and press `Ctrl+Enter` / `Cmd+Enter`
 - A PCA plot appears showing samples projected onto PC1 and PC2, colored by species
 
@@ -118,7 +118,7 @@ Review the entire script for correctness. Add comments when necessary.
 
 - Press Enter
 - Claude reviews the code and suggests comments explaining each section
-- Click **Accept**
+- If asked, accept the change
 - Your script now has clear comments explaining the data loading, visualization, and PCA analysis
 
 ## Next Steps
@@ -133,9 +133,9 @@ Review the entire script for correctness. Add comments when necessary.
 
 - **Claude extension not showing** - Restart VS Code after installation. Click **View > Extensions** to verify it's installed.
 - **"Cannot read R file" error** - Make sure you saved the file with `.R` extension. Claude needs saved files to read them.
-- **Authentication failed** - Verify your Claude Pro/Max subscription is active or your API key is valid. See [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) for authentication troubleshooting.
+- **Authentication failed** - Verify your paid Claude plan or Anthropic Console account is active. See [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) for authentication troubleshooting.
 - **ggplot2 not found** - Install it in R terminal: `install.packages("ggplot2")`. Wait for installation to complete before running code.
-- **Code changes not applying** - Make sure to click **Accept** on the diff. If it's not working, try copying Claude's suggested code manually.
+- **Code changes not applying** - If Claude asked for permission, make sure you accepted the change. If it's not working, try copying Claude's suggested code manually.
 
 ## Workflow Summary
 
