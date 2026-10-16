@@ -39,7 +39,7 @@ Das war's – Claude Code erkennt Git Bash beim Start automatisch.
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Warten Sie, bis die Installation abgeschlossen ist
+- Warten Sie, bis die Installation abgeschlossen ist (das Fenster zeigt während des Downloads möglicherweise eine Minute lang nichts an – das ist normal)
 - Schließen Sie PowerShell und öffnen Sie es erneut, dann überprüfen Sie durch Eingabe von:
    ```
    claude --version
@@ -130,6 +130,7 @@ Wenn Sie einen Anthropic-API-Schlüssel anstelle eines Claude-Abonnements haben:
    ```
    claude
    ```
+- Beim ersten Mal fragt Claude Code, ob Sie den gefundenen API-Schlüssel verwenden möchten. Wählen Sie **Yes**. (Wenn Sie versehentlich **No** wählen, geben Sie `/config` ein und aktivieren Sie **Use custom API key**.)
 
 ### Option C. OpenRouter API verwenden (Bezahlung nach Nutzung)
 
@@ -141,10 +142,10 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
    ```
    setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
    setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
-   setx ANTHROPIC_API_KEY ""
-   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
-   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
-   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
+   [Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', $null, 'User')
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "~anthropic/claude-sonnet-latest"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "~anthropic/claude-opus-latest"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "~anthropic/claude-haiku-latest"
    ```
 - Schließen Sie PowerShell und öffnen Sie es erneut, dann starten Sie Claude Code:
    ```
@@ -154,7 +155,7 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
 
 **Hinweise:**
 - Ersetzen Sie `your-openrouter-api-key` durch Ihren tatsächlichen OpenRouter API-Schlüssel
-- `ANTHROPIC_API_KEY` muss explizit auf leer gesetzt werden
+- Die Zeile mit `ANTHROPIC_API_KEY` entfernt einen eventuell gespeicherten Anthropic-API-Schlüssel, der bei Verwendung von OpenRouter nicht gesetzt sein darf
 - Um andere Modelle zu verwenden, müssen diese **Tool-Nutzungsfähigkeiten** unterstützen. Sie können Modelle überschreiben mit:
    ```
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
@@ -165,7 +166,7 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
 - Über OpenRouter funktioniert Claude Code nur mit Anthropic-Modellen garantiert
 - Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)
 
-### Option D. Anthropic API über Azure Foundry verwenden
+### Option D. Anthropic API über Microsoft Foundry (Azure) verwenden
 
 Fügen Sie in PowerShell diesen Code ein, um die Umgebungsvariablen zu definieren:
 ```
@@ -174,8 +175,8 @@ setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure resource name
 setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # Set models to your resource's deployment names
-setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
-setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-8"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
 setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
 setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
@@ -199,6 +200,7 @@ Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allge
    ```
    cd ~/Documents/test_claude
    ```
+   Ersetzen Sie `test_claude` durch den tatsächlichen Namen Ihres Projektordners. Tipp: Geben Sie `cd ` (mit Leerzeichen) ein, ziehen Sie den Ordner aus dem Datei-Explorer in das PowerShell-Fenster, um seinen vollständigen Pfad einzufügen, und drücken Sie **Enter**.
 - Starten Sie dann Claude:
    ```
    claude
@@ -271,7 +273,7 @@ Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenst
    ```
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
    ```
-- Verbinden Sie Ihr Konto, indem Sie `claude` im Ubuntu-Terminal eingeben und der Browser-Anmeldung folgen (wie in Schritt 4, Option A). Wenn Sie stattdessen einen API-Schlüssel verwenden, setzen Sie ihn mit `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL verwendet Linux-Befehle, kein `setx`)
+- Verbinden Sie Ihr Konto, indem Sie `claude` im Ubuntu-Terminal eingeben und der Browser-Anmeldung folgen (wie in Schritt 4, Option A). Wenn Sie stattdessen einen API-Schlüssel verwenden, speichern Sie ihn mit `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` (WSL verwendet Linux-Befehle, kein `setx`)
 - Um einen Windows-Projektordner aus WSL zu öffnen:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude

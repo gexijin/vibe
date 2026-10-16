@@ -26,7 +26,7 @@ Sie benötigen R Version 4.0 oder höher für die beste Kompatibilität.
 
 - **Windows**:
   - Laden Sie das neueste R von [CRAN Windows](https://cran.r-project.org/bin/windows/base/) herunter und führen Sie das Installationsprogramm aus
-  - Während der Installation **notieren Sie den Installationspfad** (zum Beispiel: `C:\Program Files\R\R-4.5.3`)
+  - Während der Installation **notieren Sie den Installationspfad** (zum Beispiel: `C:\Program Files\R\R-4.6.1`)
   - Wenn Sie eine alte Version haben, deinstallieren Sie sie zuerst über **Einstellungen > Apps**
 
 - **macOS**:
@@ -55,12 +55,12 @@ Bevor Sie VS Code konfigurieren, müssen Sie wissen, wo R auf Ihrem System insta
 
 1. Öffnen Sie den **Datei-Explorer**
 2. Navigieren Sie zu `C:\Program Files\R\` (im deutschen Datei-Explorer wird dieser Ordner als **Programme** angezeigt)
-3. Sie sehen einen Ordner wie `R-4.5.3` (Ihre Versionsnummer kann abweichen)
+3. Sie sehen einen Ordner wie `R-4.6.1` (Ihre Versionsnummer kann abweichen)
 4. Öffnen Sie diesen Ordner → Öffnen Sie den `bin`-Ordner
 5. Sie sehen dort `R.exe`
-6. Der vollständige Pfad ist: `C:\Program Files\R\R-4.5.3\bin\R.exe`
+6. Der vollständige Pfad ist: `C:\Program Files\R\R-4.6.1\bin\R.exe`
 
-**Schreiben Sie sich Ihre Versionsnummer auf oder merken Sie sie sich** (z.B. `R-4.5.3`) – Sie brauchen sie in Schritt 4.
+**Schreiben Sie sich Ihre Versionsnummer auf oder merken Sie sie sich** (z.B. `R-4.6.1`) – Sie brauchen sie in Schritt 4.
 
 ### Für macOS-Benutzer
 
@@ -93,10 +93,10 @@ which R
 - Die Datei settings.json öffnet sich
 - Fügen Sie die Zeile für Ihre Plattform innerhalb der geschweiften Klammern `{}` hinzu. Wenn dort bereits andere Zeilen stehen, achten Sie darauf, dass die Zeile über Ihrer mit einem Komma endet
 
-**Für Windows**, fügen Sie diese Zeile hinzu (ersetzen Sie `R-4.5.3` durch Ihre Version aus Schritt 3):
+**Für Windows**, fügen Sie diese Zeile hinzu (ersetzen Sie `R-4.6.1` durch Ihre Version aus Schritt 3):
 
 ```json
-"r.rpath.windows": "C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe",
+"r.executablePath": "C:\\Program Files\\R\\R-4.6.1\\bin\\R.exe",
 ```
 
 **Warum zwei Backslashes (`\\`)?** In JSON-Dateien ist der Backslash `\` ein Sonderzeichen (genannt Escape-Zeichen). Um einen einzelnen Backslash im tatsächlichen Dateipfad darzustellen, müssen Sie zwei Backslashes `\\` eingeben. Also wird `C:\Program Files` zu `C:\\Program Files` in settings.json.
@@ -104,19 +104,19 @@ which R
 **Für macOS**, fügen Sie eine dieser Zeilen hinzu:
 
 ```json
-"r.rpath.mac": "/Library/Frameworks/R.framework/Resources/bin/R",
+"r.executablePath": "/Library/Frameworks/R.framework/Resources/bin/R",
 ```
 
 Oder wenn Sie R über Homebrew auf Apple Silicon installiert haben:
 
 ```json
-"r.rpath.mac": "/opt/homebrew/bin/R",
+"r.executablePath": "/opt/homebrew/bin/R",
 ```
 
 **Für Linux**, fügen Sie hinzu:
 
 ```json
-"r.rpath.linux": "/usr/bin/R",
+"r.executablePath": "/usr/bin/R",
 ```
 
 - Speichern Sie die Datei durch Klicken auf **File > Save**
@@ -128,6 +128,7 @@ Oder wenn Sie R über Homebrew auf Apple Silicon installiert haben:
 - Geben Sie `R: Create R Terminal` ein und wählen Sie es aus
 - Eine R-Konsole erscheint im Terminal-Panel unten
   - Sie sollten sehen, wie R mit Versionsinformationen startet
+  - Wenn VS Code anbietet, das Paket **sess** zu installieren, klicken Sie auf **Yes** (oder **Install bundled sess**) und warten Sie, bis die Installation abgeschlossen ist. Damit kann VS Code Ihre Plots und Variablen anzeigen
   - Wenn Sie einen Fehler erhalten, überprüfen Sie Ihre settings.json-Konfiguration in Schritt 4 und starten Sie VS Code neu
 - Installieren Sie Pakete durch Eingabe dieser Befehle einzeln:
 
@@ -140,13 +141,13 @@ install.packages("shiny")
 - Geben Sie `q()` ein und drücken Sie Enter, um R zu beenden
 - R wird sofort beendet (falls Sie gefragt werden, ob der Arbeitsbereich gespeichert werden soll, geben Sie `n` ein)
 
-Das einfache Eingeben von `R` in einem normalen Terminal funktioniert nicht, es sei denn, R ist in Ihrem System-PATH. Die R-Erweiterung verwendet Ihre `r.rpath`-Einstellung, um R zu finden.
+Das einfache Eingeben von `R` in einem normalen Terminal funktioniert nicht, es sei denn, R ist in Ihrem System-PATH. Die R-Erweiterung verwendet Ihre `r.executablePath`-Einstellung, um R zu finden.
 
 ## Schritt 6: Ihr R-Projekt erstellen
 
 - Erstellen Sie einen neuen Ordner auf Ihrem Computer (z.B. `mein-r-projekt`)
 - Klicken Sie in VS Code auf **File > Open Folder** und wählen Sie Ihren neuen Ordner
-- Klicken Sie im oberen Menü auf **File > New File**
+- Klicken Sie im oberen Menü auf **File > New File...** und wählen Sie dann **R Document** aus der Liste oben im Fenster
 - Speichern Sie die Datei als `analysis.R` durch Klicken auf **File > Save**
 
 ## Schritt 7: Ihr erstes R-Skript schreiben
@@ -177,7 +178,7 @@ hist(iris$Sepal.Length)
 
 ## Schritt 9: Eine einfache Shiny-App erstellen
 
-- Erstellen Sie eine neue Datei in Ihrem Projektordner: **File > New File**
+- Erstellen Sie eine neue Datei in Ihrem Projektordner: Klicken Sie auf **File > New File...** und wählen Sie dann **R Document**
 - Speichern Sie sie als `app.R`
 - Geben Sie diesen Code ein:
 
@@ -226,9 +227,9 @@ shinyApp(ui = ui, server = server)
 
 - Beginnen Sie in `analysis.R` in einer neuen Zeile, `mea` zu tippen
 - Ein Dropdown erscheint mit Vorschlägen – wählen Sie `mean()` durch Drücken von Enter
-- Bewegen Sie Ihre Maus über das Wort `mean` in Ihrem bestehenden Code
+- Bewegen Sie Ihre Maus über das Wort `mean`, das Sie gerade eingegeben haben
 - Ein Popup zeigt die Funktionsdokumentation und Anwendungsbeispiele
-- Fahren Sie mit der Maus über `lm`, `summary` oder `plot`, um deren Dokumentation zu sehen
+- Fahren Sie mit der Maus über `summary` oder `hist` in Ihrem Skript, um deren Dokumentation zu sehen
 - Geben Sie `iris$` ein und beobachten Sie, wie VS Code Spaltennamen (`Sepal.Length`, `Species` usw.) vorschlägt
 
 ## Schritt 11: Weitere Funktionen ausprobieren
@@ -249,13 +250,13 @@ shinyApp(ui = ui, server = server)
 ## Fehlerbehebung
 
 - **„Die Benennung "R" wurde nicht ... erkannt“** (englisch: „R is not recognized“) **im VS Code-Terminal**: VS Code kann R nicht finden. Überprüfen Sie Ihre settings.json (Schritt 4) – prüfen Sie, ob der R-Pfad korrekt ist und auf `R.exe` (Windows) oder die R-Binärdatei (Mac/Linux) zeigt. Beispielpfade:
-  - Windows: `C:\\Program Files\\R\\R-4.5.3\\bin\\R.exe` (Versionsnummer anpassen)
+  - Windows: `C:\\Program Files\\R\\R-4.6.1\\bin\\R.exe` (Versionsnummer anpassen)
   - macOS (CRAN-Installationsprogramm, Intel oder Apple Silicon): `/Library/Frameworks/R.framework/Resources/bin/R`
   - macOS Homebrew: `/opt/homebrew/bin/R`
   - Linux: `/usr/bin/R`
   Starten Sie VS Code nach der Korrektur vollständig neu.
 
-- **R-Versionsunterschied in den Einstellungen**: Wenn Sie R aktualisiert haben, aber VS Code noch die alte Version verwendet, aktualisieren Sie die Versionsnummer in Ihrer settings.json `r.rpath`-Konfiguration, um der neuen R-Installation zu entsprechen (siehe Schritt 3, um Ihren aktuellen Installationspfad zu finden).
+- **R-Versionsunterschied in den Einstellungen**: Wenn Sie R aktualisiert haben, aber VS Code noch die alte Version verwendet, aktualisieren Sie die Versionsnummer in der `r.executablePath`-Zeile Ihrer settings.json, um der neuen R-Installation zu entsprechen (siehe Schritt 3, um Ihren aktuellen Installationspfad zu finden).
 
 - **Codevervollständigung funktioniert nicht**: Stellen Sie sicher, dass languageserver erfolgreich installiert wurde (Schritt 5). Starten Sie VS Code nach der Installation neu. Warten Sie 10-20 Sekunden nach dem Öffnen einer R-Datei, bis der Sprachserver initialisiert ist. Überprüfen Sie das Output-Panel (View > Output > R Language Server) auf Fehler.
 

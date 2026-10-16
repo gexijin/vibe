@@ -117,10 +117,11 @@ name: stock-picker
 description: Compares multiple companies for investment decisions...
 skills:
   - stock-report
+model: sonnet
 ---
 ```
 
-Dieses Frontmatter (der Abschnitt zwischen den `---`-Markierungen) sagt Claude Code, wann dieser Subagent verwendet werden soll (`description`) und welche Skills von Anfang an in ihn geladen werden (`skills`).
+Dieses Frontmatter (der Abschnitt zwischen den `---`-Markierungen) sagt Claude Code, wann dieser Subagent verwendet werden soll (`description`), welche Skills von Anfang an in ihn geladen werden (`skills`) und mit welchem Claude-Modell er läuft (`model`).
 
 Es gibt einen **System-Prompt** unter dem Frontmatter mit Ihrer Bewertungsmethodik.
 

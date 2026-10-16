@@ -46,7 +46,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Warten Sie, bis Claude Code installiert ist (1-2 Minuten)
-- Möglicherweise sehen Sie einige Fortschrittsmeldungen – das ist normal
+- Das Fenster zeigt während des Downloads möglicherweise keine Meldungen an – das ist normal, warten Sie einfach
 - Wenn die Installation abgeschlossen ist, schließen Sie Terminal und öffnen Sie es erneut. Überprüfen Sie dann durch Eingabe von:
    ```
    claude --version
@@ -97,6 +97,7 @@ Wenn Sie einen Anthropic-API-Schlüssel anstelle eines Claude-Abonnements haben:
    ```
    Ersetzen Sie `your-api-key-here` durch Ihren tatsächlichen API-Schlüssel
 - Schließen Sie Terminal und öffnen Sie es erneut, damit die Änderungen wirksam werden
+- Starten Sie Claude Code, indem Sie `claude` eingeben. Beim ersten Mal fragt es, ob Sie den gefundenen API-Schlüssel verwenden möchten. Wählen Sie **Yes**. (Wenn Sie versehentlich **No** wählen, geben Sie `/config` ein und aktivieren Sie **Use custom API key**.)
 
 **Hinweis:** Wenn Sie einen älteren Mac mit bash anstelle von zsh verwenden, ersetzen Sie `~/.zshrc` durch `~/.bash_profile` im obigen Befehl.
 
@@ -111,9 +112,9 @@ OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sp
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - Starten Sie Claude Code:
    ```
@@ -135,7 +136,7 @@ OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sp
 - Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)
 
 
-### Option D. Anthropic API über Azure Foundry verwenden
+### Option D. Anthropic API über Microsoft Foundry (Azure) verwenden
 
 Diese Option ist für Organisationen gedacht, die Azure-gehostete Claude-Modelle verwenden. Fügen Sie im Terminal-Fenster diesen Code ein, um Umgebungsvariablen zu definieren (vor dem Starten von Claude):
 ```
@@ -144,13 +145,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
 export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **Hinweis:** Ersetzen Sie `xxxx-eastus2` durch Ihren Foundry-Ressourcennamen (verwenden Sie nicht die gesamte Basis-URL). Ersetzen Sie `your_api_key` durch Ihren vollständigen API-Schlüssel aus Ihrem Azure-Portal.
+
+Starten Sie dann Claude Code, indem Sie `claude` eingeben.
 
 ## Schritt 4: Claude Code testen
 

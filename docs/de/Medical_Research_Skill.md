@@ -102,7 +102,7 @@ Erstelle einen Claude Skill namens "medical-research", der:
 - Das pubmed_search.py-Skript im Skill-Ordner enthält
 ```
 
-Claude erstellt die vollständige Skill-Struktur:
+Claude erstellt die Skill-Struktur. Die genauen Dateien können variieren, zum Beispiel:
 - `.claude/skills/medical-research/pubmed_search.py` - Das Suchskript
 - `.claude/skills/medical-research/SKILL.md` - Anweisungen für Claude zur Verwendung des Skills
 - `.claude/skills/medical-research/README.md` - Benutzerdokumentation
@@ -153,7 +153,7 @@ Die Antwort erklärt den wissenschaftlichen Konsens, den Ursprung des Mythos und
 In VS Code:
 - Erweitern Sie `.claude/skills/medical-research/` im Datei-Explorer
 - Öffnen Sie `SKILL.md`, um detaillierte Anweisungen für Claude zu sehen
-- Öffnen Sie `README.md`, um die Benutzerdokumentation zu sehen
+- Öffnen Sie `README.md` (falls Claude eine erstellt hat), um die Benutzerdokumentation zu sehen
 - Öffnen Sie `pubmed_search.py`, um den Python-Code zu sehen
 
 **Hinweis:** Der Skill ist vollständig eigenständig – aller Code und alle Dokumentation befinden sich in einem Ordner.
@@ -165,15 +165,16 @@ Anthropic pflegt ein Repository mit vorgefertigten Skills, die Sie sofort instal
 - Um einen Skill aus dem Repository zu installieren, bitten Sie Claude einfach:
 
   ```
-  Installiere den document skill aus Anthropics Repository
+  Installiere die Skills docx, pdf, pptx und xlsx von github.com/anthropics/skills in meinen Ordner .claude/skills/
   ```
-- Probieren Sie diesen Skill aus:
+- Wenn Claude fertig ist, geben Sie `/reload-skills` ein, damit Claude Code die neuen Skills lädt
+- Probieren Sie einen davon aus:
   ```
   Erstelle eine PowerPoint-Präsentation über Claude Skills.
   ```
 
 
-Der **document skill** hilft Ihnen beim Lesen und Schreiben von Dateien in PDF, Word, PowerPoint und Excel. Claude klont den Skill in Ihren `.claude/skills/`-Ordner.
+Diese **Dokument-Skills** helfen Claude beim Lesen und Schreiben von Word-, PDF-, PowerPoint- und Excel-Dateien. Claude kopiert sie in Ihren `.claude/skills/`-Ordner.
 
 **Andere verfügbare Skills aus Anthropics Repository:**
 - Durchsuchen Sie den vollständigen Katalog unter [github.com/anthropics/skills](https://github.com/anthropics/skills)
