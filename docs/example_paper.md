@@ -49,7 +49,7 @@ Structural mismatch between individual tools and systemic barriers persists. AI 
 
 The AI productivity paradox resolves when we recognize that individual empowerment coexists with systemic exclusion. Micro-level studies measuring task performance miss the macro-level selection effects that determine who benefits. The evidence from Stanford, the IMF, and the OECD converges on a troubling conclusion: AI is worsening inequality across gender, age, firm size, and geography [3, 4, 9, 11]. Technology's impact depends on its distribution, not merely its capability. Three simultaneous selection mechanisms—access inequality, knowledge inequality, and opportunity inequality—transform AI from a democratizing tool into a stratifying force.
 
-Policymakers must act across all three barriers. Governments should subsidize AI adoption for small enterprises through tax credits, closing the 3.3-fold adoption gap. Educational institutions must integrate AI literacy into curricula and launch targeted reskilling programs for women in administrative roles, addressing the seventy-five percent knowledge gap. Employers must create structured entry-level positions combining AI tools with human mentorship, preventing the experience catch-22. The window for intervention is narrowing as gaps double every few years [11]. Without deliberate action, AI's individual promise will become collective peril.
+Policymakers must act across all three barriers. Governments should subsidize AI adoption for small enterprises through tax credits, closing the 3.3-fold adoption gap. Educational institutions must integrate AI literacy into curricula and launch targeted reskilling programs for women in administrative roles, addressing the knowledge differences behind seventy-five percent of the gender gap. Employers must create structured entry-level positions combining AI tools with human mentorship, preventing the experience catch-22. The window for intervention is narrowing: EU adoption gaps roughly doubled between 2021 and 2024 [11]. Without deliberate action, AI's individual promise will become collective peril.
 
 ## References
 
@@ -67,7 +67,7 @@ Policymakers must act across all three barriers. Governments should subsidize AI
 
 [7] Stanford HAI. (2025). "The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
 
-[8] Anthropic. (2024). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
 
 [9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
 

@@ -7,7 +7,7 @@ title: "Create a Claude Skill for Medical Research"
 
 Keeping up with medical research means wading through dense scientific papers filled with jargon. A Claude Skill is like having a research assistant that reads hundreds of papers and explains them in plain English - instead of spending hours searching PubMed and decoding technical language, you ask a simple question and get a clear summary based on the latest science.
 
-In this tutorial, you'll create a Claude Skill that searches peer-reviewed medical literature. We first create a Python script to query PubMed. The best part? You can ask Claude to do all the work! It has a Skill that creates Skills!
+In this tutorial, you'll create a Claude Skill that searches peer-reviewed medical literature. We first create a Python script to query PubMed. The best part? You can ask Claude to do all the work! Claude knows how to write Skills, too.
 
 ## Key Concepts
 
@@ -19,6 +19,7 @@ In this tutorial, you'll create a Claude Skill that searches peer-reviewed medic
 ## What You'll Need
 
 - Completed [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) or [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Python installed (see [Python Coding in VS Code](./Python_Coding_VS_Code_Guide.md)). If you don't have it, Claude will offer to help install it.
 - Internet connection for PubMed searches
 - 15-20 minutes
 
@@ -110,7 +111,7 @@ This takes 2-3 minutes as Claude writes comprehensive documentation.
 
 ## Step 7: Test the Skill
 
-Ask a research question in plain language:
+First type `/reload-skills` so Claude Code loads the new Skill. Then ask a research question in plain language:
 
 ```
 Can I lose weight on a keto diet?
@@ -188,7 +189,7 @@ The **document skill** helps you read and write files in PDF, Word, PowerPoint, 
 
 - **Biopython not installed:** Claude will automatically install Biopython when it creates the script. If you see import errors when testing, ask Claude to install Biopython manually with `pip install biopython`
 - **Script not found:** Check that the status line shows **accept edits on** or **auto mode on** (press Shift+Tab to switch) - Claude needs permission to create files
-- **Skill doesn't activate:** The skill should work immediately after creation - try asking the question again or check that SKILL.md has the correct `name: medical-research` in the header
+- **Skill doesn't activate:** Type `/reload-skills` (or restart Claude Code), then ask again. Also check that SKILL.md has `name: medical-research` in the header
 
 ## Workflow Overview
 
@@ -203,7 +204,7 @@ The **document skill** helps you read and write files in PDF, Word, PowerPoint, 
 | Feature | Skills | Slash Commands |
 |---------|--------|----------------|
 | **What it contains** | Prompts, code, data, and documentation | Prompts only |
-| **Activation** | Automatically loaded when relevant | Manually triggered with `/command` |
+| **Activation** | Automatically when relevant, or manually with `/skill-name` | Manually triggered with `/command` |
 | **Use case** | Complex workflows requiring code execution | Quick prompt templates and workflows |
 | **File location** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **Structure** | Multiple files (SKILL.md, README.md, code files) | Single `.md` file per command |
