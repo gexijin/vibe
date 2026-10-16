@@ -27,7 +27,7 @@ lang: "ja"
 - [code.visualstudio.com](https://code.visualstudio.com) を開く
 - OSを自動判別した **Download** ボタンをクリック
 - インストーラーを実行
-   - **Windows**：`.exe` をダブルクリック → 画面の指示に従い **Next** を押していく
+   - **Windows**：`.exe` をダブルクリック → 画面の指示に従い **Next** を押していく。**追加タスクの選択**（Select Additional Tasks）画面では、**エクスプローラーのディレクトリ コンテキスト メニューに [Code で開く] アクションを追加する**（Add "Open with Code" action to Windows Explorer directory context menu）にもチェックを入れておくと、後でエクスプローラーからプロジェクトフォルダを開けます
    - **Mac**：`.dmg` を開き、VS Code を **Applications** フォルダにドラッグ
    - **Linux**：パッケージマネージャーの案内に従う
 - VS Codeを起動
@@ -49,8 +49,8 @@ VS Codeは主に5つの領域で構成されています。
 ## ステップ3：フォルダを開いて探索
 
 - **File** → **Open Folder**（ファイル → フォルダーを開く）をクリック
-- 既存のフォルダ（例：書類 / Documents）に移動
-- **開く**（または **フォルダーの選択**）をクリック
+- **書類**（Documents）フォルダに移動し、練習用の新しい空のフォルダ（例：`vscode_practice`）を作成（ウィンドウ内の **新規フォルダ**（New Folder）ボタンを使います）
+- その新しいフォルダを選択し、**開く**（または **フォルダーの選択**）をクリック
 - 「Do you trust the authors?」（作成者を信頼しますか？）と表示されたら **Yes, I trust the authors**（はい、作成者を信頼します）をクリック
 
 エクスプローラーサイドバーにフォルダ内のファイルが表示されます：
@@ -61,7 +61,7 @@ VS Codeは主に5つの領域で構成されています。
 
 ## ステップ4：Markdownファイルを作ってみる
 
-- エクスプローラーの **New File**（新しいファイル）アイコン（+付きページ）をクリック
+- エクスプローラーで上部のフォルダ名にマウスを合わせ、表示される **New File**（新しいファイル）アイコン（+付きページ）をクリック
 - ファイル名を `README.md` に設定
 - 以下の内容を追加：
 
@@ -124,7 +124,7 @@ mkdir notes
 
 ## ステップ8：VS CodeでAIエージェントを使う（任意）
 
-VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview)が搭載されており、コードの説明、作成、デバッグを支援するAIアシスタントです。
+VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat)が搭載されており、コードの説明、作成、デバッグを支援するAIアシスタントです。
 
 - `README.md` ファイル（またはプロジェクト内の他のファイル）を開く
 - タイトルバーの **Chat > Open Chat** をクリック（Windows/Linuxでは `Ctrl+Alt+I`、Macでは `Ctrl+Cmd+I` を押す）
@@ -134,7 +134,7 @@ VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-
 
 GitHub Copilotがファイルを分析し、その内容を説明します。新しいコードの作成、バグの修正、機能追加の方法などについて質問することも可能です。
 
-**ヒント：** [インライン編集](https://code.visualstudio.com/docs/copilot/copilot-chat)を使う場合は、任意のファイルでコードをハイライトし、`Ctrl+I`（Windows/Linux）または `Cmd+I`（Mac）を押すと、Copilotにその部分のみの変更、修正、説明を依頼できます。
+**ヒント：** [インライン編集](https://code.visualstudio.com/docs/chat/inline-chat)を使う場合は、任意のファイルでコードをハイライトし、`Ctrl+I`（Windows/Linux）または `Cmd+I`（Mac）を押すと、Copilotにその部分のみの変更、修正、説明を依頼できます。
 
 ## プロジェクトを再度開くには
 
@@ -146,7 +146,7 @@ GitHub Copilotがファイルを分析し、その内容を説明します。新
 
 - **プレビューが表示されない：** Markdown Preview Enhanced拡張機能がインストールされており、`.md` ファイルを開いていることを確認してください
 - **ターミナルに間違ったディレクトリが表示される：** ターミナルパネルのゴミ箱アイコンをクリックし、**Terminal > New Terminal** をクリックします
-- **Chatメニューが表示されない：** GitHub Copilot Chatのインストールが必要な場合があります - **Extensions**（拡張機能）アイコンをクリックし、「GitHub Copilot Chat」を検索してインストールしてください
+- **Chatメニューが表示されない：** AI機能がオフになっている可能性があります。設定を開き（Windows/Linuxでは`Ctrl+,`、Macでは`Cmd+,`）、`disable AI features`を検索してチェックを外します。次に、ステータスバー（下部）のCopilotアイコンにマウスを合わせ、**Use AI Features**を選択します
 - **拡張機能が動作しない：** **View > Command Palette**（表示 > コマンド パレット）をクリックし、「reload window」と入力して **Developer: Reload Window** を選択します
 
 ## 完全なワークフロー

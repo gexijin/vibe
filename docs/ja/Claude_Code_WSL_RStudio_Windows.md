@@ -89,7 +89,7 @@ summary(iris)
   claude
   ```
 
-[インストールチュートリアル](Install_CLAUDE_Code_Win.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
+[インストールチュートリアル](Install_CLAUDE_Code_Win.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。Claude Codeがこのフォルダ内のファイルを信頼するかどうか尋ねてきた場合は、**Yes**を選んでEnterを押してください。
 
 ## ステップ8：散布図コードを追加
 
@@ -99,7 +99,7 @@ Claude Codeの起動が遅い場合は、初期化が完了するまで待ちま
 iris.Rに、がく片の長さと幅の散布図を種ごとに色分けして作成するコードを追加してください。ggplot2を使用してください。
 ```
 - Claude Codeが`iris.R`ファイルを読み込み、可視化コードを追加します
-- 確認を求められたら、適切な選択肢を選んでiris.Rファイルの編集を許可します
+- Claudeが`iris.R`の編集許可を求めてきた場合は、**Yes**を選択します（矢印キーを使い、Enterを押します）
 - Claudeが完了するまで待ちます（完了メッセージが表示されます）
 
 
@@ -107,7 +107,7 @@ iris.Rに、がく片の長さと幅の散布図を種ごとに色分けして�
 
 - RStudioウィンドウに戻ります（RStudioウィンドウをクリック）
 - ファイルが変更されたというプロンプトが表示される場合があります - **Yes**をクリックして再読み込みします
-- プロンプトが表示されない場合は、**File > Reopen with Encoding > UTF-8**をクリックします
+- 新しいコードが表示されない場合は、**File > Reopen with Encoding...**をクリックし、**UTF-8**を選んで**OK**をクリックします
 - すべてのコードを選択して**Run**をクリック
 - **Plots**ペイン（右下）に散布図が表示されます
 - ggplot2に関するエラーが出た場合は、Consoleペインで`install.packages("ggplot2")`と入力してインストールします
@@ -159,7 +159,7 @@ iris.Rに、がく片の長さと幅の散布図を種ごとに色分けして�
   ```
   この分析のための新しいR Markdownファイルを作成してください。iris_report.Rmdとして保存してください。
   ```
-- Claudeがこのファイルの作成許可を求めます
+- Claudeがこのファイルの作成許可を求めてきた場合は、**Yes**を選択します
 - Claudeがプロジェクトフォルダに新しい`.Rmd`ファイルを作成します
 
 
@@ -169,6 +169,7 @@ iris.Rに、がく片の長さと幅の散布図を種ごとに色分けして�
 - **File > Open File...**をクリック
 - `iris_report.Rmd`を選択して**Open**をクリック
 - スクリプトペインの上部にある**Knit**ボタン（毛糸玉アイコン）をクリック
+- **rmarkdown**などのパッケージが必要だとRStudioに表示された場合は、**Install**（または**Yes**）をクリックして完了を待ち、もう一度**Knit**をクリック
 - RStudioがHTMLレポートを生成します
 - 完全な解析と説明文を含むレポートが新しいウィンドウで開きます
 - HTMLファイルはプロジェクトフォルダに保存されます
@@ -179,10 +180,10 @@ iris.Rに、がく片の長さと幅の散布図を種ごとに色分けして�
 
 | 症状 | 対処 |
 | --- | --- |
-| RStudioが更新を検知しない | **File > Reopen with Encoding > UTF-8** で手動リロード |
-| `claude: command not found` | インストールガイドを再確認。PowerShellのウィンドウを新しく開き直す |
+| RStudioが更新を検知しない | **File > Reopen with Encoding...** をクリックし、**UTF-8** を選んで **OK** をクリックして手動リロード |
+| `The term 'claude' is not recognized` | インストールガイドを再確認。PowerShellを閉じて新しいウィンドウを開き、もう一度試す |
 | プロットが表示されない | RStudio Consoleで `install.packages("ggplot2")` を実行 |
-| `cannot change working directory` | Windowsのパスにスペースが含まれています。ステップ6でパスを引用符で囲む（例：`cd "C:\Users\Your Name\Documents\test_claude"`） |
+| ステップ6で `Cannot find path ... because it does not exist` | プロジェクトが別のフォルダにある可能性があります。RStudioの **Files** ペインの上部に表示されるパスで `test_claude` の場所を確認できます。ドキュメントフォルダがOneDriveでバックアップされている場合は `cd ~\OneDrive\Documents\test_claude` を試してください。パスにスペースが含まれる場合は引用符で囲みます（例：`cd "C:\Users\Your Name\OneDrive\Documents\test_claude"`） |
 | 初回リクエストが遅い | 30〜60秒待てば初期化され、その後は高速化します |
 | WSLを使っている場合 | オプションのWSL/Ubuntuの方法を設定した場合は、ステップ5〜16でPowerShellの代わりに **Ubuntu** アプリを開き、`cd /mnt/c/Users/YourUsername/Documents/test_claude` でプロジェクトへ移動 |
 

@@ -18,7 +18,7 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 
 - [VS CodeでPython](./Python_Coding_VS_Code_Guide.md)チュートリアルを完了していること - VS CodeでPythonが動作していること
 - [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)チュートリアルを完了していること - Claude Code CLIがインストールされていること
-- Claude Pro/Maxサブスクリプション または Anthropic APIキー
+- 有料のClaudeプラン（ProやMaxなど）またはAnthropic Consoleアカウント - 無料プランにはClaude Codeが含まれていません
 - 20〜30分
 
 ## ステップ1: VS Codeを開いてPythonプロジェクトを作成
@@ -35,20 +35,16 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 
 - 左サイドバーの**Extensions**（拡張機能）アイコン（4つの正方形のアイコン）をクリックします
 - 検索ボックスに`Claude Code`と入力します
-- Anthropicの**Claude Code**を見つけて**Install**（インストール）をクリックします
-- インストール後、左サイドバーにClaudeアイコン（キラキラマーク）が表示されます
-- Claudeアイコンをクリックしてチャットパネルを開きます
-- チャットパネルの**Sign in to Claude Code**をクリックします
-- 認証方法を選択します：
-  - **Claude Pro/Maxユーザー**: **Sign in with Claude.ai**をクリックし、ブラウザで認証してコードをVS Codeにコピーします
-  - **APIキーユーザー**: **Use API Key**をクリックしてAnthropic APIキーを貼り付けます
+- Anthropicの**Claude Code for VS Code**を見つけて**Install**（インストール）をクリックします
+- インストール後、VS Codeウィンドウの右下隅（ステータスバー）にある**✻ Claude Code**をクリックしてClaudeパネルを開きます
+- 初回はサインイン画面が表示されます：**Sign in**をクリックし、ブラウザでアクセスを承認してから、VS Codeに戻ります
 - 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイド（ステップ3）を参照してください
-- サインインすると、チャットパネルに「Ready to help」と表示されます
+- サインインすると、パネルに**Learn Claude Code**のチェックリストと、下部にプロンプト入力欄が表示されます
 
 ## ステップ3: 最初のPythonスクリプトを手動で作成
 
-- メニューバーの**File > New File**（ファイル > 新しいファイル）をクリックします
-- **Select a language**（言語の選択）をクリックして`Python`と入力し、**Python**を選択します
+- メニューバーの**File > New File...**（ファイル > 新しいファイル...）をクリックします
+- ウィンドウ上部に表示される一覧から**Python File**を選択します
 - **File > Save**（ファイル > 保存）をクリックしてファイルを保存し、`iris_analysis.py`と名前を付けます
 - 次のコードを入力します：
 
@@ -62,13 +58,15 @@ iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 iris_df['species'] = iris.target_names[iris.target]
 
 # Display structure
-print(iris_df.info())
+iris_df.info()
 print("\nSummary statistics:")
 print(iris_df.describe())
 ```
 
 - **File > Save**をクリックしてファイルを保存します
-- Pythonターミナルを開く：メニューバーの**View**（表示）をクリックし、**Terminal**（ターミナル）を選択します
+- [VS CodeでPythonコーディング](./Python_Coding_VS_Code_Guide.md)のステップ5と同じように仮想環境を作成します：**View > Command Palette**（表示 > コマンドパレット）をクリックし、`Python: Create Environment`と入力して**Venv**を選び、Pythonのバージョンを選択します
+- エクスプローラーに`.venv`フォルダが表示されるまで待ちます
+- ターミナルを開く：メニューバーの**View**（表示）をクリックし、**Terminal**（ターミナル）を選択します。プロンプトの先頭に`(.venv)`と表示されるはずです
 - このスクリプトに必要なパッケージをインストールします：
   ```
   pip install scikit-learn pandas
@@ -78,7 +76,7 @@ print(iris_df.describe())
 
 ## ステップ4: Claudeに散布図の追加を依頼
 
-- 左サイドバーの**Claude**アイコンをクリックしてチャットパネルを開きます
+- Claudeパネルを開きます（開いているファイルの右上にあるSparkアイコン、または右下隅の**✻ Claude Code**）
 - 下部のチャットボックスに次のように入力します：
 
 ```
@@ -86,12 +84,12 @@ iris_analysis.pyに、sepal lengthとwidthの散布図を作成するコード�
 ```
 
 - Enterを押して送信します
-- Claudeがファイルを読み取り、変更を提案します - 追加する新しいコードを示す差分が表示されます
-- **Accept**をクリックして変更を適用します
+- Claudeがファイルを読み取って編集します - 新しいコードが`iris_analysis.py`に表示されます
+- Claudeが差分を表示して許可を求めてきた場合は、変更を受け入れます
 - seaborn/matplotlibコードがファイルに表示されます
-- 必要なパッケージがインストールされていない場合は、ターミナルで実行します：
+- Claudeのコードが使うグラフ用パッケージをインストールします（ステップ3ではインストールしていません）。ターミナル（`(.venv)`が表示されている状態）で次を実行します：
   ```
-  pip install seaborn matplotlib scikit-learn pandas
+  pip install seaborn matplotlib
   ```
 
 ## ステップ5: 更新したコードを実行
@@ -110,8 +108,8 @@ iris_analysis.pyに、sepal lengthとwidthの散布図を作成するコード�
 ```
 
 - Enterを押します
-- Claudeが更新されたコード変更を表示します
-- **Accept**をクリックします
+- Claudeがコードを更新します
+- 求められた場合は、変更を受け入れます
 - 更新されたコードを再度実行：ターミナルで`python iris_analysis.py`
 - グラフが種ごとに異なるマーカー形状、タイトルなし、whitegridスタイルで表示されます
 - プロットウィンドウを閉じて続けます
@@ -126,9 +124,9 @@ iris_analysis.pyに、sepal lengthとwidthの散布図を作成するコード�
 
 - Enterを押します
 - ClaudeがPCAコードをスクリプトに追加します
-- **Accept**をクリックします
+- 求められた場合は、変更を受け入れます
 - コードを実行：ターミナルで`python iris_analysis.py`
-- 種ごとに色分けされた、PC1とPC2に投影されたサンプルを示すPCAプロットが表示されます
+- 種ごとに色分けされた、PC1とPC2に投影されたサンプルを示すPCAプロットが表示されます（ステップ6の散布図ウィンドウが先に開いた場合は、それを閉じると次にPCAプロットが表示されます）
 - 完了したらプロットウィンドウを閉じます
 
 ## ステップ8: Claudeにレビューとコメント追加を依頼
@@ -140,8 +138,8 @@ iris_analysis.pyに、sepal lengthとwidthの散布図を作成するコード�
 ```
 
 - Enterを押します
-- Claudeがコードをレビューし、各セクションを説明するコメントを提案します
-- **Accept**をクリックします
+- Claudeがコードをレビューし、各セクションを説明するコメントを追加します
+- 求められた場合は、変更を受け入れます
 - スクリプトにデータ読み込み、可視化、PCA分析を説明する明確なコメントが追加されます
 
 ## 次のステップ
@@ -156,9 +154,9 @@ iris_analysis.pyに、sepal lengthとwidthの散布図を作成するコード�
 
 - **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**（表示 > 拡張機能）をクリックしてインストールされていることを確認してください。
 - **「Cannot read Python file」エラー** - ファイルが`.py`拡張子で保存されていることを確認してください。Claudeが読み取れるのは保存済みのファイルだけです。
-- **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)を参照してください。
-- **パッケージが見つからないエラー** - ターミナルで必要なパッケージをインストール：`pip install seaborn matplotlib scikit-learn pandas`。コードを実行する前にインストールが完了するまで待ってください。
-- **コード変更が適用されない** - 差分の**Accept**をクリックしてください。それでもうまくいかない場合は、Claudeが提案したコードを手動でコピーしてみてください。
+- **認証失敗** - 有料のClaudeプランまたはAnthropic Consoleアカウントが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)を参照してください。
+- **パッケージが見つからないエラー**または**`command not found: python`** - ターミナルに`(.venv)`が表示されていることを確認し（表示されていない場合は、ターミナルを閉じて**View > Terminal**で新しいターミナルを開きます）、必要なパッケージをインストールしてください：`pip install seaborn matplotlib scikit-learn pandas`。コードを実行する前にインストールが完了するまで待ってください。
+- **コード変更が適用されない** - Claudeが許可を求めてきた場合は、変更を受け入れたことを確認してください。それでもうまくいかない場合は、Claudeが提案したコードを手動でコピーしてみてください。
 - **プロットが表示されない** - ディスプレイがあることを確認してください。一部のシステムでは、最後に`plt.show()`を追加するか、Jupyterで`%matplotlib inline`を使用する必要がある場合があります。
 
 ## ワークフローの概要
