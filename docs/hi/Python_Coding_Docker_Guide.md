@@ -74,8 +74,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Expose Streamlit port
 EXPOSE 8501
@@ -229,7 +230,7 @@ cd python-docker-demo
 
 - VS Code Explorer में, `python/iris_analysis.py` पर जाएँ
 - फ़ाइल खोलने के लिए क्लिक करें
-- पहली लाइन चुनें: `import pandas as pd`
+- लाइन 2, `import pandas as pd` पर क्लिक करें (लाइन 1 सिर्फ़ एक कमेंट है)
 - इसे एक इंटरैक्टिव Python टर्मिनल में चलाने के लिए `Shift+Enter` दबाएँ
 - नीचे एक Python टर्मिनल खुलता है
 - `Shift+Enter` के साथ एक-एक करके हर लाइन या ब्लॉक चलाना जारी रखें
@@ -286,8 +287,8 @@ st.title("My First Python Docker App")
 - `FROM python:3.12-slim` - आधिकारिक Python 3.12 बेस इमेज (हल्का, Debian-आधारित)
 - `RUN apt-get install` - Python पैकेज बनाने के लिए Linux सिस्टम लाइब्रेरी
 - `RUN pip install --no-cache-dir ...` - Python पैकेजों को स्थायी रूप से इंस्टॉल करता है
-- `RUN curl... && apt-get install -y nodejs` - Node.js इंस्टॉल करता है, जो Claude Code चलाने के लिए ज़रूरी है
-- `RUN npm install -g @anthropic-ai/claude-code` - AI सहायता के लिए Claude Code को ग्लोबली इंस्टॉल करता है
+- `RUN curl... && apt-get install -y nodejs` - Node.js और npm इंस्टॉल करता है, जिनका उपयोग अगली लाइन Claude Code इंस्टॉल करने के लिए करती है
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - AI सहायता के लिए Claude Code को ग्लोबली इंस्टॉल करता है (पहला हिस्सा Claude Code को अपना सेटअप पूरा करने देता है, जिसे npm के नए वर्शन वरना रोक देते हैं)
 - `EXPOSE 8501` - Streamlit ऐप्स के लिए पोर्ट 8501 खोलता है
 
 **अन्य Python इमेज जिनका आप उपयोग कर सकते हैं:**
@@ -295,7 +296,7 @@ st.title("My First Python Docker App")
 - `python:3.12` - अधिक टूल के साथ पूरा Python इमेज (बड़ा आकार)
 - `python:3.12-slim` - Python और pip वाला हल्का इमेज (जो हम उपयोग कर रहे हैं)
 - `python:3.12-alpine` - न्यूनतम Alpine Linux-आधारित इमेज (सबसे छोटा आकार)
-- `jupyter/datascience-notebook` - डेटा साइंस लाइब्रेरी के साथ पहले से कॉन्फ़िगर किया गया Jupyter
+- `quay.io/jupyter/datascience-notebook` - डेटा साइंस लाइब्रेरी के साथ पहले से कॉन्फ़िगर किया गया Jupyter
 
 बेस इमेज बदलने के बाद, बदलाव लागू करने के लिए कंटेनर को फिर से बिल्ड करें। ध्यान दें: इस Dockerfile के साथ, जैसा यह लिखा है, केवल Debian-आधारित इमेज जैसे `python:3.12` और `python:3.12-slim` ही काम करते हैं; Alpine इमेज और Jupyter इमेज के लिए अलग Dockerfile चाहिए।
 

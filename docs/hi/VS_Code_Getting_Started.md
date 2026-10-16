@@ -27,7 +27,7 @@ lang: "hi"
 - [code.visualstudio.com](https://code.visualstudio.com) पर जाएँ
 - **Download** बटन पर क्लिक करें (यह आपका OS पहचान लेता है)
 - इंस्टॉलर चलाएँ:
-   - **Windows:** `.exe` पर डबल-क्लिक करें, इंस्टॉलर में **Next** पर क्लिक करते जाएँ
+   - **Windows:** `.exe` पर डबल-क्लिक करें और इंस्टॉलर में **Next** पर क्लिक करते जाएँ। **Select Additional Tasks** स्क्रीन पर, **Add "Open with Code" action to Windows Explorer directory context menu** पर भी टिक करें ताकि बाद में आप File Explorer से प्रोजेक्ट फ़ोल्डर खोल सकें
    - **Mac:** `.dmg` खोलें, VS Code को **Applications** में खींचें
    - **Linux:** अपने पैकेज मैनेजर के लिए निर्देशों का पालन करें
 - VS Code लॉन्च करें

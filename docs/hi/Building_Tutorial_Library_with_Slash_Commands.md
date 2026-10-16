@@ -119,7 +119,7 @@ Opus 4.5 जैसे बेहतर मॉडल भी मदद करते
 
 ---
 
-*मेरे बनाए स्लैश कमांड देखना चाहते हैं? [commands फ़ोल्डर](../assets/commands/) देखें। पूरी ट्यूटोरियल लाइब्रेरी [प्रोजेक्ट डॉक्यूमेंटेशन साइट](https://github.com/gexijin/vibe/tree/main/docs) पर उपलब्ध है।*
+*मेरे बनाए स्लैश कमांड देखना चाहते हैं? [commands फ़ोल्डर](https://github.com/gexijin/vibe/tree/main/docs/assets/commands) देखें। पूरी ट्यूटोरियल लाइब्रेरी [प्रोजेक्ट डॉक्यूमेंटेशन साइट](https://github.com/gexijin/vibe/tree/main/docs) पर उपलब्ध है।*
 
 ---
 
