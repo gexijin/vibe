@@ -22,9 +22,9 @@ Tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de co
 
 ## Paso 1: Abrir RStudio en Mac
 
-- Haga clic en **Launchpad** en su Dock (el ícono de cuadrícula de puntos)
-- Escriba `RStudio` en el cuadro de búsqueda
-- Haga clic en **RStudio** para abrirlo
+- Presione **Command (⌘) + Space** para abrir la búsqueda de Spotlight
+- Escriba `RStudio`
+- Presione **Return** para abrirlo
 - La ventana de RStudio se abre con múltiples paneles
 
 ## Paso 2: Crear un Nuevo Proyecto R
@@ -90,7 +90,7 @@ summary(iris)
   claude
   ```
 
-Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_Claude_Code_MacOS.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
+Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_Claude_Code_MacOS.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code. Si Claude Code le pregunta si confía en los archivos de esta carpeta, elija **Yes** y presione Enter.
 
 ## Paso 8: Solicitar a Claude un Gráfico de Dispersión
 
@@ -100,7 +100,7 @@ Si Claude Code es lento o no responde, simplemente espere a que se inicialice. L
 Agrega código a iris.R para crear un gráfico de dispersión de longitud vs. ancho del sépalo, coloreado por especie. Usa ggplot2.
 ```
 - Claude Code leerá su archivo `iris.R` y agregará el código de visualización
-- Cuando se le solicite, otorgue permiso a Claude para editar el archivo iris.R seleccionando la opción apropiada
+- Si Claude le pide permiso para editar `iris.R`, elija **Yes** (use las teclas de flecha y luego presione Enter)
 - Espere a que Claude termine (verá un mensaje de confirmación)
 
 
@@ -108,7 +108,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud vs. an
 
 - Cambie de nuevo a RStudio (haga clic en la ventana de RStudio o presione **Command (⌘) + Tab**)
 - Puede ver un mensaje diciendo que el archivo ha cambiado - haga clic en **Yes** para recargar
-- Si no aparece ningún mensaje, haga clic en **File > Reopen with Encoding > UTF-8**
+- Si el código nuevo no aparece, haga clic en **File > Reopen with Encoding...**, elija **UTF-8** y haga clic en **OK**
 - Resalte todo el código y haga clic en **Run**
 - Un gráfico de dispersión aparece en el panel **Plots** (parte inferior derecha)
 - Si obtiene un error sobre ggplot2, instálelo escribiendo `install.packages("ggplot2")` en el panel Console
@@ -160,7 +160,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud vs. an
   ```
   Crea un nuevo archivo R Markdown para este análisis. Guárdalo como iris_report.Rmd
   ```
-- Claude le pedirá permiso para crear este archivo
+- Si Claude le pide permiso para crear este archivo, elija **Yes**
 - Claude creará un nuevo archivo `.Rmd` en su carpeta de proyecto
 
 
@@ -170,13 +170,14 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud vs. an
 - Haga clic en **File > Open File...**
 - Seleccione `iris_report.Rmd` y haga clic en **Open**
 - Haga clic en el botón **Knit** (con un ícono de ovillo de lana) en la parte superior del panel del script
+- Si RStudio indica que se requieren paquetes como **rmarkdown**, haga clic en **Install** (o **Yes**) y espere a que termine; luego haga clic en **Knit** de nuevo
 - RStudio generará un reporte HTML
 - El reporte se abre en una nueva ventana mostrando su análisis completo con texto narrativo
 - El archivo HTML se guarda en su carpeta de proyecto
 
 ## Solución de Problemas
 
-- **RStudio no muestra los cambios del archivo** - Haga clic en **File > Reopen with Encoding > UTF-8** para recargar manualmente el archivo, o cierre y vuelva a abrir el archivo.
+- **RStudio no muestra los cambios del archivo** - Haga clic en **File > Reopen with Encoding...**, elija **UTF-8** y haga clic en **OK** para recargar manualmente el archivo, o cierre y vuelva a abrir el archivo.
 - **"claude: command not found"** - Asegúrese de haber completado la [guía de instalación](./Install_Claude_Code_MacOS). Intente abrir una nueva ventana de Terminal, o cierre Terminal completamente (**Command (⌘) + Q**) y vuelva a abrirlo.
 - **Los gráficos no aparecen** - Asegúrese de que ggplot2 esté instalado. Ejecute `install.packages("ggplot2")` en la consola de RStudio si es necesario.
 - **"No such file or directory"** - Verifique que escribió la ruta correctamente en el Paso 6. Intente usar el truco de arrastrar y soltar: arrastre la carpeta test_claude desde Finder a Terminal después de escribir `cd ` (con un espacio).
@@ -193,7 +194,7 @@ Atajos útiles para cambiar entre aplicaciones:
 ## Próximos Pasos
 
 - Pida a Claude que agregue pruebas estadísticas (pruebas t, ANOVA) a su análisis
-- Pida a Claude una **versión Python** de este código y que prepare un documento Quarto
+- Pida a Claude que escriba una **versión Python** de este código y que prepare un documento Quarto
 - Solicite a Claude crear funciones para tareas repetitivas en sus scripts R
 - Use Claude para depurar mensajes de error cuando su código R no funcione
 - Pida a Claude que optimice código R lento para mejor rendimiento
@@ -212,4 +213,4 @@ El flujo de trabajo es simple: escriba o edite código con Claude en Terminal, l
 
 ---
 
-Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 11 de diciembre de 2024.
+Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 11 de diciembre de 2025.

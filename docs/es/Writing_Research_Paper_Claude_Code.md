@@ -17,7 +17,7 @@ Aprenda a escribir artículos de investigación utilizando Claude Code como asis
 
 ## Lo Que Necesitará
 
-- Haber completado [Configure VS Code para Claude Code en Windows](./Claude_Code_in_VS_Code_Win) o [Use Claude Code desde VS Code en Mac](./Claude_Code_in_VS_Code_Mac)
+- Haber completado [Configure VS Code para Claude Code en Windows](./Claude_Code_in_VS_Code_Win.md) o [Use Claude Code desde VS Code en Mac](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 minutos
 
 ## Paso 1: Crear una Carpeta de Proyecto
@@ -48,11 +48,12 @@ Para Windows:
 - Haga clic en **File** en la barra de menú, luego en **Open Folder**
 - Navegue hasta la carpeta `test_claude` en **Documentos** y selecciónela
 - Haga clic en **Select Folder**. VS Code se recarga con su carpeta `test_claude`
+- Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
 Para Mac:
 - En VS Code, haga clic en **File** en la barra de menú, luego en **Open Folder**
 - Navegue y seleccione la carpeta `test_claude`
-- Haga clic en **Open** (Mac) o **OK** (Windows)
+- Haga clic en **Open**
 - Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
 ## Paso 4: Iniciar Claude Code
@@ -71,7 +72,7 @@ Pídale a Claude que investigue su tema. Copie y pegue este prompt en Claude Cod
 
 ```
 Estoy escribiendo un artículo de investigación de aproximadamente 1,000 palabras sobre la adopción de IA en el lugar de trabajo.
-Busca datos recientes (2023-2025) sobre:
+Busca datos recientes (de los últimos dos años) sobre:
 - Ganancias de productividad con herramientas de IA
 - Preocupaciones sobre desplazamiento laboral y estadísticas
 - Casos de estudio reales de empresas
@@ -131,7 +132,7 @@ enfocada y mi enfoque elegido. Usa viñetas para el flujo narrativo.
 Guarda como outlines.md
 ```
 
-Revise el esquema y pídale a Claude que lo ajuste según sea necesario (por ejemplo, "Haz que la sección 2 se enfoque más en casos de estudio" o "Agrega una sección sobre limitaciones").
+Revise los esquemas en `outlines.md` y pídale a Claude que lo ajuste según sea necesario (por ejemplo, "Haz que la sección 2 se enfoque más en casos de estudio" o "Agrega una sección sobre limitaciones").
 
 ## Paso 10: Redactar el Artículo
 
@@ -242,7 +243,7 @@ Crea un slash command llamado /research-paper que me guíe a través de
 todo este flujo de trabajo. Guárdalo para que pueda usarlo en futuros artículos de investigación sobre diversos temas.
 ```
 
-Claude creará un slash command personalizado en su carpeta `.claude/commands/`. Es un archivo Markdown que contiene un prompt. Podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [su tema]`.
+Claude creará un slash command personalizado, normalmente en su carpeta `.claude/commands/` (o en `.claude/skills/research-paper/`). Es un archivo Markdown que contiene un prompt. Antes de usarlo por primera vez, escriba `/reload-skills` (o salga de Claude Code e inícielo de nuevo) para que se cargue el nuevo comando. Luego podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [su tema]`.
 
 ## Paso 18: Obtener Retroalimentación
 
@@ -296,7 +297,7 @@ El slash command lo guiará automáticamente a través de todo el flujo de traba
 
 ## Solución de Problemas
 
-- **Los resultados de búsqueda parecen desactualizados:** Especifique "busca datos de 2024-2025 sobre [tema]"
+- **Los resultados de búsqueda parecen desactualizados:** Pida un rango de tiempo, por ejemplo "busca datos de los últimos dos años sobre [tema]"
 - **El borrador es muy largo o corto:** Indique: "Haz que tenga aproximadamente 1,000 palabras"
 - **No puede encontrar archivos:** En la terminal, escriba `ls` para listar todos los archivos en la carpeta actual
 

@@ -52,7 +52,7 @@ Persiste el desajuste estructural entre las herramientas individuales y las barr
 
 La paradoja de productividad de la IA se resuelve cuando reconocemos que el empoderamiento individual coexiste con la exclusión sistémica. Los estudios a nivel micro que miden el rendimiento de tareas pasan por alto los efectos de selección a nivel macro que determinan quién se beneficia. La evidencia de Stanford, el FMI y la OCDE converge en una conclusión preocupante: la IA está agravando la desigualdad de género, edad, tamaño empresarial y geografía [3, 4, 9, 11]. El impacto de la tecnología depende de su distribución, no solo de su capacidad. Tres mecanismos de selección simultáneos —desigualdad de acceso, desigualdad de conocimiento y desigualdad de oportunidades— transforman la IA de una herramienta democratizadora en una fuerza estratificadora.
 
-Los responsables de políticas deben actuar sobre las tres barreras. Los gobiernos deben subsidiar la adopción de IA para las pequeñas empresas mediante créditos fiscales, cerrando la brecha de adopción de 3.3 veces. Las instituciones educativas deben integrar la alfabetización en IA en los planes de estudio y lanzar programas específicos de recapacitación para mujeres en roles administrativos, abordando la brecha de conocimiento del setenta y cinco por ciento. Los empleadores deben crear puestos estructurados de nivel inicial que combinen herramientas de IA con mentoría humana, previniendo el dilema de experiencia. La ventana para la intervención se está estrechando a medida que las brechas se duplican cada pocos años [11]. Sin acción deliberada, la promesa individual de la IA se convertirá en un peligro colectivo.
+Los responsables de políticas deben actuar sobre las tres barreras. Los gobiernos deben subsidiar la adopción de IA para las pequeñas empresas mediante créditos fiscales, cerrando la brecha de adopción de 3.3 veces. Las instituciones educativas deben integrar la alfabetización en IA en los planes de estudio y lanzar programas específicos de recapacitación para mujeres en roles administrativos, abordando las diferencias de conocimiento que explican el setenta y cinco por ciento de la brecha de género. Los empleadores deben crear puestos estructurados de nivel inicial que combinen herramientas de IA con mentoría humana, previniendo el dilema de experiencia. La ventana para la intervención se está estrechando: las brechas de adopción en la UE aproximadamente se duplicaron entre 2021 y 2024 [11]. Sin acción deliberada, la promesa individual de la IA se convertirá en un peligro colectivo.
 
 ## Referencias
 
@@ -70,7 +70,7 @@ Los responsables de políticas deben actuar sobre las tres barreras. Los gobiern
 
 [7] Stanford HAI. (2025). "The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
 
-[8] Anthropic. (2024). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
 
 [9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
 

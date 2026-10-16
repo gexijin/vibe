@@ -102,7 +102,7 @@ Los números son útiles, pero los gráficos cuentan la historia de un vistazo.
 - En la terminal de Claude Code, escriba:
 
 ```
-Agrega un gráfico circular a la hoja Gastos que muestre la proporción total de cada categoría en el gasto. Agrega un gráfico de barras a la hoja Resumen que compare Ingresos Totales frente a Gastos Totales para cada mes.
+Agrega un gráfico circular a la hoja Gastos que muestre la proporción total de cada categoría en el gasto, con una porción por categoría (ambos meses combinados). Agrega un gráfico de barras a la hoja Resumen que compare Ingresos Totales frente a Gastos Totales para cada mes.
 ```
 
 - Presione Enter
@@ -133,7 +133,7 @@ Facilite ampliar la hoja sin errores de escritura.
 - En la terminal de Claude Code, escriba:
 
 ```
-Agrega validación de datos a la columna Categoría de la hoja Gastos para que solo acepte valores de una lista desplegable con las categorías existentes, más "Otro". Agrega dos filas vacías al final listas para nuevas entradas.
+Agrega validación de datos a la columna Categoría de la hoja Gastos para que solo acepte valores de una lista desplegable con las categorías existentes, más "Otro". Agrega dos filas vacías justo encima de la fila Total, listas para nuevas entradas, y asegúrate de que el Total, las fórmulas del Resumen, los totales del gráfico circular (con una porción "Otro") y las reglas de color las incluyan. Deja sin color las celdas vacías.
 ```
 
 - Presione Enter
@@ -147,7 +147,7 @@ Antes de hacer commit, revise lo que Claude construyó.
 - En Spreadsheet Viewer, revise las tres hojas: Ingresos, Gastos y Resumen
 - No necesita entender cada fórmula, pero hágase una idea de la estructura
 - Abra GitHub Desktop
-- Verá `budget.xlsx` listado como archivo modificado
+- Verá `budget.xlsx` listado como archivo modificado (es posible que también vea scripts auxiliares que Claude escribió, como un archivo `.py`; también puede hacer commit de ellos)
 - En el campo **Summary** en la parte inferior izquierda, escriba:
 
 ```

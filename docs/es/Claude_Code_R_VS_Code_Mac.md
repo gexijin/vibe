@@ -18,7 +18,7 @@ Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere qu
 
 - Tutorial [R en VS Code](./R_Coding_VS_Code_Guide) completado - R debe funcionar en VS Code
 - Tutorial [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) completado - Claude Code CLI instalado
-- Suscripción a Claude Pro/Max o clave de API de Anthropic
+- Un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no incluye Claude Code
 - 20-30 minutos
 
 ## Paso 1: Abra VS Code y Cree un Proyecto de R
@@ -35,20 +35,16 @@ Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere qu
 
 - Haga clic en el ícono de **Extensions** en la barra lateral izquierda (ícono de cuatro cuadrados)
 - En el cuadro de búsqueda, escriba `Claude Code`
-- Encuentre **Claude Code** de Anthropic y haga clic en **Install**
-- Después de la instalación, aparece un ícono de Claude (chispa) en la barra lateral izquierda
-- Haga clic en el ícono de Claude para abrir el panel de chat
-- Haga clic en **Sign in to Claude Code** en el panel de chat
-- Elija su método de autenticación:
-  - **Usuarios de Claude Pro/Max**: Haga clic en **Sign in with Claude.ai**, autorice en el navegador y copie el código de vuelta a VS Code
-  - **Usuarios de clave de API**: Haga clic en **Use API Key** y pegue su clave de API de Anthropic
-- Para pasos detallados de autenticación, consulte la guía [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3)
-- Una vez iniciada la sesión, verá "Ready to help" en el panel de chat
+- Encuentre **Claude Code for VS Code** de Anthropic y haga clic en **Install**
+- Después de la instalación, haga clic en **✻ Claude Code** en la barra de estado, en la parte inferior derecha de la ventana, para abrir el panel de Claude (cuando tenga un archivo abierto, también puede usar el ícono Spark en la parte superior derecha del editor)
+- Haga clic en **Sign in** y termine de iniciar sesión con su cuenta de Claude en el navegador que se abre
+- Si usa una clave de API en su lugar, configúrela como se muestra en [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3, Opción B) y luego cierre VS Code y vuelva a abrirlo
+- Una vez iniciada la sesión, verá una lista de verificación **Learn Claude Code**. Puede cerrarla con la X
 
 ## Paso 3: Cree un Script de R Inicial Manualmente
 
-- Haga clic en **File > New File** en la barra de menú
-- Haga clic en **Select a language** y escriba `R`, luego seleccione **R**
+- Haga clic en **File > New File...** en la barra de menú
+- En la lista que aparece en la parte superior de la ventana, elija **R Document**
 - Guarde el archivo haciendo clic en **File > Save**, nómbrelo `iris_analysis.R`
 - Escriba este código:
 
@@ -65,7 +61,7 @@ summary(iris)
 
 ## Paso 4: Pida a Claude que Agregue un Gráfico de Dispersión
 
-- Haga clic en el ícono de **Claude** en la barra lateral izquierda para abrir el panel de chat
+- Haga clic en el ícono Spark en la parte superior derecha del editor (o en **✻ Claude Code** en la barra de estado) para abrir el panel de Claude
 - En el cuadro de chat en la parte inferior, escriba:
 
 ```
@@ -73,8 +69,8 @@ Agrega código a iris_analysis.R para crear un gráfico de dispersión de longit
 ```
 
 - Presione Enter para enviar
-- Claude lee su archivo y propone cambios: verá una diferencia mostrando el nuevo código a agregar
-- Haga clic en **Accept** para aplicar los cambios
+- Claude lee su archivo y lo edita: el código nuevo aparece en `iris_analysis.R`
+- Si Claude muestra una diferencia y pide permiso, acepte el cambio
 - El código de ggplot2 aparece en su archivo
 - Si no tiene ggplot2 instalado, ejecute `install.packages("ggplot2")` en la terminal de R
 
@@ -82,7 +78,7 @@ Agrega código a iris_analysis.R para crear un gráfico de dispersión de longit
 
 - Seleccione todo el código en `iris_analysis.R`
 - Presione `Ctrl+Enter` (Windows/Linux) o `Cmd+Enter` (Mac)
-- Aparece un gráfico de dispersión en una ventana de gráficos separada
+- Aparece un gráfico de dispersión en una pestaña de gráficos dentro de VS Code
 - Debería ver puntos coloreados por especie (setosa, versicolor, virginica)
 
 ## Paso 6: Pida a Claude que Refine el Gráfico
@@ -95,7 +91,7 @@ Elimina el título. Cambia el tipo de marcador según la especie. Usa el tema cl
 
 - Presione Enter
 - Claude muestra los cambios de código actualizados
-- Haga clic en **Accept**
+- Si se le pide, acepte el cambio
 - Ejecute el código actualizado nuevamente: seleccione todo y presione `Ctrl+Enter` / `Cmd+Enter`
 - El gráfico ahora muestra diferentes formas de marcadores por especie, sin título y con el tema clásico
 
@@ -109,7 +105,7 @@ Agrega código para realizar un análisis de componentes principales (PCA) sobre
 
 - Presione Enter
 - Claude agrega código de PCA a su script
-- Haga clic en **Accept**
+- Si se le pide, acepte el cambio
 - Ejecute todo el código: seleccione todo y presione `Ctrl+Enter` / `Cmd+Enter`
 - Aparece un gráfico de PCA mostrando las muestras proyectadas en PC1 y PC2, coloreadas por especie
 
@@ -123,7 +119,7 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios dond
 
 - Presione Enter
 - Claude revisa el código y sugiere comentarios explicando cada sección
-- Haga clic en **Accept**
+- Si se le pide, acepte el cambio
 - Su script ahora tiene comentarios claros explicando la carga de datos, la visualización y el análisis de PCA
 
 ## Próximos Pasos
@@ -138,9 +134,9 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios dond
 
 - **La extensión de Claude no se muestra** - Reinicie VS Code después de la instalación. Haga clic en **View > Extensions** para verificar que esté instalada.
 - **Error "Cannot read R file"** - Asegúrese de haber guardado el archivo con la extensión `.R`. Claude necesita archivos guardados para leerlos.
-- **Error de autenticación** - Verifique que su suscripción a Claude Pro/Max esté activa o que su clave de API sea válida. Consulte [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) para solucionar problemas de autenticación.
+- **Error de autenticación** - Verifique que su plan de pago de Claude o su cuenta de Anthropic Console esté activa. Consulte [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) para solucionar problemas de autenticación.
 - **ggplot2 no encontrado** - Instálelo en la terminal de R: `install.packages("ggplot2")`. Espere a que se complete la instalación antes de ejecutar el código.
-- **Los cambios de código no se aplican** - Asegúrese de hacer clic en **Accept** en la diferencia. Si no funciona, intente copiar manualmente el código sugerido por Claude.
+- **Los cambios de código no se aplican** - Si Claude pidió permiso, asegúrese de haber aceptado el cambio. Si no funciona, intente copiar manualmente el código sugerido por Claude.
 
 ## Resumen del Flujo de Trabajo
 

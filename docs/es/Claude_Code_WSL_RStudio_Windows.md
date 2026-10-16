@@ -87,7 +87,7 @@ summary(iris)
   claude
   ```
 
-Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
+Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](./Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code. Si Claude Code le pregunta si confía en los archivos de esta carpeta, elija **Yes** y presione Enter.
 
 ## Paso 8: Solicitar a Claude un Gráfico de Dispersión
 
@@ -97,7 +97,7 @@ Si Claude Code es lento o no responde, simplemente espere a que se inicialice. L
 Agrega código a iris.R para crear un gráfico de dispersión de longitud de sépalo vs. ancho, coloreado por especie. Usa ggplot2.
 ```
 - Claude Code leerá su archivo `iris.R` y agregará el código de visualización
-- Cuando se le solicite, otorgue permiso a Claude para editar el archivo iris.R seleccionando la opción apropiada
+- Si Claude le pide permiso para editar `iris.R`, elija **Yes** (use las teclas de flecha y luego presione Enter)
 - Espere a que Claude termine (verá un mensaje de confirmación)
 
 
@@ -105,7 +105,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 
 - Vuelva a RStudio (haga clic en la ventana de RStudio)
 - Es posible que vea un aviso indicando que el archivo ha cambiado - haga clic en **Yes** para recargarlo
-- Si no aparece ningún aviso, haga clic en **File > Reopen with Encoding > UTF-8**
+- Si el código nuevo no aparece, haga clic en **File > Reopen with Encoding...**, elija **UTF-8** y haga clic en **OK**
 - Resalte todo el código y haga clic en **Run**
 - Aparece un gráfico de dispersión en el panel **Plots** (inferior derecho)
 - Si obtiene un error sobre ggplot2, instálelo escribiendo `install.packages("ggplot2")` en el panel Console
@@ -157,7 +157,7 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
   ```
   Crea un nuevo archivo R Markdown para este análisis. Guárdalo como iris_report.Rmd
   ```
-- Claude le pedirá permiso para crear este archivo
+- Si Claude le pide permiso para crear este archivo, elija **Yes**
 - Claude creará un nuevo archivo `.Rmd` en su carpeta de proyecto
 
 
@@ -167,16 +167,17 @@ Agrega código a iris.R para crear un gráfico de dispersión de longitud de sé
 - Haga clic en **File > Open File...**
 - Seleccione `iris_report.Rmd` y haga clic en **Open**
 - Haga clic en el botón **Knit** (con un icono de ovillo de lana) en la parte superior del panel de script
+- Si RStudio indica que se requieren paquetes como **rmarkdown**, haga clic en **Install** (o **Yes**) y espere a que termine; luego haga clic en **Knit** de nuevo
 - RStudio generará un informe HTML
 - El informe se abre en una nueva ventana mostrando su análisis completo con texto narrativo
 - El archivo HTML se guarda en su carpeta de proyecto
 
 ## Solución de Problemas
 
-- **RStudio no muestra los cambios en el archivo** - Haga clic en **File > Reopen with Encoding > UTF-8** para recargar el archivo manualmente.
-- **"claude: command not found"** - Asegúrese de haber completado la guía de instalación. Intente abrir una nueva ventana de PowerShell.
+- **RStudio no muestra los cambios en el archivo** - Haga clic en **File > Reopen with Encoding...**, elija **UTF-8** y haga clic en **OK** para recargar el archivo manualmente.
+- **"The term 'claude' is not recognized"** - Asegúrese de haber completado la guía de instalación. Cierre PowerShell y abra una ventana nueva; luego inténtelo de nuevo.
 - **Los gráficos no aparecen** - Asegúrese de que ggplot2 esté instalado. Ejecute `install.packages("ggplot2")` en la Console de RStudio si es necesario.
-- **Error: "cannot change working directory"** - Su ruta de Windows contiene espacios. En el Paso 6, envuelva la ruta entre comillas: `cd "~\Documents\Su Nombre\test_claude"`
+- **"Cannot find path ... because it does not exist" en el Paso 6** - Es posible que su proyecto esté en otra carpeta. En RStudio, la ruta en la parte superior del panel **Files** muestra dónde está `test_claude`. Si OneDrive hace copia de seguridad de su carpeta Documents, pruebe `cd ~\OneDrive\Documents\test_claude`. Si la ruta contiene espacios, enciérrela entre comillas, por ejemplo: `cd "C:\Users\Su Nombre\OneDrive\Documents\test_claude"`
 - **Claude Code es lento en la primera solicitud** - Espere 30-60 segundos para que Claude se inicialice. Las solicitudes posteriores serán más rápidas.
 - **¿Usa WSL?** - Si configuró la ruta opcional de WSL/Ubuntu, abra la aplicación **Ubuntu** en lugar de PowerShell en los Pasos 5-16 y navegue a su proyecto con `cd /mnt/c/Users/SuNombreDeUsuario/Documents/test_claude`
 

@@ -23,16 +23,17 @@ Desea escribir código Python pero no está seguro de qué editor usar, o busca 
 
 ## Paso 1: Instalar Python
 
-Necesita Python 3.8 o superior para la mejor compatibilidad con paquetes modernos.
+Necesita Python 3.11 o superior (lo mejor es la versión más reciente de python.org) para que se instalen las versiones más nuevas de paquetes como pandas y Streamlit.
 
 - **Windows**:
-  - Descargue la última versión de Python desde [python.org](https://www.python.org/downloads/)
+  - Vaya a [python.org/downloads/windows](https://www.python.org/downloads/windows/) y, debajo de la versión más reciente de Python 3, haga clic en **Windows installer (64-bit)** (no en el "install manager")
   - Ejecute el instalador
   - **Marque la casilla "Add python.exe to PATH"** antes de hacer clic en Install Now
-  - Anote la ubicación de instalación (típicamente `C:\Users\YourName\AppData\Local\Programs\Python\Python312`)
+  - Anote la ubicación de instalación (típicamente `C:\Users\YourName\AppData\Local\Programs\Python\Python312`; el número coincide con su versión de Python)
 
 - **macOS**:
   - Descargue desde [python.org](https://www.python.org/downloads/) y ejecute el instalador
+  - Cuando termine el instalador de python.org, abra **Finder > Applications > Python 3.x** y haga doble clic en **Install Certificates.command** (de lo contrario, cargar datos desde internet en el Paso 7 falla con `CERTIFICATE_VERIFY_FAILED`)
   - O use Homebrew: abra Terminal y escriba `brew install python`
   - Ruta de Homebrew: `/opt/homebrew/bin/python3` (Apple Silicon) o `/usr/local/bin/python3` (Intel)
 
@@ -55,7 +56,7 @@ La extensión Python incluye soporte para depuración, IntelliSense, formateo de
 
 - Cree una nueva carpeta en su computadora (por ejemplo, `my-python-project`)
 - En VS Code, haga clic en **File > Open Folder** y seleccione su nueva carpeta
-- Haga clic en **File > New File** en el menú superior
+- Haga clic en **File > New File...** en el menú superior. Aparece una lista en la parte superior de la ventana: elija **Python File**
 - Guarde el archivo como `analysis.py` haciendo clic en **File > Save**
 
 ## Paso 4: Seleccionar el Intérprete de Python
@@ -86,7 +87,7 @@ Verá `(.venv)` en el prompt de su terminal cuando el entorno esté activo.
 
 - Abra una nueva terminal en VS Code haciendo clic en **View > Terminal**
 - La terminal debería mostrar `(.venv)` indicando que su entorno virtual está activo
-- Instale paquetes escribiendo estos comandos:
+- Instale paquetes escribiendo este comando:
 
 ```bash
 pip install pandas matplotlib streamlit
@@ -129,14 +130,14 @@ plt.show()
 ## Paso 8: Ejecutar Código Python Interactivamente
 
 - Con `analysis.py` abierto, haga clic en el botón **▶ Run Python File** en la esquina superior derecha
-- O haga clic derecho en el editor y seleccione **Run Python File in Terminal**
+- O haga clic derecho en el editor y seleccione **Run Python > Run Python File in Terminal**
 - Observe la salida en el panel de terminal
 - Aparecerá una ventana de histograma mostrando su gráfico
 - También puede seleccionar líneas específicas y presionar `Shift+Enter` para ejecutar solo esas líneas en una sesión interactiva de Python
 
 ## Paso 9: Crear una Aplicación Simple de Streamlit
 
-- Cree un nuevo archivo: **File > New File**
+- Cree un nuevo archivo: haga clic en **File > New File...** y luego elija **Python File** en la lista de la parte superior de la ventana
 - Guárdelo como `app.py`
 - Escriba este código:
 
@@ -177,6 +178,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- La primera vez que ejecute Streamlit, le pedirá un `Email:` en la terminal. Simplemente presione `Enter` para omitirlo
 - La aplicación se abrirá en su navegador (generalmente en `http://localhost:8501`)
 - Mueva el control deslizante en la barra lateral y observe la actualización instantánea del histograma
 - Presione `Ctrl+C` en la terminal para detener la aplicación
@@ -190,6 +192,7 @@ streamlit run app.py
 - Un popup mostrará la firma de la función, parámetros y documentación
 - Intente escribir `import ` y observe las sugerencias de nombres de paquetes de VS Code
 - Cuando escribe una llamada a función, IntelliSense muestra sugerencias de parámetros
+- Cuando termine, borre las líneas incompletas que escribió en este paso (como `iris.gr` e `import `) y guarde el archivo, para que el script se ejecute sin errores en el siguiente paso
 
 ## Paso 11: Probar la Depuración
 
@@ -220,7 +223,9 @@ streamlit run app.py
 
 - **pip install falla**: Asegúrese de que su entorno virtual esté activado (busque `(.venv)` en la terminal). En Linux, podría necesitar instalar `python3-venv` primero. En Windows, verifique que el antivirus no bloquee pip.
 
-- **La aplicación Streamlit no se ejecuta**: Verifique que streamlit esté instalado en su entorno virtual (`pip list | grep streamlit`). Revise la terminal para mensajes de error. Asegúrese de que ninguna otra aplicación use el puerto 8501.
+- **`SSL: CERTIFICATE_VERIFY_FAILED` en Mac**: Abra **Finder > Applications > Python 3.x** y haga doble clic en **Install Certificates.command**; luego vuelva a ejecutar el script.
+
+- **La aplicación Streamlit no se ejecuta**: Verifique que streamlit esté instalado en su entorno virtual (`pip show streamlit`). Revise la terminal para mensajes de error. Asegúrese de que ninguna otra aplicación use el puerto 8501.
 
 ## Resumen del Flujo de Trabajo
 

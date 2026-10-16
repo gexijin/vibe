@@ -40,12 +40,13 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 ## Paso 2: Copiar la Configuración de Docker
 
 - Vaya a https://github.com/gexijin/vibe
-  - **Nota para usuarios de ARM64 (Apple Silicon Macs):** Use https://github.com/gexijin/vibe/tree/ARM64 en su lugar
+  - **Nota para Macs con Apple Silicon:** La versión principal funciona en Apple Silicon mediante la emulación integrada de Docker Desktop. Funciona, pero la primera construcción y el propio R son más lentos.
 - Haga clic en **Code** y luego en **Download ZIP**
-- Abra File Explorer (Windows) o Finder (Mac)
-- Descomprima el archivo en la carpeta Descargas (Downloads)
-- Navegue a su carpeta del proyecto vibe (por ejemplo, `Documents/vibe`)
+- Abra File Explorer (Windows) o Finder (Mac) y vaya a su carpeta **Downloads** (Descargas)
+- Descomprima el archivo: en Windows, haga clic derecho sobre él y elija **Extract All**; en Mac, haga doble clic en él
+- Abra la carpeta descomprimida `vibe-main`. En Windows puede contener otra carpeta con el mismo nombre; abra esa
 - Encuentre la carpeta `.devcontainer`
+  - En Mac, Finder oculta las carpetas cuyo nombre empieza con un punto. Presione **Cmd+Shift+.** (punto) para mostrarlas
 - Copie la carpeta completa (contiene `Dockerfile` y `devcontainer.json`)
 - Navegue a su nueva carpeta `nba-dashboard`
 - Pegue la carpeta `.devcontainer` allí
@@ -64,10 +65,10 @@ Su carpeta `nba-dashboard` ahora debería contener:
 - Haga clic en **Select Folder** (Windows) o **Open** (Mac)
 - Aparece una notificación en la esquina inferior derecha: **Folder contains a Dev Container configuration file**
 - Haga clic en **Reopen in Container**
-- Si no ve la notificación, haga clic en el ícono verde en la esquina inferior izquierda y seleccione **Reopen in Container**
-- VS Code construye el contenedor Docker (toma 3-5 minutos la primera vez)
+- Si no ve la notificación, haga clic en el ícono **><** en la esquina inferior izquierda y seleccione **Reopen in Container**
+- VS Code construye el contenedor Docker (toma 5-10 minutos la primera vez)
 - Observe la notificación de progreso que muestra los pasos de construcción
-- Cuando se complete, el ícono verde muestra **Dev Container: R in Docker**
+- Cuando se complete, el ícono **><** en la esquina inferior izquierda muestra **Dev Container: R in Docker (AMD64)**
 
 ## Paso 4: Iniciar Claude Code
 
@@ -81,8 +82,11 @@ claude
 
 - Se abre una ventana del navegador para autenticación
 - Haga clic en **Continue with Google** o **Continue with Email**
-- Inicie sesión con su cuenta de Claude (o cree una)
+- Inicie sesión con su cuenta de Claude. Claude Code requiere un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no lo incluye
+- Si el navegador muestra un código en lugar de indicar que ya terminó, copie el código, vuelva a la terminal de VS Code, péguelo en el prompt `Paste code here if prompted` y presione Enter
+- Si no se abre ninguna ventana del navegador, presione `c` para copiar el enlace de inicio de sesión y péguelo en su navegador
 - Después de que la autenticación tenga éxito, regrese a la terminal de VS Code
+- Si se le pregunta si confía en los archivos de esta carpeta, elija **Yes**
 - Verá el mensaje de bienvenida de Claude
 
 Claude Code ahora está ejecutándose y listo para sus solicitudes.
@@ -94,7 +98,7 @@ Ahora comienza la parte divertida. En lugar de buscar documentación, simplement
 - En la terminal de Claude Code, escriba:
 
 ```
-Instala el paquete hoopR y carga las estadísticas actuales de jugadores de la NBA. Muéstrame los 10 mejores jugadores por total de puntos anotados esta temporada. Muéstralo como una tabla bien formateada.
+Instala el paquete hoopR y carga las estadísticas de jugadores de la NBA de la temporada más reciente que tenga datos. Muéstrame los 10 mejores jugadores por total de puntos anotados. Muéstralo como una tabla bien formateada.
 ```
 
 - Presione Enter
@@ -124,7 +128,7 @@ Muéstrame qué columnas están disponibles en estos datos de la NBA. Luego crea
 
 - Presione Enter
 - Claude explora el conjunto de datos y le muestra estadísticas interesantes
-- Observe la salida para ver las columnas disponibles como: player_name, team, points, assists, rebounds, field_goal_percentage, etc.
+- Observe la salida para ver las columnas disponibles, como nombre del jugador, equipo, puntos, asistencias y rebotes
 
 Esta exploración le ayuda a decidir qué incluir en su panel.
 
@@ -148,12 +152,11 @@ Crea una aplicación Shiny en un archivo llamado app.R que muestre una tabla int
 
 Pruebe su panel para ver si funciona.
 
-- Mire en la parte superior derecha del editor de VS Code (donde está abierto `app.R`)
+- En el Explorador de VS Code (barra lateral izquierda), haga clic en `app.R` para abrirlo
+- Mire en la parte superior derecha del editor
 - Encuentre el botón **▶** con una flecha desplegable
 - Haga clic en el desplegable y seleccione **Run Shiny App**
-- La aplicación se inicia y aparece una notificación: **Open in Browser**
-- Haga clic en **Open in Browser**
-- El panel de la NBA se abre en su navegador web
+- La aplicación se inicia y el panel se abre en una pestaña de vista previa dentro de VS Code (para usar su navegador habitual, abra la pestaña **Ports** en la parte inferior y haga clic en el icono del globo junto al puerto)
 - Intente mover el deslizador de puntos: la tabla se filtra en tiempo real
 - Desplácese por los datos de jugadores
 - Haga commit de los cambios si la aplicación funciona
@@ -173,7 +176,7 @@ Agrega un gráfico de barras debajo de la tabla mostrando los 15 mejores jugador
 - Presione Enter
 - Claude actualiza `app.R` con código de visualización
 - Haga clic en **Run Shiny App** nuevamente para recargar la aplicación
-- Actualice su navegador
+- Si la vista previa no cambia, haga clic en la flecha de recarga en la parte superior de la pestaña de vista previa (o actualice su navegador)
 - Ahora ve un gráfico de barras colorido y un gráfico de dispersión
 - Mueva el deslizador: todas las visualizaciones se actualizan juntas
 
@@ -191,7 +194,7 @@ Agrega un menú desplegable para filtrar jugadores por equipo. Colócalo en la p
 
 - Presione Enter
 - Claude agrega el filtro de equipo
-- Actualice su navegador
+- Haga clic en la flecha de recarga en la parte superior de la pestaña de vista previa (o actualice su navegador)
 - Pruebe el menú desplegable: seleccione diferentes equipos como Lakers, Warriors, Celtics
 - Observe cómo la tabla y los gráficos se actualizan para cada equipo
 
@@ -205,15 +208,15 @@ Antes de hacer commit, revise lo que Claude construyó.
 - Revise el código: observe el diseño de la interfaz, la lógica del servidor y el código de gráficos
 - No necesita entender cada línea, pero obtenga una idea de la estructura
 - Abra GitHub Desktop
-- Verá `app.R` listado como un archivo nuevo
-- El panel derecho muestra todo el código en verde (adiciones nuevas)
+- Verá `app.R` listado (como archivo nuevo, o como modificado si ya hizo commit en un paso anterior)
+- El panel derecho muestra el código agregado en verde
 - En el campo **Summary** en la parte inferior izquierda, escriba:
 
 ```
 Crear panel NBA con filtro de equipo y visualizaciones
 ```
 
-- Haga clic en **Commit to main**
+- Haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 1 file to main**)
 - Haga clic en **Push origin** para respaldar en GitHub
 
 ¡Ha guardado su primera versión funcional!
@@ -227,7 +230,7 @@ Vibe coding brilla cuando itera. Intente agregar funcionalidades describiéndola
 - "Agrega un cuadro de búsqueda de jugadores para que pueda escribir el nombre de un jugador y saltar a él"
 - "Muestra los logos de los equipos junto a los nombres de equipo en el menú desplegable"
 - "Agrega un gráfico de líneas mostrando la tendencia de puntos por partido para el equipo seleccionado"
-- "Haz que el gráfico de barras sea ordenable haciendo clic en los encabezados de columna"
+- "Haz que la tabla sea ordenable haciendo clic en los encabezados de columna"
 - "Agrega información emergente al gráfico de dispersión mostrando nombres de jugadores cuando pase el cursor"
 
 Después de cada funcionalidad exitosa:
