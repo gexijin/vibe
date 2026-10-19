@@ -44,6 +44,7 @@ Créer une application de minuteur simple avec Claude Code et suivre toutes les 
   - **Description :** `A timer app built with Claude Code`
   - **Local Path :** Cliquez sur **Choose...** et choisissez votre dossier **Documents** (par défaut, c'est un dossier `GitHub` à l'intérieur de Documents, donc modifiez-le)
   - **Cochez** "Initialize this repository with a README"
+- Si GitHub Desktop indique que le dossier « appears to be a Git repository » (semble être un dépôt Git), c'est que vous avez déjà un dossier `test_claude` créé lors du tutoriel Git. Renommez cet ancien dossier (par exemple en `test_claude_old`) dans l'Explorateur de fichiers ou le Finder, puis réessayez
 - Cliquez sur **Create Repository**
 - Cliquez sur **Publish repository** en haut
 - Cliquez sur **Publish Repository**
@@ -52,7 +53,7 @@ Vous avez maintenant un projet local et une sauvegarde cloud sur GitHub.
 
 ## Étape 2 : Demander à Claude de Créer l'Application de Minuteur
 
-- Ouvrez votre **terminal**
+- Ouvrez votre terminal : **PowerShell** sous Windows, **Terminal** sur Mac
 - Naviguez vers votre projet :
   ```
   cd ~/Documents/test_claude
@@ -65,7 +66,7 @@ Vous avez maintenant un projet local et une sauvegarde cloud sur GitHub.
 
 Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
-- Tapez cette requête :
+- Copiez et collez toute cette demande (coller garde toutes les lignes ensemble ; appuyer sur Entrée l'enverrait trop tôt) :
 
   ```
   Crée une application de minuteur simple dans un seul fichier appelé timer.html.

@@ -92,6 +92,8 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `Install_CLAUDE_Code_Win.md` - Installation Windows via PowerShell natif (WSL2 optionnel)
 - `Install_Claude_Code_MacOS.md` - Installation macOS avec Terminal
 - `Install_Claude_Desktop_App.md` - Installation de l'application de discussion Claude Desktop (Windows et Mac, alternative facultative à Claude Code)
+- `workshop_prep.md` - Préparation de l'atelier sous Windows (Git, Docker Desktop, VS Code, Google Antigravity)
+- `workshop_prep_linux.md` - Préparation de l'atelier sous Ubuntu Linux (mêmes outils)
 
 ### Configuration de VS Code
 - `VS_Code_Getting_Started.md` - Bases complètes de VS Code pour débutants
@@ -106,6 +108,8 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `Claude_Code_Git_Mac.md` - Bases de Git et contrôle de version local sur Mac
 - `Github_desktop.md` - GitHub Desktop pour débutants
 - `GitHub_Desktop_Claude_Code_Workflow.md` - Flux de travail intégré Claude Code + GitHub
+- `Git_Branching_GitHub_Desktop_Guide.md` - Branches et fusion dans GitHub Desktop en construisant un tableau de bord de données
+- `React_First_App_Windows.md` - Construction d'un premier tableau de bord React sous Windows
 
 ### Guides de Codage R
 - `R_Coding_VS_Code_Guide.md` - Environnement de développement R dans VS Code
@@ -130,6 +134,7 @@ Les tutoriels suivent une progression affichée dans le graphique interactif sur
 - `Create_subagents.md` - Construction de sous-agents spécialisés pour tâches complexes
 - `Reuse_Prompts_via_Slash_Commands.md` - Création de commandes slash réutilisables
 - `Medical_Research_Skill.md` - Utilisation de Claude Code pour la recherche médicale
+- `Building_Tutorial_Library_with_Slash_Commands.md` - Comment les commandes slash ont servi à construire cette bibliothèque de tutoriels
 
 ### Projets de Recherche et Rédaction
 - `Writing_Research_Paper_Claude_Code.md` - Flux de travail complet de rédaction académique
@@ -196,19 +201,16 @@ Tous les tutoriels suivent ces principes :
 
 ## Traductions
 
-Des traductions complètes sont disponibles en trois langues :
+Les traductions se trouvent dans un dossier par langue, avec les mêmes noms de fichiers que les originaux anglais :
 
-### Japonais (`ja/`)
-Tous les tutoriels anglais ont des versions japonaises correspondantes avec la même structure de noms de fichiers.
+- Allemand (`de/`)
+- Espagnol (`es/`)
+- Français (`fr/`)
+- Hindi (`hi/`)
+- Japonais (`ja/`)
+- Chinois simplifié (`zh/`)
 
-### Chinois (`zh/`)
-Tous les tutoriels anglais ont des versions chinoises simplifiées correspondantes avec la même structure de noms de fichiers.
-
-### Espagnol (`es/`)
-Tous les tutoriels anglais ont des versions espagnoles correspondantes avec la même structure de noms de fichiers.
-
-### Hindi (`hi/`)
-Tous les tutoriels anglais ont des versions hindi correspondantes avec la même structure de noms de fichiers.
+Quelques pages anglaises plus récentes (par exemple `Git_Branching_GitHub_Desktop_Guide.md`, `React_First_App_Windows.md`, `workshop_prep.md` et `workshop_prep_linux.md`) ne sont pas encore traduites dans toutes les langues.
 
 Chaque dossier de traduction inclut :
 - Tous les guides d'installation
@@ -235,20 +237,15 @@ docs/
 ├── _layouts/                               # Modèles HTML
 │   └── default.html
 ├── assets/                                 # Images et fichiers statiques
-├── es/                                     # Traductions espagnoles
-│   ├── index.html
-│   └── [tous les tutoriels en espagnol]
-├── ja/                                     # Traductions japonaises
-│   ├── index.html
-│   └── [tous les tutoriels en japonais]
-├── zh/                                     # Traductions chinoises
-│   ├── index.html
-│   └── [tous les tutoriels en chinois]
+├── _data/                                  # Fichiers de données du site
+├── de/ es/ fr/ hi/ ja/ zh/                 # Traductions (chacune a son propre index.html)
 │
 ├── What_Is_Anthropic_And_Claude.md
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md
 ├── Install_Claude_Desktop_App.md
+├── workshop_prep.md
+├── workshop_prep_linux.md
 ├── VS_Code_Getting_Started.md
 ├── Claude_Code_in_VS_Code_Win.md
 ├── Claude_Code_in_VS_Code_Mac.md
@@ -257,6 +254,8 @@ docs/
 ├── Claude_Code_Git_Mac.md
 ├── Github_desktop.md
 ├── GitHub_Desktop_Claude_Code_Workflow.md
+├── Git_Branching_GitHub_Desktop_Guide.md
+├── React_First_App_Windows.md
 │
 ├── R_Coding_VS_Code_Guide.md
 ├── R_Coding_Docker_Guide.md
@@ -277,6 +276,7 @@ docs/
 ├── Create_subagents.md
 ├── Reuse_Prompts_via_Slash_Commands.md
 ├── Medical_Research_Skill.md
+├── Building_Tutorial_Library_with_Slash_Commands.md
 ├── Writing_Research_Paper_Claude_Code.md
 └── example_paper.md
 ```

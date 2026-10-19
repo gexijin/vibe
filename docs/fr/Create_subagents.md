@@ -146,7 +146,7 @@ Le sous-agent s'activera automatiquement en fonction de votre description.
 
 ## Étape 7 : Observer le Sous-Agent Travailler
 
-Pendant que le sous-agent s'exécute, vous le verrez :
+Le sous-agent s'exécute en arrière-plan : vous verrez donc son nom dans un petit panneau sous l'invite, plutôt que chacune de ses étapes. Pour le suivre, tapez `/tasks`, sélectionnez **stock-picker** avec les touches fléchées, puis appuyez sur **Entrée**. En coulisses, il va :
 1. **Invoquer le skill deux fois** - Appeler le skill stock-report une fois pour Apple, puis pour Google
 2. **Collecter des données** - Chaque appel du skill recherche sur le web et génère un rapport d'entreprise
 3. **Évaluer les entreprises** - Note chaque catégorie et les combine en une note globale

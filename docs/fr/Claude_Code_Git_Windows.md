@@ -257,7 +257,7 @@ Rappelez-vous : Testez après chaque fonctionnalité, committez après chaque su
 ## Dépannage
 
 - **Erreur "not a git repository" :** Assurez-vous d'être dans le dossier test_claude (`cd ~\Documents\test_claude`, ou `cd ~\OneDrive\Documents\test_claude` si vous avez utilisé le chemin OneDrive à l'Étape 4)
-- **Impossible de trouver timer.html dans Windows :** Le fichier est à `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` (ou `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html` si vous avez utilisé le chemin OneDrive à l'Étape 4)
+- **Impossible de trouver timer.html dans Windows :** Le fichier est à `C:\Users\VOTRE_NOM_UTILISATEUR\Documents\test_claude\timer.html` (ou `C:\Users\VOTRE_NOM_UTILISATEUR\OneDrive\Documents\test_claude\timer.html` si vous avez utilisé le chemin OneDrive à l'Étape 4)
 - **Commande `git` introuvable :** Fermez et rouvrez PowerShell après avoir installé Git for Windows pour que le PATH soit mis à jour, puis exécutez à nouveau `git --version`
 - **Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit sur la page, sélectionnez **Inspecter**, cliquez sur l'onglet **Console**), copiez tous les messages d'erreur en rouge, collez-les à Claude
 

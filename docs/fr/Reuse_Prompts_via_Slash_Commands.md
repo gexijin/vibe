@@ -18,7 +18,7 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir complété [Configurer VS Code pour Claude Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Avoir terminé [Configurer VS Code pour Claude Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Un sujet à rechercher (nous utiliserons les rapports boursiers comme exemple)
 - Un éditeur de texte tel que VS Code installé
 - 15-20 minutes
@@ -180,7 +180,7 @@ La même structure de commande recherche maintenant Tesla à la place.
 
 ## Étape 12 : Essayer une Autre Commande Slash (Optionnel)
 
-Si vous avez complété le tutoriel [Rédiger un article de recherche avec Claude Code](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
+Si vous avez terminé le tutoriel [Rédiger un article de recherche avec Claude Code](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
 
 Commencez par effacer la mémoire de Claude pour repartir de zéro :
 
@@ -200,7 +200,7 @@ Deux différences clés :
 
 ## Prochaines Étapes
 
-Maintenant que vous comprenez les commandes slash, créez davantage de commandes personnalisées pour vos workflows :
+Maintenant que vous comprenez les commandes slash, créez davantage de commandes personnalisées pour vos flux de travail :
 
 - **Revue de code :** `/review-code` - Analyser le code pour les bugs et les améliorations
 - **Notes de réunion :** `/meeting-summary` - Générer des résumés de réunion structurés
@@ -212,7 +212,7 @@ Maintenant que vous comprenez les commandes slash, créez davantage de commandes
 - **Les arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
 - **Rapport incomplet :** Demandez à Claude : « continue » ou « ajoute plus de détails à la section [nom de la section] »
 
-## Aperçu du Workflow
+## Aperçu du Flux de Travail
 
 - **Les commandes slash personnalisées** font gagner du temps en transformant des prompts complexes en raccourcis simples
 - **Les arguments** rendent les commandes flexibles pour différentes entrées (symboles boursiers, sujets, fichiers)

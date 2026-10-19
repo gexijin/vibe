@@ -200,7 +200,7 @@ Claude Code installé via l'installateur natif se met à jour automatiquement en
 
 ## Prochaines étapes
 - [Premiers pas avec VS Code](./VS_Code_Getting_Started.md) - Apprenez à utiliser VS Code, un éditeur de code populaire
-- [Claude Code dans VS Code (Mac)](./Claude_Code_in_VS_Code_Mac.md) - Exécutez Claude Code dans VS Code
+- [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md) - Exécutez Claude Code dans VS Code
 - [Rédiger un article de recherche avec Claude Code](./Writing_Research_Paper_Claude_Code.md) - Utilisez Claude Code pour la rédaction académique
 
 ## Comment ouvrir Terminal à nouveau
@@ -255,7 +255,7 @@ Vous pouvez également utiliser d'autres applications de terminal telles que :
 - Warp (terminal moderne avec des fonctionnalités IA)
 - Hyper (terminal multiplateforme)
 
-Claude Code fonctionne avec toutes !
+Claude Code fonctionne avec toutes ces applications !
 
 ## Besoin d'aide ?
 

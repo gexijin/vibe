@@ -36,7 +36,7 @@ Vous disposez de RStudio sur Windows pour exécuter du code R et de Claude Code 
 - Pour **Directory name**, tapez : `test_claude`
 - Cliquez sur **Browse** à côté de "Create project as subdirectory of:"
 - Naviguez vers votre dossier **Documents**
-- Cliquez sur **Select Folder**
+- Cliquez sur **Open** (dans certaines versions de RStudio, ce bouton s'appelle **Select Folder**)
 - Cliquez sur **Create Project**
 - RStudio crée le projet et bascule vers celui-ci
 
@@ -175,9 +175,9 @@ Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. large
 ## Dépannage
 
 - **RStudio n'affiche pas les modifications de fichier** - Cliquez sur **File > Reopen with Encoding...**, choisissez **UTF-8**, puis cliquez sur **OK** pour recharger manuellement le fichier.
-- **"The term 'claude' is not recognized"** - Assurez-vous d'avoir terminé le guide d'installation. Fermez PowerShell et ouvrez une nouvelle fenêtre, puis réessayez.
+- **"The term 'claude' is not recognized"** (ou « Le terme 'claude' n'est pas reconnu… » sur un Windows en français) - Assurez-vous d'avoir terminé le guide d'installation. Fermez PowerShell et ouvrez une nouvelle fenêtre, puis réessayez.
 - **Les graphiques n'apparaissent pas** - Assurez-vous que ggplot2 est installé. Exécutez `install.packages("ggplot2")` dans la Console RStudio si nécessaire.
-- **"Cannot find path ... because it does not exist" à l'Étape 6** - Votre projet se trouve peut-être dans un autre dossier. Dans RStudio, le chemin affiché en haut du panneau **Files** indique où se trouve `test_claude`. Si votre dossier Documents est sauvegardé par OneDrive, essayez `cd ~\OneDrive\Documents\test_claude`. Si le chemin contient des espaces, encadrez-le avec des guillemets, par exemple : `cd "C:\Users\Votre Nom\OneDrive\Documents\test_claude"`
+- **"Cannot find path ... because it does not exist" (ou « Impossible de trouver le chemin d'accès …, car il n'existe pas » sur un Windows en français) à l'Étape 6** - Votre projet se trouve peut-être dans un autre dossier. Dans RStudio, le chemin affiché en haut du panneau **Files** indique où se trouve `test_claude`. Si votre dossier Documents est sauvegardé par OneDrive, essayez `cd ~\OneDrive\Documents\test_claude`. Si le chemin contient des espaces, encadrez-le avec des guillemets, par exemple : `cd "C:\Users\Votre Nom\OneDrive\Documents\test_claude"`
 - **Claude Code est lent à la première requête** - Attendez 30 à 60 secondes pour que Claude s'initialise. Les requêtes suivantes seront plus rapides.
 - **Vous utilisez WSL ?** - Si vous avez suivi le parcours optionnel WSL/Ubuntu, ouvrez l'application **Ubuntu** au lieu de PowerShell aux Étapes 5 à 16, et naviguez vers votre projet avec `cd /mnt/c/Users/VotreNomUtilisateur/Documents/test_claude`
 

@@ -112,7 +112,7 @@ Le conteneur a R pré-installé avec des packages courants. Exécutons un script
 - Dans l'Explorer de VS Code, naviguez jusqu'à `R/iris_analysis.R`
 - Cliquez pour ouvrir le fichier
 - Vous verrez du code R qui analyse le jeu de données iris
-- Cliquez sur **View > Command Palette**, tapez `R: Create R Terminal` et appuyez sur **Enter**. Un terminal R s'ouvre en bas avec une invite `>` (ce conteneur envoie votre code au terminal que vous utilisez, donc gardez ce terminal R sélectionné)
+- Cliquez sur **View > Command Palette**, tapez `R: Create R Terminal` et appuyez sur **Entrée**. Un terminal R s'ouvre en bas avec une invite `>` (ce conteneur envoie votre code au terminal que vous utilisez, donc gardez ce terminal R sélectionné)
 - Si VS Code propose d'installer le package **sess**, cliquez sur **Yes** (ou **Install bundled sess**) et attendez la fin de l'installation. Il permet à VS Code d'afficher vos graphiques
 - Cliquez de nouveau dans `iris_analysis.R` et sélectionnez la première ligne : `data(iris)`
 - Appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac) pour l'exécuter

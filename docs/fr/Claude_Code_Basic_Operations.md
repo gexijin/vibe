@@ -46,7 +46,7 @@ cd data_projects
 - Visitez [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) dans votre navigateur web
 - Cliquez sur le bouton vert **Code** près du coin supérieur droit
 - Cliquez sur **Download ZIP**
-- Extrayez le fichier ZIP dans votre dossier Téléchargements. GitHub nomme le dossier extrait **data_projects-main** — renommez-le en **data_projects** pour qu'il corresponde au reste de ce tutoriel. Sous Windows, **Extract All** peut créer un dossier à l'intérieur d'un dossier (data_projects-main → data_projects-main). Ouvrez-le : si vous ne voyez qu'un autre dossier **data_projects-main**, déplacez ce dossier intérieur dans Téléchargements et renommez-le en **data_projects**.
+- Extrayez le fichier ZIP dans votre dossier Téléchargements. GitHub nomme le dossier extrait **data_projects-main** — renommez-le en **data_projects** pour qu'il corresponde au reste de ce tutoriel. Sous Windows, **Extraire tout** peut créer un dossier à l'intérieur d'un dossier (data_projects-main → data_projects-main). Ouvrez-le : si vous ne voyez qu'un autre dossier **data_projects-main**, déplacez ce dossier intérieur dans Téléchargements et renommez-le en **data_projects**.
 - Dans votre terminal, naviguez vers le dossier extrait :
   ```
   cd ~/Downloads/data_projects
@@ -170,7 +170,7 @@ Explique le code dans @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude lira le notebook et expliquera ce qu'il fait, comment il fonctionne et ce que le code accomplit. Cela revient à ajouter le fichier au contexte.
 
-Si vous travaillez avec Claude Code depuis VS Code et avez l'extension Claude Code installée, vous pouvez ajouter le fichier au contexte simplement en l'ouvrant. Vous verrez `In Nested_Pie_Chart.ipynb` dans le coin inférieur droit de la fenêtre Claude Code. Alors Claude sait que vous parlez de ce fichier.
+Si vous travaillez avec Claude Code depuis VS Code et avez l'extension Claude Code installée, vous pouvez ajouter le fichier au contexte simplement en l'ouvrant. Vous verrez `Nested_Pie_Chart.ipynb` en bas de la zone de saisie de Claude Code. Alors Claude sait que vous parlez de ce fichier.
 
 De plus, vous pouvez sélectionner quelques lignes de code et Claude affichera **3 lines selected**. Vous pouvez demander à Claude d'apporter des modifications rapides à ces lignes ou poser des questions. Par conséquent, je recommande vivement d'utiliser Claude Code depuis VS Code.
 
