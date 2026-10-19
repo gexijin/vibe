@@ -29,7 +29,7 @@ Ya instaló Claude Code en su máquina Windows, ahora necesita un editor visual 
 
 ## Paso 2: Inicie VS Code
 
-- Haga clic en el **botón de Inicio de Windows** (esquina inferior izquierda de su pantalla)
+- Haga clic en el **botón de Inicio de Windows** (el logotipo de Windows en su barra de tareas)
 - Escriba `Visual Studio Code` o `VS Code` en el cuadro de búsqueda
 - Haga clic en **Visual Studio Code** cuando aparezca en los resultados de búsqueda
 - VS Code se abre con una pestaña de bienvenida - puede cerrar esta pestaña
@@ -69,19 +69,19 @@ Escribe un artículo breve explicando por qué a los LLMs les gusta usar el form
 Después de cerrar VS Code, puede volver a su proyecto de estas formas:
 
 - **Opción A:** Abra VS Code, haga clic en **File > Open Recent** y seleccione `test_claude`
-- **Opción B:** Abra **File Explorer**, haga clic derecho en la carpeta `test_claude` y seleccione **Open with Code**
+- **Opción B:** Abra **File Explorer**, haga clic derecho en la carpeta `test_claude` y seleccione **Open with Code** (en Windows 11, haga clic primero en **Show more options**). Esta opción solo aparece si se marcó **Add "Open with Code" action** al instalar VS Code; de lo contrario, use la Opción A
 
 ## Próximos Pasos
 
 - Pida a Claude Code que explique una base de código existente: "Explica qué hace este proyecto"
 - Haga que Claude Code le ayude a escribir nuevas funcionalidades: "Agrega una función que calcule el promedio de una lista"
 - Use Claude Code para corregir errores: "Este código da un error, ¿puedes arreglarlo?"
-- Pruebe la extensión de VS Code de Claude Code para una interfaz visual con diferencias en línea (busque "Claude Code" en Extensions)
+- Pruebe la extensión de Claude Code para obtener un panel de chat visual con diferencias en línea. Ejecutar `claude` en la terminal de VS Code normalmente la instala por usted (si no, busque "Claude Code" en Extensions). Abra cualquier archivo y luego haga clic en el ícono Spark en la parte superior derecha del editor
 
 ## Solución de Problemas
 
-- **Comando `claude` no encontrado** - Ejecute `claude --version` en la terminal de VS Code para verificar si Claude Code está instalado; si no lo está, siga primero el [tutorial de instalación](./Install_CLAUDE_Code_Win.md)
-- **¿Usa WSL?** - Si configuró la ruta opcional de WSL/Ubuntu, instale la extensión **WSL** desde la barra lateral Extensions, haga clic en el icono azul/verde de la esquina inferior izquierda y seleccione **Connect to WSL** antes de abrir la carpeta de su proyecto (accesible en `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
+- **`claude` no se reconoce** - Cierre VS Code por completo (todas las ventanas) y vuelva a abrirlo; luego abra una terminal nueva y pruebe `claude`. Si sigue fallando, ejecute `claude --version` en una ventana normal de PowerShell; si eso también falla, siga primero el [tutorial de instalación](./Install_CLAUDE_Code_Win.md)
+- **¿Usa WSL?** - Si configuró la ruta opcional de WSL/Ubuntu, instale la extensión **WSL** desde la barra lateral Extensions, haga clic en el icono **><** de la esquina inferior izquierda y seleccione **Connect to WSL** antes de abrir la carpeta de su proyecto (accesible en `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`)
 
 ## Resumen del Flujo de Trabajo
 

@@ -27,7 +27,7 @@ Quiere escribir código, pero Notepad o TextEdit le resulta muy limitante. Neces
 - Vaya a [code.visualstudio.com](https://code.visualstudio.com)
 - Haga clic en el botón **Download** (detecta su sistema operativo automáticamente)
 - Ejecute el instalador:
-   - **Windows:** Haga doble clic en el archivo `.exe`, haga clic en **Next** en las indicaciones
+   - **Windows:** Haga doble clic en el archivo `.exe` y haga clic en **Next** en las indicaciones. En la pantalla **Select Additional Tasks**, marque también **Add "Open with Code" action to Windows Explorer directory context menu** para poder abrir carpetas de proyecto desde el Explorador de archivos más adelante
    - **Mac:** Abra el archivo `.dmg`, arrastre VS Code a **Applications**
    - **Linux:** Siga las instrucciones para su gestor de paquetes
 - Inicie VS Code
@@ -49,8 +49,8 @@ Haga clic en el icono **Explorer** (parte superior de la Activity Bar) para ver 
 ## Paso 3: Abra una Carpeta y Explore
 
 - Haga clic en **File** → **Open Folder**
-- Navegue a cualquier carpeta existente en su computadora (por ejemplo, Documents)
-- Haga clic en **Open** (o **Select Folder**)
+- Vaya a su carpeta **Documents** y cree una nueva carpeta vacía para practicar, por ejemplo `vscode_practice` (use el botón **New Folder** de la ventana)
+- Seleccione esa nueva carpeta y luego haga clic en **Open** (o **Select Folder**)
 - Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
 La barra lateral Explorer ahora muestra los archivos de su carpeta:
@@ -61,7 +61,7 @@ La barra lateral Explorer ahora muestra los archivos de su carpeta:
 
 ## Paso 4: Cree un Archivo Markdown
 
-- En Explorer, haga clic en el icono **New File** (página con +)
+- En Explorer, pase el mouse sobre el nombre de la carpeta en la parte superior y luego haga clic en el icono **New File** (página con +) que aparece
 - Nómbrelo `README.md`
 - Agregue este contenido:
 
@@ -124,7 +124,7 @@ Revise Explorer: aparece la carpeta `notes`. La terminal se ejecuta en su carpet
 
 ## Paso 8: Use Agentes de IA en VS Code (Opcional)
 
-VS Code incluye [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat), un asistente de IA que puede explicar, escribir y depurar código.
+VS Code incluye [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat), un asistente de IA que puede explicar, escribir y depurar código.
 
 - Abra el archivo `README.md` (o cualquier otro archivo en su proyecto)
 - Haga clic en **Chat** → **Open Chat** en la barra de título (o presione `Ctrl+Alt+I` en Windows/Linux, `Ctrl+Cmd+I` en Mac)
@@ -134,7 +134,7 @@ VS Code incluye [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot
 
 GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que escriba código nuevo, corrija errores o responda preguntas como "¿Cómo agrego más características?"
 
-**Consejo:** Para [edición en línea](https://code.visualstudio.com/docs/copilot/copilot-chat), resalte código en cualquier archivo y presione `Ctrl+I` (Windows/Linux) o `Cmd+I` (Mac) para pedirle a Copilot que modifique, corrija o explique solo esa sección.
+**Consejo:** Para [edición en línea](https://code.visualstudio.com/docs/chat/inline-chat), resalte código en cualquier archivo y presione `Ctrl+I` (Windows/Linux) o `Cmd+I` (Mac) para pedirle a Copilot que modifique, corrija o explique solo esa sección.
 
 ## Cómo Reabrir Su Proyecto
 
@@ -146,7 +146,7 @@ GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que e
 
 - **La vista previa no se muestra:** Asegúrese de que la extensión Markdown Preview Enhanced esté instalada y que tenga un archivo `.md` abierto
 - **La terminal muestra el directorio incorrecto:** Haga clic en el icono de papelera en el panel de la terminal, luego en **Terminal** → **New Terminal**
-- **El menú Chat no es visible:** Es posible que necesite instalar GitHub Copilot Chat: haga clic en el icono **Extensions**, busque "GitHub Copilot Chat" e instálelo
+- **El menú Chat no es visible:** Es posible que las funciones de IA estén desactivadas. Abra Settings (presione `Ctrl+,` en Windows/Linux o `Cmd+,` en Mac), busque `disable AI features` y desmarque la opción. Luego pase el mouse sobre el icono de Copilot en la barra de estado (parte inferior) y seleccione **Use AI Features**
 - **Las extensiones no funcionan:** Haga clic en **View** → **Command Palette**, escriba "reload window" y seleccione **Developer: Reload Window**
 
 ## Flujo de Trabajo Completo

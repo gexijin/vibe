@@ -30,7 +30,7 @@ lang: "es"
 - Escriba estos comandos:
   ```
   cd ~\Documents
-  mkdir test_claude
+  mkdir -Force test_claude
   cd test_claude
   ```
 
@@ -39,9 +39,11 @@ lang: "es"
 - Escriba estos comandos:
   ```bash
   cd ~/Documents
-  mkdir test_claude
+  mkdir -p test_claude
   cd test_claude
   ```
+
+Si la carpeta ya existe, estos comandos simplemente la reutilizan.
 
 ## Paso 2: Iniciar Claude Code
 
@@ -64,7 +66,7 @@ Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalaci�
 En lugar de crear archivos manualmente, deje que Claude haga el trabajo. Escriba este prompt:
 
 ```
-Crea un comando slash llamado stock-report que genere informes sobre
+Crea un comando slash en .claude/commands/ llamado stock-report que genere informes sobre
 desarrollos recientes de una empresa identificada por nombre o símbolo bursátil.
 Incluye:
 - Noticias de productos o servicios
@@ -72,8 +74,9 @@ Incluye:
 - Informes financieros recientes
 - Informes de analistas
 ```
-Cuando se le solicite, otorgue a Claude permiso para crear el archivo.
+Si Claude le pide permiso para crear el archivo, elija **Yes**.
 Claude creará un prompt detallado y lo guardará como `stock-report.md` en la carpeta `.claude/commands/`.
+(Si Claude lo guardó como `.claude/skills/stock-report/SKILL.md`, funciona de la misma manera. Abra ese archivo en los siguientes pasos.)
 
 **Nota:** Usamos formato Markdown en todo: en prompts, informes y comandos slash. Markdown es compatible con IA y puede editarse fácilmente como archivos de texto plano.
 
@@ -83,7 +86,7 @@ Use cualquier editor de texto para abrir el archivo `stock-report.md` de la carp
 
 Si tiene VS Code instalado (recomendado):
 - Inicie VS Code
-- Desde **File**, elija **Open folder**, y seleccione la carpeta del proyecto `Documents/test_claude`
+- Desde **File**, elija **Open Folder**, y seleccione la carpeta del proyecto `Documents/test_claude`
 - Desde el explorador de archivos, navegue a `.claude/commands` y haga clic en el archivo `stock-report.md` para abrirlo
 
 Revise el prompt y modifique las instrucciones si lo desea.
@@ -96,7 +99,7 @@ Primero **salga** de la sesión actual de Claude Code presionando **Ctrl+C** dos
   ```
   claude
   ```
-Ahora pruebe su nuevo comando con un símbolo bursátil real:
+Ahora pruebe su nuevo comando con una empresa real:
 
 ```
 /stock-report Apple
@@ -143,7 +146,7 @@ Claude genera el informe y lo guarda como un archivo markdown llamado algo como 
 Puede pedir a Claude que edite los comandos slash:
 
 ```
-Modifica el comando slash stock-report para que guarde el informe como un archivo html.
+Modifica el comando slash stock-report para que guarde el informe como un archivo HTML.
 ```
 
 Claude actualiza el archivo de comando. Puede verificarlo desde el editor.
@@ -161,11 +164,11 @@ Claude actualiza el archivo de comando. Puede verificarlo desde el editor.
   /stock-report AAPL
   ```
 
-Claude crea un archivo llamado algo como `Apple_2025-12-13.html`. Haga clic en este archivo desde el Explorador de Archivos en Windows o Mac para abrirlo en su navegador predeterminado.
+Claude crea un archivo llamado algo como `Apple_2025-12-13.html`. Haga doble clic en este archivo en el Explorador de Archivos (Windows) o en Finder (Mac) para abrirlo en su navegador predeterminado.
 
 ## Paso 11: Reutilizar el Comando Slash (Opcional)
 
-La palabra clave `$ARGUMENTS` en su comando slash funciona como un marcador de posición. Cuando escribe `/stock-report AAPL`, Claude reemplaza `$ARGUMENTS` con `AAPL` antes de ejecutar el prompt.
+La palabra clave `$ARGUMENTS` en su comando slash funciona como un marcador de posición. Cuando escribe `/stock-report AAPL`, Claude reemplaza `$ARGUMENTS` con `AAPL` antes de ejecutar el prompt. (Si su archivo de comando no contiene `$ARGUMENTS`, Claude Code simplemente agrega lo que escribió al final del prompt, así que igual funciona.)
 
 Pruebe con otro símbolo:
 
@@ -214,7 +217,7 @@ Ahora que comprende los comandos slash, cree más comandos personalizados para s
 - **Los comandos slash personalizados** ahorran tiempo al convertir prompts complejos en atajos simples
 - **Los argumentos** hacen que los comandos sean flexibles para diferentes entradas (símbolos bursátiles, temas, archivos)
 - **Claude construye comandos** - No necesita escribir archivos Markdown manualmente; solo describa lo que necesita
-- **Los comandos son reutilizables** - Una vez creados, úselos en cualquier proyecto y sesión
+- **Los comandos son reutilizables** - Una vez creados, úselos en cada sesión dentro de esta carpeta de proyecto. Para usar un comando en todos sus proyectos, pida a Claude que lo mueva a su carpeta personal `~/.claude/commands/`
 - **Combine comandos** - Construya una biblioteca de comandos especializados para diferentes tareas
 
 ---

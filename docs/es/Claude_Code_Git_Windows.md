@@ -1,10 +1,10 @@
 ---
-title: "Claude Code con control de versiones para Windows"
+title: "Claude Code con control de versiones local para Windows"
 lang: "es"
 ---
 [Inicio](index.html)
 
-# Claude Code con control de versiones para Windows
+# Claude Code con control de versiones local para Windows
 
 Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A veces los cambios son brillantes. A veces no lo son. **El control de versiones es como un botón de deshacer para todo su proyecto.** Cada vez que guarda una instantánea (llamada "commit"), crea un punto de restauración al que siempre puede volver. Lo mejor de todo es que puede hacer esto completamente en su computadora y Claude Code lo hace por usted.
 
@@ -18,7 +18,7 @@ Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A v
 ## Lo Que Necesitará
 
 - Haber completado [Instalación de Claude Code en Windows](./Install_CLAUDE_Code_Win)
-- 20 minutos
+- 20-30 minutos
 
 ## Paso 1: Abra PowerShell
 
@@ -37,7 +37,7 @@ Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A v
 - Si ve un número de versión como `git version 2.45.0`, pase al Paso 3
 - Si ve un error, instale Git for Windows:
   - Vaya a [git-scm.com/download/win](https://git-scm.com/download/win)
-  - La descarga debería comenzar automáticamente; abra el instalador cuando termine
+  - En esa página, haga clic en **Click here to download** (en la parte superior) y luego abra el instalador cuando termine la descarga
   - Haga clic en **Next** en cada pantalla del instalador, aceptando las opciones predeterminadas
   - Haga clic en **Install** y luego en **Finish**
   - Cierre y vuelva a abrir PowerShell, y luego verifique de nuevo con `git --version`
@@ -66,6 +66,8 @@ Usar su nombre y correo electrónico ayuda a identificar quién realizó los cam
   ```
 
 Debería ver una ruta que termina en `\Documents`.
+
+Si ve `Cannot find path`, es probable que OneDrive haga copia de seguridad de su carpeta Documents. Ejecute `cd ~\OneDrive\Documents` en su lugar.
 
 ## Paso 5: Cree una Carpeta de Proyecto
 
@@ -98,9 +100,12 @@ Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalaci
 
 Claude inicializa un repositorio de Git en su carpeta (toma 2-5 segundos). ¡Ahora tiene control de versiones!
 
+Si Claude pide permiso, muestra un pequeño menú con **Yes** y **No**. Use las teclas de flecha para elegir **Yes** y presione **Enter**. Es posible que vea esto varias veces en este tutorial.
+
 ## Paso 8: Construya la Aplicación de Temporizador
 
-- En Claude Code, escriba:
+- En Claude Code, copie y pegue toda esta solicitud (al pegarla, todas las líneas se mantienen juntas; presionar Enter la enviaría antes de tiempo):
+
   ```
   Crea una aplicación simple de temporizador en un solo archivo llamado timer.html.
   Debe tener:
@@ -120,6 +125,8 @@ Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
   - Escriba `1` en el campo de entrada
   - Haga clic en **Iniciar**
   - Observe la cuenta regresiva
+
+**¿No ve `test_claude`?** Si OneDrive hace copia de seguridad de su carpeta Documents, File Explorer muestra una carpeta Documents diferente. Haga clic en la barra de direcciones de File Explorer, pegue `%USERPROFILE%\Documents\test_claude` y presione **Enter**.
 
 **Si algo está roto:** En Claude Code, describa el error: `Veo este error: [describa lo que pasó]. ¿Puedes corregirlo?`
 
@@ -143,7 +150,7 @@ Claude hará lo siguiente:
   ```
   Agrega dos botones en la parte superior. Si hago clic en ellos, inician automáticamente temporizadores de 1 y 5 minutos
   ```
-- Actualice la pestaña de su navegador
+- Actualice la pestaña de su navegador (presione `F5` o `Ctrl + R`)
 - Pruebe: Haga clic en el botón **5 min**
 - Si funciona, haga commit de los cambios:
   ```
@@ -159,7 +166,7 @@ Creamos un segundo punto de guardado. Esta versión tiene los dos botones funcio
   ```
   Agrega un botón de 15 minutos
   ```
-- Actualice la pestaña de su navegador
+- Actualice la pestaña de su navegador (presione `F5` o `Ctrl + R`)
 - Pruebe: Haga clic en el botón **15 min**
 
 **Para este tutorial:** Suponga que el botón de 15 minutos no funciona correctamente. No haga commit todavía—practicaremos descartando cambios malos.
@@ -172,7 +179,7 @@ A veces el código de la IA no funciona y necesita comenzar de nuevo desde su ú
   ```
   descarta estos cambios
   ```
-- Claude muestra un menú con opciones como **Yes** y **No**: use las teclas de flecha (o presione el número junto a **Yes**) para seleccionarla y luego presione **Enter**
+- Normalmente Claude le pedirá que confirme primero. Si muestra un menú, elija **Yes** (con las teclas de flecha o el número junto a esa opción) y presione **Enter**. Si lo pregunta en un mensaje, escriba `sí, descarta los cambios en timer.html` y presione **Enter**
 - Actualice su navegador—el botón de 15 minutos desaparece
 
 Claude descarta los nuevos cambios que no nos gustan. ¡El temporizador funciona nuevamente con solo los botones de 1 y 5 minutos!
@@ -212,7 +219,7 @@ Claude muestra sus commits en un formato legible. Verá:
 - Su commit inicial de la aplicación de temporizador
 - El commit de botones predefinidos (1 min y 5 min)
 - El commit de notificación de sonido
-- El botón de posponer.
+- El commit del botón de posponer
 
 ¡Note que el intento del botón de 15 minutos no está ahí—lo descartó!
 
@@ -249,8 +256,8 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 
 ## Solución de Problemas
 
-- **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd ~\Documents\test_claude`)
-- **No puede encontrar timer.html en Windows:** El archivo está en `C:\Users\SU_USUARIO\Documents\test_claude\timer.html`
+- **Error "not a git repository":** Asegúrese de estar en la carpeta test_claude (`cd ~\Documents\test_claude`, o `cd ~\OneDrive\Documents\test_claude` si usó la ruta de OneDrive en el Paso 4)
+- **No puede encontrar timer.html en Windows:** El archivo está en `C:\Users\SU_USUARIO\Documents\test_claude\timer.html` (o `C:\Users\SU_USUARIO\OneDrive\Documents\test_claude\timer.html` si usó la ruta de OneDrive en el Paso 4)
 - **Comando `git` no encontrado:** Cierre y vuelva a abrir PowerShell después de instalar Git for Windows para que se actualice el PATH, y luego ejecute `git --version` otra vez
 - **El temporizador no funciona:** Abra la consola del navegador (haga clic derecho en la página, seleccione **Inspect**, haga clic en la pestaña **Console**), copie cualquier mensaje de error rojo y péguelo en Claude
 
@@ -260,7 +267,7 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 - `muéstrame las diferencias` - Ver exactamente qué código cambió
 - `explica qué hace el código del temporizador` - Entender la implementación
 - `crea una rama llamada experimento` - Probar cambios riesgosos de manera segura
-- `vuelve al commit anterior` - Deshacer todo desde el último commit
+- `deshaz todo desde mi último commit` - Descartar los cambios que aún no ha guardado
 
 ¡Claude maneja todas las operaciones de Git a través del lenguaje natural—no hay comandos que memorizar!
 
@@ -270,6 +277,6 @@ Recuerde: Pruebe después de cada característica, haga commit después de cada 
 - **Desarrollo:** Claude escribe código, usted prueba en el navegador
 - **Control de Versiones:** Claude maneja todas las operaciones de Git mediante solicitudes simples
 - **Seguridad:** Descarte cambios malos en cualquier momento, vuelva a cualquier commit anterior
-- **Local:** Todo permanece en su computadora, no se requiere cuenta ni internet
+- **Local:** Su historial de Git permanece en su computadora, sin necesidad de una cuenta de GitHub (Claude Code en sí todavía necesita internet y su cuenta de Claude)
 
 Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 8 de diciembre de 2025.

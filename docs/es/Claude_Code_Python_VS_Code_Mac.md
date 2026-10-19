@@ -18,7 +18,7 @@ Ha configurado Python en VS Code y puede escribir código manualmente. Ahora des
 
 - Tutorial completado [Programación en Python con VS Code](./Python_Coding_VS_Code_Guide) - Python debe estar funcionando en VS Code
 - Tutorial completado [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) - Claude Code CLI debe estar instalado
-- Suscripción Claude Pro/Max o clave API de Anthropic
+- Un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no incluye Claude Code
 - 20-30 minutos
 
 ## Paso 1: Abra VS Code y Cree un Proyecto Python
@@ -35,20 +35,16 @@ Ha configurado Python en VS Code y puede escribir código manualmente. Ahora des
 
 - Haga clic en el ícono **Extensions** en la barra lateral izquierda (ícono de cuatro cuadrados)
 - En el cuadro de búsqueda, escriba `Claude Code`
-- Encuentre **Claude Code** de Anthropic y haga clic en **Install**
-- Después de la instalación, aparece un ícono de Claude (chispa) en la barra lateral izquierda
-- Haga clic en el ícono de Claude para abrir el panel de chat
-- Haga clic en **Sign in to Claude Code** en el panel de chat
-- Elija su método de autenticación:
-  - **Usuarios de Claude Pro/Max**: Haga clic en **Sign in with Claude.ai**, autorice en el navegador y copie el código de vuelta a VS Code
-  - **Usuarios de clave API**: Haga clic en **Use API Key** y pegue su clave API de Anthropic
+- Encuentre **Claude Code for VS Code** de Anthropic y haga clic en **Install**
+- Después de la instalación, haga clic en **✻ Claude Code** en la esquina inferior derecha de la ventana de VS Code (la barra de estado) para abrir el panel de Claude
+- La primera vez aparece una pantalla de inicio de sesión: haga clic en **Sign in**, apruebe el acceso en su navegador y luego vuelva a VS Code
 - Para pasos detallados de autenticación, consulte la guía [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3)
-- Una vez que haya iniciado sesión, verá "Ready to help" en el panel de chat
+- Una vez que haya iniciado sesión, verá una lista de verificación **Learn Claude Code** y un cuadro de prompt en la parte inferior del panel
 
 ## Paso 3: Cree un Script Python Inicial Manualmente
 
-- Haga clic en **File > New File** en la barra de menú
-- Haga clic en **Select a language** y escriba `Python`, luego seleccione **Python**
+- Haga clic en **File > New File...** en la barra de menú
+- En la lista que aparece en la parte superior de la ventana, elija **Python File**
 - Guarde el archivo haciendo clic en **File > Save**, nómbrelo `iris_analysis.py`
 - Escriba este código:
 
@@ -62,13 +58,15 @@ iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 iris_df['species'] = iris.target_names[iris.target]
 
 # Display structure
-print(iris_df.info())
+iris_df.info()
 print("\nSummary statistics:")
 print(iris_df.describe())
 ```
 
 - Guarde el archivo haciendo clic en **File > Save**
-- Abra el terminal de Python: haga clic en **View** en la barra de menú, luego en **Terminal**
+- Cree un entorno virtual, como en el Paso 5 de [Programación en Python con VS Code](./Python_Coding_VS_Code_Guide): haga clic en **View > Command Palette**, escriba `Python: Create Environment`, elija **Venv** y luego seleccione su versión de Python
+- Espere a que aparezca la carpeta `.venv` en el Explorer
+- Abra un terminal: haga clic en **View** en la barra de menú, luego en **Terminal**. Debería ver `(.venv)` al inicio del prompt
 - Instale los paquetes que necesita este script:
   ```
   pip install scikit-learn pandas
@@ -78,7 +76,7 @@ print(iris_df.describe())
 
 ## Paso 4: Pídale a Claude que Agregue un Gráfico de Dispersión
 
-- Haga clic en el ícono de **Claude** en la barra lateral izquierda para abrir el panel de chat
+- Abra el panel de Claude (ícono Spark en la parte superior derecha del archivo abierto, o **✻ Claude Code** en la esquina inferior derecha)
 - En el cuadro de chat en la parte inferior, escriba:
 
 ```
@@ -86,12 +84,12 @@ Agrega código a iris_analysis.py para crear un gráfico de dispersión del larg
 ```
 
 - Presione Enter para enviar
-- Claude lee su archivo y propone cambios: verá una diferencia que muestra el código nuevo para agregar
-- Haga clic en **Accept** para aplicar los cambios
+- Claude lee su archivo y lo edita: el código nuevo aparece en `iris_analysis.py`
+- Si Claude muestra una diferencia y pide permiso, acepte el cambio
 - El código de seaborn/matplotlib aparece en su archivo
-- Si no tiene los paquetes requeridos, ejecute en la terminal:
+- Instale los paquetes de gráficos que usa el código de Claude (no se instalaron en el Paso 3). En la terminal (con `(.venv)` visible), ejecute:
   ```
-  pip install seaborn matplotlib scikit-learn pandas
+  pip install seaborn matplotlib
   ```
 
 ## Paso 5: Ejecute el Código Actualizado
@@ -110,8 +108,8 @@ Elimina el título. Cambia el tipo de marcador según la especie. Cambia al esti
 ```
 
 - Presione Enter
-- Claude muestra los cambios de código actualizados
-- Haga clic en **Accept**
+- Claude actualiza el código
+- Si se le pide, acepte el cambio
 - Ejecute el código actualizado nuevamente: `python iris_analysis.py` en la terminal
 - El gráfico ahora se muestra con diferentes formas de marcador por especie, sin título y con estilo whitegrid
 - Cierre la ventana del gráfico para continuar
@@ -126,9 +124,9 @@ Agrega código para realizar PCA en las variables numéricas y graficar las mues
 
 - Presione Enter
 - Claude agrega código PCA a su script
-- Haga clic en **Accept**
+- Si se le pide, acepte el cambio
 - Ejecute el código: `python iris_analysis.py` en la terminal
-- Aparece un gráfico PCA que muestra las muestras proyectadas en PC1 y PC2, coloreadas por especie
+- Aparece un gráfico PCA que muestra las muestras proyectadas en PC1 y PC2, coloreadas por especie (si primero se abre la ventana del gráfico de dispersión del Paso 6, ciérrela y a continuación aparecerá el gráfico PCA)
 - Cierre la ventana del gráfico cuando termine
 
 ## Paso 8: Pídale a Claude que Revise y Comente
@@ -140,8 +138,8 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios cuan
 ```
 
 - Presione Enter
-- Claude revisa el código y sugiere comentarios que explican cada sección
-- Haga clic en **Accept**
+- Claude revisa el código y agrega comentarios que explican cada sección
+- Si se le pide, acepte el cambio
 - Su script ahora tiene comentarios claros que explican la carga de datos, la visualización y el análisis PCA
 
 ## Próximos Pasos
@@ -156,9 +154,9 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios cuan
 
 - **La extensión Claude no se muestra** - Reinicie VS Code después de la instalación. Haga clic en **View > Extensions** para verificar que esté instalada.
 - **Error "Cannot read Python file"** - Asegúrese de haber guardado el archivo con extensión `.py`. Claude necesita archivos guardados para leerlos.
-- **Falló la autenticación** - Verifique que su suscripción Claude Pro/Max esté activa o que su clave API sea válida. Consulte [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) para solución de problemas de autenticación.
-- **Errores de paquete no encontrado** - Instale los paquetes requeridos en la terminal: `pip install seaborn matplotlib scikit-learn pandas`. Espere a que se complete la instalación antes de ejecutar el código.
-- **Los cambios de código no se aplican** - Asegúrese de hacer clic en **Accept** en la diferencia. Si no funciona, intente copiar el código sugerido por Claude manualmente.
+- **Falló la autenticación** - Verifique que su plan de pago de Claude o su cuenta de Anthropic Console esté activa. Consulte [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) para solución de problemas de autenticación.
+- **Errores de paquete no encontrado** o **`command not found: python`** - Asegúrese de que la terminal muestre `(.venv)` (si no, ciérrela y abra una nueva con **View > Terminal**) y luego instale los paquetes requeridos: `pip install seaborn matplotlib scikit-learn pandas`. Espere a que se complete la instalación antes de ejecutar el código.
+- **Los cambios de código no se aplican** - Si Claude pidió permiso, asegúrese de haber aceptado el cambio. Si no funciona, intente copiar el código sugerido por Claude manualmente.
 - **El gráfico no se muestra** - Asegúrese de tener una pantalla. En algunos sistemas puede necesitar agregar `plt.show()` al final o usar `%matplotlib inline` en Jupyter.
 
 ## Resumen del Flujo de Trabajo

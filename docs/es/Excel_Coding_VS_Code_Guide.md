@@ -43,7 +43,7 @@ Si VS Code ya está abierto, ciérrelo y vuelva a abrirlo para que pueda encontr
 - Busque `GrapeCity.gc-excelviewer`
 - Haga clic en **Install** en **Spreadsheet Viewer** de **MESCIUS**
 
-**Nota:** Esta extensión antes se llamaba **Excel Viewer** de **GrapeCity**, y es posible que guías y videos antiguos todavía usen ese nombre. Si busca "Excel Viewer" ahora aparecen varias extensiones distintas, así que busque por el ID indicado arriba para encontrar la correcta. El ID todavía empieza por `GrapeCity`; eso es normal.
+**Nota:** Esta extensión antes se llamaba **Excel Viewer** de **GrapeCity**, y es posible que guías y videos antiguos todavía usen ese nombre. Si busca "Excel Viewer" ahora aparecen varias extensiones distintas, así que busque por el ID indicado arriba para encontrar la correcta. El ID todavía empieza por `GrapeCity`; eso es normal. La página del Marketplace indica que ya no recibe mantenimiento activo; aun así, funciona bien para ver los archivos de este tutorial.
 
 Esto le permite hacer clic en cualquier archivo `.xlsx` y ver sus hojas, números y fórmulas directamente dentro de VS Code. Es ideal para revisiones rápidas, pero no puede mostrar gráficos, celdas resaltadas con colores ni listas desplegables. Para eso, abra el archivo en Excel, LibreOffice Calc o Google Sheets.
 
@@ -75,7 +75,7 @@ Crea una hoja de cálculo llamada budget.xlsx con columnas para Categoría, Mont
 
 - Presione Enter
 - Observe cómo Claude escribe un script de Python, lo ejecuta y genera `budget.xlsx` en su carpeta de proyecto
-- Claude le pedirá permiso antes de ejecutar comandos o instalar herramientas auxiliares (como `openpyxl`, un complemento de Python para hojas de cálculo): elija **Yes** para que continúe
+- Si Claude le pide permiso para ejecutar comandos o instalar herramientas auxiliares (como `openpyxl`, un complemento de Python para hojas de cálculo): elija **Yes** para que continúe
 - Si Claude dice que Python no está instalado o que no lo encuentra, vuelva al Paso 1 y luego cierre y vuelva a abrir VS Code
 
 ## Paso 6: Ver el Resultado
