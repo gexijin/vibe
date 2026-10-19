@@ -23,16 +23,17 @@ lang: "zh"
 
 ## 步骤 1:安装 Python
 
-需要 Python 3.8 或更高版本,以确保与现代包兼容。
+需要 Python 3.11 或更高版本(最好使用 python.org 上的最新版本),这样才能安装 pandas 和 Streamlit 等包的最新版本。
 
 - **Windows**:
-  - 从 [python.org](https://www.python.org/downloads/) 下载最新版 Python
+  - 访问 [python.org/downloads/windows](https://www.python.org/downloads/windows/),在最新的 Python 3 版本下点击 **Windows installer (64-bit)**(不是 "install manager")
   - 运行安装程序
   - 点击 Install Now 前,**勾选"Add python.exe to PATH"**
-  - 记住安装位置(通常是 `C:\Users\YourName\AppData\Local\Programs\Python\Python312`)
+  - 记住安装位置(通常是 `C:\Users\YourName\AppData\Local\Programs\Python\Python312`——数字与你的 Python 版本对应)
 
 - **macOS**:
   - 从 [python.org](https://www.python.org/downloads/) 下载并运行安装程序
+  - python.org 安装程序完成后,打开 **访达(Finder)> 应用程序 > Python 3.x**,双击 **Install Certificates.command**(否则步骤 7 中从互联网加载数据会因 `CERTIFICATE_VERIFY_FAILED` 而失败)
   - 或使用 Homebrew:打开终端,输入 `brew install python`
   - Homebrew 路径:`/opt/homebrew/bin/python3`(Apple Silicon)或 `/usr/local/bin/python3`(Intel)
 
@@ -55,7 +56,7 @@ Python 扩展包含调试、IntelliSense、代码格式化和 Jupyter notebook �
 
 - 在计算机上创建新文件夹(如 `my-python-project`)
 - VS Code 中,点击 **File > Open Folder** 选择该文件夹
-- 点击 **File > New File** 创建新文件
+- 点击顶部菜单的 **File > New File...**。窗口顶部会出现一个列表——选择 **Python File**
 - 点击 **File > Save** 保存为 `analysis.py`
 
 ## 步骤 4:选择 Python 解释器
@@ -129,14 +130,14 @@ plt.show()
 ## 步骤 8:交互式运行 Python 代码
 
 - 打开 `analysis.py`,点击右上角 **▶ Run Python File** 按钮
-- 或右键选择 **Run Python File in Terminal**
+- 或右键选择 **Run Python > Run Python File in Terminal**
 - 输出会显示在终端面板
 - 直方图会在新窗口弹出
 - 也可以选择特定行,按 `Shift+Enter` 在交互式会话中运行
 
 ## 步骤 9:创建一个简单的 Streamlit 应用
 
-- 创建一个新文件:**File > New File**
+- 创建一个新文件:点击 **File > New File...**,然后从窗口顶部的列表中选择 **Python File**
 - 将其保存为 `app.py`
 - 输入以下代码:
 
@@ -177,6 +178,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- 第一次运行 Streamlit 时,它会在终端中要求输入 `Email:`。直接按 `Enter` 跳过即可
 - 该应用会在你的浏览器中打开(通常在 `http://localhost:8501`)
 - 移动侧边栏中的滑块,观察直方图立即更新
 - 在终端中按 `Ctrl+C` 停止应用
@@ -190,6 +192,7 @@ streamlit run app.py
 - 弹出窗口显示函数签名、参数和文档
 - 输入 `import `,VS Code 会建议包名称
 - 输入函数调用时,IntelliSense 显示参数提示
+- 完成后,删除你在此步骤中输入的未完成的行(例如 `iris.gr` 和 `import `)并保存文件,以便脚本在下一步中能顺利运行
 
 ## 步骤 11:尝试调试
 
@@ -219,6 +222,8 @@ streamlit run app.py
 - **IntelliSense 不工作**:确保 Pylance 已安装并启用。检查右下角是否显示所选解释器。打开文件后等 10-20 秒让 Pylance 初始化。问题仍存在则重启 VS Code。
 
 - **pip install 失败**:确保虚拟环境已激活(终端显示 `(.venv)`)。Linux 上可能需先安装 `python3-venv`。Windows 上检查杀毒软件是否阻止 pip。
+
+- **Mac 上出现 `SSL: CERTIFICATE_VERIFY_FAILED`**:打开 **访达(Finder)> 应用程序 > Python 3.x**,双击 **Install Certificates.command**,然后重新运行脚本。
 
 - **Streamlit 应用无法运行**:确保虚拟环境中已安装 streamlit(`pip show streamlit`)。检查终端错误消息。确保端口 8501 未被占用。
 

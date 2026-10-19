@@ -29,7 +29,7 @@ lang: "zh"
 
 ## 步骤 2：启动 VS Code
 
-- 点击 **Windows 开始按钮**（屏幕左下角）
+- 点击 **Windows 开始按钮**（任务栏上的 Windows 徽标）
 - 在搜索框中输入 `Visual Studio Code` 或 `VS Code`
 - 点击搜索结果中的 **Visual Studio Code**
 - VS Code 打开并显示欢迎标签页，可以关闭此标签页
@@ -69,19 +69,19 @@ lang: "zh"
 关闭 VS Code 后，返回项目的方法：
 
 - **方法 A：** 打开 VS Code，点击 **File > Open Recent**，选择 `test_claude`
-- **方法 B：** 打开**文件资源管理器**，右键单击 `test_claude` 文件夹，选择 **通过 Code 打开**（Open with Code）
+- **方法 B：** 打开**文件资源管理器**，右键单击 `test_claude` 文件夹，选择 **通过 Code 打开**（Open with Code）（在 Windows 11 上，需先点击 **显示更多选项**）。只有在安装 VS Code 时勾选了 **Add "Open with Code" action**，此选项才会出现；否则请使用方法 A
 
 ## 下一步
 
 - 让 Claude Code 解释现有代码库："解释这个项目做什么"
 - 让 Claude Code 编写新功能："添加一个计算列表平均值的函数"
 - 使用 Claude Code 修复错误："这段代码出现错误，你能修复它吗？"
-- 尝试 Claude Code VS Code 扩展，获得内联差异的可视化界面（在扩展中搜索"Claude Code"）
+- 尝试 Claude Code 扩展，获得带内联差异显示的可视化聊天面板。在 VS Code 终端中运行 `claude` 通常会自动为你安装它（如果没有，在扩展中搜索"Claude Code"）。打开任意文件，然后点击编辑器右上角的 Spark 图标
 
 ## 故障排除
 
-- **找不到 `claude` 命令** - 在 VS Code 终端中运行 `claude --version` 检查是否已安装 Claude Code，如未安装请先按照[安装教程](Install_CLAUDE_Code_Win.md)操作
-- **改用 WSL？** - 如果你选择了可选的 WSL/Ubuntu 方式，请先从 Extensions 侧边栏安装 **WSL** 扩展，点击左下角的蓝色/绿色图标，选择 **Connect to WSL**，然后再打开项目文件夹（路径为 `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
+- **无法识别 `claude`** - 完全关闭 VS Code（所有窗口）后重新打开，然后打开新终端再次尝试 `claude`。如果仍然失败，在普通 PowerShell 窗口中运行 `claude --version`；如果也失败，请先按照[安装教程](Install_CLAUDE_Code_Win.md)操作
+- **改用 WSL？** - 如果你选择了可选的 WSL/Ubuntu 方式，请先从 Extensions 侧边栏安装 **WSL** 扩展，点击左下角的 **><** 图标，选择 **Connect to WSL**，然后再打开项目文件夹（路径为 `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
 
 ## 工作流程概述
 

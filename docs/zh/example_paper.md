@@ -50,7 +50,7 @@ AI工具可提高工人生产率8%到36%，但系统证据表明AI正在加剧�
 
 当认识到个体赋能与系统性排斥共存时，AI生产力悖论即得到解决。衡量任务绩效的微观研究忽略了决定谁受益的宏观选择效应。来自斯坦福、国际货币基金组织和经合组织的证据汇聚成令人不安的结论：AI正在加剧性别、年龄、企业规模和地理位置的不平等 [3, 4, 9, 11]。技术的影响取决于其分配，而非仅其能力。三个并存的选择机制——访问不平等、知识不平等和机会不平等——将AI从民主化工具转变为分层力量。
 
-决策者必须针对所有三个障碍采取行动。政府应通过税收抵免补贴小企业AI采用，缩小3.3倍的采用差距。教育机构必须将AI素养整合到课程中，并为行政岗位女性启动针对性再培训计划，解决75%的知识差距。雇主必须创建结合AI工具和人类导师的结构化入门级职位，防止经验悖论。随着差距每隔几年翻番，干预窗口正在缩小 [11]。若无刻意行动，AI的个体承诺将变为集体危险。
+决策者必须针对所有三个障碍采取行动。政府应通过税收抵免补贴小企业AI采用，缩小3.3倍的采用差距。教育机构必须将AI素养整合到课程中，并为行政岗位女性启动针对性再培训计划，解决造成75%性别差距的知识差异。雇主必须创建结合AI工具和人类导师的结构化入门级职位，防止经验悖论。干预窗口正在缩小：欧盟的采用差距在2021年至2024年间大约翻了一番 [11]。若无刻意行动，AI的个体承诺将变为集体危险。
 
 ## 参考文献
 
@@ -68,7 +68,7 @@ AI工具可提高工人生产率8%到36%，但系统证据表明AI正在加剧�
 
 [7] Stanford HAI. (2025). "The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
 
-[8] Anthropic. (2024). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
 
 [9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
 

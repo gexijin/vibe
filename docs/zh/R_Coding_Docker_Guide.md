@@ -59,11 +59,13 @@ lang: "zh"
 
 - 查找右下角通知:**Folder contains a Dev Container configuration file**
 - 点击 **Reopen in Container**
-- 如果没看到通知,点击左下角绿色图标
+- 如果没看到通知,点击左下角的 **><** 图标
 - 从菜单选择 **Reopen in Container**
 - VS Code 会构建容器(首次需 5-10 分钟)
 - 会显示构建步骤的进度通知
-- 完成后,绿色图标会显示 **Dev Container: R in Docker (AMD64)**
+- 完成后,左下角的 **><** 图标会显示 **Dev Container: R in Docker (AMD64)**
+
+**Apple Silicon Mac:**此镜像是为 Intel/AMD 处理器构建的。Docker Desktop 会通过模拟运行它,因此首次构建和 R 本身会慢一些,但一切都能正常工作。
 
 **注意:**容器自动包含 R 扩展和 languageserver 包。Dockerfile 和 devcontainer.json 会处理这些。
 
@@ -86,7 +88,7 @@ pwd
 ls
 ```
 
-会看到项目中的相同文件:`R/`、`.devcontainer/`、`README.md` 等。
+会看到项目中的相同文件:`R/`、`docs/`、`README.md` 等。(以点开头的文件夹,如 `.devcontainer/`,是隐藏的;`ls -a` 可以显示它们)
 
 - 尝试向上移动一个目录:
 
@@ -110,13 +112,14 @@ cd vibe
 - VS Code 资源管理器中,导航到 `R/iris_analysis.R`
 - 点击打开文件
 - 会看到分析 iris 数据集的 R 代码
-- 选择第一行:`data(iris)`
+- 点击 **View > Command Palette**,输入 `R: Create R Terminal`,然后按 **Enter**。底部会打开一个带有 `>` 提示符的 R 终端(此容器会把代码发送到你正在使用的终端,所以请保持选中这个 R 终端)
+- 如果 VS Code 询问是否安装 **sess** 包,点击 **Yes**(或 **Install bundled sess**)并等待安装完成。它让 VS Code 能够显示你的图表
+- 点击回到 `iris_analysis.R`,选择第一行:`data(iris)`
 - 按 `Ctrl+Enter`(Windows/Linux)或 `Cmd+Enter`(Mac)运行
-- 如果没有 R 终端,第一次会创建,第二次才运行代码
 - 继续逐行运行每一行
 - 运行 `head(iris)` 时,会在终端看到前 6 行
 - 运行 `summary(iris)` 时,会看到统计摘要
-- 运行 `hist()` 命令时,直方图会在单独窗口打开
+- 运行 `hist()` 命令时,直方图会显示在 VS Code 内的绘图标签页中
 - 也可以选择多行,用 `Ctrl+Enter` 或 `Cmd+Enter` 一起运行
 
 ## 步骤 8:运行应用程序
@@ -128,10 +131,8 @@ cd vibe
 - 会看到 Shiny Web 应用的代码
 - 查看编辑器右上角的 **▶** 按钮
 - 点击旁边下拉箭头,选择 **Run Shiny App**
-- 应用会启动,VS Code 自动转发端口 3838
-- 出现通知:**Open in Browser**
-- 点击 **Open in Browser**
-- Shiny 应用在 Web 浏览器打开
+- 应用会启动,并在 VS Code 内的预览标签页中打开
+- 如果想改在常用的 Web 浏览器中打开,点击底部面板中的 **Ports** 标签,然后点击已转发端口旁边的地球图标
 - 移动滑块改变直方图区间数 - 图表实时更新
 
 ## 步骤 9:进行简单更改
@@ -140,16 +141,16 @@ cd vibe
 
 - 保持应用运行
 - VS Code 中,编辑 `R/app.R`
-- 找到第 16 行:`titlePanel("Old Faithful Geyser Data")`
-- 改为:
+- 找到第 16 行:`titlePanel("Old Faithful Geyser Data"),`
+- 只修改引号内的文字,保留行末的逗号:
 
 ```r
-titlePanel("My First R Docker App")
+titlePanel("My First R Docker App"),
 ```
 
 - 保存文件(**File > Save**)
 - Shiny 扩展会自动重新加载应用
-- 刷新浏览器(或可能自动刷新)
+- 如果预览没有自动更新,点击预览标签页顶部的重新加载箭头(或刷新浏览器)
 - 标题现在显示自定义文本
 
 ## 步骤 10:了解 Dockerfile(可选)
@@ -175,8 +176,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Give shiny passwordless sudo for updating Claude Code from VS Code
 RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
@@ -192,7 +194,7 @@ EXPOSE 3838
 - `RUN apt-get install` - R 包所需的 Linux 系统库
 - `RUN R -q -e 'install.packages(...)'` - 永久安装 R 包
 - `RUN curl... && apt-get install -y nodejs` - 安装 Node.js,运行 Claude Code 所需
-- `RUN npm install -g @anthropic-ai/claude-code` - 全局安装 Claude Code 获取 AI 辅助
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - 全局安装 Claude Code 获取 AI 辅助(第一部分让 Claude Code 能够完成自身的设置,否则较新版本的 npm 会阻止这一步)
 - `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - 让容器的用户无需输入密码即可运行 `sudo claude update`
 - `EXPOSE 3838` - 为 Shiny 应用打开端口 3838
 
@@ -217,7 +219,7 @@ RUN R -q -e 'install.packages("data.table", repos="https://cloud.r-project.org")
 ```
 
 - 保存文件(**File > Save**)
-- 点击左下角绿色图标
+- 点击左下角的 **><** 图标
 - 从菜单选择 **Rebuild Container**
 - VS Code 会用新包重新构建容器(需 2-5 分钟)
 - 验证,打开 R 终端并输入:
@@ -238,7 +240,6 @@ library(data.table)
 
 - **Docker Desktop 未运行** - 打开 Docker Desktop,等待绿色状态指示器,然后再重新打开容器
 - **容器构建失败** - 检查互联网连接;首次构建会下载约 2GB 数据。点击 **Rebuild Container** 重试
-- **端口 3838 已被使用** - 停止使用该端口的其他应用,或在 `.devcontainer/devcontainer.json` 中更改端口
 
 ## 工作流程概述
 
@@ -247,7 +248,7 @@ library(data.table)
 - **VS Code** 提供带语法高亮和智能感知的代码编辑器
 - **Docker 容器**运行隔离的 Linux 环境,包含 R 和所有依赖
 - **Rocker 镜像**(`rocker/shiny-verse`)包含 R、Shiny、tidyverse 和开发工具
-- **Dev Container 配置**(`.devcontainer/`)自动安装 VS Code 扩展以支持 R 调试和语言支持
+- **Dev Container 配置**(`.devcontainer/`)自动安装用于 R 和 Shiny 的 VS Code 扩展
 - **端口转发**允许从浏览器访问容器内运行的 Shiny 应用
 
 ## 日常工作流程
@@ -256,7 +257,7 @@ library(data.table)
 
 1. **启动 Docker Desktop** - 打开应用并等待绿色状态指示器(Docker 必须运行)
 2. **打开 VS Code** - 启动 VS Code 并打开项目文件夹
-3. **在容器中重新打开** - 如果尚未在容器中,点击绿色图标(左下角)并选择 **Reopen in Container**
+3. **在容器中重新打开** - 如果尚未在容器中,点击 **><** 图标(左下角)并选择 **Reopen in Container**
 4. **编写和运行代码** - 编辑 `.R` 文件,用 `Ctrl+Enter`/`Cmd+Enter` 逐行运行,或用 **▶ Run Shiny App** 按钮运行 Shiny 应用
 5. **保存工作** - 代码文件(`.R`、`.Rmd`)保存到计算机,在会话之间持久存在
 6. **提交和推送** - 使用 GitHub Desktop 提交更改并推送到仓库
@@ -276,7 +277,7 @@ Docker Desktop 承担几项重要工作:
 - **构建容器** - Docker 根据本项目中的 Dockerfile 和 Dev Container 设置,创建一个为 R 开发准备好的容器。
 - **启动和停止容器** - 需要时,你可以打开、暂停、重启或停止容器。
 - **将容器连接到你的文件** - 项目文件夹可以在容器内访问,因此你可以在 VS Code 中编辑文件,而代码在容器中运行。
-- **将容器连接到你的浏览器** - 当 Shiny 应用使用端口 3838 时,Docker Desktop 和 VS Code 协同工作,让你能在 Web 浏览器中打开该应用。
+- **将容器连接到你的浏览器** - 当 Shiny 应用在容器内运行时,Docker Desktop 和 VS Code 协同工作,让你能在 Web 浏览器中打开该应用。
 
 ### Docker Desktop 在本教程中的作用
 

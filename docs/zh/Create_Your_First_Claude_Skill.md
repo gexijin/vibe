@@ -12,6 +12,7 @@ lang: "zh"
 
 - **Skill** - 存储在`.claude/skills/`中的模型调用能力，Claude会根据上下文自动激活
 - **模型调用（Model-invoked）** - Claude通过阅读Skill的描述来决定何时使用它，无需输入命令
+- **仍可作为斜杠命令使用** - 你也可以输入`/skill-name`自己运行任何Skill（例如`/stock-report AAPL`）。如果Skill和斜杠命令同名，则使用Skill
 - **SKILL.md** - 包含YAML前置内容（元数据）和Claude指令的主文件
 
 ## 你需要准备什么
@@ -58,9 +59,12 @@ claude
 
 按照安装教程（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
-## 步骤3：启用编辑自动批准
+## 步骤3：让Claude无需询问即可编辑文件
 
-按**Shift+Tab**来启用编辑自动批准模式。
+查看Claude Code提示符正下方的状态栏：
+
+- 如果显示**auto mode on**或**accept edits on**，就已经设置好了
+- 如果显示**manual mode on**，按**Shift+Tab**直到显示**accept edits on**
 
 这样可以让Claude创建和修改文件，而无需每次都请求权限。
 
@@ -98,7 +102,11 @@ description: Generates reports on companies... Use when users ask about stocks, 
 
 ## 步骤6：测试Skill（无需输入命令）
 
-不要输入`/stock-report AAPL`，只需提出一个自然的问题：
+首先，确保Claude Code已加载新的Skill。输入：
+```
+/reload-skills
+```
+Claude Code会报告可用的Skill数量。现在，不要输入`/stock-report AAPL`，只需提出一个自然的问题：
 ```
 苹果公司最近有什么动态？
 ```
@@ -156,7 +164,7 @@ Claude应该使用Skill两次——一次用于Google，一次用于Meta。
 更新 stock-report Skill，使其仅在我明确提到"分析"或"报告"以及公司名称时才激活。
 ```
 
-Claude会更新`SKILL.md`中的`description`字段。测试差异：
+Claude会更新`SKILL.md`中的`description`字段。输入`/reload-skills`让Claude Code加载此更改，然后测试差异：
 ```
 苹果公司在做什么？
 ```
@@ -181,8 +189,8 @@ Claude会更新`SKILL.md`中的`description`字段。测试差异：
 
 - **Skill未激活：**检查`SKILL.md`中的`description`字段——它必须包含与问题相关的触发词
 - **Skill激活过于频繁：**使描述更具体地说明何时使用它
-- **找不到Skill文件夹：**Skill位于`.claude/skills/`（隐藏文件夹——在文件浏览器中启用"显示隐藏文件"）
-- **对SKILL.md的更改不起作用：**Skill在修改后会自动加载——无需重启。如果仍然不起作用，请检查YAML格式
+- **找不到Skill文件夹：**Skill位于`.claude/skills/`（这是隐藏文件夹：VS Code的资源管理器会显示它；在Windows的文件资源管理器中选择**查看 > 显示 > 隐藏的项目**；在Mac的访达中按**Cmd+Shift+.**）
+- **对SKILL.md的更改不起作用：**Skill在修改后通常会自动重新加载。如果`.claude/skills/`文件夹是在本次会话中创建的，请输入`/reload-skills`（或重启Claude Code）。如果仍然不起作用，请检查YAML格式
 
 ## 工作流程概述
 

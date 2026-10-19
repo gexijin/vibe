@@ -24,10 +24,10 @@ lang: "zh"
 ## 步骤 1：创建免费的 Claude 账户
 
 - 访问 [claude.ai](https://claude.ai)
-- 点击 **Sign up**
-- 输入你的电子邮箱地址，然后点击 **Continue**
-- 在邮箱中查收验证码，并将其输入
-- 按照屏幕上的提示完成账户创建
+- 如果看到 **Sign up** 或 **Try Claude** 按钮，点击它（否则会直接进入登录选项）
+- 输入你的电子邮箱地址，然后点击 **Continue with email**（或点击 **Continue with Google**）
+- 打开 Anthropic 发来的邮件，点击其中的链接（如果你在另一台设备上打开邮件，例如手机，它会显示一个验证码——在电脑上输入该验证码）
+- 按照屏幕上的提示完成账户创建（可能会要求你提供手机号码以接收短信验证码）
 
 ## 步骤 2：发送你的第一条消息
 
@@ -51,19 +51,19 @@ Claude 会记住你们在同一个对话中已经聊过的内容。
 
 ## 步骤 4：找到模型选择器
 
-- 在聊天窗口顶部附近，找到一个显示模型名称的按钮（例如 "Claude"）
-- 点击它，查看可用模型的简短列表
+- 在消息框右下角、发送箭头旁边，找到一个显示模型名称的按钮（例如 "Sonnet"）
+- 点击它，查看可用模型的简短列表（点击 **More models** 查看其余模型）
 - 你不需要在这里更改任何设置——只需知道这个菜单的存在，因为后面的一些教程会要求你选择特定的模型
 
 ## 下一步
 
-- **安装 Claude Code**：通过[在 Windows 上安装 Claude Code](Install_CLAUDE_Code_Win)或[在 macOS 上安装 Claude Code](Install_Claude_Code_MacOS)，把这个 AI 助手带进你的编程项目
+- **安装 Claude Code**：通过[在 Windows 上安装 Claude Code](Install_CLAUDE_Code_Win)或[在 macOS 上安装 Claude Code](Install_Claude_Code_MacOS)，把这个 AI 助手带进你的编程项目。Claude Code 需要付费 Claude 套餐（如 Pro 或 Max）或 Anthropic Console 账户——免费套餐不包含 Claude Code。
 - **继续聊天**：请 Claude 帮你规划一件你正在做的事情——比如一封邮件、一份食谱或一份学习指南
 - **尝试更难的提示词**：请 Claude 比较你面临的某个决定中的两个选项，看看它如何解释自己的推理过程
 
 ## 故障排除
 
-- **没有收到验证邮件** - 检查你的垃圾邮件文件夹；等待一分钟，如有需要，点击 **Resend code**
+- **没有收到注册邮件** - 检查你的垃圾邮件文件夹；等待一分钟，然后返回 [claude.ai](https://claude.ai) 再次输入你的邮箱地址
 - **页面无法加载或显示异常** - 刷新页面，或换用其他浏览器，如 Chrome 或 Firefox
 - **不知道该输入什么** - 从简单的开始：请 Claude 解释一个你感兴趣的话题，或者请它帮你处理今天正在做的事情
 

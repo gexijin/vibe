@@ -53,11 +53,7 @@ lang: "zh"
   ```
   claude
   ```
-- 第一次这样做时，Claude Code 会要求你登录：
-  1. 按 Enter 打开浏览器窗口
-  2. 登录或创建 Anthropic 账户
-  3. 复制代码并粘贴回终端
-  4. 按 Enter
+- 如果 Claude Code 要求你登录，请按照[安装教程](./Install_Claude_Code_MacOS)中的登录步骤操作。Claude Code 需要付费 Claude 套餐（如 Pro 或 Max）或 Anthropic Console 账户——免费套餐不包含 Claude Code。
 - 你会看到欢迎消息和 Claude Code 提示符
 - 现在你可以在 VS Code 中编辑文件的同时使用 Claude Code 了
 
@@ -88,7 +84,7 @@ VS Code 会记住最近使用的文件夹，使用方法 A 的 Open Recent（打
 - 让 Claude Code 解释现有代码库："解释这个项目做什么"
 - 让 Claude Code 帮助你编写新功能："添加一个计算列表平均值的函数"
 - 使用 Claude Code 修复错误："这段代码出现错误，你能修复它吗？"
-- 尝试 Claude Code VS Code 扩展，获得可视化界面和内联差异显示（在扩展中搜索"Claude Code"）
+- 尝试 Claude Code 扩展，获得带内联差异显示的可视化聊天面板。在 VS Code 终端中运行 `claude` 通常会自动为你安装它（如果没有，在扩展中搜索"Claude Code"）。打开任意文件，然后点击编辑器右上角的 Spark 图标
 
 ## 故障排除
 

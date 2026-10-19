@@ -18,7 +18,7 @@ lang: "zh"
 
 - 完成 [在 VS Code 中进行 Python 编程](./Python_Coding_VS_Code_Guide) 教程 - Python 应该已在 VS Code 中正常工作
 - 完成 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS) 教程 - Claude Code CLI 应该已安装
-- Claude Pro/Max 订阅或 Anthropic API 密钥
+- 付费 Claude 套餐（如 Pro 或 Max）或 Anthropic Console 账户——免费套餐不包含 Claude Code
 - 20-30 分钟
 
 ## 步骤 1：打开 VS Code 并创建 Python 项目
@@ -35,20 +35,16 @@ lang: "zh"
 
 - 点击左侧边栏的 **Extensions** 图标（四个方块）
 - 在搜索框中输入 `Claude Code`
-- 找到 Anthropic 的 **Claude Code**，点击 **Install**
-- 安装完成后，左侧边栏出现 Claude 图标（闪光图标）
-- 点击 Claude 图标打开聊天面板
-- 点击聊天面板中的 **Sign in to Claude Code**
-- 选择身份验证方式：
-  - **Claude Pro/Max 用户**：点击 **Sign in with Claude.ai**，在浏览器授权，将代码复制回 VS Code
-  - **API 密钥用户**：点击 **Use API Key**，粘贴 Anthropic API 密钥
+- 找到 Anthropic 的 **Claude Code for VS Code**，点击 **Install**
+- 安装完成后，点击 VS Code 窗口右下角（状态栏）的 **✻ Claude Code** 打开 Claude 面板
+- 首次使用时会出现登录界面：点击 **Sign in**，在浏览器中批准访问，然后返回 VS Code
 - 详细身份验证步骤请参阅 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS) 指南（步骤 3）
-- 登录成功后，聊天面板中显示"Ready to help"
+- 登录成功后，你会在面板中看到 **Learn Claude Code** 清单，面板底部有一个提示输入框
 
 ## 步骤 3：手动创建初始 Python 脚本
 
-- 点击菜单栏的 **File > New File**
-- 点击 **Select a language**，输入 `Python`，选择 **Python**
+- 点击菜单栏的 **File > New File...**
+- 在窗口顶部出现的列表中，选择 **Python File**
 - 点击 **File > Save** 保存文件，命名为 `iris_analysis.py`
 - 输入以下代码：
 
@@ -62,13 +58,15 @@ iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
 iris_df['species'] = iris.target_names[iris.target]
 
 # Display structure
-print(iris_df.info())
+iris_df.info()
 print("\nSummary statistics:")
 print(iris_df.describe())
 ```
 
 - 点击 **File > Save** 保存文件
-- 打开 Python Terminal：点击 **View > Terminal**
+- 按照 [在 VS Code 中进行 Python 编程](./Python_Coding_VS_Code_Guide) 步骤 5 的方法创建虚拟环境：点击 **View > Command Palette**，输入 `Python: Create Environment`，选择 **Venv**，然后选择你的 Python 版本
+- 等待 `.venv` 文件夹出现在资源管理器（Explorer）中
+- 打开 Terminal：点击菜单栏的 **View**，然后点击 **Terminal**。提示符开头应显示 `(.venv)`
 - 安装此脚本所需的包：
   ```
   pip install scikit-learn pandas
@@ -78,7 +76,7 @@ print(iris_df.describe())
 
 ## 步骤 4：让 Claude 添加散点图
 
-- 点击左侧边栏的 **Claude** 图标打开聊天面板
+- 打开 Claude 面板（点击已打开文件右上角的 Spark 图标，或右下角的 **✻ Claude Code**）
 - 在底部聊天框中输入：
 
 ```
@@ -86,12 +84,12 @@ print(iris_df.describe())
 ```
 
 - 按 Enter 发送
-- Claude 读取文件并提出更改建议，你会看到显示新增代码的差异对比
-- 点击 **Accept** 应用更改
+- Claude 读取并编辑文件——新代码会出现在 `iris_analysis.py` 中
+- 如果 Claude 显示差异对比并请求权限，请接受更改
 - seaborn/matplotlib 代码出现在文件中
-- 如未安装所需的包，在 Terminal 中运行：
+- 安装 Claude 代码用到的绘图包（步骤 3 中没有安装它们）。在 Terminal 中（确认显示 `(.venv)`）运行：
   ```
-  pip install seaborn matplotlib scikit-learn pandas
+  pip install seaborn matplotlib
   ```
 
 ## 步骤 5：运行更新后的代码
@@ -110,8 +108,8 @@ print(iris_df.describe())
 ```
 
 - 按 Enter
-- Claude 显示更新后的代码更改
-- 点击 **Accept**
+- Claude 更新代码
+- 如有询问，接受更改
 - 再次运行：在 Terminal 中输入 `python iris_analysis.py`
 - 图表现在显示每个物种使用不同标记形状，无标题，使用 whitegrid 样式
 - 关闭图表窗口继续
@@ -126,9 +124,9 @@ print(iris_df.describe())
 
 - 按 Enter
 - Claude 向脚本添加 PCA 代码
-- 点击 **Accept**
+- 如有询问，接受更改
 - 运行代码：在 Terminal 中输入 `python iris_analysis.py`
-- 出现 PCA 图表，显示投影到 PC1 和 PC2 上的样本，按物种着色
+- 出现 PCA 图表，显示投影到 PC1 和 PC2 上的样本，按物种着色（如果步骤 6 的散点图窗口先打开，关闭它，PCA 图表就会随后出现）
 - 完成后关闭图表窗口
 
 ## 步骤 8：让 Claude 审查并添加注释
@@ -140,8 +138,8 @@ print(iris_df.describe())
 ```
 
 - 按 Enter
-- Claude 审查代码并建议添加解释各部分的注释
-- 点击 **Accept**
+- Claude 审查代码并添加解释各部分的注释
+- 如有询问，接受更改
 - 脚本现在有清晰注释，解释数据加载、可视化和 PCA 分析
 
 ## 下一步
@@ -156,9 +154,9 @@ print(iris_df.describe())
 
 - **Claude Extension 未显示** - 安装后重启 VS Code，点击 **View > Extensions** 验证是否已安装
 - **"Cannot read Python file" 错误** - 确保保存的文件使用 `.py` 扩展名，Claude 需读取已保存的文件
-- **身份验证失败** - 验证 Claude Pro/Max 订阅是否有效或 API 密钥是否正确，故障排除参阅 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)
-- **找不到包错误** - 在 Terminal 中安装所需包：`pip install seaborn matplotlib scikit-learn pandas`，等待安装完成后再运行代码
-- **代码更改未应用** - 确保在差异对比上点击 **Accept**，如不起作用可手动复制 Claude 建议的代码
+- **身份验证失败** - 验证你的付费 Claude 套餐或 Anthropic Console 账户是否有效，故障排除参阅 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)
+- **找不到包错误**或 **`command not found: python`** - 确保 Terminal 显示 `(.venv)`（如果没有，关闭它并通过 **View > Terminal** 打开一个新的），然后安装所需包：`pip install seaborn matplotlib scikit-learn pandas`，等待安装完成后再运行代码
+- **代码更改未应用** - 如果 Claude 请求了权限，确保你已接受更改，如不起作用可手动复制 Claude 建议的代码
 - **图表未显示** - 确保有显示器，某些系统可能需要在末尾添加 `plt.show()` 或在 Jupyter 中使用 `%matplotlib inline`
 
 ## 工作流程总结
