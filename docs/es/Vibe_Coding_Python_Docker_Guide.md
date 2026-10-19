@@ -18,7 +18,7 @@ Ha escrito código Python línea por línea. Pero ¿qué pasaría si pudiera des
 ## Lo Que Necesitará
 
 - Haber completado [Programación en Python en VS Code vía Docker](./Python_Coding_Docker_Guide)
-- Haber completado [Uso de GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Haber completado [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 minutos
 
 ## Paso 1: Crear Nuevo Repositorio en GitHub
@@ -41,7 +41,7 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 
 Necesita la carpeta `.devcontainer` del proyecto `python-docker-demo` que creó en [Programación en Python en VS Code vía Docker](./Python_Coding_Docker_Guide). Le da a este proyecto el mismo entorno de Python, con pandas, matplotlib y Claude Code ya instalados.
 
-- Abra File Explorer (Windows) o Finder (Mac)
+- Abra el Explorador de archivos (Windows) o Finder (Mac)
 - Navegue a su carpeta `python-docker-demo`
 - Busque la carpeta `.devcontainer`
   - En Mac, Finder oculta las carpetas cuyo nombre empieza con un punto. Presione **Cmd+Shift+.** (punto) para mostrarlas
@@ -195,7 +195,7 @@ Antes de hacer commit, revise lo que Claude construyó.
 Análisis de datos Iris con histogramas, gráficos de dispersión y gráficos de cajas
 ```
 
-- Haga clic en **Commit to main**
+- Haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 4 files to main**; el número coincide con la cantidad de archivos que cambiaron)
 - Haga clic en **Push origin** para respaldar en GitHub
 
 ¡Ha guardado su primer análisis funcional!

@@ -13,7 +13,7 @@ En este tutorial, creará un Claude Skill que busca literatura médica revisada 
 ## Conceptos clave
 
 - **Claude Skill** - Herramienta especializada que extiende las capacidades de Claude Code con instrucciones personalizadas, código y documentación almacenados en `.claude/skills/`
-- **PubMed** - Base de datos gratuita con más de 35 millones de artículos de investigación biomédica mantenida por la Biblioteca Nacional de Medicina de EE.UU.
+- **PubMed** - Base de datos gratuita con más de 40 millones de artículos de investigación biomédica mantenida por la Biblioteca Nacional de Medicina de EE.UU.
 - **Biopython** - Biblioteca de Python que proporciona herramientas para consultar la base de datos de PubMed programáticamente
 - **Modo accept edits** - Un modo (que se cambia con Shift+Tab) que permite a Claude realizar múltiples cambios en archivos sin solicitar permiso cada vez
 
@@ -26,7 +26,7 @@ En este tutorial, creará un Claude Skill que busca literatura médica revisada 
 
 ## Paso 1: Navegue hasta la carpeta del proyecto
 
-Si completó el [tutorial de slash commands](./Reuse_Prompts_via_Slash_Commands.md), la carpeta `test_claude` ya existe. Estos comandos funcionan de cualquier manera.
+Si completó el [tutorial de comandos slash](./Reuse_Prompts_via_Slash_Commands.md), la carpeta `test_claude` ya existe. Estos comandos funcionan de cualquier manera.
 
 **Windows (PowerShell):**
 - Abra **PowerShell** desde el menú Inicio
@@ -142,7 +142,7 @@ La respuesta explica el consenso científico, el origen del mito y las consecuen
 Abra VS Code para ver la estructura del skill:
 
 **Windows:**
-- Abra **Explorador de Archivos**, navegue hasta `C:\Users\YOUR_USERNAME\Documents\test_claude`
+- Abra el **Explorador de archivos**, navegue hasta `C:\Users\YOUR_USERNAME\Documents\test_claude`
 - Haga clic derecho en la carpeta y seleccione **Open with Code** (en Windows 11, haga clic primero en **Show more options**). Si no lo ve, abra VS Code y use **File > Open Folder** en su lugar
 
 **Mac:**
@@ -195,15 +195,15 @@ Estos **skills de documentos** ayudan a Claude a leer y escribir archivos de Wor
 
 ## Resumen del flujo de trabajo
 
-- **Claude Skills** son más poderosos que los slash commands: combinan código, documentación e instrucciones personalizadas
+- **Claude Skills** son más poderosos que los comandos slash: combinan código, documentación e instrucciones personalizadas
 - **Modo accept edits** (Shift+Tab) agiliza la creación evitando solicitudes repetidas de permisos
 - **Empaquetado autocontenido** - Los scripts viven dentro de las carpetas de skills, haciéndolos portátiles y compartibles
 - **Activación automática** - Los skills se activan según patrones de preguntas (preguntas de investigación activan medical-research)
 - **Interfaz de lenguaje natural** - Haga preguntas naturales sin conocer los detalles técnicos
 
-## Skills vs Slash Commands
+## Skills vs comandos slash
 
-| Característica | Skills | Slash Commands |
+| Característica | Skills | Comandos slash |
 |---------|--------|----------------|
 | **Qué contiene** | Prompts, código, datos y documentación | Solo prompts |
 | **Activación** | Automáticamente cuando son relevantes, o manualmente con `/skill-name` | Se activan manualmente con `/command` |
@@ -211,7 +211,7 @@ Estos **skills de documentos** ayudan a Claude a leer y escribir archivos de Wor
 | **Ubicación de archivo** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **Estructura** | Múltiples archivos (SKILL.md, README.md, archivos de código) | Un solo archivo `.md` por comando |
 
-**Conclusión clave:** Los Slash Commands solo inyectan prompts desde la interfaz de usuario. Es útil, pero limitado.
+**Conclusión clave:** Los comandos slash solo inyectan prompts desde la interfaz de usuario. Es útil, pero limitado.
 
 ---
 

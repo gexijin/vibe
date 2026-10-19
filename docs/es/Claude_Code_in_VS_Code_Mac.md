@@ -17,29 +17,29 @@ Ya instaló Claude Code en su Mac, ahora necesita un editor visual para trabajar
 ## Lo Que Necesitará
 
 - Haber completado [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS)
-- Haber completado [Conceptos Básicos de VS Code](./VS_Code_Getting_Started)
+- Haber completado [Primeros Pasos con VS Code](./VS_Code_Getting_Started)
 - 10-15 minutos
 
 ## Paso 1: Inicie VS Code
 
-- Abra **Finder** y vaya a **Applications**
+- Abra **Finder** y vaya a **Aplicaciones**
 - Encuentre **Visual Studio Code** y haga doble clic en él
-- Si ve una advertencia "Visual Studio Code is an app downloaded from the internet", haga clic en **Open**
+- Si ve una advertencia de que "Visual Studio Code" es una app descargada de Internet, haga clic en **Abrir** (Open)
 - VS Code se abre con una pestaña de bienvenida - puede cerrar esta pestaña
 
-**Consejo:** Haga clic derecho en VS Code en el Dock y seleccione **Options > Keep in Dock** para un acceso fácil más adelante.
+**Consejo:** Haga clic derecho en VS Code en el Dock y seleccione **Opciones > Mantener en el Dock** para un acceso fácil más adelante.
 
 ## Paso 2: Cree una Carpeta de Proyecto
 
 - Abra **Finder**
-- Haga clic en **Documents** en la barra lateral izquierda
+- Haga clic en **Documentos** en la barra lateral izquierda
 - Haga clic en **File** en la barra de menú, luego en **New Folder**
 - Nombre la carpeta `test_claude`
 
 ## Paso 3: Abra la Carpeta en VS Code
 
 - En VS Code, haga clic en **File** en la barra de menú, luego en **Open Folder**
-- Navegue a **Documents** y seleccione la carpeta `test_claude` que creó
+- Navegue a **Documentos** y seleccione la carpeta `test_claude` que creó
 - Haga clic en **Open**
 - Si se le pregunta "Do you trust the authors of the files in this folder?", haga clic en **Yes, I trust the authors**
 
@@ -47,9 +47,9 @@ Ahora debería ver `TEST_CLAUDE` en el panel Explorer del lado izquierdo.
 
 ## Paso 4: Inicie Claude Code e Inicie Sesión
 
-- Abra un nuevo terminal: haga clic en **Terminal** en la barra de menú, luego en **New Terminal**
+- Abra una nueva terminal: haga clic en **Terminal** en la barra de menú, luego en **New Terminal**
 - Aparece un panel de terminal en la parte inferior de VS Code
-- En el terminal, escriba:
+- En la terminal, escriba:
   ```
   claude
   ```
@@ -67,7 +67,7 @@ Escribe un artículo breve explicando por qué a los LLMs les gusta usar el form
 ```
 - Claude Code crea el archivo y verá que `article.md` aparece en el panel Explorer a la izquierda
 - Haga clic en `article.md` en el Explorer para verlo en el editor
-- Para previsualizar el artículo formateado: haga clic derecho en la pestaña `article.md` y seleccione **Open Preview**
+- Para previsualizar el artículo formateado: haga clic derecho dentro del editor de `article.md` y seleccione **Markdown Preview Enhanced: Open Preview to the Side** (la extensión de [Primeros Pasos con VS Code](./VS_Code_Getting_Started)). Si no tiene esa extensión, haga clic derecho en la pestaña `article.md` y seleccione **Open Preview** en su lugar
 - Verá el Markdown renderizado con encabezados, viñetas y formato apropiados
 
 ## Reabrir Claude en VS Code Más Tarde
@@ -90,7 +90,7 @@ VS Code recuerda sus carpetas recientes, por lo que la Opción A con Open Recent
 
 - **La terminal muestra "zsh" pero Claude Code no se inicia** - Asegúrese de que Claude Code esté instalado correctamente; ejecute `claude --version` para verificar
 - **Comando "code" no encontrado en Terminal** - En VS Code, haga clic en **View** en la barra de menú, luego en **Command Palette**, escriba "shell command", y seleccione **Shell Command: Install 'code' command in PATH**
-- **VS Code no se abre porque es de un desarrollador no identificado** - Vaya a **System Settings > Privacy & Security** y haga clic en **Open Anyway**
+- **VS Code no se abre porque es de un desarrollador no identificado** - Vaya a **Ajustes del Sistema > Privacidad y seguridad** y haga clic en **Abrir igualmente** (Open Anyway)
 
 ## Resumen del Flujo de Trabajo
 

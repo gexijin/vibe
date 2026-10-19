@@ -46,7 +46,7 @@ cd data_projects
 - Visite [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) en su navegador web
 - Haga clic en el botón verde **Code** cerca de la parte superior derecha
 - Haga clic en **Download ZIP**
-- Extraiga el archivo ZIP en su carpeta Descargas. GitHub nombra la carpeta extraída **data_projects-main**: cámbiele el nombre a **data_projects** para que coincida con el resto de este tutorial. En Windows, **Extract All** puede crear una carpeta dentro de otra (data_projects-main → data_projects-main). Ábrala: si solo ve otra carpeta **data_projects-main**, mueva esa carpeta interior a Descargas y cámbiele el nombre a **data_projects**.
+- Extraiga el archivo ZIP en su carpeta Descargas. GitHub nombra la carpeta extraída **data_projects-main**: cámbiele el nombre a **data_projects** para que coincida con el resto de este tutorial. En Windows, **Extraer todo** puede crear una carpeta dentro de otra (data_projects-main → data_projects-main). Ábrala: si solo ve otra carpeta **data_projects-main**, mueva esa carpeta interior a Descargas y cámbiele el nombre a **data_projects**.
 - En su terminal, navegue a la carpeta extraída:
   ```
   cd ~/Downloads/data_projects
@@ -158,7 +158,7 @@ El archivo CLAUDE.md es el manual de instrucciones de su proyecto para Claude. P
 
 Claude creará el archivo con un resumen de su proyecto. Este archivo permanece en la raíz de su proyecto y Claude lo lee automáticamente cada vez que inicia una nueva sesión.
 
-Puede editar CLAUDE.md en cualquier momento para agregar instrucciones específicas del proyecto, convenciones de codificación o contexto importante como el propósito de los archivos.
+Puede editar CLAUDE.md en la carpeta del proyecto en cualquier momento para agregar instrucciones específicas del proyecto, convenciones de programación o contexto importante como el propósito de los archivos.
 
 ## Paso 8: Referirse a Archivos o Líneas de Código
 
@@ -170,7 +170,7 @@ Explica el código en @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude leerá el notebook y explicará qué hace, cómo funciona y qué logra el código. Esto efectivamente trae el archivo al contexto.
 
-Si trabaja con Claude Code desde VS Code y tiene la extensión instalada, puede agregar el archivo al contexto simplemente abriéndolo. Verá `In Nested_Pie_Chart.ipynb` en la parte inferior derecha de la ventana de Claude Code. Así Claude sabe que está hablando de este archivo.
+Si trabaja con Claude Code desde VS Code y tiene la extensión instalada, puede agregar el archivo al contexto simplemente abriéndolo. Verá `Nested_Pie_Chart.ipynb` en la parte inferior del cuadro del prompt de Claude Code. Así Claude sabe que está hablando de este archivo.
 
 Además, puede seleccionar algunas líneas de código y Claude mostrará **3 lines selected**. Puede pedirle a Claude que haga cambios rápidos a estas líneas o hacer preguntas sobre ellas. Por esto recomendamos usar Claude Code desde VS Code.
 

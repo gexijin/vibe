@@ -1,10 +1,10 @@
 ---
-title: "Codificación en Python con VS Code mediante Contenedor Docker"
+title: "Programación en Python en VS Code vía Docker"
 lang: "es"
 ---
 [Inicio](index.html)
 
-# Codificación en Python con VS Code mediante Contenedor Docker
+# Programación en Python en VS Code vía Docker
 
 ¿Alguna vez intentó compartir su código Python con un colega solo para pasar horas depurando problemas del tipo "funciona en mi máquina"? Los contenedores Docker son como contenedores de envío para código: empaquetan su entorno Python, bibliotecas y dependencias en una caja sellada que funciona igual en todas partes. Además, obtiene acceso a decenas de miles de imágenes preconstruidas en [Docker Hub](https://hub.docker.com/), donde los desarrolladores publican entornos listos para usar, evitando la instalación manual de software. Este tutorial muestra cómo ejecutar Python en un entorno aislado y reproducible usando VS Code y Docker Desktop.
 
@@ -358,7 +358,7 @@ Una vez configurado todo, esta es su rutina diaria:
 3. **Reabrir en Contenedor** - Si no está ya en el contenedor, haga clic en el icono **><** en la esquina inferior izquierda y seleccione **Reopen in Container**
 4. **Escribir y ejecutar código** - Edite archivos `.py`, ejecute línea por línea con `Shift+Enter`, o ejecute aplicaciones con `streamlit run app.py`
 5. **Guardar su trabajo** - Sus archivos de código (`.py`, `.ipynb`) se guardan en su computadora y persisten entre sesiones
-6. **Confirmar y enviar** - Si su proyecto es un repositorio de GitHub (consulte [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)), use GitHub Desktop para confirmar sus cambios y enviarlos
+6. **Hacer commit y push** - Si su proyecto es un repositorio de GitHub (consulte [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)), use GitHub Desktop para hacer commit de sus cambios y hacer push
 
 ---
 

@@ -25,7 +25,7 @@ Está programando con asistencia de IA. Esta hace cambios en sus archivos. A vec
 Elija uno de estos métodos:
 
 - **Spotlight:** Presione `Command (⌘) + Space`, escriba `Terminal`, presione Enter
-- **Finder:** Abra **Applications** > **Utilities** > **Terminal**
+- **Finder:** Abra **Aplicaciones** > **Utilidades** > **Terminal**
 
 Verá un prompt de comando que termina con `$` o `%`.
 
@@ -128,7 +128,7 @@ Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
 ## Paso 9: Pruebe el Temporizador
 
 - Abra Finder
-- Navegue a **Documents** > **test_claude**
+- Navegue a **Documentos** > **test_claude** (Finder muestra la carpeta `Documents` como **Documentos**)
 - Haga doble clic en `timer.html` para abrirlo en su navegador
 - Pruebe el temporizador:
   - Escriba `1` en el campo de entrada

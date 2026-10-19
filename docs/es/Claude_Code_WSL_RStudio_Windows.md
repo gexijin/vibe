@@ -16,7 +16,7 @@ Tiene RStudio en Windows para ejecutar código R y Claude Code para asistencia d
 
 ## Lo Que Necesitará
 
-- Haber completado la guía [Install Claude Code on Windows](./Install_CLAUDE_Code_Win)
+- Haber completado la guía [Instalar Claude Code en Windows](./Install_CLAUDE_Code_Win)
 - RStudio instalado en Windows
 - 20-30 minutos
 
@@ -35,8 +35,8 @@ Tiene RStudio en Windows para ejecutar código R y Claude Code para asistencia d
 - Seleccione **New Project**
 - Para **Directory name**, escriba: `test_claude`
 - Haga clic en **Browse** junto a "Create project as subdirectory of:"
-- Navegue a su carpeta **Documents**
-- Haga clic en **Select Folder**
+- Navegue a su carpeta **Documentos**
+- Haga clic en **Open** (en algunas versiones de RStudio este botón dice **Select Folder**)
 - Haga clic en **Create Project**
 - RStudio crea el proyecto y cambia a él
 

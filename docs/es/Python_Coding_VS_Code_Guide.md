@@ -231,7 +231,7 @@ streamlit run app.py
 
 VS Code proporciona un entorno moderno y ligero para el desarrollo en Python con estas ventajas:
 
-- **Entorno unificado**: Codifique en Python, R, JavaScript y más en un solo editor
+- **Entorno unificado**: Programe en Python, R, JavaScript y más en un solo editor
 - **IntelliSense potente**: Autocompletados inteligentes, verificación de tipos e importaciones automáticas vía Pylance
 - **Depuración integrada**: Establezca puntos de interrupción, inspeccione variables y avance paso a paso por el código
 - **Soporte Jupyter**: Ejecute notebooks directamente en VS Code sin aplicaciones separadas

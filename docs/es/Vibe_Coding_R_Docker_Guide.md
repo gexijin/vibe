@@ -6,18 +6,18 @@ lang: "es"
 
 # Vibe Coding en R con Claude Code y Docker
 
-Vibe coding es como tener una conversación con su computadora: usted describe el resultado que desea, Claude Code lo construye, usted lo prueba y lo refina. No es magia; es una nueva forma de trabajar donde usted guía la visión y la IA maneja la implementación. Este tutorial le muestra cómo construir un panel de estadísticas de la NBA usando únicamente solicitudes en lenguaje natural.
+Vibe coding es como tener una conversación con su computadora: usted describe el resultado que desea, Claude Code lo construye, usted lo prueba y lo refina. No es magia; es una nueva forma de trabajar donde usted guía la visión y la IA maneja la implementación. Este tutorial le muestra cómo construir un panel real de estadísticas de la NBA usando únicamente solicitudes en lenguaje natural.
 
 ## Conceptos Clave
 
-- **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
+- **[Claude Code](https://code.claude.com/)** - Asistente de programación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
 - **[hoopR](https://hoopr.sportsdataverse.org/)** - Paquete de R que proporciona acceso fácil a estadísticas de jugadores de la NBA y datos de partidos
 - **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → hacer commit de las versiones que funcionen
 
 ## Lo Que Necesitará
 
-- Haber completado [Programación en R con VS Code y Docker](./R_Coding_Docker_Guide)
-- Haber completado [Uso de GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Haber completado [Programación en R en VS Code vía Docker](./R_Coding_Docker_Guide)
+- Haber completado [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - Docker Desktop instalado e iniciado
 - 25-30 minutos
 
@@ -40,9 +40,9 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 ## Paso 2: Copiar la Configuración de Docker
 
 - Vaya a https://github.com/gexijin/vibe
-  - **Nota para Macs con Apple Silicon:** La versión principal funciona en Apple Silicon mediante la emulación integrada de Docker Desktop. Funciona, pero la primera construcción y el propio R son más lentos.
+  - **Nota para Macs con Apple Silicon:** Esta configuración está construida para procesadores Intel/AMD. Docker Desktop la ejecuta mediante emulación, así que funciona, pero la primera construcción y el propio R son más lentos.
 - Haga clic en **Code** y luego en **Download ZIP**
-- Abra File Explorer (Windows) o Finder (Mac) y vaya a su carpeta **Downloads** (Descargas)
+- Abra el Explorador de archivos (Windows) o Finder (Mac) y vaya a su carpeta **Descargas** (Downloads)
 - Descomprima el archivo: en Windows, haga clic derecho sobre él y elija **Extract All**; en Mac, haga doble clic en él
 - Abra la carpeta descomprimida `vibe-main`. En Windows puede contener otra carpeta con el mismo nombre; abra esa
 - Encuentre la carpeta `.devcontainer`
@@ -256,7 +256,7 @@ Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 - **Pruebe otros paquetes** - Pida a Claude que use `nflfastR` para fútbol americano o `worldfootballR` para fútbol
 - **Aprenda preguntando** - Cuando Claude escriba código, pregunte "explica qué hace esta función" para aprender R
 - **Comparta su panel** - Despliegue en [shinyapps.io](https://www.shinyapps.io/) (pregunte a Claude cómo)
-- **Lea sobre vibe coding** - Visite [la guía de IBM](https://www.ibm.com/think/topics/vibe-coding) para más información sobre este estilo de codificación
+- **Lea sobre vibe coding** - Visite [la guía de IBM](https://www.ibm.com/think/topics/vibe-coding) para más información sobre este estilo de programación
 
 ## Solución de Problemas
 
@@ -285,13 +285,13 @@ Después de esta configuración inicial, su rutina diaria de vibe coding se conv
 
 1. **Iniciar Docker Desktop** - Lance la aplicación, espere el estado verde
 2. **Abrir VS Code** - Abra su proyecto, reabra en contenedor si es necesario
-3. **Iniciar Claude Code** - Escriba `claude` en el terminal
+3. **Iniciar Claude Code** - Escriba `claude` en la terminal
 4. **Describa su objetivo** - "Agrega una funcionalidad que..." o "Corrige el error donde..."
 5. **Probar los cambios** - Ejecute su aplicación, verifique si funciona
 6. **Iterar o hacer commit** - Si falla, describa la corrección; si funciona, haga commit con GitHub Desktop
 7. **Hacer push regularmente** - Haga clic en **Push origin** para respaldar en GitHub
 
-Cuanto más practique, mejor será describiendo lo que desea. Vibe coding es una habilidad: aprende qué tipos de descripciones funcionan mejor y cómo dividir grandes ideas en pasos manejables.
+Cuanto más practique, mejor será describiendo lo que desea. Vibe coding es una habilidad: aprende qué tipos de descripciones funcionan mejor y cómo dividir grandes ideas en partes que pueda probar.
 
 ---
 

@@ -13,7 +13,7 @@ Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A v
 - **PowerShell** - Herramienta de línea de comandos integrada en Windows, que aquí se usa para ejecutar Git y Claude Code
 - **Git** - Rastrea cada cambio en sus archivos en su computadora, creando puntos de restauración a los que puede volver en cualquier momento
 - **Commit** - Una instantánea de su proyecto en un punto específico en el tiempo con una descripción de qué cambió
-- **Claude Code** - Asistente de codificación de IA que escribe código, corrige errores y maneja operaciones de Git mediante solicitudes simples
+- **Claude Code** - Asistente de programación con IA que escribe código, corrige errores y maneja operaciones de Git mediante solicitudes simples
 
 ## Lo Que Necesitará
 
@@ -22,7 +22,7 @@ Está trabajando con asistencia de IA. Esta realiza cambios en sus archivos. A v
 
 ## Paso 1: Abra PowerShell
 
-- Haga clic en el menú **Start**
+- Haga clic en el menú **Inicio** (Start)
 - Escriba `PowerShell`
 - Haga clic en **Windows PowerShell** para abrirlo
 
@@ -118,15 +118,15 @@ Claude crea `timer.html` (toma 10-30 segundos) con el código CSS y JavaScript.
 
 ## Paso 9: Pruebe el Temporizador
 
-- Abra Windows File Explorer
-- Navegue a `Documents\test_claude`
+- Abra el Explorador de archivos de Windows
+- Navegue a **Documentos** > **test_claude** (el Explorador de archivos muestra la carpeta `Documents` como **Documentos**)
 - Haga doble clic en `timer.html` para abrirlo en su navegador
 - Pruebe el temporizador:
   - Escriba `1` en el campo de entrada
   - Haga clic en **Iniciar**
   - Observe la cuenta regresiva
 
-**¿No ve `test_claude`?** Si OneDrive hace copia de seguridad de su carpeta Documents, File Explorer muestra una carpeta Documents diferente. Haga clic en la barra de direcciones de File Explorer, pegue `%USERPROFILE%\Documents\test_claude` y presione **Enter**.
+**¿No ve `test_claude`?** Si OneDrive hace copia de seguridad de su carpeta Documentos, el Explorador de archivos muestra una carpeta Documentos diferente. Haga clic en la barra de direcciones del Explorador de archivos, pegue `%USERPROFILE%\Documents\test_claude` y presione **Enter**.
 
 **Si algo está roto:** En Claude Code, describa el error: `Veo este error: [describa lo que pasó]. ¿Puedes corregirlo?`
 
@@ -241,7 +241,7 @@ Claude muestra sus commits en un formato legible. Verá:
 - Incapaz de corregir → Descarte los cambios e intente nuevamente
 - Repita
 
-¡Siempre puede volver a cualquier commit. Descarte sin temor—solo haga commit del código que funciona!
+Siempre puede volver a cualquier commit. ¡Descarte sin temor—solo haga commit del código que funciona!
 
 ## Próximos Pasos
 

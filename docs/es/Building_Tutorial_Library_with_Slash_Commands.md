@@ -76,7 +76,7 @@ Los tutoriales evolucionan. Los comandos cambian. Se añaden nuevas secciones. E
 
 La revisión de calidad es exhaustiva. Para japonés, verifica frases naturales (no palabra por palabra), nivel de cortesía apropiado (forma です/ます), uso correcto de partículas (は/が, を, に, で), y que no haya uso excesivo de katakana antinatural. Cuando actualicé los tutoriales en inglés, pude propagar rápidamente los cambios a todas las traducciones manteniendo la calidad del idioma.
 
-### Puliendo Traducciones para un Flujo Natural
+### Puliendo traducciones para un flujo natural
 
 Después de sincronizar las traducciones con los originales en inglés, añadí un paso final de pulido: editar cada documento traducido por sí solo para mejorar la calidad del lenguaje, sin comparar con el inglés. Este paso se enfoca puramente en hacer que el texto suene natural para hablantes nativos.
 
@@ -100,11 +100,11 @@ Todos los tutoriales siguen la misma estructura, estilo de escritura y convencio
 
 ## Lecciones clave
 
-- **Empieza manual, luego automatiza.** Haz la tarea manualmente primero, refina el proceso y luego pídele a Claude que lo guarde como un comando.
-- **Estructura los comandos como flujos de trabajo de múltiples fases.** Dile a Claude cómo pensar el problema, no solo qué hacer.
-- **Incorpora el control de calidad en el proceso.** Crea un comando de revisión junto con tu comando de generación.
-- **Haz los comandos colaborativos, no autónomos.** Incluye pasos de aprobación. Claude maneja las partes tediosas; tú tomas las decisiones estratégicas.
-- **Usa subagentes para procesamiento por lotes.** Al procesar muchos documentos, di explícitamente "Use subagents" en tu prompt. Primero asegúrate de que la línea de estado muestre **accept edits on** o **auto mode on** (presiona Shift+Tab para cambiar)—los subagentes usan el mismo modo, así que rara vez se detienen a pedir permiso, lo que hace el procesamiento paralelo mucho más fluido.
+- **Empiece de forma manual y luego automatice.** Haga la tarea manualmente primero, refine el proceso y luego pídale a Claude que lo guarde como un comando.
+- **Estructure los comandos como flujos de trabajo de múltiples fases.** Dígale a Claude cómo pensar el problema, no solo qué hacer.
+- **Incorpore el control de calidad en el proceso.** Cree un comando de revisión junto con su comando de generación.
+- **Haga los comandos colaborativos, no autónomos.** Incluya pasos de aprobación. Claude maneja las partes tediosas; usted toma las decisiones estratégicas.
+- **Use subagentes para procesamiento por lotes.** Al procesar muchos documentos, diga explícitamente "Use subagents" en su prompt. Primero asegúrese de que la línea de estado muestre **accept edits on** o **auto mode on** (presione Shift+Tab para cambiar)—los subagentes usan el mismo modo, así que rara vez se detienen a pedir permiso, lo que hace el procesamiento paralelo mucho más fluido.
 
 ## Conclusión
 
@@ -112,13 +112,13 @@ Construir esta biblioteca de tutoriales me enseñó que la automatización no se
 
 Los comandos slash transformaron Claude Code de un asistente útil en una fábrica de documentación que trabaja bajo mi dirección, mantiene mis estándares y escala al tamaño de proyecto que necesite.
 
-Si tienes tareas de documentación repetitivas, no sigas haciéndolas manualmente. Construye el comando slash una vez y luego despliégalo docenas o cientos de veces.
+Si tiene tareas de documentación repetitivas, no siga haciéndolas manualmente. Construya el comando slash una vez y luego despliéguelo docenas o cientos de veces.
 
 Ese es el poder de la automatización sistemática.
 
 ---
 
-*¿Quieres ver los comandos slash que construí? Revisa la [carpeta de comandos](https://github.com/gexijin/vibe/tree/main/docs/assets/commands). La biblioteca completa de tutoriales está disponible en el [sitio de documentación del proyecto](https://github.com/gexijin/vibe/tree/main/docs).*
+*¿Quiere ver los comandos slash que construí? Revise la [carpeta de comandos](https://github.com/gexijin/vibe/tree/main/docs/assets/commands). La biblioteca completa de tutoriales está disponible en el [sitio de documentación del proyecto](https://github.com/gexijin/vibe/tree/main/docs).*
 
 ---
 

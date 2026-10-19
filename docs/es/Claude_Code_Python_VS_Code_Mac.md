@@ -25,7 +25,7 @@ Ha configurado Python en VS Code y puede escribir código manualmente. Ahora des
 
 - Abra **Visual Studio Code**
 - Haga clic en **File** en la barra de menú, luego en **Open Folder**
-- Navegue a su carpeta **Documents**
+- Navegue a su carpeta **Documentos**
 - Haga clic en **New Folder** en la parte inferior del cuadro de diálogo
 - Nombre la carpeta `claude_python_test`
 - Haga clic en **Open** para abrir la nueva carpeta
@@ -66,13 +66,13 @@ print(iris_df.describe())
 - Guarde el archivo haciendo clic en **File > Save**
 - Cree un entorno virtual, como en el Paso 5 de [Programación en Python con VS Code](./Python_Coding_VS_Code_Guide): haga clic en **View > Command Palette**, escriba `Python: Create Environment`, elija **Venv** y luego seleccione su versión de Python
 - Espere a que aparezca la carpeta `.venv` en el Explorer
-- Abra un terminal: haga clic en **View** en la barra de menú, luego en **Terminal**. Debería ver `(.venv)` al inicio del prompt
+- Abra una terminal: haga clic en **View** en la barra de menú, luego en **Terminal**. Debería ver `(.venv)` al inicio del prompt
 - Instale los paquetes que necesita este script:
   ```
   pip install scikit-learn pandas
   ```
-- En el terminal, ejecute: `python iris_analysis.py`
-- Debería ver la estructura del conjunto de datos y las estadísticas resumidas en el terminal
+- En la terminal, ejecute: `python iris_analysis.py`
+- Debería ver la estructura del conjunto de datos y las estadísticas resumidas en la terminal
 
 ## Paso 4: Pídale a Claude que Agregue un Gráfico de Dispersión
 

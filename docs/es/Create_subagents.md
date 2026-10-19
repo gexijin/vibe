@@ -146,7 +146,7 @@ El subagente se activará automáticamente según su descripción.
 
 ## Paso 7: Observe cómo trabaja el subagente
 
-Mientras el subagente se ejecuta, verá que:
+El subagente se ejecuta en segundo plano, así que verá su nombre en un pequeño panel debajo del prompt en lugar de ver cada paso. Para observarlo, escriba `/tasks`, use las teclas de flecha para seleccionar **stock-picker** y presione **Enter**. Internamente, el subagente:
 1. **Invoca el skill dos veces** - Llama al skill stock-report una vez para Apple y luego para Google
 2. **Recopila datos** - Cada llamada al skill busca en la web y genera un informe de empresa
 3. **Evalúa empresas** - Puntúa cada categoría y las combina en una puntuación general
@@ -163,7 +163,7 @@ El subagente devuelve un análisis detallado que incluye:
 - **Cuadro comparativo de puntuaciones** - Puntuaciones numéricas entre categorías (Salud Financiera, Potencial de Crecimiento, Calidad de Gestión, Sentimiento de Mercado)
 - **Recomendación final** - En qué acción invertir y por qué
 
-El subagente puede mostrar esto en el terminal o generar un archivo markdown con el informe completo. Puede editar el archivo del subagente para personalizar las ponderaciones de puntuación o el formato de salida.
+El subagente puede mostrar esto en la terminal o generar un archivo markdown con el informe completo. Puede editar el archivo del subagente para personalizar las ponderaciones de puntuación o el formato de salida.
 
 ## Próximos pasos
 

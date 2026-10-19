@@ -17,13 +17,13 @@ Ya instaló Claude Code en su máquina Windows, ahora necesita un editor visual 
 ## Lo Que Necesitará
 
 - Haber completado [Instalar Claude Code en Windows](./Install_CLAUDE_Code_Win)
-- Haber completado [Conceptos Básicos de VS Code](./VS_Code_Getting_Started)
+- Haber completado [Primeros Pasos con VS Code](./VS_Code_Getting_Started)
 - 10-15 minutos
 
 ## Paso 1: Cree una Carpeta de Proyecto
 
-- Abra **File Explorer** (haga clic en el icono de carpeta en su barra de tareas)
-- Navegue a **Documents**
+- Abra el **Explorador de archivos** (haga clic en el icono de carpeta en su barra de tareas)
+- Navegue a **Documentos**
 - Haga clic derecho en el espacio vacío, seleccione **New > Folder**
 - Nombre la carpeta `test_claude`
 
@@ -38,7 +38,7 @@ Ya instaló Claude Code en su máquina Windows, ahora necesita un editor visual 
 ## Paso 3: Abra la Carpeta en VS Code
 
 - En VS Code, haga clic en **File** en la barra de menú, luego en **Open Folder**
-- Navegue a **Documents** y seleccione la carpeta `test_claude`
+- Navegue a **Documentos** y seleccione la carpeta `test_claude`
 - Haga clic en **Select Folder** y VS Code se recargará con su carpeta `test_claude`
 - Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
@@ -61,7 +61,7 @@ Escribe un artículo breve explicando por qué a los LLMs les gusta usar el form
 ```
 - Claude Code crea el archivo y verá aparecer `article.md` en el panel Explorer a la izquierda
 - Haga clic en `article.md` en el Explorer para verlo en el editor
-- Para previsualizar el artículo formateado: haga clic derecho en la pestaña `article.md` y seleccione **Open Preview**
+- Para previsualizar el artículo formateado: haga clic derecho dentro del editor de `article.md` y seleccione **Markdown Preview Enhanced: Open Preview to the Side** (la extensión de [Primeros Pasos con VS Code](./VS_Code_Getting_Started)). Si no tiene esa extensión, haga clic derecho en la pestaña `article.md` y seleccione **Open Preview** en su lugar
 - Verá el Markdown renderizado con encabezados, viñetas y formato adecuados
 
 ## Reabrir Claude en VS Code Más Tarde
@@ -69,7 +69,7 @@ Escribe un artículo breve explicando por qué a los LLMs les gusta usar el form
 Después de cerrar VS Code, puede volver a su proyecto de estas formas:
 
 - **Opción A:** Abra VS Code, haga clic en **File > Open Recent** y seleccione `test_claude`
-- **Opción B:** Abra **File Explorer**, haga clic derecho en la carpeta `test_claude` y seleccione **Open with Code** (en Windows 11, haga clic primero en **Show more options**). Esta opción solo aparece si se marcó **Add "Open with Code" action** al instalar VS Code; de lo contrario, use la Opción A
+- **Opción B:** Abra el **Explorador de archivos**, haga clic derecho en la carpeta `test_claude` y seleccione **Open with Code** (en Windows 11, haga clic primero en **Mostrar más opciones**). Esta opción solo aparece si se marcó **Add "Open with Code" action** al instalar VS Code; de lo contrario, use la Opción A
 
 ## Próximos Pasos
 

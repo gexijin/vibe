@@ -164,7 +164,7 @@ Claude actualiza el archivo de comando. Puede verificarlo desde el editor.
   /stock-report AAPL
   ```
 
-Claude crea un archivo llamado algo como `Apple_2025-12-13.html`. Haga doble clic en este archivo en el Explorador de Archivos (Windows) o en Finder (Mac) para abrirlo en su navegador predeterminado.
+Claude crea un archivo llamado algo como `Apple_2025-12-13.html`. Haga doble clic en este archivo en el Explorador de archivos (Windows) o en Finder (Mac) para abrirlo en su navegador predeterminado.
 
 ## Paso 11: Reutilizar el Comando Slash (Opcional)
 

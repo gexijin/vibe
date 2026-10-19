@@ -164,7 +164,7 @@ Luego inicie Claude Code escribiendo `claude`.
    claude
    ```
 - Le hará algunas preguntas antes de estar listo para conversar
-- Para probar que funciona, haga una pregunta general como "Explain quantum computing."
+- Para probar que funciona, haga una pregunta general como "Explica la computación cuántica."
 
 ## Paso 5: Navegar a Su Proyecto
 
@@ -200,8 +200,8 @@ Claude Code instalado mediante el instalador nativo se actualiza automáticament
 
 ## Próximos Pasos
 - [Primeros Pasos con VS Code](./VS_Code_Getting_Started.md) - Aprenda a usar VS Code, un editor de código popular
-- [Claude Code en VS Code (Mac)](./Claude_Code_in_VS_Code_Mac.md) - Ejecute Claude Code dentro de VS Code
-- [Escribir un Trabajo de Investigación con Claude Code](./Writing_Research_Paper_Claude_Code.md) - Use Claude Code para escritura académica
+- [Use Claude Code desde VS Code en Mac](./Claude_Code_in_VS_Code_Mac.md) - Ejecute Claude Code dentro de VS Code
+- [Escribir Artículos de Investigación con Claude Code](./Writing_Research_Paper_Claude_Code.md) - Use Claude Code para escritura académica
 
 ## Cómo Abrir Terminal Nuevamente
 
@@ -264,4 +264,4 @@ También puede usar otras aplicaciones de terminal:
 
 ---
 
-*Última actualización: Febrero 2026*
+*Última actualización: febrero de 2026*

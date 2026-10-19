@@ -61,18 +61,18 @@ Piense en la barra lateral de Claude Code como una ventana de chat dentro de VS 
 
 ### Cómo abrir la barra lateral de Claude Code
 
-1. Abra VS Code
-2. Mire el extremo izquierdo de la ventana
-3. Haga clic en el icono **Extensions** si todavía no ve el panel de Claude Code
-4. Busque Claude Code en el marketplace de extensiones
-5. Haga clic en **Install** si todavía no está instalada
-6. Después de la instalación, busque el icono Spark de Claude Code en la barra lateral izquierda, o haga clic en **✻ Claude Code** en la esquina inferior derecha de la ventana
+- Abra VS Code
+- Mire el extremo izquierdo de la ventana
+- Haga clic en el icono **Extensions** si todavía no ve el panel de Claude Code
+- Busque `Claude Code` en el marketplace de extensiones
+- Haga clic en **Install** si todavía no está instalada
+- Después de la instalación, haga clic en **✻ Claude Code** en la esquina inferior derecha de la ventana para abrir el chat. (El icono Spark de la barra lateral izquierda abre, en cambio, una lista de sus sesiones, donde puede iniciar una nueva).
 
 Si no ve el icono de Claude Code, pruebe lo siguiente:
 
-1. Presione **Ctrl + Shift + P**
-2. Escriba: Claude Code: Open in Side Bar
-3. Haga clic en la opción correspondiente de la lista
+- Presione **Ctrl + Shift + P**
+- Escriba: `Claude Code: Open in Side Bar`
+- Haga clic en la opción correspondiente de la lista
 
 Si aún no aparece, cierre VS Code y vuelva a abrirlo. A veces la extensión necesita reiniciarse antes de que aparezca la barra lateral.
 
@@ -283,7 +283,7 @@ Después de que su computadora se reinicie, una ventana de terminal con "Ubuntu"
 ## Próximos Pasos
 
 - **Configurar VS Code**: Siga la guía [Primeros Pasos con VS Code](VS_Code_Getting_Started), luego conéctelo a Claude Code con [Configure VS Code para Claude Code en Windows](Claude_Code_in_VS_Code_Win)
-- **Aprender conceptos básicos de Git**: Agregue control de versiones a sus proyectos con [Claude Code con control de versiones para Windows](Claude_Code_Git_Windows)
+- **Aprender conceptos básicos de Git**: Agregue control de versiones a sus proyectos con [Claude Code con control de versiones local para Windows](Claude_Code_Git_Windows)
 - **Probar un proyecto**: Trabaje con [Escribir Artículos de Investigación con Claude Code](Writing_Research_Paper_Claude_Code) para ver Claude Code en acción
 
 ## Solución de Problemas

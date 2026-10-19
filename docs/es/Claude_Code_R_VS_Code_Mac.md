@@ -16,8 +16,8 @@ Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere qu
 
 ## Lo Que Necesitará
 
-- Tutorial [R en VS Code](./R_Coding_VS_Code_Guide) completado - R debe funcionar en VS Code
-- Tutorial [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) completado - Claude Code CLI instalado
+- Tutorial [Ejecutar R en VS Code](./R_Coding_VS_Code_Guide) completado - R debe funcionar en VS Code
+- Tutorial [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) completado - Claude Code CLI instalado
 - Un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no incluye Claude Code
 - 20-30 minutos
 
@@ -25,7 +25,7 @@ Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere qu
 
 - Abra **Visual Studio Code**
 - Haga clic en **File** en la barra de menú, luego en **Open Folder**
-- Navegue a su carpeta **Documents**
+- Navegue a su carpeta **Documentos**
 - Haga clic en **New Folder** en la parte inferior del diálogo
 - Nombre la carpeta `claude_r_test`
 - Haga clic en **Open** para abrir la nueva carpeta
@@ -38,7 +38,7 @@ Ya configuró R en VS Code y puede escribir código manualmente. Ahora quiere qu
 - Encuentre **Claude Code for VS Code** de Anthropic y haga clic en **Install**
 - Después de la instalación, haga clic en **✻ Claude Code** en la barra de estado, en la parte inferior derecha de la ventana, para abrir el panel de Claude (cuando tenga un archivo abierto, también puede usar el ícono Spark en la parte superior derecha del editor)
 - Haga clic en **Sign in** y termine de iniciar sesión con su cuenta de Claude en el navegador que se abre
-- Si usa una clave de API en su lugar, configúrela como se muestra en [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3, Opción B) y luego cierre VS Code y vuelva a abrirlo
+- Si usa una clave de API en su lugar, configúrela como se muestra en [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) (Paso 3, Opción B) y luego cierre VS Code y vuelva a abrirlo
 - Una vez iniciada la sesión, verá una lista de verificación **Learn Claude Code**. Puede cerrarla con la X
 
 ## Paso 3: Cree un Script de R Inicial Manualmente
@@ -134,7 +134,7 @@ Revisa todo el script para verificar que esté correcto. Agrega comentarios dond
 
 - **La extensión de Claude no se muestra** - Reinicie VS Code después de la instalación. Haga clic en **View > Extensions** para verificar que esté instalada.
 - **Error "Cannot read R file"** - Asegúrese de haber guardado el archivo con la extensión `.R`. Claude necesita archivos guardados para leerlos.
-- **Error de autenticación** - Verifique que su plan de pago de Claude o su cuenta de Anthropic Console esté activa. Consulte [Instalación de Claude Code en Mac](./Install_Claude_Code_MacOS) para solucionar problemas de autenticación.
+- **Error de autenticación** - Verifique que su plan de pago de Claude o su cuenta de Anthropic Console esté activa. Consulte [Instalar Claude Code en Mac](./Install_Claude_Code_MacOS) para solucionar problemas de autenticación.
 - **ggplot2 no encontrado** - Instálelo en la terminal de R: `install.packages("ggplot2")`. Espere a que se complete la instalación antes de ejecutar el código.
 - **Los cambios de código no se aplican** - Si Claude pidió permiso, asegúrese de haber aceptado el cambio. Si no funciona, intente copiar manualmente el código sugerido por Claude.
 
