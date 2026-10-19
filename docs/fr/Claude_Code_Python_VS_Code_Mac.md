@@ -38,7 +38,7 @@ Vous avez configuré Python dans VS Code et pouvez écrire du code manuellement.
 - Trouvez **Claude Code for VS Code** par Anthropic et cliquez sur **Install**
 - Après l'installation, cliquez sur **✻ Claude Code** dans le coin inférieur droit de la fenêtre VS Code (la barre d'état) pour ouvrir le panneau Claude
 - La première fois, un écran de connexion apparaît : cliquez sur **Sign in**, approuvez l'accès dans votre navigateur, puis revenez à VS Code
-- Pour les étapes d'authentification détaillées, consultez le guide [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) (Étape 3)
+- Pour les étapes d'authentification détaillées, consultez le guide [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) (Étape 3)
 - Une fois connecté, vous verrez une liste de contrôle **Learn Claude Code** et une zone de saisie en bas du panneau
 
 ## Étape 3 : Créer un Script Python Initial Manuellement
@@ -154,7 +154,7 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 
 - **L'extension Claude ne s'affiche pas** - Redémarrez VS Code après l'installation. Cliquez sur **View > Extensions** pour vérifier qu'elle est installée.
 - **Erreur "Cannot read Python file"** - Assurez-vous d'avoir enregistré le fichier avec l'extension `.py`. Claude a besoin de fichiers enregistrés pour les lire.
-- **L'authentification a échoué** - Vérifiez que votre forfait Claude payant ou votre compte Anthropic Console est actif. Consultez [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
+- **L'authentification a échoué** - Vérifiez que votre forfait Claude payant ou votre compte Anthropic Console est actif. Consultez [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
 - **Erreurs de package introuvable** ou **`command not found: python`** - Assurez-vous que le terminal affiche `(.venv)` (sinon, fermez-le et ouvrez-en un nouveau avec **View > Terminal**), puis installez les packages requis : `pip install seaborn matplotlib scikit-learn pandas`. Attendez que l'installation soit terminée avant d'exécuter le code.
 - **Les modifications de code ne s'appliquent pas** - Si Claude a demandé une autorisation, assurez-vous d'avoir accepté la modification. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
 - **Le graphique ne s'affiche pas** - Assurez-vous d'avoir un affichage. Sur certains systèmes, vous devrez peut-être ajouter `plt.show()` à la fin ou utiliser `%matplotlib inline` dans Jupyter.

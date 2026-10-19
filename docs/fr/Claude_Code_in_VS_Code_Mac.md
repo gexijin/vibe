@@ -17,7 +17,7 @@ Vous avez installé Claude Code sur votre Mac - maintenant vous souhaitez un éd
 ## Ce Dont Vous Aurez Besoin
 
 - Avoir terminé [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS)
-- Avoir terminé [Notions de Base de VS Code](./VS_Code_Getting_Started)
+- Avoir terminé [Premiers Pas avec VS Code](./VS_Code_Getting_Started)
 - 10-15 minutes
 
 ## Étape 1 : Démarrer VS Code
@@ -67,7 +67,7 @@ Vous devriez maintenant voir `TEST_CLAUDE` dans le panneau **Explorer** sur le c
 ```
 - Claude Code crée le fichier - vous verrez `article.md` apparaître dans le panneau **Explorer** sur la gauche
 - Cliquez sur `article.md` dans l'Explorateur pour le visualiser dans l'éditeur
-- Pour prévisualiser l'article formaté : faites un clic droit sur l'onglet `article.md` et sélectionnez **Open Preview**
+- Pour prévisualiser l'article formaté : faites un clic droit dans l'éditeur de `article.md` et sélectionnez **Markdown Preview Enhanced: Open Preview to the Side** (l'extension installée dans [Premiers Pas avec VS Code](./VS_Code_Getting_Started)). Si vous n'avez pas cette extension, faites plutôt un clic droit sur l'onglet `article.md` et sélectionnez **Open Preview**
 - Vous verrez le Markdown rendu avec les titres, puces et mise en forme appropriés
 
 ## Rouvrir Claude dans VS Code Plus Tard

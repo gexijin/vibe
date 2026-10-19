@@ -53,12 +53,12 @@ Avant de configurer VS Code, vous devez savoir où R est installé sur votre sys
 
 ### Pour les Utilisateurs Windows
 
-1. Ouvrez l'**Explorateur de fichiers**
-2. Naviguez vers `C:\Program Files\R\`
-3. Vous verrez un dossier comme `R-4.6.1` (votre numéro de version peut différer)
-4. Ouvrez ce dossier → Ouvrez le dossier `bin`
-5. Vous y verrez `R.exe`
-6. Le chemin complet est : `C:\Program Files\R\R-4.6.1\bin\R.exe`
+- Ouvrez l'**Explorateur de fichiers**
+- Naviguez vers `C:\Program Files\R\`
+- Vous verrez un dossier comme `R-4.6.1` (votre numéro de version peut différer)
+- Ouvrez ce dossier → Ouvrez le dossier `bin`
+- Vous y verrez `R.exe`
+- Le chemin complet est : `C:\Program Files\R\R-4.6.1\bin\R.exe`
 
 **Notez ou retenez votre numéro de version** (par exemple, `R-4.6.1`) - vous en aurez besoin à l'Étape 4.
 
@@ -172,7 +172,7 @@ hist(iris$Sepal.Length)
 ## Étape 8 : Exécuter du Code R de Manière Interactive
 
 - Avec `analysis.R` ouvert, sélectionnez une ligne de code et appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac) pour l'exécuter
-- Si vous n'avez pas de terminal ouvert, le premier `Ctrl+Enter` / `Cmd+Enter` ouvre un terminal R. Le second exécute le code.
+- Si aucun terminal R n'est ouvert, une liste **Run R code** apparaît en haut de la fenêtre. Choisissez **Create R terminal** (et non **New R Interactive window**, qui nécessite un logiciel supplémentaire). Le terminal R s'ouvre et exécute votre ligne
 - Observez la sortie apparaître dans le terminal. L'histogramme s'ouvre dans un onglet de graphique dans VS Code, à côté de votre script
 - Vous pouvez également sélectionner toutes les lignes et les exécuter de la même manière.
 

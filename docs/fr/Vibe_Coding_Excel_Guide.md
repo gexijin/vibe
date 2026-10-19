@@ -12,7 +12,7 @@ Le vibe coding ressemble à une conversation avec votre ordinateur : vous décri
 
 - **[Claude Code](https://code.claude.com/)** - Assistant de codage IA qui écrit, modifie et corrige des fichiers en fonction de vos demandes en langage naturel
 - **Classeur à plusieurs feuilles** - Un seul fichier `.xlsx` contenant plusieurs onglets (Revenus, Dépenses, Synthèse) qui se référencent les uns les autres à l'aide de formules
-- **Raffinement itératif** - Le modèle central du vibe coding : décrire → tester → affiner → committer (enregistrer une version dans Git) les versions fonctionnelles
+- **Raffinement itératif** - Le modèle central du vibe coding : décrire → tester → affiner → committer les versions fonctionnelles (les enregistrer dans Git)
 
 ## Ce Dont Vous Aurez Besoin
 
@@ -154,7 +154,7 @@ Avant de committer, examinez ce que Claude a construit.
 Ajout de graphiques, d'une mise en forme conditionnelle et d'une liste déroulante de catégories au suivi de budget
 ```
 
-- Cliquez sur **Commit to main**
+- Cliquez sur le bouton bleu de commit en bas (son libellé ressemble à **Commit 1 file to main** – le nombre correspond au nombre de fichiers modifiés)
 - Cliquez sur **Push origin** pour sauvegarder sur GitHub
 
 Vous avez enregistré une version complète et fonctionnelle de votre suivi de budget !

@@ -26,7 +26,7 @@ Créez un dossier pour votre article de recherche :
 
 - Ouvrez l'**Explorateur de fichiers** (Windows) ou le **Finder** (Mac)
 - Naviguez vers **Documents**
-- Créez un nouveau dossier appelé `test_claude`
+- Créez un nouveau dossier appelé `test_claude` (si vous l'avez déjà créé dans un tutoriel précédent, utilisez simplement ce dossier)
 
 Tout ce qui concerne ce projet se passe dans ce dossier.
 
@@ -97,9 +97,9 @@ Examinez le résumé de Claude pour obtenir un aperçu rapide du paysage de la r
 ## Étape 6 : Lire les sources
 Lisez le document de recherche et cliquez sur les sources originales pour vérifier les informations :
 
-1. Cliquez sur `general_research.md` dans le panneau **Explorer** sur la gauche
-2. Prévisualisez le document formaté : cliquez avec le bouton droit sur l'onglet `general_research.md` et sélectionnez **Open Preview**
-3. Cliquez sur les liens des sources pour lire les articles et études originaux
+- Cliquez sur `general_research.md` dans le panneau **Explorer** sur la gauche
+- Prévisualisez le document formaté : faites un clic droit dans l'éditeur et sélectionnez **Markdown Preview Enhanced: Open Preview to the Side** (ou, sans cette extension, faites un clic droit sur l'onglet `general_research.md` et sélectionnez **Open Preview**)
+- Cliquez sur les liens des sources pour lire les articles et études originaux
 
 ## Étape 7 : Brainstorming de votre angle
 
@@ -232,7 +232,7 @@ Fais une relecture finale de l'article :
 
 Examinez les modifications de Claude.
 
-**Exporter vers Word :** Dans VS Code, cliquez avec le bouton droit sur l'onglet `paper.md` et sélectionnez **Open Preview**. Cliquez à l'intérieur du volet de prévisualisation, puis cliquez sur **Edit > Select All** et **Edit > Copy**. Collez dans Microsoft Word—le formatage sera conservé.
+**Exporter vers Word :** Ouvrez la prévisualisation de `paper.md` de la même façon qu'à l'Étape 6. Cliquez à l'intérieur du volet de prévisualisation, puis cliquez sur **Edit > Select All** et **Edit > Copy**. Collez dans Microsoft Word—le formatage sera conservé.
 
 ## Étape 17 : Créer une commande slash pour de futurs articles
 

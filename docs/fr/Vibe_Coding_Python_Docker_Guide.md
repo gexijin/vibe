@@ -195,7 +195,7 @@ Avant de faire le commit, examinez ce que Claude a construit.
 Iris data analysis with histograms, scatter plots, and box plots
 ```
 
-- Cliquez sur **Commit to main**
+- Cliquez sur le bouton bleu de commit en bas (son libellé ressemble à **Commit 4 files to main** – le nombre correspond au nombre de fichiers modifiés)
 - Cliquez sur **Push origin** pour sauvegarder sur GitHub
 
 Vous avez enregistré votre première analyse fonctionnelle !

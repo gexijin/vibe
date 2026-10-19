@@ -61,18 +61,18 @@ Voyez la barre latérale (sidebar) de Claude Code comme une fenêtre de discussi
 
 ### Comment ouvrir la barre latérale de Claude Code
 
-1. Ouvrez VS Code
-2. Regardez tout à gauche de la fenêtre
-3. Cliquez sur l'icône **Extensions** si vous ne voyez pas encore le panneau Claude Code
-4. Recherchez Claude Code dans la marketplace des extensions
-5. Cliquez sur **Install** si l'extension n'est pas encore installée
-6. Après l'installation, cherchez l'icône Spark de Claude Code dans la barre latérale gauche, ou cliquez sur **✻ Claude Code** dans le coin inférieur droit de la fenêtre
+- Ouvrez VS Code
+- Regardez tout à gauche de la fenêtre
+- Cliquez sur l'icône **Extensions** si vous ne voyez pas encore le panneau Claude Code
+- Recherchez `Claude Code` dans la marketplace des extensions
+- Cliquez sur **Install** si l'extension n'est pas encore installée
+- Après l'installation, cliquez sur **✻ Claude Code** dans le coin inférieur droit de la fenêtre pour ouvrir la discussion. (L'icône Spark dans la barre latérale gauche ouvre plutôt la liste de vos sessions, où vous pouvez en démarrer une nouvelle.)
 
 Si vous ne voyez pas l'icône Claude Code, essayez ceci :
 
-1. Appuyez sur **Ctrl + Maj + P**
-2. Tapez : Claude Code: Open in Side Bar
-3. Cliquez sur l'option correspondante dans la liste
+- Appuyez sur **Ctrl + Maj + P**
+- Tapez : `Claude Code: Open in Side Bar`
+- Cliquez sur l'option correspondante dans la liste
 
 Si elle n'apparaît toujours pas, fermez VS Code puis rouvrez-le. Parfois, l'extension a besoin d'un redémarrage avant que la barre latérale s'affiche.
 

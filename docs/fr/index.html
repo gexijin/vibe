@@ -426,6 +426,13 @@
             #network-graph {
                 height: 350px;
             }
+
+            .lang-switch {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: -1rem 0 1rem;
+            }
         }
     </style>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -659,7 +666,7 @@
             8: { label: 'Python via\nDocker', url: 'Python_Coding_Docker_Guide', desc: 'Exécutez Python dans des conteneurs isolés et reproductibles avec des images Docker préconstruites', level: 3 },
             9: { label: 'Claude Code +\nGitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Combinez la programmation assistée par IA avec des flux de travail professionnels de contrôle de version', level: 2 },
             10: { label: 'Vibe Coding\nen R', url: 'Vibe_Coding_R_Docker_Guide', desc: 'Construisez un vrai tableau de bord de statistiques NBA en utilisant des requêtes en langage naturel—l\'expérience complète du vibe coding', level: 3 },
-            13: { label: 'Article de\nRecherche', url: 'Writing_Research_Paper_Claude_Code', desc: 'Rédigez des articles de recherche plus rapidement avec Claude Code pour la recherche et la rédaction tandis que Git suit chaque version', level: 2 },
+            13: { label: 'Article de\nRecherche', url: 'Writing_Research_Paper_Claude_Code', desc: 'Rédigez des articles de recherche plus rapidement avec Claude Code pour la recherche, la planification, la rédaction et l\'édition—puis transformez le workflow en commande slash réutilisable', level: 2 },
             16: { label: 'Vibe Coding\nen Python', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'Analysez le jeu de données Iris en utilisant des requêtes en langage naturel—décrivez des visualisations et regardez-les apparaître', level: 3 },
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Utilisez Claude Code avec RStudio sur Mac—créez des projets R et améliorez-les avec l\'IA pendant que RStudio exécute votre code', level: 2 },
             18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Utilisez Claude Code avec RStudio sur Windows—éditez le code R manuellement dans RStudio pendant que Claude Code vous aide depuis PowerShell', level: 2 },
@@ -667,7 +674,7 @@
             20: { label: 'Claude Code\npour Python (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Utilisez l\'assistant IA Claude Code pour écrire et améliorer du code Python dans VS Code—demandez des graphiques, des analyses et des améliorations de code', level: 3 },
             21: { label: 'Commandes\nSlash', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Créez des raccourcis réutilisables pour des prompts complexes—transformez de longues instructions en commandes simples comme /stock-report', level: 3 },
             22: { label: 'Compétence\nClaude', url: 'Create_Your_First_Claude_Skill', desc: 'Construisez une Compétence Claude qui s\'active automatiquement selon le contexte—passez des commandes slash manuelles aux capacités déclenchées par l\'IA', level: 3 },
-            23: { label: 'Compétence pour\nRecherche Médicale', url: 'Medical_Research_Skill', desc: 'Créez une compétence spécialisée qui recherche sur PubMed et résume des articles de recherche médicale en français simple', level: 3 },
+            23: { label: 'Compétence pour\nRecherche Médicale', url: 'Medical_Research_Skill', desc: 'Créez une compétence spécialisée qui recherche sur PubMed et résume des articles de recherche médicale en langage clair', level: 3 },
             24: { label: 'Créer un\nSous-agent', url: 'Create_subagents', desc: 'Construisez un agent autonome qui utilise des compétences pour accomplir des tâches complexes—créez un sélecteur d\'actions qui recherche, note et recommande des investissements', level: 3 },
             25: { label: 'Opérations\nde Base', url: 'Claude_Code_Basic_Operations', desc: 'Apprenez les opérations essentielles de Claude Code—démarrer des conversations, gérer le contexte, utiliser les commandes slash et travailler avec des fichiers', level: 0 },
             26: { label: 'Excel dans\nVS Code', url: 'Excel_Coding_VS_Code_Guide', desc: 'Utilisez Claude Code pour créer et modifier des feuilles de calcul Excel avec de vraies formules, une mise en forme et des graphiques', level: 1 },
@@ -953,7 +960,7 @@
             python: [6, 8, 16],        // Python in VS Code, Python via Docker, Vibe Coding in Python
             excel: [26, 27],           // Excel in VS Code, Vibe Coding in Excel
             shared: [3, 25, 4, 9, 13, 21, 22, 23, 24],     // VS Code Basics, Claude Code Basics, Version Control, GitHub Desktop, Research Paper, Slash Commands, Skills, Agents (language-agnostic)
-            coding: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28] // All coding tutorials
+            coding: [3, 25, 4, 5, 6, 7, 8, 9, 10, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28] // All tutorials except platform-specific install/VS Code/Git
         };
 
         // Filter nodes based on current state

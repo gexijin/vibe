@@ -8,18 +8,18 @@ lang: "fr"
 
 Rester informé de la recherche médicale implique de parcourir des articles scientifiques denses remplis de jargon. Un Claude Skill (appelé « Compétence » dans le tutoriel précédent), c'est comme avoir un assistant de recherche qui lit des centaines d'articles et les explique en langage clair - au lieu de passer des heures à chercher sur PubMed et à décoder un langage technique, vous posez une simple question et obtenez un résumé clair basé sur les dernières avancées scientifiques.
 
-Dans ce tutoriel, vous allez créer un Claude Skill qui recherche la littérature médicale évaluée par les pairs. Nous créons d'abord un script Python pour interroger PubMed. La meilleure partie ? Vous pouvez demander à Claude de faire tout le travail ! Claude sait aussi écrire des Skills.
+Dans ce tutoriel, vous allez créer un Claude Skill qui recherche la littérature médicale évaluée par les pairs. Nous créons d'abord un script Python pour interroger PubMed. Le meilleur ? Vous pouvez demander à Claude de faire tout le travail ! Claude sait aussi écrire des Skills.
 
 ## Concepts Clés
 
 - **Claude Skill** - Un outil spécialisé qui étend les capacités de Claude Code avec des instructions personnalisées, du code et de la documentation stockés dans `.claude/skills/`
-- **PubMed** - Base de données gratuite de plus de 35 millions d'articles de recherche biomédicale maintenue par la Bibliothèque Nationale de Médecine des États-Unis
+- **PubMed** - Base de données gratuite de plus de 40 millions d'articles de recherche biomédicale maintenue par la Bibliothèque Nationale de Médecine des États-Unis
 - **Biopython** - Bibliothèque Python qui fournit des outils pour interroger la base de données PubMed de manière programmatique
 - **Mode accept edits** - Un mode (activé avec Shift+Tab) qui permet à Claude d'effectuer plusieurs modifications de fichiers sans demander la permission à chaque fois
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir terminé [Claude Code dans VS Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Claude Code dans VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Avoir terminé [Configurer VS Code pour Claude Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Python installé (voir [Programmation Python dans VS Code](./Python_Coding_VS_Code_Guide.md)). Si vous ne l'avez pas, Claude vous proposera de vous aider à l'installer.
 - Connexion Internet pour les recherches PubMed
 - 15-20 minutes
@@ -193,7 +193,7 @@ Ces **skills de documents** aident Claude à lire et écrire des fichiers Word, 
 - **Script non trouvé :** Vérifiez que la ligne d'état affiche **accept edits on** ou **auto mode on** (appuyez sur Shift+Tab pour basculer) - Claude a besoin de la permission pour créer des fichiers
 - **Le skill ne s'active pas :** Tapez `/reload-skills` (ou redémarrez Claude Code), puis posez à nouveau la question. Vérifiez aussi que SKILL.md contient `name: medical-research` dans l'en-tête
 
-## Aperçu du Workflow
+## Aperçu du Flux de Travail
 
 - **Les Claude Skills** sont plus puissants que les commandes slash - ils combinent code, documentation et instructions personnalisées
 - **Le mode accept edits** (Shift+Tab) simplifie la création en évitant les demandes de permission répétées
