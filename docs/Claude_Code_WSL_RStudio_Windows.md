@@ -35,7 +35,7 @@ You have RStudio on Windows for running R code and Claude Code for AI-powered co
 - For **Directory name**, type: `test_claude`
 - Click **Browse** next to "Create project as subdirectory of:"
 - Navigate to your **Documents** folder
-- Click **Select Folder**
+- Click **Open** (in some versions of RStudio this button says **Select Folder**)
 - Click **Create Project**
 - RStudio creates the project and switches to it
 

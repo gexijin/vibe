@@ -169,7 +169,7 @@ Explain the code in @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude will read the notebook and explain what it does, how it works, and what the code accomplishes. This effectively brings the file to the context. 
 
-If you're working with Claude Code from VS Code and have the Claude Code extension installed, you can add the file to context simply by opening it. You will see `In Nested_Pie_Chart.ipynb` in the lower right of the Claude Code window. Then Claude knows you are talking about this file.
+If you're working with Claude Code from VS Code and have the Claude Code extension installed, you can add the file to context simply by opening it. You will see `Nested_Pie_Chart.ipynb` at the bottom of the Claude Code prompt box. Then Claude knows you are talking about this file.
 
 Furthermore, you can select a few lines of code and Claude will show **3 lines selected**. You can ask Claude to make quick changes to these lines or ask questions. Therefore, I highly recommend using Claude Code from VS Code. 
 

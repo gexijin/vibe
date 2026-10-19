@@ -134,7 +134,7 @@ Separate files keep the project organized—and it's how real apps (including Re
 - Refresh the browser and load `heartatk4R.txt`—the dashboard should look exactly the same as before
 - In GitHub Desktop, you'll see `index.html` changed plus two new files (`style.css` and `app.js`)
 - Type a commit message: `Split into separate files`
-- Click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
+- Click the blue **Commit 3 files to main** button at the bottom
 
 ## Step 11: Create a Branch to Experiment
 

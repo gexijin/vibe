@@ -12,7 +12,7 @@ In this tutorial, you'll create a Claude Skill that searches peer-reviewed medic
 ## Key Concepts
 
 - **Claude Skill** - A specialized tool that extends Claude Code's capabilities with custom instructions, code, and documentation stored in `.claude/skills/`
-- **PubMed** - Free database of 35+ million biomedical research papers maintained by the US National Library of Medicine
+- **PubMed** - Free database of 40+ million biomedical research papers maintained by the US National Library of Medicine
 - **Biopython** - Python library that provides tools to query PubMed's database programmatically
 - **Accept edits mode** - A mode (switched with Shift+Tab) that lets Claude make multiple file changes without asking permission each time
 

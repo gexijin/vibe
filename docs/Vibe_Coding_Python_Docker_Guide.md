@@ -194,7 +194,7 @@ Before committing, review what Claude built.
 Iris data analysis with histograms, scatter plots, and box plots
 ```
 
-- Click **Commit to main**
+- Click the blue commit button at the bottom (it reads like **Commit 4 files to main** - the number matches how many files changed)
 - Click **Push origin** to back up to GitHub
 
 You've saved your first working analysis!

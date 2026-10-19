@@ -52,12 +52,12 @@ Before configuring VS Code, you need to know where R is installed on your system
 
 ### For Windows Users
 
-1. Open **File Explorer**
-2. Navigate to `C:\Program Files\R\`
-3. You'll see a folder like `R-4.6.1` (your version number may differ)
-4. Open that folder → Open the `bin` folder
-5. You'll see `R.exe` there
-6. The full path is: `C:\Program Files\R\R-4.6.1\bin\R.exe`
+- Open **File Explorer**
+- Navigate to `C:\Program Files\R\`
+- You'll see a folder like `R-4.6.1` (your version number may differ)
+- Open that folder → Open the `bin` folder
+- You'll see `R.exe` there
+- The full path is: `C:\Program Files\R\R-4.6.1\bin\R.exe`
 
 **Write down or remember your version number** (e.g., `R-4.6.1`) - you'll need it in Step 4.
 
@@ -171,7 +171,7 @@ hist(iris$Sepal.Length)
 ## Step 8: Run R Code Interactively
 
 - With `analysis.R` open, select a line of code and press `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (Mac) to run it
-- If you don't have a terminal open, the first `Ctrl+Enter` / `Cmd+Enter` opens an R terminal. The second runs the code.
+- If no R terminal is open, a **Run R code** list appears at the top of the window. Choose **Create R terminal** (not **New R Interactive window**, which needs extra software). The R terminal opens and runs your line
 - Watch the output appear in the terminal. The histogram opens in a plot tab inside VS Code, next to your script
 - You can also select all lines and run them the same way.
 

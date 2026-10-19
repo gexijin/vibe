@@ -39,7 +39,7 @@ You now have a local Git repository and a backup on GitHub.
 ## Step 2: Copy Docker Configuration
 
 - Go to https://github.com/gexijin/vibe
-  - **Note for Apple Silicon Macs:** The main version runs on Apple Silicon through Docker Desktop's built-in emulation. It works, but the first build and R itself are slower.
+  - **Note for Apple Silicon Macs:** This setup is built for Intel/AMD processors. Docker Desktop runs it through emulation, so it works, but the first build and R itself are slower.
 - Click **Code**, then **Download ZIP**
 - Open File Explorer (Windows) or Finder (Mac) and go to your **Downloads** folder
 - Unzip the file: on Windows, right-click it and choose **Extract All**; on Mac, double-click it
