@@ -55,7 +55,7 @@ You're working on a project and make changes that break everything. You can't re
 
 ## Step 4: Create Your First Repository
 
-- In GitHub Desktop, click **Create a New Repository on your Hard Drive**
+- In GitHub Desktop, click **Create a New Repository on your Local Drive**
 - Fill in the form:
   - **Name:** `my-first-project` (or any name you like)
   - **Description:** `Learning version control` (optional)
@@ -93,7 +93,7 @@ You're working on a project and make changes that break everything. You can't re
 - Return to GitHub Desktop
 - You'll see your changes highlighted on the right side (green = added, red = removed)
 - At the bottom left, type a commit message: `Updated README with project description`
-- Click the blue **Commit to main** button
+- Click the blue **Commit 1 file to main** button (the number matches how many files you changed)
 
 ## Step 8: Push to GitHub (Back Up to the Cloud)
 
@@ -120,7 +120,7 @@ Your code is now backed up online at: `https://github.com/YOUR-USERNAME/my-first
 
 - Make changes to your project files
 - Review changes in GitHub Desktop (green = added, red = removed)
-- Write a descriptive commit message and click **Commit to main**
+- Write a descriptive commit message and click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
 - Click **Push origin** to back up to GitHub
 - Repeat
 

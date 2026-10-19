@@ -53,7 +53,7 @@ Git tracks your file changes and creates restore points you can return to.
   ```
   git --version
   ```
-- You should see something like `git version 2.34.1`
+- You should see something like `git version 2.43.0`
 
 **Configure your identity:**
 
@@ -108,6 +108,7 @@ Docker Desktop itself isn't in the apt repository you just added — it's distri
   ```
 - If apt prints an error at the very end about installing a local package, you can ignore it — that's expected
 - Launch **Docker Desktop** from the app menu
+- Click **Accept** on the Docker Subscription Service Agreement. If it asks you to sign in, you can click **Skip**
 - Wait for the Docker engine to start (you'll see a green status indicator in the bottom left)
 
 **Verify Docker is working:**
@@ -167,6 +168,7 @@ Google Antigravity is an AI-powered development platform with built-in agentic c
   ```
   ~/Downloads/"Antigravity IDE"/antigravity-ide
   ```
+- If it closes right away or prints **The SUID sandbox helper binary was found, but is not configured correctly**, see [Troubleshooting](#antigravity-ide-closes-right-away)
 
 **Initial setup:**
 
@@ -225,6 +227,13 @@ All four tools working? You're ready for the workshop!
 ### Docker commands don't work
 - Make sure Docker Desktop is running (green indicator in the bottom left)
 - Open a new terminal and type `docker run hello-world` — you should see **Hello from Docker!**
+
+### Antigravity IDE closes right away
+- Ubuntu blocks Antigravity's security helper until it has the right permissions. Run these two commands (type your password if asked), then start Antigravity IDE again:
+  ```
+  sudo chown root:root ~/Downloads/"Antigravity IDE"/chrome-sandbox
+  sudo chmod 4755 ~/Downloads/"Antigravity IDE"/chrome-sandbox
+  ```
 
 ### VS Code not launching or showing errors
 - Install any missing dependencies:

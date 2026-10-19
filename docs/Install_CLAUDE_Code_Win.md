@@ -38,7 +38,7 @@ That's it — Claude Code will detect Git Bash automatically when it starts.
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Wait for the installation to complete
+- Wait for the installation to complete (the window may show nothing for a minute while it downloads — this is normal)
 - Close and reopen PowerShell, then verify by typing:
    ```
    claude --version
@@ -129,6 +129,7 @@ If you have an Anthropic API key instead of a Claude subscription:
    ```
    claude
    ```
+- The first time, Claude Code asks whether you want to use the API key it found. Choose **Yes**. (If you pick **No** by mistake, type `/config` and turn on **Use custom API key**.)
 
 ### Option C. Use OpenRouter API (pay as you go)
 
@@ -140,10 +141,10 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
    ```
    setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
    setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
-   setx ANTHROPIC_API_KEY ""
-   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
-   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
-   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
+   [Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', $null, 'User')
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "~anthropic/claude-sonnet-latest"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "~anthropic/claude-opus-latest"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "~anthropic/claude-haiku-latest"
    ```
 - Close and reopen PowerShell, then start Claude Code:
    ```
@@ -153,7 +154,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 
 **Notes:**
 - Replace `your-openrouter-api-key` with your actual OpenRouter API key
-- `ANTHROPIC_API_KEY` must be explicitly set to empty
+- The `ANTHROPIC_API_KEY` line removes any saved Anthropic API key, which must not be set when you use OpenRouter
 - To use alternative models, they must support **tool use capabilities**. You can override models with:
    ```
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
@@ -164,7 +165,7 @@ OpenRouter is a unified API gateway that provides access to 500+ large language 
 - Claude Code is only guaranteed to work with Anthropic models through OpenRouter
 - See the [official OpenRouter guide](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration) for more details
 
-### Option D. Use Anthropic API via Azure Foundry
+### Option D. Use Anthropic API via Microsoft Foundry (Azure)
 
 In PowerShell, paste this code to define the environment variables:
 ```
@@ -173,8 +174,8 @@ setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure resource name
 setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # Set models to your resource's deployment names
-setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
-setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-8"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
 setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
 setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
@@ -198,6 +199,7 @@ You're all set! Type `claude` in PowerShell and ask a general question such as "
    ```
    cd ~/Documents/test_claude
    ```
+   Replace `test_claude` with your actual project folder name. Tip: type `cd ` (with a space), drag the folder from File Explorer into the PowerShell window to paste its full path, and press **Enter**.
 - Then start Claude:
    ```
    claude
@@ -270,7 +272,7 @@ After your computer restarts, a terminal window with "Ubuntu" in the title shoul
    ```
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
    ```
-- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 4, Option A). If you use an API key instead, set it with `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL uses Linux commands, not `setx`)
+- Connect your account by typing `claude` in the Ubuntu terminal and following the browser login (the same as Step 4, Option A). If you use an API key instead, save it with `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` (WSL uses Linux commands, not `setx`)
 - To open a Windows project folder from WSL:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude

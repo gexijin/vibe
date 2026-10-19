@@ -17,7 +17,7 @@ You've set up Python in VS Code and can write code manually. Now you want AI to 
 
 - Finished [Python in VS Code](./Python_Coding_VS_Code_Guide) tutorial - Python should be working in VS Code
 - Finished [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) tutorial - Claude Code CLI should be installed
-- Claude Pro/Max subscription or Anthropic API key
+- A paid Claude plan (such as Pro or Max) or an Anthropic Console account — the free plan doesn't include Claude Code
 - 20-30 minutes
 
 ## Step 1: Open VS Code and Create Python Project
@@ -34,7 +34,7 @@ You've set up Python in VS Code and can write code manually. Now you want AI to 
 
 - Click the **Extensions** icon in the left sidebar (four squares icon)
 - In the search box, type `Claude Code`
-- Find **Claude Code** by Anthropic and click **Install**
+- Find **Claude Code for VS Code** by Anthropic and click **Install**
 - After installation, click **✻ Claude Code** in the bottom-right corner of the VS Code window (the status bar) to open the Claude panel
 - The first time, a sign-in screen appears: click **Sign in**, approve access in your browser, then return to VS Code
 - For detailed authentication steps, see the [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) guide (Step 3)
@@ -42,8 +42,8 @@ You've set up Python in VS Code and can write code manually. Now you want AI to 
 
 ## Step 3: Create Initial Python Script Manually
 
-- Click **File > New File** in the menu bar
-- Click **Select a language** and type `Python`, then select **Python**
+- Click **File > New File...** in the menu bar
+- In the list that appears at the top of the window, choose **Python File**
 - Save the file by clicking **File > Save**, name it `iris_analysis.py`
 - Type this code:
 
@@ -125,7 +125,7 @@ Add code to perform PCA on the numeric variables and plot the samples using the 
 - Claude adds PCA code to your script
 - If asked, accept the change
 - Run the code: `python iris_analysis.py` in the terminal
-- A PCA plot appears showing samples projected onto PC1 and PC2, colored by species
+- A PCA plot appears showing samples projected onto PC1 and PC2, colored by species (if the scatter plot window from Step 6 opens first, close it and the PCA plot appears next)
 - Close the plot window when done
 
 ## Step 8: Ask Claude to Review and Comment
@@ -153,7 +153,7 @@ Review the entire script for correctness. Add comments when necessary.
 
 - **Claude extension not showing** - Restart VS Code after installation. Click **View > Extensions** to verify it's installed.
 - **"Cannot read Python file" error** - Make sure you saved the file with `.py` extension. Claude needs saved files to read them.
-- **Authentication failed** - Verify your Claude Pro/Max subscription is active or your API key is valid. See [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) for authentication troubleshooting.
+- **Authentication failed** - Verify your paid Claude plan or Anthropic Console account is active. See [Installing Claude Code on Mac](./Install_Claude_Code_MacOS) for authentication troubleshooting.
 - **Package not found errors** or **`command not found: python`** - Make sure the terminal shows `(.venv)` (if not, close it and open a new one with **View > Terminal**), then install the required packages: `pip install seaborn matplotlib scikit-learn pandas`. Wait for installation to complete before running code.
 - **Code changes not applying** - If Claude asked for permission, make sure you accepted the change. If it's not working, try copying Claude's suggested code manually.
 - **Plot not showing** - Make sure you have a display. On some systems you may need to add `plt.show()` at the end or use `%matplotlib inline` in Jupyter.

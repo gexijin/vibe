@@ -83,7 +83,7 @@ VS Code remembers your recent folders, so Option A with Open Recent is usually t
 - Ask Claude Code to explain an existing codebase: "Explain what this project does"
 - Have Claude Code help you write new features: "Add a function that calculates the average of a list"
 - Use Claude Code to fix bugs: "This code gives an error, can you fix it?"
-- Try the Claude Code VS Code extension for a visual interface with inline diffs (search "Claude Code" in Extensions)
+- Try the Claude Code extension for a visual chat panel with inline diffs. Running `claude` in VS Code's terminal usually installs it for you (if not, search "Claude Code" in Extensions). Open any file, then click the Spark icon at the top-right of the editor
 
 ## Troubleshooting
 

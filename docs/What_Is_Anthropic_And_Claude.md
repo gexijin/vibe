@@ -23,7 +23,7 @@ Before you install anything, it helps to know what you're actually installing. *
 ## Step 1: Create a Free Claude Account
 
 - Go to [claude.ai](https://claude.ai)
-- Click **Sign up**
+- If you see a **Sign up** or **Try Claude** button, click it (otherwise you'll go straight to the sign-in options)
 - Type your email address and click **Continue with email** (or click **Continue with Google**)
 - Open the email from Anthropic and click the link inside it (if you open it on a different device, such as your phone, it shows a code — type that code on your computer)
 - Follow the on-screen prompts to finish creating your account (you may be asked for a phone number to receive a text-message code)

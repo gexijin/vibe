@@ -101,7 +101,7 @@ Create a Claude Skill called "medical-research" that:
 - Includes the pubmed_search.py script inside the skill folder
 ```
 
-Claude creates the complete skill structure:
+Claude creates the skill structure. The exact files can vary, for example:
 - `.claude/skills/medical-research/pubmed_search.py` - The search script
 - `.claude/skills/medical-research/SKILL.md` - Instructions for Claude on how to use the skill
 - `.claude/skills/medical-research/README.md` - User documentation
@@ -152,7 +152,7 @@ Open VS Code to see the skill structure:
 In VS Code:
 - Expand `.claude/skills/medical-research/` in the file explorer
 - Open `SKILL.md` to see detailed instructions for Claude
-- Open `README.md` to see user documentation
+- Open `README.md` (if Claude created one) to see user documentation
 - Open `pubmed_search.py` to see the Python code
 
 **Note:** The skill is completely self-contained - all code and documentation live in one folder.
@@ -164,15 +164,16 @@ Anthropic maintains a repository of pre-built skills that you can install and us
 - To install a skill from the repository, simply ask Claude:
 
   ```
-  Install the document skill from Anthropic's repository
+  Install the docx, pdf, pptx, and xlsx skills from github.com/anthropics/skills into my .claude/skills/ folder
   ```
-- Try this skill:
+- When Claude is done, type `/reload-skills` so Claude Code loads the new skills
+- Try one of them:
   ```
   Create a PowerPoint presentation on Claude Skills.
   ```
 
 
-The **document skill** helps you read and write files in PDF, Word, PowerPoint, and Excel. Claude will clone the skill into your `.claude/skills/` folder.
+These **document skills** help Claude read and write Word, PDF, PowerPoint, and Excel files. Claude copies them into your `.claude/skills/` folder.
 
 **Other available skills from Anthropic's repository:**
 - Browse the full catalog at [github.com/anthropics/skills](https://github.com/anthropics/skills)

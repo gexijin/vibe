@@ -16,7 +16,7 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 
 ## What You'll Need
 
-- Finished [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win) or [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac)
+- Finished [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) or [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 minutes
 
 ## Step 1: Create a Project Folder
@@ -242,7 +242,7 @@ Create a slash command called /research-paper that guides me through
 this entire workflow. Save it so I can use it for future research papers on various topics.
 ```
 
-Claude will create a custom slash command, usually in your `.claude/commands/` folder (or `.claude/skills/research-paper/`). It is a Markdown file containing a prompt. You can start your next research paper by simply typing `/research-paper [your topic]`!
+Claude will create a custom slash command, usually in your `.claude/commands/` folder (or `.claude/skills/research-paper/`). It is a Markdown file containing a prompt. Before you use it the first time, type `/reload-skills` (or quit Claude Code and start it again) so the new command is loaded. Then you can start your next research paper by simply typing `/research-paper [your topic]`!
 
 ## Step 18: Get Feedback
 

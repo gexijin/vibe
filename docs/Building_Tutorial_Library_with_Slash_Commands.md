@@ -118,7 +118,7 @@ That's the power of systematic automation.
 
 ---
 
-*Want to see the slash commands I built? Check out the [commands folder](./assets/commands/). The full tutorial library is available at the [project documentation site](https://github.com/gexijin/vibe/tree/main/docs).*
+*Want to see the slash commands I built? Check out the [commands folder](https://github.com/gexijin/vibe/tree/main/docs/assets/commands). The full tutorial library is available at the [project documentation site](https://github.com/gexijin/vibe/tree/main/docs).*
 
 ---
 
