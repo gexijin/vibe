@@ -17,7 +17,7 @@ Vous travaillez sur un projet et effectuez des modifications qui cassent tout. V
 
 ## Ce Dont Vous Aurez Besoin
 
-- Ordinateur Windows, macOS ou Linux
+- Un ordinateur Windows ou Mac (GitHub Desktop ne fonctionne pas sous Linux)
 - Connexion Internet
 - Adresse e-mail pour créer un compte GitHub
 - 15 à 20 minutes
@@ -49,13 +49,14 @@ Vous travaillez sur un projet et effectuez des modifications qui cassent tout. V
 
 - Ouvrez GitHub Desktop
 - Cliquez sur **Sign in to GitHub.com**
-- Votre navigateur s'ouvre—cliquez sur **Authorize desktop**
+- Votre navigateur s'ouvre—connectez-vous si on vous le demande, puis cliquez sur **Authorize desktop**
+- Si votre navigateur demande d'ouvrir **GitHub Desktop**, cliquez sur **Open** (ou **Allow**)
 - Revenez à GitHub Desktop
 - Cliquez sur **Finish** pour terminer la configuration
 
 ## Étape 4 : Créer Votre Premier Dépôt
 
-- Dans GitHub Desktop, cliquez sur **Create a New Repository on your Hard Drive**
+- Dans GitHub Desktop, cliquez sur **Create a New Repository on your Local Drive**
 - Remplissez le formulaire :
   - **Name :** `my-first-project` (ou tout nom qui vous plaît)
   - **Description :** `Learning version control` (optionnel)
@@ -93,7 +94,7 @@ Vous travaillez sur un projet et effectuez des modifications qui cassent tout. V
 - Revenez à GitHub Desktop
 - Vous verrez vos modifications surlignées sur le côté droit (vert = ajouté, rouge = supprimé)
 - En bas à gauche, saisissez un message de commit : `Updated README with project description`
-- Cliquez sur le bouton bleu **Commit to main**
+- Cliquez sur le bouton bleu **Commit 1 file to main** (le nombre correspond au nombre de fichiers que vous avez modifiés)
 
 ## Étape 8 : Push vers GitHub (Sauvegarder dans le Cloud)
 
@@ -113,14 +114,14 @@ Votre code est maintenant sauvegardé en ligne à l'adresse : `https://github.co
 ## Dépannage
 
 - **Impossible de se connecter à GitHub** - Vérifiez votre connexion Internet. Essayez d'abord de vous connecter sur github.com pour vérifier que vos identifiants fonctionnent.
-- **Les modifications n'apparaissent pas dans GitHub Desktop** - Assurez-vous d'avoir enregistré vos fichiers. Cliquez sur **Repository** → **Refresh** ou redémarrez GitHub Desktop.
-- **Le push échoue avec une erreur « rejected »** - Quelqu'un d'autre a poussé des modifications. Cliquez d'abord sur **Fetch origin**, puis réessayez de pousser.
+- **Les modifications n'apparaissent pas dans GitHub Desktop** - Assurez-vous d'avoir enregistré vos fichiers. Cliquez sur une autre application puis revenez sur GitHub Desktop, ou redémarrez GitHub Desktop.
+- **Le push échoue avec une erreur « rejected »** - Quelqu'un d'autre a poussé des modifications. Cliquez sur **Fetch origin**, puis sur **Pull origin**, puis cliquez à nouveau sur **Push origin**.
 
 ## Aperçu du Flux de Travail
 
 - Effectuez des modifications dans les fichiers de votre projet
 - Examinez les modifications dans GitHub Desktop (vert = ajouté, rouge = supprimé)
-- Rédigez un message de commit descriptif et cliquez sur **Commit to main**
+- Rédigez un message de commit descriptif et cliquez sur le bouton bleu de commit en bas (il affiche par exemple **Commit 1 file to main**)
 - Cliquez sur **Push origin** pour sauvegarder sur GitHub
 - Répétez
 

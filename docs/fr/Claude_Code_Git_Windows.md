@@ -1,10 +1,10 @@
 ---
-title: "Claude Code avec contrôle de version pour Windows"
+title: "Claude Code avec contrôle de version local pour Windows"
 lang: "fr"
 ---
 [Accueil](./)
 
-# Claude Code avec contrôle de version pour Windows
+# Claude Code avec contrôle de version local pour Windows
 
 Vous travaillez avec l'assistance de l'IA. Elle apporte des modifications à vos fichiers. Parfois les modifications sont brillantes. Parfois elles ne le sont pas. **Le contrôle de version est comme un bouton d'annulation pour l'ensemble de votre projet.** Chaque fois que vous enregistrez un instantané (appelé un "commit"), vous créez un point de restauration auquel vous pouvez toujours revenir. Mieux encore, vous pouvez faire tout cela entièrement sur votre ordinateur et Claude Code le fait pour vous.
 
@@ -18,7 +18,7 @@ Vous travaillez avec l'assistance de l'IA. Elle apporte des modifications à vos
 ## Ce Dont Vous Aurez Besoin
 
 - Avoir terminé [Installer Claude Code sur Windows](./Install_CLAUDE_Code_Win)
-- 20 minutes
+- 20 à 30 minutes
 
 ## Étape 1 : Ouvrez PowerShell
 
@@ -37,7 +37,7 @@ Vous travaillez avec l'assistance de l'IA. Elle apporte des modifications à vos
 - Si vous voyez un numéro de version comme `git version 2.45.0`, passez à l'Étape 3
 - Si vous voyez une erreur, installez Git for Windows :
   - Allez sur [git-scm.com/download/win](https://git-scm.com/download/win)
-  - Le téléchargement devrait démarrer automatiquement — ouvrez le programme d'installation une fois terminé
+  - Sur cette page, cliquez sur **Click here to download** (en haut), puis ouvrez le programme d'installation une fois le téléchargement terminé
   - Cliquez sur **Next** tout au long de l'installation, en acceptant les options par défaut
   - Cliquez sur **Install**, puis sur **Finish**
   - Fermez et rouvrez PowerShell, puis vérifiez à nouveau avec `git --version`
@@ -66,6 +66,8 @@ L'utilisation de votre nom et de votre email vous aide à identifier qui a effec
   ```
 
 Vous devriez voir un chemin se terminant par `\Documents`.
+
+Si vous voyez `Cannot find path`, votre dossier Documents est probablement sauvegardé par OneDrive. Exécutez plutôt `cd ~\OneDrive\Documents`.
 
 ## Étape 5 : Créez un Dossier de Projet
 
@@ -98,9 +100,11 @@ Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installati
 
 Claude initialise un dépôt Git dans votre dossier (prend 2-5 secondes). Vous avez maintenant le contrôle de version !
 
+Si Claude demande une autorisation, il affiche un petit menu avec **Yes** et **No**. Utilisez les touches fléchées pour choisir **Yes** et appuyez sur **Entrée**. Vous verrez peut-être cela plusieurs fois dans ce tutoriel.
+
 ## Étape 8 : Construisez l'Application Minuteur
 
-- Dans Claude Code, tapez :
+- Dans Claude Code, copiez et collez cette demande en entier (le collage garde toutes les lignes ensemble ; appuyer sur Entrée l'enverrait trop tôt) :
 
   ```
   Crée une application de minuteur simple dans un seul fichier appelé timer.html.
@@ -121,6 +125,8 @@ Claude crée `timer.html` (prend 10-30 secondes) avec le code CSS et JavaScript.
   - Tapez `1` dans le champ de saisie
   - Cliquez sur **Démarrer**
   - Regardez le compte à rebours
+
+**Vous ne voyez pas `test_claude` ?** Si OneDrive sauvegarde vos Documents, l'Explorateur de fichiers affiche un autre dossier Documents. Cliquez dans la barre d'adresse de l'Explorateur de fichiers, collez `%USERPROFILE%\Documents\test_claude`, puis appuyez sur **Entrée**.
 
 **Si quelque chose ne fonctionne pas :** Dans Claude Code, décrivez l'erreur : « Je vois cette erreur : [décrivez ce qui s'est passé]. Peux-tu la corriger ? »
 
@@ -144,7 +150,7 @@ Vous avez créé votre premier point de sauvegarde ! Vous pouvez toujours reveni
   ```
   Ajoute deux boutons en haut. Si je clique dessus, cela démarre automatiquement des minuteurs de 1 et 5 minutes.
   ```
-- Actualisez votre onglet de navigateur
+- Actualisez votre onglet de navigateur (appuyez sur `F5` ou `Ctrl + R`)
 - Testez : Cliquez sur le bouton **5 min**
 - Si cela fonctionne, committez les modifications :
   ```
@@ -160,7 +166,7 @@ Nous avons créé un 2e point de sauvegarde. Cette version a les deux boutons fo
   ```
   Ajoute un bouton de 15 minutes.
   ```
-- Actualisez votre onglet de navigateur
+- Actualisez votre onglet de navigateur (appuyez sur `F5` ou `Ctrl + R`)
 - Testez : Cliquez sur le bouton **15 min**
 
 **Pour ce tutoriel :** Faites comme si le bouton 15 minutes ne fonctionnait pas correctement. Ne committez pas encore—nous allons pratiquer l'abandon des mauvaises modifications.
@@ -173,7 +179,7 @@ Parfois le code de l'IA ne fonctionne pas et vous devez recommencer depuis votre
   ```
   Abandonne ces modifications.
   ```
-- Claude affiche un menu avec des options comme **Yes** et **No** — utilisez les touches fléchées (ou appuyez sur le numéro à côté de **Yes**) pour le sélectionner, puis appuyez sur **Entrée**
+- Claude vous demandera généralement de confirmer d'abord. S'il affiche un menu, choisissez **Yes** (touches fléchées ou le numéro à côté) et appuyez sur **Entrée**. S'il le demande dans un message, tapez `oui, abandonne les modifications de timer.html` et appuyez sur **Entrée**
 - Actualisez votre navigateur—le bouton 15 minutes disparaît
 
 Claude supprime les nouvelles modifications que nous n'aimons pas. Le minuteur fonctionne à nouveau avec seulement les boutons 1 et 5 minutes !
@@ -213,7 +219,7 @@ Claude affiche vos commits dans un format lisible. Vous verrez :
 - Votre commit initial de l'application minuteur
 - Le commit des boutons prédéfinis (1 min et 5 min)
 - Le commit de la notification sonore
-- Le bouton snooze.
+- Le commit du bouton snooze
 
 Remarquez que la tentative du bouton 15 minutes n'est pas là—vous l'avez abandonnée !
 
@@ -250,8 +256,8 @@ Rappelez-vous : Testez après chaque fonctionnalité, committez après chaque su
 
 ## Dépannage
 
-- **Erreur "not a git repository" :** Assurez-vous d'être dans le dossier test_claude (`cd ~\Documents\test_claude`)
-- **Impossible de trouver timer.html dans Windows :** Le fichier est à `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
+- **Erreur "not a git repository" :** Assurez-vous d'être dans le dossier test_claude (`cd ~\Documents\test_claude`, ou `cd ~\OneDrive\Documents\test_claude` si vous avez utilisé le chemin OneDrive à l'Étape 4)
+- **Impossible de trouver timer.html dans Windows :** Le fichier est à `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` (ou `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html` si vous avez utilisé le chemin OneDrive à l'Étape 4)
 - **Commande `git` introuvable :** Fermez et rouvrez PowerShell après avoir installé Git for Windows pour que le PATH soit mis à jour, puis exécutez à nouveau `git --version`
 - **Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit sur la page, sélectionnez **Inspecter**, cliquez sur l'onglet **Console**), copiez tous les messages d'erreur en rouge, collez-les à Claude
 
@@ -261,7 +267,7 @@ Rappelez-vous : Testez après chaque fonctionnalité, committez après chaque su
 - « Montre-moi les différences » - Voir exactement quel code a changé
 - « Explique ce que fait le code du minuteur » - Comprendre l'implémentation
 - « Crée une branche appelée essai » - Essayer des modifications risquées en toute sécurité
-- « Reviens au commit précédent » - Annuler tout depuis le dernier commit
+- « Annule tout depuis mon dernier commit » - Supprimer les modifications que vous n'avez pas encore enregistrées
 
 Claude gère toutes les opérations Git en langage naturel—aucune commande à mémoriser !
 
@@ -271,6 +277,6 @@ Claude gère toutes les opérations Git en langage naturel—aucune commande à 
 - **Développement :** Claude écrit le code, vous testez dans le navigateur
 - **Contrôle de Version :** Claude gère toutes les opérations Git via de simples demandes
 - **Sécurité :** Abandonnez les mauvaises modifications à tout moment, revenez à n'importe quel commit précédent
-- **Local :** Tout reste sur votre ordinateur, aucun compte ni connexion Internet requis
+- **Local :** Votre historique Git reste sur votre ordinateur — aucun compte GitHub nécessaire (Claude Code lui-même a toujours besoin d'Internet et de votre compte Claude)
 
 Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 8 décembre 2025.

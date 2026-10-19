@@ -43,7 +43,7 @@ Si VS Code est déjà ouvert, fermez-le puis rouvrez-le pour qu'il trouve Python
 - Recherchez `GrapeCity.gc-excelviewer`
 - Cliquez sur **Install** sous **Spreadsheet Viewer** par **MESCIUS**
 
-**Remarque :** Cette extension s'appelait auparavant **Excel Viewer** par **GrapeCity**, et d'anciens guides et vidéos utilisent peut-être encore ce nom. Une recherche sur « Excel Viewer » affiche désormais plusieurs autres extensions : recherchez donc par l'identifiant ci-dessus pour obtenir la bonne. L'identifiant commence toujours par `GrapeCity` - c'est normal.
+**Remarque :** Cette extension s'appelait auparavant **Excel Viewer** par **GrapeCity**, et d'anciens guides et vidéos utilisent peut-être encore ce nom. Une recherche sur « Excel Viewer » affiche désormais plusieurs autres extensions : recherchez donc par l'identifiant ci-dessus pour obtenir la bonne. L'identifiant commence toujours par `GrapeCity` - c'est normal. La page du Marketplace indique qu'elle n'est plus activement maintenue ; elle fonctionne toutefois très bien pour prévisualiser les fichiers de ce tutoriel.
 
 Cela vous permet de cliquer sur n'importe quel fichier `.xlsx` et de voir ses feuilles, ses nombres et ses formules directement dans VS Code. C'est idéal pour des vérifications rapides, mais l'extension ne peut pas afficher les graphiques, les cellules surlignées en couleur ni les listes déroulantes. Pour cela, ouvrez le fichier dans Excel, LibreOffice Calc ou Google Sheets.
 
@@ -75,7 +75,7 @@ Crée une feuille de calcul appelée budget.xlsx avec les colonnes Catégorie, M
 
 - Appuyez sur Entrée
 - Regardez Claude écrire un script Python, l'exécuter et produire `budget.xlsx` dans votre dossier de projet
-- Claude vous demandera la permission avant d'exécuter des commandes ou d'installer des outils d'appoint (comme `openpyxl`, un module complémentaire Python pour les feuilles de calcul) : choisissez **Yes** pour qu'il continue
+- Si Claude vous demande la permission d'exécuter des commandes ou d'installer des outils d'appoint (comme `openpyxl`, un module complémentaire Python pour les feuilles de calcul), choisissez **Yes** pour qu'il continue
 - Si Claude indique que Python n'est pas installé ou qu'il ne le trouve pas, revenez à l'Étape 1, puis fermez et rouvrez VS Code
 
 ## Étape 6 : Afficher le Résultat

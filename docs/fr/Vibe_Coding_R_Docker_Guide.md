@@ -40,12 +40,13 @@ Vous disposez maintenant d'un dépôt Git local et d'une sauvegarde sur GitHub.
 ## Étape 2 : Copier la Configuration Docker
 
 - Allez sur https://github.com/gexijin/vibe
-  - **Remarque pour les utilisateurs ARM64 (Mac Apple Silicon) :** Utilisez plutôt https://github.com/gexijin/vibe/tree/ARM64
+  - **Remarque pour les Mac Apple Silicon :** La version principale fonctionne sur Apple Silicon grâce à l'émulation intégrée de Docker Desktop. Cela fonctionne, mais la première construction et R lui-même sont plus lents.
 - Cliquez sur **Code**, puis sur **Download ZIP**
-- Ouvrez l'**Explorateur de fichiers** (Windows) ou le **Finder** (Mac)
-- Décompressez le fichier dans le dossier Téléchargements
-- Naviguez vers votre dossier projet vibe (par exemple, `Documents/vibe`)
+- Ouvrez l'**Explorateur de fichiers** (Windows) ou le **Finder** (Mac) et allez dans votre dossier **Téléchargements**
+- Décompressez le fichier : sur Windows, faites un clic droit dessus et choisissez **Extraire tout** ; sur Mac, double-cliquez dessus
+- Ouvrez le dossier décompressé `vibe-main`. Sur Windows, il peut contenir un autre dossier portant le même nom ; ouvrez celui-ci
 - Trouvez le dossier `.devcontainer`
+  - Sur Mac, le Finder masque les dossiers dont le nom commence par un point. Appuyez sur **Cmd+Shift+.** (point) pour les afficher
 - Copiez l'intégralité du dossier (il contient `Dockerfile` et `devcontainer.json`)
 - Naviguez vers votre nouveau dossier `nba-dashboard`
 - Collez le dossier `.devcontainer` à cet endroit
@@ -64,10 +65,10 @@ Votre dossier `nba-dashboard` devrait maintenant contenir :
 - Cliquez sur **Select Folder** (Windows) ou **Open** (Mac)
 - Une notification apparaît en bas à droite : **Folder contains a Dev Container configuration file**
 - Cliquez sur **Reopen in Container**
-- Si vous ne voyez pas la notification, cliquez sur l'icône verte dans le coin inférieur gauche et sélectionnez **Reopen in Container**
-- VS Code construit le conteneur Docker (prend 3 à 5 minutes la première fois)
+- Si vous ne voyez pas la notification, cliquez sur l'icône **><** dans le coin inférieur gauche et sélectionnez **Reopen in Container**
+- VS Code construit le conteneur Docker (prend 5 à 10 minutes la première fois)
 - Observez la notification de progression montrant les étapes de construction
-- Une fois terminé, l'icône verte affiche **Dev Container: R in Docker**
+- Une fois terminé, l'icône **><** dans le coin inférieur gauche affiche **Dev Container: R in Docker (AMD64)**
 
 ## Étape 4 : Démarrer Claude Code
 
@@ -81,8 +82,11 @@ claude
 
 - Une fenêtre de navigateur s'ouvre pour l'authentification
 - Cliquez sur **Continue with Google** ou **Continue with Email**
-- Connectez-vous avec votre compte Claude (ou créez-en un)
+- Connectez-vous avec votre compte Claude. Claude Code nécessite un abonnement Claude payant (comme Pro ou Max) ou un compte Anthropic Console ; l'offre gratuite ne l'inclut pas
+- Si le navigateur affiche un code au lieu d'indiquer que c'est terminé, copiez le code, revenez au terminal VS Code et collez-le à l'invite `Paste code here if prompted`, puis appuyez sur Entrée
+- Si aucune fenêtre de navigateur ne s'ouvre, appuyez sur `c` pour copier le lien de connexion et collez-le dans votre navigateur
 - Après la réussite de l'authentification, revenez au terminal VS Code
+- Si on vous demande si vous faites confiance aux fichiers de ce dossier, choisissez **Yes**
 - Vous verrez le message de bienvenue de Claude
 
 Claude Code est maintenant en cours d'exécution et prêt pour vos requêtes.
@@ -94,7 +98,7 @@ Maintenant, le plaisir commence. Au lieu de consulter la documentation, décrive
 - Dans le terminal Claude Code, tapez :
 
 ```
-Installe le package hoopR et charge les statistiques actuelles des joueurs NBA. Montre-moi les 10 meilleurs joueurs par points totaux marqués cette saison. Affiche-le sous forme de tableau bien présenté.
+Installe le package hoopR et charge les statistiques des joueurs NBA pour la saison la plus récente qui a des données. Montre-moi les 10 meilleurs joueurs par points totaux marqués. Affiche-le sous forme de tableau bien présenté.
 ```
 
 - Appuyez sur Entrée
@@ -124,7 +128,7 @@ Montre-moi quelles colonnes sont disponibles dans ces données NBA. Ensuite cré
 
 - Appuyez sur Entrée
 - Claude explore l'ensemble de données et vous montre des statistiques intéressantes
-- Regardez la sortie pour voir les colonnes disponibles comme : player_name, team, points, assists, rebounds, field_goal_percentage, etc.
+- Regardez la sortie pour voir les colonnes disponibles, comme le nom du joueur, l'équipe, les points, les passes décisives et les rebonds
 
 Cette exploration vous aide à décider quoi mettre dans votre tableau de bord.
 
@@ -148,12 +152,11 @@ Crée une application Shiny dans un fichier appelé app.R qui affiche un tableau
 
 Testez votre tableau de bord pour voir s'il fonctionne.
 
-- Regardez en haut à droite de l'éditeur VS Code (où `app.R` est ouvert)
+- Dans l'**Explorer** de VS Code (barre latérale gauche), cliquez sur `app.R` pour l'ouvrir
+- Regardez en haut à droite de l'éditeur
 - Trouvez le bouton **▶** avec une flèche déroulante
 - Cliquez sur la liste déroulante et sélectionnez **Run Shiny App**
-- L'application démarre et une notification apparaît : **Open in Browser**
-- Cliquez sur **Open in Browser**
-- Le tableau de bord NBA s'ouvre dans votre navigateur web
+- L'application démarre et le tableau de bord s'ouvre dans un onglet d'aperçu à l'intérieur de VS Code (pour utiliser votre navigateur habituel, ouvrez l'onglet **Ports** en bas et cliquez sur l'icône en forme de globe à côté du port)
 - Essayez de déplacer le curseur de points : le tableau se filtre en temps réel
 - Faites défiler les données des joueurs
 - Faites un commit si l'application fonctionne
@@ -173,7 +176,7 @@ Ajoute un graphique à barres sous le tableau montrant les 15 meilleurs joueurs 
 - Appuyez sur Entrée
 - Claude met à jour `app.R` avec le code de visualisation
 - Cliquez à nouveau sur **Run Shiny App** pour recharger l'application
-- Actualisez votre navigateur
+- Si l'aperçu ne change pas, cliquez sur la flèche de rechargement en haut de l'onglet d'aperçu (ou actualisez votre navigateur)
 - Vous voyez maintenant un graphique à barres coloré et un nuage de points
 - Déplacez le curseur : toutes les visualisations se mettent à jour ensemble
 
@@ -191,7 +194,7 @@ Ajoute un menu déroulant pour filtrer les joueurs par équipe. Mets-le en haut.
 
 - Appuyez sur Entrée
 - Claude ajoute le filtre d'équipe
-- Actualisez votre navigateur
+- Cliquez sur la flèche de rechargement en haut de l'onglet d'aperçu (ou actualisez votre navigateur)
 - Testez le menu déroulant : sélectionnez différentes équipes comme Lakers, Warriors, Celtics
 - Observez le tableau et les graphiques se mettre à jour pour chaque équipe
 
@@ -205,15 +208,15 @@ Avant de faire le commit, examinez ce que Claude a construit.
 - Parcourez le code : remarquez la disposition de l'interface utilisateur, la logique du serveur et le code des graphiques
 - Vous n'avez pas besoin de comprendre chaque ligne, mais faites-vous une idée de la structure
 - Ouvrez GitHub Desktop
-- Vous verrez `app.R` listé comme un nouveau fichier
-- Le panneau de droite montre tout le code en vert (ajouts)
+- Vous verrez `app.R` listé (comme nouveau fichier, ou comme modifié si vous l'avez déjà commité lors d'une étape précédente)
+- Le panneau de droite montre le code ajouté en vert
 - Dans le champ **Summary** en bas à gauche, tapez :
 
 ```
 Create NBA dashboard with team filter and visualizations
 ```
 
-- Cliquez sur **Commit to main**
+- Cliquez sur le bouton bleu de commit en bas (son libellé ressemble à **Commit 1 file to main**)
 - Cliquez sur **Push origin** pour sauvegarder sur GitHub
 
 Vous avez enregistré votre première version fonctionnelle !

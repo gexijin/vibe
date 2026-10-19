@@ -46,7 +46,7 @@ cd data_projects
 - Visitez [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) dans votre navigateur web
 - Cliquez sur le bouton vert **Code** près du coin supérieur droit
 - Cliquez sur **Download ZIP**
-- Extrayez le fichier ZIP dans votre dossier Téléchargements. GitHub nomme le dossier extrait **data_projects-main** — renommez-le en **data_projects** pour qu'il corresponde au reste de ce tutoriel.
+- Extrayez le fichier ZIP dans votre dossier Téléchargements. GitHub nomme le dossier extrait **data_projects-main** — renommez-le en **data_projects** pour qu'il corresponde au reste de ce tutoriel. Sous Windows, **Extract All** peut créer un dossier à l'intérieur d'un dossier (data_projects-main → data_projects-main). Ouvrez-le : si vous ne voyez qu'un autre dossier **data_projects-main**, déplacez ce dossier intérieur dans Téléchargements et renommez-le en **data_projects**.
 - Dans votre terminal, naviguez vers le dossier extrait :
   ```
   cd ~/Downloads/data_projects
@@ -137,11 +137,11 @@ Termine votre session et retourne à votre invite de terminal normale. Vous pouv
 
 ## Étape 6 : Approuver les Modifications et Utiliser les Raccourcis
 
-Lorsque Claude veut modifier un fichier ou exécuter une commande, il affiche un petit menu avec des options comme **Yes** et **No**. Utilisez les flèches du clavier pour sélectionner votre choix, puis appuyez sur **Entrée**.
+Les nouvelles sessions démarrent généralement en mode **Auto**, dans lequel Claude effectue les modifications et commandes courantes sans demander. Si Claude demande la permission, il affiche un petit menu avec des options comme **Yes** et **No**. Utilisez les flèches du clavier pour sélectionner votre choix, puis appuyez sur **Entrée**. Si vous souhaitez approuver vous-même chaque modification, appuyez sur **Shift+Tab** jusqu'à ce que le mode affiché sous l'invite indique **Manual**.
 
 Quelques raccourcis clavier rendent aussi le travail avec Claude Code plus rapide :
 
-- **Shift+Tab** - Passer d'un mode à l'autre (Manual, Accept Edits, Plan) - Le mode Plan est utile pour examiner une tâche complexe avant que Claude ne fasse la moindre modification
+- **Shift+Tab** - Passer d'un mode à l'autre (Auto, Manual, Accept Edits, Plan) ; le mode actuel s'affiche juste sous l'invite. Le mode Plan est utile pour examiner une tâche complexe avant que Claude ne fasse la moindre modification
 - **Ctrl+C** - Annuler l'opération actuelle ou la réponse de Claude
 - **Échap** - Arrêter Claude au milieu d'une réponse, ou fermer un menu
 - **`\` puis Entrée** (ou **Ctrl+J**) - Ajouter une nouvelle ligne dans votre message sans l'envoyer
@@ -175,9 +175,9 @@ Si vous travaillez avec Claude Code depuis VS Code et avez l'extension Claude Co
 De plus, vous pouvez sélectionner quelques lignes de code et Claude affichera **3 lines selected**. Vous pouvez demander à Claude d'apporter des modifications rapides à ces lignes ou poser des questions. Par conséquent, je recommande vivement d'utiliser Claude Code depuis VS Code.
 
 
-## Étape 9 : Effectuez des Actions avec les Commandes Linux
+## Étape 9 : Effectuez des Actions avec les Commandes du Terminal
 
-Claude peut effectuer des actions en exécutant des commandes Linux sous de nombreuses formes.
+Claude peut effectuer des actions en exécutant des commandes du terminal (Bash sur Mac/Linux, Git Bash ou PowerShell sur Windows) sous de nombreuses formes.
 
 - Installer des logiciels
   ```
@@ -207,7 +207,7 @@ Claude installe des logiciels, résout des erreurs et gère les environnements �
 
 
 
-En pratique, vous avez un expert en commandes bash Linux à votre disposition. Tant que vous gérez les permissions et approuvez les actions, vous pouvez être très productif.
+En pratique, vous avez un expert en commandes du terminal à votre disposition. Tant que vous gérez les permissions et approuvez les actions, vous pouvez être très productif.
 
 ## Prochaines Étapes
 
@@ -222,7 +222,7 @@ Maintenant que vous connaissez les bases, essayez ceci par vous-même :
 
 - **Erreur "Command not found"** - Claude Code n'est pas installé ou n'est pas dans votre PATH. Suivez à nouveau le tutoriel d'installation [Windows](Install_CLAUDE_Code_Win.md) ou [Mac](Install_Claude_Code_MacOS.md), ou relancez directement l'installateur : `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) ou `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude donne des informations obsolètes** - Effacez le contexte avec `/clear` et redemandez. Les longues conversations peuvent remplir la mémoire de Claude.
-- **Les modifications de fichiers ne fonctionnent pas** - Assurez-vous d'avoir les permissions d'écriture dans votre dossier de projet. Claude demandera l'approbation avant de modifier les fichiers — sélectionnez **Yes** dans le menu qui apparaît.
+- **Les modifications de fichiers ne fonctionnent pas** - Assurez-vous d'avoir les permissions d'écriture dans votre dossier de projet. Si Claude demande l'approbation, sélectionnez **Yes** dans le menu qui apparaît.
 - **Le contexte se remplit rapidement** - Utilisez `/context` pour vérifier l'utilisation. Lorsqu'il est presque plein, utilisez `/clear` pour repartir de zéro avec une nouvelle conversation.
 
 ## Aperçu du Flux de Travail
@@ -232,7 +232,7 @@ Travailler avec Claude Code suit ce schéma :
 - Démarrez Claude dans votre dossier de projet avec `claude`
 - Posez des questions en langage naturel
 - Claude lit les fichiers selon les besoins et répond
-- Demandez des modifications de code — Claude demande la permission avant de modifier les fichiers
+- Demandez des modifications de code — si Claude demande la permission, choisissez **Yes**
 - Utilisez `/clear` lorsque vous changez de sujet ou que le contexte est plein
 - Utilisez `/exit` lorsque vous avez terminé
 

@@ -27,7 +27,7 @@ Vous souhaitez écrire du code, mais le Bloc-notes ou TextEdit vous semblent lim
 - Allez sur [code.visualstudio.com](https://code.visualstudio.com)
 - Cliquez sur le bouton **Download** (il détecte automatiquement votre système d'exploitation)
 - Exécutez le programme d'installation :
-   - **Windows :** Double-cliquez sur le fichier `.exe`, cliquez sur **Next** à chaque invite
+   - **Windows :** Double-cliquez sur le fichier `.exe` et cliquez sur **Next** à chaque invite. Sur l'écran **Select Additional Tasks**, cochez aussi **Add "Open with Code" action to Windows Explorer directory context menu** afin de pouvoir ouvrir plus tard des dossiers de projet depuis l'Explorateur de fichiers
    - **Mac :** Ouvrez le fichier `.dmg`, faites glisser VS Code vers **Applications**
    - **Linux :** Suivez les instructions pour votre gestionnaire de paquets
 - Lancez VS Code
@@ -49,8 +49,8 @@ Cliquez sur l'icône **Explorer** (en haut de la Barre d'Activités) pour voir l
 ## Étape 3 : Ouvrir un Dossier et Explorer
 
 - Cliquez sur **File** → **Open Folder**
-- Naviguez vers n'importe quel dossier existant sur votre ordinateur (par exemple, Documents)
-- Cliquez sur **Open** (ou **Select Folder**)
+- Allez dans votre dossier **Documents** et créez un nouveau dossier vide pour vous entraîner, par exemple `vscode_practice` (utilisez le bouton **New Folder** de la fenêtre)
+- Sélectionnez ce nouveau dossier, puis cliquez sur **Open** (ou **Select Folder**)
 - Si on vous demande « Do you trust the authors? », cliquez sur **Yes, I trust the authors**
 
 La barre latérale Explorateur affiche maintenant les fichiers de votre dossier :
@@ -61,7 +61,7 @@ La barre latérale Explorateur affiche maintenant les fichiers de votre dossier 
 
 ## Étape 4 : Créer un Fichier Markdown
 
-- Dans l'Explorateur, cliquez sur l'icône **New File** (page avec +)
+- Dans l'Explorateur, placez le pointeur de la souris sur le nom du dossier en haut, puis cliquez sur l'icône **New File** (page avec +) qui apparaît
 - Nommez-le `README.md`
 - Ajoutez ce contenu :
 
@@ -124,7 +124,7 @@ Vérifiez l'Explorateur - le dossier `notes` apparaît ! Le terminal s'exécute 
 
 ## Étape 8 : Utiliser les Agents IA dans VS Code (Optionnel)
 
-VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/chat-overview), un assistant IA qui peut expliquer, écrire et déboguer du code.
+VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat), un assistant IA qui peut expliquer, écrire et déboguer du code.
 
 - Ouvrez le fichier `README.md` (ou tout autre fichier de votre projet)
 - Cliquez sur **Chat** → **Open Chat** dans la barre de titre (ou appuyez sur `Ctrl+Alt+I` sur Windows/Linux, `Ctrl+Cmd+I` sur Mac)
@@ -134,7 +134,7 @@ VS Code inclut [GitHub Copilot Chat](https://code.visualstudio.com/docs/chat/cha
 
 GitHub Copilot analysera votre fichier et expliquera ce qu'il fait. Vous pouvez lui demander d'écrire du nouveau code, de corriger des bugs ou de répondre à des questions comme « Comment ajouter plus de fonctionnalités ? »
 
-**Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/copilot/copilot-chat), sélectionnez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
+**Astuce :** Pour [l'édition en ligne](https://code.visualstudio.com/docs/chat/inline-chat), sélectionnez du code dans n'importe quel fichier et appuyez sur `Ctrl+I` (Windows/Linux) ou `Cmd+I` (Mac) pour demander à Copilot de modifier, corriger ou expliquer uniquement cette section.
 
 ## Comment Rouvrir Votre Projet
 
@@ -146,7 +146,7 @@ GitHub Copilot analysera votre fichier et expliquera ce qu'il fait. Vous pouvez 
 
 - **La prévisualisation ne s'affiche pas :** Assurez-vous que l'extension Markdown Preview Enhanced est installée et que vous avez un fichier `.md` ouvert
 - **Le terminal affiche le mauvais répertoire :** Cliquez sur l'icône de corbeille dans le panneau du terminal, puis cliquez sur **Terminal** → **New Terminal**
-- **Le menu Chat n'est pas visible :** GitHub Copilot Chat doit peut-être être installé - cliquez sur l'icône **Extensions**, recherchez « GitHub Copilot Chat » et installez-le
+- **Le menu Chat n'est pas visible :** Les fonctionnalités d'IA sont peut-être désactivées. Ouvrez les paramètres (appuyez sur `Ctrl+,` sur Windows/Linux ou `Cmd+,` sur Mac), recherchez `disable AI features` et décochez cette option. Ensuite, survolez l'icône Copilot dans la Barre d'État (en bas) et sélectionnez **Use AI Features**
 - **Les extensions ne fonctionnent pas :** Cliquez sur **View** → **Command Palette**, tapez « reload window » et sélectionnez **Developer: Reload Window**
 
 ## Le Workflow Complet
