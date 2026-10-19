@@ -60,18 +60,18 @@ Think of the Claude Code sidebar as a chat window inside VS Code. It lets you as
 
 ### How to open the Claude Code sidebar
 
-1. Open VS Code
-2. Look at the far left side of the window
-3. Click the Extensions icon if you do not already see the Claude Code panel
-4. Search for Claude Code in the Extensions marketplace
-5. Click Install if it is not already installed
-6. After installation, look for the Claude Code Spark icon in the left sidebar, or click **✻ Claude Code** in the bottom-right corner of the window
+- Open VS Code
+- Look at the far left side of the window
+- Click the **Extensions** icon if you do not already see the Claude Code panel
+- Search for `Claude Code` in the Extensions marketplace
+- Click **Install** if it is not already installed
+- After installation, click **✻ Claude Code** in the bottom-right corner of the window to open the chat. (The Spark icon in the left sidebar opens a list of your sessions instead, where you can start a new one.)
 
 If you do not see the Claude Code icon, try this:
 
-1. Press Ctrl + Shift + P
-2. Type: Claude Code: Open in Side Bar
-3. Click the matching option in the list
+- Press **Ctrl + Shift + P**
+- Type: `Claude Code: Open in Side Bar`
+- Click the matching option in the list
 
 If it still does not appear, close VS Code and reopen it. Sometimes the extension needs a fresh start before the sidebar shows up.
 

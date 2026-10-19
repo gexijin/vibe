@@ -135,6 +135,7 @@ VS Code is a code editor with built-in terminal, extensions, and language suppor
   ```
   sudo dpkg -i code_*.deb
   ```
+- If the terminal asks **Add Microsoft apt repository for Visual Studio Code?**, choose **Yes** and press Enter (this lets VS Code update itself later)
 - If you see dependency errors, fix them with:
   ```
   sudo apt-get install -f

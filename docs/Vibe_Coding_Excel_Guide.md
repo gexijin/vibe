@@ -153,7 +153,7 @@ Before committing, review what Claude built.
 Add charts, conditional formatting, and category dropdown to budget tracker
 ```
 
-- Click **Commit to main**
+- Click the blue commit button at the bottom (it reads like **Commit 1 file to main** - the number matches how many files changed)
 - Click **Push origin** to back up to GitHub
 
 You've saved a full working version of your budget tracker!

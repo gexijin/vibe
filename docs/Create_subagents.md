@@ -145,7 +145,7 @@ The subagent will automatically activate based on your description.
 
 ## Step 7: Watch the Subagent Work
 
-As the subagent runs, you'll see it:
+The subagent runs in the background, so you'll see its name in a small panel below the prompt rather than every step. To watch it, type `/tasks`, use the arrow keys to select **stock-picker**, and press **Enter**. Behind the scenes, it will:
 1. **Invoke the skill twice** - Call the stock-report skill once for Apple, then for Google
 2. **Gather data** - Each skill call searches the web and generates a company report
 3. **Score companies** - Scores each category and combines them into an overall score

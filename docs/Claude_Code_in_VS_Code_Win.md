@@ -60,7 +60,7 @@ Write a short article explaining why LLMs like to use Markdown format. Save it a
 ```
 - Claude Code creates the file - you'll see `article.md` appear in the Explorer panel on the left
 - Click on `article.md` in the Explorer to view it in the editor
-- To preview the formatted article: right-click on the `article.md` tab and select **Open Preview**
+- To preview the formatted article: right-click inside the `article.md` editor and select **Markdown Preview Enhanced: Open Preview to the Side** (the extension from [VS Code Basics](./VS_Code_Getting_Started)). If you don't have that extension, right-click the `article.md` tab and select **Open Preview** instead
 - You'll see the Markdown rendered with proper headings, bullet points, and formatting
 
 ## Reopening Claude in VS Code Later
