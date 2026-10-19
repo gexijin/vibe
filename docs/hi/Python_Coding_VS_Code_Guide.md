@@ -23,13 +23,13 @@ lang: "hi"
 
 ## चरण 1: Python इंस्टॉल करें
 
-आधुनिक पैकेजों के साथ सर्वोत्तम संगतता के लिए आपको Python 3.8 या उससे ऊपर की ज़रूरत है।
+आपको Python 3.11 या उससे ऊपर की ज़रूरत है (python.org का सबसे नया वर्शन सबसे अच्छा है) ताकि pandas और Streamlit जैसे पैकेजों के सबसे नए वर्शन इंस्टॉल हो सकें।
 
 - **Windows**:
   - [python.org/downloads/windows](https://www.python.org/downloads/windows/) पर जाएँ और नवीनतम Python 3 रिलीज़ के नीचे **Windows installer (64-bit)** पर क्लिक करें ("install manager" पर नहीं)
   - इंस्टॉलर चलाएँ
   - Install Now पर क्लिक करने से पहले **"Add python.exe to PATH" बॉक्स को चेक करें**
-  - इंस्टॉलेशन स्थान नोट करें (आमतौर पर `C:\Users\YourName\AppData\Local\Programs\Python\Python312`)
+  - इंस्टॉलेशन स्थान नोट करें (आमतौर पर `C:\Users\YourName\AppData\Local\Programs\Python\Python312` — संख्या आपके Python वर्शन से मेल खाती है)
 
 - **macOS**:
   - [python.org](https://www.python.org/downloads/) से डाउनलोड करें और इंस्टॉलर चलाएँ
@@ -56,7 +56,7 @@ Python extension में डीबगिंग, IntelliSense, कोड फ़
 
 - अपने कंप्यूटर पर एक नया फ़ोल्डर बनाएँ (जैसे, `my-python-project`)
 - VS Code में, **File > Open Folder** पर क्लिक करें और अपना नया फ़ोल्डर चुनें
-- ऊपर के मेनू में **File > New File** पर क्लिक करें
+- ऊपर के मेनू में **File > New File...** पर क्लिक करें। विंडो के ऊपर एक सूची दिखती है — **Python File** चुनें
 - फ़ाइल को **File > Save** पर क्लिक करके `analysis.py` के रूप में सेव करें
 
 ## चरण 4: Python इंटरप्रेटर चुनें
@@ -130,14 +130,14 @@ plt.show()
 ## चरण 8: Python कोड इंटरैक्टिव रूप से चलाएँ
 
 - `analysis.py` खुला होने पर, ऊपर-दाएँ कोने में **▶ Run Python File** बटन पर क्लिक करें
-- या एडिटर में राइट-क्लिक करें और **Run Python File in Terminal** चुनें
+- या एडिटर में राइट-क्लिक करें और **Run Python > Run Python File in Terminal** चुनें
 - टर्मिनल पैनल में आउटपुट आते देखें
 - आपका प्लॉट दिखाने वाली एक हिस्टोग्राम विंडो पॉप अप होगी
 - आप विशिष्ट लाइनें भी चुन सकते हैं और उन्हें एक इंटरैक्टिव Python सेशन में चलाने के लिए `Shift+Enter` दबा सकते हैं
 
 ## चरण 9: एक साधारण Streamlit ऐप बनाएँ
 
-- एक नई फ़ाइल बनाएँ: **File > New File**
+- एक नई फ़ाइल बनाएँ: **File > New File...** पर क्लिक करें, फिर विंडो के ऊपर दिखने वाली सूची से **Python File** चुनें
 - इसे `app.py` के रूप में सेव करें
 - यह कोड टाइप करें:
 

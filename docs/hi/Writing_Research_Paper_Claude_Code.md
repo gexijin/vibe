@@ -17,7 +17,7 @@ Claude Code को शोध, विचार-मंथन, योजना, ड
 
 ## आपको क्या चाहिए
 
-- पूरा किया हुआ [Windows पर Claude Code के लिए VS Code सेट करें](./Claude_Code_in_VS_Code_Win) या [Mac पर VS Code से Claude Code का उपयोग करें](./Claude_Code_in_VS_Code_Mac) ट्यूटोरियल
+- पूरा किया हुआ [Windows पर Claude Code के लिए VS Code सेट करें](./Claude_Code_in_VS_Code_Win.md) या [Mac पर VS Code से Claude Code का उपयोग करें](./Claude_Code_in_VS_Code_Mac.md) ट्यूटोरियल
 - 30-40 मिनट
 
 ## चरण 1: एक प्रोजेक्ट फ़ोल्डर बनाएँ
@@ -243,7 +243,7 @@ Claude के बदलावों की समीक्षा करें।
 से गुज़ारे। इसे इस तरह सेव करें कि मैं इसे भविष्य में विभिन्न विषयों पर शोध पत्रों के लिए इस्तेमाल कर सकूँ।
 ```
 
-Claude एक कस्टम स्लैश कमांड बनाएगा, आमतौर पर आपके `.claude/commands/` फ़ोल्डर में (या `.claude/skills/research-paper/` में)। यह एक प्रॉम्प्ट वाली Markdown फ़ाइल है। आप बस `/research-paper [आपका विषय]` टाइप करके अपना अगला शोध पत्र शुरू कर सकते हैं!
+Claude एक कस्टम स्लैश कमांड बनाएगा, आमतौर पर आपके `.claude/commands/` फ़ोल्डर में (या `.claude/skills/research-paper/` में)। यह एक प्रॉम्प्ट वाली Markdown फ़ाइल है। पहली बार उपयोग करने से पहले, `/reload-skills` टाइप करें (या Claude Code बंद करके फिर से शुरू करें) ताकि नया कमांड लोड हो जाए। फिर आप बस `/research-paper [आपका विषय]` टाइप करके अपना अगला शोध पत्र शुरू कर सकते हैं!
 
 ## चरण 18: फ़ीडबैक लें
 

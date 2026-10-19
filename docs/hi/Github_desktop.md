@@ -56,7 +56,7 @@ lang: "hi"
 
 ## चरण 4: अपनी पहली Repository बनाएं
 
-- GitHub Desktop में, **Create a New Repository on your Hard Drive** पर क्लिक करें
+- GitHub Desktop में, **Create a New Repository on your Local Drive** पर क्लिक करें
 - फॉर्म भरें:
   - **Name:** `my-first-project` (या कोई भी नाम जो आपको पसंद हो)
   - **Description:** `Learning version control` (वैकल्पिक)
@@ -94,7 +94,7 @@ lang: "hi"
 - GitHub Desktop पर वापस लौटें
 - आपको दाईं ओर अपने बदलाव हाइलाइट किए हुए दिखेंगे (हरा = जोड़ा गया, लाल = हटाया गया)
 - नीचे बाईं ओर, एक कमिट संदेश टाइप करें: `Updated README with project description`
-- नीले **Commit to main** बटन पर क्लिक करें
+- नीले **Commit 1 file to main** बटन पर क्लिक करें (संख्या इस बात से मेल खाती है कि आपने कितनी फ़ाइलें बदलीं)
 
 ## चरण 8: GitHub पर Push करें (क्लाउड में बैकअप लें)
 
@@ -121,7 +121,7 @@ lang: "hi"
 
 - अपनी प्रोजेक्ट फ़ाइलों में बदलाव करें
 - GitHub Desktop में बदलाव देखें (हरा = जोड़ा गया, लाल = हटाया गया)
-- एक स्पष्ट कमिट संदेश लिखें और **Commit to main** पर क्लिक करें
+- एक स्पष्ट कमिट संदेश लिखें और नीचे दिए नीले कमिट बटन पर क्लिक करें (उस पर कुछ ऐसा लिखा होता है: **Commit 1 file to main**)
 - GitHub पर बैकअप लेने के लिए **Push origin** पर क्लिक करें
 - दोहराएं
 

@@ -165,7 +165,7 @@ stock-report Skill को अपडेट करो ताकि यह तभ�
 नाम के साथ स्पष्ट रूप से "analyze" या "report" शब्द का इस्तेमाल करूं।
 ```
 
-Claude `SKILL.md` में `description` फ़ील्ड को अपडेट करता है। अंतर टेस्ट करें:
+Claude `SKILL.md` में `description` फ़ील्ड को अपडेट करता है। `/reload-skills` टाइप करें ताकि Claude Code बदलाव को लोड कर ले, फिर अंतर टेस्ट करें:
 ```
 Apple क्या कर रहा है?
 ```
