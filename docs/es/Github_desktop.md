@@ -6,7 +6,7 @@ lang: "es"
 
 # Introducción al Control de Versiones
 
-Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda qué cambió y desea volver a cuando todo funcionaba. El control de versiones es como los puntos de guardado en un videojuego: cada vez que "confirma" su trabajo, crea un punto de restauración al que siempre puede volver. [GitHub](https://github.com) almacena sus puntos de guardado en la nube, así su código está respaldado de forma segura y accesible desde cualquier computadora.
+Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda qué cambió y desea volver a cuando todo funcionaba. El control de versiones es como los puntos de guardado en un videojuego: cada vez que hace "commit" de su trabajo, crea un punto de restauración al que siempre puede volver. [GitHub](https://github.com) almacena sus puntos de guardado en la nube, así su código está respaldado de forma segura y accesible desde cualquier computadora.
 
 ## Conceptos Clave
 
@@ -42,8 +42,8 @@ Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda q
 
 **En Mac:**
 - Abra el archivo `.zip` descargado
-- Arrastre **GitHub Desktop** a su carpeta Applications
-- Abra GitHub Desktop desde Applications
+- Arrastre **GitHub Desktop** a su carpeta **Aplicaciones** (Applications)
+- Abra GitHub Desktop desde **Aplicaciones**
 
 ## Paso 3: Iniciar Sesión en GitHub Desktop
 
@@ -60,7 +60,7 @@ Está trabajando en un proyecto y realiza cambios que rompen todo. No recuerda q
 - Complete el formulario:
   - **Name:** `mi-primer-proyecto` (o cualquier nombre que desee)
   - **Description:** `Aprendiendo control de versiones` (opcional)
-  - **Local Path:** Elija dónde guardarlo (la carpeta Documents está bien)
+  - **Local Path:** Elija dónde guardarlo (la carpeta Documentos está bien)
   - Marque **Initialize this repository with a README**
 - Haga clic en **Create Repository**
 
@@ -107,8 +107,8 @@ Su código ahora está respaldado en línea en: `https://github.com/SU-USUARIO/m
 
 ## Próximos Pasos
 
-- Edite su archivo README nuevamente y confirme los cambios
-- Cree un nuevo archivo en la carpeta de su proyecto y confírmelo
+- Edite su archivo README nuevamente y haga commit de los cambios
+- Cree un nuevo archivo en la carpeta de su proyecto y haga commit de él
 - Explore la pestaña **History** para ver cómo evoluciona su proyecto con el tiempo
 
 ## Solución de Problemas

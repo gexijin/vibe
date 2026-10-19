@@ -53,12 +53,12 @@ Antes de configurar VS Code, necesita saber dónde está instalado R en su siste
 
 ### Para Usuarios de Windows
 
-1. Abra el **Explorador de Archivos**
-2. Navegue a `C:\Program Files\R\`
-3. Verá una carpeta como `R-4.6.1` (su número de versión puede diferir)
-4. Abra esa carpeta → Abra la carpeta `bin`
-5. Verá `R.exe` allí
-6. La ruta completa es: `C:\Program Files\R\R-4.6.1\bin\R.exe`
+- Abra el **Explorador de archivos**
+- Navegue a `C:\Program Files\R\`
+- Verá una carpeta como `R-4.6.1` (su número de versión puede diferir)
+- Abra esa carpeta → Abra la carpeta `bin`
+- Verá `R.exe` allí
+- La ruta completa es: `C:\Program Files\R\R-4.6.1\bin\R.exe`
 
 **Anote o recuerde su número de versión** (por ejemplo, `R-4.6.1`) - lo necesitará en el Paso 4.
 
@@ -172,7 +172,7 @@ hist(iris$Sepal.Length)
 ## Paso 8: Ejecute Código R Interactivamente
 
 - Con `analysis.R` abierto, seleccione una línea de código y presione `Ctrl+Enter` (Windows/Linux) o `Cmd+Enter` (Mac) para ejecutarla
-- Si no tiene una terminal abierta, el primer `Ctrl+Enter` / `Cmd+Enter` abre una terminal de R. El segundo ejecuta el código.
+- Si no hay ninguna terminal de R abierta, aparece una lista **Run R code** en la parte superior de la ventana. Elija **Create R terminal** (no **New R Interactive window**, que necesita software adicional). La terminal de R se abre y ejecuta su línea
 - Observe cómo la salida aparece en la terminal. El histograma se abre en una pestaña de gráficos dentro de VS Code, junto a su script
 - También puede seleccionar todas las líneas y ejecutarlas de la misma manera.
 
@@ -268,10 +268,10 @@ shinyApp(ui = ui, server = server)
 
 VS Code proporciona una alternativa moderna y liviana a RStudio con estas ventajas clave:
 
-- **Entorno unificado**: Codifique en R, Python, JavaScript y más en un solo editor
+- **Entorno unificado**: Programe en R, Python, JavaScript y más en un solo editor
 - **Personalizable**: Instale solo las extensiones que necesita para una configuración liviana
-- **Terminal integrado**: Ejecute R, Git y comandos de shell juntos
-- **Desarrollo Shiny**: Lanzamiento de aplicaciones con un clic y recarga automática
+- **Terminal integrada**: Ejecute R, Git y comandos de shell juntos
+- **Desarrollo Shiny**: Lanzamiento de aplicaciones con un clic y recarga automática que ahorra tiempo
 - **Control de versiones**: Integración con Git incorporada sin herramientas externas
 
 ---

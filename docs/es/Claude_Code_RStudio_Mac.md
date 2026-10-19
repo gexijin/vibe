@@ -6,7 +6,7 @@ lang: "es"
 
 # Uso de Claude Code con RStudio en Mac
 
-Tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de codificación con IA. Este tutorial muestra cómo usar ambas herramientas juntas en los mismos archivos de proyecto. Creará un proyecto R, escribirá código manualmente y luego usará Claude Code desde Terminal para mejorarlo con visualizaciones y análisis, todo mientras RStudio permanece abierto para ejecutar y probar su código.
+Tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de programación con IA. Este tutorial muestra cómo usar ambas herramientas juntas en los mismos archivos de proyecto. Creará un proyecto R, escribirá código manualmente y luego usará Claude Code desde Terminal para mejorarlo con visualizaciones y análisis, todo mientras RStudio permanece abierto para ejecutar y probar su código.
 
 ## Conceptos Clave
 
@@ -35,7 +35,7 @@ Tiene RStudio en Mac para ejecutar código R y Claude Code para asistencia de co
 - Seleccione **New Project**
 - Para **Directory name**, escriba: `test_claude`
 - Haga clic en **Browse** junto a "Create project as subdirectory of:"
-- Navegue hasta su carpeta **Documents**
+- Navegue hasta su carpeta **Documentos**
 - Haga clic en **Open**
 - Haga clic en **Create Project**
 - RStudio crea el proyecto y cambia a él
@@ -64,8 +64,8 @@ summary(iris)
 
 ## Paso 5: Abrir Terminal
 
-- Abra **Finder** y haga clic en **Applications** en la barra lateral izquierda
-- Abra la carpeta **Utilities**
+- Abra **Finder** y haga clic en **Aplicaciones** en la barra lateral izquierda
+- Abra la carpeta **Utilidades**
 - Haga doble clic en **Terminal**
 - La ventana de Terminal se abre
 

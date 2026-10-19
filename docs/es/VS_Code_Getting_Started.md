@@ -6,7 +6,7 @@ lang: "es"
 
 # Primeros Pasos con VS Code
 
-Quiere escribir código, pero Notepad o TextEdit le resulta muy limitante. Necesita algo que le ayude a codificar más rápido, con resaltado de sintaxis, autocompletado y herramientas integradas. **VS Code es como un cuaderno inteligente para código**: entiende lo que escribe y le ayuda en el proceso. [Visual Studio Code](https://code.visualstudio.com) es gratuito, funciona en cualquier sistema operativo y millones de desarrolladores lo utilizan.
+Quiere escribir código, pero Notepad o TextEdit le resulta muy limitante. Necesita algo que le ayude a programar más rápido, con resaltado de sintaxis, autocompletado y herramientas integradas. **VS Code es como un cuaderno inteligente para código**: entiende lo que escribe y le ayuda en el proceso. [Visual Studio Code](https://code.visualstudio.com) es gratuito, funciona en cualquier sistema operativo y millones de desarrolladores lo utilizan.
 
 ## Conceptos Clave
 
@@ -28,7 +28,7 @@ Quiere escribir código, pero Notepad o TextEdit le resulta muy limitante. Neces
 - Haga clic en el botón **Download** (detecta su sistema operativo automáticamente)
 - Ejecute el instalador:
    - **Windows:** Haga doble clic en el archivo `.exe` y haga clic en **Next** en las indicaciones. En la pantalla **Select Additional Tasks**, marque también **Add "Open with Code" action to Windows Explorer directory context menu** para poder abrir carpetas de proyecto desde el Explorador de archivos más adelante
-   - **Mac:** Abra el archivo `.dmg`, arrastre VS Code a **Applications**
+   - **Mac:** Abra el archivo `.dmg`, arrastre VS Code a **Aplicaciones**
    - **Linux:** Siga las instrucciones para su gestor de paquetes
 - Inicie VS Code
 
@@ -49,7 +49,7 @@ Haga clic en el icono **Explorer** (parte superior de la Activity Bar) para ver 
 ## Paso 3: Abra una Carpeta y Explore
 
 - Haga clic en **File** → **Open Folder**
-- Vaya a su carpeta **Documents** y cree una nueva carpeta vacía para practicar, por ejemplo `vscode_practice` (use el botón **New Folder** de la ventana)
+- Vaya a su carpeta **Documentos** y cree una nueva carpeta vacía para practicar, por ejemplo `vscode_practice` (use el botón **New Folder** de la ventana)
 - Seleccione esa nueva carpeta y luego haga clic en **Open** (o **Select Folder**)
 - Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
@@ -138,7 +138,7 @@ GitHub Copilot analizará su archivo y explicará qué hace. Puede pedirle que e
 
 ## Cómo Reabrir Su Proyecto
 
-- Abra VS Code desde el menú Start (Windows), Spotlight (Mac) o Applications (Linux)
+- Abra VS Code desde el menú Inicio (Windows), Spotlight (Mac) o Applications (Linux)
 - Haga clic en **File** → **Open Recent** → seleccione su carpeta
 - O haga clic en **File** → **Open Folder** y navegue hasta ella
 

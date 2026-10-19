@@ -42,8 +42,9 @@ Construir una aplicación simple de temporizador con Claude Code y rastrear todo
 - Complete:
   - **Name:** `test_claude`
   - **Description:** `A timer app built with Claude Code`
-  - **Local Path:** Haga clic en **Choose...** y elija su carpeta **Documents** (la opción predeterminada es una carpeta `GitHub` dentro de Documents, así que cámbiela)
+  - **Local Path:** Haga clic en **Choose...** y elija su carpeta **Documentos** (Documents) (la opción predeterminada es una carpeta `GitHub` dentro de Documentos, así que cámbiela)
   - **Marque** "Initialize this repository with a README"
+- Si GitHub Desktop dice que la carpeta "appears to be a Git repository" (parece ser un repositorio de Git), ya tiene una carpeta `test_claude` del tutorial de Git. Cambie el nombre de esa carpeta antigua (por ejemplo, a `test_claude_old`) en el Explorador de archivos o en Finder y vuelva a intentarlo
 - Haga clic en **Create Repository**
 - Haga clic en **Publish repository** en la parte superior
 - Haga clic en **Publish Repository**
@@ -52,7 +53,7 @@ Ahora tiene un proyecto local y un respaldo en la nube en GitHub.
 
 ## Paso 2: Solicite a Claude que Cree la Aplicación de Temporizador
 
-- Abra su **terminal**
+- Abra su terminal: **PowerShell** en Windows, **Terminal** en Mac
 - Navegue a su proyecto:
   ```
   cd ~/Documents/test_claude
@@ -65,7 +66,7 @@ Ahora tiene un proyecto local y un respaldo en la nube en GitHub.
 
 Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
-- Escriba esta solicitud:
+- Copie y pegue toda esta solicitud (al pegarla, todas las líneas se mantienen juntas; presionar Enter la enviaría antes de tiempo):
 
   ```
   Crea una aplicación simple de temporizador de cuenta regresiva en un solo archivo llamado timer.html.

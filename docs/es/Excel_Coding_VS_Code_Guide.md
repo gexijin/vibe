@@ -75,7 +75,7 @@ Crea una hoja de cálculo llamada budget.xlsx con columnas para Categoría, Mont
 
 - Presione Enter
 - Observe cómo Claude escribe un script de Python, lo ejecuta y genera `budget.xlsx` en su carpeta de proyecto
-- Si Claude le pide permiso para ejecutar comandos o instalar herramientas auxiliares (como `openpyxl`, un complemento de Python para hojas de cálculo): elija **Yes** para que continúe
+- Si Claude le pide permiso para ejecutar comandos o instalar herramientas auxiliares (como `openpyxl`, un complemento de Python para hojas de cálculo), elija **Yes** para que continúe
 - Si Claude dice que Python no está instalado o que no lo encuentra, vuelva al Paso 1 y luego cierre y vuelva a abrir VS Code
 
 ## Paso 6: Ver el Resultado

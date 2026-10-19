@@ -12,8 +12,8 @@ Aprenda a escribir artículos de investigación utilizando Claude Code como asis
 
 - **Flujo de trabajo** - Investigación → Lluvia de ideas → Investigación enfocada → Esquema → Borrador → Revisión manual → Pulir con IA → Agregar resumen → Mejorar título → Verificar referencias → Corrección con IA
 - **Asistente de IA** - Usted toma las decisiones importantes mientras la IA realiza el trabajo repetitivo
-- **Claude Code** - Sistema de IA que busca información en la web, organiza la investigación y redacta contenido mediante instrucciones en lenguaje natural
-- **Slash command** - Comando personalizado que puede reutilizarse en Claude Code para automatizar flujos de trabajo
+- **Claude Code** - Sistema de IA agéntico que busca información en la web, organiza la investigación y redacta contenido mediante instrucciones en lenguaje natural
+- **Slash command** - Un prompt personalizado y detallado que puede reutilizarse en Claude Code
 
 ## Lo Que Necesitará
 
@@ -24,9 +24,9 @@ Aprenda a escribir artículos de investigación utilizando Claude Code como asis
 
 Cree una carpeta para su artículo de investigación:
 
-- Abra **File Explorer** (Windows) o **Finder** (Mac)
+- Abra el **Explorador de archivos** (Windows) o **Finder** (Mac)
 - Navegue a **Documentos**
-- Cree una nueva carpeta llamada `test_claude`
+- Cree una nueva carpeta llamada `test_claude` (si ya la creó en un tutorial anterior, simplemente use esa carpeta)
 
 Todo el trabajo de este proyecto se realizará en esta carpeta.
 
@@ -97,9 +97,9 @@ Revise el resumen para obtener una visión general rápida del panorama de inves
 ## Paso 6: Leer las Fuentes
 Lea el documento de investigación y haga clic en las fuentes originales para verificar la información:
 
-1. Haga clic en `general_research.md` en el panel Explorer a la izquierda
-2. Previsualice el documento formateado: haga clic derecho en la pestaña `general_research.md` y seleccione **Open Preview**
-3. Haga clic en los enlaces de las fuentes para leer los artículos y estudios originales
+- Haga clic en `general_research.md` en el panel Explorer a la izquierda
+- Previsualice el documento formateado: haga clic derecho dentro del editor y seleccione **Markdown Preview Enhanced: Open Preview to the Side** (o, si no tiene esa extensión, haga clic derecho en la pestaña `general_research.md` y seleccione **Open Preview**)
+- Haga clic en los enlaces de las fuentes para leer los artículos y estudios originales
 
 ## Paso 7: Lluvia de Ideas Sobre Su Enfoque
 
@@ -232,7 +232,7 @@ Haz una corrección final del artículo:
 
 Revise los cambios realizados por Claude.
 
-**Exportar a Word:** En VS Code, haga clic derecho en la pestaña `paper.md` y seleccione **Open Preview**. Haga clic dentro del panel de vista previa, luego haga clic en **Edit > Select All** y **Edit > Copy**. Pegue en Microsoft Word—el formato se conservará.
+**Exportar a Word:** Abra la vista previa de `paper.md` de la misma forma que en el Paso 6. Haga clic dentro del panel de vista previa, luego haga clic en **Edit > Select All** y **Edit > Copy**. Pegue en Microsoft Word—el formato se conservará.
 
 ## Paso 17: Crear un Slash Command para Futuros Artículos
 
@@ -247,9 +247,9 @@ Claude creará un slash command personalizado, normalmente en su carpeta `.claud
 
 ## Paso 18: Obtener Retroalimentación
 
-Los LLM no tienen memoria permanente. Para cada respuesta, se envía el historial completo de la conversación como contexto. A medida que la interacción se hace más larga, es importante gestionar la longitud del contexto. Limpiar el contexto permite obtener una perspectiva fresca.
+Los LLM no tienen memoria permanente. Para cada respuesta, se envía el historial completo de la conversación como contexto. A medida que la interacción se hace más larga, es importante gestionar la longitud del contexto. Si el contexto anterior no está relacionado, o si podemos proporcionar un contexto más limpio, nos conviene empezar de nuevo.
 
-Limpie la memoria de Claude para obtener retroalimentación imparcial sobre su artículo:
+Limpie la memoria de Claude para obtener retroalimentación sobre su artículo. Escriba:
 
 ```
 /clear

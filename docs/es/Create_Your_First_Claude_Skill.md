@@ -10,7 +10,7 @@ Ha estado escribiendo manualmente `/stock-report AAPL` para generar informes. ¿
 
 ## Conceptos clave
 
-- **Skill** - Capacidad almacenada en `.claude/skills/` que Claude activa automáticamente según el contexto
+- **Skill** - Capacidad invocada por el modelo, almacenada en `.claude/skills/`, que Claude activa automáticamente según el contexto
 - **Invocación por modelo** - Claude decide cuándo usar la Skill leyendo su descripción, sin necesidad de escribir un comando
 - **Sigue siendo un comando slash** - También puede ejecutar cualquier Skill usted mismo escribiendo `/nombre-de-la-skill` (por ejemplo `/stock-report AAPL`). Si una Skill y un comando slash tienen el mismo nombre, se usa la Skill
 - **SKILL.md** - Archivo principal que contiene metadatos YAML e instrucciones para Claude

@@ -1,10 +1,10 @@
 ---
-title: "Programación en R en VS Code a través de Docker Container"
+title: "Programación en R en VS Code vía Docker"
 lang: "es"
 ---
 [Inicio](index.html)
 
-# Programación en R en VS Code a través de Docker Container
+# Programación en R en VS Code vía Docker
 
 ¿Alguna vez intentó compartir su código R con un colega, solo para pasar horas depurando problemas de "pero funciona en mi máquina"? Los contenedores Docker son como contenedores de envío para código: empaquetan su entorno R, bibliotecas y dependencias en una caja sellada que funciona igual en todas partes. Además, tiene acceso a decenas de miles de imágenes preconstruidas en [Docker Hub](https://hub.docker.com/), donde los desarrolladores publican entornos listos para usar, evitando la instalación manual de software. Este tutorial muestra cómo ejecutar R en un entorno aislado y reproducible usando VS Code y Docker Desktop.
 

@@ -154,7 +154,7 @@ Antes de hacer commit, revise lo que Claude construyó.
 Agregar gráficos, formato condicional y lista desplegable de categorías al control de presupuesto
 ```
 
-- Haga clic en **Commit to main**
+- Haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 1 file to main**; el número coincide con la cantidad de archivos que cambiaron)
 - Haga clic en **Push origin** para respaldar en GitHub
 
 ¡Ha guardado una versión completa y funcional de su control de presupuesto!
