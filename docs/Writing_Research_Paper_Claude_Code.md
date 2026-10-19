@@ -25,7 +25,7 @@ Create a folder for your research paper:
 
 - Open **File Explorer** (Windows) or **Finder** (Mac)
 - Navigate to **Documents**
-- Create a new folder called `test_claude`
+- Create a new folder called `test_claude` (if you already made it in an earlier tutorial, just use that folder)
 
 Everything about this project happens in this folder. 
 
@@ -96,9 +96,9 @@ Review Claude's summary to get a quick overview of the research landscape.
 ## Step 6: Read the Sources
 Read through the research document and click through to the original sources to verify the information:
 
-1. Click `general_research.md` in the Explorer panel on the left
-2. Preview the formatted document: right-click on the `general_research.md` tab and select **Open Preview**
-3. Click the source links to read the original articles and studies
+- Click `general_research.md` in the Explorer panel on the left
+- Preview the formatted document: right-click inside the editor and select **Markdown Preview Enhanced: Open Preview to the Side** (or, without that extension, right-click the `general_research.md` tab and select **Open Preview**)
+- Click the source links to read the original articles and studies
 
 ## Step 7: Brainstorm Your Angle
 
@@ -231,7 +231,7 @@ Do a final proofread of the paper:
 
 Review Claude's changes.
 
-**Export to Word:** In VS Code, right-click on the `paper.md` tab and select **Open Preview**. Click inside the preview pane, then click **Edit > Select All** and **Edit > Copy**. Paste into Microsoft Word—the formatting will be retained.
+**Export to Word:** Open the preview of `paper.md` the same way as in Step 6. Click inside the preview pane, then click **Edit > Select All** and **Edit > Copy**. Paste into Microsoft Word—the formatting will be retained.
 
 ## Step 17: Create a Slash Command for Future Papers
 

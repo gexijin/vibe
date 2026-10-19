@@ -43,6 +43,7 @@ Build a simple timer app with Claude Code and track all changes with GitHub Desk
   - **Description:** `A timer app built with Claude Code`
   - **Local Path:** Click **Choose...** and pick your **Documents** folder (the default is a `GitHub` folder inside Documents, so change it)
   - **Check** "Initialize this repository with a README"
+- If GitHub Desktop says the folder "appears to be a Git repository", you already have a `test_claude` folder from the Git tutorial. Rename that old folder (for example to `test_claude_old`) in File Explorer or Finder, then try again
 - Click **Create Repository**
 - Click **Publish repository** at the top
 - Click **Publish Repository**
@@ -51,7 +52,7 @@ You now have a local project and cloud backup on GitHub.
 
 ## Step 2: Ask Claude to Create the Timer App
 
-- Open your **terminal**
+- Open your terminal: **PowerShell** on Windows, **Terminal** on Mac
 - Navigate to your project:
   ```
   cd ~/Documents/test_claude
@@ -64,7 +65,7 @@ You now have a local project and cloud backup on GitHub.
 
 Log in with your Claude subscription following the installation tutorial ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). After logging in, you'll see a welcome message and the Claude Code prompt.
 
-- Type this request:
+- Copy and paste this whole request (pasting keeps all the lines together; pressing Enter would send it early):
 
   ```
   Create a simple countdown timer app in a single file called timer.html.

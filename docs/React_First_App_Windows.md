@@ -141,11 +141,11 @@ That instant update is what React is all about: you change a value, React update
 
 - Open **GitHub Desktop**
 - Click **File** → **Add Local Repository**
-- Click **Choose...**, select your `heart-react` folder, and click **Add Repository**
-- GitHub Desktop says the folder doesn't appear to be a Git repository. Click the **create a repository** link, then click **Create repository**
+- Click **Choose...** and select your `heart-react` folder
+- GitHub Desktop says the folder doesn't appear to be a Git repository. Click the **create a repository** link (instead of **Add Repository**), then click **Create repository**
 - GitHub Desktop saves all your files as a first commit called **Initial commit**. Click the **History** tab to see it
 - Notice `node_modules` is **not** in that commit. Vite added a `.gitignore` file that tells Git to skip it
-- From now on, each time you change `App.jsx`, type a commit message (for example `Add sex filter`) and click **Commit to main**
+- From now on, each time you change `App.jsx`, type a commit message (for example `Add sex filter`) and click the blue **Commit 1 file to main** button
 
 ## Next Steps
 
