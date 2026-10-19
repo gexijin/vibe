@@ -8,18 +8,19 @@ lang: "ja"
 
 医学研究に追いつくということは、専門用語で満たされた科学論文を読み解くことを意味します。Claudeスキルは、何百もの論文を読んでわかりやすく説明してくれる研究アシスタントのようなものです。何時間もかけてPubMedを検索して技術的な内容を理解する代わりに、簡単な質問をするだけで最新の科学に基づいた明確な要約が得られます。
 
-このチュートリアルでは、査読済みの医学文献を検索するClaudeスキルを作成します。PubMedをクエリするPythonスクリプトを作成し、それをスキルとして統合します。素晴らしいのは、Claudeにすべての作業をさせることができる点です。Claudeにはスキルを作成するスキルがあります。
+このチュートリアルでは、査読済みの医学文献を検索するClaudeスキルを作成します。PubMedをクエリするPythonスクリプトを作成し、それをスキルとして統合します。素晴らしいのは、Claudeにすべての作業をさせることができる点です。Claudeはスキルの書き方も知っています。
 
 ## 主要な概念
 
 - **Claudeスキル** - `.claude/skills/`に保存されたカスタム指示、コード、ドキュメントでClaude Codeの機能を拡張する専門ツール
 - **PubMed** - 米国国立医学図書館が管理する3,500万以上の生物医学研究論文の無料データベース
 - **Biopython** - PubMedのデータベースをプログラムでクエリするツールを提供するPythonライブラリ
-- **自動編集モード** - Shift+Tabでアクティブ化され、Claudeが毎回許可を求めずに複数のファイル変更を行える機能
+- **Accept editsモード** - Shift+Tabで切り替えるモードで、Claudeが毎回許可を求めずに複数のファイル変更を行えます
 
 ## 必要なもの
 
 - [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
+- Pythonがインストールされていること（[VS CodeでPythonを書く](./Python_Coding_VS_Code_Guide.md)を参照）。インストールされていない場合は、Claudeがインストールを手伝うと提案してくれます
 - PubMed検索用のインターネット接続
 - 15〜20分
 
@@ -56,11 +57,14 @@ claude
 
 インストールチュートリアル（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
-## ステップ3：自動編集モードを有効化
+## ステップ3：確認なしでファイルを編集できるようにする
 
-**Shift+Tab**を押して自動編集モードを有効にします。確認メッセージが表示されます。
+Claude Codeのプロンプトのすぐ下にあるステータスラインを確認します：
 
-自動編集モードにより、Claudeは毎回許可を求めることなく複数のファイルを作成および変更できます。これは多くのファイルを作成するスキルの構築に不可欠です。
+- **auto mode on**または**accept edits on**と表示されていれば、準備完了です
+- **manual mode on**と表示されている場合は、**accept edits on**と表示されるまで**Shift+Tab**を押します
+
+これにより、Claudeは毎回許可を求めることなく複数のファイルを作成および変更できます。これは多くのファイルを作成するスキルの構築に不可欠です。
 
 ## ステップ4：PubMed検索スクリプトを作成
 
@@ -72,7 +76,7 @@ pubmed_search.pyというPythonスクリプトを作成してください。要�
 - 最大10件の最近の論文を取得する
 - PMID、タイトル、著者、ジャーナル、年、要約のプレビュー、URLを返す
 ```
-Claudeがスクリプトを作成します。必要なBiopythonパッケージ（PubMedとやり取りするためのentrezモジュールを含む）をインストールします。出力を確認して、スクリプトの構造を理解してください。
+Claudeがスクリプトを作成します。必要なBiopythonパッケージ（PubMedとやり取りするためのEntrezモジュールを含む）をインストールします。出力を確認して、スクリプトの構造を理解してください。
 
 ## ステップ5：スクリプトをテスト
 
@@ -98,7 +102,7 @@ Claudeがスクリプトを実行し、乳がんの免疫療法に関する最�
 - スキルフォルダ内にpubmed_search.pyスクリプトを含める
 ```
 
-Claudeが完全なスキル構造を作成します：
+Claudeがスキル構造を作成します。作成されるファイルは異なる場合があります。例：
 - `.claude/skills/medical-research/pubmed_search.py` - 検索スクリプト
 - `.claude/skills/medical-research/SKILL.md` - スキルの使用方法に関するClaudeへの指示
 - `.claude/skills/medical-research/README.md` - ユーザードキュメント
@@ -108,7 +112,7 @@ Claudeが包括的なドキュメントを書くため、これには2〜3分か
 
 ## ステップ7：スキルをテスト
 
-わかりやすい言葉で研究の質問をしてみましょう：
+まず`/reload-skills`と入力して、Claude Codeに新しいスキルを読み込ませます。次に、わかりやすい言葉で研究の質問をしてみましょう：
 
 ```
 ケトダイエットで体重を減らせますか？
@@ -139,17 +143,17 @@ VS Codeを開いてスキル構造を確認：
 
 **Windows：**
 - **エクスプローラー**（File Explorer）を開き、`C:\Users\YOUR_USERNAME\Documents\test_claude`に移動
-- フォルダを右クリックして**Codeで開く**（Open with Code）を選択
+- フォルダを右クリックして**Codeで開く**（Open with Code）を選択（Windows 11では、先に**その他のオプションを確認**をクリック）。表示されない場合は、VS Codeを開いて**File > Open Folder**（ファイル > フォルダーを開く）を使います
 
 **Mac：**
 - **Finder**を開き、`Documents/test_claude`に移動
-- フォルダを右クリックして**Visual Studio Codeで開く**（Open with Visual Studio Code）を選択
-- またはターミナルから```code .```と入力
+- フォルダを右クリックして**このアプリケーションで開く > Visual Studio Code**（Open With > Visual Studio Code）を選択
+- または、VS Codeの`code`コマンドを設定済みの場合は、ターミナルで`code .`と入力
 
 VS Codeで：
 - ファイルエクスプローラで`.claude/skills/medical-research/`を展開
 - `SKILL.md`を開いてClaudeへの詳細な指示を確認
-- `README.md`を開いてユーザードキュメントを確認
+- `README.md`（Claudeが作成した場合）を開いてユーザードキュメントを確認
 - `pubmed_search.py`を開いてPythonコードを確認
 
 **注：** スキルは完全に自己完結型です—すべてのコードとドキュメントが1つのフォルダに存在します。
@@ -161,15 +165,17 @@ Anthropicは、すぐに使える事前構築されたスキルのリポジト�
 リポジトリからスキルをインストールするには、Claudeに依頼するだけです：
 
 ```
-Anthropicのリポジトリからdocumentスキルをインストールしてください
+github.com/anthropics/skills から docx、pdf、pptx、xlsx スキルを .claude/skills/ フォルダにインストールしてください
 ```
 
-インストール後、このスキルを試してみましょう：
+Claudeが完了したら、`/reload-skills`と入力してClaude Codeに新しいスキルを読み込ませます。
+
+そのうちの1つを試してみましょう：
 ```
 Claudeスキルに関するPowerPointプレゼンテーションを作成してください
 ```
 
-**documentスキル**は、PDF、Word、PowerPoint、Excelファイルの読み書きを支援します。Claudeがスキルを`.claude/skills/`フォルダにクローンします。
+これらの**ドキュメントスキル**は、ClaudeがWord、PDF、PowerPoint、Excelファイルを読み書きするのを支援します。Claudeがこれらを`.claude/skills/`フォルダにコピーします。
 
 **Anthropicのリポジトリから利用可能な他のスキル：**
 - 完全なカタログは[github.com/anthropics/skills](https://github.com/anthropics/skills)で閲覧できます
@@ -185,13 +191,13 @@ Claudeスキルに関するPowerPointプレゼンテーションを作成して�
 ## トラブルシューティング
 
 - **Biopythonがインストールされていない：** Claudeはスクリプト作成時に自動的にBiopythonをインストールします。テスト時にインポートエラーが発生した場合は、Claudeに`pip install biopython`で手動インストールするよう依頼してください
-- **スクリプトが見つからない：** 自動編集モード（Shift+Tab）が有効になっていることを確認してください。Claudeにはファイル作成の許可が必要です
-- **スキルが起動しない：** スキルは作成後すぐに動作するはずです。質問を再度試すか、SKILL.mdのヘッダーに正しい`name: medical-research`があることを確認してください
+- **スクリプトが見つからない：** ステータスラインに**accept edits on**または**auto mode on**と表示されていることを確認してください（Shift+Tabで切り替え）。Claudeにはファイル作成の許可が必要です
+- **スキルが起動しない：** `/reload-skills`と入力して（またはClaude Codeを再起動して）、もう一度質問してください。また、SKILL.mdのヘッダーに`name: medical-research`があることを確認してください
 
 ## ワークフロー概要
 
 - **Claudeスキル**はスラッシュコマンドよりも強力です。コード、ドキュメント、カスタム指示を統合できます
-- **自動編集モード**（Shift+Tab）は繰り返しの許可プロンプトを省略し、作成プロセスを効率化します
+- **Accept editsモード**（Shift+Tab）は繰り返しの許可プロンプトを省略し、作成プロセスを効率化します
 - **自己完結型パッケージング** - スクリプトはスキルフォルダ内に存在し、ポータブルで共有可能です
 - **自動起動** - スキルは質問パターンに基づいて自動的に起動します（研究の質問はmedical-researchを起動）
 - **わかりやすいインターフェース** - 技術的な知識がなくても、自然な言葉で質問できます
@@ -201,7 +207,7 @@ Claudeスキルに関するPowerPointプレゼンテーションを作成して�
 | 機能 | スキル | スラッシュコマンド |
 |---------|--------|----------------|
 | **含まれるもの** | プロンプト、コード、データ、ドキュメント | プロンプトのみ |
-| **アクティブ化** | 関連する場合に自動的に読み込まれる | `/command`で手動でトリガー |
+| **アクティブ化** | 関連する場合に自動的に、または`/skill-name`で手動で | `/command`で手動でトリガー |
 | **ユースケース** | コード実行を必要とする複雑なワークフロー | クイックプロンプトテンプレートとワークフロー |
 | **ファイルの場所** | `.claude/skills/skill-name/` | `.claude/commands/` |
 | **構造** | 複数のファイル（SKILL.md、README.md、コードファイル） | コマンドごとに1つの`.md`ファイル |

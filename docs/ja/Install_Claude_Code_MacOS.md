@@ -26,15 +26,14 @@ Claude Codeは、ターミナル上で動作するAIアシスタントで、コ�
 
 - Mac（macOS 13.0 Ventura以降）
 - インターネット接続
-- コンピュータの管理者権限
 - Claude Pro/MaxサブスクリプションまたはAPIキー
 - 5〜10分
 
 ## ステップ1：ターミナルを開く
 
-- Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
-- 上部の検索ボックスに`ターミナル`と入力
-- **ターミナル**（Terminal、黒い四角アイコン）をクリック
+- **Command (⌘) + Space**を押してSpotlight検索を開く
+- `ターミナル`と入力
+- **Return**キーを押す（または検索結果の**ターミナル**（Terminal、黒い四角アイコン）をクリック）
 - ターミナルウィンドウが開き、カーソルが点滅します
 
 **ヒント：** 次のステップでもターミナルを使うので、開いたままにしておいてください。
@@ -47,12 +46,17 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Claude Codeのインストールを待ちます（1〜2分）
-- 進捗メッセージが表示される場合がありますが、これは正常です
+- ダウンロード中はウィンドウに何もメッセージが表示されないことがありますが、正常です。そのまま待ってください
 - インストールが完了したら、ターミナルを閉じて再度開き、以下を入力して確認します：
    ```
    claude --version
    ```
 - Claude Codeのバージョン番号が表示されるはずです
+- 代わりに`zsh: command not found: claude`と表示された場合は、次の2行を実行して（MacにClaude Codeの場所を教えるためのものです）、もう一度`claude --version`を試します：
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 **別の方法：Homebrewでインストール**
 
@@ -71,13 +75,10 @@ brew install --cask claude-code
    ```
    claude
    ```
-- Claudeがブラウザを開こうとします。自動的に開かない場合は、ターミナルに表示されたURLをコピーしてブラウザに貼り付けてください。
+- Claudeがブラウザを開こうとします。自動的に開かない場合は、**c**を押してログインリンクをコピーし、ブラウザに貼り付けてください。
 - Claude.aiアカウントにログインします（自動的にログインされる場合もあります）
-- **Authorize**をクリック
-- 長いコードが表示されたら**Copy Code**をクリック
-- ターミナルウィンドウに戻ります
-- ターミナルに貼り付けるには：メニューバーの**編集**をクリックし、次に**ペースト**をクリック
-- 成功メッセージが表示されるはずです
+- **Authorize**をクリック。ブラウザにログイン済みと表示され、ターミナルに成功メッセージが表示されます
+- ブラウザに長いコードが表示された場合のみ、**Copy Code**をクリックしてターミナルに戻り、**Paste code here if prompted**の箇所に貼り付け（**Command (⌘) + V**を押す）、**Return**を押します
 - 指示に従ってセットアップを完了してください
 
 ### オプションB. Anthropic APIキーを使用
@@ -96,10 +97,11 @@ Claudeサブスクリプションの代わりにAnthropic APIキーを使用す�
    ```
    `your-api-key-here`を実際のAPIキーに置き換えてください
 - 変更を有効にするため、ターミナルを閉じて再度開いてください
+- `claude`と入力してClaude Codeを起動します。初回は、見つかったAPIキーを使うかどうか尋ねてきます。**Yes**を選択します。（誤って**No**を選んだ場合は、`/config`と入力して**Use custom API key**をオンにします。）
 
 **注意：** bashを使用している古いMacの場合は、上記のコマンドで`~/.zshrc`を`~/.bash_profile`に置き換えてください。
 
-### オプションC. OpenRouter APIを使用（無料で始められます！）
+### オプションC. OpenRouter APIを使用（従量課金）
 
 OpenRouterは、500以上の大規模言語モデルに単一のAPIキーでアクセスできる統合APIゲートウェイです。使用量に応じた課金で、さまざまな価格帯のモデルから選択できるため、Claude Codeを経済的に使用する方法となります。
 
@@ -110,9 +112,9 @@ OpenRouterは、500以上の大規模言語モデルに単一のAPIキーでア�
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - Claude Codeを起動：
    ```
@@ -128,11 +130,13 @@ OpenRouterは、500以上の大規模言語モデルに単一のAPIキーでア�
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - 利用可能なモデルは[openrouter.ai/models](https://openrouter.ai/models)で確認できます
-- 無料プランでは1日50回のAPIリクエストが可能です
+- 無料（`:free`）モデルは1日50リクエストまでに制限されており、Claude Codeの1つのタスクですぐに使い切ってしまうことがあります
+- 上記のモデルは有料モデルです。使う前に[openrouter.ai/models](https://openrouter.ai/models)で料金を確認してください
+- OpenRouter経由でClaude Codeの動作が保証されているのはAnthropicのモデルだけです
 - 詳細は[公式OpenRouterガイド](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)を参照してください
 
 
-### オプションD. Azure Foundry経由でAnthropic APIを使用
+### オプションD. Microsoft Foundry（Azure）経由でAnthropic APIを使用
 
 このオプションは、Azure上でClaudeモデルをホストしている組織向けです。Claudeを起動する前に、ターミナルウィンドウで以下のコードを貼り付けて環境変数を定義します：
 ```
@@ -141,12 +145,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **注意：** `xxxx-eastus2`を実際のFoundryリソース名に置き換えてください（ベースURL全体ではなく、リソース名のみ）。`your_api_key`をAzureポータルから取得した完全なAPIキーに置き換えてください。
+
+次に`claude`と入力してClaude Codeを起動します。
 
 ## ステップ4：Claude Codeをテストする
 
@@ -200,9 +207,9 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 ターミナルを閉じた後、再度開く方法は次のとおりです：
 
-- Dockの**Launchpad**アイコン（カラフルな四角が並んだアイコン）をクリック
-- 上部の検索ボックスに`ターミナル`と入力
-- **ターミナル**（Terminal）をクリック
+- **Command (⌘) + Space**を押してSpotlight検索を開く
+- `ターミナル`と入力
+- **Return**キーを押す
 - ターミナルウィンドウが開きます
 
 ## トラブルシューティング
@@ -223,7 +230,11 @@ claude doctor
 - ターミナルを完全に終了します（メニューバーの**ターミナル**をクリックし、**ターミナルを終了**を選択）
 - ターミナルを再度開きます
 - `claude --version`でインストールされているか確認してください
-- インストールコマンドを再度実行してみてください：`curl -fsSL https://claude.ai/install.sh | bash`
+- それでも`command not found`と表示される場合は、次の2行を実行してから、もう一度`claude --version`を試します：
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 ### 認証に失敗する
 - 有効なClaude Pro/Maxサブスクリプションまたは有効なAPIキーがあることを確認してください

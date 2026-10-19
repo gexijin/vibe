@@ -62,10 +62,10 @@ lang: "ja"
 - **フォルダーの選択**（Select Folder、Windows）または**開く**（Open、Mac）をクリック
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
 - **Reopen in Container**（コンテナーで再度開く）をクリック
-- 通知が表示されない場合は、左下隅の緑色のアイコンをクリックして**Reopen in Container**を選択
+- 通知が表示されない場合は、左下隅の **><** アイコンをクリックして**Reopen in Container**を選択
 - VS CodeがDockerコンテナをビルドします（初回は3〜5分かかります）
 - ビルドステップを示す進行通知を見る
-- 完了すると、緑色のアイコンに**Dev Container: Python in Docker**と表示されます
+- 完了すると、左下隅に**Dev Container: Python in Docker**と表示されます
 
 ## ステップ4：Claude Codeを起動
 
@@ -79,7 +79,9 @@ claude
 
 - 認証用のブラウザウィンドウが開きます
 - **Continue with Google**または**Continue with Email**をクリック
-- Claudeアカウントでログイン（または作成）
+- Claudeアカウントでログインします。Claude Codeには有料のClaudeプラン（ProやMaxなど）またはAnthropic Consoleアカウントが必要です。無料プランには含まれていません
+- 完了の表示ではなくコードがブラウザに表示された場合は、コードをコピーしてVS Codeのターミナルに戻り、**Paste code here if prompted**のプロンプトに貼り付けて**Enter**を押します（コンテナ内ではよくあることです）
+- ブラウザウィンドウが開かない場合は、`c`を押してログインリンクをコピーし、ブラウザに貼り付けます
 - 認証が成功したら、VS Codeターミナルに戻る
 - Claudeのウェルカムメッセージが表示されます
 
@@ -181,7 +183,7 @@ Enterを押すと、Claudeが箱ひげ図のコードを追加します。
 - 全ての行を理解する必要はありませんが、構造の感覚をつかむ
 - すべてのPNGファイルが作成されたことを確認：`petal_length_histogram.png`、`petal_scatter.png`、`species_boxplot.png`
 - GitHub Desktopを開く
-- すべての新しいファイル（PythonスクリプトとPNG画像）が一覧に表示されます
+- 新しいPNG画像と、変更されたファイルとして`iris_exploration.py`が一覧に表示されます（Claudeがグラフ作成のコードを追加したため）
 - 左下の**Summary**フィールドに入力：
 
 ```
@@ -236,7 +238,7 @@ Vibe Codingは反復によって真価を発揮します。説明するだけで
 - **インポートエラー** - Dockerコンテナにはpandas、matplotlib、scikit-learnがプリインストールされています。エラーが出る場合は、Claudeにpipでのインストールを依頼してください。
 - **Claudeが間違える** - 問題ありません。エラーメッセージをコピーしてClaudeに貼り付け、「このエラーを修正して」と依頼してください。Vibe Codingには反復とデバッグが含まれます。
 - **GitHubにプッシュできない** - GitHub Desktopにログインし、リポジトリを公開済みであることを確認してください（ステップ1）。インターネット接続も確認してください。
-- **コンテナが起動しない** - Docker Desktopが実行中であることを確認してください（緑色のステータス表示）。VS Codeの緑色のアイコンをクリックして**Rebuild Container**（コンテナーのリビルド）を試してください。
+- **コンテナが起動しない** - Docker Desktopが実行中であることを確認してください（緑色のステータス表示）。VS Code左下隅の **><** アイコンをクリックして**Rebuild Container**（コンテナーのリビルド）を試してください。
 
 ## ワークフロー概要
 

@@ -29,7 +29,7 @@ WindowsにClaude Codeをインストールできたら、コードを編集す�
 
 ## ステップ2：VS Codeを起動
 
-1. **Windowsスタートボタン**をクリックし、`Visual Studio Code` または `VS Code` を検索
+1. **Windowsスタートボタン**（タスクバーのWindowsロゴ）をクリックし、`Visual Studio Code` または `VS Code` を検索
 2. 検索結果の **Visual Studio Code** をクリック
 3. 起動直後に表示されるWelcomeタブは閉じてかまいません
 
@@ -65,19 +65,19 @@ LLMがMarkdown形式を好む理由を説明する短い記事を書き、articl
 VS Codeを閉じた後、プロジェクトに戻る方法は次のとおりです：
 
 - **方法A：** VS Codeを起動 → **File > Open Recent**（ファイル > 最近使用した項目を開く）で `test_claude` を選択
-- **方法B：** **エクスプローラー**で `test_claude` フォルダを右クリックし、**Codeで開く** を選択
+- **方法B：** **エクスプローラー**で `test_claude` フォルダを右クリックし、**Codeで開く** を選択（Windows 11では、先に **その他のオプションを確認** をクリック）。このオプションは、VS Codeのインストール時に **"Code で開く" アクションを追加する**（Add "Open with Code" action）にチェックを入れた場合にのみ表示されます。表示されない場合は方法Aを使ってください
 
 ## 次のステップ
 
 - 既存プロジェクトの説明を依頼：「このプロジェクトが何をするのか説明してください」
 - 新機能を追加：「リストの平均を計算する関数を追加してください」
 - バグ修正を依頼：「このコードのエラーを修正してください」
-- 「Claude Code」拡張機能を検索し、インライン差分付きのビジュアルUIを試す
+- Claude Code拡張機能を試して、インライン差分付きのビジュアルなチャットパネルを使う。VS Codeのターミナルで `claude` を実行すると、通常は拡張機能が自動でインストールされます（されない場合は、拡張機能で「Claude Code」を検索）。任意のファイルを開き、エディターの右上にあるSparkアイコンをクリックします
 
 ## トラブルシューティング
 
-- **`claude` が見つからない**：VS Codeのターミナルで `claude --version` を実行して確認。見つからない場合は、まず[インストール手順](Install_CLAUDE_Code_Win.md)に従ってください。
-- **WSLを使っている場合**：オプションのWSL/Ubuntuの方法を設定した場合は、拡張機能サイドバーから **WSL** 拡張機能をインストールし、左下の青/緑のアイコンをクリックして **Connect to WSL**（WSLに接続）を選択してから、プロジェクトフォルダを開いてください（パスは `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）。
+- **`claude` が認識されない**：VS Codeを完全に閉じて（すべてのウィンドウ）もう一度開き、新しいターミナルを開いて `claude` を試してください。それでも失敗する場合は、通常のPowerShellウィンドウで `claude --version` を実行します。それも失敗する場合は、まず[インストール手順](Install_CLAUDE_Code_Win.md)に従ってください。
+- **WSLを使っている場合**：オプションのWSL/Ubuntuの方法を設定した場合は、拡張機能サイドバーから **WSL** 拡張機能をインストールし、左下の **><** アイコンをクリックして **Connect to WSL**（WSLに接続）を選択してから、プロジェクトフォルダを開いてください（パスは `/mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）。
 
 ## ワークフローまとめ
 

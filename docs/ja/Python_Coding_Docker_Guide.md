@@ -23,7 +23,7 @@ Pythonコードを共有したのに、「私のマシンでは動くのに...�
 ## ステップ1：Docker Desktopをインストール
 
 - [Docker Desktopダウンロードページ](https://www.docker.com/products/docker-desktop/)にアクセス
-- **Download for Windows**をクリック（Mac/Linuxの場合はお使いのシステム用のボタン）
+- **Download Docker Desktop**をクリックし、お使いのシステムを選択（Windows、M1/M2/M3/M4 MacならMac - Apple Silicon、それより古いMacならMac - Intel Chip）
 - インストーラーを実行し、インストールウィザードに従う
 - プロンプトが表示されたら、WSL 2を有効にする（Windowsユーザー）またはデフォルト設定を受け入れる
 - インストール後、Docker Desktopを起動
@@ -74,8 +74,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Claude Codeをグローバルにインストール
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Claude Codeをグローバルにインストール（新しいnpmは許可しない限りセットアップスクリプトをブロックします）
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Streamlitポートを公開
 EXPOSE 8501
@@ -123,7 +124,7 @@ from sklearn.datasets import load_iris
 # irisデータセットを読み込み
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df['species'] = iris.target
+df['species'] = iris.target_names[iris.target]
 
 # 最初の数行を表示
 print(df.head())
@@ -181,11 +182,11 @@ st.pyplot(fig)
 
 ## ステップ8：コンテナ内で再度開く
 
-- VS Code左下隅の緑色のアイコンをクリック
+- VS Code左下隅の **><** アイコンをクリック
 - メニューから**Reopen in Container**（コンテナーで再度開く）を選択
 - VS Codeがコンテナをビルドします（初回は5〜10分かかります）
 - ビルドステップを示す進行通知が表示されます
-- 完了すると、緑色のアイコンに**Dev Container: Python in Docker**と表示されます
+- 完了すると、左下隅に**Dev Container: Python in Docker**と表示されます
 
 ## ステップ9：コンテナ環境を理解する
 
@@ -229,7 +230,7 @@ cd python-docker-demo
 
 - VS Codeエクスプローラーで`python/iris_analysis.py`に移動
 - クリックしてファイルを開く
-- 最初の行を選択：`import pandas as pd`
+- 2行目の`import pandas as pd`をクリック（1行目はただのコメントです）
 - `Shift+Enter`を押して対話型Pythonターミナルで実行
 - 下部にPythonターミナルが開きます
 - `Shift+Enter`で各行またはブロックを1つずつ実行していきます
@@ -286,8 +287,8 @@ st.title("私の初めてのPython Dockerアプリ")
 - `FROM python:3.12-slim` - Python 3.12公式ベースイメージ（軽量なDebian系）
 - `RUN apt-get install` - Pythonパッケージをビルドするためのシステムライブラリ
 - `RUN pip install --no-cache-dir ...` - Pythonパッケージを永続的にインストール
-- `RUN curl... && apt-get install -y nodejs` - Claude Codeの実行に必要なNode.jsをインストール
-- `RUN npm install -g @anthropic-ai/claude-code` - AIアシスタンス用にClaude Codeをグローバルにインストール
+- `RUN curl... && apt-get install -y nodejs` - Node.jsとnpmをインストール（次の行でClaude Codeのインストールに使います）
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - AIアシスタンス用にClaude Codeをグローバルにインストール（前半の部分は、新しいバージョンのnpmではブロックされてしまうClaude Code自身のセットアップを完了させるためのものです）
 - `EXPOSE 8501` - Streamlitアプリ用にポート8501を公開
 
 **使用できる他のPythonイメージ：**
@@ -295,9 +296,9 @@ st.title("私の初めてのPython Dockerアプリ")
 - `python:3.12` - より多くのツールを含む完全なPythonイメージ（サイズが大きい）
 - `python:3.12-slim` - Pythonとpipを含む軽量イメージ（使用中）
 - `python:3.12-alpine` - 最小のAlpine Linuxベースイメージ（最小サイズ）
-- `jupyter/datascience-notebook` - データサイエンスライブラリが事前設定されたJupyter
+- `quay.io/jupyter/datascience-notebook` - データサイエンスライブラリが事前設定されたJupyter
 
-ベースイメージを変更した後は、コンテナを再ビルドして変更を適用します。
+ベースイメージを変更した後は、コンテナを再ビルドして変更を適用します。注意：このDockerfileをそのまま使えるのは、`python:3.12`や`python:3.12-slim`などのDebian系イメージだけです。AlpineイメージやJupyterイメージには別のDockerfileが必要です。
 
 ## ステップ14：DockerイメージにPythonパッケージをインストール（オプション）
 
@@ -314,14 +315,13 @@ RUN pip install --no-cache-dir \
 ```
 
 - **File > Save**（ファイル > 保存）をクリック
-- 左下隅の緑色のアイコンをクリック
+- 左下隅の **><** アイコンをクリック
 - メニューから**Rebuild Container**（コンテナーのリビルド）を選択
 - VS Codeが新しいパッケージでコンテナを再ビルドします（2〜5分かかります）
-- 確認するには、Pythonターミナルを開いて入力します：
+- 確認するには、ターミナルを開いて（**Terminal > New Terminal**（ターミナル > 新しいターミナル））、次を実行します：
 
-```python
-import plotly
-print(plotly.__version__)
+```bash
+python -c "import plotly; print(plotly.__version__)"
 ```
 
 エラーなくバージョンが表示されれば、パッケージは永続的にインストールされています。
@@ -337,7 +337,7 @@ print(plotly.__version__)
 
 - **Docker Desktopが実行されていない** - Docker Desktopを開き、コンテナを再度開く前に緑色のステータスインジケーターを待つ
 - **コンテナビルドが失敗** - インターネット接続を確認。最初のビルドはイメージとパッケージをダウンロードします。**Rebuild Container**（コンテナーのリビルド）をクリックして再試行
-- **ポート8501がすでに使用中** - そのポートを使用している他のアプリを停止するか、Dockerfileと`devcontainer.json`でポートを変更
+- **ポート8501がすでに使用中** - そのポートを使用している他のアプリを停止するか、別のポート（たとえば8502）を選びます：Dockerfileと`devcontainer.json`でポートを変更し、コンテナを再ビルドしてから、`streamlit run app.py --server.port 8502`でアプリを起動
 
 ## ワークフロー概要
 
@@ -355,10 +355,10 @@ print(plotly.__version__)
 
 1. **Docker Desktopを起動** - アプリを開いて緑色のステータスインジケーターを待つ（Dockerが実行されている必要があります）
 2. **VS Codeを開く** - VS Codeを起動してプロジェクトフォルダを開く
-3. **コンテナで再度開く** - まだコンテナ内でない場合、緑色のアイコン（左下）をクリックして**Reopen in Container**（コンテナーで再度開く）を選択
+3. **コンテナで再度開く** - まだコンテナ内でない場合、左下隅の **><** アイコンをクリックして**Reopen in Container**（コンテナーで再度開く）を選択
 4. **コードを書いて実行** - `.py`ファイルを編集し、`Shift+Enter`で行ごとに実行、または`streamlit run app.py`でアプリを実行
 5. **作業を保存** - コードファイル（`.py`、`.ipynb`）はコンピュータに保存され、セッション間で永続
-6. **コミットしてプッシュ** - GitHub Desktopを使用して変更をコミットし、リポジトリにプッシュ
+6. **コミットしてプッシュ** - プロジェクトがGitHubリポジトリの場合（[GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow)を参照）、GitHub Desktopを使用して変更をコミットしてプッシュ
 
 ---
 

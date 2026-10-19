@@ -41,7 +41,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 - 入力：
   - **Name：** `test_claude`
   - **Description：** `A timer app built with Claude Code`
-  - **Local Path：** **書類**（Documents, Mac）または **ドキュメント**（Documents, Windows）フォルダ
+  - **Local Path：** **Choose...** をクリックして **書類**（Documents, Mac）または **ドキュメント**（Documents, Windows）フォルダを選択（初期設定ではドキュメント内の `GitHub` フォルダになっているので、変更してください）
   - **「Initialize this repository with a README」にチェック**
 - **Create Repository** をクリック
 - 上部の **Publish repository** をクリック
@@ -56,6 +56,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
   ```
   cd ~/Documents/test_claude
   ```
+  Windowsで `Cannot find path` と表示された場合は、ドキュメントフォルダがOneDriveでバックアップされています。代わりに `cd ~/OneDrive/Documents/test_claude` を実行してください
 - Claude Codeを起動：
   ```
   claude
@@ -87,6 +88,7 @@ Claudeが `timer.html` ファイルを作成します（10〜30秒）。
   - カウントダウンを確認
 
 **動作すれば：** ステップ5へ。
+
 **何か壊れていれば：** ステップ4へ。
 
 ## ステップ4：エラーを修正（必要な場合）
@@ -115,7 +117,7 @@ AIが生成したコードはコミット前に必ず確認しましょう。
   ```
   開始/停止機能付きの初期タイマーアプリを作成
   ```
-- **Commit to main** をクリック
+- 下部の青いコミットボタンをクリック（**Commit 1 file to main** のように表示されています）
 
 セーブポイントが作成されました！
 
@@ -136,7 +138,7 @@ AIが生成したコードはコミット前に必ず確認しましょう。
   タイマーがゼロになったら音で通知するようにしてください。ブラウザ標準のビープ音か、
   シンプルなオーディオアラートを作成してください。
   ```
-- テスト：ブラウザを更新し、0.1分でタイマーを設定し、**開始**（または **Start**）をクリック
+- テスト：ブラウザを更新し、1分でタイマーを設定し、**開始**（または **Start**）をクリック
 
 **このチュートリアルでは：** サウンドがうまく動作しないと仮定してください。まだコミットしないでください！
 
@@ -146,7 +148,7 @@ AIが間違った方向に進んでしまうことがあります。そんなと
 
 1. **GitHub Desktop** を開く
 2. **Branch** メニュー → **Discard All Changes**
-3. 確認ダイアログで **Discard Changes** をクリック
+3. 確認ダイアログで **Discard All Changes** をクリック
 4. ブラウザを更新 - サウンド機能なしのタイマーに戻ります！
 
 壊れたコードを捨てて、最後のセーブポイントに戻ることができました。
@@ -159,9 +161,10 @@ AIが間違った方向に進んでしまうことがあります。そんなと
   Web Audio APIで生成したシンプルなビープ音を使用してください。ブラウザの自動再生制限に
   適切に対応するようにしてください。
   ```
-- すぐにテスト（ブラウザを更新、0.1分に設定、**開始**（または **Start**）をクリック）
+- すぐにテスト（ブラウザを更新、1分に設定、**開始**（または **Start**）をクリック）
 
 **動作すれば：** ステップ11へ進む。
+
 **動作しなければ：** エラーをClaudeに貼り付けるか、再試行。
 
 ## ステップ11：Claudeにコミットとプッシュを任せる
@@ -173,6 +176,8 @@ AIが間違った方向に進んでしまうことがあります。そんなと
 
 Claudeが変更を確認し、コミットメッセージを書き、コミットしてプッシュします（10〜20秒）。
 
+**Claudeがプッシュに失敗したと言った場合**（たとえば `could not read Username` や、`git` が認識されないなど）：**GitHub Desktop** に切り替えます。変更されたファイルがまだ表示されている場合は、自分でコミットします（ステップ6と同様）。その後、上部の **Push origin** をクリックします。GitHub DesktopはすでにGitHubにサインインしています。
+
 **いつ使うか：**
 - 手動コミット：学習中、または制御したいとき
 - Claudeコミット：素早く作業したい、良いメッセージが欲しいとき
@@ -181,7 +186,7 @@ Claudeが変更を確認し、コミットメッセージを書き、コミッ�
 
 - Claude Codeで：
   ```
-  どのファイルを変更しましたか？
+  最後のコミットで何が変わりましたか？
   ```
 
 Claudeが変更内容を分かりやすく説明してくれます。
@@ -192,10 +197,10 @@ Claudeが変更内容を分かりやすく説明してくれます。
 
 - **GitHub Desktop** で **History** タブをクリック
 
-以下のように表示されます：
-- Initial commit（README）
+以下のように表示されます（新しいものが上）：
+- サウンド通知を追加したClaudeのコミット（文言は異なる場合があります）
 - 開始/停止機能付きの初期タイマーアプリを作成（ステップ6で入力したメッセージ）
-- サウンド通知を追加したコミット（メッセージはClaudeが書くため、文言は異なる場合があります）
+- Initial commit
 
 最初に失敗したサウンドの試みはありません - 破棄したからです！動作するコードだけがコミットに残っています。
 
@@ -212,13 +217,13 @@ Claudeが変更内容を分かりやすく説明してくれます。
 
 ## トラブルシューティング
 
-**「Authentication failed」と表示される：** GitHub Desktopで **File** → **Options**（Windows）または **GitHub Desktop** → **Settings**（Mac）→ **Accounts** → サインアウトして再度サインイン
+**「Authentication failed」と表示される：** GitHub Desktopで **File → Options → Accounts**（Windows）または **GitHub Desktop → Settings → Accounts**（Mac）を開き、サインアウトして再度サインイン
 
 **Claudeが「not a git repository」と表示：** 正しいフォルダにいることを確認（`cd ~/Documents/test_claude`）
 
 **タイマーが動作しない：** ブラウザコンソールを開き（右クリック → **検証** → **コンソール**（Console））、エラーをコピーしてClaudeに貼り付け
 
-**困ったときは：** [GitHub Desktopドキュメント](https://docs.github.com/ja/desktop) • [Claude Codeドキュメント](https://docs.anthropic.com/en/docs/claude-code)
+**困ったときは：** [GitHub Desktopドキュメント](https://docs.github.com/ja/desktop) • [Claude Codeドキュメント](https://code.claude.com/docs)
 
 ## 完全なワークフロー
 

@@ -18,7 +18,7 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 
 - [VS CodeでR](./R_Coding_VS_Code_Guide)チュートリアルを完了していること - VS CodeでRが動作していること
 - [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)チュートリアルを完了していること - Claude Code CLIがインストールされていること
-- Claude Pro/Maxサブスクリプション または Anthropic APIキー
+- 有料のClaudeプラン（ProやMaxなど）またはAnthropic Consoleアカウント - 無料プランにはClaude Codeが含まれていません
 - 20〜30分
 
 ## ステップ1: VS Codeを開いてRプロジェクトを作成
@@ -35,20 +35,16 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 
 - 左サイドバーの**Extensions**（拡張機能）アイコン（4つの正方形のアイコン）をクリックします
 - 検索ボックスに`Claude Code`と入力します
-- Anthropicの**Claude Code**を見つけて**Install**（インストール）をクリックします
-- インストール後、左サイドバーにClaudeアイコン（キラキラマーク）が表示されます
-- Claudeアイコンをクリックしてチャットパネルを開きます
-- チャットパネルの**Sign in to Claude Code**をクリックします
-- 認証方法を選択します：
-  - **Claude Pro/Maxユーザー**: **Sign in with Claude.ai**をクリックし、ブラウザで認証してコードをVS Codeにコピーします
-  - **APIキーユーザー**: **Use API Key**をクリックしてAnthropic APIキーを貼り付けます
-- 詳細な認証手順については、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)ガイド（ステップ3）を参照してください
-- サインインすると、チャットパネルに「Ready to help」と表示されます
+- Anthropicの**Claude Code for VS Code**を見つけて**Install**（インストール）をクリックします
+- インストール後、ウィンドウ右下のステータスバーにある**✻ Claude Code**をクリックしてClaudeパネルを開きます（ファイルを開いた後は、エディターの右上にあるSparkアイコンも使えます）
+- **Sign in**をクリックし、開いたブラウザでClaudeアカウントのサインインを完了します
+- 代わりにAPIキーを使う場合は、[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)（ステップ3、オプションB）の手順で設定し、VS Codeを終了してから再度開きます
+- サインインすると、**Learn Claude Code**のチェックリストが表示されます。Xで閉じてかまいません
 
 ## ステップ3: 最初のRスクリプトを手動で作成
 
-- メニューバーの**File > New File**（ファイル > 新しいファイル）をクリックします
-- **Select a language**をクリックして`R`と入力し、**R**を選択します
+- メニューバーの**File > New File...**（ファイル > 新しいファイル...）をクリックします
+- ウィンドウ上部に表示される一覧から**R Document**を選択します
 - **File > Save**（ファイル > 保存）をクリックしてファイルを保存し、`iris_analysis.R`と名前を付けます
 - 次のコードを入力します：
 
@@ -65,7 +61,7 @@ summary(iris)
 
 ## ステップ4: Claudeに散布図の追加を依頼
 
-- 左サイドバーの**Claude**アイコンをクリックしてチャットパネルを開きます
+- エディターの右上にあるSparkアイコン（またはステータスバーの**✻ Claude Code**）をクリックしてClaudeパネルを開きます
 - 下部のチャットボックスに次のように入力します：
 
 ```
@@ -73,8 +69,8 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 ```
 
 - Enterを押して送信します
-- Claudeがファイルを読み取り、変更を提案します - 追加する新しいコードを示す差分が表示されます
-- **Accept**をクリックして変更を適用します
+- Claudeがファイルを読み取って編集します - 新しいコードが`iris_analysis.R`に表示されます
+- Claudeが差分を表示して許可を求めてきた場合は、変更を受け入れます
 - ggplot2コードがファイルに表示されます
 - ggplot2がインストールされていない場合は、Rターミナルで`install.packages("ggplot2")`を実行します
 
@@ -82,7 +78,7 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 
 - `iris_analysis.R`のすべてのコードを選択します
 - `Cmd+Enter`を押します
-- 別のグラフィックウィンドウに散布図が表示されます
+- VS Code内のプロットタブに散布図が表示されます
 - 種（setosa、versicolor、virginica）ごとに色分けされた点が表示されます
 
 ## ステップ6: Claudeにグラフの改善を依頼
@@ -95,7 +91,7 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 
 - Enterを押します
 - Claudeが更新されたコード変更を表示します
-- **Accept**をクリックします
+- 求められた場合は、変更を受け入れます
 - 更新されたコードを再度実行：すべてを選択して`Cmd+Enter`を押します
 - グラフが種ごとに異なるマーカー形状、タイトルなし、classicテーマで表示されます
 
@@ -109,7 +105,7 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 
 - Enterを押します
 - ClaudeがPCAコードをスクリプトに追加します
-- **Accept**をクリックします
+- 求められた場合は、変更を受け入れます
 - すべてのコードを実行：すべてを選択して`Cmd+Enter`を押します
 - 種ごとに色分けされた、PC1とPC2に投影されたサンプルを示すPCAプロットが表示されます
 
@@ -123,7 +119,7 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 
 - Enterを押します
 - Claudeがコードをレビューし、各セクションを説明するコメントを提案します
-- **Accept**をクリックします
+- 求められた場合は、変更を受け入れます
 - スクリプトにデータ読み込み、可視化、PCA分析を説明する明確なコメントが追加されます
 
 ## 次のステップ
@@ -138,9 +134,9 @@ iris_analysis.Rに、sepal lengthとwidthの散布図を作成するコードを
 
 - **Claude拡張機能が表示されない** - インストール後にVS Codeを再起動してください。**View > Extensions**（表示 > 拡張機能）をクリックしてインストールされていることを確認してください。
 - **「Cannot read R file」エラー** - ファイルが`.R`拡張子で保存されていることを確認してください。Claudeが読み取れるのは保存済みのファイルだけです。
-- **認証失敗** - Claude Pro/Maxサブスクリプションがアクティブか、APIキーが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)を参照してください。
+- **認証失敗** - 有料のClaudeプランまたはAnthropic Consoleアカウントが有効であることを確認してください。認証のトラブルシューティングについては[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)を参照してください。
 - **ggplot2が見つからない** - Rターミナルでインストール：`install.packages("ggplot2")`。コードを実行する前にインストールが完了するまで待ってください。
-- **コード変更が適用されない** - 差分の**Accept**をクリックしてください。それでもうまくいかない場合は、Claudeが提案したコードを手動でコピーしてみてください。
+- **コード変更が適用されない** - Claudeが許可を求めてきた場合は、変更を受け入れたことを確認してください。それでもうまくいかない場合は、Claudeが提案したコードを手動でコピーしてみてください。
 
 ## ワークフローの概要
 

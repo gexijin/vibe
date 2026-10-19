@@ -59,11 +59,13 @@ Rコードを共有したのに、「私のマシンでは動くのに...」と�
 
 - 右下に通知が表示されます：**Folder contains a Dev Container configuration file**
 - **Reopen in Container**をクリック
-- 通知が表示されない場合は、左下隅の緑色のアイコンをクリック
+- 通知が表示されない場合は、左下隅の **><** アイコンをクリック
 - メニューから**Reopen in Container**を選択
 - VS Codeがコンテナをビルドします（初回は5〜10分かかります）
 - ビルドステップを示す進行通知が表示されます
-- 完了すると、緑色のアイコンに**Dev Container: R in Docker (AMD64)**と表示されます
+- 完了すると、左下隅の **><** アイコンに**Dev Container: R in Docker (AMD64)**と表示されます
+
+**Apple Silicon Mac：** このイメージはIntel/AMDプロセッサ用にビルドされています。Docker Desktopはエミュレーションで実行するため、初回のビルドとR自体の動作は遅くなりますが、すべて正常に動作します。
 
 **注：** コンテナにはR拡張機能とlanguageserverパッケージが自動的に含まれます。Dockerfileとdevcontainer.jsonがこれを処理します。
 
@@ -86,7 +88,7 @@ pwd
 ls
 ```
 
-プロジェクトと同じファイルが表示されます：`R/`、`.devcontainer/`、`README.md`など。
+プロジェクトと同じファイルが表示されます：`R/`、`docs/`、`README.md`など（`.devcontainer/`のようにドットで始まるフォルダは隠されています。`ls -a`で表示できます）。
 
 - 一つ上のディレクトリに移動してみる：
 
@@ -110,13 +112,14 @@ cd vibe
 - VS Codeエクスプローラーで`R/iris_analysis.R`に移動
 - クリックしてファイルを開く
 - irisデータセットを分析するRコードが表示されます
-- 最初の行を選択：`data(iris)`
+- **View > Command Palette**（表示 > コマンドパレット）をクリックし、`R: Create R Terminal`と入力して**Enter**を押します。下部に`>`プロンプトのあるRターミナルが開きます（このコンテナは使用中のターミナルにコードを送るため、このRターミナルを選択したままにしておきます）
+- VS Codeが**sess**パッケージのインストールを求めてきたら、**Yes**（または**Install bundled sess**）をクリックして完了を待ちます。これによりVS Codeでプロットを表示できるようになります
+- `iris_analysis.R`をクリックして戻り、最初の行を選択：`data(iris)`
 - `Ctrl+Enter`（Windows/Linux）または`Cmd+Enter`（Mac）を押して実行
-- Rターミナルが開いていない場合、最初に作成され、2回目でコードが実行されます
 - 各行を1つずつ実行し続ける
 - `head(iris)`を実行すると、ターミナルに最初の6行が表示されます
 - `summary(iris)`を実行すると、統計的な要約が表示されます
-- `hist()`コマンドを実行すると、ヒストグラムプロットが別ウィンドウで開きます
+- `hist()`コマンドを実行すると、VS Code内のプロットタブにヒストグラムが表示されます
 - 複数の行を選択して`Ctrl+Enter`または`Cmd+Enter`で一緒に実行することもできます
 
 ## ステップ8：アプリを実行
@@ -128,10 +131,8 @@ cd vibe
 - Shiny Webアプリケーション用のコードが表示されます
 - エディターウィンドウの右上に**▶**ボタンを探す
 - その横のドロップダウン矢印をクリックして**Run Shiny App**を選択
-- アプリが起動し、VS Codeが自動的にポート3838をフォワードします
-- 通知が表示されます：**Open in Browser**
-- **Open in Browser**をクリック
-- ShinyアプリがWebブラウザで開きます
+- アプリが起動し、VS Code内のプレビュータブで開きます
+- 代わりに通常のWebブラウザで開くには、下部パネルの**Ports**（ポート）タブをクリックし、フォワードされたポートの横にある地球アイコンをクリックします
 - スライダーを動かしてヒストグラムのビン数を変更 - チャートがリアルタイムで更新されます
 
 ## ステップ9：簡単な変更を加える
@@ -140,16 +141,16 @@ cd vibe
 
 - アプリを実行したまま
 - VS Codeで`R/app.R`を編集
-- 16行目を見つける：`titlePanel("Old Faithful Geyser Data")`
-- 以下に変更：
+- 16行目を見つける：`titlePanel("Old Faithful Geyser Data"),`
+- 引用符の中のテキストだけを変更し、行末のカンマはそのまま残します：
 
 ```r
-titlePanel("初めてのR Dockerアプリ")
+titlePanel("初めてのR Dockerアプリ"),
 ```
 
 - **File > Save**（ファイル > 保存）でファイルを保存
 - Shiny拡張機能が自動的にアプリをリロードします
-- ブラウザを更新（または自動的に更新される場合があります）
+- プレビューが自動で更新されない場合は、プレビュータブ上部の再読み込み矢印をクリック（またはブラウザを更新）
 - タイトルがカスタムテキストで表示されます
 
 ## ステップ10：Dockerfileを理解する（オプション）
@@ -175,8 +176,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Claude Codeをグローバルにインストール
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Claude Codeをグローバルにインストール（新しいnpmは許可しない限りセットアップスクリプトをブロックします）
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. VS CodeからClaude Codeをアップデートできるよう、shinyにパスワードなしのsudoを許可
 RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
@@ -192,7 +194,7 @@ EXPOSE 3838
 - `RUN apt-get install` - Rパッケージ用のLinuxシステムライブラリ
 - `RUN R -q -e 'install.packages(...)'` - Rパッケージを永続的にインストール
 - `RUN curl... && apt-get install -y nodejs` - Claude Codeを実行するために必要なNode.jsをインストール
-- `RUN npm install -g @anthropic-ai/claude-code` - AIアシスタンス用にClaude Codeをグローバルにインストール
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - AIアシスタンス用にClaude Codeをグローバルにインストール（前半の部分は、新しいバージョンのnpmではブロックされてしまうClaude Code自身のセットアップを完了させるためのものです）
 - `RUN echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers` - コンテナのユーザーがパスワードの入力なしで`sudo claude update`を実行できるようにする
 - `EXPOSE 3838` - Shinyアプリ用にポート3838を開く
 
@@ -218,7 +220,7 @@ RUN R -q -e 'install.packages("data.table", repos="https://cloud.r-project.org")
 ```
 
 - **File > Save**（ファイル > 保存）でファイルを保存
-- 左下隅の緑色のアイコンをクリック
+- 左下隅の **><** アイコンをクリック
 - メニューから**Rebuild Container**を選択
 - VS Codeが新しいパッケージでコンテナを再ビルドします（2〜5分かかります）
 - 確認するには、Rターミナルを開いて入力：
@@ -239,7 +241,6 @@ library(data.table)
 
 - **Docker Desktopが実行されていない** - Docker Desktopを開き、コンテナを再度開く前に緑色のステータスインジケーターを待つ
 - **コンテナビルドが失敗** - インターネット接続を確認。最初のビルドは約2GBダウンロードします。**Rebuild Container**をクリックして再試行
-- **ポート3838がすでに使用中** - そのポートを使用している他のアプリを停止するか、`.devcontainer/devcontainer.json`でポートを変更
 
 ## ワークフロー概要
 
@@ -248,7 +249,7 @@ library(data.table)
 - **VS Code**がシンタックスハイライトとIntelliSenseを持つコードエディターを提供
 - **Dockerコンテナ**がRとすべての依存関係を持つ隔離されたLinux環境を実行
 - **Rockerイメージ**（`rocker/shiny-verse`）がR、Shiny、tidyverse、開発ツールを含む
-- **Dev Container設定**（`.devcontainer/`）がRデバッグと言語サポート用のVS Code拡張機能を自動的にインストール
+- **Dev Container設定**（`.devcontainer/`）がRとShiny用のVS Code拡張機能を自動的にインストール
 - **ポートフォワーディング**によりコンテナ内で実行されているShinyアプリにブラウザからアクセス可能
 
 ## 日常のワークフロー
@@ -257,7 +258,7 @@ library(data.table)
 
 1. **Docker Desktopを起動** - アプリを開いて緑色のステータスインジケーターを待つ（Dockerが実行されている必要があります）
 2. **VS Codeを開く** - VS Codeを起動してプロジェクトフォルダを開く
-3. **コンテナで再度開く** - まだコンテナ内でない場合、緑色のアイコン（左下）をクリックして**Reopen in Container**を選択
+3. **コンテナで再度開く** - まだコンテナ内でない場合、**><** アイコン（左下）をクリックして**Reopen in Container**を選択
 4. **コードを書いて実行** - `.R`ファイルを編集し、`Ctrl+Enter`/`Cmd+Enter`で行ごとに実行、またはShinyアプリを**▶ Run Shiny App**ボタンで実行
 5. **作業を保存** - コードファイル（`.R`、`.Rmd`）はコンピュータに保存され、セッション間で永続
 6. **コミットしてプッシュ** - GitHub Desktopを使用して変更をコミットし、リポジトリにプッシュ
@@ -277,7 +278,7 @@ Docker Desktopはいくつかの重要な役割を担っています：
 - **コンテナをビルドする** - Dockerは、このプロジェクトのDockerfileとDev Containerの設定を使って、R開発用に準備されたコンテナを作成します。
 - **コンテナを起動・停止する** - 必要に応じて、コンテナを開いたり、一時停止したり、再起動したり、停止したりできます。
 - **コンテナをファイルにつなぐ** - プロジェクトフォルダがコンテナ内で使えるようになるため、コードはコンテナ内で実行しながら、VS Codeでファイルを編集できます。
-- **コンテナをブラウザにつなぐ** - Shinyアプリがポート3838を使用すると、Docker DesktopとVS Codeが連携して、そのアプリをWebブラウザで表示できるようにします。
+- **コンテナをブラウザにつなぐ** - Shinyアプリがコンテナ内で実行されると、Docker DesktopとVS Codeが連携して、そのアプリをWebブラウザで表示できるようにします。
 
 ### このチュートリアルにおけるDocker Desktopの役割
 
