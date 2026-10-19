@@ -84,7 +84,7 @@ VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent norma
 - Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht“
 - Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet“
 - Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler, kannst du ihn beheben?“
-- Probieren Sie die Claude Code VS Code-Erweiterung für eine visuelle Oberfläche mit Inline-Diffs aus (suchen Sie nach „Claude Code“ in Extensions)
+- Probieren Sie die Claude Code-Erweiterung für ein visuelles Chat-Panel mit Inline-Diffs aus. Wenn Sie `claude` im Terminal von VS Code ausführen, wird sie meist automatisch installiert (falls nicht, suchen Sie in Extensions nach „Claude Code“). Öffnen Sie eine beliebige Datei und klicken Sie dann auf das Spark-Symbol oben rechts im Editor
 
 ## Fehlerbehebung
 

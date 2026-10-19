@@ -120,7 +120,7 @@ Das ist die Kraft systematischer Automatisierung.
 
 ---
 
-*Möchten Sie die Slash-Befehle sehen, die ich erstellt habe? Schauen Sie sich den [Commands-Ordner](../assets/commands/) an. Die vollständige Tutorial-Bibliothek ist auf der [Projektdokumentationsseite](https://github.com/gexijin/vibe/tree/main/docs) verfügbar.*
+*Möchten Sie die Slash-Befehle sehen, die ich erstellt habe? Schauen Sie sich den [Commands-Ordner](https://github.com/gexijin/vibe/tree/main/docs/assets/commands) an. Die vollständige Tutorial-Bibliothek ist auf der [Projektdokumentationsseite](https://github.com/gexijin/vibe/tree/main/docs) verfügbar.*
 
 ---
 

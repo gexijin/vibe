@@ -100,6 +100,8 @@ Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](
 
 Claude initialisiert ein Git-Repository in Ihrem Ordner (dauert 2-5 Sekunden). Sie haben jetzt Versionskontrolle!
 
+Wenn Claude um Erlaubnis fragt, zeigt es ein kleines Menü mit **Yes** und **No**. Wählen Sie mit den Pfeiltasten **Yes** und drücken Sie **Enter**. Das kann in diesem Tutorial einige Male vorkommen.
+
 ## Schritt 8: Die Timer-App erstellen
 
 - Kopieren Sie in Claude Code diese gesamte Anfrage und fügen Sie sie ein (beim Einfügen bleiben alle Zeilen zusammen; wenn Sie Enter drücken, würde sie zu früh abgeschickt):

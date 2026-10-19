@@ -76,7 +76,7 @@ Nachdem Sie VS Code geschlossen haben, so kommen Sie zurück zu Ihrem Projekt:
 - Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht“
 - Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet“
 - Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?“
-- Die Claude Code-Erweiterung haben Sie bereits im Installations-Tutorial installiert – klicken Sie auf das Spark-Symbol oben rechts im Editor, um statt im Terminal in einem Panel mit Inline-Diffs mit Claude zu chatten
+- Probieren Sie die Claude Code-Erweiterung für ein visuelles Chat-Panel mit Inline-Diffs aus. Wenn Sie `claude` im Terminal von VS Code ausführen, wird sie meist automatisch installiert (falls nicht, suchen Sie in Extensions nach „Claude Code“). Öffnen Sie eine beliebige Datei und klicken Sie dann auf das Spark-Symbol oben rechts im Editor
 
 ## Fehlerbehebung
 

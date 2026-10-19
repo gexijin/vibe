@@ -18,7 +18,7 @@ Sie haben Python in VS Code eingerichtet und können Code manuell schreiben. Jet
 
 - Abgeschlossenes Tutorial [Python in VS Code](./Python_Coding_VS_Code_Guide) - Python sollte in VS Code funktionieren
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) - Claude Code CLI sollte installiert sein
-- Claude Pro/Max-Abonnement oder Anthropic-API-Schlüssel
+- Ein kostenpflichtiger Claude-Plan (z. B. Pro oder Max) oder ein Anthropic-Console-Konto – der kostenlose Plan enthält Claude Code nicht
 - 20-30 Minuten
 
 ## Schritt 1: VS Code öffnen und Python-Projekt erstellen
@@ -35,7 +35,7 @@ Sie haben Python in VS Code eingerichtet und können Code manuell schreiben. Jet
 
 - Klicken Sie auf das **Extensions**-Symbol in der linken Seitenleiste (Symbol mit vier Quadraten)
 - Geben Sie im Suchfeld `Claude Code` ein
-- Finden Sie **Claude Code** von Anthropic und klicken Sie auf **Install**
+- Finden Sie **Claude Code for VS Code** von Anthropic und klicken Sie auf **Install**
 - Klicken Sie nach der Installation unten rechts im VS Code-Fenster (in der Statusleiste) auf **✻ Claude Code**, um das Claude-Panel zu öffnen
 - Beim ersten Mal erscheint ein Anmeldebildschirm: Klicken Sie auf **Sign in**, bestätigen Sie den Zugriff in Ihrem Browser und kehren Sie dann zu VS Code zurück
 - Für detaillierte Authentifizierungsschritte siehe die Anleitung [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) (Schritt 3)
@@ -43,8 +43,8 @@ Sie haben Python in VS Code eingerichtet und können Code manuell schreiben. Jet
 
 ## Schritt 3: Erstes Python-Skript manuell erstellen
 
-- Klicken Sie in der Menüleiste auf **File > New File**
-- Klicken Sie auf **Select a language** und geben Sie `Python` ein, dann wählen Sie **Python**
+- Klicken Sie in der Menüleiste auf **File > New File...**
+- Wählen Sie in der Liste, die oben im Fenster erscheint, **Python File**
 - Speichern Sie die Datei durch Klicken auf **File > Save**, nennen Sie sie `iris_analysis.py`
 - Geben Sie diesen Code ein:
 
@@ -126,7 +126,7 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 - Claude fügt PCA-Code zu Ihrem Skript hinzu
 - Nehmen Sie die Änderung an, falls Sie gefragt werden
 - Führen Sie den Code aus: `python iris_analysis.py` im Terminal
-- Ein PCA-Plot erscheint, der Proben auf PC1 und PC2 projiziert zeigt, gefärbt nach Art
+- Ein PCA-Plot erscheint, der Proben auf PC1 und PC2 projiziert zeigt, gefärbt nach Art (wenn sich zuerst das Streudiagramm-Fenster aus Schritt 6 öffnet, schließen Sie es – danach erscheint der PCA-Plot)
 - Schließen Sie das Plot-Fenster, wenn Sie fertig sind
 
 ## Schritt 8: Claude um Überprüfung und Kommentare bitten
@@ -154,7 +154,7 @@ Füge Code hinzu, um eine PCA auf den numerischen Variablen durchzuführen und d
 
 - **Claude-Erweiterung wird nicht angezeigt** - Starten Sie VS Code nach der Installation neu. Klicken Sie auf **View > Extensions**, um zu überprüfen, ob sie installiert ist.
 - **Fehler „Cannot read Python file“** - Stellen Sie sicher, dass Sie die Datei mit der Erweiterung `.py` gespeichert haben. Claude benötigt gespeicherte Dateien, um sie zu lesen.
-- **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr Claude Pro/Max-Abonnement aktiv ist oder Ihr API-Schlüssel gültig ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
+- **Authentifizierung fehlgeschlagen** - Überprüfen Sie, ob Ihr kostenpflichtiger Claude-Plan oder Ihr Anthropic-Console-Konto aktiv ist. Siehe [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) für Fehlerbehebung bei der Authentifizierung.
 - **Fehler „Paket nicht gefunden“** oder **`command not found: python`** - Stellen Sie sicher, dass das Terminal `(.venv)` anzeigt (falls nicht, schließen Sie es und öffnen Sie mit **View > Terminal** ein neues), und installieren Sie dann die erforderlichen Pakete: `pip install seaborn matplotlib scikit-learn pandas`. Warten Sie, bis die Installation abgeschlossen ist, bevor Sie den Code ausführen.
 - **Codeänderungen werden nicht übernommen** - Wenn Claude um Erlaubnis gefragt hat, stellen Sie sicher, dass Sie die Änderung angenommen haben. Wenn es nicht funktioniert, versuchen Sie, Claudes vorgeschlagenen Code manuell zu kopieren.
 - **Plot wird nicht angezeigt** - Stellen Sie sicher, dass ein Bildschirm verfügbar ist. Auf manchen Systemen müssen Sie möglicherweise `plt.show()` am Ende hinzufügen oder `%matplotlib inline` in Jupyter verwenden.

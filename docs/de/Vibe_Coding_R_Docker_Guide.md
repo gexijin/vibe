@@ -86,6 +86,7 @@ claude
 - Wenn der Browser einen Code anzeigt, statt zu melden, dass Sie fertig sind, kopieren Sie den Code, wechseln Sie zurück zum VS Code-Terminal, fügen Sie ihn bei der Aufforderung `Paste code here if prompted` ein und drücken Sie Enter
 - Wenn sich kein Browserfenster öffnet, drücken Sie `c`, um den Anmeldelink zu kopieren, und fügen Sie ihn in Ihren Browser ein
 - Nach erfolgreicher Authentifizierung kehren Sie zum VS Code-Terminal zurück
+- Wenn Sie gefragt werden, ob Sie den Dateien in diesem Ordner vertrauen, wählen Sie **Yes**
 - Sie sehen Claudes Willkommensnachricht
 
 Claude Code läuft jetzt und ist bereit für Ihre Anfragen.
@@ -97,7 +98,7 @@ Jetzt beginnt der Spaß. Anstatt Dokumentation nachzuschlagen, beschreiben Sie e
 - Geben Sie im Claude Code-Terminal ein:
 
 ```
-Installiere das hoopR-Paket und lade aktuelle NBA-Spielerstatistiken. Zeige mir die Top 10 Spieler nach Gesamtpunkten dieser Saison. Stelle es als schöne Tabelle dar.
+Installiere das hoopR-Paket und lade NBA-Spielerstatistiken für die neueste Saison, für die Daten vorliegen. Zeige mir die Top 10 Spieler nach Gesamtpunkten. Stelle es als schöne Tabelle dar.
 ```
 
 - Drücken Sie Enter
@@ -127,7 +128,7 @@ Zeige mir, welche Spalten in diesen NBA-Daten verfügbar sind. Erstelle dann ein
 
 - Drücken Sie Enter
 - Claude erkundet den Datensatz und zeigt Ihnen interessante Statistiken
-- Schauen Sie sich die Ausgabe an, um verfügbare Spalten wie: player_name, team, points, assists, rebounds, field_goal_percentage, usw. zu sehen
+- Schauen Sie sich die Ausgabe an, um die verfügbaren Spalten zu sehen, etwa Spielername, Team, Punkte, Assists und Rebounds
 
 Diese Exploration hilft Ihnen zu entscheiden, was in Ihr Dashboard kommt.
 
@@ -215,7 +216,7 @@ Sie bauen ein professionelles Dashboard durch ein Gespräch.
 Erstelle NBA-Dashboard mit Team-Filter und Visualisierungen
 ```
 
-- Klicken Sie auf **Commit to main**
+- Klicken Sie unten auf die blaue Commit-Schaltfläche (sie lautet etwa **Commit 1 file to main**)
 - Klicken Sie auf **Push origin**, um auf GitHub zu sichern
 
 Sie haben Ihre erste funktionierende Version gespeichert!
