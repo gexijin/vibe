@@ -248,6 +248,43 @@
             box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
         }
 
+        /* Phones: filter buttons in rows above the graph, bigger tap targets */
+        @media (max-width: 600px) {
+            .filter-controls,
+            .filter-controls-right {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 8px;
+            }
+
+            .filter-btn {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+                min-height: 32px;
+            }
+
+            /* Hover tooltips can't be used on touch screens */
+            .filter-btn::after {
+                display: none;
+            }
+
+            /* Progress counter and the hover-only hint go below the graph */
+            .graph-container .progress-counter {
+                position: static;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .graph-container .learning-path-hint {
+                position: static;
+                opacity: 1;
+                text-align: center;
+                margin-top: 4px;
+            }
+        }
+
         .progress-counter {
             position: absolute;
             bottom: 12px;
@@ -525,7 +562,7 @@
         </section>
 
         <div style="text-align: center; margin: 2rem 0;">
-            <img src="../assets/robot2.jpg" alt="Claude Code Roboter" style="max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+            <img src="../assets/robot2.jpg" alt="Claude Code Roboter" style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
         </div>
 
         <footer>
