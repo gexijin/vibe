@@ -17,7 +17,7 @@ lang: "zh"
 ## 所需准备
 
 - 完成[在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win)
-- 完成 [VS Code 基础](./VS_Code_Getting_Started)
+- 完成 [VS Code 入门指南](./VS_Code_Getting_Started)
 - 10-15 分钟
 
 ## 步骤 1：创建项目文件夹
@@ -61,7 +61,7 @@ lang: "zh"
 ```
 - Claude Code 创建文件，你会看到 `article.md` 出现在左侧资源管理器面板中
 - 点击 `article.md` 在编辑器中查看
-- 预览格式化后的文章：右键点击 `article.md` 标签，选择 **Open Preview**
+- 预览格式化后的文章：在 `article.md` 编辑器内右键点击，选择 **Markdown Preview Enhanced: Open Preview to the Side**（即 [VS Code 入门指南](./VS_Code_Getting_Started)中安装的扩展）。如果你没有安装该扩展，可改为右键点击 `article.md` 标签页，选择 **Open Preview**
 - 你会看到渲染后的 Markdown，包括标题、项目符号等格式
 
 ## 稍后在 VS Code 中重新打开 Claude Code

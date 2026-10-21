@@ -57,7 +57,7 @@ Claude 会记住你们在同一个对话中已经聊过的内容。
 
 ## 下一步
 
-- **安装 Claude Code**：通过[在 Windows 上安装 Claude Code](Install_CLAUDE_Code_Win)或[在 macOS 上安装 Claude Code](Install_Claude_Code_MacOS)，把这个 AI 助手带进你的编程项目。Claude Code 需要付费 Claude 套餐（如 Pro 或 Max）或 Anthropic Console 账户——免费套餐不包含 Claude Code。
+- **安装 Claude Code**：通过[在 Windows 上安装 Claude Code](Install_CLAUDE_Code_Win)或[在 Mac 上安装 Claude Code](Install_Claude_Code_MacOS)，把这个 AI 助手带进你的编程项目。Claude Code 需要付费 Claude 套餐（如 Pro 或 Max）或 Anthropic Console 账户——免费套餐不包含 Claude Code。
 - **继续聊天**：请 Claude 帮你规划一件你正在做的事情——比如一封邮件、一份食谱或一份学习指南
 - **尝试更难的提示词**：请 Claude 比较你面临的某个决定中的两个选项，看看它如何解释自己的推理过程
 

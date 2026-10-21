@@ -10,14 +10,14 @@ lang: "zh"
 
 ## 核心概念
 
-- **VS Code** - 微软开发的免费代码编辑器
+- **VS Code** - 微软开发的免费代码编辑器，可在 Mac 上运行
 - **Integrated Terminal（集成终端）** - VS Code 内置终端面板，可在其中运行 Claude Code
 - **Explorer Panel（资源管理器面板）** - VS Code 左侧文件浏览器
 
 ## 准备工作
 
 - 完成[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)
-- 完成 [VS Code 基础教程](./VS_Code_Getting_Started)
+- 完成 [VS Code 入门指南](./VS_Code_Getting_Started)
 - 10-15 分钟
 
 ## 步骤 1：启动 VS Code
@@ -67,7 +67,7 @@ lang: "zh"
 ```
 - Claude Code 创建文件，你会看到 `article.md` 出现在左侧资源管理器面板中
 - 点击 `article.md` 在编辑器中查看
-- 预览格式化后的文章：右键点击 `article.md` 标签页，选择 **Open Preview（打开预览）**
+- 预览格式化后的文章：在 `article.md` 编辑器内右键点击，选择 **Markdown Preview Enhanced: Open Preview to the Side**（即 [VS Code 入门指南](./VS_Code_Getting_Started)中安装的扩展）。如果你没有安装该扩展，可改为右键点击 `article.md` 标签页，选择 **Open Preview（打开预览）**
 - 你会看到渲染后的 Markdown，包括标题、项目符号等格式
 
 ## 稍后在 VS Code 中重新打开 Claude
@@ -89,14 +89,14 @@ VS Code 会记住最近使用的文件夹，使用方法 A 的 Open Recent（打
 ## 故障排除
 
 - **终端显示"zsh"但 Claude Code 无法启动** - 确保已正确安装 Claude Code，运行 `claude --version` 验证
-- **Terminal 中提示"code"命令未找到** - 在 VS Code 中，点击 **View（查看）> Command Palette（命令面板）**，输入"shell command"，选择 **Shell Command: Install 'code' command in PATH（Shell 命令：在 PATH 中安装 'code' 命令）**
+- **终端（Terminal）中提示"code"命令未找到** - 在 VS Code 中，点击 **View（查看）> Command Palette（命令面板）**，输入"shell command"，选择 **Shell Command: Install 'code' command in PATH（Shell 命令：在 PATH 中安装 'code' 命令）**
 - **VS Code 因来自未识别的开发者而无法打开** - 前往 **System Settings > Privacy & Security（系统设置 > 隐私与安全性）** 并点击 **Open Anyway（仍要打开）**
 
 ## 工作流程概述
 
 - **VS Code** 提供可视化编辑界面
 - **Integrated Terminal（集成终端）** 在 VS Code 内运行 Claude Code
-- 文件保存在 Documents 文件夹中（或你选择的位置）
+- 文件保存在**文稿**（Documents）文件夹中（或你选择的位置）
 - 编辑器中编辑文件，终端中与 Claude Code 对话，两全其美
 
 ---

@@ -16,8 +16,8 @@ lang: "zh"
 
 ## 准备工作
 
-- 完成[在VS Code中使用R](./R_Coding_VS_Code_Guide)教程 - R已在VS Code中正常工作
-- 完成[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)教程 - Claude Code CLI已安装
+- 完成[在 VS Code 中运行 R](./R_Coding_VS_Code_Guide)教程 - R已在VS Code中正常工作
+- 完成[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)教程 - Claude Code CLI已安装
 - 付费Claude套餐（如Pro或Max）或Anthropic Console账户——免费套餐不包含Claude Code
 - 20-30分钟
 
@@ -38,7 +38,7 @@ lang: "zh"
 - 找到Anthropic的**Claude Code for VS Code**并点击**Install**
 - 安装完成后，点击窗口右下角状态栏中的**✻ Claude Code**打开Claude面板（打开文件后，也可以使用编辑器右上角的Spark图标）
 - 点击**Sign in**，在打开的浏览器中使用你的Claude账户完成登录
-- 如果你改用API密钥，请按照[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)（步骤3，选项B）进行设置，然后退出VS Code并重新打开
+- 如果你改用API密钥，请按照[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)（步骤3，选项B）进行设置，然后退出VS Code并重新打开
 - 登录后，你会看到**Learn Claude Code**清单。可以点击X关闭它
 
 ## 步骤3：手动创建初始R脚本
@@ -134,7 +134,7 @@ summary(iris)
 
 - **Claude扩展未显示** - 安装后重启VS Code。点击**View > Extensions**验证已安装。
 - **"Cannot read R file"错误** - 确保使用`.R`扩展名保存文件。Claude需要已保存的文件才能读取。
-- **身份验证失败** - 验证你的付费Claude套餐或Anthropic Console账户是否有效。身份验证故障排除请参阅[在Mac上安装Claude Code](./Install_Claude_Code_MacOS)。
+- **身份验证失败** - 验证你的付费Claude套餐或Anthropic Console账户是否有效。身份验证故障排除请参阅[在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)。
 - **找不到ggplot2** - 在R终端中安装：`install.packages("ggplot2")`。运行代码前等待安装完成。
 - **代码更改未应用** - 如果Claude请求了权限，确保你已接受更改。如果不起作用，尝试手动复制Claude建议的代码。
 

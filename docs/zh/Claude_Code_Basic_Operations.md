@@ -19,7 +19,6 @@ lang: "zh"
 
 - 已从[Windows](Install_CLAUDE_Code_Win.md)或[Mac](Install_Claude_Code_MacOS.md)教程安装Claude Code
 - 基本熟悉Terminal或命令提示符
-- 互联网连接
 - 15-20分钟
 
 ## 步骤1：打开你的Terminal
@@ -169,7 +168,7 @@ Claude将创建包含项目摘要的文件。该文件保存在项目根目录�
 
 Claude将读取该笔记本并解释它的作用、工作原理以及代码实现。这会将文件带入上下文。
 
-如果你在VS Code中使用Claude Code并已安装Claude Code扩展，只需打开文件即可将其添加到上下文。你会在Claude Code窗口右下角看到`In Nested_Pie_Chart.ipynb`。此时Claude就知道你在谈论这个文件。
+如果你在VS Code中使用Claude Code并已安装Claude Code扩展，只需打开文件即可将其添加到上下文。你会在Claude Code提示框底部看到`Nested_Pie_Chart.ipynb`。此时Claude就知道你在谈论这个文件。
 
 此外，你可以选择几行代码，Claude会显示**3 lines selected**（已选择3行）。你可以要求Claude快速修改这些行或提出问题。因此，强烈建议在VS Code中使用Claude Code。
 

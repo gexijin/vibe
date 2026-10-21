@@ -10,7 +10,7 @@ lang: "zh"
 
 ## 关键概念
 
-- **Terminal** - Mac 内置的命令行界面，用于运行命令
+- **终端（Terminal）** - Mac 内置的命令行界面，用于运行命令
 - **Git** - 在计算机上跟踪文件的每个变化，创建可以随时返回的还原点
 - **Commit** - 项目在特定时间点的快照，包含对变化的描述
 - **Claude Code** - AI 编程助手，通过简单请求编写代码、修复错误并处理 Git 操作
@@ -20,7 +20,7 @@ lang: "zh"
 - 完成 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)
 - 20-30 分钟
 
-## 步骤 1：打开 Terminal
+## 步骤 1：打开终端（Terminal）
 
 选择以下方法之一：
 

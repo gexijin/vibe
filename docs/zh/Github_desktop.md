@@ -13,7 +13,7 @@ lang: "zh"
 - **Git** - 版本控制软件，在你的电脑上跟踪文件的变更
 - **GitHub** - 在云端存储代码的网站，就像代码的 Google Drive
 - **GitHub Desktop** - 让 Git 变得简单易用的应用，用按钮操作而不是命令
-- **Repository(仓库/repo)** - 跟踪所有变更的项目文件夹
+- **Repository（仓库/repo）** - 跟踪所有变更的项目文件夹
 
 ## 你需要准备的
 
@@ -22,7 +22,7 @@ lang: "zh"
 - 用于创建 GitHub 账户的电子邮箱
 - 15-20 分钟
 
-## 第 1 步：创建 GitHub 账户
+## 步骤 1：创建 GitHub 账户
 
 - 打开网页浏览器
 - 访问 [github.com](https://github.com)
@@ -30,7 +30,7 @@ lang: "zh"
 - 输入你的邮箱，创建密码，选择用户名
 - 完成验证步骤
 
-## 第 2 步：下载 GitHub Desktop
+## 步骤 2：下载 GitHub Desktop
 
 - 访问 [desktop.github.com](https://desktop.github.com)
 - 点击 **Download** 按钮
@@ -45,7 +45,7 @@ lang: "zh"
 - 将 **GitHub Desktop** 拖到你的应用程序文件夹
 - 从应用程序打开 GitHub Desktop
 
-## 第 3 步：登录 GitHub Desktop
+## 步骤 3：登录 GitHub Desktop
 
 - 打开 GitHub Desktop
 - 点击 **Sign in to GitHub.com**
@@ -54,26 +54,26 @@ lang: "zh"
 - 返回 GitHub Desktop
 - 点击 **Finish** 完成设置
 
-## 第 4 步：创建你的第一个仓库
+## 步骤 4：创建你的第一个仓库
 
 - 在 GitHub Desktop 中，点击 **Create a New Repository on your Local Drive**
 - 填写表单：
-  - **Name：** `my-first-project`(或任何你喜欢的名字)
-  - **Description：** `Learning version control`(可选)
-  - **Local Path：** 选择保存位置(Documents 文件夹就可以)
+  - **Name：** `my-first-project`（或任何你喜欢的名字）
+  - **Description：** `Learning version control`（可选）
+  - **Local Path：** 选择保存位置（Documents 文件夹就可以）
   - 勾选 **Initialize this repository with a README**
 - 点击 **Create Repository**
 
-## 第 5 步：打开你的项目文件夹
+## 步骤 5：打开你的项目文件夹
 
 - 在 GitHub Desktop 中，点击菜单栏中的 **Repository**
-- 选择 **Show in Finder**(Mac)或 **Show in Explorer**(Windows)
+- 选择 **Show in Finder**（Mac）或 **Show in Explorer**（Windows）
 - 你会看到一个以你的项目命名的文件夹
 - 里面有一个名为 `README.md` 的文件
 
-## 第 6 步：做出第一次修改
+## 步骤 6：做出第一次修改
 
-- 在任何文本编辑器中打开 `README.md`(记事本、文本编辑或 VS Code)
+- 在任何文本编辑器中打开 `README.md`（记事本、文本编辑或 VS Code）
 - 将内容替换为：
   ```
   # My First Project
@@ -87,20 +87,20 @@ lang: "zh"
   - Create save points (commits)
   - Back up my work to GitHub
   ```
-- 点击 **文件** → **保存**(VS Code 中为 **File** → **Save**)
+- 点击 **文件** → **保存**（VS Code 中为 **File** → **Save**）
 
-## 第 7 步：创建你的第一个提交(存档点)
+## 步骤 7：创建你的第一个提交（存档点）
 
 - 返回 GitHub Desktop
-- 你会在右侧看到高亮显示的变更(绿色 = 添加的内容，红色 = 删除的内容)
+- 你会在右侧看到高亮显示的变更（绿色 = 添加的内容，红色 = 删除的内容）
 - 在左下角，输入提交消息：`Updated README with project description`
 - 点击蓝色的 **Commit 1 file to main** 按钮（数字与你修改的文件数量一致）
 
-## 第 8 步：推送到 GitHub(备份到云端)
+## 步骤 8：推送到 GitHub（备份到云端）
 
 - 点击顶部蓝色的 **Publish repository** 按钮
 - 保持名称不变
-- 如果想让其他人看到，取消勾选"Keep this code private"(可选)
+- 如果想让其他人看到，取消勾选"Keep this code private"（可选）
 - 点击 **Publish Repository**
 
 你的代码现在已在线备份到：`https://github.com/YOUR-USERNAME/my-first-project`
@@ -120,11 +120,11 @@ lang: "zh"
 ## 工作流程概览
 
 - 对项目文件进行修改
-- 在 GitHub Desktop 中查看变更(绿色 = 添加的内容，红色 = 删除的内容)
+- 在 GitHub Desktop 中查看变更（绿色 = 添加的内容，红色 = 删除的内容）
 - 写一条描述性的提交消息，然后点击底部的蓝色提交按钮（显示类似 **Commit 1 file to main** 的文字）
 - 点击 **Push origin** 备份到 GitHub
 - 重复以上步骤
 
 ---
 
-创建于 2025 年 12 月 7 日，作者：[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)。
+由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 2025 年 12 月 7 日。

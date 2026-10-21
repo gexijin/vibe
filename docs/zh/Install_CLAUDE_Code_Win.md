@@ -60,18 +60,18 @@ Git for Windows **推荐但并非必需**，它会提供 Claude Code 执行命�
 
 ### 如何打开 Claude Code 侧边栏
 
-1. 打开 VS Code
-2. 看向窗口最左侧
-3. 如果还没看到 Claude Code 面板，点击 **Extensions** 图标
-4. 在扩展市场里搜索 Claude Code
-5. 如果还没安装，点击 **Install**
-6. 安装完成后，在左侧边栏找到 Claude Code 的 Spark 图标，或点击窗口右下角的 **✻ Claude Code**
+- 打开 VS Code
+- 看向窗口最左侧
+- 如果还没看到 Claude Code 面板，点击 **Extensions** 图标
+- 在扩展市场里搜索 `Claude Code`
+- 如果还没安装，点击 **Install**
+- 安装完成后，点击窗口右下角的 **✻ Claude Code** 打开聊天窗口。（左侧边栏里的 Spark 图标打开的则是你的会话列表，可以在那里开始一个新会话。）
 
 如果看不到 Claude Code 图标，可以试试这样做：
 
-1. 按 **Ctrl + Shift + P**
-2. 输入：Claude Code: Open in Side Bar
-3. 点击列表中对应的选项
+- 按 **Ctrl + Shift + P**
+- 输入：`Claude Code: Open in Side Bar`
+- 点击列表中对应的选项
 
 如果还是没有出现，关掉 VS Code 再重新打开。有时扩展需要重启一次，侧边栏才会显示出来。
 
@@ -263,7 +263,7 @@ claude
    ```
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
    ```
-- 输入 `claude`，按浏览器登录流程连接账户（和步骤 4 的选项 A 一样）。如果改用 API 密钥，则用 `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` 来保存（WSL 里用的是 Linux 命令，而不是 `setx`）
+- 在 Ubuntu 终端里输入 `claude`，按浏览器登录流程连接账户（和步骤 4 的选项 A 一样）。如果改用 API 密钥，则用 `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` 来保存（WSL 里用的是 Linux 命令，而不是 `setx`）
 - 要在 WSL 中打开 Windows 上的项目文件夹（把 `Username` 换成你实际的 Windows 用户名）：
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
@@ -272,7 +272,7 @@ claude
 ## 下一步
 
 - **配置 VS Code**：先按 [VS Code 入门指南](VS_Code_Getting_Started) 操作，再用 [在 Windows 上为 Claude Code 设置 VS Code](Claude_Code_in_VS_Code_Win) 把它和 Claude Code 连接起来
-- **学习 Git 基础**：用 [Windows 系统上的 Claude Code 版本控制](Claude_Code_Git_Windows) 给项目加上版本控制
+- **学习 Git 基础**：用 [Windows 系统上的 Claude Code 本地版本控制](Claude_Code_Git_Windows) 给项目加上版本控制
 - **动手做个项目**：跟着 [使用 Claude Code 撰写研究论文](Writing_Research_Paper_Claude_Code) 走一遍，看看 Claude Code 的实战效果
 
 ## 故障排除
