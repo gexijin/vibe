@@ -16,7 +16,7 @@ VS CodeでPythonをセットアップし、手動でコードを書くことが�
 
 ## 必要なもの
 
-- [VS CodeでPython](./Python_Coding_VS_Code_Guide.md)チュートリアルを完了していること - VS CodeでPythonが動作していること
+- [VS CodeでPythonを書く](./Python_Coding_VS_Code_Guide.md)チュートリアルを完了していること - VS CodeでPythonが動作していること
 - [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)チュートリアルを完了していること - Claude Code CLIがインストールされていること
 - 有料のClaudeプラン（ProやMaxなど）またはAnthropic Consoleアカウント - 無料プランにはClaude Codeが含まれていません
 - 20〜30分
@@ -64,7 +64,7 @@ print(iris_df.describe())
 ```
 
 - **File > Save**をクリックしてファイルを保存します
-- [VS CodeでPythonコーディング](./Python_Coding_VS_Code_Guide.md)のステップ5と同じように仮想環境を作成します：**View > Command Palette**（表示 > コマンドパレット）をクリックし、`Python: Create Environment`と入力して**Venv**を選び、Pythonのバージョンを選択します
+- [VS CodeでPythonを書く](./Python_Coding_VS_Code_Guide.md)のステップ5と同じように仮想環境を作成します：**View > Command Palette**（表示 > コマンドパレット）をクリックし、`Python: Create Environment`と入力して**Venv**を選び、Pythonのバージョンを選択します
 - エクスプローラーに`.venv`フォルダが表示されるまで待ちます
 - ターミナルを開く：メニューバーの**View**（表示）をクリックし、**Terminal**（ターミナル）を選択します。プロンプトの先頭に`(.venv)`と表示されるはずです
 - このスクリプトに必要なパッケージをインストールします：

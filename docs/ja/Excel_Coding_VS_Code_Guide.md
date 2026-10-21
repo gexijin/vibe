@@ -16,7 +16,7 @@ lang: "ja"
 
 ## 必要なもの
 
-- [VS Codeの基本](./VS_Code_Getting_Started)を完了していること
+- [VS Codeを始めよう](./VS_Code_Getting_Started)を完了していること
 - Claude Codeがインストールされ、動作していること（[WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win)または[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)を参照）
 - グラフを見るためのMicrosoft Excel、[LibreOffice Calc](https://www.libreoffice.org/download/download-libreoffice/)（無料）、またはGoogle Sheets（Webブラウザで無料で使えます）
 - 20〜25分
@@ -135,7 +135,7 @@ Claude Codeは、すでに散らかってしまったスプレッドシートを
 - 手元にあるCSVファイルからスプレッドシートを作るようClaudeに依頼してみましょう（先にファイルをプロジェクトフォルダにドラッグしておきます）
 - より高度なリクエストを試してみましょう：「月額が5万円を超えるカテゴリが赤くなるように条件付き書式を追加して」
 - 1枚目のシートのデータを集計する2枚目のシートを追加するようClaudeに依頼してみましょう
-- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow)と組み合わせて、作業を進めながらスプレッドシートのバージョンを保存しましょう
+- [GitHub DesktopとClaude Codeを組み合わせて使う](./GitHub_Desktop_Claude_Code_Workflow)と組み合わせて、作業を進めながらスプレッドシートのバージョンを保存しましょう
 - [Claude CodeでExcelの家計簿をVibe Coding](./Vibe_Coding_Excel_Guide)に進み、複数シートの本格的なプロジェクトを作りましょう
 
 ## トラブルシューティング

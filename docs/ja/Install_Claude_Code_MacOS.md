@@ -199,8 +199,8 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 **注意：** Homebrewでインストールした場合は自動アップデートされません。定期的に`brew upgrade claude-code`を実行して最新バージョンを取得してください。
 
 ## 次のステップ
-- [VS Code入門](./VS_Code_Getting_Started.md) - 人気のコードエディタVS Codeの使い方を学ぶ
-- [VS CodeでClaude Code（Mac）](./Claude_Code_in_VS_Code_Mac.md) - VS Code内でClaude Codeを実行
+- [VS Codeを始めよう](./VS_Code_Getting_Started.md) - 人気のコードエディタVS Codeの使い方を学ぶ
+- [MacでVS CodeからClaude Codeを使う](./Claude_Code_in_VS_Code_Mac.md) - VS Code内でClaude Codeを実行
 - [Claude Codeで研究論文を書く](./Writing_Research_Paper_Claude_Code.md) - 学術論文執筆にClaude Codeを活用
 
 ## ターミナルを再度開く方法

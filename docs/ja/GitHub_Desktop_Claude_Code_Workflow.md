@@ -28,7 +28,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 
 ## 必要なもの
 
-- [WindowsへのClaude Codeインストール](./Install_CLAUDE_Code_Win)または[MacへのClaude Codeインストール](./Install_Claude_Code_MacOS)が完了していること
+- [WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win)または[MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)が完了していること
 - [バージョン管理を始めよう](./Github_desktop)が完了していること
 - 20分
 
@@ -43,6 +43,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
   - **Description：** `A timer app built with Claude Code`
   - **Local Path：** **Choose...** をクリックして **書類**（Documents, Mac）または **ドキュメント**（Documents, Windows）フォルダを選択（初期設定ではドキュメント内の `GitHub` フォルダになっているので、変更してください）
   - **「Initialize this repository with a README」にチェック**
+- GitHub Desktopに「appears to be a Git repository」（Gitリポジトリのようです）と表示された場合は、Gitのチュートリアルで作った `test_claude` フォルダがすでにあります。その古いフォルダの名前を **エクスプローラー**（File Explorer）または **Finder** で変更し（例：`test_claude_old`）、もう一度試してください
 - **Create Repository** をクリック
 - 上部の **Publish repository** をクリック
 - **Publish Repository** をクリック
@@ -51,7 +52,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 
 ## ステップ2：Claudeにタイマーアプリを作成させる
 
-- **ターミナル**を開く
+- ターミナルを開く：Windowsでは **PowerShell**、Macでは **ターミナル**（Terminal）
 - プロジェクトに移動：
   ```
   cd ~/Documents/test_claude
@@ -64,7 +65,7 @@ AIが自動でファイルを書き換えると、ときには完璧に動き、
 
 インストールチュートリアル（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
-- 次のリクエストを入力：
+- 次のリクエスト全体をコピーして貼り付けます（貼り付けるとすべての行がまとまったままになります。Enterを押すと途中で送信されてしまいます）：
 
   ```
   timer.htmlという単一のファイルにシンプルなカウントダウンタイマーアプリを作成してください。
@@ -138,7 +139,7 @@ AIが生成したコードはコミット前に必ず確認しましょう。
   タイマーがゼロになったら音で通知するようにしてください。ブラウザ標準のビープ音か、
   シンプルなオーディオアラートを作成してください。
   ```
-- テスト：ブラウザを更新し、1分でタイマーを設定し、**開始**（または **Start**）をクリック
+- テスト：ブラウザを更新し、タイマーを1分に設定し、**開始**（または **Start**）をクリック
 
 **このチュートリアルでは：** サウンドがうまく動作しないと仮定してください。まだコミットしないでください！
 
@@ -146,10 +147,10 @@ AIが生成したコードはコミット前に必ず確認しましょう。
 
 AIが間違った方向に進んでしまうことがあります。そんなときは最後のコミット（セーブポイント）からやり直しましょう。
 
-1. **GitHub Desktop** を開く
-2. **Branch** メニュー → **Discard All Changes**
-3. 確認ダイアログで **Discard All Changes** をクリック
-4. ブラウザを更新 - サウンド機能なしのタイマーに戻ります！
+- **GitHub Desktop** を開く
+- **Branch** メニュー → **Discard All Changes** をクリック
+- 確認ダイアログで **Discard All Changes** をクリック
+- ブラウザを更新すると、サウンド機能なしのタイマーに戻ります！
 
 壊れたコードを捨てて、最後のセーブポイントに戻ることができました。
 
@@ -191,7 +192,7 @@ Claudeが変更を確認し、コミットメッセージを書き、コミッ�
 
 Claudeが変更内容を分かりやすく説明してくれます。
 
-**試してみましょう：** `音声コードが何をしているか説明してください` や `最近の5つのコミットを表示してください`
+**試してみましょう：** `音を鳴らすコードが何をしているか説明してください` や `最近の5つのコミットを表示してください`
 
 ## ステップ13：履歴を確認
 

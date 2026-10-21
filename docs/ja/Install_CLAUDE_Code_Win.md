@@ -45,7 +45,7 @@ Git for Windowsは **推奨ですがオプション** で、Claude Codeがコマ
    claude --version
    ```
 - Claude Codeのバージョン番号が表示されるはずです
-- 代わりに `'claude' is not recognized` と表示された場合は、PowerShellで次の2行を実行し、PowerShellを閉じて再度開いてから、もう一度 `claude --version` を試します：
+- 代わりに `'claude' is not recognized`（日本語版Windowsでは「用語 'claude' は、…認識されません」）と表示された場合は、PowerShellで次の2行を実行し、PowerShellを閉じて再度開いてから、もう一度 `claude --version` を試します：
    ```
    $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
    [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
@@ -61,20 +61,20 @@ Claude Codeのサイドバーは、VS Codeの中にあるチャットウィン�
 
 ### Claude Codeのサイドバーを開く方法
 
-1. VS Codeを開きます
-2. ウィンドウの一番左側を見ます
-3. Claude Codeのパネルがまだ表示されていない場合は、**Extensions**（拡張機能）アイコンをクリックします
-4. 拡張機能マーケットプレイスでClaude Codeを検索します
-5. まだインストールされていない場合は、**Install**をクリックします
-6. インストール後、左側のサイドバーにClaude CodeのSparkアイコンがあるか確認するか、ウィンドウ右下の **✻ Claude Code** をクリックします
+- VS Codeを開きます
+- ウィンドウの一番左側を見ます
+- Claude Codeのパネルがまだ表示されていない場合は、**Extensions**（拡張機能）アイコンをクリックします
+- 拡張機能マーケットプレイスで `Claude Code` を検索します
+- まだインストールされていない場合は、**Install**（インストール）をクリックします
+- インストール後、ウィンドウ右下の **✻ Claude Code** をクリックするとチャットが開きます。（左側のサイドバーにあるSparkアイコンをクリックすると、代わりにセッションの一覧が開き、そこから新しいセッションを始められます。）
 
 Claude Codeのアイコンが見つからない場合は、次の方法を試してください：
 
-1. **Ctrl + Shift + P**を押します
-2. 次のように入力します：Claude Code: Open in Side Bar
-3. 一覧に表示された該当する項目をクリックします
+- **Ctrl + Shift + P**を押します
+- 次のように入力します：`Claude Code: Open in Side Bar`
+- 一覧に表示された該当する項目をクリックします
 
-それでも表示されない場合は、VS Codeを閉じてから開き直してください。拡張機能によっては、再起動しないとサイドバーが表示されないことがあります。
+それでも表示されない場合は、VS Codeを閉じてから開き直してください。拡張機能を再起動しないと、サイドバーが表示されないことがあります。
 
 ### サイドバーでできること
 
@@ -274,7 +274,7 @@ claude
 ## 次のステップ
 
 - **VS Codeをセットアップ：** [VS Codeを始めよう](VS_Code_Getting_Started)に従い、[WindowsでClaude Code用にVS Codeをセットアップ](Claude_Code_in_VS_Code_Win)でClaude Codeに接続します
-- **Gitの基本を学ぶ：** [Windows版Claude Codeとバージョン管理](Claude_Code_Git_Windows)でプロジェクトにバージョン管理を追加します
+- **Gitの基本を学ぶ：** [Windows版Claude Codeでローカルバージョン管理](Claude_Code_Git_Windows)でプロジェクトにバージョン管理を追加します
 - **プロジェクトを試す：** [Claude Codeで研究論文を書く](Writing_Research_Paper_Claude_Code)でClaude Codeの実際の動作を確認します
 
 ## トラブルシューティング
@@ -294,7 +294,7 @@ claude doctor
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- `'claude' is not recognized` と表示される場合は、PowerShellで次の2行を実行し、PowerShellを閉じて再度開きます：
+- `'claude' is not recognized`（日本語版Windowsでは「…認識されません」）と表示される場合は、PowerShellで次の2行を実行し、PowerShellを閉じて再度開きます：
    ```
    $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
    [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')

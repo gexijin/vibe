@@ -17,7 +17,7 @@ Pythonコードを共有したのに、「私のマシンでは動くのに...�
 
 ## 必要なもの
 
-- [VS CodeでPythonコーディング](./Python_Coding_VS_Code_Guide)を完了
+- [VS CodeでPythonを書く](./Python_Coding_VS_Code_Guide)を完了
 - 20〜25分
 
 ## ステップ1：Docker Desktopをインストール
@@ -358,7 +358,7 @@ python -c "import plotly; print(plotly.__version__)"
 3. **コンテナで再度開く** - まだコンテナ内でない場合、左下隅の **><** アイコンをクリックして**Reopen in Container**（コンテナーで再度開く）を選択
 4. **コードを書いて実行** - `.py`ファイルを編集し、`Shift+Enter`で行ごとに実行、または`streamlit run app.py`でアプリを実行
 5. **作業を保存** - コードファイル（`.py`、`.ipynb`）はコンピュータに保存され、セッション間で永続
-6. **コミットしてプッシュ** - プロジェクトがGitHubリポジトリの場合（[GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow)を参照）、GitHub Desktopを使用して変更をコミットしてプッシュ
+6. **コミットしてプッシュ** - プロジェクトがGitHubリポジトリの場合（[GitHub DesktopとClaude Codeを組み合わせて使う](./GitHub_Desktop_Claude_Code_Workflow)を参照）、GitHub Desktopを使用して変更をコミットしてプッシュ
 
 ---
 

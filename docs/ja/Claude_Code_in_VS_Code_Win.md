@@ -16,37 +16,38 @@ WindowsにClaude Codeをインストールできたら、コードを編集す�
 
 ## 必要なもの
 
-- [WindowsでClaude Codeをインストール](./Install_CLAUDE_Code_Win)済み
-- [VS Codeの基本](./VS_Code_Getting_Started)を読了
+- [WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win)済み
+- [VS Codeを始めよう](./VS_Code_Getting_Started)を読了
 - 10〜15分の作業時間
 
 ## ステップ1：プロジェクトフォルダを作成
 
-1. **エクスプローラー**（File Explorer、タスクバーのフォルダアイコン）を開く
-2. **ドキュメント**（Documents）フォルダへ移動
-3. 何もない場所を右クリック → **新規作成 > フォルダー**
-4. フォルダ名を `test_claude` にする
+- **エクスプローラー**（File Explorer、タスクバーのフォルダアイコン）を開く
+- **ドキュメント**（Documents）フォルダへ移動
+- 何もない場所を右クリック → **新規作成 > フォルダー**（New > Folder）
+- フォルダ名を `test_claude` にする
 
 ## ステップ2：VS Codeを起動
 
-1. **Windowsスタートボタン**（タスクバーのWindowsロゴ）をクリックし、`Visual Studio Code` または `VS Code` を検索
-2. 検索結果の **Visual Studio Code** をクリック
-3. 起動直後に表示されるWelcomeタブは閉じてかまいません
+- **Windowsスタートボタン**（タスクバーのWindowsロゴ）をクリック
+- 検索ボックスに `Visual Studio Code` または `VS Code` と入力
+- 検索結果の **Visual Studio Code** をクリック
+- 起動直後に表示されるWelcomeタブは閉じてかまいません
 
 ## ステップ3：フォルダを開く
 
-1. VS Codeメニューバーから **File > Open Folder**（ファイル > フォルダーを開く）をクリック
-2. **ドキュメント** へ移動し、`test_claude` フォルダを選択
-3. **フォルダーの選択**（Select Folder）をクリックするとVS Codeが `test_claude` フォルダを読み込みます
-4. 「Do you trust the authors?」（作成者を信頼しますか？）と表示されたら **Yes, I trust the authors**（はい、作成者を信頼します）を選択
+- VS Codeメニューバーから **File > Open Folder**（ファイル > フォルダーを開く）をクリック
+- **ドキュメント** へ移動し、`test_claude` フォルダを選択
+- **フォルダーの選択**（Select Folder）をクリックするとVS Codeが `test_claude` フォルダを読み込み直します
+- 「Do you trust the authors?」（作成者を信頼しますか？）と表示されたら **Yes, I trust the authors**（はい、作成者を信頼します）を選択
 
 ## ステップ4：Claude Codeを起動
 
-1. メニューバーの **Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリック
-2. 下部に開いたターミナルで次を実行：
-   ```
-   claude
-   ```
+- VS Codeが読み込み直されたら、新しいターミナルを開きます：メニューバーの **Terminal > New Terminal**（ターミナル > 新しいターミナル）をクリック
+- 下部に開いたターミナルで次を入力：
+  ```
+  claude
+  ```
 
 [インストールチュートリアル](Install_CLAUDE_Code_Win.md)に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
@@ -56,16 +57,17 @@ Claude Codeの入力欄に以下を入力してみましょう：
 ```
 LLMがMarkdown形式を好む理由を説明する短い記事を書き、article.mdとして保存してください。
 ```
-- 数秒後、左側のエクスプローラーに `article.md` が表示されます
-- ファイルをクリックすると内容を編集・確認できます
-- プレビューしたい場合はタブを右クリックして **Open Preview**（プレビューを開く）を選択すると、Markdownが整形表示されます
+- Claude Codeがファイルを作成すると、左側のエクスプローラーに `article.md` が表示されます
+- エクスプローラーで `article.md` をクリックすると、エディターで内容を確認できます
+- 整形された記事をプレビューするには：`article.md` のエディター内を右クリックし、**Markdown Preview Enhanced: Open Preview to the Side** を選択（[VS Codeを始めよう](./VS_Code_Getting_Started)で入れた拡張機能です）。この拡張機能が入っていない場合は、代わりに `article.md` タブを右クリックして **Open Preview**（プレビューを開く）を選択
+- 見出しや箇条書きなどが整形されたMarkdownが表示されます
 
 ## 後からVS Codeで再開するには
 
 VS Codeを閉じた後、プロジェクトに戻る方法は次のとおりです：
 
 - **方法A：** VS Codeを起動 → **File > Open Recent**（ファイル > 最近使用した項目を開く）で `test_claude` を選択
-- **方法B：** **エクスプローラー**で `test_claude` フォルダを右クリックし、**Codeで開く** を選択（Windows 11では、先に **その他のオプションを確認** をクリック）。このオプションは、VS Codeのインストール時に **"Code で開く" アクションを追加する**（Add "Open with Code" action）にチェックを入れた場合にのみ表示されます。表示されない場合は方法Aを使ってください
+- **方法B：** **エクスプローラー**で `test_claude` フォルダを右クリックし、**Code で開く**（Open with Code）を選択（Windows 11では、先に **その他のオプションを確認**（Show more options）をクリック）。このオプションは、VS Codeのインストール時に **"Code で開く" アクションを追加する**（Add "Open with Code" action）にチェックを入れた場合にのみ表示されます。表示されない場合は方法Aを使ってください
 
 ## 次のステップ
 

@@ -6,7 +6,7 @@ lang: "ja"
 
 # バージョン管理を始めよう
 
-動いていたコードに手を加えたら突然壊れてしまった——そんな経験はありませんか？何を変えたか思い出せず、「動いていたときに戻れたらいいのに…」と思うはずです。バージョン管理はまさにビデオゲームのセーブポイント。コミットを作るたびに復元ポイントができ、必要なときにいつでも戻れます。[GitHub](https://github.com) を使えば、そのセーブポイントをクラウドに保存して安全にバックアップできます。
+動いていたコードに手を加えたら突然壊れてしまった——そんな経験はありませんか？何を変えたか思い出せず、「動いていたときに戻れたらいいのに…」と思うはずです。バージョン管理はまさにビデオゲームのセーブポイント。コミットを作るたびに復元ポイントができ、必要なときにいつでも戻れます。[GitHub](https://github.com) を使えば、そのセーブポイントをクラウドに保存して安全にバックアップでき、どのコンピューターからでもアクセスできます。
 
 ## 主要な概念
 
@@ -47,7 +47,7 @@ lang: "ja"
 
 1. GitHub Desktop のトップ画面で **Create a New Repository on your Local Drive** をクリックします
 2. 次のように入力：
-   - **Name**: `my-first-project`
+   - **Name**: `my-first-project`（好きな名前でもOK）
    - **Description**: `Learning version control`（任意）
    - **Local Path**: 保存先（**書類**／**ドキュメント**（Documents）フォルダなど）
    - **Initialize this repository with a README** にチェック
@@ -55,7 +55,7 @@ lang: "ja"
 
 ## ステップ5：フォルダを開いてみる
 
-- **Repository > Show in Finder/Explorer** を選択
+- メニューバーの **Repository** から **Show in Finder**（Mac）または **Show in Explorer**（Windows）を選択
 - `my-first-project` フォルダと `README.md` ファイルが確認できます
 
 ## ステップ6：READMEを編集
@@ -101,7 +101,7 @@ lang: "ja"
 | --- | --- |
 | GitHubにサインインできない | ネット接続を確認。まずブラウザでgithub.comにログインできるかチェック |
 | 変更が表示されない | ファイルを保存したか確認。別のアプリをクリックしてからGitHub Desktopに戻るか、アプリを再起動する |
-| Pushがrejectedと言われる | 他の人が先にPushした可能性。**Fetch origin** → **Pull origin** → もう一度 **Push origin** をクリック |
+| Pushが「rejected」エラーで失敗する | 他の人が先にPushした可能性。**Fetch origin** → **Pull origin** → もう一度 **Push origin** をクリック |
 
 ## 基本ワークフロー
 

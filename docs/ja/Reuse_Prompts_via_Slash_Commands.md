@@ -18,7 +18,7 @@ lang: "ja"
 
 ## 必要なもの
 
-- [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
+- [WindowsでClaude Code用にVS Codeをセットアップ](./Claude_Code_in_VS_Code_Win.md)または[MacでVS CodeからClaude Codeを使う](./Claude_Code_in_VS_Code_Mac.md)を完了していること
 - 調査するトピック（例として株式レポートを使用します）
 - VS Codeなどのテキストエディタがインストールされていること
 - 15〜20分
@@ -48,13 +48,13 @@ lang: "ja"
 ## ステップ2：Claude Codeを起動
 
 **Windows（PowerShell）：**
-- PowerShellで次を入力：
+- そのままPowerShellで次を入力：
   ```
   claude
   ```
 
 **Mac：**
-- ターミナルで次を入力：
+- そのままターミナルで次を入力：
   ```
   claude
   ```
