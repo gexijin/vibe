@@ -48,13 +48,13 @@ Wenn der Ordner bereits existiert, verwenden diese Befehle ihn einfach weiter.
 ## Schritt 2: Claude Code starten
 
 **Windows (PowerShell):**
-- Noch in PowerShell, geben Sie ein:
+- Geben Sie, noch in PowerShell, Folgendes ein:
   ```
   claude
   ```
 
 **Mac:**
-- Noch im Terminal, geben Sie ein:
+- Geben Sie, noch im Terminal, Folgendes ein:
   ```
   claude
   ```
@@ -175,7 +175,7 @@ Versuchen Sie einen anderen Ticker:
 /stock-report TSLA
 ```
 
-Dieselbe Befehlsstruktur recherchiert jetzt Tesla stattdessen.
+Dieselbe Befehlsstruktur recherchiert jetzt stattdessen Tesla.
 
 ## Schritt 12: Einen anderen Slash-Befehl ausprobieren (Optional)
 

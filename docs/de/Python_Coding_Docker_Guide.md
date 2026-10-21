@@ -13,7 +13,7 @@ Haben Sie schon einmal versucht, Ihren Python-Code mit einem Kollegen zu teilen,
 - **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** - Anwendung, die Container auf Ihrem Computer ausführt und isolierte Umgebungen verwaltet
 - **[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)** - VS Code-Funktion, die es Ihnen ermöglicht, innerhalb eines Docker-Containers mit voller IDE-Unterstützung zu programmieren
 - **Container-Isolation** - Ihr Code läuft in einer separaten Linux-Umgebung, die nur Ihren Projektordner sieht, nicht Ihren gesamten Computer
-- **[Python Official Images](https://hub.docker.com/_/python)** - Vorgefertigte Docker-Images mit Python und wichtigen Tools vorinstalliert
+- **[Offizielle Python-Images](https://hub.docker.com/_/python)** - Vorgefertigte Docker-Images mit Python und wichtigen Tools vorinstalliert
 
 ## Was Sie benötigen
 

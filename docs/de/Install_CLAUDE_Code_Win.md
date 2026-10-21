@@ -61,18 +61,18 @@ Stellen Sie sich die Claude Code-Seitenleiste wie ein Chatfenster innerhalb von 
 
 ### So öffnen Sie die Claude Code-Seitenleiste
 
-1. Öffnen Sie VS Code
-2. Schauen Sie ganz an den linken Rand des Fensters
-3. Klicken Sie auf das **Extensions**-Symbol, falls Sie das Claude Code-Fenster noch nicht sehen
-4. Suchen Sie im Extensions-Marketplace nach Claude Code
-5. Klicken Sie auf **Install**, falls die Erweiterung noch nicht installiert ist
-6. Suchen Sie nach der Installation das Claude Code-Symbol (einen Funken, englisch „Spark“) in der linken Seitenleiste, oder klicken Sie unten rechts im Fenster auf **✻ Claude Code**
+- Öffnen Sie VS Code
+- Schauen Sie ganz an den linken Rand des Fensters
+- Klicken Sie auf das **Extensions**-Symbol, falls Sie das Claude Code-Fenster noch nicht sehen
+- Suchen Sie im Extensions-Marketplace nach `Claude Code`
+- Klicken Sie auf **Install**, falls die Erweiterung noch nicht installiert ist
+- Klicken Sie nach der Installation unten rechts im Fenster auf **✻ Claude Code**, um den Chat zu öffnen. (Das Funken-Symbol, englisch „Spark“, in der linken Seitenleiste öffnet dagegen eine Liste Ihrer Sitzungen, in der Sie eine neue Sitzung starten können.)
 
 Wenn Sie das Claude Code-Symbol nicht sehen, versuchen Sie Folgendes:
 
-1. Drücken Sie **Strg + Umschalt + P**
-2. Geben Sie ein: Claude Code: Open in Side Bar
-3. Klicken Sie in der Liste auf den passenden Eintrag
+- Drücken Sie **Strg + Umschalt + P**
+- Geben Sie ein: `Claude Code: Open in Side Bar`
+- Klicken Sie in der Liste auf den passenden Eintrag
 
 Wenn die Seitenleiste immer noch nicht erscheint, schließen Sie VS Code und öffnen Sie es erneut. Manchmal braucht die Erweiterung einen Neustart, bevor die Seitenleiste angezeigt wird.
 
@@ -200,7 +200,7 @@ Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allge
    ```
    cd ~/Documents/test_claude
    ```
-   Ersetzen Sie `test_claude` durch den tatsächlichen Namen Ihres Projektordners. Tipp: Geben Sie `cd ` (mit Leerzeichen) ein, ziehen Sie den Ordner aus dem Datei-Explorer in das PowerShell-Fenster, um seinen vollständigen Pfad einzufügen, und drücken Sie **Enter**.
+   Ersetzen Sie `test_claude` durch den tatsächlichen Namen Ihres Projektordners. Tipp: Geben Sie `cd ` (mit Leerzeichen) ein, ziehen Sie den Ordner aus dem Datei-Explorer in das PowerShell-Fenster, um seinen vollständigen Pfad einzufügen, und drücken Sie die **Eingabetaste**.
 - Starten Sie dann Claude:
    ```
    claude

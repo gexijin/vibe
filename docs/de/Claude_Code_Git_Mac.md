@@ -27,7 +27,7 @@ Wählen Sie eine dieser Methoden:
 - **Spotlight:** Drücken Sie `Command (⌘) + Leertaste`, geben Sie `Terminal` ein, drücken Sie Enter
 - **Finder:** Öffnen Sie **Programme** > **Dienstprogramme** > **Terminal**
 
-Sie sehen eine Eingabeaufforderung, die mit `$` oder `%` endet.
+Sie sehen eine Eingabezeile, die mit `$` oder `%` endet.
 
 ## Schritt 2: Git installieren
 
@@ -98,7 +98,7 @@ Hier wird Ihr Projekt gespeichert.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und das Eingabefeld von Claude Code.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_Claude_Code_MacOS.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 7: Claude bitten, Git zu initialisieren
 

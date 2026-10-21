@@ -27,7 +27,7 @@ Sie möchten Code schreiben, aber der **Editor** von Windows (Notepad) oder Text
 - Gehen Sie zu [code.visualstudio.com](https://code.visualstudio.com)
 - Klicken Sie auf die Schaltfläche **Download** (es erkennt Ihr Betriebssystem)
 - Führen Sie das Installationsprogramm aus:
-   - **Windows:** Doppelklicken Sie auf die `.exe` und klicken Sie sich mit **Weiter** (Next) durch die Installationsschritte. Aktivieren Sie im Schritt **Zusätzliche Aufgaben auswählen** (Select Additional Tasks) außerdem die Option, „Mit Code öffnen“ zum Verzeichniskontextmenü von Windows-Explorer hinzuzufügen (Add "Open with Code" action to Windows Explorer directory context menu), damit Sie Projektordner später direkt aus dem Datei-Explorer öffnen können
+   - **Windows:** Doppelklicken Sie auf die `.exe` und klicken Sie sich mit **Weiter** (Next) durch die Installationsschritte. Aktivieren Sie im Schritt **Zusätzliche Aufgaben auswählen** (Select Additional Tasks) außerdem die Option **Aktion "Mit Code öffnen" dem Verzeichniskontextmenü von Windows-Explorer hinzufügen** (englisch: **Add "Open with Code" action to Windows Explorer directory context menu**), damit Sie Projektordner später direkt aus dem Datei-Explorer öffnen können
    - **Mac:** Öffnen Sie die `.dmg`, ziehen Sie VS Code in **Programme**
    - **Linux:** Folgen Sie den Anweisungen für Ihren Paketmanager
 - Starten Sie VS Code
@@ -55,9 +55,9 @@ Klicken Sie auf das **Explorer**-Symbol (oben in der Aktivitätsleiste), um den 
 
 Die Explorer-Seitenleiste zeigt nun die Dateien Ihres Ordners:
 
-- Klicken Sie auf einen Ordner, um ihn zu erweitern
+- Klicken Sie auf einen Ordner, um ihn aufzuklappen
 - Klicken Sie auf eine beliebige Datei, um sie im Editor zu öffnen
-- Klicken Sie auf das **Search**-Symbol in der Aktivitätsleiste (Lupe), um über alle Dateien zu suchen
+- Klicken Sie auf das **Search**-Symbol in der Aktivitätsleiste (Lupe), um in allen Dateien zu suchen
 
 ## Schritt 4: Eine Markdown-Datei erstellen
 
@@ -94,7 +94,7 @@ Markdown ist ein einfaches Textformat, das Symbole wie `#` für Überschriften, 
 ## Schritt 6: Ihre Markdown-Datei in der Vorschau anzeigen
 
 - Öffnen Sie `README.md`, falls noch nicht geöffnet
-- Klicken Sie mit der rechten Maustaste im Editor und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side**
+- Klicken Sie mit der rechten Maustaste in den Editor und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side**
 
 Ein Vorschau-Panel öffnet sich und zeigt Ihr formatiertes Markdown – bearbeiten Sie links, sehen Sie Änderungen rechts in Echtzeit!
 

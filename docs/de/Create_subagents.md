@@ -146,11 +146,11 @@ Der Subagent aktiviert sich automatisch basierend auf Ihrer Beschreibung.
 
 ## Schritt 7: Den Subagenten bei der Arbeit beobachten
 
-Während der Subagent läuft, sehen Sie ihn:
+Der Subagent läuft im Hintergrund. Deshalb sehen Sie nicht jeden einzelnen Schritt, sondern nur seinen Namen in einem kleinen Bereich unter der Eingabezeile. Um ihm zuzusehen, geben Sie `/tasks` ein, wählen Sie mit den Pfeiltasten **stock-picker** aus und drücken Sie **Enter**. Hinter den Kulissen wird er:
 1. **Den Skill zweimal aufrufen** - Den stock-report Skill einmal für Apple aufrufen, dann für Google
 2. **Daten sammeln** - Jeder Skill-Aufruf durchsucht das Web und generiert einen Unternehmensbericht
-3. **Unternehmen bewerten** - Bewertet jede Kategorie und fasst die Werte zu einer Gesamtbewertung zusammen
-4. **Ausgabe generieren** - Erstellt Vergleichstabelle und Empfehlung
+3. **Unternehmen bewerten** - Jede Kategorie bewerten und die Werte zu einer Gesamtbewertung zusammenfassen
+4. **Ausgabe generieren** - Vergleichstabelle und Empfehlung erstellen
 
 Dies kann 2-3 Minuten dauern, da Webrecherche involviert ist.
 

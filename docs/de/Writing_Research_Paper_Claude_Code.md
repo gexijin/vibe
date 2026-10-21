@@ -26,7 +26,7 @@ Erstellen Sie einen Ordner für Ihre Forschungsarbeit:
 
 - Öffnen Sie den **Datei-Explorer** (Windows) oder **Finder** (Mac)
 - Navigieren Sie zu **Dokumente**
-- Erstellen Sie einen neuen Ordner namens `test_claude`
+- Erstellen Sie einen neuen Ordner namens `test_claude` (falls Sie ihn bereits in einem früheren Tutorial erstellt haben, verwenden Sie einfach diesen Ordner)
 
 Alles über dieses Projekt passiert in diesem Ordner.
 
@@ -97,13 +97,13 @@ Gib mir eine kurze Zusammenfassung.
 ## Schritt 6: Die Quellen lesen
 Lesen Sie das Recherche-Dokument durch und klicken Sie durch zu den Originalquellen, um die Informationen zu verifizieren:
 
-1. Klicken Sie auf `general_research.md` im Explorer-Panel links
-2. Zeigen Sie das formatierte Dokument in der Vorschau an: Klicken Sie mit der rechten Maustaste auf den Tab `general_research.md` und wählen Sie **Open Preview**
-3. Klicken Sie auf die Quellen-Links, um die Originalartikel und -studien zu lesen
+- Klicken Sie auf `general_research.md` im Explorer-Panel links
+- Zeigen Sie das formatierte Dokument in der Vorschau an: Klicken Sie mit der rechten Maustaste in den Editor und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side** (oder, falls Sie diese Erweiterung nicht installiert haben, klicken Sie mit der rechten Maustaste auf den Tab `general_research.md` und wählen Sie **Open Preview**)
+- Klicken Sie auf die Quellen-Links, um die Originalartikel und -studien zu lesen
 
 ## Schritt 7: Ihren Ansatz brainstormen
 
-Bitten Sie Claude beim Brainstorming zu helfen:
+Bitten Sie Claude, beim Brainstorming zu helfen:
 
 ```
 Basierend auf dieser Recherche, schlage 3-4 Ansätze vor, die ich für diese Arbeit nehmen könnte.
@@ -232,7 +232,7 @@ Führe ein abschließendes Korrekturlesen der Arbeit durch:
 
 Überprüfen Sie Claudes Änderungen.
 
-**Export nach Word:** Klicken Sie in VS Code mit der rechten Maustaste auf den Tab `paper.md` und wählen Sie **Open Preview**. Klicken Sie in den Vorschaubereich, dann klicken Sie auf **Edit > Select All** und **Edit > Copy**. Fügen Sie in Microsoft Word ein – die Formatierung bleibt erhalten.
+**Export nach Word:** Öffnen Sie die Vorschau von `paper.md` auf die gleiche Weise wie in Schritt 6. Klicken Sie in den Vorschaubereich, dann klicken Sie auf **Edit > Select All** und **Edit > Copy**. Fügen Sie in Microsoft Word ein – die Formatierung bleibt erhalten.
 
 ## Schritt 17: Einen Slash-Befehl für zukünftige Arbeiten erstellen
 

@@ -81,7 +81,7 @@ Virtuelle Umgebungen halten Ihre Projektabhängigkeiten isoliert.
 - Warten Sie, bis VS Code die Umgebung erstellt hat (Sie sehen einen `.venv`-Ordner erscheinen)
 - VS Code aktiviert diese Umgebung automatisch für Ihr Projekt
 
-Sie sehen `(.venv)` in Ihrer Terminal-Eingabeaufforderung, wenn die Umgebung aktiv ist.
+Wenn die Umgebung aktiv ist, sehen Sie `(.venv)` am Anfang der Eingabezeile im Terminal.
 
 ## Schritt 6: Erforderliche Pakete installieren
 
@@ -200,7 +200,7 @@ streamlit run app.py
 - Klicken Sie in der Menüleiste auf **Run**, dann auf **Start Debugging**
 - Wählen Sie **Python File**, wenn Sie dazu aufgefordert werden
 - Die Codeausführung pausiert am Breakpoint
-- Verwenden Sie die Debug-Symbolleiste, um durch den Code zu schreiten, Variablen zu inspizieren und den Aufrufstapel zu sehen
+- Verwenden Sie die Debug-Symbolleiste, um den Code Schritt für Schritt auszuführen, Variablen zu inspizieren und den Aufrufstapel zu sehen
 - Klicken Sie auf **Run > Continue**, um die Ausführung fortzusetzen
 
 ## Nächste Schritte
@@ -215,9 +215,9 @@ streamlit run app.py
 
 - **„Die Benennung "python" wurde nicht ... erkannt“** (englisch: „Python is not recognized“) **im Terminal**: Python ist nicht in Ihrem System-PATH. Unter Windows installieren Sie Python neu und aktivieren Sie „Add python.exe to PATH“. Unter Mac/Linux verwenden Sie `python3` statt `python`. Starten Sie VS Code nach der Korrektur neu.
 
-- **Kein Interpreter gefunden**: Klicken Sie auf den Interpreter-Selektor in der unteren rechten Ecke von VS Code, oder klicken Sie auf **View > Command Palette** und führen Sie `Python: Select Interpreter` aus. Wenn Ihre Python-Installation nicht erscheint, wählen Sie **Enter interpreter path** und navigieren Sie zu Ihrer Python-Ausführungsdatei.
+- **Kein Interpreter gefunden**: Klicken Sie auf den Interpreter-Selektor in der unteren rechten Ecke von VS Code, oder klicken Sie auf **View > Command Palette** und führen Sie `Python: Select Interpreter` aus. Wenn Ihre Python-Installation nicht erscheint, wählen Sie **Enter interpreter path** und navigieren Sie zur ausführbaren Python-Datei.
 
-- **Virtuelle Umgebung wird nicht aktiviert**: VS Code sollte sie automatisch aktivieren, wenn Sie ein Terminal öffnen. Falls nicht, aktivieren Sie manuell: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`. Überprüfen Sie durch `(.venv)` in Ihrer Terminal-Eingabeaufforderung.
+- **Virtuelle Umgebung wird nicht aktiviert**: VS Code sollte sie automatisch aktivieren, wenn Sie ein Terminal öffnen. Falls nicht, aktivieren Sie manuell: Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`. Prüfen Sie, ob `(.venv)` am Anfang der Eingabezeile im Terminal steht.
 
 - **IntelliSense funktioniert nicht**: Stellen Sie sicher, dass Pylance installiert und aktiviert ist. Überprüfen Sie, ob in der unteren rechten Ecke Ihr ausgewählter Interpreter angezeigt wird. Warten Sie 10-20 Sekunden nach dem Öffnen einer Datei, bis Pylance initialisiert ist. Starten Sie VS Code neu, wenn Probleme bestehen bleiben.
 
@@ -233,7 +233,7 @@ VS Code bietet eine moderne, leichtgewichtige Umgebung für Python-Entwicklung m
 
 - **Vereinheitlichte Umgebung**: Programmieren Sie Python, R, JavaScript und mehr in einem Editor
 - **Leistungsstarkes IntelliSense**: Intelligente Vervollständigungen, Typprüfung und Auto-Imports über Pylance
-- **Integriertes Debugging**: Setzen Sie Breakpoints, inspizieren Sie Variablen und schreiten Sie durch Code
+- **Integriertes Debugging**: Setzen Sie Breakpoints, inspizieren Sie Variablen und führen Sie Code Schritt für Schritt aus
 - **Jupyter-Unterstützung**: Führen Sie Notebooks direkt in VS Code ohne separate Anwendungen aus
 - **Versionskontrolle**: Eingebaute Git-Integration zum Verfolgen von Änderungen
 - **Erweiterungs-Ökosystem**: Tausende Erweiterungen für Tests, Formatierung, Linting und mehr

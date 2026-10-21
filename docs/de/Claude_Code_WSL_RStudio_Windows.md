@@ -36,7 +36,7 @@ Sie haben RStudio unter Windows zum Ausführen von R-Code und Claude Code für K
 - Geben Sie als **Directory name** ein: `test_claude`
 - Klicken Sie auf **Browse** neben „Create project as subdirectory of:“
 - Navigieren Sie zu Ihrem **Dokumente**-Ordner
-- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**)
+- Klicken Sie auf **Öffnen** (englisch: **Open**; in manchen RStudio-Versionen heißt diese Schaltfläche **Ordner auswählen** bzw. **Select Folder**)
 - Klicken Sie auf **Create Project**
 - RStudio erstellt das Projekt und wechselt dorthin
 

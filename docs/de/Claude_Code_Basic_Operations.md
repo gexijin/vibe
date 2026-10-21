@@ -133,7 +133,7 @@ Löscht das aktuelle Gespräch und beginnt von vorne. Verwenden Sie dies, wenn S
 /exit
 ```
 
-Beendet Ihre Sitzung und kehrt zu Ihrer normalen Terminal-Eingabeaufforderung zurück. Sie können auch zweimal **Strg + C** (Mac: **ctrl + C**) drücken.
+Beendet Ihre Sitzung und kehrt zur normalen Eingabezeile Ihres Terminals zurück. Sie können auch zweimal **Strg + C** (Mac: **ctrl + C**) drücken.
 
 ## Schritt 6: Änderungen genehmigen und Tastenkombinationen nutzen
 
@@ -170,7 +170,7 @@ Erkläre den Code in @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude liest das Notebook und erklärt, was es tut, wie es funktioniert und was der Code erreicht. Dies bringt die Datei effektiv in den Kontext.
 
-Wenn Sie mit Claude Code aus VS Code arbeiten und die Claude Code-Erweiterung installiert haben, können Sie die Datei zum Kontext hinzufügen, indem Sie sie einfach öffnen. Sie sehen unten rechts im Claude Code-Fenster `In Nested_Pie_Chart.ipynb`. Dann weiß Claude, dass Sie über diese Datei sprechen.
+Wenn Sie mit Claude Code aus VS Code arbeiten und die Claude Code-Erweiterung installiert haben, können Sie die Datei zum Kontext hinzufügen, indem Sie sie einfach öffnen. Sie sehen `Nested_Pie_Chart.ipynb` unten in der Eingabezeile von Claude Code. Dann weiß Claude, dass Sie über diese Datei sprechen.
 
 Außerdem können Sie einige Codezeilen auswählen und Claude zeigt **3 lines selected** an. Sie können Claude bitten, schnelle Änderungen an diesen Zeilen vorzunehmen oder Fragen zu stellen. Daher empfehle ich dringend, Claude Code aus VS Code zu verwenden.
 

@@ -13,7 +13,7 @@ In diesem Tutorial erstellen Sie einen Claude Skill, der peer-reviewte medizinis
 ## Wichtige Konzepte
 
 - **Claude Skill** - Ein spezialisiertes Tool, das die Fähigkeiten von Claude Code mit benutzerdefinierten Anweisungen, Code und Dokumentation erweitert, gespeichert in `.claude/skills/`
-- **PubMed** - Kostenlose Datenbank mit 35+ Millionen biomedizinischen Forschungsarbeiten, gepflegt von der US National Library of Medicine
+- **PubMed** - Kostenlose Datenbank mit 40+ Millionen biomedizinischen Forschungsarbeiten, gepflegt von der US National Library of Medicine
 - **Biopython** - Python-Bibliothek, die Tools zur programmgesteuerten Abfrage der PubMed-Datenbank bereitstellt
 - **Accept-Edits-Modus** - Ein Modus (umgeschaltet mit Shift+Tab), der Claude erlaubt, mehrere Dateiänderungen vorzunehmen, ohne jedes Mal um Erlaubnis zu fragen
 

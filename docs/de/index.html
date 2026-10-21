@@ -426,6 +426,13 @@
             #network-graph {
                 height: 350px;
             }
+
+            .lang-switch {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: -1rem 0 1rem;
+            }
         }
     </style>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -652,22 +659,22 @@
             15: { label: 'Claude Code in\nVS Code (Mac)', url: 'Claude_Code_in_VS_Code_Mac', desc: 'Richten Sie VS Code ein, um mit Claude Code auf dem Mac zu arbeiten – bearbeiten Sie Dateien visuell, während Sie KI im Terminal ausführen', level: 1 },
             12: { label: 'Claude Code\n+ Git (Mac)', url: 'Claude_Code_Git_Mac', desc: 'Lernen Sie die Grundlagen der Versionskontrolle mit Git lokal und Claude Code auf dem Mac – kein GitHub-Konto erforderlich', level: 1 },
             3: { label: 'VS Code\nGrundlagen', url: 'VS_Code_Getting_Started', desc: 'Lernen Sie die Grundlagen von Visual Studio Code – Installation, Navigation in der Oberfläche, Erweiterungen und KI-Programmierung mit GitHub Copilot', level: 0 },
-            4: { label: 'Versions-\nkontrolle', url: 'Github_desktop', desc: 'Einführung in Git und GitHub Desktop zur Verwaltung Ihres Codes', level: 0 },
+            4: { label: 'Versionskontrolle', url: 'Github_desktop', desc: 'Einführung in Git und GitHub Desktop zur Verwaltung Ihres Codes', level: 0 },
             5: { label: 'R in\nVS Code', url: 'R_Coding_VS_Code_Guide', desc: 'Richten Sie R mit Code-Vervollständigung, Grafiken und Shiny-App-Unterstützung in VS Code ein', level: 1 },
             6: { label: 'Python in\nVS Code', url: 'Python_Coding_VS_Code_Guide', desc: 'Richten Sie Python mit Code-Vervollständigung, Debugging und Streamlit-Web-Apps ein', level: 1 },
             7: { label: 'R über\nDocker', url: 'R_Coding_Docker_Guide', desc: 'Führen Sie R in isolierten, reproduzierbaren Containern mit vorgefertigten Docker-Images aus', level: 3 },
             8: { label: 'Python über\nDocker', url: 'Python_Coding_Docker_Guide', desc: 'Führen Sie Python in isolierten, reproduzierbaren Containern mit vorgefertigten Docker-Images aus', level: 3 },
             9: { label: 'Claude Code +\nGitHub Desktop', url: 'GitHub_Desktop_Claude_Code_Workflow', desc: 'Kombinieren Sie KI-unterstützte Programmierung mit professionellen Versionskontroll-Workflows', level: 2 },
             10: { label: 'Vibe Coding\nin R', url: 'Vibe_Coding_R_Docker_Guide', desc: 'Erstellen Sie ein echtes NBA-Statistik-Dashboard mit natürlichsprachlichen Anfragen – die vollständige Vibe-Coding-Erfahrung', level: 3 },
-            13: { label: 'Forschungs-\narbeit', url: 'Writing_Research_Paper_Claude_Code', desc: 'Schreiben Sie Forschungsarbeiten schneller mit Claude Code für Recherche, Planung, Entwurf und Überarbeitung – und machen Sie den Workflow dann zu einem wiederverwendbaren Slash-Befehl', level: 2 },
+            13: { label: 'Forschungsarbeit\nmit Claude', url: 'Writing_Research_Paper_Claude_Code', desc: 'Schreiben Sie Forschungsarbeiten schneller mit Claude Code für Recherche, Planung, Entwurf und Überarbeitung – und machen Sie den Workflow dann zu einem wiederverwendbaren Slash-Befehl', level: 2 },
             16: { label: 'Vibe Coding\nin Python', url: 'Vibe_Coding_Python_Docker_Guide', desc: 'Analysieren Sie den Iris-Datensatz mit natürlichsprachlichen Anfragen – beschreiben Sie Visualisierungen und sehen Sie, wie sie erscheinen', level: 3 },
             17: { label: 'RStudio\n(Mac)', url: 'Claude_Code_RStudio_Mac', desc: 'Verwenden Sie Claude Code mit RStudio auf dem Mac – erstellen Sie R-Projekte und verbessern Sie sie mit KI, während RStudio Ihren Code ausführt', level: 2 },
             18: { label: 'RStudio\n(Windows)', url: 'Claude_Code_WSL_RStudio_Windows', desc: 'Verwenden Sie Claude Code mit RStudio unter Windows – bearbeiten Sie R-Code manuell in RStudio, während Claude Code Ihnen aus PowerShell hilft', level: 2 },
             19: { label: 'Claude Code\nfür R (Mac)', url: 'Claude_Code_R_VS_Code_Mac', desc: 'Verwenden Sie den KI-Assistenten Claude Code, um R-Code in VS Code zu schreiben und zu verbessern – fordern Sie Grafiken, Analysen und Code-Verbesserungen an', level: 3 },
             20: { label: 'Claude Code für\nPython (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'Verwenden Sie den KI-Assistenten Claude Code, um Python-Code in VS Code zu schreiben und zu verbessern – fordern Sie Grafiken, Analysen und Code-Verbesserungen an', level: 3 },
-            21: { label: 'Slash-\nBefehle', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Erstellen Sie wiederverwendbare Shortcuts für komplexe Prompts – wandeln Sie lange Anweisungen in einfache Befehle wie /stock-report um', level: 3 },
+            21: { label: 'Slash-Befehle', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'Erstellen Sie wiederverwendbare Shortcuts für komplexe Prompts – wandeln Sie lange Anweisungen in einfache Befehle wie /stock-report um', level: 3 },
             22: { label: 'Claude\nSkill', url: 'Create_Your_First_Claude_Skill', desc: 'Erstellen Sie einen Claude Skill, der automatisch basierend auf dem Kontext aktiviert wird – steigen Sie von manuell aufgerufenen Slash-Befehlen auf Fähigkeiten um, die die KI selbst auslöst', level: 3 },
-            23: { label: 'Medizinische\nForschung Skill', url: 'Medical_Research_Skill', desc: 'Erstellen Sie einen spezialisierten Skill, der PubMed durchsucht und medizinische Forschungsartikel in einfachem Deutsch zusammenfasst', level: 3 },
+            23: { label: 'Claude Skill für\nMedizinforschung', url: 'Medical_Research_Skill', desc: 'Erstellen Sie einen spezialisierten Skill, der PubMed durchsucht und medizinische Forschungsartikel in einfachem Deutsch zusammenfasst', level: 3 },
             24: { label: 'Subagenten\nerstellen', url: 'Create_subagents', desc: 'Erstellen Sie einen autonomen Agenten, der Skills verwendet, um komplexe Aufgaben zu erledigen – erstellen Sie einen Aktien-Auswähler, der Aktien recherchiert, bewertet und Investitionen empfiehlt', level: 3 },
             25: { label: 'Claude Code\nGrundlagen', url: 'Claude_Code_Basic_Operations', desc: 'Lernen Sie die wesentlichen Claude Code-Operationen – Konversationen starten, Kontext verwalten, Slash-Befehle verwenden und mit Dateien arbeiten', level: 0 },
             26: { label: 'Excel in\nVS Code', url: 'Excel_Coding_VS_Code_Guide', desc: 'Erstellen und bearbeiten Sie Excel-Tabellen mit Claude Code – mit echten Formeln, Formatierung und Diagrammen', level: 1 },

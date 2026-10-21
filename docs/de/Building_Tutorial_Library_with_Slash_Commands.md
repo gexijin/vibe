@@ -126,7 +126,7 @@ Das ist die Kraft systematischer Automatisierung.
 
 **P.S.** Dieser Blogbeitrag wurde selbst von Claude Code durch iteratives Prompten erstellt:
 1. „Überprüfe meinen Commit-Verlauf und schreibe einen Blogbeitrag darüber, wie ich diese Tutorials erstellt habe, mit Schwerpunkt auf meiner Verwendung von Slash-Befehlen zur Automatisierung.“
-2. „Reflektiere, dass der /tutorial-Befehl zuerst aus manuellem interaktivem Prompten entstanden ist.“
+2. „Mach deutlich, dass der /tutorial-Befehl zuerst aus manuellem interaktivem Prompten entstanden ist.“
 3. „Betone meinen Tutorial-Stil: praxisnah, fokussiert, Schritt für Schritt.“
 4. „Füge hinzu, dass japanische Übersetzungen zuerst kamen, ohne Slash-Befehle, und dass Claude 8 Subagenten parallel verwendet hat.“
 5. „Füge hinzu, dass Claude die Übersetzungs-Slash-Befehle ohne spezifische Richtlinien geschrieben hat, und die Verwendung von Subagenten.“
