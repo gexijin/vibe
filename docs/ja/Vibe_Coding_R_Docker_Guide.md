@@ -16,8 +16,8 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
 
 ## 必要なもの
 
-- [Docker経由でVS CodeでRコーディング](./R_Coding_Docker_Guide.md)を完了
-- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow.md)を完了
+- [DockerコンテナによるVS CodeでのRコーディング](./R_Coding_Docker_Guide.md)を完了
+- [GitHub DesktopとClaude Codeを組み合わせて使う](./GitHub_Desktop_Claude_Code_Workflow.md)を完了
 - Docker Desktopがインストールされ、起動している
 - 25〜30分
 
@@ -40,7 +40,7 @@ Vibe Codingは、コンピュータとの対話によってプログラミング
 ## ステップ2：Docker設定をコピー
 
 - https://github.com/gexijin/vibe にアクセス
-  - **Apple Silicon Macユーザー向けの注意：** メインのバージョンは、Docker Desktop内蔵のエミュレーションによりApple Silicon上で動作します。動作はしますが、初回のビルドとR自体の動作は遅くなります。
+  - **Apple Silicon Macユーザー向けの注意：** このセットアップはIntel/AMDプロセッサ用に作られています。Docker Desktopがエミュレーションで実行するため動作はしますが、初回のビルドとR自体の動作は遅くなります。
 - **Code**をクリックし、**Download ZIP**をクリック
 - エクスプローラー（Windows）またはFinder（Mac）を開き、**ダウンロード**（Downloads）フォルダに移動
 - ファイルを解凍：Windowsでは右クリックして**すべて展開**を選択、Macではダブルクリック

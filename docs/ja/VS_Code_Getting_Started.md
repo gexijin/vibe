@@ -6,7 +6,7 @@ lang: "ja"
 
 # VS Codeを始めよう
 
-メモ帳やテキストエディットでは色分けも補完もなくて不便——そんなときに頼れるのが[Visual Studio Code](https://code.visualstudio.com)（VS Code）です。**VS Codeはコード用のスマートノート**。書いている内容を理解し、ハイライトや補完、便利な拡張機能で作業を手助けしてくれます。しかも無料で、Windows / macOS / Linuxすべてに対応しています。
+メモ帳やテキストエディットでは色分けも補完もなくて不便——そんなときに頼れるのが[Visual Studio Code](https://code.visualstudio.com)（VS Code）です。**VS Codeはコード用のスマートノート**。書いている内容を理解し、ハイライトや補完、便利な拡張機能で作業を手助けしてくれます。しかも無料で、Windows / macOS / Linuxすべてに対応し、世界中の何百万人もの開発者に使われています。
 
 ## キー概念
 
@@ -32,7 +32,7 @@ lang: "ja"
    - **Linux**：パッケージマネージャーの案内に従う
 - VS Codeを起動
 
-Welcomeタブが表示され、スタートオプションが表示されます。
+はじめに使えるオプションが並んだWelcomeタブが表示されます。
 
 ## ステップ2：画面構成を見てみる
 
@@ -50,7 +50,7 @@ VS Codeは主に5つの領域で構成されています。
 
 - **File** → **Open Folder**（ファイル → フォルダーを開く）をクリック
 - **書類**（Documents）フォルダに移動し、練習用の新しい空のフォルダ（例：`vscode_practice`）を作成（ウィンドウ内の **新規フォルダ**（New Folder）ボタンを使います）
-- その新しいフォルダを選択し、**開く**（または **フォルダーの選択**）をクリック
+- その新しいフォルダを選択し、**開く**（Open）をクリック（Windowsではボタン名が **フォルダーの選択**（Select Folder）の場合があります）
 - 「Do you trust the authors?」（作成者を信頼しますか？）と表示されたら **Yes, I trust the authors**（はい、作成者を信頼します）をクリック
 
 エクスプローラーサイドバーにフォルダ内のファイルが表示されます：
@@ -96,7 +96,7 @@ Markdownは `#` で見出し、`**` で太字、`-` でリストを表す簡単�
 - `README.md` がまだ開いていない場合は開く
 - エディター内を右クリックし、**Markdown Preview Enhanced: Open Preview to the Side** を選択
 
-フォーマットされたMarkdownを表示するプレビューパネルが開きます - 左で編集、右でリアルタイムに変更を確認できます！
+フォーマットされたMarkdownを表示するプレビューパネルが開きます。左で編集、右でリアルタイムに変更を確認できます！
 
 ## ステップ7：統合ターミナルを使う
 
@@ -127,8 +127,8 @@ mkdir notes
 VS Codeには[GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat)が搭載されており、コードの説明、作成、デバッグを支援するAIアシスタントです。
 
 - `README.md` ファイル（またはプロジェクト内の他のファイル）を開く
-- タイトルバーの **Chat > Open Chat** をクリック（Windows/Linuxでは `Ctrl+Alt+I`、Macでは `Ctrl+Cmd+I` を押す）
-- プロンプトが表示されたら、**GitHubアカウント**でサインイン（無料プランも利用可能）
+- タイトルバーの **Chat > Open Chat** をクリック（またはWindows/Linuxでは `Ctrl+Alt+I`、Macでは `Ctrl+Cmd+I` を押す）
+- サインインを求められたら、**GitHubアカウント**でサインイン（無料プランも利用可能）
 - 開いたチャットパネルに「このファイルを説明してください」と入力
 - **Enter**を押す
 

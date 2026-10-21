@@ -17,7 +17,7 @@ Vibe Codingは、コンピュータと会話するようなものです。あな
 ## 必要なもの
 
 - [VS CodeでClaude CodeとExcelを使う](./Excel_Coding_VS_Code_Guide)を完了
-- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow)を完了
+- [GitHub DesktopとClaude Codeを組み合わせて使う](./GitHub_Desktop_Claude_Code_Workflow)を完了
 - グラフ、色分け、ドロップダウンを見るためのMicrosoft Excel、[LibreOffice Calc](https://www.libreoffice.org/download/download-libreoffice/)（無料）、またはGoogle Sheets（Webブラウザで無料で使えます）
 - 25〜30分
 
@@ -154,7 +154,7 @@ budget.xlsxに「集計」という名前の3枚目のシートを追加して�
 家計簿にグラフ、条件付き書式、カテゴリのドロップダウンを追加
 ```
 
-- **Commit to main**をクリックします
+- 下部の青いコミットボタンをクリックします（**Commit 1 file to main**のように表示されます。数字は変更されたファイルの数と一致します）
 - **Push origin**をクリックしてGitHubにバックアップします
 
 家計簿の完全な動作版を保存できました！

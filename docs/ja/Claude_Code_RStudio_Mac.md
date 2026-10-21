@@ -16,7 +16,7 @@ MacでRコードを実行するRStudioと、AIによるコーディング支援�
 
 ## 必要なもの
 
-- [MacでClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイドを完了していること
+- [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS.md)ガイドを完了していること
 - MacにインストールされたRStudio
 - 20〜30分
 

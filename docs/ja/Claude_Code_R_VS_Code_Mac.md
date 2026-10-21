@@ -16,7 +16,7 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 
 ## 必要なもの
 
-- [VS CodeでR](./R_Coding_VS_Code_Guide)チュートリアルを完了していること - VS CodeでRが動作していること
+- [VS CodeでRを実行](./R_Coding_VS_Code_Guide)チュートリアルを完了していること - VS CodeでRが動作していること
 - [MacにClaude Codeをインストール](./Install_Claude_Code_MacOS)チュートリアルを完了していること - Claude Code CLIがインストールされていること
 - 有料のClaudeプラン（ProやMaxなど）またはAnthropic Consoleアカウント - 無料プランにはClaude Codeが含まれていません
 - 20〜30分
@@ -28,7 +28,7 @@ VS CodeでRをセットアップし、手動でコードを書くことができ
 - **書類**（Documents）フォルダに移動します
 - ダイアログの下部にある**新規フォルダ**（New Folder）をクリックします
 - フォルダ名を`claude_r_test`にします
-- **Open**をクリックして新しいフォルダを開きます
+- **開く**（Open）をクリックして新しいフォルダを開きます
 - 「Do you trust the authors?」と表示されたら、**Yes, I trust the authors**（はい、作成者を信頼します）をクリックします
 
 ## ステップ2: Claude Code拡張機能をインストールしてサインイン

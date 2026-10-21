@@ -8,18 +8,18 @@ lang: "ja"
 
 医学研究に追いつくということは、専門用語で満たされた科学論文を読み解くことを意味します。Claudeスキルは、何百もの論文を読んでわかりやすく説明してくれる研究アシスタントのようなものです。何時間もかけてPubMedを検索して技術的な内容を理解する代わりに、簡単な質問をするだけで最新の科学に基づいた明確な要約が得られます。
 
-このチュートリアルでは、査読済みの医学文献を検索するClaudeスキルを作成します。PubMedをクエリするPythonスクリプトを作成し、それをスキルとして統合します。素晴らしいのは、Claudeにすべての作業をさせることができる点です。Claudeはスキルの書き方も知っています。
+このチュートリアルでは、査読済みの医学文献を検索するClaudeスキルを作成します。まず、PubMedをクエリするPythonスクリプトを作成します。素晴らしいのは、Claudeにすべての作業をさせることができる点です。Claudeはスキルの書き方も知っています。
 
 ## 主要な概念
 
 - **Claudeスキル** - `.claude/skills/`に保存されたカスタム指示、コード、ドキュメントでClaude Codeの機能を拡張する専門ツール
-- **PubMed** - 米国国立医学図書館が管理する3,500万以上の生物医学研究論文の無料データベース
+- **PubMed** - 米国国立医学図書館が管理する4,000万以上の生物医学研究論文の無料データベース
 - **Biopython** - PubMedのデータベースをプログラムでクエリするツールを提供するPythonライブラリ
 - **Accept editsモード** - Shift+Tabで切り替えるモードで、Claudeが毎回許可を求めずに複数のファイル変更を行えます
 
 ## 必要なもの
 
-- [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了していること
+- [WindowsでClaude Code用にVS Codeをセットアップ](./Claude_Code_in_VS_Code_Win.md)または[MacでVS CodeからClaude Codeを使う](./Claude_Code_in_VS_Code_Mac.md)を完了していること
 - Pythonがインストールされていること（[VS CodeでPythonを書く](./Python_Coding_VS_Code_Guide.md)を参照）。インストールされていない場合は、Claudeがインストールを手伝うと提案してくれます
 - PubMed検索用のインターネット接続
 - 15〜20分
@@ -143,7 +143,7 @@ VS Codeを開いてスキル構造を確認：
 
 **Windows：**
 - **エクスプローラー**（File Explorer）を開き、`C:\Users\YOUR_USERNAME\Documents\test_claude`に移動
-- フォルダを右クリックして**Codeで開く**（Open with Code）を選択（Windows 11では、先に**その他のオプションを確認**をクリック）。表示されない場合は、VS Codeを開いて**File > Open Folder**（ファイル > フォルダーを開く）を使います
+- フォルダを右クリックして**Code で開く**（Open with Code）を選択（Windows 11では、先に**その他のオプションを確認**をクリック）。表示されない場合は、VS Codeを開いて**File > Open Folder**（ファイル > フォルダーを開く）を使います
 
 **Mac：**
 - **Finder**を開き、`Documents/test_claude`に移動

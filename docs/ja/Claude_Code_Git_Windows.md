@@ -17,7 +17,7 @@ AIの支援を受けて作業しています。AIはファイルを変更しま�
 
 ## 必要なもの
 
-- [WindowsへのClaude Codeのインストール](./Install_CLAUDE_Code_Win)が完了していること
+- [WindowsにClaude Codeをインストール](./Install_CLAUDE_Code_Win)が完了していること
 - 20〜30分
 
 ## ステップ1：PowerShellを開く
@@ -224,7 +224,7 @@ Claudeがコミットを読みやすい形式で表示します。次のよう�
 
 ## ステップ17：コードを確認
 
-- アプリを表示しているブラウザで、右クリックして **ページのソースを表示** を選択
+- アプリを表示しているブラウザで、右クリックして **ページのソースを表示**（View Page Source）を選択
 - ソースコードが表示されます
 - Claude Codeで次のように尋ねます：
   ```
@@ -258,7 +258,7 @@ Claudeがコミットを読みやすい形式で表示します。次のよう�
 - **"not a git repository" エラー：** test_claudeフォルダにいることを確認してください（`cd ~\Documents\test_claude`。ステップ4でOneDriveのパスを使った場合は `cd ~\OneDrive\Documents\test_claude`）
 - **Windows上でtimer.htmlが見つからない：** ファイルは `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html` にあります（ステップ4でOneDriveのパスを使った場合は `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html`）
 - **`git` コマンドが見つからない：** Git for WindowsをインストールしたらPowerShellを閉じて開き直してPATHを更新し、もう一度 `git --version` を実行してください
-- **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証** を選択、**コンソール**（Console）タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
+- **タイマーが動作しない：** ブラウザコンソールを開いて（ページを右クリック、**検証**（Inspect）を選択、**コンソール**（Console）タブをクリック）、赤いエラーメッセージをコピーしてClaudeに貼り付けてください
 
 ## Claudeに依頼できること
 

@@ -17,7 +17,7 @@ Pythonを書きたいけど、どのエディターを使えばいい？PyCharm�
 
 ## 前提条件
 
-- [VS Codeの基本](./VS_Code_Getting_Started.md)を完了していること
+- [VS Codeを始めよう](./VS_Code_Getting_Started.md)を完了していること
 - Pythonとパッケージをダウンロードできるインターネット接続
 - 作業時間：15〜20分
 

@@ -17,8 +17,8 @@ lang: "ja"
 
 ## 必要なもの
 
-- [Docker経由でVS CodeでPythonコーディング](./Python_Coding_Docker_Guide.md)を完了
-- [GitHub DesktopとClaude Codeを使用](./GitHub_Desktop_Claude_Code_Workflow.md)を完了
+- [DockerコンテナによるVS CodeでのPythonコーディング](./Python_Coding_Docker_Guide.md)を完了
+- [GitHub DesktopとClaude Codeを組み合わせて使う](./GitHub_Desktop_Claude_Code_Workflow.md)を完了
 - 20〜25分
 
 ## ステップ1：新しいGitHubリポジトリを作成
@@ -39,7 +39,7 @@ lang: "ja"
 
 ## ステップ2：Docker設定をコピー
 
-[Docker経由でVS CodeでPythonコーディング](./Python_Coding_Docker_Guide.md)で作成した`python-docker-demo`プロジェクトの`.devcontainer`フォルダが必要です。これをコピーすると、このプロジェクトでも同じPython環境（pandas、matplotlib、Claude Codeがインストール済み）を使えます。
+[DockerコンテナによるVS CodeでのPythonコーディング](./Python_Coding_Docker_Guide.md)で作成した`python-docker-demo`プロジェクトの`.devcontainer`フォルダが必要です。これをコピーすると、このプロジェクトでも同じPython環境（pandas、matplotlib、Claude Codeがインストール済み）を使えます。
 
 - エクスプローラー（Windows）またはFinder（Mac）を開く
 - `python-docker-demo`フォルダに移動
@@ -190,7 +190,7 @@ Enterを押すと、Claudeが箱ひげ図のコードを追加します。
 ヒストグラム、散布図、箱ひげ図付きのIrisデータ分析
 ```
 
-- **Commit to main**をクリック
+- 下部の青いコミットボタンをクリック（**Commit 4 files to main**のように表示されます。数字は変更されたファイルの数と一致します）
 - **Push origin**をクリックしてGitHubにバックアップ
 
 最初の動作する分析を保存しました！

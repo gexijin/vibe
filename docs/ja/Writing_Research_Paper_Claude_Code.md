@@ -17,7 +17,7 @@ Claude Codeを研究、ブレインストーミング、計画、下書き、編
 
 ## 必要なもの
 
-- [WindowsのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Win.md)または[MacのVS CodeでClaude Code](./Claude_Code_in_VS_Code_Mac.md)を完了
+- [WindowsでClaude Code用にVS Codeをセットアップ](./Claude_Code_in_VS_Code_Win.md)または[MacでVS CodeからClaude Codeを使う](./Claude_Code_in_VS_Code_Mac.md)を完了
 - 30〜40分
 
 ## ステップ1：プロジェクトフォルダを作成
@@ -26,7 +26,7 @@ Claude Codeを研究、ブレインストーミング、計画、下書き、編
 
 - Windowsでは**エクスプローラー**（File Explorer）、Macでは**Finder**を開く
 - **ドキュメント**（Documents）に移動（Macでは**書類**）
-- `test_claude`という新しいフォルダを作成
+- `test_claude`という新しいフォルダを作成（以前のチュートリアルですでに作成している場合は、そのフォルダをそのまま使ってください）
 
 このプロジェクトに関するすべてがこのフォルダで行われます。
 
@@ -98,9 +98,9 @@ Claudeの要約を確認して、研究の概要を素早く把握しましょ�
 
 研究ドキュメントを読み、元のソースにクリックして情報を確認しましょう：
 
-1. 左側のエクスプローラーパネルで`general_research.md`をクリック
-2. フォーマットされたドキュメントをプレビュー：`general_research.md`タブを右クリックして**Open Preview**（プレビューを開く）を選択
-3. ソースリンクをクリックして元の記事や研究を読む
+- 左側のエクスプローラーパネルで`general_research.md`をクリック
+- フォーマットされたドキュメントをプレビュー：エディター内を右クリックし、**Markdown Preview Enhanced: Open Preview to the Side**を選択（この拡張機能が入っていない場合は、`general_research.md`タブを右クリックして**Open Preview**（プレビューを開く）を選択）
+- ソースリンクをクリックして元の記事や研究を読む
 
 ## ステップ7：アングルをブレインストーミング
 
@@ -233,7 +233,7 @@ Claudeに最終校正をさせましょう：
 
 Claudeの変更を確認しましょう。
 
-**Wordにエクスポート：** VS Codeで`paper.md`タブを右クリックし、**Open Preview**（プレビューを開く）を選択します。プレビューペイン内をクリックし、**Edit > Select All**（編集 > すべて選択）、**Edit > Copy**（編集 > コピー）をクリックします。Microsoft Wordに貼り付けるとフォーマットが保持されます。
+**Wordにエクスポート：** ステップ6と同じ方法で`paper.md`のプレビューを開きます。プレビューペイン内をクリックし、**Edit > Select All**（編集 > すべて選択）、**Edit > Copy**（編集 > コピー）をクリックします。Microsoft Wordに貼り付けるとフォーマットが保持されます。
 
 ## ステップ17：将来の論文用にスラッシュコマンドを作成
 
