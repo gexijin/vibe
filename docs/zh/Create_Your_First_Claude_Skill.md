@@ -17,8 +17,8 @@ lang: "zh"
 
 ## 你需要准备什么
 
-- 完成[创建自定义Slash命令](./Reuse_Prompts_via_Slash_Commands.md)教程
-- 该教程中的`stock-report` slash命令
+- 完成[创建自定义斜杠命令](./Reuse_Prompts_via_Slash_Commands.md)教程
+- 该教程中的`stock-report`斜杠命令
 - 已安装VS Code
 - 10-15分钟
 
@@ -68,15 +68,15 @@ claude
 
 这样可以让Claude创建和修改文件，而无需每次都请求权限。
 
-## 步骤4：让Claude转换Slash命令
+## 步骤4：让Claude转换斜杠命令
 
 输入以下提示：
 ```
-将我的 stock-report slash 命令转换为 Skill。
+将我的 stock-report 斜杠命令转换为 Skill。
 这个 Skill 应该在我询问公司或股票时自动激活。
 ```
 
-Claude会分析现有的slash命令，并将其转换为`.claude/skills/stock-report/`中的Skill。
+Claude会分析现有的斜杠命令，并将其转换为`.claude/skills/stock-report/`中的Skill。
 
 **发生了什么：**Claude创建了一个新的文件夹结构，其中`SKILL.md`包含YAML前置内容，告诉Claude何时自动使用这个Skill。
 
@@ -117,7 +117,7 @@ Claude Code会报告可用的Skill数量。现在，不要输入`/stock-report A
 
 ## 步骤7：比较两种方法
 
-**Slash命令（手动）：**
+**斜杠命令（手动）：**
 ```
 /stock-report AAPL
 ```
@@ -194,10 +194,10 @@ Claude会更新`SKILL.md`中的`description`字段。输入`/reload-skills`让Cl
 
 ## 工作流程概述
 
-- **Slash命令**是手动输入的快捷方式（类似书签）
+- **斜杠命令**是手动输入的快捷方式（类似书签）
 - **Skill**是Claude自动发现和使用的能力（类似了解偏好的助手）
 - **Skill描述**充当指令，告诉Claude："当用户说X时使用我"
-- **两者可以共存** - 使用slash命令执行快速、重复的任务；使用Skill处理复杂的工作流程
+- **两者可以共存** - 使用斜杠命令执行快速、重复的任务；使用Skill处理复杂的工作流程
 - **Skill更具扩展性** - 不需要记住命令名称；Claude根据上下文决定
 
 ---

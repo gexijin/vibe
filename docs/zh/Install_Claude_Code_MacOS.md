@@ -200,7 +200,7 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 ## 下一步
 - [VS Code 入门指南](./VS_Code_Getting_Started.md) - 学习使用 VS Code，一款流行的代码编辑器
-- [在 Mac 上的 VS Code 中使用 Claude Code](./Claude_Code_in_VS_Code_Mac.md) - 在 VS Code 中运行 Claude Code
+- [在 Mac 的 VS Code 中使用 Claude Code](./Claude_Code_in_VS_Code_Mac.md) - 在 VS Code 中运行 Claude Code
 - [使用 Claude Code 撰写研究论文](./Writing_Research_Paper_Claude_Code.md) - 使用 Claude Code 进行学术写作
 
 ## 重新打开 Terminal

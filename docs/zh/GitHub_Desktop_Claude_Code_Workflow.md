@@ -6,7 +6,7 @@ lang: "zh"
 
 # 将 GitHub Desktop 与 Claude Code 结合使用
 
-你正在使用 AI 辅助编程，它会修改你的文件。有时完美无缺，有时不尽如人意。**版本控制就像整个项目的撤销按钮。**每次保存快照(称为"提交")时，就创建了一个还原点，你随时可以回退。
+你正在使用 AI 辅助编程，它会修改你的文件。有时完美无缺，有时不尽如人意。**版本控制就像整个项目的撤销按钮。**每次保存快照（称为"提交"）时，就创建了一个还原点，你随时可以回退。
 
 当你将 [GitHub Desktop](https://desktop.github.com) 与 [Claude Code](https://claude.com/claude-code) 结合使用时，就能获得 AI 加速开发与专业版本控制的完美组合。
 
@@ -32,7 +32,7 @@ lang: "zh"
 ## 你需要准备的内容
 
 - 完成 [在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win) 或 [在 Mac 上安装 Claude Code](./Install_Claude_Code_MacOS)
-- 完成 [版本控制入门](./Github_desktop)
+- 完成 [版本控制入门指南](./Github_desktop)
 - 20 分钟
 
 ## 步骤 1：创建你的项目
@@ -44,6 +44,7 @@ lang: "zh"
   - **Description：** `A timer app built with Claude Code`
   - **Local Path：** 点击 **Choose...** 并选择你的 **Documents**（文稿/文档）文件夹（默认是 Documents 里的一个 `GitHub` 文件夹，所以需要修改）
   - **勾选** "Initialize this repository with a README"
+- 如果 GitHub Desktop 提示该文件夹 "appears to be a Git repository"（看起来已经是一个 Git 仓库），说明你在 Git 教程中已经创建过 `test_claude` 文件夹。请在文件资源管理器或访达（Finder）中把这个旧文件夹重命名（例如改为 `test_claude_old`），然后再试一次
 - 点击 **Create Repository**
 - 点击顶部的 **Publish repository**
 - 点击 **Publish Repository**
@@ -52,7 +53,7 @@ lang: "zh"
 
 ## 步骤 2：让 Claude 创建计时器应用
 
-- 打开**终端**
+- 打开终端：Windows 上用 **PowerShell**，Mac 上用**终端**（Terminal）
 - 导航到你的项目：
   ```
   cd ~/Documents/test_claude
@@ -65,7 +66,7 @@ lang: "zh"
 
 按照安装教程登录你的 Claude 订阅（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）。登录后，你将看到欢迎消息和 Claude Code 提示符。
 
-- 输入这个请求：
+- 复制并粘贴下面整段请求（粘贴可以让所有行保持在一起；如果逐行输入，按回车会提前发送）：
 
   ```
   创建一个简单的倒计时应用，保存为单个文件 timer.html。
@@ -77,7 +78,7 @@ lang: "zh"
   使用内联 CSS 和 JavaScript 保持简单。
   ```
 
-Claude 创建 `timer.html` 文件(需要 10-30 秒)。
+Claude 创建 `timer.html` 文件（需要 10-30 秒）。
 
 ## 步骤 3：测试计时器
 
@@ -92,22 +93,22 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
 
 **如果出现问题：** 继续步骤 4。
 
-## 步骤 4：修复错误(如果需要)
+## 步骤 4：修复错误（如果需要）
 
-- 打开浏览器控制台(在页面上右键点击 → **检查** → **Console** 标签)
+- 打开浏览器控制台（在页面上右键点击 → **检查** → **Console** 标签）
 - 复制任何红色错误消息
 - 返回终端中的 Claude Code
 - 粘贴错误：
   ```
   我看到这个错误：[粘贴错误信息]。你能修复它吗？
   ```
-- 刷新浏览器(点击重新加载按钮或右键点击 → **重新加载**)并再次测试
+- 刷新浏览器（点击重新加载按钮或右键点击 → **重新加载**）并再次测试
 
 ## 步骤 5：查看更改
 
 - 切换到 **GitHub Desktop**
-- **左侧面板：** 显示已更改的文件(`timer.html`)
-- **右侧面板：** 显示代码(绿色 = 添加的内容)
+- **左侧面板：** 显示已更改的文件（`timer.html`）
+- **右侧面板：** 显示代码（绿色 = 添加的内容）
 - 通读以了解 Claude 创建了什么
 
 提交前始终要查看 AI 生成的代码。
@@ -144,7 +145,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
 
 ## 步骤 9：丢弃错误的更改
 
-有时 AI 会让我们走上错误的道路，需要从上次提交(保存点)重新开始。
+有时 AI 会让我们走上错误的道路，需要从上次提交（保存点）重新开始。
 
 - 打开 **GitHub Desktop**
 - 点击 **Branch** 菜单 → **Discard All Changes**
@@ -159,7 +160,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
   ```
   当计时器归零时添加声音通知。这次使用 HTML5 audio 元素，配合 Web Audio API 生成简单的蜂鸣声。确保能优雅地处理浏览器自动播放限制。
   ```
-- 立即测试(刷新浏览器，设置 1 分钟，点击开始)
+- 立即测试（刷新浏览器，设置 1 分钟，点击开始）
 
 **如果正常工作：** 继续步骤 11。
 
@@ -172,7 +173,7 @@ Claude 创建 `timer.html` 文件(需要 10-30 秒)。
   提交并推送我的更改
   ```
 
-Claude 将检查更改、编写提交消息、提交并推送(10-20 秒)。
+Claude 将检查更改、编写提交消息、提交并推送（10-20 秒）。
 
 **如果 Claude 说推送失败**（例如 `could not read Username`，或无法识别 `git`）：切换到 **GitHub Desktop**。如果它仍列出已更改的文件，请自己提交它们（如步骤 6 所示）。然后点击顶部的 **Push origin**——GitHub Desktop 已经登录了 GitHub。
 
@@ -216,9 +217,9 @@ Claude 用通俗易懂的语言解释你的更改。
 
 **"Authentication failed"：** 在 GitHub Desktop 中，打开 **File → Options → Accounts**（Windows）或 **GitHub Desktop → Settings → Accounts**（Mac），然后退出登录并重新登录
 
-**Claude 显示 "not a git repository"：** 确保你在正确的文件夹中(`cd ~/Documents/test_claude`)
+**Claude 显示 "not a git repository"：** 确保你在正确的文件夹中（`cd ~/Documents/test_claude`）
 
-**计时器不工作：** 打开浏览器控制台(右键点击 → **检查** → **Console**)，复制错误，粘贴给 Claude
+**计时器不工作：** 打开浏览器控制台（右键点击 → **检查** → **Console**），复制错误，粘贴给 Claude
 
 **需要帮助？** [GitHub Desktop 文档](https://docs.github.com/en/desktop) • [Claude Code 文档](https://code.claude.com/docs)
 

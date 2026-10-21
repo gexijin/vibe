@@ -16,7 +16,7 @@ lang: "zh"
 
 ## 所需准备
 
-- 已完成[在Windows上安装Claude Code](./Install_CLAUDE_Code_Win)指南
+- 已完成[在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win)指南
 - 在Windows上安装了RStudio
 - 20-30分钟
 
@@ -36,7 +36,7 @@ lang: "zh"
 - 在**Directory name**中输入：`test_claude`
 - 点击"Create project as subdirectory of:"旁边的**Browse**
 - 导航到**文档**（Documents）文件夹
-- 点击**选择文件夹**（Select Folder）
+- 点击**打开**（Open）；在某些版本的RStudio中，这个按钮显示为**选择文件夹**（Select Folder）
 - 点击**Create Project**
 - RStudio创建项目并切换到该项目
 
@@ -191,7 +191,7 @@ summary(iris)
 
 ## 工作流总结
 
-这种混合设置结合了两全其美：
+这种混合设置兼具两者之长：
 
 - **RStudio** - 交互式R控制台、即时图表查看、用于运行代码的熟悉GUI
 - **Claude Code (PowerShell)** - AI驱动的代码生成、审查和改进

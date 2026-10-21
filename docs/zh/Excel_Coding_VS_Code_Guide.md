@@ -135,8 +135,8 @@ Claude Code 也很擅长修复已经乱成一团的电子表格。
 - 让 Claude 用你已有的 CSV 文件生成电子表格（先把文件拖进项目文件夹）
 - 尝试更高级的请求：“添加条件格式，让超过 $500 的类别变成红色”
 - 让 Claude 添加第二个工作表，用来汇总第一个工作表的数据
-- 结合 [将 GitHub Desktop 与 Claude Code 结合使用](./GitHub_Desktop_Claude_Code_Workflow)，随时保存电子表格的各个版本
-- 继续学习 [用 Vibe 编程在 Excel 中打造预算追踪表](./Vibe_Coding_Excel_Guide)，构建一个完整的多工作表项目
+- 配合 [将 GitHub Desktop 与 Claude Code 结合使用](./GitHub_Desktop_Claude_Code_Workflow) 教程，随时保存电子表格的各个版本
+- 继续学习 [使用 Claude Code 在 Excel 中 Vibe 编程打造预算追踪表](./Vibe_Coding_Excel_Guide)，构建一个完整的多工作表项目
 
 ## 故障排除
 

@@ -53,7 +53,7 @@ lang: "zh"
 
 ### [`/translate-chinese`](../assets/commands/translate-chinese.md) & [`/translate-spanish`](../assets/commands/translate-spanish.md) - 本地化引擎
 
-日语翻译最先完成——且未使用斜杠命令。我只是让Claude Code将所有教程翻译成日语。Claude自动启动8个并行子代理同时处理。
+日语翻译最先完成——且未使用斜杠命令。我只是用一条提示词让Claude Code将所有教程翻译成日语。Claude自动启动8个并行子代理同时处理。
 
 后续语言，我让Claude"创建一个翻译教程到中文的斜杠命令"——没给具体指南。Claude生成了包含综合规则的六阶段流程：
 
@@ -83,7 +83,7 @@ lang: "zh"
 
 我使用目标语言编写提示词。我没有用英语让Claude"润色这个日语文档"，而是用ChatGPT将提示词写成日语、中文或西班牙语。这似乎产生了更好的效果——当指令也使用目标语言时，Claude似乎能更自然地用那种语言思考。
 
-例如，润色中文文档时，我使用："修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。Use subagents。" 西班牙语："Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents。" 日语："@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents。"
+例如，润色中文文档时，我使用："修改 @docs/zh/ 目录下的中文文档。中文需要流畅、准确、言简意赅。提示词也要用中文。 Use subagents." 西班牙语："Revisa los documentos en @docs/es/. El español debe ser fluido, preciso y conciso. Use subagents." 日语："@docs/ja/ のドキュメントを修正してください。日本語は流暢で正確、簡潔にしてください。Use subagents."
 
 Opus 4.5等更强模型似乎也有帮助。这个润色步骤捕捉到了那些技术上没错但听起来不自然的别扭表达。结合子代理，我可以在一次批量操作中润色每种语言的25多个文档。
 
@@ -101,10 +101,10 @@ Opus 4.5等更强模型似乎也有帮助。这个润色步骤捕捉到了那些
 
 ## 经验总结
 
-- **先手动，再自动化。** 先手动完成，改进流程，再让Claude保存为命令
-- **命令设计为多阶段流程。** 告诉Claude如何思考问题，而非只告诉做什么
-- **质量控制内置于流程。** 生成命令配套审查命令
-- **协作而非全自动。** 包含批准步骤，Claude处理繁琐部分，你做战略决策
+- **先手动，再自动化。** 先手动完成，改进流程，再让Claude保存为命令。
+- **命令设计为多阶段流程。** 告诉Claude如何思考问题，而非只告诉做什么。
+- **质量控制内置于流程。** 生成命令配套审查命令。
+- **协作而非全自动。** 包含批准步骤，Claude处理繁琐部分，你做战略决策。
 - **使用子代理进行批量处理。** 处理多个文档时，在提示中明确说"Use subagents"。先确认状态栏显示 **accept edits on** 或 **auto mode on**（按 Shift+Tab 切换）——子代理使用相同的模式，因此很少会停下来请求权限，让并行处理顺畅得多。
 
 ## 结论

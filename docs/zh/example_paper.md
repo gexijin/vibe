@@ -2,6 +2,8 @@
 title: "AI不会带来民主化——它会加剧分层"
 lang: "zh"
 ---
+[首页](./)
+
 # AI不会带来民主化——它会加剧分层
 
 ## 摘要
@@ -18,7 +20,7 @@ AI工具可提高工人生产率8%到36%，但系统证据表明AI正在加剧�
 
 ## 个体承诺：已证实的生产率提升
 
-严格研究证实了AI在个体任务层面的有效性。《科学》杂志研究发现，ChatGPT显著提升了专业人士的写作效率和生产力 [2]。圣路易斯联邦储备银行记录显示，使用生成式AI的工人每周节省2.2小时 [1]。企业实践验证了这些实验发现。沃尔玛通过AI优化每年节省7500万美元供应链成本。宝马在装配线使用AI计算机视觉，将车辆缺陷减少60% [5]。这些成果展现出变革性潜力。
+多项严格研究证实了AI在个体任务层面的有效性。《科学》杂志研究发现，ChatGPT显著提升了专业人士的写作效率和生产力 [2]。圣路易斯联邦储备银行记录显示，使用生成式AI的工人每周节省2.2小时 [1]。企业实践验证了这些实验发现。沃尔玛通过AI优化每年节省7500万美元供应链成本。宝马在装配线使用AI计算机视觉，将车辆缺陷减少60% [5]。这些成果展现出变革性潜力。
 
 技能均衡效应尤其令人期待。经合组织综合多项实验研究后得出结论：AI"有助于缩小劳动力的技能差距" [6]。低技能工人现可更高效地执行高级任务。组织采用率从2023年的55%跃升至2024年的78% [7]。Anthropic研究估计，AI系统普及可推动美国劳动生产率年均增长1.8% [8]。最大影响将集中于软件、管理、营销和客户服务领域。
 
@@ -28,11 +30,11 @@ AI工具可提高工人生产率8%到36%，但系统证据表明AI正在加剧�
 
 三个相互关联的障碍决定了谁能获得AI收益。这些障碍将个体赋能转化为系统性排斥。
 
-**访问不平等构成第一道过滤器。** 大型企业采用AI的速度是小型企业的三倍多。在经合组织国家，39%的大型企业使用AI，小型企业仅12% [9]。这一差距超过社交媒体或云计算等技术的差异。小型企业缺乏平均8个月部署周期所需的资源，无法等待13个月才见投资回报 [10]。
+**访问不平等构成第一道过滤器。** 大型企业的AI采用率是小型企业的三倍多。在经合组织国家，39%的大型企业使用AI，小型企业仅12% [9]。这一差距超过社交媒体或云计算等技术的差异。小型企业缺乏平均8个月部署周期所需的资源，无法等待13个月才见投资回报 [10]。
 
 地理差异加剧了这些鸿沟。欧盟跨国AI采用差距从2021到2024年翻了一番，从2-16个百分点扩大到4-28个百分点 [11]。经合组织指出，增长"更多由领先者拉开距离驱动，而非落后者追赶"。投资回报数据揭示赢家通吃的动态：顶级表现者实现10.3倍回报，平均仅3.7倍 [5]。
 
-**知识不平等构成第二道障碍。** 女性采用AI工具的速度比男性低25%。研究表明，即使同一职业，她们在工作中使用ChatGPT的可能性也低16个百分点 [12]。这种差距主要源于知识差异。知识差距解释了约75%的AI使用性别差异 [13]。全球AI人才中女性仅占22%，AI开发高管职位中不到14% [14]。这形成持续加剧知识差距的人才管道问题。教育集中加剧了这些模式。AI使用集中于更年轻、高学历和高社会参与度群体 [15]。
+**知识不平等构成第二道障碍。** 女性的AI工具采用率比男性低25%。研究表明，即使同一职业，她们在工作中使用ChatGPT的可能性也低16个百分点 [12]。这种差距主要源于知识差异。知识差距解释了约75%的AI使用性别差异 [13]。全球AI人才中女性仅占22%，AI开发高管职位中不到14% [14]。这形成持续加剧知识差距的人才管道问题。教育集中加剧了这些模式。AI使用集中于更年轻、高学历和高社会参与度群体 [15]。
 
 **机会不平等完成了排斥机制。** 斯坦福研究记录了基于职业阶段的就业结果显著逆转。2022年末至2025年7月间，AI相关职业的入门级工人就业机会减少6%，同类职业资深工人反增6%到9% [4]。期间，软件工程和客户服务的入门级职位下降20%。大型科技公司2024年应届生招聘较2023年减少25%。超过27,000个科技岗位流失归因于AI驱动的冗余 [16]。
 
@@ -54,38 +56,38 @@ AI工具可提高工人生产率8%到36%，但系统证据表明AI正在加剧�
 
 ## 参考文献
 
-[1] Bick, A., et al. (2025). "The Impact of Generative AI on Work Productivity." Federal Reserve Bank of St. Louis. https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity
+[1] Bick, A., et al. (2025). "The Impact of Generative AI on Work Productivity." Federal Reserve Bank of St. Louis. <https://www.stlouisfed.org/on-the-economy/2025/feb/impact-generative-ai-work-productivity>
 
-[2] Noy, S., & Zhang, W. (2023). "Experimental evidence on the productivity effects of generative artificial intelligence." *Science*. https://www.science.org/doi/10.1126/science.adh2586
+[2] Noy, S., & Zhang, W. (2023). "Experimental evidence on the productivity effects of generative artificial intelligence." *Science*. <https://www.science.org/doi/10.1126/science.adh2586>
 
-[3] International Monetary Fund. (2025). "AI Adoption and Inequality." IMF Working Papers. https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729
+[3] International Monetary Fund. (2025). "AI Adoption and Inequality." IMF Working Papers. <https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729>
 
-[4] Stanford University & Fortune. (2025). "First-of-its-kind Stanford study says AI is starting to have a 'significant and disproportionate impact' on entry-level workers in the U.S." https://fortune.com/2025/08/26/stanford-ai-entry-level-jobs-gen-z-erik-brynjolfsson/
+[4] Stanford University & Fortune. (2025). "First-of-its-kind Stanford study says AI is starting to have a 'significant and disproportionate impact' on entry-level workers in the U.S." <https://fortune.com/2025/08/26/stanford-ai-entry-level-jobs-gen-z-erik-brynjolfsson/>
 
-[5] McKinsey. (2025). "The state of AI in 2025: Agents, innovation, and transformation." https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+[5] McKinsey. (2025). "The state of AI in 2025: Agents, innovation, and transformation." <https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai>
 
-[6] OECD. (2025). "Unlocking productivity with generative AI: Evidence from experimental studies." https://www.oecd.org/en/blogs/2025/07/unlocking-productivity-with-generative-ai-evidence-from-experimental-studies.html
+[6] OECD. (2025). "Unlocking productivity with generative AI: Evidence from experimental studies." <https://www.oecd.org/en/blogs/2025/07/unlocking-productivity-with-generative-ai-evidence-from-experimental-studies.html>
 
-[7] Stanford HAI. (2025). "The 2025 AI Index Report." https://hai.stanford.edu/ai-index/2025-ai-index-report
+[7] Stanford HAI. (2025). "The 2025 AI Index Report." <https://hai.stanford.edu/ai-index/2025-ai-index-report>
 
-[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." https://www.anthropic.com/research/estimating-productivity-gains
+[8] Anthropic. (2025). "Estimating AI productivity gains from Claude conversations." <https://www.anthropic.com/research/estimating-productivity-gains>
 
-[9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf
+[9] OECD. (2024). "What Impact Has AI Had on Wage Inequality?" <https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/what-impact-has-ai-had-on-wage-inequality_8943dfe0/7fb21f59-en.pdf>
 
-[10] IBM. (2024). "Data Suggests Growth in Enterprise Adoption of AI is Due to Widespread Deployment by Early Adopters." https://newsroom.ibm.com/2024-01-10-Data-Suggests-Growth-in-Enterprise-Adoption-of-AI-is-Due-to-Widespread-Deployment-by-Early-Adopters
+[10] IBM. (2024). "Data Suggests Growth in Enterprise Adoption of AI is Due to Widespread Deployment by Early Adopters." <https://newsroom.ibm.com/2024-01-10-Data-Suggests-Growth-in-Enterprise-Adoption-of-AI-is-Due-to-Widespread-Deployment-by-Early-Adopters>
 
-[11] OECD. (2025). "Emerging divides in the transition to artificial intelligence." OECD Regional Development Papers No. 147. https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/emerging-divides-in-the-transition-to-artificial-intelligence_eeb5e120/7376c776-en.pdf
+[11] OECD. (2025). "Emerging divides in the transition to artificial intelligence." OECD Regional Development Papers No. 147. <https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/06/emerging-divides-in-the-transition-to-artificial-intelligence_eeb5e120/7376c776-en.pdf>
 
-[12] Humlum, A., & Vestergaard, E. (2024). Research on gender gaps in AI adoption. University of Chicago Booth School of Business. As reported in CNBC (2025). https://www.cnbc.com/2025/05/08/ai-risk-chatgpt-gender-gap-jobs-work.html
+[12] Humlum, A., & Vestergaard, E. (2024). Research on gender gaps in AI adoption. University of Chicago Booth School of Business. As reported in CNBC (2025). <https://www.cnbc.com/2025/05/08/ai-risk-chatgpt-gender-gap-jobs-work.html>
 
-[13] ScienceDirect. (2024). "The gen AI gender gap." https://www.sciencedirect.com/science/article/abs/pii/S0165176524002982
+[13] ScienceDirect. (2024). "The gen AI gender gap." <https://www.sciencedirect.com/science/article/abs/pii/S0165176524002982>
 
-[14] Interface EU. (2025). "AI's Missing Link: The Gender Gap in the Talent Pool." https://www.interface-eu.org/publications/ai-gender-gap
+[14] Interface EU. (2025). "AI's Missing Link: The Gender Gap in the Talent Pool." <https://www.interface-eu.org/publications/ai-gender-gap>
 
-[15] CEPR. (2025). "Generative AI: Uneven adoption, labour market returns, and policy implications." https://cepr.org/voxeu/columns/generative-ai-uneven-adoption-labour-market-returns-and-policy-implications
+[15] CEPR. (2025). "Generative AI: Uneven adoption, labour market returns, and policy implications." <https://cepr.org/voxeu/columns/generative-ai-uneven-adoption-labour-market-returns-and-policy-implications>
 
-[16] World Economic Forum. (2025). "Is AI closing the door on entry-level job opportunities?" https://www.weforum.org/stories/2025/04/ai-jobs-international-workers-day/
+[16] World Economic Forum. (2025). "Is AI closing the door on entry-level job opportunities?" <https://www.weforum.org/stories/2025/04/ai-jobs-international-workers-day/>
 
-[17] Swiss Institute of Artificial Intelligence. (2025). "AI and Earnings Inequality: The Entry-Level Squeeze That Education Must Solve." https://siai.org/research/2025/10/202510280934
+[17] Swiss Institute of Artificial Intelligence. (2025). "AI and Earnings Inequality: The Entry-Level Squeeze That Education Must Solve." <https://siai.org/research/2025/10/202510280934>
 
-[18] CEPR. (2024). "Should AI stay or should AI go: The promises and perils of AI for productivity and growth." https://cepr.org/voxeu/columns/should-ai-stay-or-should-ai-go-promises-and-perils-ai-productivity-and-growth
+[18] CEPR. (2024). "Should AI stay or should AI go: The promises and perils of AI for productivity and growth." <https://cepr.org/voxeu/columns/should-ai-stay-or-should-ai-go-promises-and-perils-ai-productivity-and-growth>
