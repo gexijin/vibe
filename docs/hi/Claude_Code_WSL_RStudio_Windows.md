@@ -36,7 +36,7 @@ lang: "hi"
 - **Directory name** में टाइप करें: `test_claude`
 - "Create project as subdirectory of:" के बगल में **Browse** पर क्लिक करें
 - अपने **Documents** फ़ोल्डर पर जाएँ
-- **Select Folder** पर क्लिक करें
+- **Open** पर क्लिक करें (RStudio के कुछ वर्शन में इस बटन पर **Select Folder** लिखा होता है)
 - **Create Project** पर क्लिक करें
 - RStudio प्रोजेक्ट बनाता है और उस पर स्विच करता है
 

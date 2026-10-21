@@ -426,6 +426,13 @@
             #network-graph {
                 height: 350px;
             }
+
+            .lang-switch {
+                position: static;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: -1rem 0 1rem;
+            }
         }
     </style>
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
@@ -510,7 +517,7 @@
                 <li><a href="Reuse_Prompts_via_Slash_Commands">कस्टम स्लैश कमांड बनाएँ</a></li>
                 <li><a href="Create_Your_First_Claude_Skill">अपनी पहली Claude Skill बनाएँ</a></li>
                 <li><a href="Medical_Research_Skill">मेडिकल रिसर्च के लिए एक Claude Skill बनाएँ</a></li>
-                <li><a href="Create_subagents">Claude Code में एक सबएजेंट बनाएँ</a></li>
+                <li><a href="Create_subagents">Claude Code में एक Subagent बनाएँ</a></li>
             </ol>
 
             <br>
@@ -667,9 +674,9 @@
             20: { label: 'Claude Code\nPython के लिए (Mac)', url: 'Claude_Code_Python_VS_Code_Mac', desc: 'VS Code में Python कोड लिखने और सुधारने के लिए Claude Code AI सहायक का उपयोग करें—प्लॉट, विश्लेषण, और कोड सुधार माँगें', level: 3 },
             21: { label: 'स्लैश\nकमांड', url: 'Reuse_Prompts_via_Slash_Commands', desc: 'जटिल प्रॉम्प्ट के लिए पुन: उपयोग करने योग्य शॉर्टकट बनाएँ—लंबे निर्देशों को /stock-report जैसे सरल कमांड में बदलें', level: 3 },
             22: { label: 'Claude\nSkill', url: 'Create_Your_First_Claude_Skill', desc: 'एक Claude Skill बनाएँ जो संदर्भ के आधार पर अपने-आप सक्रिय हो जाए—मैन्युअल स्लैश कमांड से AI-सक्रिय क्षमताओं की ओर अपग्रेड करें', level: 3 },
-            23: { label: 'मेडिकल रिसर्च\nके लिए Claude Skill', url: 'Medical_Research_Skill', desc: 'एक विशेष स्किल बनाएँ जो PubMed खोजे और मेडिकल शोध लेखों को सरल भाषा में संक्षेप में बताए', level: 3 },
-            24: { label: 'सबएजेंट\nबनाएँ', url: 'Create_subagents', desc: 'एक स्वायत्त एजेंट बनाएँ जो जटिल कार्यों को पूरा करने के लिए स्किल्स का उपयोग करे—एक स्टॉक-पिकर बनाएँ जो शोध करे, स्कोर दे, और निवेश की सिफ़ारिश करे', level: 3 },
-            25: { label: 'Claude Code\nबुनियादी बातें', url: 'Claude_Code_Basic_Operations', desc: 'आवश्यक Claude Code संचालन सीखें—बातचीत शुरू करना, संदर्भ प्रबंधित करना, स्लैश कमांड का उपयोग करना, और फ़ाइलों के साथ काम करना', level: 0 },
+            23: { label: 'मेडिकल रिसर्च\nके लिए Claude Skill', url: 'Medical_Research_Skill', desc: 'एक विशेष Skill बनाएँ जो PubMed खोजे और मेडिकल शोध लेखों को सरल भाषा में संक्षेप में बताए', level: 3 },
+            24: { label: 'Subagent\nबनाएँ', url: 'Create_subagents', desc: 'एक स्वायत्त एजेंट बनाएँ जो जटिल कार्यों को पूरा करने के लिए Skills का उपयोग करे—एक स्टॉक-पिकर बनाएँ जो शोध करे, स्कोर दे, और निवेश की सिफ़ारिश करे', level: 3 },
+            25: { label: 'Claude Code\nबुनियादी बातें', url: 'Claude_Code_Basic_Operations', desc: 'आवश्यक Claude Code संचालन सीखें—बातचीत शुरू करना, कॉन्टेक्स्ट प्रबंधित करना, स्लैश कमांड का उपयोग करना, और फ़ाइलों के साथ काम करना', level: 0 },
             26: { label: 'Excel\nVS Code में', url: 'Excel_Coding_VS_Code_Guide', desc: 'Claude Code से Excel स्प्रेडशीट बनाएँ और बदलें—असली फ़ॉर्मूला, फ़ॉर्मेटिंग और चार्ट के साथ', level: 1 },
             27: { label: 'Vibe Coding\nExcel में', url: 'Vibe_Coding_Excel_Guide', desc: 'सिर्फ़ सादी भाषा में अनुरोध करके कई शीट और चार्ट वाला एक असली बजट ट्रैकर बनाएँ—vibe coding का पूरा अनुभव', level: 3 },
             28: { label: 'Claude Desktop\nइंस्टॉल करें', url: 'Install_Claude_Desktop_App', desc: 'वैकल्पिक: Windows और Mac के लिए Claude Desktop चैट ऐप इंस्टॉल करें—एक आम चैट विंडो, जो Claude Code से अलग है', level: 0 }

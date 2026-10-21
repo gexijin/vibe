@@ -98,7 +98,7 @@ description: Generates reports on companies... Use when users ask about stocks, 
 [बाकी निर्देश]
 ```
 
-`description` फ़ील्ड ही सबसे ज़रूरी है—यह Claude को बिल्कुल बताता है कि इस Skill को कब अपने आप सक्रिय करना है।
+`description` फ़ील्ड ही सबसे ज़रूरी है—यह Claude को ठीक-ठीक बताता है कि इस Skill को कब अपने आप सक्रिय करना है।
 
 ## चरण 6: Skill को टेस्ट करें (बिना कमांड टाइप किए)
 

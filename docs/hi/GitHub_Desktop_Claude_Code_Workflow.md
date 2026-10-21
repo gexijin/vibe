@@ -44,6 +44,7 @@ Claude Code के साथ एक सिंपल टाइमर ऐप ब�
   - **Description:** `A timer app built with Claude Code`
   - **Local Path:** **Choose...** पर क्लिक करें और अपना **Documents** फ़ोल्डर चुनें (डिफ़ॉल्ट रूप से यहाँ Documents के अंदर का `GitHub` फ़ोल्डर होता है, इसलिए इसे बदलें)
   - **"Initialize this repository with a README"** को **चेक करें**
+- अगर GitHub Desktop कहे कि फ़ोल्डर "appears to be a Git repository", तो इसका मतलब है कि Git ट्यूटोरियल से आपके पास पहले से एक `test_claude` फ़ोल्डर है। File Explorer या Finder में उस पुराने फ़ोल्डर का नाम बदल दें (उदाहरण के लिए `test_claude_old`), फिर दोबारा कोशिश करें
 - **Create Repository** पर क्लिक करें
 - ऊपर **Publish repository** पर क्लिक करें
 - **Publish Repository** पर क्लिक करें
@@ -52,7 +53,7 @@ Claude Code के साथ एक सिंपल टाइमर ऐप ब�
 
 ## चरण 2: Claude से टाइमर ऐप बनाने के लिए कहें
 
-- अपना **टर्मिनल** खोलें
+- अपना टर्मिनल खोलें: Windows पर **PowerShell**, Mac पर **Terminal**
 - अपने प्रोजेक्ट पर जाएं:
   ```
   cd ~/Documents/test_claude
@@ -65,7 +66,7 @@ Claude Code के साथ एक सिंपल टाइमर ऐप ब�
 
 इंस्टॉलेशन ट्यूटोरियल का पालन करते हुए अपने Claude सब्सक्रिप्शन से लॉग इन करें ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md))। लॉग इन करने के बाद, आपको एक वेलकम मैसेज और Claude Code प्रॉम्प्ट दिखेगा।
 
-- यह अनुरोध टाइप करें:
+- यह पूरा अनुरोध कॉपी करके पेस्ट करें (पेस्ट करने से सारी लाइनें एक साथ रहती हैं; बीच में Enter दबाने से अनुरोध अधूरा ही भेज दिया जाएगा):
 
   ```
   timer.html नाम की एक ही फ़ाइल में एक सिंपल काउंटडाउन टाइमर ऐप बनाओ।

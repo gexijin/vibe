@@ -40,7 +40,7 @@ Vibe coding अपने कंप्यूटर के साथ बातच�
 ## चरण 2: Docker कॉन्फ़िगरेशन कॉपी करें
 
 - https://github.com/gexijin/vibe पर जाएँ
-  - **Apple Silicon Macs के लिए नोट:** मुख्य वर्शन Docker Desktop के बिल्ट-इन इम्यूलेशन के ज़रिए Apple Silicon पर चलता है। यह काम करता है, लेकिन पहला बिल्ड और खुद R धीमे चलते हैं।
+  - **Apple Silicon Macs के लिए नोट:** यह सेटअप Intel/AMD प्रोसेसर के लिए बना है। Docker Desktop इसे इम्यूलेशन के ज़रिए चलाता है, इसलिए यह काम करता है, लेकिन पहला बिल्ड और खुद R धीमे चलते हैं।
 - **Code** पर क्लिक करें, फिर **Download ZIP** पर
 - File Explorer (Windows) या Finder (Mac) खोलें और अपने **Downloads** फ़ोल्डर में जाएँ
 - फ़ाइल को अनज़िप करें: Windows पर, उस पर राइट-क्लिक करके **Extract All** चुनें; Mac पर, उस पर डबल-क्लिक करें
