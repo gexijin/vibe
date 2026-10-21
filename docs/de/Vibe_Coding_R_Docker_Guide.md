@@ -40,7 +40,7 @@ Sie haben jetzt ein lokales Git-Repository und ein Backup auf GitHub.
 ## Schritt 2: Docker-Konfiguration kopieren
 
 - Gehen Sie zu https://github.com/gexijin/vibe
-  - **Hinweis für Apple-Silicon-Macs:** Die Hauptversion läuft auf Apple Silicon über die eingebaute Emulation von Docker Desktop. Das funktioniert, aber der erste Build und R selbst sind langsamer.
+  - **Hinweis für Apple-Silicon-Macs:** Diese Einrichtung ist für Intel/AMD-Prozessoren gebaut. Docker Desktop führt sie per Emulation aus. Das funktioniert, aber der erste Build und R selbst sind langsamer.
 - Klicken Sie auf **Code** und dann auf **Download ZIP**
 - Öffnen Sie den **Datei-Explorer** (File Explorer, Windows) oder den Finder (Mac) und gehen Sie zu Ihrem Ordner **Downloads**
 - Entpacken Sie die Datei: Klicken Sie unter Windows mit der rechten Maustaste darauf und wählen Sie **Alle extrahieren** (Extract All); auf dem Mac doppelklicken Sie darauf
@@ -277,7 +277,7 @@ Dieses Tutorial kombinierte mehrere Technologien in einem Workflow:
 - **hoopR-Paket** - NBA-Datenquelle mit einfacher API
 - **Shiny-Framework** - Interaktive Web-Apps in R
 
-Die Magie liegt nicht in einem einzelnen Tool – es ist, wie Vibe Coding Sie beschreiben lässt, was Sie wollen, und schnell iterieren. Sie sind von einem leeren Projekt zu einem funktionierenden Sport-Dashboard in unter 30 Minuten gekommen, ohne eine einzige Zeile Code manuell zu schreiben.
+Die Magie liegt nicht in einem einzelnen Tool, sondern darin, dass Sie mit Vibe Coding einfach beschreiben, was Sie wollen, und schnell iterieren können. Sie sind von einem leeren Projekt zu einem funktionierenden Sport-Dashboard in unter 30 Minuten gekommen, ohne eine einzige Zeile Code manuell zu schreiben.
 
 ## Täglicher Workflow
 
@@ -288,7 +288,7 @@ Nach dieser ersten Einrichtung wird Ihre tägliche Vibe-Coding-Routine:
 3. **Claude Code starten** - Geben Sie `claude` im Terminal ein
 4. **Beschreiben Sie Ihr Ziel** - „Füge eine Funktion hinzu, die …“ oder „Behebe den Fehler, bei dem …“
 5. **Testen Sie die Änderungen** - Führen Sie Ihre App aus, prüfen Sie, ob sie funktioniert
-6. **Iterieren oder committen** - Wenn kaputt, beschreiben Sie die Korrektur; wenn funktioniert, committen Sie mit GitHub Desktop
+6. **Iterieren oder committen** - Wenn etwas nicht funktioniert, beschreiben Sie die Korrektur; wenn alles funktioniert, committen Sie mit GitHub Desktop
 7. **Regelmäßig pushen** - Klicken Sie auf **Push origin**, um auf GitHub zu sichern
 
 Je mehr Sie üben, desto besser werden Sie darin zu beschreiben, was Sie wollen. Vibe Coding ist eine Fähigkeit – Sie lernen, welche Arten von Beschreibungen am besten funktionieren und wie Sie große Ideen in testbare Teile aufteilen.

@@ -61,7 +61,7 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 ```
 - Claude Code erstellt die Datei – Sie sehen `article.md` im Explorer-Panel auf der linken Seite erscheinen
 - Klicken Sie auf `article.md` im Explorer, um sie im Editor anzuzeigen
-- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
+- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste in den Editorbereich von `article.md` und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side** (die Erweiterung aus [Erste Schritte mit VS Code](./VS_Code_Getting_Started)). Falls Sie diese Erweiterung nicht haben, klicken Sie stattdessen mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
 - Sie sehen das Markdown mit korrekten Überschriften, Aufzählungspunkten und Formatierung gerendert
 
 ## Claude später in VS Code wieder öffnen

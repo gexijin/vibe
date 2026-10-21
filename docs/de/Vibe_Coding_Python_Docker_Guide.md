@@ -112,7 +112,7 @@ Committe diese Änderungen.
 ```
 ## Schritt 6: Zweiter Vibe - Zusammenfassende Statistiken
 
-Bevor Sie Visualisierungen erstellen, verstehen Sie, was die Daten enthalten.
+Bevor Sie Visualisierungen erstellen, sollten Sie verstehen, was die Daten enthalten.
 
 - Geben Sie im Claude Code-Terminal ein:
 
@@ -195,7 +195,7 @@ Erstelle einen Box-Plot, der die Blütenblattlängen der drei Arten vergleicht. 
 Iris-Datenanalyse mit Histogrammen, Streudiagrammen und Box-Plots
 ```
 
-- Klicken Sie auf **Commit to main**
+- Klicken Sie unten auf die blaue Commit-Schaltfläche (sie lautet etwa **Commit 4 files to main** – die Zahl entspricht der Anzahl der geänderten Dateien)
 - Klicken Sie auf **Push origin**, um auf GitHub zu sichern
 
 Sie haben Ihre erste funktionierende Analyse gespeichert!
@@ -212,10 +212,10 @@ Vibe Coding glänzt beim Iterieren. Versuchen Sie, Funktionen hinzuzufügen, ind
 - "Füge statistische Testergebnisse hinzu, die Arten vergleichen (ANOVA oder t-Test)"
 - "Erstelle einen Pair-Plot, der alle Variablenbeziehungen nach Arten gefärbt zeigt"
 
-Nach jedem erfolgreichen Feature:
-- Testen Sie es, indem Sie das Skript ausführen
-- Wenn es funktioniert, committen Sie mit GitHub Desktop
-- Wenn es nicht funktioniert, sagen Sie Claude den Fehler und bitten Sie um Korrektur
+Nach jeder erfolgreichen neuen Funktion:
+- Testen Sie sie, indem Sie das Skript ausführen
+- Wenn sie funktioniert, committen Sie mit GitHub Desktop
+- Wenn sie nicht funktioniert, sagen Sie Claude den Fehler und bitten Sie um Korrektur
 - Wenn behoben, committen Sie die funktionierende Version
 
 

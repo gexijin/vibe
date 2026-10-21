@@ -53,12 +53,12 @@ Bevor Sie VS Code konfigurieren, müssen Sie wissen, wo R auf Ihrem System insta
 
 ### Für Windows-Benutzer
 
-1. Öffnen Sie den **Datei-Explorer**
-2. Navigieren Sie zu `C:\Program Files\R\` (im deutschen Datei-Explorer wird dieser Ordner als **Programme** angezeigt)
-3. Sie sehen einen Ordner wie `R-4.6.1` (Ihre Versionsnummer kann abweichen)
-4. Öffnen Sie diesen Ordner → Öffnen Sie den `bin`-Ordner
-5. Sie sehen dort `R.exe`
-6. Der vollständige Pfad ist: `C:\Program Files\R\R-4.6.1\bin\R.exe`
+- Öffnen Sie den **Datei-Explorer**
+- Navigieren Sie zu `C:\Program Files\R\` (im deutschen Datei-Explorer wird dieser Ordner als **Programme** angezeigt)
+- Sie sehen einen Ordner wie `R-4.6.1` (Ihre Versionsnummer kann abweichen)
+- Öffnen Sie diesen Ordner → Öffnen Sie den `bin`-Ordner
+- Sie sehen dort `R.exe`
+- Der vollständige Pfad ist: `C:\Program Files\R\R-4.6.1\bin\R.exe`
 
 **Schreiben Sie sich Ihre Versionsnummer auf oder merken Sie sie sich** (z.B. `R-4.6.1`) – Sie brauchen sie in Schritt 4.
 
@@ -172,7 +172,7 @@ hist(iris$Sepal.Length)
 ## Schritt 8: R-Code interaktiv ausführen
 
 - Wählen Sie bei geöffneter `analysis.R` eine Codezeile aus und drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um sie auszuführen
-- Wenn Sie kein Terminal offen haben, öffnet das erste `Strg+Enter` / `Cmd+Enter` ein R-Terminal. Das zweite führt den Code aus.
+- Wenn noch kein R-Terminal geöffnet ist, erscheint oben im Fenster eine Liste **Run R code**. Wählen Sie **Create R terminal** (nicht **New R Interactive window**, das zusätzliche Software benötigt). Das R-Terminal öffnet sich und führt Ihre Zeile aus
 - Beobachten Sie die Ausgabe im Terminal. Das Histogramm öffnet sich in einem Plot-Tab innerhalb von VS Code, neben Ihrem Skript
 - Sie können auch alle Zeilen auswählen und sie auf die gleiche Weise ausführen.
 

@@ -22,7 +22,7 @@ Sie arbeiten mit KI-Unterstützung. Die KI nimmt Änderungen an Ihren Dateien vo
 
 ## Schritt 1: PowerShell öffnen
 
-- Klicken Sie auf das **Start**-Menü
+- Klicken Sie auf die Schaltfläche **Start**
 - Geben Sie `PowerShell` ein
 - Klicken Sie auf **Windows PowerShell**, um es zu öffnen
 
@@ -89,7 +89,7 @@ Hier wird Ihr Projekt gespeichert.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und das Eingabefeld von Claude Code.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 7: Claude bitten, Git zu initialisieren
 

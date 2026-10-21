@@ -154,7 +154,7 @@ Füge der Spalte Kategorie im Blatt Ausgaben eine Datenüberprüfung hinzu, soda
 Diagramme, bedingte Formatierung und Kategorie-Dropdown zum Budget-Tracker hinzufügen
 ```
 
-- Klicken Sie auf **Commit to main**
+- Klicken Sie unten auf die blaue Commit-Schaltfläche (sie lautet etwa **Commit 1 file to main** – die Zahl entspricht der Anzahl der geänderten Dateien)
 - Klicken Sie auf **Push origin**, um auf GitHub zu sichern
 
 Sie haben eine vollständig funktionierende Version Ihres Budget-Trackers gespeichert!

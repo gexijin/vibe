@@ -44,6 +44,7 @@ Erstellen Sie eine einfache Timer-App mit Claude Code und verfolgen Sie alle Än
   - **Description:** `Eine mit Claude Code erstellte Timer-App`
   - **Local Path:** Klicken Sie auf **Choose...** und wählen Sie Ihren Ordner **Dokumente** (Documents) aus (standardmäßig ist hier ein Ordner `GitHub` innerhalb von Dokumente eingetragen – ändern Sie das also)
   - **Aktivieren Sie** „Initialize this repository with a README“
+- Wenn GitHub Desktop meldet, dass der Ordner „appears to be a Git repository“ (also bereits ein Git-Repository zu sein scheint), haben Sie schon einen Ordner `test_claude` aus dem Git-Tutorial. Benennen Sie diesen alten Ordner im Datei-Explorer bzw. im Finder um (zum Beispiel in `test_claude_old`) und versuchen Sie es dann erneut
 - Klicken Sie auf **Create Repository**
 - Klicken Sie oben auf **Publish repository**
 - Klicken Sie auf **Publish Repository**
@@ -52,7 +53,7 @@ Sie haben jetzt ein lokales Projekt und ein Cloud-Backup auf GitHub.
 
 ## Schritt 2: Claude bitten, die Timer-App zu erstellen
 
-- Öffnen Sie Ihr **Terminal**
+- Öffnen Sie Ihr Terminal: **PowerShell** unter Windows, **Terminal** auf dem Mac
 - Navigieren Sie zu Ihrem Projekt:
   ```
   cd ~/Documents/test_claude
@@ -63,9 +64,9 @@ Sie haben jetzt ein lokales Projekt und ein Cloud-Backup auf GitHub.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und das Eingabefeld von Claude Code.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
-- Geben Sie diese Anfrage ein:
+- Kopieren Sie diese gesamte Anfrage und fügen Sie sie ein (beim Einfügen bleiben alle Zeilen zusammen; wenn Sie Enter drücken, würde sie zu früh abgeschickt):
 
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.

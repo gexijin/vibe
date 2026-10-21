@@ -67,7 +67,7 @@ Schreibe einen kurzen Artikel, der erklärt, warum LLMs gerne das Markdown-Forma
 ```
 - Claude Code erstellt die Datei – Sie sehen `article.md` im Explorer-Panel auf der linken Seite erscheinen
 - Klicken Sie auf `article.md` im Explorer, um sie im Editor anzuzeigen
-- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
+- Um den formatierten Artikel in der Vorschau anzuzeigen: Klicken Sie mit der rechten Maustaste in den Editorbereich von `article.md` und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side** (die Erweiterung aus [Erste Schritte mit VS Code](./VS_Code_Getting_Started)). Falls Sie diese Erweiterung nicht haben, klicken Sie stattdessen mit der rechten Maustaste auf den Tab `article.md` und wählen Sie **Open Preview**
 - Sie sehen das Markdown mit korrekten Überschriften, Aufzählungspunkten und Formatierung gerendert
 
 ## Claude später in VS Code wieder öffnen
@@ -83,7 +83,7 @@ VS Code merkt sich Ihre letzten Ordner, daher ist Option A mit Open Recent norma
 
 - Bitten Sie Claude Code, eine bestehende Codebasis zu erklären: „Erkläre, was dieses Projekt macht“
 - Lassen Sie Claude Code Ihnen beim Schreiben neuer Funktionen helfen: „Füge eine Funktion hinzu, die den Durchschnitt einer Liste berechnet“
-- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler, kannst du ihn beheben?“
+- Verwenden Sie Claude Code, um Fehler zu beheben: „Dieser Code gibt einen Fehler aus, kannst du ihn beheben?“
 - Probieren Sie die Claude Code-Erweiterung für ein visuelles Chat-Panel mit Inline-Diffs aus. Wenn Sie `claude` im Terminal von VS Code ausführen, wird sie meist automatisch installiert (falls nicht, suchen Sie in Extensions nach „Claude Code“). Öffnen Sie eine beliebige Datei und klicken Sie dann auf das Spark-Symbol oben rechts im Editor
 
 ## Fehlerbehebung

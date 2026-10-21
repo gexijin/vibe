@@ -112,7 +112,7 @@ Der Container hat R mit gängigen Paketen vorinstalliert. Führen wir ein einfac
 - Navigieren Sie im VS Code Explorer zu `R/iris_analysis.R`
 - Klicken Sie darauf, um die Datei zu öffnen
 - Sie sehen R-Code, der den Iris-Datensatz analysiert
-- Klicken Sie auf **View > Command Palette**, geben Sie `R: Create R Terminal` ein und drücken Sie **Enter**. Unten öffnet sich ein R-Terminal mit einer `>`-Eingabeaufforderung (dieser Container sendet Ihren Code an das gerade verwendete Terminal, lassen Sie dieses R-Terminal also ausgewählt)
+- Klicken Sie auf **View > Command Palette**, geben Sie `R: Create R Terminal` ein und drücken Sie **Enter**. Unten öffnet sich ein R-Terminal mit dem R-Prompt `>` (dieser Container sendet Ihren Code an das gerade verwendete Terminal, lassen Sie dieses R-Terminal also ausgewählt)
 - Wenn VS Code anbietet, das Paket **sess** zu installieren, klicken Sie auf **Yes** (oder **Install bundled sess**) und warten Sie, bis die Installation abgeschlossen ist. Damit kann VS Code Ihre Plots anzeigen
 - Klicken Sie wieder in `iris_analysis.R` und wählen Sie die erste Zeile aus: `data(iris)`
 - Drücken Sie `Strg+Enter` (Windows/Linux) oder `Cmd+Enter` (Mac), um sie auszuführen

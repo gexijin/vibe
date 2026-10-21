@@ -6,7 +6,7 @@ lang: "de"
 
 # Erste Schritte mit Versionskontrolle
 
-Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen. Sie können sich nicht erinnern, was Sie geändert haben, und wünschen sich, Sie könnten zum funktionierenden Stand zurückkehren. Versionskontrolle ist wie Speicherpunkte in einem Videospiel – jedes Mal, wenn Sie Ihre Arbeit „committen“, erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. [GitHub](https://github.com) speichert Ihre Speicherpunkte in der Cloud, sodass Ihr Code sicher gesichert und von jedem Computer aus zugänglich ist.
+Sie arbeiten an einem Projekt und nehmen Änderungen vor, die alles kaputtmachen. Sie können sich nicht erinnern, was Sie geändert haben, und wünschen sich, Sie könnten zum funktionierenden Stand zurückkehren. Versionskontrolle ist wie Speicherpunkte in einem Videospiel – jedes Mal, wenn Sie Ihre Arbeit „committen“, erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. [GitHub](https://github.com) speichert Ihre Speicherpunkte in der Cloud, sodass Ihr Code zuverlässig gesichert und von jedem Computer aus zugänglich ist.
 
 ## Wichtige Konzepte
 

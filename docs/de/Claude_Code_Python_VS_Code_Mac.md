@@ -16,7 +16,7 @@ Sie haben Python in VS Code eingerichtet und können Code manuell schreiben. Jet
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [Python in VS Code](./Python_Coding_VS_Code_Guide) - Python sollte in VS Code funktionieren
+- Abgeschlossenes Tutorial [Python-Programmierung in VS Code](./Python_Coding_VS_Code_Guide) - Python sollte in VS Code funktionieren
 - Abgeschlossenes Tutorial [Claude Code auf dem Mac installieren](./Install_Claude_Code_MacOS) - Claude Code CLI sollte installiert sein
 - Ein kostenpflichtiger Claude-Plan (z. B. Pro oder Max) oder ein Anthropic-Console-Konto – der kostenlose Plan enthält Claude Code nicht
 - 20-30 Minuten
