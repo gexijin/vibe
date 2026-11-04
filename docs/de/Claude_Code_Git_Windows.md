@@ -1,16 +1,16 @@
 ---
-title: "Claude Code mit Versionskontrolle für Windows"
+title: "Claude Code mit lokaler Versionskontrolle für Windows"
 lang: "de"
 ---
 [Startseite](./)
 
-# Claude Code mit Versionskontrolle für Windows
+# Claude Code mit lokaler Versionskontrolle für Windows
 
-Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal sind die Änderungen brillant. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit"), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
+Sie arbeiten mit KI-Unterstützung. Die KI nimmt Änderungen an Ihren Dateien vor. Manchmal sind die Änderungen brillant. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt, zu dem Sie immer zurückkehren können. Das Beste daran: Sie können dies komplett auf Ihrem Computer machen und Claude Code erledigt es für Sie.
 
 ## Wichtige Konzepte
 
-- **WSL (Windows Subsystem for Linux)** - Führt Linux-Tools wie Git nativ unter Windows aus
+- **PowerShell** - Das integrierte Befehlszeilen-Tool von Windows, mit dem Sie hier Git und Claude Code ausführen
 - **Git** - Verfolgt jede Änderung an Ihren Dateien auf Ihrem Computer und erstellt Wiederherstellungspunkte, zu denen Sie jederzeit zurückkehren können
 - **Commit** - Ein Snapshot Ihres Projekts zu einem bestimmten Zeitpunkt mit einer Beschreibung dessen, was sich geändert hat
 - **Claude Code** - KI-Programmierassistent, der Code schreibt, Fehler behebt und Git-Operationen durch einfache Anfragen erledigt
@@ -18,35 +18,33 @@ Sie arbeiten mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. 
 ## Was Sie benötigen
 
 - Abgeschlossenes Tutorial [Claude Code unter Windows installieren](./Install_CLAUDE_Code_Win)
-- WSL und Ubuntu installiert
-- 20 Minuten
+- 20-30 Minuten
 
-## Schritt 1: Ubuntu-Terminal öffnen
+## Schritt 1: PowerShell öffnen
 
-- Klicken Sie auf das **Start**-Menü
-- Geben Sie `Ubuntu` ein
-- Klicken Sie auf **Ubuntu**, um das Terminal zu öffnen
+- Klicken Sie auf die Schaltfläche **Start**
+- Geben Sie `PowerShell` ein
+- Klicken Sie auf **Windows PowerShell**, um es zu öffnen
 
-Sie sehen eine Eingabeaufforderung, die mit `$` endet.
+**Hinweis:** Wenn Sie statt der nativen Installation den optionalen WSL/Ubuntu-Weg eingerichtet haben, öffnen Sie stattdessen die App **Ubuntu** – Git und Claude Code funktionieren dort genauso, nur mit Linux-Pfaden (`/mnt/c/Users/...`) statt `~\Documents\...`.
 
 ## Schritt 2: Git installieren
 
-- Geben Sie diesen Befehl ein und drücken Sie Enter:
-  ```
-  sudo apt-get install git
-  ```
-- Wenn Sie dazu aufgefordert werden, geben Sie Ihr Passwort ein und drücken Sie Enter
-- Warten Sie, bis die Installation abgeschlossen ist (10-30 Sekunden)
-- Überprüfen Sie, ob Git installiert ist:
+- Überprüfen Sie, ob Git bereits installiert ist:
   ```
   git --version
   ```
-
-Sie sollten etwas wie `git version 2.34.1` sehen.
+- Wenn Sie eine Versionsnummer wie `git version 2.45.0` sehen, springen Sie zu Schritt 3
+- Wenn Sie eine Fehlermeldung sehen, installieren Sie Git for Windows:
+  - Gehen Sie zu [git-scm.com/download/win](https://git-scm.com/download/win)
+  - Klicken Sie auf dieser Seite oben auf **Click here to download** und öffnen Sie dann das Installationsprogramm, wenn der Download abgeschlossen ist
+  - Klicken Sie sich mit **Next** durch das Installationsprogramm und übernehmen Sie die Standardoptionen
+  - Klicken Sie auf **Install** und dann auf **Finish**
+  - Schließen und öffnen Sie PowerShell erneut und überprüfen Sie dann noch einmal mit `git --version`
 
 ## Schritt 3: Git mit Ihrer Identität konfigurieren
 
-Git muss wissen, wer Sie sind, für Commit-Nachrichten.
+Git muss für Commit-Nachrichten wissen, wer Sie sind.
 
 - Legen Sie Ihren Namen und Ihre E-Mail fest (kann fiktiv sein):
   ```
@@ -54,23 +52,22 @@ Git muss wissen, wer Sie sind, für Commit-Nachrichten.
   git config --global user.email "ihre.email@beispiel.com"
   ```
 
-Die Verwendung Ihres Namens und Ihrer E-Mail hilft Ihnen zu identifizieren, wer Änderungen vorgenommen hat, wenn mehrere Personen daran arbeiten.
+Mit Name und E-Mail können Sie später erkennen, wer welche Änderung vorgenommen hat, wenn mehrere Personen am Projekt arbeiten.
 
-## Schritt 4: Zu einem Windows-Ordner navigieren
+## Schritt 4: Zu Ihrem Dokumente-Ordner navigieren
 
-WSL kann über `/mnt/c/` auf Ihre Windows-Dateien zugreifen.
-
-- Navigieren Sie zu Ihrem Windows-Benutzerordner:
+- Navigieren Sie zu Ihrem Dokumente-Ordner:
   ```
-  cd /mnt/c/Users/IHR_BENUTZERNAME/Documents
+  cd ~\Documents
   ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren tatsächlichen Windows-Benutzernamen.
 - Überprüfen Sie, ob Sie am richtigen Ort sind:
   ```
   pwd
   ```
 
-Sie sollten `/mnt/c/Users/IHR_BENUTZERNAME/Documents` sehen.
+Sie sollten einen Pfad sehen, der auf `\Documents` endet.
+
+Wenn Sie `Cannot find path` sehen, wird Ihr Dokumente-Ordner wahrscheinlich von OneDrive gesichert. Führen Sie stattdessen `cd ~\OneDrive\Documents` aus. Auf deutschem Windows heißt dieser Ordner meist `OneDrive\Dokumente`; verwenden Sie dann `cd ~\OneDrive\Dokumente`.
 
 ## Schritt 5: Projektordner erstellen
 
@@ -83,7 +80,7 @@ Sie sollten `/mnt/c/Users/IHR_BENUTZERNAME/Documents` sehen.
   cd test_claude
   ```
 
-Hier wird Ihr Projekt leben.
+Hier wird Ihr Projekt gespeichert.
 
 ## Schritt 6: Claude Code starten
 
@@ -92,7 +89,7 @@ Hier wird Ihr Projekt leben.
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](Install_CLAUDE_Code_Win.md) beschrieben. Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 7: Claude bitten, Git zu initialisieren
 
@@ -103,12 +100,15 @@ Melden Sie sich mit Ihrem Claude-Abonnement an, wie im [Installations-Tutorial](
 
 Claude initialisiert ein Git-Repository in Ihrem Ordner (dauert 2-5 Sekunden). Sie haben jetzt Versionskontrolle!
 
+Wenn Claude um Erlaubnis fragt, zeigt es ein kleines Menü mit **Yes** und **No**. Wählen Sie mit den Pfeiltasten **Yes** und drücken Sie **Enter**. Das kann in diesem Tutorial einige Male vorkommen.
+
 ## Schritt 8: Die Timer-App erstellen
 
-- Geben Sie in Claude Code ein:
+- Kopieren Sie in Claude Code diese gesamte Anfrage und fügen Sie sie ein (beim Einfügen bleiben alle Zeilen zusammen; wenn Sie Enter drücken, würde sie zu früh abgeschickt):
+
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
-  Sie sollte haben:
+  Sie soll Folgendes enthalten:
   - Ein Eingabefeld zum Einstellen der Minuten
   - Start- und Stopp-Schaltflächen
   - Eine Anzeige mit der verbleibenden Zeit im MM:SS-Format
@@ -118,7 +118,7 @@ Claude erstellt `timer.html` (dauert 10-30 Sekunden) mit dem CSS- und JavaScript
 
 ## Schritt 9: Den Timer testen
 
-- Öffnen Sie den Windows Datei-Explorer
+- Öffnen Sie den **Datei-Explorer** (File Explorer) von Windows
 - Navigieren Sie zu `Dokumente\test_claude`
 - Doppelklicken Sie auf `timer.html`, um sie in Ihrem Browser zu öffnen
 - Testen Sie den Timer:
@@ -126,7 +126,9 @@ Claude erstellt `timer.html` (dauert 10-30 Sekunden) mit dem CSS- und JavaScript
   - Klicken Sie auf **Start**
   - Beobachten Sie den Countdown
 
-**Wenn etwas nicht funktioniert:** Beschreiben Sie in Claude Code den Fehler: „Ich sehe diesen Fehler: [beschreiben Sie, was passiert ist]. Kannst du das reparieren?"
+**Sie sehen `test_claude` nicht?** Wenn OneDrive Ihre Dokumente sichert, zeigt der Datei-Explorer einen anderen Dokumente-Ordner an. Klicken Sie in die Adressleiste des Datei-Explorers, fügen Sie `%USERPROFILE%\Documents\test_claude` ein und drücken Sie **Enter**.
+
+**Wenn etwas nicht funktioniert:** Beschreiben Sie in Claude Code den Fehler: „Ich sehe diesen Fehler: [beschreiben Sie, was passiert ist]. Kannst du das reparieren?“
 
 ## Schritt 10: Claude bitten zu committen
 
@@ -148,7 +150,7 @@ Sie haben Ihren ersten Speicherpunkt erstellt! Sie können immer zu dieser funkt
   ```
   Füge zwei Schaltflächen oben hinzu. Wenn ich darauf klicke, starten automatisch 1- und 5-Minuten-Timer.
   ```
-- Aktualisieren Sie Ihren Browser-Tab
+- Aktualisieren Sie Ihren Browser-Tab (drücken Sie `F5` oder `Strg + R`)
 - Testen Sie: Klicken Sie auf die **5 min**-Schaltfläche
 - Wenn es funktioniert, committen Sie die Änderungen:
   ```
@@ -164,7 +166,7 @@ Wir haben einen 2. Speicherpunkt erstellt. Diese Version hat die zwei funktionie
   ```
   Füge eine 15-Minuten-Schaltfläche hinzu.
   ```
-- Aktualisieren Sie Ihren Browser-Tab
+- Aktualisieren Sie Ihren Browser-Tab (drücken Sie `F5` oder `Strg + R`)
 - Testen Sie: Klicken Sie auf die **15 min**-Schaltfläche
 
 **Für dieses Tutorial:** Tun Sie so, als würde die 15-Minuten-Schaltfläche nicht korrekt funktionieren. Committen Sie noch nicht – wir üben das Verwerfen schlechter Änderungen.
@@ -177,8 +179,7 @@ Manchmal funktioniert KI-Code nicht und Sie müssen von Ihrem letzten Speicherpu
   ```
   Verwirf diese Änderungen.
   ```
-- Claude wird um Bestätigung bitten
-- Drücken Sie `1` und dann Enter
+- Claude bittet Sie meist zuerst um eine Bestätigung. Wenn ein Menü erscheint, wählen Sie **Yes** (mit den Pfeiltasten oder der Zahl daneben) und drücken Sie **Enter**. Wenn Claude in einer Nachricht nachfragt, tippen Sie `ja, verwirf die Änderungen an timer.html` und drücken Sie **Enter**
 - Aktualisieren Sie Ihren Browser – die 15-Minuten-Schaltfläche verschwindet
 
 Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioniert wieder mit nur den 1- und 5-Minuten-Schaltflächen!
@@ -199,7 +200,7 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
 
 - Geben Sie in Claude Code ein:
   ```
-  Der Ton sollte weiterlaufen, bis ich auf eine Schaltfläche klicke, um ihn stummzuschalten.
+  Der Ton soll weiterlaufen, bis ich eine Schaltfläche zum Schlummern drücke.
   ```
 - Aktualisieren Sie den Browser und testen Sie, nachdem Claude fertig ist (stellen Sie den Timer auf 1 Minute)
 - Wenn es funktioniert, committen Sie die Änderungen:
@@ -216,15 +217,15 @@ Claude verwirft die neuen Änderungen, die wir nicht mögen. Der Timer funktioni
 
 Claude zeigt Ihre Commits in einem lesbaren Format an. Sie sehen:
 - Ihren ursprünglichen Timer-App-Commit
-- Den Preset-Schaltflächen (1-min und 5-min) Commit
+- Den Commit mit den Preset-Schaltflächen (1 und 5 Minuten)
 - Den Tonbenachrichtigungs-Commit
-- Die Schlummer-Schaltfläche.
+- Den Schlummer-Schaltflächen-Commit
 
 Beachten Sie, dass der 15-Minuten-Schaltflächen-Versuch nicht da ist – Sie haben ihn verworfen!
 
 ## Schritt 17: Den Code untersuchen
 
-- Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Quelltext anzeigen**
+- Klicken Sie im Browser, der die App zeigt, mit der rechten Maustaste und wählen Sie **Seitenquelltext anzeigen** (View Page Source)
 - Sie können den Quellcode dafür sehen.
 - Fragen Sie in Claude Code:
   ```
@@ -255,18 +256,18 @@ Denken Sie daran: Nach jeder Funktion testen, nach jedem Erfolg committen, Fehls
 
 ## Fehlerbehebung
 
-- **„not a git repository"-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude`)
-- **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html`
-- **Git fragt nach Passwort:** Sie haben das `sudo`-Passwort falsch eingegeben – versuchen Sie es noch einmal sorgfältig
-- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Console** klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
+- **„not a git repository“-Fehler:** Stellen Sie sicher, dass Sie im test_claude-Ordner sind (`cd ~\Documents\test_claude` oder, wenn Sie in Schritt 4 den OneDrive-Pfad verwendet haben, `cd ~\OneDrive\Documents\test_claude` – auf deutschem Windows meist `cd ~\OneDrive\Dokumente\test_claude`)
+- **timer.html in Windows nicht gefunden:** Die Datei ist unter `C:\Users\IHR_BENUTZERNAME\Documents\test_claude\timer.html` (oder `C:\Users\IHR_BENUTZERNAME\OneDrive\Documents\test_claude\timer.html` – auf deutschem Windows meist `C:\Users\IHR_BENUTZERNAME\OneDrive\Dokumente\test_claude\timer.html` –, wenn Sie in Schritt 4 den OneDrive-Pfad verwendet haben)
+- **Befehl `git` nicht gefunden:** Schließen und öffnen Sie PowerShell nach der Installation von Git for Windows erneut, damit der PATH aktualisiert wird, und führen Sie dann noch einmal `git --version` aus
+- **Timer funktioniert nicht:** Öffnen Sie die Browser-Konsole (Rechtsklick auf die Seite, **Untersuchen** auswählen, Tab **Konsole** (Console) klicken), kopieren Sie alle roten Fehlermeldungen und fügen Sie sie Claude ein
 
 ## Was Sie Claude fragen können
 
-- `Welche Dateien habe ich geändert?` - Uncommittete Änderungen sehen
+- `Welche Dateien habe ich geändert?` - Noch nicht committete Änderungen sehen
 - `Zeige mir die Unterschiede` - Genau sehen, welcher Code sich geändert hat
 - `Erkläre, was der Timer-Code macht` - Die Implementierung verstehen
 - `Erstelle einen Branch namens experiment` - Riskante Änderungen sicher ausprobieren
-- `Gehe zurück zum vorherigen Commit` - Alles seit dem letzten Commit rückgängig machen
+- `Mach alles seit meinem letzten Commit rückgängig` - Änderungen verwerfen, die Sie noch nicht gespeichert haben
 
 Claude erledigt alle Git-Operationen durch natürliche Sprache – keine Befehle zum Auswendiglernen!
 
@@ -276,6 +277,6 @@ Claude erledigt alle Git-Operationen durch natürliche Sprache – keine Befehle
 - **Entwicklung:** Claude schreibt Code, Sie testen im Browser
 - **Versionskontrolle:** Claude erledigt alle Git-Operationen über einfache Anfragen
 - **Sicherheit:** Schlechte Änderungen jederzeit verwerfen, zu jedem vorherigen Commit zurückkehren
-- **Lokal:** Alles bleibt auf Ihrem Computer, kein Konto oder Internet erforderlich
+- **Lokal:** Ihr Git-Verlauf bleibt auf Ihrem Computer – kein GitHub-Konto nötig (Claude Code selbst braucht trotzdem Internet und Ihr Claude-Konto)
 
 Erstellt von [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) am 8. Dezember 2025.

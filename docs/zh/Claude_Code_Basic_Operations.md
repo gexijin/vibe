@@ -10,7 +10,7 @@ lang: "zh"
 
 ## 关键概念
 
-- **Workspace（工作空间）** - 从某个文件夹启动Claude Code，该文件夹就是会话的工作空间
+- **Workspace（工作空间）** - 你启动Claude Code时所在的文件夹；在该会话中，Claude会读取和编辑其中的文件
 - **REPL（读取-求值-打印循环）** - 交互式会话，你输入命令，Claude回应，对话持续进行直到退出
 - **Context（上下文）** - Claude记住的代码和对话历史数量；类似工作记忆，会随时间填满
 - **Slash Commands（斜杠命令）** - 以`/`开头的内置快捷命令，用于执行特定操作，如清除历史或显示帮助
@@ -19,13 +19,14 @@ lang: "zh"
 
 - 已从[Windows](Install_CLAUDE_Code_Win.md)或[Mac](Install_Claude_Code_MacOS.md)教程安装Claude Code
 - 基本熟悉Terminal或命令提示符
-- 互联网连接
 - 15-20分钟
 
 ## 步骤1：打开你的Terminal
 
-- **Windows**：按Windows键，输入`Ubuntu`，然后按Enter打开WSL终端
-- **Mac**：按`Cmd+Space`，输入`Terminal`，然后按Enter
+- **Windows**：按Windows键，输入`PowerShell`，然后按Enter打开PowerShell
+- **Mac**：按`Cmd+Space`，输入`终端`（或`Terminal`），然后按Enter
+
+**注意：** 如果你在Windows安装教程中选择了可选的WSL/Ubuntu方式，而不是原生安装，请改为打开**Ubuntu**应用，并在下面的步骤中使用Linux风格的路径（例如`/mnt/c/Users/YourName/...`）。
 
 将打开一个文本窗口，你可以在其中输入命令。
 
@@ -45,12 +46,13 @@ cd data_projects
 - 在浏览器访问[https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects)
 - 点击右上方的绿色**Code**按钮
 - 点击**Download ZIP**
-- 将ZIP文件解压到一个便于记忆的位置（如桌面或文档文件夹）
+- 将ZIP文件解压到你的“下载”（Downloads）文件夹中。GitHub会把解压后的文件夹命名为**data_projects-main**——请将其重命名为**data_projects**，以便与本教程其余部分保持一致。在Windows上，**Extract All**（全部解压缩）可能会生成“文件夹套文件夹”的结构（data_projects-main → data_projects-main）。打开它：如果里面只看到另一个**data_projects-main**文件夹，请把这个内层文件夹移到“下载”文件夹中，并将其重命名为**data_projects**。
 - 在Terminal中导航到解压后的文件夹：
-  - **Windows**：`cd C:\Users\YourName\Downloads\data_projects-main`
-  - **Mac/Linux**：`cd ~/Downloads/data_projects-main`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-将`YourName`替换为实际用户名，如果解压到其他位置，请相应调整路径。
+如果解压到其他位置，请相应调整路径。
 
 ## 步骤3：从文件夹启动Claude Code
 
@@ -60,7 +62,7 @@ cd data_projects
 claude
 ```
 
-按照[安装教程](Install_CLAUDE_Code_Win.md)使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
+按照安装教程（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
 ## 步骤4：询问关于项目的问题
 
@@ -90,7 +92,7 @@ Claude会检查Git历史（如果可用）并告诉你最近的提交。
 
 ## 步骤5：基本斜杠命令
 
-输入`/`然后按Enter，查看所有可用命令。以下是最重要的几个：
+输入`/`即可查看所有可用命令。以下是最重要的几个：
 
 **查看所有命令：**
 
@@ -131,15 +133,16 @@ Claude会检查Git历史（如果可用）并告诉你最近的提交。
 
 结束会话并返回正常Terminal提示符。你也可以按两次**Ctrl + C**。
 
-## 步骤6：键盘快捷键
+## 步骤6：批准更改并使用快捷键
 
-这些快捷键让使用Claude Code更快：
+新会话通常以**Auto**模式启动，在此模式下Claude会直接处理常规的编辑和命令，无需询问。如果Claude请求权限，会显示一个小菜单，其中有**Yes**和**No**等选项。用方向键选中你的选择，然后按**Enter**。如果你想亲自批准每一项更改，请按**Shift+Tab**，直到提示框下方的模式显示为**Manual**。
 
-- **Shift+Tab** - 在计划模式、编辑模式或正常模式之间切换 - 复杂任务时先进行计划
-- **Alt+Enter**（Windows/Linux）或**Option+Return**（Mac）- 在消息中添加新行而不发送
+另外，一些键盘快捷键能让使用Claude Code更快：
+
+- **Shift+Tab** - 在不同模式之间循环切换（Auto、Manual、Accept Edits、Plan）；当前模式显示在提示框正下方。处理复杂任务时，Plan模式可以让你在Claude做任何修改之前先审查计划
 - **Ctrl+C** - 取消当前操作或Claude的响应
-- **Ctrl+D** - Claude请求权限时批准文件更改
-- **Esc** - 关闭菜单或取消当前输入
+- **Esc** - 中途停止Claude的响应，或关闭菜单
+- **`\`然后按Enter**（或**Ctrl+J**）- 在消息中添加新行而不发送
 
 ## 步骤7：始终创建CLAUDE.md文件
 
@@ -165,14 +168,14 @@ Claude将创建包含项目摘要的文件。该文件保存在项目根目录�
 
 Claude将读取该笔记本并解释它的作用、工作原理以及代码实现。这会将文件带入上下文。
 
-如果你在VS Code中使用Claude Code并已安装Claude Code扩展，只需打开文件即可将其添加到上下文。你会在命令窗口右下角看到`In Nested_Pie_Chart.ipynb`。此时Claude就知道你在谈论这个文件。
+如果你在VS Code中使用Claude Code并已安装Claude Code扩展，只需打开文件即可将其添加到上下文。你会在Claude Code提示框底部看到`Nested_Pie_Chart.ipynb`。此时Claude就知道你在谈论这个文件。
 
 此外，你可以选择几行代码，Claude会显示**3 lines selected**（已选择3行）。你可以要求Claude快速修改这些行或提出问题。因此，强烈建议在VS Code中使用Claude Code。
 
 
-## 步骤9：使用Linux命令执行操作
+## 步骤9：使用终端命令执行操作
 
-Claude可以运行Linux命令来执行各种操作。
+Claude可以运行终端命令（Mac/Linux上为Bash，Windows上为Git Bash或PowerShell）来执行各种操作。
 
 - 安装软件
   ```
@@ -198,9 +201,9 @@ Claude可以运行Linux命令来执行各种操作。
   运行它并将新代码和图表保存在同一文件夹中
   ```
 
-我们可以问这个模糊的问题，因为我们刚要求它解释代码。之后会发生很多事情，Claude会安装软件、排查错误、解决环境问题——都是自动完成。
+Claude会安装软件、排查错误、管理环境——都是自动完成。
 
-你基本拥有了一个Linux bash命令专家。只要管理好权限并批准操作，就能非常高效。
+你基本拥有了一个终端命令专家。只要管理好权限并批准操作，就能非常高效。
 
 ## 下一步
 
@@ -213,9 +216,9 @@ Claude可以运行Linux命令来执行各种操作。
 
 ## 故障排除
 
-- **"Command not found"（命令未找到）错误** - Claude Code未安装或不在PATH中。运行`npm install -g @anthropic-ai/claude-code`安装
+- **"Command not found"（命令未找到）错误** - Claude Code未安装或不在PATH中。重新按照[Windows](Install_CLAUDE_Code_Win.md)或[Mac](Install_Claude_Code_MacOS.md)安装教程操作，或直接重新运行安装程序：`irm https://claude.ai/install.ps1 | iex`（Windows PowerShell）或`curl -fsSL https://claude.ai/install.sh | bash`（Mac/WSL）
 - **Claude给出过时信息** - 使用`/clear`清除上下文并重新询问。长对话会填满Claude的内存
-- **文件更改不起作用** - 确保在项目文件夹中有写权限。Claude会在修改文件前请求批准——按Ctrl+D批准
+- **文件更改不起作用** - 确保在项目文件夹中有写权限。如果Claude请求批准，在弹出的菜单中选择**Yes**
 - **上下文快速填满** - 使用`/context`检查使用情况。接近满时，使用`/clear`开始全新对话
 
 ## 工作流程概述
@@ -225,7 +228,7 @@ Claude可以运行Linux命令来执行各种操作。
 - 在项目文件夹中使用`claude`启动
 - 用自然语言提问
 - Claude根据需要读取文件并响应
-- 请求代码更改——Claude在修改文件前会请求权限
+- 请求代码更改——如果Claude请求权限，选择**Yes**
 - 更换话题或上下文满时使用`/clear`
 - 完成后使用`/exit`
 

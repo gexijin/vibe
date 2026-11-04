@@ -10,15 +10,15 @@ Vous avez configuré R dans VS Code et pouvez écrire du code manuellement. Main
 
 ## Concepts Clés
 
-- **[Extension Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - Extension VS Code qui intègre l'assistant IA Claude directement dans votre éditeur avec des modifications de code en ligne
+- **[Extension Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)** - Extension VS Code qui intègre l'assistant IA Claude directement dans votre éditeur avec des modifications proposées directement dans votre code
 - **Panneau de Discussion** - Panneau latéral dans VS Code où vous conversez avec Claude à propos de votre code
-- **Modifications en Ligne** - Les suggestions de modifications de code de Claude apparaissent directement dans vos fichiers avec des diffs que vous pouvez accepter ou rejeter
+- **Modifications intégrées** - Les suggestions de modifications de code de Claude apparaissent directement dans vos fichiers avec des diffs que vous pouvez accepter ou rejeter
 
 ## Ce Dont Vous Aurez Besoin
 
-- Tutoriel [R dans VS Code](./R_Coding_VS_Code_Guide) terminé - R doit fonctionner dans VS Code
-- Tutoriel [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) terminé - L'interface CLI Claude Code doit être installée
-- Abonnement Claude Pro/Max ou clé API Anthropic
+- Tutoriel [Exécuter R dans VS Code](./R_Coding_VS_Code_Guide) terminé - R doit fonctionner dans VS Code
+- Tutoriel [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) terminé - Claude Code (en ligne de commande) doit être installé
+- Un abonnement Claude payant (comme Pro ou Max) ou un compte Anthropic Console — l'offre gratuite n'inclut pas Claude Code
 - 20-30 minutes
 
 ## Étape 1 : Ouvrir VS Code et Créer un Projet R
@@ -26,7 +26,7 @@ Vous avez configuré R dans VS Code et pouvez écrire du code manuellement. Main
 - Ouvrez **Visual Studio Code**
 - Cliquez sur **File** dans la barre de menu, puis sur **Open Folder**
 - Naviguez vers votre dossier **Documents**
-- Cliquez sur **New Folder** en bas de la boîte de dialogue
+- Cliquez sur **Nouveau dossier** en bas de la boîte de dialogue
 - Nommez le dossier `claude_r_test`
 - Cliquez sur **Open** pour ouvrir le nouveau dossier
 - Si on vous demande "Do you trust the authors?", cliquez sur **Yes, I trust the authors**
@@ -35,20 +35,16 @@ Vous avez configuré R dans VS Code et pouvez écrire du code manuellement. Main
 
 - Cliquez sur l'icône **Extensions** dans la barre latérale gauche (icône à quatre carrés)
 - Dans la zone de recherche, tapez `Claude Code`
-- Trouvez **Claude Code** par Anthropic et cliquez sur **Install**
-- Après l'installation, une icône Claude (étincelle) apparaît dans la barre latérale gauche
-- Cliquez sur l'icône Claude pour ouvrir le panneau de discussion
-- Cliquez sur **Sign in to Claude Code** dans le panneau de discussion
-- Choisissez votre méthode d'authentification :
-  - **Utilisateurs Claude Pro/Max** : Cliquez sur **Sign in with Claude.ai**, autorisez dans le navigateur, et copiez le code dans VS Code
-  - **Utilisateurs avec clé API** : Cliquez sur **Use API Key** et collez votre clé API Anthropic
-- Pour des étapes d'authentification détaillées, consultez le guide [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) (Étape 5)
-- Une fois connecté, vous verrez "Ready to help" dans le panneau de discussion
+- Trouvez **Claude Code for VS Code** par Anthropic et cliquez sur **Install**
+- Après l'installation, cliquez sur **✻ Claude Code** dans la barre d'état en bas à droite de la fenêtre pour ouvrir le panneau Claude (une fois un fichier ouvert, vous pouvez aussi utiliser l'icône Spark en haut à droite de l'éditeur)
+- Cliquez sur **Sign in** et terminez la connexion avec votre compte Claude dans le navigateur qui s'ouvre
+- Si vous utilisez plutôt une clé API, configurez-la comme indiqué dans [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) (Étape 3, Option B), puis quittez VS Code et rouvrez-le
+- Une fois connecté, vous verrez une liste de contrôle **Learn Claude Code**. Vous pouvez la fermer avec le X
 
 ## Étape 3 : Créer un Script R Initial Manuellement
 
-- Cliquez sur **File > New File** dans la barre de menu
-- Cliquez sur **Select a language** et tapez `R`, puis sélectionnez **R**
+- Cliquez sur **File > New File...** dans la barre de menu
+- Dans la liste qui apparaît en haut de la fenêtre, choisissez **R Document**
 - Enregistrez le fichier en cliquant sur **File > Save**, nommez-le `iris_analysis.R`
 - Tapez ce code :
 
@@ -63,18 +59,18 @@ summary(iris)
 - Sélectionnez le code et appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac) pour l'exécuter
 - Vous devriez voir la structure du jeu de données et les statistiques récapitulatives dans le terminal
 
-## Étape 4 : Demander à Claude d'Ajouter un Graphique de Dispersion
+## Étape 4 : Demander à Claude d'Ajouter un Nuage de Points
 
-- Cliquez sur l'icône **Claude** dans la barre latérale gauche pour ouvrir le panneau de discussion
+- Cliquez sur l'icône Spark en haut à droite de l'éditeur (ou sur **✻ Claude Code** dans la barre d'état) pour ouvrir le panneau Claude
 - Dans la zone de discussion en bas, tapez :
 
 ```
-Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris_analysis.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 
 - Appuyez sur Entrée pour envoyer
-- Claude lit votre fichier et propose des modifications - vous verrez un diff montrant le nouveau code à ajouter
-- Cliquez sur **Accept** pour appliquer les modifications
+- Claude lit votre fichier et le modifie - le nouveau code apparaît dans `iris_analysis.R`
+- Si Claude affiche un diff et demande la permission, acceptez la modification
 - Le code ggplot2 apparaît dans votre fichier
 - Si vous n'avez pas ggplot2 installé, exécutez `install.packages("ggplot2")` dans le terminal R
 
@@ -82,7 +78,7 @@ Ajoute du code à iris_analysis.R pour créer un graphique de dispersion de la l
 
 - Sélectionnez tout le code dans `iris_analysis.R`
 - Appuyez sur `Ctrl+Enter` (Windows/Linux) ou `Cmd+Enter` (Mac)
-- Un graphique de dispersion apparaît dans une fenêtre graphique séparée
+- Un nuage de points apparaît dans un onglet de graphique à l'intérieur de VS Code
 - Vous devriez voir des points colorés par espèce (setosa, versicolor, virginica)
 
 ## Étape 6 : Demander à Claude d'Affiner le Graphique
@@ -95,7 +91,7 @@ Supprime le titre. Change le type de marqueur par espèce. Passe au thème class
 
 - Appuyez sur Entrée
 - Claude affiche les modifications de code mises à jour
-- Cliquez sur **Accept**
+- Si on vous le demande, acceptez la modification
 - Exécutez à nouveau le code mis à jour : sélectionnez tout et appuyez sur `Ctrl+Enter` / `Cmd+Enter`
 - Le graphique s'affiche maintenant avec différentes formes de marqueurs par espèce, sans titre, et avec le thème classique
 
@@ -108,10 +104,10 @@ Ajoute du code pour effectuer une ACP sur les variables numériques et tracer le
 ```
 
 - Appuyez sur Entrée
-- Claude ajoute du code PCA à votre script
-- Cliquez sur **Accept**
+- Claude ajoute du code d'ACP à votre script
+- Si on vous le demande, acceptez la modification
 - Exécutez tout le code : sélectionnez tout et appuyez sur `Ctrl+Enter` / `Cmd+Enter`
-- Un graphique PCA apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
+- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
 
 ## Étape 8 : Demander à Claude de Réviser et Commenter
 
@@ -123,13 +119,13 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 
 - Appuyez sur Entrée
 - Claude révise le code et suggère des commentaires expliquant chaque section
-- Cliquez sur **Accept**
-- Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'analyse PCA
+- Si on vous le demande, acceptez la modification
+- Votre script contient maintenant des commentaires clairs expliquant le chargement des données, la visualisation et l'ACP
 
 ## Prochaines Étapes
 
 - Demandez à Claude de créer un rapport R Markdown : « Crée un fichier R Markdown pour cette analyse »
-- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'Erreur X, peux-tu le corriger ? »
+- Utilisez Claude pour déboguer les erreurs : « Ce code donne l'erreur X, peux-tu le corriger ? »
 - Demandez des tests statistiques : « Ajoute un test t comparant la longueur des sépales entre setosa et versicolor »
 - Demandez à Claude d'optimiser le code : « Rends cette boucle plus rapide en utilisant la vectorisation »
 - Obtenez de l'aide avec des fonctions inconnues : « Explique ce que fait dplyr::mutate »
@@ -138,16 +134,16 @@ Révise le script entier pour vérifier qu'il est correct. Ajoute des commentair
 
 - **L'extension Claude ne s'affiche pas** - Redémarrez VS Code après l'installation. Cliquez sur **View > Extensions** pour vérifier qu'elle est installée.
 - **Erreur "Cannot read R file"** - Assurez-vous d'avoir enregistré le fichier avec l'extension `.R`. Claude a besoin de fichiers enregistrés pour les lire.
-- **Échec de l'authentification** - Vérifiez que votre abonnement Claude Pro/Max est actif ou que votre clé API est valide. Consultez [Installation de Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
+- **Échec de l'authentification** - Vérifiez que votre abonnement Claude payant ou votre compte Anthropic Console est actif. Consultez [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS) pour le dépannage de l'authentification.
 - **ggplot2 introuvable** - Installez-le dans le terminal R : `install.packages("ggplot2")`. Attendez la fin de l'installation avant d'exécuter le code.
-- **Les modifications de code ne s'appliquent pas** - Assurez-vous de cliquer sur **Accept** sur le diff. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
+- **Les modifications de code ne s'appliquent pas** - Si Claude a demandé la permission, assurez-vous d'avoir accepté la modification. Si cela ne fonctionne pas, essayez de copier manuellement le code suggéré par Claude.
 
 ## Résumé du Flux de Travail
 
-- **Extension Claude Code** fournit un assistant IA directement dans VS Code avec un panneau de discussion et des diffs en ligne
-- **Raffinement itératif** - Commencez avec du code de base, demandez à Claude d'améliorer, testez immédiatement, puis affinez davantage
-- **Conscience du contexte** - Claude lit vos fichiers R et comprend la structure de votre projet
-- **Édition en ligne** - Les modifications proposées apparaissent sous forme de diffs dans vos fichiers réels, pas dans des réponses de discussion séparées
+- **Extension Claude Code** fournit un assistant IA directement dans VS Code avec un panneau de discussion et des diffs affichés directement dans vos fichiers
+- **Raffinement itératif** - Commencez avec du code de base, demandez à Claude de l'améliorer, testez immédiatement, puis affinez davantage
+- **Prise en compte du contexte** - Claude lit vos fichiers R et comprend la structure de votre projet
+- **Édition dans le fichier** - Les modifications proposées apparaissent sous forme de diffs dans vos fichiers réels, pas dans des réponses de discussion séparées
 - **Restez dans le flux** - Pas besoin de basculer entre le navigateur et l'éditeur - tout se passe dans VS Code
 
 ---

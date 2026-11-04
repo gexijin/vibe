@@ -42,8 +42,9 @@ Construir una aplicación simple de temporizador con Claude Code y rastrear todo
 - Complete:
   - **Name:** `test_claude`
   - **Description:** `A timer app built with Claude Code`
-  - **Local Path:** carpeta Documents
+  - **Local Path:** Haga clic en **Choose...** y elija su carpeta **Documentos** (Documents) (la opción predeterminada es una carpeta `GitHub` dentro de Documentos, así que cámbiela)
   - **Marque** "Initialize this repository with a README"
+- Si GitHub Desktop dice que la carpeta "appears to be a Git repository" (parece ser un repositorio de Git), ya tiene una carpeta `test_claude` del tutorial de Git. Cambie el nombre de esa carpeta antigua (por ejemplo, a `test_claude_old`) en el Explorador de archivos o en Finder y vuelva a intentarlo
 - Haga clic en **Create Repository**
 - Haga clic en **Publish repository** en la parte superior
 - Haga clic en **Publish Repository**
@@ -52,11 +53,12 @@ Ahora tiene un proyecto local y un respaldo en la nube en GitHub.
 
 ## Paso 2: Solicite a Claude que Cree la Aplicación de Temporizador
 
-- Abra su **terminal**
+- Abra su terminal: **PowerShell** en Windows, **Terminal** en Mac
 - Navegue a su proyecto:
   ```
   cd ~/Documents/test_claude
   ```
+  En Windows, si ve `Cannot find path`, su carpeta Documents tiene copia de seguridad en OneDrive. Ejecute `cd ~/OneDrive/Documents/test_claude` en su lugar
 - Inicie Claude Code:
   ```
   claude
@@ -64,7 +66,8 @@ Ahora tiene un proyecto local y un respaldo en la nube en GitHub.
 
 Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
-- Escriba esta solicitud:
+- Copie y pegue toda esta solicitud (al pegarla, todas las líneas se mantienen juntas; presionar Enter la enviaría antes de tiempo):
+
   ```
   Crea una aplicación simple de temporizador de cuenta regresiva en un solo archivo llamado timer.html.
   Debe tener:
@@ -83,10 +86,11 @@ Claude crea el archivo `timer.html` (toma 10-30 segundos).
 - **Haga doble clic** en `timer.html` para abrirlo en su navegador
 - Pruebe el temporizador:
   - Escriba `1` en el campo de entrada
-  - Haga clic en **Start**
+  - Haga clic en **Iniciar**
   - Observe la cuenta regresiva
 
 **Si funciona:** Continúe al Paso 5.
+
 **Si algo está roto:** Continúe al Paso 4.
 
 ## Paso 4: Corrija Errores (Si Es Necesario)
@@ -115,7 +119,7 @@ Siempre revise el código generado por IA antes de hacer commit.
   ```
   Crear aplicación de temporizador inicial con funcionalidad de inicio/detener
   ```
-- Haga clic en **Commit to main**
+- Haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 1 file to main**)
 
 Ha creado un punto de guardado.
 
@@ -131,12 +135,12 @@ Su código ahora está respaldado en la nube.
 
 ## Paso 8: Agregue Notificación de Sonido
 
-- En el terminal de Claude Code:
+- En la terminal de Claude Code:
   ```
   Agrega una notificación de sonido cuando el temporizador llegue a cero. Usa el
   sonido de pitido integrado del navegador o crea una alerta de audio simple.
   ```
-- Pruebe: Actualice el navegador, configure el temporizador para 0.1 minutos, haga clic en Start
+- Pruebe: Actualice el navegador, configure el temporizador para 1 minuto, haga clic en **Iniciar**
 
 **Para este tutorial:** Finja que el sonido no funciona bien. No haga commit todavía.
 
@@ -146,7 +150,7 @@ Algunas veces la IA nos lleva por el camino equivocado y necesitamos empezar de 
 
 - Abra **GitHub Desktop**
 - Haga clic en el menú **Branch** → **Discard All Changes**
-- Haga clic en **Discard Changes** para confirmar
+- Haga clic en **Discard All Changes** para confirmar
 - Actualice el navegador - el temporizador funciona sin el sonido
 
 Acaba de desechar código que no funcionaba y volvió a su último punto de guardado.
@@ -159,19 +163,22 @@ Acaba de desechar código que no funcionaba y volvió a su último punto de guar
   elemento de audio HTML5 con un sonido de pitido simple generado por la Web Audio API.
   Asegúrate de que maneje las restricciones de reproducción automática del navegador de forma elegante.
   ```
-- Pruebe inmediatamente (actualice el navegador, configure 0.1 minutos, Start)
+- Pruebe inmediatamente (actualice el navegador, configure 1 minuto, **Iniciar**)
 
 **Si funciona:** Continúe al Paso 11.
+
 **Si no:** Pegue el error a Claude o intente de nuevo.
 
 ## Paso 11: Permita que Claude Haga Commit y Push
 
 - En Claude Code:
   ```
-  confirma y envía mis cambios
+  haz commit y push de mis cambios
   ```
 
 Claude verificará los cambios, escribirá un mensaje de commit, hará commit y push (10-20 segundos).
+
+**Si Claude dice que el push falló** (por ejemplo `could not read Username`, o que `git` no se reconoce): cambie a **GitHub Desktop**. Si todavía muestra archivos modificados, haga commit usted mismo (como en el Paso 6). Luego haga clic en **Push origin** en la parte superior: GitHub Desktop ya tiene la sesión iniciada en GitHub.
 
 **Cuándo usar:**
 - Commits manuales: Cuando está aprendiendo o desea control
@@ -181,7 +188,7 @@ Claude verificará los cambios, escribirá un mensaje de commit, hará commit y 
 
 - En Claude Code:
   ```
-  ¿qué archivos he cambiado?
+  ¿qué cambió mi último commit?
   ```
 
 Claude explica sus cambios en lenguaje sencillo.
@@ -192,10 +199,10 @@ Claude explica sus cambios en lenguaje sencillo.
 
 - En **GitHub Desktop**, haga clic en la pestaña **History**
 
-Verá:
-- Initial commit (README)
-- Create initial timer app
-- Add improved sound notification
+Verá (el más reciente arriba):
+- El commit que Claude hizo para la notificación de sonido (su mensaje puede variar)
+- Crear aplicación de temporizador inicial con funcionalidad de inicio/detener
+- Initial commit
 
 Note que el primer intento fallido de sonido no está ahí - lo descartó. Solo el código que funciona llegó a sus commits.
 
@@ -210,13 +217,13 @@ Note que el primer intento fallido de sonido no está ahí - lo descartó. Solo 
 
 ## Solución de Problemas
 
-**"Authentication failed":** GitHub Desktop → File/Preferences → Accounts → cierre sesión y vuelva a iniciar sesión
+**"Authentication failed":** En GitHub Desktop, abra **File → Options → Accounts** (Windows) o **GitHub Desktop → Settings → Accounts** (Mac); luego cierre sesión y vuelva a iniciar sesión
 
 **Claude dice "not a git repository":** Asegúrese de estar en la carpeta correcta (`cd ~/Documents/test_claude`)
 
 **El temporizador no funciona:** Abra la consola del navegador (clic derecho → **Inspect** → **Console**), copie los errores, péguelos en Claude
 
-**¿Necesita ayuda?** [Documentación de GitHub Desktop](https://docs.github.com/en/desktop) • [Documentación de Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+**¿Necesita ayuda?** [Documentación de GitHub Desktop](https://docs.github.com/en/desktop) • [Documentación de Claude Code](https://code.claude.com/docs)
 
 ## El Flujo de Trabajo Completo
 
@@ -233,7 +240,7 @@ Commits manuales cuando desea control. Commits de Claude cuando desea velocidad.
 
 Intente agregar características a su temporizador:
 
-**Victorias rápidas:**
+**Mejoras rápidas:**
 - Botones preestablecidos para 5, 10, 15 minutos: `Agrega tres botones preestablecidos: "5 min", "10 min" y "15 min"`
 - Botón de pausa: `Agrega un botón de Pausa/Reanudar que alterne el estado del temporizador`
 - Mejor estilo: `Mejora el diseño visual con un esquema de colores moderno`

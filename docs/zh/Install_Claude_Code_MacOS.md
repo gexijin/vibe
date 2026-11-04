@@ -19,22 +19,21 @@ Claude Code 是运行在 Terminal 中的 AI 编程助手，可以帮助你编写
 
 ## 核心概念
 
-- **Terminal**：Mac 内置的命令行应用，通过输入命令来操作系统。这是与 Claude Code 交互的方式。
+- **Terminal**：Mac 内置的命令行应用，通过输入命令（而不是点击按钮）来操作电脑。这是与 Claude Code 交互的方式。
 - **Claude Code**：运行在 Terminal 中的 AI 编程助手，可以回答问题、编写代码并帮助理解项目。
 
 ## 准备内容
 
 - 运行 macOS 13.0 Ventura 或更高版本的 Mac 电脑
 - 互联网连接
-- 管理员权限
 - Claude Pro/Max 订阅或 API 密钥
 - 5 - 10 分钟
 
 ## 步骤 1：打开 Terminal
 
-- 点击 Dock 中的 **Launchpad** 图标（彩色方块图标）
-- 在搜索框中输入 `Terminal`
-- 点击 **Terminal**（黑色方块图标）
+- 按 **Command (⌘) + Space** 打开 Spotlight 搜索
+- 输入 `终端`（或 `Terminal`）
+- 按 **Return**（或在结果中点击 **终端**（Terminal，黑色方块图标））
 - Terminal 窗口将打开，显示闪烁的光标
 
 **提示：** 保持 Terminal 打开以继续下一步。
@@ -47,12 +46,17 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - 等待 Claude Code 安装完成（1-2 分钟）
-- 安装过程中可能会看到一些进度信息，这是正常的
+- 下载期间窗口可能不显示任何信息——这是正常的，耐心等待即可
 - 安装完成后，关闭并重新打开 Terminal，然后输入以下命令验证：
    ```
    claude --version
    ```
 - 应该显示 Claude Code 的版本号
+- 如果看到的是 `zsh: command not found: claude`，运行下面两行（它们会告诉 Mac 去哪里找 Claude Code），然后再试一次 `claude --version`：
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 **替代方案：使用 Homebrew 安装**
 
@@ -71,13 +75,10 @@ brew install --cask claude-code
    ```
    claude
    ```
-- Claude 会尝试打开浏览器。如果未自动打开，复制 Terminal 中显示的 URL 并粘贴到浏览器
+- Claude 会尝试打开浏览器。如果未自动打开，按 **c** 复制登录链接，然后粘贴到浏览器
 - 登录 Claude.ai 账户（可能自动完成）
-- 点击 **Authorize**
-- 出现长代码时点击 **Copy Code**
-- 返回 Terminal 窗口
-- 在 Terminal 中粘贴代码：点击菜单栏的 **Edit**，然后点击 **Paste**
-- 应该显示成功消息
+- 点击 **Authorize**。浏览器应该会显示你已登录，Terminal 中也会显示成功消息
+- 只有当浏览器显示一长串代码时，才需要点击 **Copy Code**，返回 Terminal，在 **Paste code here if prompted** 处粘贴（按 **Command (⌘) + V**），然后按 **Return**
 - 按照说明完成设置
 
 ### 选项 B. 使用 Anthropic API 密钥
@@ -96,10 +97,11 @@ brew install --cask claude-code
    ```
    将 `your-api-key-here` 替换为实际的 API 密钥
 - 关闭并重新打开 Terminal 使更改生效
+- 输入 `claude` 启动 Claude Code。第一次启动时，它会询问你是否要使用它找到的 API 密钥。选择 **Yes**。（如果不小心选了 **No**，输入 `/config` 并打开 **Use custom API key**。）
 
 **注意：** 如果使用较旧的 Mac（bash 而非 zsh），将上面命令中的 `~/.zshrc` 替换为 `~/.bash_profile`。
 
-### 选项 C. 使用 OpenRouter API（免费开始！）
+### 选项 C. 使用 OpenRouter API（按用量付费）
 
 OpenRouter 是一个统一的 API 网关，通过单一 API 密钥可访问 500 多个大型语言模型。这是使用 Claude Code 的经济方式，因为你只需按使用量付费，并可以从不同价位的模型中选择。
 
@@ -110,9 +112,9 @@ OpenRouter 是一个统一的 API 网关，通过单一 API 密钥可访问 500 
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - 启动 Claude Code：
    ```
@@ -128,11 +130,13 @@ OpenRouter 是一个统一的 API 网关，通过单一 API 密钥可访问 500 
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - 在 [openrouter.ai/models](https://openrouter.ai/models) 浏览可用模型
-- 免费套餐每天提供 50 次 API 请求
-- 查看[官方 OpenRouter 指南](https://openrouter.ai/docs/guides/claude-code-integration)了解更多详情
+- 免费（`:free`）模型每天限 50 次请求，一个 Claude Code 任务就可能很快用完
+- 上面列出的都是付费模型——使用前请在 [openrouter.ai/models](https://openrouter.ai/models) 查看价格
+- 通过 OpenRouter 使用时，只有 Anthropic 模型能保证与 Claude Code 正常配合
+- 查看[官方 OpenRouter 指南](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)了解更多详情
 
 
-### 选项 D. 通过 Azure Foundry 使用 Anthropic API
+### 选项 D. 通过 Microsoft Foundry（Azure）使用 Anthropic API
 
 适用于使用 Azure 托管 Claude 模型的组织。在 Terminal 中粘贴以下代码定义环境变量（启动 Claude 前）：
 ```
@@ -141,12 +145,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **注意：** 将 `xxxx-eastus2` 替换为你的 Foundry Resource 名称（仅名称，不要使用完整的 URL）。将 `your_api_key` 替换为从 Azure 门户获取的完整 API 密钥。
+
+然后输入 `claude` 启动 Claude Code。
 
 ## 步骤 4：测试 Claude Code
 
@@ -183,24 +190,26 @@ export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 
 - 在 Terminal 中输入：
    ```
-   sudo claude
+   claude update
    ```
 - Claude Code 会检查更新并安装最新版本
+
+**注意：** 不要使用 `sudo` 来运行或更新 Claude Code——这可能会在你的 `~/.claude` 文件夹中留下属于 root 的文件，导致你下次正常运行 Claude Code 时出现权限错误。
 
 **注意：** 通过 Homebrew 安装的版本不会自动更新。请定期运行 `brew upgrade claude-code` 以获取最新版本。
 
 ## 下一步
 - [VS Code 入门指南](./VS_Code_Getting_Started.md) - 学习使用 VS Code，一款流行的代码编辑器
-- [在 Mac 上的 VS Code 中使用 Claude Code](./Claude_Code_in_VS_Code_Mac.md) - 在 VS Code 中运行 Claude Code
+- [在 Mac 的 VS Code 中使用 Claude Code](./Claude_Code_in_VS_Code_Mac.md) - 在 VS Code 中运行 Claude Code
 - [使用 Claude Code 撰写研究论文](./Writing_Research_Paper_Claude_Code.md) - 使用 Claude Code 进行学术写作
 
 ## 重新打开 Terminal
 
 关闭 Terminal 后，重新打开的方法：
 
-- 点击 Dock 中的 **Launchpad** 图标（彩色方块图标）
-- 在搜索框中输入 `Terminal`
-- 点击 **Terminal**
+- 按 **Command (⌘) + Space** 打开 Spotlight 搜索
+- 输入 `终端`（或 `Terminal`）
+- 按 **Return**
 - Terminal 窗口将打开
 
 ## 故障排除
@@ -218,10 +227,14 @@ claude doctor
 - 检查网络连接并重试
 
 ### 找不到 Claude Code 命令
-- 完全关闭 Terminal（点击菜单栏的 **Terminal**，然后点击 **Quit Terminal**）
+- 完全关闭 Terminal：点击菜单栏的 **终端**（Terminal），然后点击 **退出终端**（Quit Terminal）
 - 重新打开 Terminal
 - 输入 `claude --version` 检查是否已安装
-- 尝试重新运行安装命令：`curl -fsSL https://claude.ai/install.sh | bash`
+- 如果仍然显示 `command not found`，运行下面两行，然后再试一次 `claude --version`：
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 ### 认证失败
 - 确保你有有效的 Claude Pro/Max 订阅或有效的 API 密钥
@@ -232,7 +245,7 @@ claude doctor
 
 ### 查找项目路径
 快速获取文件夹路径：
-- 打开 Finder
+- 打开**访达**（Finder）
 - 导航到项目文件夹
 - 将文件夹拖放到 Terminal，完整路径会自动显示！
 

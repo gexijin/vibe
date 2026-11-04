@@ -10,7 +10,7 @@ Aprender a programar con asistencia de IA puede resultar abrumador al principio.
 
 ## Conceptos Clave
 
-- **Workspace** - Espacio de trabajo: la carpeta desde donde inicia Claude Code se convierte en el espacio de trabajo de la sesión
+- **Workspace** - Espacio de trabajo: la carpeta desde donde inicia Claude Code; Claude lee y edita los archivos que contiene durante esa sesión
 - **REPL (Read-Eval-Print Loop)** - Sesión interactiva donde escribe comandos, Claude responde y la conversación continúa hasta que cierra la sesión
 - **Contexto** - Cantidad de código e historial que Claude recuerda; funciona como memoria de trabajo que se llena con el tiempo
 - **Slash Commands** - Comandos especiales que comienzan con `/` para realizar acciones específicas como limpiar el historial o mostrar ayuda
@@ -18,14 +18,15 @@ Aprender a programar con asistencia de IA puede resultar abrumador al principio.
 ## Lo Que Necesitará
 
 - Claude Code instalado desde el tutorial de [Windows](Install_CLAUDE_Code_Win.md) o [Mac](Install_Claude_Code_MacOS.md)
-- WSL instalado si está usando Windows
 - Familiaridad básica con el uso de una terminal o símbolo del sistema
 - 15-20 minutos
 
 ## Paso 1: Abra Su Terminal
 
-- **Windows**: Presione la tecla Windows, escriba `Ubuntu`, y presione Enter para abrir la terminal WSL
+- **Windows**: Presione la tecla Windows, escriba `PowerShell`, y presione Enter para abrir PowerShell
 - **Mac**: Presione `Cmd+Space`, escriba `Terminal`, y presione Enter
+
+**Nota:** Si en el tutorial de instalación de Windows configuró la ruta opcional de WSL/Ubuntu en lugar de la instalación nativa, abra la aplicación **Ubuntu** y use rutas de estilo Linux (por ejemplo, `/mnt/c/Users/SuNombre/...`) en los pasos siguientes.
 
 Se abrirá una ventana de texto donde puede escribir comandos.
 
@@ -45,12 +46,13 @@ cd data_projects
 - Visite [https://github.com/gexijin/data_projects](https://github.com/gexijin/data_projects) en su navegador web
 - Haga clic en el botón verde **Code** cerca de la parte superior derecha
 - Haga clic en **Download ZIP**
-- Extraiga el archivo ZIP a una carpeta llamada **data_projects** en la carpeta Descargas.
+- Extraiga el archivo ZIP en su carpeta Descargas. GitHub nombra la carpeta extraída **data_projects-main**: cámbiele el nombre a **data_projects** para que coincida con el resto de este tutorial. En Windows, **Extraer todo** puede crear una carpeta dentro de otra (data_projects-main → data_projects-main). Ábrala: si solo ve otra carpeta **data_projects-main**, mueva esa carpeta interior a Descargas y cámbiele el nombre a **data_projects**.
 - En su terminal, navegue a la carpeta extraída:
-  - **Windows**: `cd /mnt/c/Users/SuNombre/Downloads/data_projects`
-  - **Mac/Linux**: `cd ~/Downloads/data_projects`
+  ```
+  cd ~/Downloads/data_projects
+  ```
 
-Reemplace `SuNombre` con su nombre de usuario real y ajuste la ruta si lo extrajo en otro lugar. Para usuarios de Windows, sus archivos de Windows se acceden desde /mnt/c en el sistema Linux.
+Ajuste la ruta si lo extrajo en otro lugar.
 
 ## Paso 3: Inicie Claude Code desde la Carpeta
 
@@ -60,9 +62,7 @@ En su terminal (asegúrese de estar dentro de la carpeta data_projects), escriba
 claude
 ```
 
-Inicie sesión con su suscripción de Claude siguiendo el [tutorial de instalación](Install_CLAUDE_Code_Win.md). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
-
-Después de iniciar sesión correctamente, verá un mensaje de bienvenida y el prompt de Claude Code.
+Inicie sesión con su suscripción de Claude siguiendo el tutorial de instalación ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Después de iniciar sesión, verá un mensaje de bienvenida y el prompt de Claude Code.
 
 ## Paso 4: Hacer Preguntas Sobre Su Proyecto
 
@@ -92,7 +92,7 @@ Puede preguntarle a Claude cualquier cosa sobre su código en lenguaje natural. 
 
 ## Paso 5: Slash Commands Esenciales
 
-Escriba `/` y presione Enter para ver todos los comandos disponibles. Estos son los más importantes:
+Escriba `/` para ver todos los comandos disponibles. Estos son los más importantes:
 
 **Ver todos los comandos:**
 
@@ -135,15 +135,16 @@ Elimina la conversación actual y comienza de nuevo. Úselo cuando desee cambiar
 
 Finaliza su sesión y regresa al prompt normal de la terminal. También puede presionar **Ctrl + C** dos veces.
 
-## Paso 6: Atajos de Teclado
+## Paso 6: Aprobar Cambios y Usar Atajos
 
-Estos atajos hacen que trabajar con Claude Code sea más rápido:
+Las sesiones nuevas suelen comenzar en modo **Auto**, en el que Claude realiza ediciones y comandos rutinarios sin preguntar. Si Claude pide permiso, muestra un pequeño menú con opciones como **Yes** y **No**. Use las teclas de flecha para resaltar su elección y presione **Enter**. Si desea aprobar cada cambio usted mismo, presione **Shift+Tab** hasta que el modo debajo del prompt muestre **Manual**.
 
-- **Shift+Tab** - Cambiar entre modo plan, edición o normal - Planifique primero para tareas complejas
-- **Alt+Enter** (Windows/Linux) o **Option+Return** (Mac) - Agregar una nueva línea en su mensaje sin enviarlo
+Algunos atajos de teclado también hacen que trabajar con Claude Code sea más rápido:
+
+- **Shift+Tab** - Alternar entre modos (Auto, Manual, Accept Edits, Plan); el modo actual se muestra justo debajo del prompt. El modo Plan es útil para revisar una tarea compleja antes de que Claude haga cualquier cambio
 - **Ctrl+C** - Cancelar la operación actual o la respuesta de Claude
-- **Ctrl+D** - Aprobar cambios en archivos cuando Claude solicite permiso
-- **Esc** - Cerrar menús o cancelar la entrada actual
+- **Esc** - Detener a Claude a mitad de una respuesta, o cerrar un menú
+- **`\` y luego Enter** (o **Ctrl+J**) - Agregar una nueva línea en su mensaje sin enviarlo
 
 ## Paso 7: Siempre Crear un Archivo CLAUDE.md
 
@@ -157,7 +158,7 @@ El archivo CLAUDE.md es el manual de instrucciones de su proyecto para Claude. P
 
 Claude creará el archivo con un resumen de su proyecto. Este archivo permanece en la raíz de su proyecto y Claude lo lee automáticamente cada vez que inicia una nueva sesión.
 
-Puede editar CLAUDE.md en cualquier momento para agregar instrucciones específicas del proyecto, convenciones de codificación o contexto importante como el propósito de los archivos.
+Puede editar CLAUDE.md en la carpeta del proyecto en cualquier momento para agregar instrucciones específicas del proyecto, convenciones de programación o contexto importante como el propósito de los archivos.
 
 ## Paso 8: Referirse a Archivos o Líneas de Código
 
@@ -169,14 +170,14 @@ Explica el código en @Visualization/Matplotlib/Nested_Pie_Chart.ipynb
 
 Claude leerá el notebook y explicará qué hace, cómo funciona y qué logra el código. Esto efectivamente trae el archivo al contexto.
 
-Si trabaja con Claude Code desde VS Code y tiene la extensión instalada, puede agregar el archivo al contexto simplemente abriéndolo. Verá en la parte inferior derecha de la ventana de comandos `In Nested_Pie_Chart.ipynb`. Así Claude sabe que está hablando de este archivo.
+Si trabaja con Claude Code desde VS Code y tiene la extensión instalada, puede agregar el archivo al contexto simplemente abriéndolo. Verá `Nested_Pie_Chart.ipynb` en la parte inferior del cuadro del prompt de Claude Code. Así Claude sabe que está hablando de este archivo.
 
 Además, puede seleccionar algunas líneas de código y Claude mostrará **3 lines selected**. Puede pedirle a Claude que haga cambios rápidos a estas líneas o hacer preguntas sobre ellas. Por esto recomendamos usar Claude Code desde VS Code.
 
 
-## Paso 9: Realizar Acciones con Comandos de Linux
+## Paso 9: Realizar Acciones con Comandos de Terminal
 
-Claude puede realizar acciones ejecutando comandos de Linux de diversas formas.
+Claude puede realizar acciones ejecutando comandos de terminal (Bash en Mac/Linux, Git Bash o PowerShell en Windows) de diversas formas.
 
 - Instalar software
   ```
@@ -187,9 +188,9 @@ Claude puede realizar acciones ejecutando comandos de Linux de diversas formas.
   ```
   Comienza a rastrear cambios usando Git. Mi nombre es James Bond y mi correo es bond@earth.com
   ```
-- Confirmar cambios
+- Hacer commit de los cambios
   ```
-  Confirma estos cambios.
+  Haz commit de estos cambios.
   ```
 - Encontrar y descargar datos
   ```
@@ -202,9 +203,9 @@ Claude puede realizar acciones ejecutando comandos de Linux de diversas formas.
   Ejecútalo y guarda el nuevo código y gráficos en la misma carpeta.
   ```
 
-Podemos hacer esta solicitud vaga porque acabamos de pedirle que explique el código. Muchas cosas suceden después de esto. Claude instala software, soluciona errores, resuelve problemas de entornos, todo por su cuenta.
+Claude instala software, soluciona errores y gestiona entornos, todo por su cuenta.
 
-Esencialmente tiene un experto en comandos bash de Linux a su disposición. Mientras gestione los permisos y apruebe las acciones, puede ser muy productivo.
+Esencialmente tiene un experto en comandos de terminal a su disposición. Mientras gestione los permisos y apruebe las acciones, puede ser muy productivo.
 
 ## Próximos Pasos
 
@@ -217,9 +218,9 @@ Ahora que conoce lo básico, pruebe esto por su cuenta:
 
 ## Solución de Problemas
 
-- **Error "Command not found"** - Claude Code no está instalado o no está en su PATH. Ejecute `npm install -g @anthropic-ai/claude-code` para instalarlo.
+- **Error "Command not found"** - Claude Code no está instalado o no está en su PATH. Siga de nuevo el tutorial de instalación de [Windows](Install_CLAUDE_Code_Win.md) o [Mac](Install_Claude_Code_MacOS.md), o vuelva a ejecutar el instalador directamente: `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell) o `curl -fsSL https://claude.ai/install.sh | bash` (Mac/WSL).
 - **Claude proporciona información desactualizada** - Limpie el contexto con `/clear` y pregunte nuevamente. Las conversaciones largas llenan la memoria de Claude.
-- **Los cambios en archivos no funcionan** - Asegúrese de tener permisos de escritura en su carpeta de proyecto. Claude solicitará aprobación antes de modificar archivos. Presione Ctrl+D para aprobar.
+- **Los cambios en archivos no funcionan** - Asegúrese de tener permisos de escritura en su carpeta de proyecto. Si Claude pide aprobación, seleccione **Yes** en el menú que aparece.
 - **El contexto se llena rápidamente** - Use `/context` para verificar el uso. Cuando esté casi lleno, use `/clear` para iniciar una nueva conversación con contexto limpio.
 
 ## Resumen del Flujo de Trabajo
@@ -229,7 +230,7 @@ Trabajar con Claude Code sigue este patrón:
 - Inicie Claude en su carpeta de proyecto con `claude`
 - Haga preguntas en lenguaje natural
 - Claude lee archivos según sea necesario y responde
-- Solicite cambios en el código—Claude pide permiso antes de modificar archivos
+- Solicite cambios en el código—si Claude pide permiso, elija **Yes**
 - Use `/clear` al cambiar de tema o cuando el contexto se llene
 - Use `/exit` cuando termine
 

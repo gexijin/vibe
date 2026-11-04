@@ -6,35 +6,35 @@ lang: "fr"
 
 # Créez Votre Première Compétence Claude
 
-Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. Et si Claude pouvait décider automatiquement de créer un rapport boursier en fonction de votre conversation ? C'est le pouvoir des Compétences (Skills)—comme passer d'une boîte de vitesses manuelle à une transmission automatique qui change les vitesses selon les besoins.
+Vous avez tapé manuellement `/stock-report AAPL` pour générer des rapports. Et si Claude pouvait décider automatiquement de créer un rapport boursier en fonction de votre conversation ? C'est le pouvoir des Compétences (Skills)—comme passer d'une boîte de vitesses manuelle à une transmission automatique qui passe les vitesses quand il le faut.
 
 ## Concepts Clés
 
-- **Skill** - Une capacité invoquée par le modèle stockée dans `.claude/skills/` que Claude active automatiquement en fonction du contexte
-- **Model-invoked** - Claude décide quand utiliser la Compétence en lisant sa description, sans que vous tapiez une commande
+- **Compétence (Skill)** - Une capacité invoquée par le modèle stockée dans `.claude/skills/` que Claude active automatiquement en fonction du contexte
+- **Invoquée par le modèle (model-invoked)** - Claude décide quand utiliser la Compétence en lisant sa description, sans que vous tapiez une commande
+- **Toujours une commande slash** - Vous pouvez aussi exécuter n'importe quelle Compétence vous-même en tapant `/nom-de-la-competence` (par exemple `/stock-report AAPL`). Si une Compétence et une commande slash portent le même nom, c'est la Compétence qui est utilisée
 - **SKILL.md** - Le fichier principal contenant le frontmatter YAML (métadonnées) et les instructions pour Claude
 
 ## Ce Dont Vous Aurez Besoin
 
-- Tutoriel [Create Custom Slash Commands](./Reuse_Prompts_via_Slash_Commands.md) terminé
+- Tutoriel [Créer des Commandes Slash Personnalisées](./Reuse_Prompts_via_Slash_Commands.md) terminé
 - La commande slash `stock-report` de ce tutoriel
 - VS Code installé
 - 10-15 minutes
 
 ## Étape 1 : Accédez au Dossier du Projet
 
-**Windows (WSL) :**
-- Ouvrez **Ubuntu** depuis le menu Démarrer
+**Windows (PowerShell) :**
+- Ouvrez **PowerShell** depuis le menu Démarrer
 - Tapez :
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  Remplacez `YOUR_USERNAME` par votre nom d'utilisateur Windows
+  cd ~\Documents\test_claude
+  ```
 
   Si le dossier n'existe pas, créez-le d'abord :
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac :**
@@ -59,17 +59,20 @@ claude
 
 Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
-## Étape 3 : Activez l'Approbation Automatique pour les Modifications
+## Étape 3 : Laissez Claude Modifier les Fichiers Sans Demander
 
-Appuyez sur `Ctrl+E` (Windows/Linux) ou `Cmd+E` (Mac) pour activer le mode d'approbation automatique des modifications.
+Regardez la ligne d'état juste sous l'invite Claude Code :
+
+- Si elle indique **auto mode on** ou **accept edits on**, tout est prêt
+- Si elle indique **manual mode on**, appuyez sur **Shift+Tab** jusqu'à ce qu'elle indique **accept edits on**
 
 Cela permet à Claude de créer et de modifier des fichiers sans demander la permission à chaque fois.
 
 ## Étape 4 : Demandez à Claude de Convertir la Commande Slash
 
-Tapez cette invite :
+Tapez ce prompt :
 ```
-Convertis ma commande slash stock-report en une Compétence appelée generate-stock-reports.
+Convertis ma commande slash stock-report en une Compétence.
 La Compétence devrait s'activer automatiquement quand je pose des questions sur des entreprises ou des actions.
 ```
 
@@ -82,7 +85,7 @@ Claude analyse votre commande slash existante et la convertit en Compétence dan
 Ouvrez VS Code et visualisez le projet :
 - Cliquez sur **File > Open Folder**
 - Sélectionnez `Documents/test_claude`
-- Dans l'explorateur de fichiers, accédez à `.claude/skills/stock-report/`
+- Dans le panneau **Explorer** de VS Code (à gauche), accédez à `.claude/skills/stock-report/`
 - Cliquez sur `SKILL.md` pour l'ouvrir
 
 Remarquez la structure :
@@ -99,7 +102,11 @@ Le champ `description` est la clé—il indique à Claude exactement quand activ
 
 ## Étape 6 : Testez la Compétence (Sans Taper de Commande)
 
-Au lieu de taper `/stock-report AAPL`, posez simplement une question naturelle :
+Assurez-vous d'abord que Claude Code a chargé la nouvelle Compétence. Tapez :
+```
+/reload-skills
+```
+Claude Code indique combien de Compétences sont disponibles. Maintenant, au lieu de taper `/stock-report AAPL`, posez simplement une question naturelle :
 ```
 Que se passe-t-il avec Apple ces derniers temps ?
 ```
@@ -158,7 +165,7 @@ Mets à jour la Compétence stock-report pour qu'elle ne s'active que quand je m
 « analyser » ou « rapport » avec un nom d'entreprise.
 ```
 
-Claude met à jour le champ `description` dans `SKILL.md`. Testez la différence :
+Claude met à jour le champ `description` dans `SKILL.md`. Tapez `/reload-skills` pour que Claude Code prenne en compte la modification, puis testez la différence :
 ```
 Que fait Apple ?
 ```
@@ -173,18 +180,18 @@ Analyse Apple
 
 Maintenant que vous comprenez les Compétences, créez-en d'autres pour vos flux de travail :
 
-- **Research Skill** - S'active automatiquement lorsque vous posez des questions nécessitant une recherche web
-- **Code Review Skill** - S'active lorsque vous mentionnez des bugs, des problèmes ou des problèmes de code
-- **Meeting Notes Skill** - S'active lorsque vous collez des transcriptions de réunions ou mentionnez des résumés
+- **Compétence de recherche** - S'active automatiquement lorsque vous posez des questions nécessitant une recherche web
+- **Compétence de revue de code** - S'active lorsque vous mentionnez des bugs, des anomalies ou des problèmes de code
+- **Compétence de notes de réunion** - S'active lorsque vous collez des transcriptions de réunions ou mentionnez des résumés
 
 Le principe : Définissez quand Claude devrait automatiquement aider, pas seulement des raccourcis que vous déclenchez manuellement.
 
 ## Dépannage
 
 - **La Compétence ne s'active pas :** Vérifiez le champ `description` dans `SKILL.md`—il doit inclure des mots déclencheurs liés à votre question
-- **La Compétence s'active trop souvent :** Rendez la description plus spécifique sur quand l'utiliser
-- **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché—activez « Afficher les fichiers cachés » dans votre explorateur de fichiers)
-- **Les modifications de SKILL.md ne fonctionnent pas :** Les Compétences se chargent automatiquement lorsqu'elles sont modifiées—aucun redémarrage nécessaire. Si cela ne fonctionne toujours pas, vérifiez le formatage YAML
+- **La Compétence s'active trop souvent :** Précisez davantage dans la description quand l'utiliser
+- **Impossible de trouver le dossier de la Compétence :** Les Compétences sont dans `.claude/skills/` (dossier caché : l'Explorateur de VS Code l'affiche ; sinon, dans l'**Explorateur de fichiers** de Windows, activez **Affichage > Afficher > Éléments masqués** ; dans le **Finder** sur Mac, appuyez sur **Cmd+Maj+.** pour l'afficher)
+- **Les modifications de SKILL.md ne fonctionnent pas :** Les Compétences se rechargent généralement automatiquement lorsqu'elles sont modifiées. Si le dossier `.claude/skills/` a été créé pendant cette session, tapez `/reload-skills` (ou redémarrez Claude Code). Si cela ne fonctionne toujours pas, vérifiez le formatage YAML
 
 ## Aperçu du Flux de Travail
 
@@ -192,7 +199,7 @@ Le principe : Définissez quand Claude devrait automatiquement aider, pas seulem
 - **Les Compétences** sont des capacités que Claude découvre et utilise automatiquement (comme un assistant qui connaît vos préférences)
 - **Les descriptions de Compétences** agissent comme des instructions indiquant à Claude : « Utilise-moi quand l'utilisateur dit X »
 - **Les deux peuvent coexister** - Utilisez les commandes slash pour les tâches rapides et répétitives ; utilisez les Compétences pour les flux de travail complexes
-- **Les Compétences évoluent mieux** - Vous n'avez pas besoin de mémoriser les noms de commandes ; Claude décide en fonction du contexte
+- **Les Compétences passent mieux à l'échelle** - Vous n'avez pas besoin de mémoriser les noms de commandes ; Claude décide en fonction du contexte
 
 ---
 

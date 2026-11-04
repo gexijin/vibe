@@ -22,16 +22,17 @@ You want to write Python code but aren't sure which editor to use, or you're loo
 
 ## Step 1: Install Python
 
-You need Python 3.8 or higher for the best compatibility with modern packages.
+You need Python 3.11 or higher (the latest version from python.org is best) so the newest versions of packages like pandas and Streamlit install.
 
 - **Windows**:
-  - Download the latest Python from [python.org](https://www.python.org/downloads/)
+  - Go to [python.org/downloads/windows](https://www.python.org/downloads/windows/) and, under the latest Python 3 release, click **Windows installer (64-bit)** (not the "install manager")
   - Run the installer
   - **Check the box "Add python.exe to PATH"** before clicking Install Now
-  - Note the installation location (typically `C:\Users\YourName\AppData\Local\Programs\Python\Python312`)
+  - Note the installation location (typically `C:\Users\YourName\AppData\Local\Programs\Python\Python312` — the number matches your Python version)
 
 - **macOS**:
   - Download from [python.org](https://www.python.org/downloads/) and run the installer
+  - After the python.org installer finishes, open **Finder > Applications > Python 3.x** and double-click **Install Certificates.command** (otherwise loading data from the internet in Step 7 fails with `CERTIFICATE_VERIFY_FAILED`)
   - Or use Homebrew: open Terminal and type `brew install python`
   - Homebrew path: `/opt/homebrew/bin/python3` (Apple Silicon) or `/usr/local/bin/python3` (Intel)
 
@@ -54,7 +55,7 @@ The Python extension includes support for debugging, IntelliSense, code formatti
 
 - Create a new folder on your computer (e.g., `my-python-project`)
 - In VS Code, click **File > Open Folder** and select your new folder
-- Click **File > New File** in the top menu
+- Click **File > New File...** in the top menu. A list appears at the top of the window — choose **Python File**
 - Save the file as `analysis.py` by clicking **File > Save**
 
 ## Step 4: Select Python Interpreter
@@ -85,7 +86,7 @@ You'll see `(.venv)` in your terminal prompt when the environment is active.
 
 - Open a new terminal in VS Code by clicking **View > Terminal**
 - The terminal should show `(.venv)` indicating your virtual environment is active
-- Install packages by typing these commands:
+- Install packages by typing this command:
 
 ```bash
 pip install pandas matplotlib streamlit
@@ -128,14 +129,14 @@ plt.show()
 ## Step 8: Run Python Code Interactively
 
 - With `analysis.py` open, click the **▶ Run Python File** button in the top-right corner
-- Or right-click in the editor and select **Run Python File in Terminal**
+- Or right-click in the editor and select **Run Python > Run Python File in Terminal**
 - Watch the output appear in the terminal panel
 - A histogram window will pop up showing your plot
 - You can also select specific lines and press `Shift+Enter` to run just those lines in an interactive Python session
 
 ## Step 9: Create a Simple Streamlit App
 
-- Create a new file: **File > New File**
+- Create a new file: click **File > New File...**, then choose **Python File** from the list at the top of the window
 - Save it as `app.py`
 - Type this code:
 
@@ -176,6 +177,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- The first time you run Streamlit, it asks for an `Email:` in the terminal. Just press `Enter` to skip it
 - The app opens in your browser (usually at `http://localhost:8501`)
 - Move the slider in the sidebar and watch the histogram update instantly
 - Press `Ctrl+C` in the terminal to stop the app
@@ -189,10 +191,11 @@ streamlit run app.py
 - A popup shows function signature, parameters, and documentation
 - Try typing `import ` and watch VS Code suggest package names
 - When you type a function call, IntelliSense shows parameter hints
+- When you're done, delete the unfinished lines you typed in this step (such as `iris.gr` and `import `) and save the file, so the script runs cleanly in the next step
 
 ## Step 11: Try Debugging
 
-- In `analysis.py`, click to the left of line number 8 (the `print(iris.head())` line) to set a breakpoint (red dot appears)
+- In `analysis.py`, click to the left of line number 9 (the `print(iris.head())` line) to set a breakpoint (red dot appears)
 - Click **Run** in the menu bar, then **Start Debugging**
 - Select **Python File** when prompted
 - Code execution pauses at the breakpoint
@@ -219,7 +222,9 @@ streamlit run app.py
 
 - **pip install fails**: Ensure your virtual environment is activated (look for `(.venv)` in terminal). On Linux, you might need to install `python3-venv` first. On Windows, check antivirus isn't blocking pip.
 
-- **Streamlit app won't run**: Ensure streamlit is installed in your virtual environment (`pip list | grep streamlit`). Check the terminal for error messages. Make sure no other app is using port 8501.
+- **`SSL: CERTIFICATE_VERIFY_FAILED` on Mac**: Open **Finder > Applications > Python 3.x** and double-click **Install Certificates.command**, then run the script again.
+
+- **Streamlit app won't run**: Ensure streamlit is installed in your virtual environment (`pip show streamlit`). Check the terminal for error messages. Make sure no other app is using port 8501.
 
 ## Workflow Summary
 

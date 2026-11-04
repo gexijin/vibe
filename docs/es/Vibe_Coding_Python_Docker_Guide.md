@@ -13,12 +13,12 @@ Ha escrito código Python línea por línea. Pero ¿qué pasaría si pudiera des
 - **[Vibe Coding](https://www.ibm.com/think/topics/vibe-coding)** - Programar describiendo lo que desea en lenguaje natural, iterando basándose en resultados en lugar de escribir código línea por línea
 - **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
 - **[Iris Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#iris-dataset)** - Conjunto de datos clásico con mediciones de 150 flores iris de tres especies
-- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones que funcionen
+- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → hacer commit de las versiones que funcionen
 
 ## Lo Que Necesitará
 
-- Haber completado [Programación en Python con VS Code y Docker](./Python_Coding_Docker_Guide)
-- Haber completado [Uso de GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Haber completado [Programación en Python en VS Code vía Docker](./Python_Coding_Docker_Guide)
+- Haber completado [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - 20-25 minutos
 
 ## Paso 1: Crear Nuevo Repositorio en GitHub
@@ -39,11 +39,12 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 
 ## Paso 2: Copiar Configuración de Docker
 
-Necesita la carpeta `.devcontainer` del proyecto vibe para configurar su entorno Docker.
+Necesita la carpeta `.devcontainer` del proyecto `python-docker-demo` que creó en [Programación en Python en VS Code vía Docker](./Python_Coding_Docker_Guide). Le da a este proyecto el mismo entorno de Python, con pandas, matplotlib y Claude Code ya instalados.
 
-- Abra File Explorer (Windows) o Finder (Mac)
-- Navegue a su carpeta del proyecto vibe (ej., `Documents/vibe`)
+- Abra el Explorador de archivos (Windows) o Finder (Mac)
+- Navegue a su carpeta `python-docker-demo`
 - Busque la carpeta `.devcontainer`
+  - En Mac, Finder oculta las carpetas cuyo nombre empieza con un punto. Presione **Cmd+Shift+.** (punto) para mostrarlas
 - Copie la carpeta completa (contiene `Dockerfile` y `devcontainer.json`)
 - Navegue a su nueva carpeta `iris-analysis`
 - Pegue la carpeta `.devcontainer` allí
@@ -53,23 +54,23 @@ Su carpeta `iris-analysis` ahora debe contener:
 - `README.md` (creado por GitHub Desktop)
 - `.git/` (carpeta oculta para control de versiones)
 
-## Paso 3: Abrir Proyecto en Container
+## Paso 3: Abrir el Proyecto en el Contenedor
 
 - Abra VS Code
 - Haga clic en **File > Open Folder**
 - Navegue a la carpeta `iris-analysis`
-- Haga clic en **Select Folder**
+- Haga clic en **Select Folder** (Windows) u **Open** (Mac)
 - Aparece una notificación en la parte inferior derecha: **Folder contains a Dev Container configuration file**
 - Haga clic en **Reopen in Container**
-- Si no ve la notificación, haga clic en el ícono verde en la esquina inferior izquierda y seleccione **Reopen in Container**
-- VS Code construye el container de Docker (toma 3-5 minutos la primera vez)
+- Si no ve la notificación, haga clic en el ícono **><** en la esquina inferior izquierda y seleccione **Reopen in Container**
+- VS Code construye el contenedor Docker (toma 3-5 minutos la primera vez)
 - Observe la notificación de progreso mostrando los pasos de construcción
-- Cuando se complete, el ícono verde muestra **Dev Container: Python in Docker**
+- Cuando se complete, la esquina inferior izquierda muestra **Dev Container: Python in Docker**
 
 ## Paso 4: Iniciar Claude Code
 
 - En VS Code, haga clic en **Terminal > New Terminal**
-- Ahora está dentro del container de Docker
+- Ahora está dentro del contenedor Docker
 - Escriba este comando para iniciar Claude Code:
 
 ```bash
@@ -78,8 +79,10 @@ claude
 
 - Se abre una ventana del navegador para autenticación
 - Haga clic en **Continue with Google** o **Continue with Email**
-- Inicie sesión con su cuenta de Claude (o cree una)
-- Después de que la autenticación sea exitosa, regrese al terminal de VS Code
+- Inicie sesión con su cuenta de Claude. Claude Code requiere un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no lo incluye
+- Si el navegador muestra un código en lugar de indicar que ya terminó, copie el código, vuelva a la terminal de VS Code, péguelo en el prompt **Paste code here if prompted** y presione **Enter** (esto es común dentro de un contenedor)
+- Si no se abre ninguna ventana del navegador, presione `c` para copiar el enlace de inicio de sesión y péguelo en su navegador
+- Después de que la autenticación sea exitosa, regrese a la terminal de VS Code
 - Verá el mensaje de bienvenida de Claude
 
 Claude Code ahora está ejecutándose y listo para sus solicitudes.
@@ -88,7 +91,7 @@ Claude Code ahora está ejecutándose y listo para sus solicitudes.
 
 Ahora comienza la diversión. En lugar de buscar documentación, simplemente describa lo que desea.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Carga el conjunto de datos iris desde scikit-learn. Conviértelo en un dataframe de pandas con los nombres de columnas apropiados. Agrega los nombres de las especies como una columna (no solo números). Muéstrame las primeras 10 filas. Guarda el código en un archivo llamado iris_exploration.py
@@ -103,15 +106,15 @@ Carga el conjunto de datos iris desde scikit-learn. Conviértelo en un dataframe
 
 ¡Acaba de usar vibe coding! Sin buscar documentación, sin ensayo y error—solo describa y pruebe.
 
-Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub Desktop.
+Solicite a Claude que haga commit usando Git. O hágalo usted mismo desde GitHub Desktop.
 ```
-Confirma estos cambios.
+Haz commit de estos cambios.
 ```
 ## Paso 6: Segundo Vibe - Estadísticas Resumidas
 
 Antes de crear visualizaciones, comprenda qué contienen los datos.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Muéstrame estadísticas resumidas de los datos de iris agrupados por especie. Quiero ver la media, mínimo y máximo de cada medición (longitud de sépalo, ancho de sépalo, longitud de pétalo, ancho de pétalo) para cada una de las tres especies. Agrega esto a iris_exploration.py
@@ -124,13 +127,13 @@ Muéstrame estadísticas resumidas de los datos de iris agrupados por especie. Q
 
 Esta exploración le ayuda a comprender los patrones en los datos.
 
-Solicite a Claude que confirme usando Git. O hágalo usted mismo desde GitHub Desktop.
+Solicite a Claude que haga commit usando Git. O hágalo usted mismo desde GitHub Desktop.
 
 ## Paso 7: Tercer Vibe - Crear un Histograma
 
 Es hora de visualizar los datos.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea un histograma que muestre la distribución de las longitudes de pétalos para todas las flores. Usa 20 intervalos. Agrega un título y etiquetas de ejes. Guarda el gráfico como petal_length_histogram.png. Agrega este código a iris_exploration.py
@@ -146,7 +149,7 @@ Crea un histograma que muestre la distribución de las longitudes de pétalos pa
 
 Los gráficos de dispersión muestran relaciones entre dos variables.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea un gráfico de dispersión con la longitud de pétalo en el eje x y el ancho de pétalo en el eje y. Colorea cada punto por especie usando colores diferentes. Agrega una leyenda que muestre qué color representa cada especie. Guárdalo como petal_scatter.png. Agrega esto a iris_exploration.py
@@ -164,7 +167,7 @@ Esto es vibe coding en acción: describa la visualización, pruébela e itere.
 
 Los gráficos de cajas son excelentes para comparar distribuciones entre grupos.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea un gráfico de cajas comparando las longitudes de pétalos entre las tres especies. Coloca las especies en el eje x y la longitud de pétalo en el eje y. Usa colores diferentes para cada especie. Agrega un título. Guárdalo como species_boxplot.png. Agrega esto a iris_exploration.py
@@ -176,23 +179,23 @@ Crea un gráfico de cajas comparando las longitudes de pétalos entre las tres e
 - Las cajas muestran la mediana y los cuartiles para cada especie
 - Puede ver claramente que Virginica tiene los pétalos más largos
 
-## Paso 10: Revisar y Confirmar
+## Paso 10: Revisar y Hacer Commit
 
-Antes de confirmar, revise lo que Claude construyó.
+Antes de hacer commit, revise lo que Claude construyó.
 
 - En VS Code Explorer, haga clic en `iris_exploration.py` para abrirlo
 - Revise el código—note las importaciones, carga de datos y secciones de gráficos
 - No necesita entender cada línea, pero obtenga una idea de la estructura
 - Verifique que todos los archivos PNG fueron creados: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Abra GitHub Desktop
-- Verá todos los archivos nuevos listados (el script Python y las imágenes PNG)
+- Verá listadas las nuevas imágenes PNG, además de `iris_exploration.py` como archivo modificado (Claude agregó el código de los gráficos)
 - En el campo **Summary** en la parte inferior izquierda, escriba:
 
 ```
 Análisis de datos Iris con histogramas, gráficos de dispersión y gráficos de cajas
 ```
 
-- Haga clic en **Commit to main**
+- Haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 4 files to main**; el número coincide con la cantidad de archivos que cambiaron)
 - Haga clic en **Push origin** para respaldar en GitHub
 
 ¡Ha guardado su primer análisis funcional!
@@ -211,20 +214,20 @@ Vibe coding brilla cuando usted itera. Intente añadir funciones describiéndola
 
 Después de cada función exitosa:
 - Pruébela ejecutando el script
-- Si funciona, confirme con GitHub Desktop
+- Si funciona, haga commit con GitHub Desktop
 - Si falla, diga a Claude el error y solicite que lo corrija
-- Cuando esté corregido, confirme la versión funcional
+- Cuando esté corregido, haga commit de la versión funcional
 
 
 **Principios clave:**
 
 - **Describa resultados, no implementación** - Diga "muestra un mapa de calor de correlación" no "usa seaborn.heatmap() con df.corr()"
 - **Itere rápidamente** - Probar → refinar → probar → refinar
-- **Confirme versiones funcionales** - Guarde cada éxito antes de probar nuevas funciones
+- **Haga commit de las versiones funcionales** - Guarde cada éxito antes de probar nuevas funciones
 - **Acepte los fallos** - Si el código de Claude falla, simplemente describa el error y solicite corrección
 - **Mantenga el control** - Usted decide las funciones, prioridades y cuándo es suficientemente bueno
 
-Cada vez, siga el patrón: describir → probar → iterar → confirmar.
+Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 
 ## Próximos Pasos
 
@@ -240,13 +243,13 @@ Cada vez, siga el patrón: describir → probar → iterar → confirmar.
 - **Errores de importación** - El contenedor de Docker debe tener pandas, matplotlib y scikit-learn preinstalados. Si no, solicite a Claude que los instale con pip.
 - **Claude comete errores** - ¡Es normal! Copie el mensaje de error, péguelo a Claude y diga "corrige este error". Vibe coding incluye iteración y depuración.
 - **No puede hacer push a GitHub** - Asegúrese de haber iniciado sesión en GitHub Desktop y publicado el repositorio (Paso 1). Verifique su conexión a internet.
-- **El contenedor no inicia** - Asegúrese de que Docker Desktop esté ejecutándose (indicador de estado verde). Intente hacer clic en el ícono verde en VS Code y seleccionar **Rebuild Container**.
+- **El contenedor no inicia** - Asegúrese de que Docker Desktop esté ejecutándose (indicador de estado verde). Intente hacer clic en el ícono **><** en la esquina inferior izquierda de VS Code y seleccionar **Rebuild Container**.
 
 ## Resumen del Flujo de Trabajo
 
 Este tutorial combinó varias tecnologías en un flujo de trabajo:
 
-- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, confirmar, hacer push)
+- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, hacer commit, hacer push)
 - **Contenedor Docker** - Entorno Python aislado con todas las dependencias preinstaladas
 - **VS Code** - Editor de código que se conecta al contenedor de Docker
 - **Claude Code** - Asistente con IA que escribe código Python a partir de sus descripciones

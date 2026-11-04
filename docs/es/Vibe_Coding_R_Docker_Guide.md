@@ -6,18 +6,18 @@ lang: "es"
 
 # Vibe Coding en R con Claude Code y Docker
 
-Vibe coding es como tener una conversación con su computadora: usted describe el resultado que desea, Claude Code lo construye, usted lo prueba y lo refina. No es magia; es una nueva forma de trabajar donde usted guía la visión y la IA maneja la implementación. Este tutorial le muestra cómo construir un panel de estadísticas de la NBA usando únicamente solicitudes en lenguaje natural.
+Vibe coding es como tener una conversación con su computadora: usted describe el resultado que desea, Claude Code lo construye, usted lo prueba y lo refina. No es magia; es una nueva forma de trabajar donde usted guía la visión y la IA maneja la implementación. Este tutorial le muestra cómo construir un panel real de estadísticas de la NBA usando únicamente solicitudes en lenguaje natural.
 
 ## Conceptos Clave
 
-- **[Claude Code](https://code.claude.com/)** - Asistente de codificación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
+- **[Claude Code](https://code.claude.com/)** - Asistente de programación con IA que escribe, depura y refactoriza código a partir de sus solicitudes en lenguaje natural
 - **[hoopR](https://hoopr.sportsdataverse.org/)** - Paquete de R que proporciona acceso fácil a estadísticas de jugadores de la NBA y datos de partidos
-- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → confirmar versiones que funcionen
+- **Refinamiento iterativo** - El patrón central de vibe coding: describir → probar → refinar → hacer commit de las versiones que funcionen
 
 ## Lo Que Necesitará
 
-- Haber completado [Programación en R con VS Code y Docker](./R_Coding_Docker_Guide)
-- Haber completado [Uso de GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
+- Haber completado [Programación en R en VS Code vía Docker](./R_Coding_Docker_Guide)
+- Haber completado [Use GitHub Desktop con Claude Code](./GitHub_Desktop_Claude_Code_Workflow)
 - Docker Desktop instalado e iniciado
 - 25-30 minutos
 
@@ -40,12 +40,13 @@ Ahora tiene un repositorio Git local y una copia de respaldo en GitHub.
 ## Paso 2: Copiar la Configuración de Docker
 
 - Vaya a https://github.com/gexijin/vibe
-  - **Nota para usuarios de ARM64 (Apple Silicon Macs):** Use https://github.com/gexijin/vibe/tree/ARM64 en su lugar
-- Haga clic en **Code** y Download Zip
-- Abra File Explorer (Windows) o Finder (Mac)
-- Descomprima el archivo en la carpeta Download
-- Navegue a su carpeta del proyecto vibe (por ejemplo, `Documents/vibe`)
+  - **Nota para Macs con Apple Silicon:** Esta configuración está construida para procesadores Intel/AMD. Docker Desktop la ejecuta mediante emulación, así que funciona, pero la primera construcción y el propio R son más lentos.
+- Haga clic en **Code** y luego en **Download ZIP**
+- Abra el Explorador de archivos (Windows) o Finder (Mac) y vaya a su carpeta **Descargas** (Downloads)
+- Descomprima el archivo: en Windows, haga clic derecho sobre él y elija **Extract All**; en Mac, haga doble clic en él
+- Abra la carpeta descomprimida `vibe-main`. En Windows puede contener otra carpeta con el mismo nombre; abra esa
 - Encuentre la carpeta `.devcontainer`
+  - En Mac, Finder oculta las carpetas cuyo nombre empieza con un punto. Presione **Cmd+Shift+.** (punto) para mostrarlas
 - Copie la carpeta completa (contiene `Dockerfile` y `devcontainer.json`)
 - Navegue a su nueva carpeta `nba-dashboard`
 - Pegue la carpeta `.devcontainer` allí
@@ -64,10 +65,10 @@ Su carpeta `nba-dashboard` ahora debería contener:
 - Haga clic en **Select Folder** (Windows) o **Open** (Mac)
 - Aparece una notificación en la esquina inferior derecha: **Folder contains a Dev Container configuration file**
 - Haga clic en **Reopen in Container**
-- Si no ve la notificación, haga clic en el ícono verde en la esquina inferior izquierda y seleccione **Reopen in Container**
-- VS Code construye el contenedor Docker (toma 3-5 minutos la primera vez)
+- Si no ve la notificación, haga clic en el ícono **><** en la esquina inferior izquierda y seleccione **Reopen in Container**
+- VS Code construye el contenedor Docker (toma 5-10 minutos la primera vez)
 - Observe la notificación de progreso que muestra los pasos de construcción
-- Cuando se complete, el ícono verde muestra **Dev Container: R in Docker**
+- Cuando se complete, el ícono **><** en la esquina inferior izquierda muestra **Dev Container: R in Docker (AMD64)**
 
 ## Paso 4: Iniciar Claude Code
 
@@ -81,8 +82,11 @@ claude
 
 - Se abre una ventana del navegador para autenticación
 - Haga clic en **Continue with Google** o **Continue with Email**
-- Inicie sesión con su cuenta de Claude (o cree una)
-- Después de que la autenticación tenga éxito, regrese al terminal de VS Code
+- Inicie sesión con su cuenta de Claude. Claude Code requiere un plan de pago de Claude (como Pro o Max) o una cuenta de Anthropic Console; el plan gratuito no lo incluye
+- Si el navegador muestra un código en lugar de indicar que ya terminó, copie el código, vuelva a la terminal de VS Code, péguelo en el prompt `Paste code here if prompted` y presione Enter
+- Si no se abre ninguna ventana del navegador, presione `c` para copiar el enlace de inicio de sesión y péguelo en su navegador
+- Después de que la autenticación tenga éxito, regrese a la terminal de VS Code
+- Si se le pregunta si confía en los archivos de esta carpeta, elija **Yes**
 - Verá el mensaje de bienvenida de Claude
 
 Claude Code ahora está ejecutándose y listo para sus solicitudes.
@@ -91,10 +95,10 @@ Claude Code ahora está ejecutándose y listo para sus solicitudes.
 
 Ahora comienza la parte divertida. En lugar de buscar documentación, simplemente describa lo que desea.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
-Instala el paquete hoopR y carga las estadísticas actuales de jugadores de la NBA. Muéstrame los 10 mejores jugadores por total de puntos anotados esta temporada. Muéstralo como una tabla bien formateada.
+Instala el paquete hoopR y carga las estadísticas de jugadores de la NBA de la temporada más reciente que tenga datos. Muéstrame los 10 mejores jugadores por total de puntos anotados. Muéstralo como una tabla bien formateada.
 ```
 
 - Presione Enter
@@ -107,16 +111,16 @@ Instala el paquete hoopR y carga las estadísticas actuales de jugadores de la N
 
 ¡Acaba de usar vibe coding! Sin buscar documentación, sin ensayo y error—solo describa y pruebe.
 
-**Guarde su progreso:** Pida a Claude que confirme usando Git, o hágalo usted mismo desde GitHub Desktop:
+**Guarde su progreso:** Pida a Claude que haga commit usando Git, o hágalo usted mismo desde GitHub Desktop:
 ```
-Confirma estos cambios.
+Haz commit de estos cambios.
 ```
 
 ## Paso 6: Segundo Vibe - Explorar los Datos
 
 Antes de construir un panel, comprenda qué datos tiene.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Muéstrame qué columnas están disponibles en estos datos de la NBA. Luego crea un resumen mostrando: número de jugadores, número de equipos, promedio de puntos por jugador, y quién tiene más asistencias y rebotes.
@@ -124,17 +128,17 @@ Muéstrame qué columnas están disponibles en estos datos de la NBA. Luego crea
 
 - Presione Enter
 - Claude explora el conjunto de datos y le muestra estadísticas interesantes
-- Observe la salida para ver las columnas disponibles como: player_name, team, points, assists, rebounds, field_goal_percentage, etc.
+- Observe la salida para ver las columnas disponibles, como nombre del jugador, equipo, puntos, asistencias y rebotes
 
 Esta exploración le ayuda a decidir qué incluir en su panel.
 
-**Guarde su progreso:** Pida a Claude que confirme, o use GitHub Desktop.
+**Guarde su progreso:** Pida a Claude que haga commit, o use GitHub Desktop.
 
 ## Paso 7: Tercer Vibe - Crear una Aplicación Shiny Básica
 
 Es hora de construir el panel interactivo.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Crea una aplicación Shiny en un archivo llamado app.R que muestre una tabla interactiva de estadísticas de jugadores de la NBA. Incluye columnas para nombre de jugador, equipo, puntos, asistencias y rebotes. Agrega un deslizador para filtrar jugadores por un mínimo de puntos anotados (de 0 a 1000). Hazlo lucir limpio y profesional.
@@ -148,15 +152,14 @@ Crea una aplicación Shiny en un archivo llamado app.R que muestre una tabla int
 
 Pruebe su panel para ver si funciona.
 
-- Mire en la parte superior derecha del editor de VS Code (donde está abierto `app.R`)
+- En el Explorador de VS Code (barra lateral izquierda), haga clic en `app.R` para abrirlo
+- Mire en la parte superior derecha del editor
 - Encuentre el botón **▶** con una flecha desplegable
 - Haga clic en el desplegable y seleccione **Run Shiny App**
-- La aplicación se inicia y aparece una notificación: **Open in Browser**
-- Haga clic en **Open in Browser**
-- El panel de la NBA se abre en su navegador web
+- La aplicación se inicia y el panel se abre en una pestaña de vista previa dentro de VS Code (para usar su navegador habitual, abra la pestaña **Ports** en la parte inferior y haga clic en el icono del globo junto al puerto)
 - Intente mover el deslizador de puntos: la tabla se filtra en tiempo real
 - Desplácese por los datos de jugadores
-- Confirme los cambios si la aplicación funciona
+- Haga commit de los cambios si la aplicación funciona
 
 Si algo no funciona, copie cualquier mensaje de error y péguelo a Claude para corregirlo.
 
@@ -164,7 +167,7 @@ Si algo no funciona, copie cualquier mensaje de error y péguelo a Claude para c
 
 Las tablas son útiles, pero las visualizaciones cuentan mejores historias.
 
-- De vuelta en el terminal de Claude Code, escriba:
+- De vuelta en la terminal de Claude Code, escriba:
 
 ```
 Agrega un gráfico de barras debajo de la tabla mostrando los 15 mejores jugadores por puntos. Usa colores diferentes para cada jugador. También agrega un gráfico de dispersión mostrando la relación entre puntos y asistencias para todos los jugadores filtrados.
@@ -173,7 +176,7 @@ Agrega un gráfico de barras debajo de la tabla mostrando los 15 mejores jugador
 - Presione Enter
 - Claude actualiza `app.R` con código de visualización
 - Haga clic en **Run Shiny App** nuevamente para recargar la aplicación
-- Actualice su navegador
+- Si la vista previa no cambia, haga clic en la flecha de recarga en la parte superior de la pestaña de vista previa (o actualice su navegador)
 - Ahora ve un gráfico de barras colorido y un gráfico de dispersión
 - Mueva el deslizador: todas las visualizaciones se actualizan juntas
 
@@ -183,7 +186,7 @@ Esto es vibe coding en acción: describa la funcionalidad, pruébela e itere.
 
 Haga el panel más interactivo con selección de equipo.
 
-- En el terminal de Claude Code, escriba:
+- En la terminal de Claude Code, escriba:
 
 ```
 Agrega un menú desplegable para filtrar jugadores por equipo. Colócalo en la parte superior. Cuando seleccione un equipo, muestra solo jugadores de ese equipo. Incluye una opción "Todos los Equipos" para mostrar a todos.
@@ -191,29 +194,29 @@ Agrega un menú desplegable para filtrar jugadores por equipo. Colócalo en la p
 
 - Presione Enter
 - Claude agrega el filtro de equipo
-- Actualice su navegador
+- Haga clic en la flecha de recarga en la parte superior de la pestaña de vista previa (o actualice su navegador)
 - Pruebe el menú desplegable: seleccione diferentes equipos como Lakers, Warriors, Celtics
 - Observe cómo la tabla y los gráficos se actualizan para cada equipo
 
 Está construyendo un panel profesional mediante una conversación.
 
-## Paso 11: Revisar y Confirmar
+## Paso 11: Revisar y Hacer Commit
 
-Antes de confirmar, revise lo que Claude construyó.
+Antes de hacer commit, revise lo que Claude construyó.
 
 - En el Explorador de VS Code, haga clic en `app.R` para abrirlo
 - Revise el código: observe el diseño de la interfaz, la lógica del servidor y el código de gráficos
 - No necesita entender cada línea, pero obtenga una idea de la estructura
 - Abra GitHub Desktop
-- Verá `app.R` listado como un archivo nuevo
-- El panel derecho muestra todo el código en verde (adiciones nuevas)
+- Verá `app.R` listado (como archivo nuevo, o como modificado si ya hizo commit en un paso anterior)
+- El panel derecho muestra el código agregado en verde
 - En el campo **Summary** en la parte inferior izquierda, escriba:
 
 ```
 Crear panel NBA con filtro de equipo y visualizaciones
 ```
 
-- Haga clic en **Commit to main**
+- Haga clic en el botón azul de commit en la parte inferior (dice algo como **Commit 1 file to main**)
 - Haga clic en **Push origin** para respaldar en GitHub
 
 ¡Ha guardado su primera versión funcional!
@@ -227,25 +230,25 @@ Vibe coding brilla cuando itera. Intente agregar funcionalidades describiéndola
 - "Agrega un cuadro de búsqueda de jugadores para que pueda escribir el nombre de un jugador y saltar a él"
 - "Muestra los logos de los equipos junto a los nombres de equipo en el menú desplegable"
 - "Agrega un gráfico de líneas mostrando la tendencia de puntos por partido para el equipo seleccionado"
-- "Haz que el gráfico de barras sea ordenable haciendo clic en los encabezados de columna"
-- "Agrega información emergente al gráfico de dispersión mostrando nombres de jugadores cuando paso el cursor"
+- "Haz que la tabla sea ordenable haciendo clic en los encabezados de columna"
+- "Agrega información emergente al gráfico de dispersión mostrando nombres de jugadores cuando pase el cursor"
 
 Después de cada funcionalidad exitosa:
 - Pruébela en el navegador
-- Si funciona, confírmela con GitHub Desktop
+- Si funciona, haga commit con GitHub Desktop
 - Si falla, dígale a Claude el error y solicite corrección
-- Cuando esté corregido, confirme la versión funcional
+- Cuando esté corregido, haga commit de la versión funcional
 
 
 **Principios clave:**
 
 - **Describa resultados, no implementación** - Diga "muestra los mejores anotadores" no "usa arrange() y head()"
 - **Itere rápidamente** - Probar → refinar → probar → refinar
-- **Confirme versiones funcionales** - Guarde cada éxito antes de intentar nuevas funcionalidades
+- **Haga commit de las versiones funcionales** - Guarde cada éxito antes de intentar nuevas funcionalidades
 - **Acepte los fallos** - Si el código de Claude falla, simplemente describa el error y solicite corrección
 - **Mantenga el control** - Usted decide las funcionalidades, prioridades y cuándo es suficientemente bueno
 
-Cada vez, siga el patrón: describir → probar → iterar → confirmar.
+Cada vez, siga el patrón: describir → probar → iterar → hacer commit.
 
 ## Próximos Pasos
 
@@ -253,12 +256,12 @@ Cada vez, siga el patrón: describir → probar → iterar → confirmar.
 - **Pruebe otros paquetes** - Pida a Claude que use `nflfastR` para fútbol americano o `worldfootballR` para fútbol
 - **Aprenda preguntando** - Cuando Claude escriba código, pregunte "explica qué hace esta función" para aprender R
 - **Comparta su panel** - Despliegue en [shinyapps.io](https://www.shinyapps.io/) (pregunte a Claude cómo)
-- **Lea sobre vibe coding** - Visite [la guía de IBM](https://www.ibm.com/think/topics/vibe-coding) para más información sobre este estilo de codificación
+- **Lea sobre vibe coding** - Visite [la guía de IBM](https://www.ibm.com/think/topics/vibe-coding) para más información sobre este estilo de programación
 
 ## Solución de Problemas
 
-- **La instalación de hoopR falla** - Verifique su conexión a internet; el paquete descarga datos de la web. Intente ejecutar `install.packages("hoopR")` en un terminal de R para ver mensajes de error detallados.
-- **La aplicación Shiny no se inicia** - Verifique que la extensión Shiny esté instalada (busque "Posit.shiny" en Extensiones de VS Code). Revise el terminal para mensajes de error y péguelos a Claude.
+- **La instalación de hoopR falla** - Verifique su conexión a internet; el paquete descarga datos de la web. Intente ejecutar `install.packages("hoopR")` en una terminal de R para ver mensajes de error detallados.
+- **La aplicación Shiny no se inicia** - Verifique que la extensión Shiny esté instalada (busque "Posit.shiny" en Extensiones de VS Code). Revise la terminal para mensajes de error y péguelos a Claude.
 - **No se muestran datos** - El paquete hoopR obtiene datos en vivo; si la temporada de la NBA no ha comenzado, puede haber datos limitados. Pida a Claude que use datos de muestra o de una temporada anterior.
 - **Claude comete errores** - ¡Es normal! Copie el mensaje de error, péguelo a Claude y diga "corrige este error". Vibe coding incluye iteración y depuración.
 - **No puedo hacer push a GitHub** - Asegúrese de haber iniciado sesión en GitHub Desktop y publicado el repositorio (Paso 1). Verifique su conexión a internet.
@@ -267,7 +270,7 @@ Cada vez, siga el patrón: describir → probar → iterar → confirmar.
 
 Este tutorial combinó varias tecnologías en un flujo de trabajo:
 
-- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, confirmar, hacer push)
+- **GitHub Desktop** - Control de versiones con interfaz visual (crear repositorios, hacer commit, hacer push)
 - **Contenedor Docker** - Entorno R aislado con todas las dependencias preinstaladas
 - **VS Code** - Editor de código que se conecta al contenedor Docker
 - **Claude Code** - Asistente con IA que escribe código R y Shiny a partir de sus descripciones
@@ -282,13 +285,13 @@ Después de esta configuración inicial, su rutina diaria de vibe coding se conv
 
 1. **Iniciar Docker Desktop** - Lance la aplicación, espere el estado verde
 2. **Abrir VS Code** - Abra su proyecto, reabra en contenedor si es necesario
-3. **Iniciar Claude Code** - Escriba `claude` en el terminal
+3. **Iniciar Claude Code** - Escriba `claude` en la terminal
 4. **Describa su objetivo** - "Agrega una funcionalidad que..." o "Corrige el error donde..."
 5. **Probar los cambios** - Ejecute su aplicación, verifique si funciona
-6. **Iterar o confirmar** - Si falla, describa la corrección; si funciona, confirme con GitHub Desktop
+6. **Iterar o hacer commit** - Si falla, describa la corrección; si funciona, haga commit con GitHub Desktop
 7. **Hacer push regularmente** - Haga clic en **Push origin** para respaldar en GitHub
 
-Cuanto más practique, mejor será describiendo lo que desea. Vibe coding es una habilidad: aprende qué tipos de descripciones funcionan mejor y cómo dividir grandes ideas en pasos manejables.
+Cuanto más practique, mejor será describiendo lo que desea. Vibe coding es una habilidad: aprende qué tipos de descripciones funcionan mejor y cómo dividir grandes ideas en partes que pueda probar.
 
 ---
 

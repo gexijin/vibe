@@ -22,10 +22,10 @@ Claude Code ist ein KI-Assistent, der in Ihrem Terminal lebt und Ihnen beim Schr
 
 ## Schritt 1: Git for Windows installieren (optional, empfohlen)
 
-Git for Windows ist **empfohlen, aber optional**. Es fügt **Git Bash** hinzu, die Shell, die Claude Code zum Ausführen von Befehlen verwendet. Wenn Sie ihn überspringen, greift Claude Code stattdessen auf PowerShell zurück – Sie können also direkt zu Schritt 2 wechseln und Git bei Bedarf später installieren.
+Git for Windows ist **empfohlen, aber optional**. Es fügt **Git Bash** hinzu, die Shell, die Claude Code zum Ausführen von Befehlen verwendet. Wenn Sie diesen Schritt überspringen, greift Claude Code stattdessen auf PowerShell zurück – Sie können also direkt zu Schritt 2 wechseln und Git bei Bedarf später installieren.
 
 - Gehen Sie zu [git-scm.com/download/win](https://git-scm.com/download/win)
-- Der Download sollte automatisch starten – öffnen Sie das Installationsprogramm, wenn er fertig ist
+- Klicken Sie oben auf der Seite auf **Click here to download** und öffnen Sie das Installationsprogramm, wenn der Download fertig ist
 - Klicken Sie sich mit **Next** durch das Installationsprogramm und übernehmen Sie die Standardoptionen
 - Klicken Sie auf **Install** und dann auf **Finish**
 
@@ -33,20 +33,73 @@ Das war's – Claude Code erkennt Git Bash beim Start automatisch.
 
 ## Schritt 2: Claude Code installieren
 
-- Klicken Sie auf die **Windows-Starttaste**
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste)
 - Geben Sie `PowerShell` ein und klicken Sie auf **Windows PowerShell**
 - Geben Sie im PowerShell-Fenster ein:
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Warten Sie, bis die Installation abgeschlossen ist
+- Warten Sie, bis die Installation abgeschlossen ist (das Fenster zeigt während des Downloads möglicherweise eine Minute lang nichts an – das ist normal)
 - Schließen Sie PowerShell und öffnen Sie es erneut, dann überprüfen Sie durch Eingabe von:
    ```
    claude --version
    ```
 - Sie sollten die Versionsnummer von Claude Code sehen
+- Wenn stattdessen „Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt“ (englisch: `'claude' is not recognized`) erscheint (Claude wurde nicht gefunden), führen Sie diese zwei Zeilen in PowerShell aus, schließen Sie PowerShell, öffnen Sie es erneut und versuchen Sie `claude --version` noch einmal:
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
-## Schritt 3: Mit Ihrem Anthropic-Konto verbinden
+## Schritt 3: (Optional) Claude Code in VS Code öffnen
+
+Überspringen Sie diesen Schritt, wenn Sie VS Code noch nicht haben – Sie können es später mit [VS Code Erste Schritte](VS_Code_Getting_Started) installieren und dann hierher zurückkehren.
+
+Jetzt, da Claude Code installiert ist, können Sie es auch in VS Code verwenden statt nur im Terminal. Das ist oft die einfachste Arbeitsweise, denn Sie können Dateien lesen, Code bearbeiten und um Hilfe bitten, ohne Ihren Editor zu verlassen.
+
+Stellen Sie sich die Claude Code-Seitenleiste wie ein Chatfenster innerhalb von VS Code vor. Dort können Sie Fragen stellen, sich Code erklären lassen und Hilfe bekommen, während Sie im selben Fenster arbeiten.
+
+### So öffnen Sie die Claude Code-Seitenleiste
+
+- Öffnen Sie VS Code
+- Schauen Sie ganz an den linken Rand des Fensters
+- Klicken Sie auf das **Extensions**-Symbol, falls Sie das Claude Code-Fenster noch nicht sehen
+- Suchen Sie im Extensions-Marketplace nach `Claude Code`
+- Klicken Sie auf **Install**, falls die Erweiterung noch nicht installiert ist
+- Klicken Sie nach der Installation unten rechts im Fenster auf **✻ Claude Code**, um den Chat zu öffnen. (Das Funken-Symbol, englisch „Spark“, in der linken Seitenleiste öffnet dagegen eine Liste Ihrer Sitzungen, in der Sie eine neue Sitzung starten können.)
+
+Wenn Sie das Claude Code-Symbol nicht sehen, versuchen Sie Folgendes:
+
+- Drücken Sie **Strg + Umschalt + P**
+- Geben Sie ein: `Claude Code: Open in Side Bar`
+- Klicken Sie in der Liste auf den passenden Eintrag
+
+Wenn die Seitenleiste immer noch nicht erscheint, schließen Sie VS Code und öffnen Sie es erneut. Manchmal braucht die Erweiterung einen Neustart, bevor die Seitenleiste angezeigt wird.
+
+### Wofür die Seitenleiste da ist
+
+In der Claude Code-Seitenleiste können Sie:
+
+- Fragen zu Ihrem Projekt stellen
+- Hilfe beim Beheben von Fehlern bekommen
+- sich Code erklären lassen, den Sie nicht verstehen
+- Dateien erstellen oder aktualisieren
+- visueller arbeiten, ohne VS Code zu verlassen
+
+Das ist praktisch, weil Sie Ihren Code im Editor geöffnet lassen und Claude im selben Fenster um Hilfe bitten können.
+
+### Kurzer Test
+
+Wenn die Seitenleiste geöffnet ist:
+
+- Geben Sie ein: Erkläre mir dieses Projekt
+- Drücken Sie die **Eingabetaste**
+
+Wenn Claude antwortet, können Sie loslegen. Beim ersten Mal fordert die Seitenleiste Sie eventuell stattdessen auf, sich anzumelden: Folgen Sie den Anweisungen, oder verbinden Sie Ihr Konto in Schritt 4 weiter unten und versuchen Sie es dann erneut.
+
+> Tipp: Wenn die Seitenleiste immer noch fehlt, prüfen Sie, ob die Claude Code-Erweiterung installiert ist und VS Code neu gestartet wurde.
+
+## Schritt 4: Mit Ihrem Anthropic-Konto verbinden
 
 ### Option A. Ihr Claude Pro- oder Max-Abonnement verwenden
 
@@ -54,13 +107,10 @@ Das war's – Claude Code erkennt Git Bash beim Start automatisch.
    ```
    claude
    ```
-- Claude versucht, einen Browser zu öffnen. Wenn er sich nicht automatisch öffnet, halten Sie **Strg** gedrückt und klicken Sie auf die lange URL, um sie in einem Browser zu öffnen. Alternativ kopieren Sie die URL und fügen Sie sie in einen externen Browser ein.
+- Claude versucht, einen Browser zu öffnen. Wenn er sich nicht automatisch öffnet, drücken Sie die Taste **c**, um den Anmeldelink zu kopieren, und fügen Sie ihn dann in Ihren Browser ein.
 - Melden Sie sich bei Ihrem Claude.ai-Konto an (dies kann automatisch geschehen, wenn Sie Chrome verwenden)
-- Klicken Sie auf **Authorize**
-- Klicken Sie auf **Copy Code**, wenn ein langer Code erscheint
-- Gehen Sie zurück zum Terminal-Fenster
-- Zum Einfügen im Terminal: **Rechtsklick** und **Einfügen** wählen (oder **Strg+Umschalt+V** drücken)
-- Sie sollten eine Erfolgsmeldung sehen
+- Klicken Sie auf **Authorize**. Der Browser sollte anzeigen, dass Sie angemeldet sind, und PowerShell zeigt eine Erfolgsmeldung.
+- Nur wenn der Browser stattdessen einen langen Code anzeigt (das passiert in WSL/Ubuntu): Klicken Sie auf **Copy Code**, gehen Sie zurück zum Terminal, fügen Sie den Code bei **Paste code here if prompted** ein (**Rechtsklick** oder **Strg+V**) und drücken Sie die **Eingabetaste**.
 - Folgen Sie den Anweisungen, um die Einrichtung abzuschließen
 
 Die folgenden API-basierten Optionen laufen ebenfalls in **PowerShell** und nutzen den Befehl `setx`, der eine Einstellung dauerhaft speichert. **Schließen Sie PowerShell nach einem `setx` und öffnen Sie es erneut**, damit die Änderung wirksam wird, und starten Sie dann `claude`.
@@ -80,8 +130,9 @@ Wenn Sie einen Anthropic-API-Schlüssel anstelle eines Claude-Abonnements haben:
    ```
    claude
    ```
+- Beim ersten Mal fragt Claude Code, ob Sie den gefundenen API-Schlüssel verwenden möchten. Wählen Sie **Yes**. (Wenn Sie versehentlich **No** wählen, geben Sie `/config` ein und aktivieren Sie **Use custom API key**.)
 
-### Option C. OpenRouter API verwenden (kostenlos starten!)
+### Option C. OpenRouter API verwenden (Bezahlung nach Nutzung)
 
 OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schlüssel Zugang zu über 500 großen Sprachmodellen bietet. Das kann eine günstige Möglichkeit sein, Claude Code zu nutzen: Sie zahlen nur für die Nutzung und wählen aus Modellen verschiedener Preisklassen.
 
@@ -91,10 +142,10 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
    ```
    setx ANTHROPIC_BASE_URL "https://openrouter.ai/api"
    setx ANTHROPIC_AUTH_TOKEN "your-openrouter-api-key"
-   setx ANTHROPIC_API_KEY ""
-   setx ANTHROPIC_DEFAULT_SONNET_MODEL "openai/gpt-5.1-codex-max"
-   setx ANTHROPIC_DEFAULT_OPUS_MODEL "openai/gpt-5.2-pro"
-   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "minimax/minimax-m2:exacto"
+   [Environment]::SetEnvironmentVariable('ANTHROPIC_API_KEY', $null, 'User')
+   setx ANTHROPIC_DEFAULT_SONNET_MODEL "~anthropic/claude-sonnet-latest"
+   setx ANTHROPIC_DEFAULT_OPUS_MODEL "~anthropic/claude-opus-latest"
+   setx ANTHROPIC_DEFAULT_HAIKU_MODEL "~anthropic/claude-haiku-latest"
    ```
 - Schließen Sie PowerShell und öffnen Sie es erneut, dann starten Sie Claude Code:
    ```
@@ -104,16 +155,18 @@ OpenRouter ist ein einheitliches API-Gateway, das über einen einzigen API-Schl�
 
 **Hinweise:**
 - Ersetzen Sie `your-openrouter-api-key` durch Ihren tatsächlichen OpenRouter API-Schlüssel
-- `ANTHROPIC_API_KEY` muss explizit auf leer gesetzt werden
+- Die Zeile mit `ANTHROPIC_API_KEY` entfernt einen eventuell gespeicherten Anthropic-API-Schlüssel, der bei Verwendung von OpenRouter nicht gesetzt sein darf
 - Um andere Modelle zu verwenden, müssen diese **Tool-Nutzungsfähigkeiten** unterstützen. Sie können Modelle überschreiben mit:
    ```
    setx ANTHROPIC_DEFAULT_SONNET_MODEL "model-provider/model-name"
    ```
 - Durchsuchen Sie verfügbare Modelle unter [openrouter.ai/models](https://openrouter.ai/models)
-- Die kostenlose Stufe bietet 50 API-Anfragen pro Tag
-- Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/guides/claude-code-integration)
+- Kostenlose Modelle (`:free`) sind auf 50 Anfragen pro Tag begrenzt – eine einzige Aufgabe in Claude Code kann diese schnell aufbrauchen
+- Die oben gezeigten Modelle sind kostenpflichtig – prüfen Sie ihre Preise unter [openrouter.ai/models](https://openrouter.ai/models), bevor Sie sie verwenden
+- Über OpenRouter funktioniert Claude Code nur mit Anthropic-Modellen garantiert
+- Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)
 
-### Option D. Anthropic API über Azure Foundry verwenden
+### Option D. Anthropic API über Microsoft Foundry (Azure) verwenden
 
 Fügen Sie in PowerShell diesen Code ein, um die Umgebungsvariablen zu definieren:
 ```
@@ -122,8 +175,8 @@ setx CLAUDE_CODE_USE_FOUNDRY 1
 # Azure resource name
 setx ANTHROPIC_FOUNDRY_RESOURCE "xxxx-eastus2"
 # Set models to your resource's deployment names
-setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-5"
-setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-4-5"
+setx ANTHROPIC_DEFAULT_OPUS_MODEL "claude-opus-4-8"
+setx ANTHROPIC_DEFAULT_SONNET_MODEL "claude-sonnet-5"
 setx ANTHROPIC_DEFAULT_HAIKU_MODEL "claude-haiku-4-5"
 setx ANTHROPIC_FOUNDRY_API_KEY "your_api_key"
 ```
@@ -137,16 +190,17 @@ claude
 
 Sie sollten nun Claude Code mit Azure-bereitgestellten Claude-Modellen verwenden können.
 
-## Schritt 4: Claude Code testen
+## Schritt 5: Claude Code testen
 
-Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing".
+Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allgemeine Frage wie „Erkläre Quantencomputing“.
 
-## Schritt 5: Auf Ihre Projekte zugreifen
+## Schritt 6: Auf Ihre Projekte zugreifen
 
 - Wenn Sie einen Projektordner haben, wechseln Sie in PowerShell dorthin:
    ```
    cd ~/Documents/test_claude
    ```
+   Ersetzen Sie `test_claude` durch den tatsächlichen Namen Ihres Projektordners. Tipp: Geben Sie `cd ` (mit Leerzeichen) ein, ziehen Sie den Ordner aus dem Datei-Explorer in das PowerShell-Fenster, um seinen vollständigen Pfad einzufügen, und drücken Sie die **Eingabetaste**.
 - Starten Sie dann Claude:
    ```
    claude
@@ -157,9 +211,9 @@ Sie sind fertig! Geben Sie `claude` in PowerShell ein und stellen Sie eine allge
 
 **Hinweis:** Claude arbeitet innerhalb eines Projektordners und speichert dort seine Einstellungen. Das ist sein Arbeitsbereich.
 
-## Schritt 6: (Optional) WSL2 für die vollständige Linux-Erfahrung installieren
+## Schritt 7: (Optional) WSL2 für die vollständige Linux-Erfahrung installieren
 
-Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Claude Code läuft unter Linux jedoch besser. WSL2 führt ein echtes Linux-System innerhalb von Windows aus und bietet **Bash Tool Sandboxing** (eine Sicherheitsfunktion) sowie eine bessere Kompatibilität mit Linux-Toolchains. Die Einrichtung dauert länger und erfordert einen Neustart – tun Sie dies also nur, wenn Sie die vollständige Linux-Erfahrung möchten.
+Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Einige Funktionen gibt es jedoch nur unter Linux. WSL2 führt ein echtes Linux-System innerhalb von Windows aus und bietet **Bash Tool Sandboxing** (eine Sicherheitsfunktion) sowie eine bessere Kompatibilität mit Linux-Toolchains. Die Einrichtung dauert länger und erfordert einen Neustart – tun Sie dies also nur, wenn Sie die vollständige Linux-Erfahrung möchten.
 
 ### a) Virtualisierung prüfen und WSL installieren
 
@@ -168,34 +222,34 @@ Für die meisten Nutzer reicht die native Einrichtung oben völlig aus. Claude C
 - **Klicken Sie mit der rechten Maustaste** auf die Taskleiste (die Leiste am unteren Bildschirmrand)
 - Klicken Sie im Menü auf **Task-Manager**
 - Wenn sich der Task-Manager in einem kleinen Fenster öffnet, klicken Sie unten auf **Mehr Details**
-- Klicken Sie oben auf die Registerkarte **Leistung**
+- Klicken Sie auf **Leistung** (unter Windows 10 eine Registerkarte oben, unter Windows 11 ein Symbol im Menü links)
 - Klicken Sie in der linken Seitenleiste auf **CPU**
 - Suchen Sie die Zeile **Virtualisierung:** und prüfen Sie, ob dort **Aktiviert** steht
 
-**Wenn dort „Deaktiviert" steht:** Sie müssen die Virtualisierung im BIOS Ihres Computers aktivieren:
+**Wenn dort „Deaktiviert“ steht:** Sie müssen die Virtualisierung im BIOS Ihres Computers aktivieren:
 - Starten Sie Ihren Computer neu
 - Drücken Sie während des Starts die BIOS-Taste (normalerweise **F2**, **F10**, **Entf** oder **Esc**, je nach Computerhersteller)
-- Suchen Sie nach Einstellungen zu „Virtualization Technology", „Intel VT-x", „AMD-V" oder „SVM Mode"
+- Suchen Sie nach Einstellungen zu „Virtualization Technology“, „Intel VT-x“, „AMD-V“ oder „SVM Mode“
 - Aktivieren Sie diese Einstellungen
 - Speichern und verlassen Sie das BIOS (normalerweise **F10**)
 
 **Jetzt WSL installieren:**
 
-- Klicken Sie auf die **Windows-Starttaste** und geben Sie `PowerShell` ein
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste) und geben Sie `PowerShell` ein
 - **Klicken Sie mit der rechten Maustaste** auf **Windows PowerShell** und klicken Sie auf **Als Administrator ausführen**
-- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass diese App Änderungen an Ihrem Gerät vornimmt?"
+- Klicken Sie auf **Ja**, wenn gefragt wird „Möchten Sie zulassen, dass durch diese App Änderungen an Ihrem Gerät vorgenommen werden?“
 - Geben Sie im PowerShell-Fenster ein:
    ```
    wsl --install
    ```
-- Möglicherweise sehen Sie Meldungen wie „Installing: Windows Subsystem for Linux" und „Installing: Ubuntu"
+- Möglicherweise sehen Sie Meldungen wie „Installing: Windows Subsystem for Linux“ und „Installing: Ubuntu“
 - Wenn die Installation abgeschlossen ist, starten Sie Ihren Computer neu
 
 **Hinweis:** `wsl --install` erfordert Windows 10 Version 2004 oder höher oder Windows 11. Wenn der Befehl nicht erkannt wird, ist Ihre Windows-Version möglicherweise zu alt.
 
 ### b) Ubuntu einrichten
 
-Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu" im Titel erscheinen. Falls nicht, klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol).
+Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenster mit „Ubuntu“ im Titel erscheinen. Falls nicht, klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste), geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App (orangefarbenes Kreissymbol).
 
 - Warten Sie auf die Meldung: `Enter new UNIX username:`
 - Geben Sie einen Benutzernamen ein (nur Kleinbuchstaben und Zahlen, keine Leerzeichen) – zum Beispiel `john`
@@ -211,11 +265,15 @@ Nach dem Neustart sollte innerhalb von 2-5 Minuten automatisch ein Terminalfenst
    ```
    curl -fsSL https://claude.ai/install.sh | bash
    ```
-- Überprüfen Sie durch Eingabe von:
+- Schließen Sie das Ubuntu-Fenster, öffnen Sie **Ubuntu** erneut über das Startmenü und überprüfen Sie dann durch Eingabe von:
    ```
    claude --version
    ```
-- Verbinden Sie Ihr Konto, indem Sie `claude` im Ubuntu-Terminal eingeben und der Browser-Anmeldung folgen (wie in Schritt 3, Option A). Wenn Sie stattdessen einen API-Schlüssel verwenden, setzen Sie ihn mit `export ANTHROPIC_API_KEY="your-api-key-here"` (WSL verwendet Linux-Befehle, kein `setx`)
+- Wenn weiterhin `command not found` erscheint (Befehl nicht gefunden), führen Sie diese Zeile aus und versuchen Sie dann `claude --version` noch einmal:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+   ```
+- Verbinden Sie Ihr Konto, indem Sie `claude` im Ubuntu-Terminal eingeben und der Browser-Anmeldung folgen (wie in Schritt 4, Option A). Wenn Sie stattdessen einen API-Schlüssel verwenden, speichern Sie ihn mit `echo 'export ANTHROPIC_API_KEY="your-api-key-here"' >> ~/.bashrc && source ~/.bashrc` (WSL verwendet Linux-Befehle, kein `setx`)
 - Um einen Windows-Projektordner aus WSL zu öffnen:
    ```
    cd /mnt/c/Users/Username/Documents/test_claude
@@ -245,21 +303,25 @@ Dieses integrierte Diagnosetool überprüft Ihre Installation und meldet häufig
    ```
    irm https://claude.ai/install.ps1 | iex
    ```
-- Stellen Sie sicher, dass Ihr PATH das Claude-Installationsverzeichnis enthält
+- Wenn „Die Benennung "claude" wurde nicht als Name eines Cmdlet ... erkannt“ (englisch: `'claude' is not recognized`) erscheint (Claude wurde nicht gefunden), führen Sie diese zwei Zeilen in PowerShell aus und schließen und öffnen Sie PowerShell dann erneut:
+   ```
+   $currentPath = [Environment]::GetEnvironmentVariable('PATH', 'User')
+   [Environment]::SetEnvironmentVariable('PATH', "$currentPath;$env:USERPROFILE\.local\bin", 'User')
+   ```
 
-### „Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS"
-Dieser Fehler bedeutet, dass die Virtualisierung nicht aktiviert ist:
+### Fehlermeldung zur „VM-Plattform“ (Virtual Machine Platform) und zur Virtualisierung im BIOS
+Je nach Sprache Ihres Windows erscheint diese Meldung auf Englisch („Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS“) oder sinngemäß auf Deutsch: Sie sollen die Windows-Funktion „VM-Plattform“ aktivieren und sicherstellen, dass die Virtualisierung im BIOS aktiviert ist. Dieser Fehler bedeutet, dass die Virtualisierung nicht aktiviert ist:
 - Prüfen Sie im Task-Manager, ob die Virtualisierung aktiviert ist (siehe den optionalen WSL-Abschnitt oben)
 - Wenn sie deaktiviert ist, aktivieren Sie sie im BIOS Ihres Computers
 - Nach dem Aktivieren der Virtualisierung starten Sie Ihren Computer neu und versuchen Sie `wsl --install` erneut
 
-### „wsl --install" funktioniert nicht
+### `wsl --install` funktioniert nicht
 - Stellen Sie sicher, dass Sie PowerShell als Administrator ausführen
 - Stellen Sie sicher, dass Sie Windows 10 Version 2004+ oder Windows 11 haben
 - Führen Sie zuerst `wsl --update` aus, dann `wsl --install` erneut
 
 ### Ubuntu-Fenster öffnet sich nach dem Neustart nicht
-- Klicken Sie auf die **Windows-Starttaste**, geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App, um sie manuell zu starten
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo in der Taskleiste), geben Sie `Ubuntu` ein und klicken Sie auf die **Ubuntu**-App, um sie manuell zu starten
 
 ## Benötigen Sie Hilfe?
 

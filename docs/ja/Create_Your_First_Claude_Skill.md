@@ -12,33 +12,33 @@ lang: "ja"
 
 - **スキル** - `.claude/skills/`に保存され、Claudeが文脈に基づいて自動的に呼び出す機能
 - **モデル呼び出し** - コマンドを入力せずに、Claudeが説明を読んでスキルの使用タイミングを判断する仕組み
+- **スラッシュコマンドとしても使える** - どのスキルも`/skill-name`と入力して自分で実行できます（例：`/stock-report AAPL`）。スキルとスラッシュコマンドが同じ名前の場合は、スキルが使われます
 - **SKILL.md** - YAMLフロントマター（メタデータ）とClaudeへの指示を含むメインファイル
 
 ## 必要なもの
 
-- [カスタムスラッシュコマンドを作成](./ja/Reuse_Prompts_via_Slash_Commands.md)チュートリアルを完了していること
+- [カスタムスラッシュコマンドを作成](./Reuse_Prompts_via_Slash_Commands.md)チュートリアルを完了していること
 - そのチュートリアルの`stock-report`スラッシュコマンド
 - VS Codeがインストールされていること
 - 10〜15分
 
 ## ステップ1：プロジェクトフォルダに移動
 
-**Windows（WSL）：**
-- スタートメニューから**Ubuntu**を開く
+**Windows（PowerShell）：**
+- スタートメニューから**PowerShell**を開く
 - 次を入力：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  `YOUR_USERNAME`をWindowsのユーザー名に置き換えてください
+  cd ~\Documents\test_claude
+  ```
 
   フォルダが存在しない場合は、最初に作成します：
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac：**
-- **ターミナル**を開く（アプリケーション > ユーティリティ）
+- **ターミナル**（Terminal）を開く（**アプリケーション**（Applications）> **ユーティリティ**（Utilities））
 - 次を入力：
   ```bash
   cd ~/Documents/test_claude
@@ -59,9 +59,12 @@ claude
 
 インストールチュートリアル（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）に従って、Claudeサブスクリプションでログインしてください。ログイン後、ウェルカムメッセージとClaude Codeのプロンプトが表示されます。
 
-## ステップ3：編集の自動承認を有効化
+## ステップ3：確認なしでファイルを編集できるようにする
 
-`Ctrl+E`（Windows/Linux）または`Cmd+E`（Mac）を押して、編集の自動承認モードを有効にします。
+Claude Codeのプロンプトのすぐ下にあるステータスラインを確認します：
+
+- **auto mode on**または**accept edits on**と表示されていれば、準備完了です
+- **manual mode on**と表示されている場合は、**accept edits on**と表示されるまで**Shift+Tab**を押します
 
 これにより、Claudeは毎回許可を求めることなくファイルを作成および変更できます。
 
@@ -69,7 +72,7 @@ claude
 
 次のプロンプトを入力してください：
 ```
-stock-reportスラッシュコマンドをgenerate-stock-reportsというスキルに変換してください。
+stock-reportスラッシュコマンドをスキルに変換してください。
 企業や株式について尋ねたときに自動的に起動するようにしてください。
 ```
 
@@ -80,7 +83,7 @@ Claudeが既存のスラッシュコマンドを分析し、`.claude/skills/stoc
 ## ステップ5：スキルの構造を確認
 
 VS Codeを開いてプロジェクトを表示：
-- **ファイル > フォルダを開く**をクリック
+- **File > Open Folder**（ファイル > フォルダーを開く）をクリック
 - `Documents/test_claude`を選択
 - ファイルエクスプローラで`.claude/skills/stock-report/`に移動
 - `SKILL.md`をクリックして開く
@@ -99,7 +102,11 @@ description: 企業に関するレポートを生成します... 株式、企業
 
 ## ステップ6：スキルをテスト（コマンド入力なし）
 
-`/stock-report AAPL`と入力する代わりに、自然な質問をしてみましょう：
+まず、Claude Codeが新しいスキルを読み込んだことを確認します。次のように入力します：
+```
+/reload-skills
+```
+Claude Codeが利用可能なスキルの数を表示します。次に、`/stock-report AAPL`と入力する代わりに、自然な質問をしてみましょう：
 ```
 Appleで最近何が起こっていますか？
 ```
@@ -158,7 +165,7 @@ stock-reportスキルを更新して、企業名と一緒に「分析」また�
 明示的に言及したときだけ起動するようにしてください。
 ```
 
-Claudeが`SKILL.md`の`description`フィールドを更新します。違いをテスト：
+Claudeが`SKILL.md`の`description`フィールドを更新します。`/reload-skills`と入力してClaude Codeに変更を読み込ませてから、違いをテスト：
 ```
 Appleは何をしていますか？
 ```
@@ -183,8 +190,8 @@ Appleを分析してください
 
 - **スキルが起動しない：** `SKILL.md`の`description`フィールドを確認してください。質問に関連するトリガーワードを含める必要があります
 - **スキルが頻繁に起動しすぎる：** 使用タイミングについて、より具体的な説明に変更してください
-- **スキルフォルダが見つからない：** スキルは`.claude/skills/`にあります（隠しフォルダです。ファイルエクスプローラで「隠しファイルを表示」を有効にしてください）
-- **SKILL.mdへの変更が反映されない：** スキルは変更時に自動的に読み込まれます。再起動は不要です。それでも動作しない場合は、YAMLフォーマットを確認してください
+- **スキルフォルダが見つからない：** スキルは`.claude/skills/`にあります（隠しフォルダです。VS Codeのエクスプローラーには表示されます。Windowsのエクスプローラーでは**表示 > 表示 > 隠しファイル**を選択し、MacのFinderでは**Cmd+Shift+.**を押します）
+- **SKILL.mdへの変更が反映されない：** スキルは通常、変更時に自動的に再読み込みされます。このセッション中に`.claude/skills/`フォルダを作成した場合は、`/reload-skills`と入力してください（またはClaude Codeを再起動します）。それでも動作しない場合は、YAMLフォーマットを確認してください
 
 ## ワークフロー概要
 

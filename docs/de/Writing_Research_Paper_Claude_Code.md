@@ -6,7 +6,7 @@ lang: "de"
 
 # Eine Forschungsarbeit mit Claude Code schreiben
 
-Schreiben Sie Forschungsarbeiten mit Claude Code als Assistent für Recherche, Brainstorming, Planung, Entwurf und Bearbeitung. Automatisieren Sie dann diesen Prozess, indem Sie einen Vorlage-Slash-Befehl erstellen. Sehen Sie ein [Beispielpapier](./example_paper.md), das mit diesem Workflow erstellt wurde.
+Schreiben Sie Forschungsarbeiten mit Claude Code als Assistent für Recherche, Brainstorming, Planung, Entwurf und Bearbeitung. Automatisieren Sie dann diesen Prozess, indem Sie einen Vorlage-Slash-Befehl erstellen. Sehen Sie sich eine [Beispielarbeit](./example_paper.md) an, die mit diesem Workflow erstellt wurde.
 
 ## Wichtige Konzepte
 
@@ -17,7 +17,7 @@ Schreiben Sie Forschungsarbeiten mit Claude Code als Assistent für Recherche, B
 
 ## Was Sie benötigen
 
-- Abgeschlossenes Tutorial [Claude Code in VS Code unter Windows](./Claude_Code_in_VS_Code_Win) oder [Claude Code in VS Code auf dem Mac](./Claude_Code_in_VS_Code_Mac)
+- Abgeschlossenes Tutorial [VS Code für Claude Code unter Windows einrichten](./Claude_Code_in_VS_Code_Win.md) oder [Claude Code aus VS Code auf dem Mac verwenden](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 Minuten
 
 ## Schritt 1: Einen Projektordner erstellen
@@ -26,45 +26,35 @@ Erstellen Sie einen Ordner für Ihre Forschungsarbeit:
 
 - Öffnen Sie den **Datei-Explorer** (Windows) oder **Finder** (Mac)
 - Navigieren Sie zu **Dokumente**
-- Erstellen Sie einen neuen Ordner namens `test_claude`
+- Erstellen Sie einen neuen Ordner namens `test_claude` (falls Sie ihn bereits in einem früheren Tutorial erstellt haben, verwenden Sie einfach diesen Ordner)
 
 Alles über dieses Projekt passiert in diesem Ordner.
 
 ## Schritt 2: VS Code starten
 Für Windows:
-- Klicken Sie auf die **Windows-Starttaste** (unten links auf Ihrem Bildschirm)
+- Klicken Sie auf die Schaltfläche **Start** (das Windows-Logo unten links in der Taskleiste)
 - Geben Sie `Visual Studio Code` oder `VS Code` in das Suchfeld ein
 - Klicken Sie auf **Visual Studio Code**, wenn es in den Suchergebnissen erscheint
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
-- Schauen Sie in die untere linke Ecke von VS Code – Sie sehen ein blaues oder grünes Symbol
-- Klicken Sie auf dieses Symbol, um das Remote-Verbindungsmenü zu öffnen
-- Wählen Sie **Connect to WSL** aus dem Menü
-- VS Code wird neu geladen und verbindet sich mit Ihrer Ubuntu-Installation
-- Die untere linke Ecke sollte jetzt **WSL: Ubuntu** anzeigen
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 Für Mac:
 - Öffnen Sie den **Finder** und gehen Sie zu **Programme**
 - Finden Sie **Visual Studio Code** und doppelklicken Sie darauf
-- Wenn Sie eine Warnung sehen „Visual Studio Code ist eine aus dem Internet heruntergeladene App", klicken Sie auf **Öffnen**
-- VS Code öffnet sich mit einem Willkommen-Tab – Sie können diesen Tab schließen
+- Wenn Sie eine Warnung sehen „‚Visual Studio Code‘ ist eine aus dem Internet geladene App“, klicken Sie auf **Öffnen**
+- VS Code öffnet sich mit einem **Welcome**-Tab – Sie können diesen Tab schließen
 
 ## Schritt 3: Den Ordner in VS Code öffnen
-Für Windows über WSL:
-- Klicken Sie in VS Code (noch mit WSL verbunden) in der Menüleiste auf **File**, dann auf **Open Folder**
-- Ein **Open Folder**-Dropdown erscheint oben in der Mitte.
-- Finden Sie Ihren Ordner durch Eingabe von:
-  ```
-  /mnt/c/Users/IHR_BENUTZERNAME/Documents/test_claude
-  ```
-  Ersetzen Sie `IHR_BENUTZERNAME` durch Ihren Windows-Benutzernamen (z.B. `Max.Mustermann`)
-- Klicken Sie auf **OK**. VS Code lädt mit Ihrem `test_claude`-Ordner neu
-
+Für Windows:
+- Klicken Sie in der Menüleiste auf **File**, dann auf **Open Folder**
+- Navigieren Sie in **Dokumente** zum `test_claude`-Ordner und wählen Sie ihn aus
+- Klicken Sie auf **Ordner auswählen** (englisch: **Select Folder**). VS Code lädt mit Ihrem `test_claude`-Ordner neu
+- Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 Für Mac:
 - Klicken Sie in VS Code in der Menüleiste auf **File**, dann auf **Open Folder**
-- Navigieren Sie zum und wählen Sie den `test_claude`-Ordner
-- Klicken Sie auf **Öffnen** (Mac) oder **OK** (Windows)
-- Wenn Sie gefragt werden „Vertrauen Sie den Autoren?", klicken Sie auf **Ja, ich vertraue den Autoren**
+- Navigieren Sie zum `test_claude`-Ordner und wählen Sie ihn aus
+- Klicken Sie auf **Öffnen** (englisch: **Open**)
+- Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 ## Schritt 4: Claude Code starten
 
@@ -74,7 +64,7 @@ Für Mac:
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
 ## Schritt 5: Erste Recherche
 
@@ -82,7 +72,7 @@ Bitten Sie Claude, Ihr Thema zu recherchieren. Kopieren und fügen Sie diesen Pr
 
 ```
 Ich schreibe eine Forschungsarbeit von etwa 1.000 Wörtern über die Einführung von KI am Arbeitsplatz.
-Suche nach aktuellen Daten (2023-2025) zu:
+Suche nach aktuellen Daten (aus den letzten zwei Jahren) zu:
 - Produktivitätssteigerungen durch KI-Tools
 - Sorgen über Arbeitsplatzverluste und Statistiken
 - Praxisbeispiele von Unternehmen
@@ -107,13 +97,13 @@ Gib mir eine kurze Zusammenfassung.
 ## Schritt 6: Die Quellen lesen
 Lesen Sie das Recherche-Dokument durch und klicken Sie durch zu den Originalquellen, um die Informationen zu verifizieren:
 
-1. Klicken Sie auf `general_research.md` im Explorer-Panel links
-2. Zeigen Sie das formatierte Dokument in der Vorschau an: Rechtsklick auf den Tab `general_research.md` und wählen Sie **Open Preview**
-3. Klicken Sie auf die Quellen-Links, um die Originalartikel und -studien zu lesen
+- Klicken Sie auf `general_research.md` im Explorer-Panel links
+- Zeigen Sie das formatierte Dokument in der Vorschau an: Klicken Sie mit der rechten Maustaste in den Editor und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side** (oder, falls Sie diese Erweiterung nicht installiert haben, klicken Sie mit der rechten Maustaste auf den Tab `general_research.md` und wählen Sie **Open Preview**)
+- Klicken Sie auf die Quellen-Links, um die Originalartikel und -studien zu lesen
 
 ## Schritt 7: Ihren Ansatz brainstormen
 
-Bitten Sie Claude beim Brainstorming zu helfen:
+Bitten Sie Claude, beim Brainstorming zu helfen:
 
 ```
 Basierend auf dieser Recherche, schlage 3-4 Ansätze vor, die ich für diese Arbeit nehmen könnte.
@@ -142,7 +132,7 @@ Recherche und meinem gewählten Ansatz. Verwende Aufzählungspunkte für den nar
 Speichern als outlines.md
 ```
 
-Überprüfen Sie die Gliederung und bitten Sie Claude bei Bedarf um Anpassungen (z.B. „Lass Abschnitt 2 mehr auf Fallstudien fokussieren" oder „Füge einen Abschnitt über Einschränkungen hinzu").
+Überprüfen Sie die Gliederungen in `outlines.md` und bitten Sie Claude bei Bedarf um Anpassungen (z.B. „Lass Abschnitt 2 mehr auf Fallstudien fokussieren“ oder „Füge einen Abschnitt über Einschränkungen hinzu“).
 
 ## Schritt 10: Die Arbeit entwerfen
 
@@ -160,7 +150,7 @@ Struktur:
 
 Stil:
 - Klare, prägnante Sätze (durchschnittlich 15-20 Wörter)
-- Aktive Stimme, analytischer Ton
+- Aktivsätze, analytischer Ton
 - Statistiken in den Fließtext einweben (keine Aufzählungslisten)
 - Fließende Übergänge zwischen Absätzen
 
@@ -242,7 +232,7 @@ Führe ein abschließendes Korrekturlesen der Arbeit durch:
 
 Überprüfen Sie Claudes Änderungen.
 
-**Export nach Word:** Klicken Sie in VS Code mit der rechten Maustaste auf den Tab `paper.md` und wählen Sie **Open Preview**. Klicken Sie in den Vorschaubereich, dann klicken Sie auf **Edit > Select All** und **Edit > Copy**. Fügen Sie in Microsoft Word ein – die Formatierung bleibt erhalten.
+**Export nach Word:** Öffnen Sie die Vorschau von `paper.md` auf die gleiche Weise wie in Schritt 6. Klicken Sie in den Vorschaubereich, dann klicken Sie auf **Edit > Select All** und **Edit > Copy**. Fügen Sie in Microsoft Word ein – die Formatierung bleibt erhalten.
 
 ## Schritt 17: Einen Slash-Befehl für zukünftige Arbeiten erstellen
 
@@ -253,7 +243,7 @@ Erstelle einen Slash-Befehl namens /research-paper, der mich durch
 diesen gesamten Workflow führt. Speichere ihn, damit ich ihn für zukünftige Forschungsarbeiten zu verschiedenen Themen verwenden kann.
 ```
 
-Claude erstellt einen benutzerdefinierten Slash-Befehl in Ihrem `.claude/commands/`-Ordner. Es ist eine Markdown-Datei mit einem Prompt. Sie können Ihre nächste Forschungsarbeit einfach durch Eingabe von `/research-paper [Ihr Thema]` starten!
+Claude erstellt einen benutzerdefinierten Slash-Befehl, normalerweise in Ihrem `.claude/commands/`-Ordner (oder in `.claude/skills/research-paper/`). Es ist eine Markdown-Datei mit einem Prompt. Bevor Sie ihn zum ersten Mal verwenden, geben Sie `/reload-skills` ein (oder beenden Sie Claude Code und starten Sie es neu), damit der neue Befehl geladen wird. Dann können Sie Ihre nächste Forschungsarbeit einfach durch Eingabe von `/research-paper [Ihr Thema]` starten!
 
 ## Schritt 18: Feedback einholen
 
@@ -276,7 +266,7 @@ Claude wird Ihre Arbeit kritisieren, ohne davon beeinflusst zu sein, sie geschri
 
 ## Der komplette Workflow
 
-1. **Ordner erstellen** - Projektordner in Dokumente einrichten
+1. **Ordner erstellen** - Projektordner im Ordner **Dokumente** einrichten
 2. **In VS Code öffnen** - Den Ordner in VS Code öffnen
 3. **Claude Code starten** - Claude Code vom Terminal aus starten
 4. **Recherche** - Claude sucht nach allgemeinen Informationen zu Ihrem Thema
@@ -303,12 +293,12 @@ Jetzt, da Sie den `/research-paper`-Slash-Befehl haben, versuchen Sie, weitere A
 - **Wissenschaft:** `/research-paper "Ethik der CRISPR-Gen-Editierung"`
 - **Format:** Bitten Sie Claude `Gib mir die Arbeit im LaTeX-Format`
 
-Der Slash-Befehl führt Sie automatisch durch den gesamten Workflow! Vergessen Sie nicht, den Speicher zu löschen, wenn Sie das Thema wechseln.
+Der Slash-Befehl führt Sie automatisch durch den gesamten Workflow! Vergessen Sie nicht, Claudes Gedächtnis zu löschen, wenn Sie das Thema wechseln.
 
 ## Fehlerbehebung
 
-- **Claude-Suchergebnisse scheinen veraltet:** Geben Sie „Suche nach Daten von 2024-2025 zu [Thema]" an
-- **Entwurf ist zu lang/kurz:** Sagen Sie Claude: „Mache dies ungefähr 1.000 Wörter lang"
+- **Claude-Suchergebnisse scheinen veraltet:** Nennen Sie einen Zeitraum, zum Beispiel „Suche nach Daten aus den letzten zwei Jahren zu [Thema]“
+- **Entwurf ist zu lang/kurz:** Sagen Sie Claude: „Mache dies ungefähr 1.000 Wörter lang“
 - **Dateien nicht gefunden:** Geben Sie im Terminal `ls` ein, um alle Dateien im aktuellen Ordner aufzulisten
 
 ## Was Sie Claude fragen können

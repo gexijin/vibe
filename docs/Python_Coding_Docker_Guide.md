@@ -22,7 +22,7 @@ Ever tried to share your Python code with a colleague, only to spend hours debug
 ## Step 1: Install Docker Desktop
 
 - Visit [Docker Desktop download page](https://www.docker.com/products/docker-desktop/)
-- Click **Download for Windows** (or Mac/Linux based on your system)
+- Click **Download Docker Desktop** and choose your system (Windows, or Mac - Apple Silicon for M1/M2/M3/M4 Macs, or Mac - Intel Chip for older Macs)
 - Run the installer and follow the installation wizard
 - When prompted, enable WSL 2 (Windows users) or accept default settings
 - After installation, launch Docker Desktop
@@ -39,15 +39,17 @@ Ever tried to share your Python code with a colleague, only to spend hours debug
 ## Step 3: Create a Python Project Folder
 
 - Create a new folder on your computer named `python-docker-demo`
-- Inside it, create a subfolder named `.devcontainer`
-- Inside it, create a subfolder named `python`
+- In VS Code, click **File > Open Folder**
+- Navigate to the `python-docker-demo` folder you just created
+- Click **Select Folder** (Windows) or **Open** (Mac)
+- In the Explorer sidebar, hover over the **PYTHON-DOCKER-DEMO** heading, click the **New Folder** icon, and name the folder `.devcontainer`
+- Click an empty spot in the Explorer sidebar below `.devcontainer` so nothing is highlighted, then click the **New Folder** icon again and name the folder `python`
 - Your structure should look like: `python-docker-demo/.devcontainer/` and `python-docker-demo/python/`
+
+We create these folders in VS Code because Mac Finder won't let you name a folder starting with a dot (`.`).
 
 ## Step 4: Create the Dockerfile
 
-- In VS Code, click **File > Open Folder**
-- Navigate to the `python-docker-demo` folder you just created
-- Click **Select Folder**
 - In the Explorer sidebar, right-click the `.devcontainer` folder
 - Click **New File**
 - Name it `Dockerfile`
@@ -64,15 +66,16 @@ RUN apt-get update && apt-get install -y \
 
 # 2. Install Python packages for data science and web apps
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter
+    pandas matplotlib seaborn streamlit jupyter scikit-learn
 
 # 3. Install Node.js LTS from NodeSource
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g npm@latest
 
-# 4. Install Claude Code globally
-RUN npm install -g @anthropic-ai/claude-code
+# 4. Install Claude Code globally (newer npm blocks its setup script unless allowed)
+RUN npm config set allow-scripts=@anthropic-ai/claude-code --location=global \
+    && npm install -g @anthropic-ai/claude-code
 
 # 5. Expose Streamlit port
 EXPOSE 8501
@@ -120,7 +123,7 @@ from sklearn.datasets import load_iris
 # Load the iris dataset
 iris = load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
-df['species'] = iris.target
+df['species'] = iris.target_names[iris.target]
 
 # Display first few rows
 print(df.head())
@@ -137,7 +140,7 @@ plt.xlabel('Measurement (cm)')
 plt.ylabel('Frequency')
 plt.title('Iris Sepal Measurements')
 plt.legend()
-plt.show()
+plt.savefig('iris_histogram.png')
 ```
 
 - Click **File > Save**
@@ -178,11 +181,11 @@ st.pyplot(fig)
 
 ## Step 8: Reopen in Container
 
-- Click the green icon in the bottom-left corner of VS Code
+- Click the **><** icon in the bottom-left corner of VS Code
 - Select **Reopen in Container** from the menu
 - VS Code will build the container (this takes 5-10 minutes the first time)
 - You'll see a progress notification showing the build steps
-- When complete, the green icon will show **Dev Container: Python in Docker**
+- When complete, the bottom-left corner will show **Dev Container: Python in Docker**
 
 ## Step 9: Understand the Container Environment
 
@@ -200,10 +203,10 @@ You'll see `/workspaces/python-docker-demo` - this is your project folder inside
 - List the files:
 
 ```bash
-ls
+ls -a
 ```
 
-You'll see the folders you created: `.devcontainer/`, `python/`, etc.
+You'll see the folders you created: `.devcontainer/`, `python/`, etc. (`-a` also shows folders whose names start with a dot)
 
 - Try going up one directory:
 
@@ -226,13 +229,13 @@ The container has Python pre-installed with data science packages. Let's run the
 
 - In VS Code Explorer, navigate to `python/iris_analysis.py`
 - Click to open the file
-- Select the first line: `import pandas as pd`
+- Click on line 2, `import pandas as pd` (line 1 is just a comment)
 - Press `Shift+Enter` to run it in an interactive Python terminal
 - A Python terminal opens at the bottom
 - Continue running each line or block one at a time with `Shift+Enter`
 - When you run `print(df.head())`, you'll see the first 5 rows in the terminal
 - When you run `print(df.describe())`, you'll see statistical summaries
-- When you run the histogram code, a plot window will open showing the visualization
+- When you run the histogram code, it saves the chart as `iris_histogram.png` in your project folder (the container has no screen, so plots can't open in a window) - click the file in the Explorer sidebar to view it
 
 ## Step 11: Run the Streamlit App
 
@@ -260,7 +263,7 @@ Let's modify the app to see how development works.
 
 - Keep the app running
 - In VS Code, edit `python/app.py`
-- Find line 6: `st.title("Old Faithful Geyser Data")`
+- Find line 5: `st.title("Old Faithful Geyser Data")`
 - Change it to:
 
 ```python
@@ -283,8 +286,8 @@ st.title("My First Python Docker App")
 - `FROM python:3.12-slim` - Official Python 3.12 base image (lightweight Debian-based)
 - `RUN apt-get install` - Linux system libraries for building Python packages
 - `RUN pip install --no-cache-dir ...` - Permanently installs Python packages
-- `RUN curl... && apt-get install -y nodejs` - Installs Node.js, required to run Claude Code
-- `RUN npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance
+- `RUN curl... && apt-get install -y nodejs` - Installs Node.js and npm, which the next line uses to install Claude Code
+- `RUN npm config set allow-scripts=... && npm install -g @anthropic-ai/claude-code` - Installs Claude Code globally for AI assistance (the first part lets Claude Code finish setting itself up, which newer versions of npm otherwise block)
 - `EXPOSE 8501` - Opens port 8501 for Streamlit apps
 
 **Other Python images you can use:**
@@ -292,9 +295,9 @@ st.title("My First Python Docker App")
 - `python:3.12` - Full Python image with more tools (larger size)
 - `python:3.12-slim` - Lightweight image with Python and pip (what we're using)
 - `python:3.12-alpine` - Minimal Alpine Linux-based image (smallest size)
-- `jupyter/datascience-notebook` - Pre-configured Jupyter with data science libraries
+- `quay.io/jupyter/datascience-notebook` - Pre-configured Jupyter with data science libraries
 
-After changing the base image, rebuild the container to apply changes.
+After changing the base image, rebuild the container to apply changes. Note: only Debian-based images such as `python:3.12` and `python:3.12-slim` work with this Dockerfile as written; Alpine images and Jupyter images need a different Dockerfile.
 
 ## Step 14: Install Python Packages in the Docker Image (Optional)
 
@@ -302,23 +305,22 @@ Packages installed via pip in the terminal (`pip install package`) are temporary
 
 - In VS Code Explorer, navigate to `.devcontainer/Dockerfile`
 - Click to open the file
-- Find line 9: `RUN pip install --no-cache-dir ...`
-- Add `scikit-learn` to the list:
+- Find line 10: `RUN pip install --no-cache-dir ...`
+- Add `plotly` to the list:
 
 ```dockerfile
 RUN pip install --no-cache-dir \
-    pandas matplotlib seaborn streamlit jupyter scikit-learn
+    pandas matplotlib seaborn streamlit jupyter scikit-learn plotly
 ```
 
 - Click **File > Save**
-- Click the green icon in the bottom-left corner
+- Click the **><** icon in the bottom-left corner
 - Select **Rebuild Container** from the menu
 - VS Code will rebuild the container with your new package (this takes 2-5 minutes)
-- To verify, open a Python terminal and type:
+- To verify, open a terminal (**Terminal > New Terminal**) and run:
 
-```python
-import sklearn
-print(sklearn.__version__)
+```bash
+python -c "import plotly; print(plotly.__version__)"
 ```
 
 If it displays the version without errors, the package is installed permanently.
@@ -326,7 +328,7 @@ If it displays the version without errors, the package is installed permanently.
 ## Next Steps
 
 - **Create a new Python script** - Make a new `.py` file in the `python/` folder, write data analysis code using built-in datasets or load your own CSV files
-- **Install Python packages** - Add packages you need by editing the Dockerfile (line 9) and rebuilding the container
+- **Install Python packages** - Add packages you need by editing the Dockerfile (line 10) and rebuilding the container
 - **Explore data science** - Try data manipulation with pandas and visualization with matplotlib or seaborn
 - **Build web apps** - Create interactive dashboards with Streamlit or Flask
 
@@ -334,7 +336,7 @@ If it displays the version without errors, the package is installed permanently.
 
 - **Docker Desktop not running** - Open Docker Desktop and wait for the green status indicator before reopening the container
 - **Container build fails** - Check your internet connection; the first build downloads images and packages. Click **Rebuild Container** to retry
-- **Port 8501 already in use** - Stop other apps using that port, or change the port in the Dockerfile and `devcontainer.json`
+- **Port 8501 already in use** - Stop other apps using that port, or pick another port (for example 8502): change it in the Dockerfile and `devcontainer.json`, rebuild the container, then start the app with `streamlit run app.py --server.port 8502`
 
 ## Workflow Overview
 
@@ -352,10 +354,10 @@ Once everything is set up, here's your daily routine:
 
 1. **Start Docker Desktop** - Open the app and wait for the green status indicator (Docker must be running)
 2. **Open VS Code** - Launch VS Code and open your project folder
-3. **Reopen in Container** - If not already in the container, click the green icon (bottom-left) and select **Reopen in Container**
+3. **Reopen in Container** - If not already in the container, click the **><** icon in the bottom-left corner and select **Reopen in Container**
 4. **Write and run code** - Edit `.py` files, run line-by-line with `Shift+Enter`, or run apps with `streamlit run app.py`
 5. **Save your work** - Your code files (`.py`, `.ipynb`) are saved to your computer and persist across sessions
-6. **Commit and push** - Use GitHub Desktop to commit your changes and push to the repository
+6. **Commit and push** - If your project is a GitHub repository (see [Using GitHub Desktop with Claude Code](./GitHub_Desktop_Claude_Code_Workflow)), use GitHub Desktop to commit your changes and push them
 
 ---
 

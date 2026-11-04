@@ -17,22 +17,23 @@ Pythonを書きたいけど、どのエディターを使えばいい？PyCharm�
 
 ## 前提条件
 
-- [VS Codeの基本](./VS_Code_Getting_Started.md)を完了していること
+- [VS Codeを始めよう](./VS_Code_Getting_Started.md)を完了していること
 - Pythonとパッケージをダウンロードできるインターネット接続
 - 作業時間：15〜20分
 
 ## ステップ1：Python本体をインストール
 
-最新のパッケージとの互換性を確保するため、Python 3.8以降が必要です。
+pandasやStreamlitなどのパッケージの最新バージョンをインストールできるように、Python 3.11以降（python.orgの最新バージョンが最適）が必要です。
 
 - **Windows**:
-  - [python.org](https://www.python.org/downloads/)から最新のPythonをダウンロードします
+  - [python.org/downloads/windows](https://www.python.org/downloads/windows/)にアクセスし、最新のPython 3リリースの下にある**Windows installer (64-bit)**をクリックします（「install manager」ではありません）
   - インストーラーを実行します
   - **「Add python.exe to PATH」のチェックボックスにチェックを入れてから**、Install Nowをクリックします
-  - インストール場所を確認します（通常は`C:\Users\YourName\AppData\Local\Programs\Python\Python312`）
+  - インストール場所を確認します（通常は`C:\Users\YourName\AppData\Local\Programs\Python\Python312`。数字はPythonのバージョンに対応します）
 
 - **macOS**:
   - [python.org](https://www.python.org/downloads/)からダウンロードしてインストーラーを実行します
+  - python.orgのインストーラーが完了したら、**Finder > アプリケーション > Python 3.x**を開き、**Install Certificates.command**をダブルクリックします（これをしないと、ステップ7でインターネットからデータを読み込むときに`CERTIFICATE_VERIFY_FAILED`で失敗します）
   - またはHomebrewを使用：ターミナルを開いて`brew install python`と入力します
   - Homebrewのパス：`/opt/homebrew/bin/python3`（Apple Silicon）または`/usr/local/bin/python3`（Intel）
 
@@ -45,8 +46,8 @@ Pythonを書きたいけど、どのエディターを使えばいい？PyCharm�
 ## ステップ2：VS CodeにPython拡張機能をインストール
 
 - VS Codeを開きます
-- 左サイドバーの**拡張機能**アイコンをクリックします（または**表示 > 拡張機能**をクリック）
-- `ms-python.python`を検索し、MicrosoftのPython拡張機能の**インストール**をクリックします
+- 左サイドバーの**Extensions**（拡張機能）アイコンをクリックします（または**View > Extensions**（表示 > 拡張機能）をクリック）
+- `ms-python.python`を検索し、MicrosoftのPython拡張機能の**Install**（インストール）をクリックします
 - PylanceはPython拡張機能と一緒に自動的にインストールされるはずです。されない場合は、`ms-python.vscode-pylance`を検索してインストールします
 
 Python拡張機能には、デバッグ、インテリセンス、コードフォーマット、Jupyterノートブックのサポートが含まれています。
@@ -54,37 +55,37 @@ Python拡張機能には、デバッグ、インテリセンス、コードフ�
 ## ステップ3：Pythonプロジェクトを作成
 
 - コンピューター上に新しいフォルダーを作成します（例：`my-python-project`）
-- VS Codeで、**ファイル > フォルダーを開く**をクリックし、新しく作成したフォルダーを選択します
-- トップメニューの**ファイル > 新しいファイル**をクリックします
-- **ファイル > 保存**をクリックしてファイルを`analysis.py`として保存します
+- VS Codeで、**File > Open Folder**（ファイル > フォルダーを開く）をクリックし、新しく作成したフォルダーを選択します
+- トップメニューの**File > New File...**（ファイル > 新しいファイル...）をクリックします。ウィンドウ上部に一覧が表示されるので、**Python File**を選択します
+- **File > Save**（ファイル > 保存）をクリックしてファイルを`analysis.py`として保存します
 
 ## ステップ4：Pythonインタープリタを選択
 
 VS CodeがどのPythonインストールを使用するかを指定する必要があります。
 
-- メニューバーの**表示**をクリックし、**コマンドパレット**を選択します
+- メニューバーの**View**（表示）をクリックし、**Command Palette**（コマンド パレット）を選択します
 - `Python: Select Interpreter`と入力して選択します
 - インストールしたPythonバージョンを選択します（例：`Python 3.12.x`など）
 - 選択したインタープリタがVS Codeの右下隅に表示されます
 
-Pythonインストールが表示されない場合は、**インタープリタパスを入力**をクリックし、Pythonがインストールされている場所に移動します。
+Pythonインストールが表示されない場合は、**Enter interpreter path**（インタープリター パスを入力）をクリックし、Pythonがインストールされている場所に移動します。
 
 ## ステップ5：仮想環境を作成
 
 仮想環境により、プロジェクトの依存関係を分離して管理できます。
 
-- メニューバーの**表示**をクリックし、**コマンドパレット**を選択します
+- メニューバーの**View**（表示）をクリックし、**Command Palette**（コマンド パレット）を選択します
 - `Python: Create Environment`と入力して選択します
 - **Venv**（組み込みの仮想環境）を選択します
 - リストからPythonインタープリタを選択します
-- VS Codeが環境を作成するまで待ちます（`.venv`フォルダが表示されます）
+- VS Codeが環境を作成するまで待ちます（`.venv`フォルダーが表示されます）
 - VS Codeがプロジェクト用にこの環境を自動的にアクティブ化します
 
 環境がアクティブになると、ターミナルプロンプトに`(.venv)`が表示されます。
 
 ## ステップ6：必要なパッケージをインストール
 
-- **表示 > ターミナル**をクリックして、VS Codeで新しいターミナルを開きます
+- **View > Terminal**（表示 > ターミナル）をクリックして、VS Codeで新しいターミナルを開きます
 - ターミナルに`(.venv)`が表示され、仮想環境がアクティブであることを確認します
 - 次のコマンドを入力してパッケージをインストールします：
 
@@ -94,7 +95,7 @@ pip install pandas matplotlib streamlit
 
 - インストールが完了するまで待ちます（1〜2分かかる場合があります）
 
-`(.venv)`が表示されない場合、環境がアクティブになっていません。**表示 > コマンドパレット**をクリックし、`Python: Select Interpreter`を実行して、横に`('.venv': venv)`と表示されているインタープリタを選択します。
+`(.venv)`が表示されない場合、環境がアクティブになっていません。**View > Command Palette**（表示 > コマンド パレット）をクリックし、`Python: Select Interpreter`を実行して、横に`('.venv': venv)`と表示されているインタープリタを選択します。
 
 ## ステップ7：最初のPythonスクリプトを書く
 
@@ -124,19 +125,19 @@ plt.title('Distribution of Sepal Length')
 plt.show()
 ```
 
-- **ファイル > 保存**をクリックしてファイルを保存します
+- **File > Save**（ファイル > 保存）をクリックしてファイルを保存します
 
 ## ステップ8：Pythonコードをインタラクティブに実行
 
-- `analysis.py`を開いた状態で、右上隅の**▶ Pythonファイルを実行**ボタンをクリックします
-- またはエディター内で右クリックし、**ターミナルでPythonファイルを実行**を選択します
+- `analysis.py`を開いた状態で、右上隅の**▶ Run Python File**（Python ファイルの実行）ボタンをクリックします
+- またはエディター内で右クリックし、**Run Python > Run Python File in Terminal**（ターミナルで Python ファイルを実行する）を選択します
 - 出力がターミナルパネルに表示されるのを確認します
 - ヒストグラムを表示するウィンドウがポップアップします
 - 特定の行を選択して`Shift+Enter`を押すと、その行だけをインタラクティブなPythonセッションで実行できます
 
 ## ステップ9：シンプルなStreamlitアプリを作成
 
-- 新しいファイルを作成します：**ファイル > 新しいファイル**
+- 新しいファイルを作成します：**File > New File...**（ファイル > 新しいファイル...）をクリックし、ウィンドウ上部の一覧から**Python File**を選択します
 - `app.py`として保存します
 - 次のコードを入力します：
 
@@ -177,6 +178,7 @@ st.pyplot(fig)
 streamlit run app.py
 ```
 
+- 初めてStreamlitを実行すると、ターミナルで`Email:`の入力を求められます。`Enter`を押すだけでスキップできます
 - アプリがブラウザで開きます（通常は`http://localhost:8501`）
 - サイドバーのスライダーを動かすと、ヒストグラムが即座に更新されます
 - アプリを停止するには、ターミナルで`Ctrl+C`を押します
@@ -190,15 +192,16 @@ streamlit run app.py
 - 関数のシグネチャ、パラメータ、ドキュメントを表示するポップアップが表示されます
 - `import `と入力すると、VS Codeがパッケージ名を提案します
 - 関数呼び出しを入力すると、インテリセンスがパラメータヒントを表示します
+- 終わったら、このステップで入力した途中の行（`iris.gr`や`import `など）を削除してファイルを保存し、次のステップでスクリプトがきれいに実行されるようにします
 
 ## ステップ11：デバッグを試す
 
-- `analysis.py`で、8行目（`print(iris.head())`の行）の行番号の左側をクリックしてブレークポイントを設定します（赤い点が表示されます）
-- メニューバーの**実行**をクリックし、**デバッグの開始**を選択します
-- プロンプトが表示されたら**Pythonファイル**を選択します
+- `analysis.py`で、9行目（`print(iris.head())`の行）の行番号の左側をクリックしてブレークポイントを設定します（赤い点が表示されます）
+- メニューバーの**Run**（実行）をクリックし、**Start Debugging**（デバッグの開始）を選択します
+- プロンプトが表示されたら**Python File**（Python ファイル）を選択します
 - ブレークポイントでコードの実行が一時停止します
 - デバッグツールバーを使用してコードをステップ実行し、変数を検査し、コールスタックを確認します
-- **実行 > 続行**をクリックして実行を再開します
+- **Run > Continue**（実行 > 続行）をクリックして実行を再開します
 
 ## 次のステップ
 
@@ -212,7 +215,7 @@ streamlit run app.py
 
 - **ターミナルで「Pythonが認識されません」というエラー**：PythonがシステムのPATHに含まれていません。Windowsでは、Pythonを再インストールし、「Add python.exe to PATH」にチェックを入れます。Mac/Linuxでは、`python`の代わりに`python3`を使用します。修正後はVS Codeを再起動してください。
 
-- **インタープリタが見つかりません**：VS Codeの右下隅にあるインタープリタセレクターをクリックするか、**表示 > コマンドパレット**をクリックして`Python: Select Interpreter`を実行します。Pythonインストールが表示されない場合は、**インタープリタパスを入力**を選択し、Pythonの実行可能ファイルを参照します。
+- **インタープリタが見つかりません**：VS Codeの右下隅にあるインタープリタセレクターをクリックするか、**View > Command Palette**（表示 > コマンド パレット）をクリックして`Python: Select Interpreter`を実行します。Pythonインストールが表示されない場合は、**Enter interpreter path**（インタープリター パスを入力）を選択し、Pythonの実行可能ファイルを参照します。
 
 - **仮想環境がアクティブにならない**：VS Codeはターミナルを開いたときに自動的にアクティブ化します。されない場合は手動でアクティブ化します：Windows：`.venv\Scripts\activate`、Mac/Linux：`source .venv/bin/activate`。ターミナルプロンプトに`(.venv)`が表示されることで確認できます。
 
@@ -220,7 +223,9 @@ streamlit run app.py
 
 - **pip installが失敗する**：仮想環境がアクティブになっていることを確認します（ターミナルに`(.venv)`が表示されているか確認）。Linuxでは、最初に`python3-venv`をインストールする必要がある場合があります。Windowsでは、ウイルス対策ソフトがpipをブロックしていないか確認します。
 
-- **Streamlitアプリが実行されない**：streamlitが仮想環境にインストールされていることを確認します（`pip list | grep streamlit`）。エラーメッセージがないかターミナルを確認します。他のアプリがポート8501を使用していないことを確認します。
+- **Macで`SSL: CERTIFICATE_VERIFY_FAILED`が出る**：**Finder > アプリケーション > Python 3.x**を開いて**Install Certificates.command**をダブルクリックし、スクリプトをもう一度実行します。
+
+- **Streamlitアプリが実行されない**：streamlitが仮想環境にインストールされていることを確認します（`pip show streamlit`）。エラーメッセージがないかターミナルを確認します。他のアプリがポート8501を使用していないことを確認します。
 
 ## ワークフローのまとめ
 
@@ -235,4 +240,4 @@ VS Codeは、次の利点を備えたPython開発のための現代的で軽量�
 
 ---
 
-Created by [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) on December 7, 2025.
+[Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/)が2025年12月7日に作成。

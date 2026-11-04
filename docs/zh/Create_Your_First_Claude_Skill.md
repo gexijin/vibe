@@ -12,33 +12,33 @@ lang: "zh"
 
 - **Skill** - 存储在`.claude/skills/`中的模型调用能力，Claude会根据上下文自动激活
 - **模型调用（Model-invoked）** - Claude通过阅读Skill的描述来决定何时使用它，无需输入命令
+- **仍可作为斜杠命令使用** - 你也可以输入`/skill-name`自己运行任何Skill（例如`/stock-report AAPL`）。如果Skill和斜杠命令同名，则使用Skill
 - **SKILL.md** - 包含YAML前置内容（元数据）和Claude指令的主文件
 
 ## 你需要准备什么
 
-- 完成[创建自定义Slash命令](./Reuse_Prompts_via_Slash_Commands.md)教程
-- 该教程中的`stock-report` slash命令
+- 完成[创建自定义斜杠命令](./Reuse_Prompts_via_Slash_Commands.md)教程
+- 该教程中的`stock-report`斜杠命令
 - 已安装VS Code
 - 10-15分钟
 
 ## 步骤1：导航到项目文件夹
 
-**Windows（WSL）：**
-- 从开始菜单打开**Ubuntu**
+**Windows（PowerShell）：**
+- 从开始菜单打开**PowerShell**
 - 输入：
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
   ```
-  将`YOUR_USERNAME`替换为你的Windows用户名
+  cd ~\Documents\test_claude
+  ```
 
   如果文件夹不存在，请先创建它：
-  ```bash
-  mkdir -p /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
+  ```
+  mkdir ~\Documents\test_claude
+  cd ~\Documents\test_claude
   ```
 
 **Mac：**
-- 打开**Terminal**（应用程序 > 实用工具）
+- 打开**终端**（Terminal，位于应用程序 > 实用工具）
 - 输入：
   ```bash
   cd ~/Documents/test_claude
@@ -59,21 +59,24 @@ claude
 
 按照安装教程（[Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)）使用你的Claude订阅登录。登录后，你将看到欢迎消息和Claude Code提示符。
 
-## 步骤3：启用编辑自动批准
+## 步骤3：让Claude无需询问即可编辑文件
 
-按`Ctrl+E`（Windows/Linux）或`Cmd+E`（Mac）来启用编辑自动批准模式。
+查看Claude Code提示符正下方的状态栏：
+
+- 如果显示**auto mode on**或**accept edits on**，就已经设置好了
+- 如果显示**manual mode on**，按**Shift+Tab**直到显示**accept edits on**
 
 这样可以让Claude创建和修改文件，而无需每次都请求权限。
 
-## 步骤4：让Claude转换Slash命令
+## 步骤4：让Claude转换斜杠命令
 
 输入以下提示：
 ```
-将我的 stock-report slash 命令转换为名为 generate-stock-reports 的 Skill。
+将我的 stock-report 斜杠命令转换为 Skill。
 这个 Skill 应该在我询问公司或股票时自动激活。
 ```
 
-Claude会分析现有的slash命令，并将其转换为`.claude/skills/stock-report/`中的Skill。
+Claude会分析现有的斜杠命令，并将其转换为`.claude/skills/stock-report/`中的Skill。
 
 **发生了什么：**Claude创建了一个新的文件夹结构，其中`SKILL.md`包含YAML前置内容，告诉Claude何时自动使用这个Skill。
 
@@ -99,7 +102,11 @@ description: Generates reports on companies... Use when users ask about stocks, 
 
 ## 步骤6：测试Skill（无需输入命令）
 
-不要输入`/stock-report AAPL`，只需提出一个自然的问题：
+首先，确保Claude Code已加载新的Skill。输入：
+```
+/reload-skills
+```
+Claude Code会报告可用的Skill数量。现在，不要输入`/stock-report AAPL`，只需提出一个自然的问题：
 ```
 苹果公司最近有什么动态？
 ```
@@ -110,7 +117,7 @@ description: Generates reports on companies... Use when users ask about stocks, 
 
 ## 步骤7：比较两种方法
 
-**Slash命令（手动）：**
+**斜杠命令（手动）：**
 ```
 /stock-report AAPL
 ```
@@ -157,7 +164,7 @@ Claude应该使用Skill两次——一次用于Google，一次用于Meta。
 更新 stock-report Skill，使其仅在我明确提到"分析"或"报告"以及公司名称时才激活。
 ```
 
-Claude会更新`SKILL.md`中的`description`字段。测试差异：
+Claude会更新`SKILL.md`中的`description`字段。输入`/reload-skills`让Claude Code加载此更改，然后测试差异：
 ```
 苹果公司在做什么？
 ```
@@ -182,15 +189,15 @@ Claude会更新`SKILL.md`中的`description`字段。测试差异：
 
 - **Skill未激活：**检查`SKILL.md`中的`description`字段——它必须包含与问题相关的触发词
 - **Skill激活过于频繁：**使描述更具体地说明何时使用它
-- **找不到Skill文件夹：**Skill位于`.claude/skills/`（隐藏文件夹——在文件浏览器中启用"显示隐藏文件"）
-- **对SKILL.md的更改不起作用：**Skill在修改后会自动加载——无需重启。如果仍然不起作用，请检查YAML格式
+- **找不到Skill文件夹：**Skill位于`.claude/skills/`（这是隐藏文件夹：VS Code的资源管理器会显示它；在Windows的文件资源管理器中选择**查看 > 显示 > 隐藏的项目**；在Mac的访达中按**Cmd+Shift+.**）
+- **对SKILL.md的更改不起作用：**Skill在修改后通常会自动重新加载。如果`.claude/skills/`文件夹是在本次会话中创建的，请输入`/reload-skills`（或重启Claude Code）。如果仍然不起作用，请检查YAML格式
 
 ## 工作流程概述
 
-- **Slash命令**是手动输入的快捷方式（类似书签）
+- **斜杠命令**是手动输入的快捷方式（类似书签）
 - **Skill**是Claude自动发现和使用的能力（类似了解偏好的助手）
 - **Skill描述**充当指令，告诉Claude："当用户说X时使用我"
-- **两者可以共存** - 使用slash命令执行快速、重复的任务；使用Skill处理复杂的工作流程
+- **两者可以共存** - 使用斜杠命令执行快速、重复的任务；使用Skill处理复杂的工作流程
 - **Skill更具扩展性** - 不需要记住命令名称；Claude根据上下文决定
 
 ---

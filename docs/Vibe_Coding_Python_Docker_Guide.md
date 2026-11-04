@@ -38,11 +38,12 @@ You now have a local Git repository and a backup on GitHub.
 
 ## Step 2: Copy Docker Configuration
 
-You need the `.devcontainer` folder from the vibe project to set up your Docker environment.
+You need the `.devcontainer` folder from the `python-docker-demo` project you built in [Python Coding in VS Code via Docker](./Python_Coding_Docker_Guide). It gives this project the same Python environment, with pandas, matplotlib, and Claude Code already installed.
 
 - Open File Explorer (Windows) or Finder (Mac)
-- Navigate to your vibe project folder (e.g., `Documents/vibe`)
+- Navigate to your `python-docker-demo` folder
 - Find the `.devcontainer` folder
+  - On Mac, Finder hides folders whose names start with a dot. Press **Cmd+Shift+.** (period) to show them
 - Copy the entire folder (it contains `Dockerfile` and `devcontainer.json`)
 - Navigate to your new `iris-analysis` folder
 - Paste the `.devcontainer` folder there
@@ -57,13 +58,13 @@ Your `iris-analysis` folder should now contain:
 - Open VS Code
 - Click **File > Open Folder**
 - Navigate to `iris-analysis` folder
-- Click **Select Folder**
+- Click **Select Folder** (Windows) or **Open** (Mac)
 - A notification appears in the bottom right: **Folder contains a Dev Container configuration file**
 - Click **Reopen in Container**
-- If you don't see the notification, click the green icon in bottom-left corner and select **Reopen in Container**
+- If you don't see the notification, click the **><** icon in the bottom-left corner and select **Reopen in Container**
 - VS Code builds the Docker container (takes 3-5 minutes first time)
 - Watch the progress notification showing build steps
-- When complete, the green icon shows **Dev Container: Python in Docker**
+- When complete, the bottom-left corner shows **Dev Container: Python in Docker**
 
 ## Step 4: Start Claude Code
 
@@ -77,7 +78,9 @@ claude
 
 - A browser window opens for authentication
 - Click **Continue with Google** or **Continue with Email**
-- Log in with your Claude account (or create one)
+- Log in with your Claude account. Claude Code needs a paid Claude plan (such as Pro or Max) or an Anthropic Console account - the free plan doesn't include it
+- If the browser shows a code instead of saying you're done, copy the code, go back to the VS Code terminal, paste it at the **Paste code here if prompted** prompt, and press **Enter** (this is common inside a container)
+- If no browser window opens, press `c` to copy the login link and paste it into your browser
 - After authentication succeeds, return to VS Code terminal
 - You'll see Claude's welcome message
 
@@ -184,14 +187,14 @@ Before committing, review what Claude built.
 - You don't need to understand every line, but get a sense of the structure
 - Check that all PNG files were created: `petal_length_histogram.png`, `petal_scatter.png`, `species_boxplot.png`
 - Open GitHub Desktop
-- You'll see all new files listed (the Python script and PNG images)
+- You'll see the new PNG images listed, plus `iris_exploration.py` as a changed file (Claude added the plotting code)
 - In the **Summary** field at bottom left, type:
 
 ```
 Iris data analysis with histograms, scatter plots, and box plots
 ```
 
-- Click **Commit to main**
+- Click the blue commit button at the bottom (it reads like **Commit 4 files to main** - the number matches how many files changed)
 - Click **Push origin** to back up to GitHub
 
 You've saved your first working analysis!
@@ -239,7 +242,7 @@ Each time, follow the pattern: describe → test → iterate → commit.
 - **Import errors** - The Docker container should have pandas, matplotlib, and scikit-learn pre-installed. If not, ask Claude to install them with pip.
 - **Claude makes mistakes** - Normal! Copy the error message, paste it to Claude, and say "fix this error." Vibe coding includes iteration and debugging.
 - **Can't push to GitHub** - Make sure you're logged into GitHub Desktop and published the repository (Step 1). Check your internet connection.
-- **Container won't start** - Make sure Docker Desktop is running (green status indicator). Try clicking the green icon in VS Code and selecting **Rebuild Container**.
+- **Container won't start** - Make sure Docker Desktop is running (green status indicator). Try clicking the **><** icon in the bottom-left corner of VS Code and selecting **Rebuild Container**.
 
 ## Workflow Overview
 

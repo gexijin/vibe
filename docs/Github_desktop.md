@@ -16,7 +16,7 @@ You're working on a project and make changes that break everything. You can't re
 
 ## What You'll Need
 
-- Windows, macOS, or Linux computer
+- A Windows or Mac computer (GitHub Desktop doesn't run on Linux)
 - Internet connection
 - Email address for GitHub account
 - 15-20 minutes
@@ -48,13 +48,14 @@ You're working on a project and make changes that break everything. You can't re
 
 - Open GitHub Desktop
 - Click **Sign in to GitHub.com**
-- Your browser opens—click **Authorize desktop**
+- Your browser opens—sign in if asked, then click **Authorize desktop**
+- If your browser asks to open **GitHub Desktop**, click **Open** (or **Allow**)
 - Return to GitHub Desktop
 - Click **Finish** to complete setup
 
 ## Step 4: Create Your First Repository
 
-- In GitHub Desktop, click **Create a New Repository on your Hard Drive**
+- In GitHub Desktop, click **Create a New Repository on your Local Drive**
 - Fill in the form:
   - **Name:** `my-first-project` (or any name you like)
   - **Description:** `Learning version control` (optional)
@@ -92,7 +93,7 @@ You're working on a project and make changes that break everything. You can't re
 - Return to GitHub Desktop
 - You'll see your changes highlighted on the right side (green = added, red = removed)
 - At the bottom left, type a commit message: `Updated README with project description`
-- Click the blue **Commit to main** button
+- Click the blue **Commit 1 file to main** button (the number matches how many files you changed)
 
 ## Step 8: Push to GitHub (Back Up to the Cloud)
 
@@ -112,14 +113,14 @@ Your code is now backed up online at: `https://github.com/YOUR-USERNAME/my-first
 ## Troubleshooting
 
 - **Can't sign in to GitHub** - Check your internet connection. Try signing in at github.com first to verify your credentials work.
-- **Changes don't appear in GitHub Desktop** - Make sure you saved your files. Click **Repository** → **Refresh** or restart GitHub Desktop.
-- **Push fails with "rejected" error** - Someone else pushed changes. Click **Fetch origin** first, then try pushing again.
+- **Changes don't appear in GitHub Desktop** - Make sure you saved your files. Click on another app and then back on GitHub Desktop, or restart GitHub Desktop.
+- **Push fails with "rejected" error** - Someone else pushed changes. Click **Fetch origin**, then **Pull origin**, then click **Push origin** again.
 
 ## Workflow Overview
 
 - Make changes to your project files
 - Review changes in GitHub Desktop (green = added, red = removed)
-- Write a descriptive commit message and click **Commit to main**
+- Write a descriptive commit message and click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
 - Click **Push origin** to back up to GitHub
 - Repeat
 

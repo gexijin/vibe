@@ -6,7 +6,7 @@ lang: "de"
 
 # GitHub Desktop mit Claude Code verwenden
 
-Sie programmieren mit KI-Unterstützung. Sie nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit"), erstellen Sie einen Wiederherstellungspunkt. Sie können immer zurückgehen.
+Sie programmieren mit KI-Unterstützung. Die KI nimmt Änderungen an Ihren Dateien vor. Manchmal funktionieren die Änderungen perfekt. Manchmal nicht. **Versionskontrolle ist wie eine Rückgängig-Taste für Ihr gesamtes Projekt.** Jedes Mal, wenn Sie einen Snapshot speichern (genannt „Commit“), erstellen Sie einen Wiederherstellungspunkt. Sie können immer zurückgehen.
 
 Wenn Sie [GitHub Desktop](https://desktop.github.com) mit [Claude Code](https://claude.com/claude-code) kombinieren, erhalten Sie KI-Geschwindigkeit bei der Entwicklung mit professioneller Versionskontrolle.
 
@@ -41,9 +41,10 @@ Erstellen Sie eine einfache Timer-App mit Claude Code und verfolgen Sie alle Än
 - Klicken Sie auf **File** → **New Repository**
 - Füllen Sie aus:
   - **Name:** `test_claude`
-  - **Description:** `Eine Timer-App erstellt mit Claude Code`
-  - **Local Path:** Dokumente-Ordner
-  - **Aktivieren Sie** „Initialize this repository with a README"
+  - **Description:** `Eine mit Claude Code erstellte Timer-App`
+  - **Local Path:** Klicken Sie auf **Choose...** und wählen Sie Ihren Ordner **Dokumente** (Documents) aus (standardmäßig ist hier ein Ordner `GitHub` innerhalb von Dokumente eingetragen – ändern Sie das also)
+  - **Aktivieren Sie** „Initialize this repository with a README“
+- Wenn GitHub Desktop meldet, dass der Ordner „appears to be a Git repository“ (also bereits ein Git-Repository zu sein scheint), haben Sie schon einen Ordner `test_claude` aus dem Git-Tutorial. Benennen Sie diesen alten Ordner im Datei-Explorer bzw. im Finder um (zum Beispiel in `test_claude_old`) und versuchen Sie es dann erneut
 - Klicken Sie auf **Create Repository**
 - Klicken Sie oben auf **Publish repository**
 - Klicken Sie auf **Publish Repository**
@@ -52,22 +53,24 @@ Sie haben jetzt ein lokales Projekt und ein Cloud-Backup auf GitHub.
 
 ## Schritt 2: Claude bitten, die Timer-App zu erstellen
 
-- Öffnen Sie Ihr **Terminal**
+- Öffnen Sie Ihr Terminal: **PowerShell** unter Windows, **Terminal** auf dem Mac
 - Navigieren Sie zu Ihrem Projekt:
   ```
   cd ~/Documents/test_claude
   ```
+  Wenn Sie unter Windows `Cannot find path` sehen, wird Ihr Dokumente-Ordner von OneDrive gesichert. Führen Sie stattdessen `cd ~/OneDrive/Documents/test_claude` aus (auf deutschem Windows meist `cd ~/OneDrive/Dokumente/test_claude`)
 - Starten Sie Claude Code:
   ```
   claude
   ```
 
-Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Claude Code-Eingabeaufforderung.
+Melden Sie sich mit Ihrem Claude-Abonnement an, wie im Installations-Tutorial beschrieben ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Nach der Anmeldung sehen Sie eine Willkommensnachricht und die Eingabezeile von Claude Code.
 
-- Geben Sie diese Anfrage ein:
+- Kopieren Sie diese gesamte Anfrage und fügen Sie sie ein (beim Einfügen bleiben alle Zeilen zusammen; wenn Sie Enter drücken, würde sie zu früh abgeschickt):
+
   ```
   Erstelle eine einfache Countdown-Timer-App in einer einzelnen Datei namens timer.html.
-  Sie sollte haben:
+  Sie soll Folgendes enthalten:
   - Ein Eingabefeld zum Einstellen der Minuten
   - Start- und Stopp-Schaltflächen
   - Eine Anzeige mit der verbleibenden Zeit im MM:SS-Format
@@ -79,7 +82,7 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
 
 ## Schritt 3: Den Timer testen
 
-- Klicken Sie in GitHub Desktop auf **Repository** → **Im Finder/Explorer anzeigen**
+- Klicken Sie in GitHub Desktop auf **Repository** → **Show in Finder** (Mac) bzw. **Show in Explorer** (Windows)
 - **Doppelklicken Sie** auf `timer.html`, um sie in Ihrem Browser zu öffnen
 - Testen Sie den Timer:
   - Geben Sie `1` in das Eingabefeld ein
@@ -87,18 +90,19 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
   - Beobachten Sie den Countdown
 
 **Wenn es funktioniert:** Gehen Sie zu Schritt 5.
+
 **Wenn etwas nicht funktioniert:** Fahren Sie mit Schritt 4 fort.
 
 ## Schritt 4: Fehler beheben (falls nötig)
 
-- Öffnen Sie die Browser-Konsole (Rechtsklick auf Seite → **Untersuchen** → Tab **Console**)
+- Öffnen Sie die Browser-Konsole (Rechtsklick auf Seite → **Untersuchen** → Tab **Konsole** (Console))
 - Kopieren Sie alle roten Fehlermeldungen
 - Gehen Sie zurück zu Claude Code in Ihrem Terminal
 - Fügen Sie den Fehler ein:
   ```
   Ich sehe diesen Fehler: [Fehler einfügen]. Kannst du ihn beheben?
   ```
-- Aktualisieren Sie den Browser (klicken Sie auf die Neu laden-Schaltfläche oder Rechtsklick → **Neu laden**) und testen Sie erneut
+- Aktualisieren Sie den Browser (klicken Sie auf die Schaltfläche zum Neuladen oder Rechtsklick → **Neu laden**) und testen Sie erneut
 
 ## Schritt 5: Änderungen überprüfen
 
@@ -111,16 +115,16 @@ Claude erstellt die `timer.html`-Datei (dauert 10-30 Sekunden).
 
 ## Schritt 6: Manuell committen
 
-- Geben Sie unten links im **Summary-Feld** ein:
+- Geben Sie unten links in das Feld **Summary** ein:
   ```
   Erstelle erste Timer-App mit Start/Stopp-Funktionalität
   ```
-- Klicken Sie auf **Commit to main**
+- Klicken Sie unten auf die blaue Commit-Schaltfläche (sie lautet etwa **Commit 1 file to main**)
 
 Sie haben einen Speicherpunkt erstellt!
 
-**Gute Commit-Nachrichten:** „Erstelle erste Timer-App", „Behebe Start-Schaltfläche"
-**Schlechte Commit-Nachrichten:** „Änderungen", „Update", „asdf"
+**Gute Commit-Nachrichten:** „Erstelle erste Timer-App“, „Behebe Start-Schaltfläche“
+**Schlechte Commit-Nachrichten:** „Änderungen“, „Update“, „asdf“
 
 ## Schritt 7: Auf GitHub pushen
 
@@ -131,12 +135,12 @@ Ihr Code ist jetzt in der Cloud gesichert.
 
 ## Schritt 8: Tonbenachrichtigung hinzufügen
 
-- Im Claude Code-Terminal:
+- In Claude Code im Terminal:
   ```
   Füge eine Tonbenachrichtigung hinzu, wenn der Timer Null erreicht. Verwende den
   eingebauten Browser-Signalton oder erstelle einen einfachen Audio-Alarm.
   ```
-- Testen Sie: Browser aktualisieren, Timer auf 0.1 Minuten setzen, Start klicken
+- Testen Sie: Browser aktualisieren, Timer auf 1 Minute setzen, Start klicken
 
 **Für dieses Tutorial:** Tun Sie so, als würde der Ton nicht gut funktionieren. Committen Sie noch nicht!
 
@@ -145,8 +149,8 @@ Ihr Code ist jetzt in der Cloud gesichert.
 Manchmal führt uns KI auf den falschen Weg und wir müssen von unserem letzten Commit (Speicherpunkt) neu beginnen.
 
 - Öffnen Sie **GitHub Desktop**
-- Klicken Sie auf **Branch**-Menü → **Discard All Changes**
-- Klicken Sie auf **Discard Changes** zur Bestätigung
+- Klicken Sie auf das Menü **Branch** → **Discard All Changes**
+- Klicken Sie auf **Discard All Changes** zur Bestätigung
 - Browser aktualisieren – der Timer funktioniert ohne den Ton!
 
 Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherpunkt zurückgekehrt.
@@ -159,10 +163,11 @@ Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherp
   Audioelement mit einem einfachen Signalton, der über die Web Audio API erzeugt wird. Stelle
   sicher, dass Browser-Autoplay-Einschränkungen elegant behandelt werden.
   ```
-- Sofort testen (Browser aktualisieren, 0.1 Minuten setzen, Start)
+- Sofort testen (Browser aktualisieren, 1 Minute setzen, Start)
 
 **Wenn es funktioniert:** Weiter zu Schritt 11.
-**Wenn nicht:** Fehler zu Claude einfügen oder erneut versuchen.
+
+**Wenn nicht:** Fehler in Claude Code einfügen oder erneut versuchen.
 
 ## Schritt 11: Claude committen und pushen lassen
 
@@ -173,15 +178,17 @@ Sie haben gerade fehlerhaften Code verworfen und sind zu Ihrem letzten Speicherp
 
 Claude überprüft Änderungen, schreibt eine Commit-Nachricht, committet und pusht (10-20 Sekunden).
 
+**Wenn Claude meldet, dass der Push fehlgeschlagen ist** (zum Beispiel `could not read Username` oder `git` wird nicht erkannt): Wechseln Sie zu **GitHub Desktop**. Wenn dort noch geänderte Dateien aufgelistet sind, committen Sie sie selbst (wie in Schritt 6). Klicken Sie dann oben auf **Push origin** – GitHub Desktop ist bereits bei GitHub angemeldet.
+
 **Wann verwenden:**
 - Manuelle Commits: Beim Lernen oder wenn Sie Kontrolle wollen
-- Claude-Commits: Beim schnellen Arbeiten und wenn Sie gute Nachrichten wollen
+- Claude-Commits: Beim schnellen Arbeiten und wenn Sie gute Commit-Nachrichten wollen
 
 ## Schritt 12: Claude bitten, Änderungen zusammenzufassen
 
 - In Claude Code:
   ```
-  Welche Dateien habe ich geändert?
+  Was hat mein letzter Commit geändert?
   ```
 
 Claude erklärt Ihre Änderungen in einfacher Sprache.
@@ -192,10 +199,10 @@ Claude erklärt Ihre Änderungen in einfacher Sprache.
 
 - Klicken Sie in **GitHub Desktop** auf den Tab **History**
 
-Sie sehen:
-- Initial commit (README)
-- Create initial timer app
-- Add improved sound notification
+Sie sehen (der neueste steht oben):
+- Claudes Commit für die Tonbenachrichtigung (der Wortlaut ist jedes Mal anders; Claude schreibt die Nachricht möglicherweise auf Englisch oder auf Deutsch)
+- Erstelle erste Timer-App mit Start/Stopp-Funktionalität
+- Initial commit
 
 Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie haben ihn verworfen! Nur funktionierender Code hat es in Ihre Commits geschafft.
 
@@ -210,13 +217,13 @@ Beachten Sie, dass der erste fehlgeschlagene Tonversuch nicht da ist – Sie hab
 
 ## Fehlerbehebung
 
-**„Authentication failed":** GitHub Desktop → File/Preferences → Accounts → Abmelden und erneut anmelden
+**„Authentication failed“:** Öffnen Sie in GitHub Desktop **File → Options → Accounts** (Windows) bzw. **GitHub Desktop → Settings → Accounts** (Mac), melden Sie sich dann ab (**Sign out**) und wieder an (**Sign in**)
 
-**Claude sagt „not a git repository":** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
+**Claude sagt „not a git repository“:** Stellen Sie sicher, dass Sie im richtigen Ordner sind (`cd ~/Documents/test_claude`)
 
-**Timer funktioniert nicht:** Browser-Konsole öffnen (Rechtsklick → **Untersuchen** → **Console**), Fehler kopieren, zu Claude einfügen
+**Timer funktioniert nicht:** Browser-Konsole öffnen (Rechtsklick → **Untersuchen** → **Konsole**), Fehler kopieren und in Claude Code einfügen
 
-**Brauchen Sie Hilfe?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
+**Brauchen Sie Hilfe?** [GitHub Desktop docs](https://docs.github.com/en/desktop) • [Claude Code docs](https://code.claude.com/docs)
 
 ## Der komplette Workflow
 

@@ -1,16 +1,16 @@
 ---
-title: "Windows 系统上的 Claude Code 版本控制"
+title: "Windows 系统上的 Claude Code 本地版本控制"
 lang: "zh"
 ---
 [首页](./)
 
-# Windows 系统上的 Claude Code 版本控制
+# Windows 系统上的 Claude Code 本地版本控制
 
 你正在使用 AI 助手协作，它会修改你的文件。有时效果出色，有时则不然。**版本控制就像整个项目的撤销按钮。**每次保存快照（称为"提交"），你就创建了一个可以随时返回的还原点。最棒的是，你可以完全在本地完成这些操作，Claude Code 会为你处理一切。
 
 ## 核心概念
 
-- **WSL (Windows Subsystem for Linux)** - 在 Windows 上原生运行 Linux 工具（如 Git）
+- **PowerShell** - Windows 内置的命令行工具，本教程用它来运行 Git 和 Claude Code
 - **Git** - 在计算机上跟踪文件的每次更改，创建可以随时返回的还原点
 - **Commit** - 项目在特定时间点的快照，附带变更描述
 - **Claude Code** - AI 编码助手，可以编写代码、修复错误，并通过简单请求处理 Git 操作
@@ -18,31 +18,29 @@ lang: "zh"
 ## 你需要准备什么
 
 - 完成 [在 Windows 上安装 Claude Code](./Install_CLAUDE_Code_Win)
-- 已安装 WSL 和 Ubuntu
-- 20 分钟
+- 20-30 分钟
 
-## 步骤 1：打开 Ubuntu Terminal
+## 步骤 1：打开 PowerShell
 
 - 点击 **开始** 菜单
-- 输入 `Ubuntu`
-- 点击 **Ubuntu** 打开终端
+- 输入 `PowerShell`
+- 点击 **Windows PowerShell** 打开它
 
-你会看到一个以 `$` 结尾的命令提示符。
+**注意：** 如果你选择了可选的 WSL/Ubuntu 方式而不是原生安装，请改为打开 **Ubuntu** 应用——Git 和 Claude Code 在那里的用法完全相同，只是使用 Linux 风格的路径（`/mnt/c/Users/...`）而不是 `~\Documents\...`。
 
 ## 步骤 2：安装 Git
 
-- 输入以下命令并按回车：
-  ```
-  sudo apt-get install git
-  ```
-- 当提示时，输入你的密码并按回车
-- 等待安装完成（10-30 秒）
-- 验证 Git 已安装：
+- 检查 Git 是否已经安装：
   ```
   git --version
   ```
-
-你应该会看到类似 `git version 2.34.1` 的内容。
+- 如果你看到类似 `git version 2.45.0` 的版本号，直接跳到步骤 3
+- 如果你看到错误信息，请安装 Git for Windows：
+  - 访问 [git-scm.com/download/win](https://git-scm.com/download/win)
+  - 在该页面顶部点击 **Click here to download**，下载完成后打开安装程序
+  - 在安装程序中一路点击 **Next**，接受默认选项
+  - 点击 **Install**，然后点击 **Finish**
+  - 关闭并重新打开 PowerShell，然后再次运行 `git --version` 进行验证
 
 ## 步骤 3：使用你的身份配置 Git
 
@@ -56,21 +54,20 @@ Git 需要知道你是谁以便在提交消息中记录。
 
 使用姓名和邮箱有助于在多人协作时识别是谁做出了更改。
 
-## 步骤 4：导航到 Windows 文件夹
+## 步骤 4：导航到 Documents 文件夹
 
-WSL 可以通过 `/mnt/c/` 访问 Windows 文件。
-
-- 导航到 Windows 用户文件夹：
+- 导航到 Documents 文件夹：
   ```
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
+  cd ~\Documents
   ```
-  将 `YOUR_USERNAME` 替换为实际的 Windows 用户名。
 - 验证位置：
   ```
   pwd
   ```
 
-你应该看到 `/mnt/c/Users/YOUR_USERNAME/Documents`。
+你应该看到一个以 `\Documents` 结尾的路径。
+
+如果看到 `Cannot find path`，说明你的“文档”文件夹很可能由 OneDrive 备份。请改为运行 `cd ~\OneDrive\Documents`。
 
 ## 步骤 5：创建项目文件夹
 
@@ -103,9 +100,12 @@ WSL 可以通过 `/mnt/c/` 访问 Windows 文件。
 
 Claude 会在文件夹中初始化 Git 仓库（需要 2-5 秒）。现在你拥有了版本控制！
 
+如果 Claude 请求权限，它会显示一个包含 **Yes** 和 **No** 的小菜单。用方向键选中 **Yes**，然后按 **回车**。在本教程中你可能会多次看到这个菜单。
+
 ## 步骤 8：构建倒计时应用
 
-- 在 Claude Code 中输入：
+- 在 Claude Code 中，复制并粘贴下面整段请求（粘贴可以让所有行保持在一起；如果逐行输入，按回车会提前发送）：
+
   ```
   创建一个简单的倒计时器应用，放在一个名为 timer.html 的文件中。
   它应该包含：
@@ -119,12 +119,14 @@ Claude 会创建 `timer.html`（需要 10-30 秒），包含 CSS 和 JavaScript 
 ## 步骤 9：测试倒计时器
 
 - 打开 Windows 文件资源管理器
-- 导航到 `Documents\test_claude`
+- 导航到 **文档** > **test_claude**（即 `Documents\test_claude`）
 - 双击 `timer.html` 在浏览器中打开
 - 测试倒计时器：
   - 在输入框中输入 `1`
-  - 点击 **Start**
+  - 点击 **开始**（或 **Start**）按钮
   - 观察倒计时
+
+**看不到 `test_claude`？** 如果 OneDrive 备份了你的“文档”，文件资源管理器显示的会是另一个“文档”文件夹。点击文件资源管理器的地址栏，粘贴 `%USERPROFILE%\Documents\test_claude`，然后按 **回车**。
 
 **如果出现问题：** 在 Claude Code 中描述错误：`我看到这个错误：[描述发生了什么]。你能修复它吗？`
 
@@ -148,8 +150,8 @@ Claude 会：
   ```
   在顶部添加两个按钮。点击它们时自动启动 1 分钟和 5 分钟的计时器。
   ```
-- 刷新浏览器标签
-- 测试：点击 **5 min** 按钮
+- 刷新浏览器标签（按 `F5` 或 `Ctrl + R`）
+- 测试：点击 **5 分钟**（或 **5 min**）按钮
 - 如果有效，提交更改：
   ```
   保存这些更改
@@ -164,8 +166,8 @@ Claude 会：
   ```
   添加一个 15 分钟按钮
   ```
-- 刷新浏览器标签
-- 测试：点击 **15 min** 按钮
+- 刷新浏览器标签（按 `F5` 或 `Ctrl + R`）
+- 测试：点击 **15 分钟**（或 **15 min**）按钮
 
 **在本教程中：** 假装 15 分钟按钮无法正常工作。先不要提交——我们将练习丢弃不良更改。
 
@@ -177,8 +179,7 @@ Claude 会：
   ```
   丢弃这些更改
   ```
-- Claude 会要求确认
-- 按 `1` 并按回车
+- Claude 通常会先请你确认。如果它显示菜单，选择 **Yes**（用方向键或按它旁边的数字），然后按 **回车**。如果它在消息中询问，输入 `是的，丢弃对 timer.html 的更改` 并按 **回车**
 - 刷新浏览器——15 分钟按钮消失了
 
 Claude 丢弃了我们不喜欢的新更改。倒计时器恢复正常，只有 1 分钟和 5 分钟按钮！
@@ -195,7 +196,7 @@ Claude 丢弃了我们不喜欢的新更改。倒计时器恢复正常，只有 
   保存这些更改
   ```
 
-## 步骤 15：添加小睡按钮
+## 步骤 15：添加贪睡按钮
 
 - 在 Claude Code 中输入：
   ```
@@ -218,7 +219,7 @@ Claude 会以易读格式显示你的提交。你会看到：
 - 初始倒计时应用的提交
 - 预设按钮（1 分钟和 5 分钟）的提交
 - 声音通知的提交
-- 小睡按钮的提交
+- 贪睡按钮的提交
 
 注意 15 分钟按钮的尝试不在其中——你已丢弃了它！
 
@@ -255,9 +256,9 @@ Claude 会以易读格式显示你的提交。你会看到：
 
 ## 故障排除
 
-- **"not a git repository" 错误：** 确保在 test_claude 文件夹中（`cd /mnt/c/Users/YOUR_USERNAME/Documents/test_claude`）
-- **在 Windows 中找不到 timer.html：** 文件位于 `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`
-- **Git 要求输入密码：** 你输错了 `sudo` 密码——仔细重试
+- **"not a git repository" 错误：** 确保在 test_claude 文件夹中（`cd ~\Documents\test_claude`；如果你在步骤 4 中使用了 OneDrive 路径，则为 `cd ~\OneDrive\Documents\test_claude`）
+- **在 Windows 中找不到 timer.html：** 文件位于 `C:\Users\YOUR_USERNAME\Documents\test_claude\timer.html`（如果你在步骤 4 中使用了 OneDrive 路径，则为 `C:\Users\YOUR_USERNAME\OneDrive\Documents\test_claude\timer.html`）
+- **找不到 `git` 命令：** 安装 Git for Windows 后关闭并重新打开 PowerShell，让 PATH 生效，然后再次运行 `git --version`
 - **倒计时器无法工作：** 打开浏览器控制台（右键点击页面，选择 **检查**，点击 **Console** 标签），复制任何红色错误消息，粘贴给 Claude
 
 ## 你可以向 Claude 询问什么
@@ -266,7 +267,7 @@ Claude 会以易读格式显示你的提交。你会看到：
 - `显示差异` - 查看具体的代码更改
 - `解释计时器代码的作用` - 理解实现方式
 - `创建一个名为 experiment 的分支` - 安全地尝试风险性更改
-- `回到上一次提交` - 撤销自上次提交以来的所有更改
+- `撤销自上次提交以来的所有更改` - 丢弃你尚未保存的更改
 
 Claude 通过自然语言处理所有 Git 操作——无需记忆命令！
 
@@ -276,6 +277,6 @@ Claude 通过自然语言处理所有 Git 操作——无需记忆命令！
 - **开发：** Claude 编写代码，你在浏览器中测试
 - **版本控制：** Claude 通过简单请求处理所有 Git 操作
 - **安全性：** 随时丢弃不良更改，返回到任何之前的提交
-- **本地：** 一切都保存在计算机上，无需账户或互联网连接
+- **本地：** 你的 Git 历史保存在你的计算机上——不需要 GitHub 账户（Claude Code 本身仍需要互联网和你的 Claude 账户）
 
 由 [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) 创建于 2025 年 12 月 8 日。

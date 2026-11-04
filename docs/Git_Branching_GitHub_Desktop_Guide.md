@@ -38,7 +38,7 @@ You'll create and edit all your files in VS Code. Open your project folder once,
 
 - Open **VS Code**
 - Click **File** → **Open Folder**
-- Browse to your `heart-dashboard` folder and click **Open** (on Mac, **Select Folder**)
+- Browse to your `heart-dashboard` folder and click **Select Folder** (on Mac, **Open**)
 - If VS Code asks "Do you trust the authors?", click **Yes, I trust the authors**
 - On the left you'll see the **Explorer** panel listing your folder, with the `README.md` file inside it
 
@@ -46,10 +46,11 @@ Keep VS Code open—you'll come back to it throughout.
 
 ## Step 3: Download the Data
 
-- **Right-click** this link and choose **Save Link As** (or **Save Target As**): [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
+- **Right-click** this link and choose **Save Link As** (Safari: **Download Linked File As…**): [heart attack data](https://raw.githubusercontent.com/gexijin/learnR/master/datasets/heartatk4R.txt)
 - Save it into your `heart-dashboard` folder, named `heartatk4R.txt`
-- Peek at the data in **Excel**: open Excel first, click **File** → **Open** → **Browse**, set the file-type dropdown to **All Files**, then pick `heartatk4R.txt` from your `heart-dashboard` folder
-- Excel shows one heart-attack patient per row, with columns: `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), `AGE`
+- Peek at the data in **Excel** (optional): open Excel, click **File** → **Open** → **Browse** (on Mac, **File** → **Open…**), set the file-type dropdown to **All Files** if needed, and pick `heartatk4R.txt` from your `heart-dashboard` folder
+- If a **Text Import Wizard** appears, just click **Finish**
+- Excel shows one heart-attack patient per row. The columns include `SEX`, `DIED`, `CHARGES`, `LOS` (length of stay), and `AGE` (plus `Patient`, `DIAGNOSIS`, and `DRG`, which we won't use)
 - Close Excel without saving—you only opened it to look
 - Back in VS Code, `heartatk4R.txt` now appears in the Explorer panel too
 
@@ -59,8 +60,9 @@ Keep VS Code open—you'll come back to it throughout.
 - Type this prompt:
   ```
   Make a one-page HTML dashboard in a single file. Add a button to
-  load a tab-separated .txt file from my computer. Columns: SEX,
-  DIED (0 or 1), CHARGES, LOS, AGE. Show total patients, percent
+  load a tab-separated .txt file (with a header row) from my computer.
+  Columns: Patient, DIAGNOSIS, SEX, DRG, DIED (0 or 1), CHARGES, LOS,
+  AGE. Show total patients, percent
   died, and average age, charges, and stay as cards. Ignore NA.
   ```
 - Click the **Copy** button on the code block ChatGPT provides
@@ -80,7 +82,7 @@ Because you typed the real name `index.html`, VS Code saves it correctly—no ex
 
 ## Step 6: Test the Dashboard in Your Browser
 
-- In your `heart-dashboard` folder, double-click `index.html`
+- In GitHub Desktop, click **Repository** → **Show in Explorer** (Mac: **Show in Finder**), then double-click `index.html`
 - It opens in your web browser
 - Click the **Choose File** button (or similar) and pick `heartatk4R.txt` from your folder
 - The cards fill in with numbers from the data
@@ -92,7 +94,7 @@ Because you typed the real name `index.html`, VS Code saves it correctly—no ex
 - Return to **GitHub Desktop**
 - You'll see **two** files listed on the left: `index.html` and `heartatk4R.txt`
 - At the bottom left, type a commit message: `Add dashboard and data`
-- Click the blue **Commit to main** button
+- Click the blue **Commit 2 files to main** button (the number matches how many files you changed)
 
 Git now tracks both your code and your data.
 
@@ -109,7 +111,7 @@ Git now tracks both your code and your data.
 - Save the file (**Ctrl+S** or **Cmd+S**)
 - Refresh the browser, load `heartatk4R.txt` again, and try the dropdown
 - In GitHub Desktop, type a commit message: `Add sex filter`
-- If it works, click **Commit to main**
+- If it works, click the blue commit button at the bottom (it reads like **Commit 1 file to main**)
 
 ## Step 9: View Your History
 
@@ -132,7 +134,7 @@ Separate files keep the project organized—and it's how real apps (including Re
 - Refresh the browser and load `heartatk4R.txt`—the dashboard should look exactly the same as before
 - In GitHub Desktop, you'll see `index.html` changed plus two new files (`style.css` and `app.js`)
 - Type a commit message: `Split into separate files`
-- Click **Commit to main**
+- Click the blue **Commit 3 files to main** button at the bottom
 
 ## Step 11: Create a Branch to Experiment
 
@@ -154,7 +156,7 @@ You're now working on a copy. Anything you do here won't affect `main`.
 - For each file it gives you: click that file in VS Code's Explorer, select all (**Ctrl+A**/**Cmd+A**), paste the new version over it, and save
 - Refresh the browser and load `heartatk4R.txt` again to see the chart
 - In GitHub Desktop, commit with the message: `Add death rate chart`
-- Click **Commit to add-chart**
+- Click the blue commit button at the bottom (it reads like **Commit 1 file to add-chart**)
 
 ## Step 13: Switch Back to main and See the Difference
 
@@ -172,7 +174,7 @@ If you like the chart and want to keep it:
 - Make sure you're on **main** (check the **Current Branch** button)
 - Click **Branch** in the menu bar → **Merge into Current Branch**
 - Select **add-chart**
-- Click **Merge add-chart into main**
+- Click **Create a merge commit** (older versions of GitHub Desktop call this button **Merge add-chart into main**)
 - Refresh the browser and load the data—the chart is now part of `main`
 
 ## Next Steps
@@ -188,7 +190,7 @@ If you like the chart and want to keep it:
 - **Dashboard looks plain or broken after splitting files** - Make sure `style.css` and `app.js` are in the same folder as `index.html`, named exactly, and that you saved all three (an unsaved file shows a dot ● next to its name in the VS Code tab).
 - **Numbers show `NaN`** - Tell ChatGPT: "Some values are NA and some numbers have leading zeros—skip NA and convert text to numbers."
 - **Double-clicking `index.html` opens the browser, not the editor** - That's expected—double-click is for testing. To edit, click the file in VS Code's Explorer panel instead.
-- **Switching branches asks about my changes** - Commit your changes first. If GitHub Desktop prompts when switching, choose **Leave my changes on the current branch**.
+- **Switching branches asks about my changes** - Commit your changes first. If GitHub Desktop prompts when switching, choose **Leave my changes on add-chart** (it shows your current branch name), then click **Switch branch**.
 
 ## Workflow Overview
 

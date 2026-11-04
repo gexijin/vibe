@@ -6,7 +6,7 @@ lang: "de"
 
 # Erste Schritte mit VS Code
 
-Sie möchten Code schreiben, aber Notepad oder TextEdit fühlt sich einschränkend an. Sie brauchen etwas, das Ihnen hilft, schneller zu programmieren – mit Syntax-Hervorhebung, Autovervollständigung und integrierten Tools. **VS Code ist wie ein intelligentes Notizbuch für Code** – es versteht, was Sie schreiben, und hilft Ihnen dabei. [Visual Studio Code](https://code.visualstudio.com) ist kostenlos, läuft auf jedem Betriebssystem und wird von Millionen von Entwicklern verwendet.
+Sie möchten Code schreiben, aber der **Editor** von Windows (Notepad) oder TextEdit wirkt einschränkend. Sie brauchen etwas, das Ihnen hilft, schneller zu programmieren – mit Syntax-Hervorhebung, Autovervollständigung und integrierten Tools. **VS Code ist wie ein intelligentes Notizbuch für Code** – es versteht, was Sie schreiben, und hilft Ihnen dabei. [Visual Studio Code](https://code.visualstudio.com) ist kostenlos, läuft auf jedem Betriebssystem und wird von Millionen von Entwicklern verwendet.
 
 ## Wichtige Konzepte
 
@@ -27,12 +27,12 @@ Sie möchten Code schreiben, aber Notepad oder TextEdit fühlt sich einschränke
 - Gehen Sie zu [code.visualstudio.com](https://code.visualstudio.com)
 - Klicken Sie auf die Schaltfläche **Download** (es erkennt Ihr Betriebssystem)
 - Führen Sie das Installationsprogramm aus:
-   - **Windows:** Doppelklicken Sie auf die `.exe`, klicken Sie durch die Eingabeaufforderungen auf **Weiter**
+   - **Windows:** Doppelklicken Sie auf die `.exe` und klicken Sie sich mit **Weiter** (Next) durch die Installationsschritte. Aktivieren Sie im Schritt **Zusätzliche Aufgaben auswählen** (Select Additional Tasks) außerdem die Option **Aktion "Mit Code öffnen" dem Verzeichniskontextmenü von Windows-Explorer hinzufügen** (englisch: **Add "Open with Code" action to Windows Explorer directory context menu**), damit Sie Projektordner später direkt aus dem Datei-Explorer öffnen können
    - **Mac:** Öffnen Sie die `.dmg`, ziehen Sie VS Code in **Programme**
    - **Linux:** Folgen Sie den Anweisungen für Ihren Paketmanager
 - Starten Sie VS Code
 
-Sie sehen einen Willkommen-Tab mit Optionen für den Einstieg.
+Sie sehen einen **Welcome**-Tab mit Optionen für den Einstieg.
 
 ## Schritt 2: Die Oberfläche erkunden
 
@@ -48,20 +48,20 @@ Klicken Sie auf das **Explorer**-Symbol (oben in der Aktivitätsleiste), um den 
 
 ## Schritt 3: Einen Ordner öffnen und erkunden
 
-- Klicken Sie auf **Datei** → **Ordner öffnen**
-- Navigieren Sie zu einem beliebigen vorhandenen Ordner auf Ihrem Computer (z.B. Dokumente)
-- Klicken Sie auf **Öffnen** (oder **Ordner auswählen**)
-- Wenn Sie gefragt werden „Vertrauen Sie den Autoren?", klicken Sie auf **Ja, ich vertraue den Autoren**
+- Klicken Sie auf **File** → **Open Folder**
+- Gehen Sie zu Ihrem Ordner **Dokumente** (Documents) und erstellen Sie einen neuen, leeren Übungsordner, z. B. `vscode_practice` (verwenden Sie dazu die Schaltfläche **Neuer Ordner** im Fenster)
+- Wählen Sie diesen neuen Ordner aus und klicken Sie dann auf **Öffnen** oder **Ordner auswählen** (englisch: **Open** / **Select Folder**)
+- Wenn Sie gefragt werden „Do you trust the authors?“, klicken Sie auf **Yes, I trust the authors**
 
 Die Explorer-Seitenleiste zeigt nun die Dateien Ihres Ordners:
 
-- Klicken Sie auf einen Ordner, um ihn zu erweitern
+- Klicken Sie auf einen Ordner, um ihn aufzuklappen
 - Klicken Sie auf eine beliebige Datei, um sie im Editor zu öffnen
-- Klicken Sie auf das **Suchen**-Symbol in der Aktivitätsleiste (Lupe), um über alle Dateien zu suchen
+- Klicken Sie auf das **Search**-Symbol in der Aktivitätsleiste (Lupe), um in allen Dateien zu suchen
 
 ## Schritt 4: Eine Markdown-Datei erstellen
 
-- Klicken Sie im Explorer auf das **Neue Datei**-Symbol (Seite mit +)
+- Bewegen Sie im Explorer die Maus über den Ordnernamen ganz oben und klicken Sie dann auf das **New File**-Symbol (Seite mit +), das dort erscheint
 - Nennen Sie sie `README.md`
 - Fügen Sie diesen Inhalt hinzu:
 
@@ -80,27 +80,27 @@ Dies ist ein **Demo-Projekt** zum Erlernen von VS Code.
 2. Andere Dateitypen ausprobieren
 3. Erweiterungen erkunden
 ```
-- Klicken Sie auf **Datei** → **Speichern** zum Speichern
+- Klicken Sie auf **File** → **Save** zum Speichern
 
 Markdown ist ein einfaches Textformat, das Symbole wie `#` für Überschriften, `**` für Fettschrift und `-` für Listen verwendet. Es wird häufig für Dokumentation und die Kommunikation mit LLMs wie ChatGPT und Claude verwendet.
 
 ## Schritt 5: Markdown-Vorschau-Erweiterung installieren
 
-- Klicken Sie auf das **Erweiterungen**-Symbol in der Aktivitätsleiste (das Quadrate-Symbol)
+- Klicken Sie auf das **Extensions**-Symbol in der Aktivitätsleiste (das Quadrate-Symbol)
 - Geben Sie `Markdown Preview Enhanced` in das Suchfeld ein
 - Finden Sie **Markdown Preview Enhanced** in den Ergebnissen
-- Klicken Sie auf **Installieren**
+- Klicken Sie auf **Install**
 
 ## Schritt 6: Ihre Markdown-Datei in der Vorschau anzeigen
 
 - Öffnen Sie `README.md`, falls noch nicht geöffnet
-- Klicken Sie mit der rechten Maustaste im Editor und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side**
+- Klicken Sie mit der rechten Maustaste in den Editor und wählen Sie **Markdown Preview Enhanced: Open Preview to the Side**
 
 Ein Vorschau-Panel öffnet sich und zeigt Ihr formatiertes Markdown – bearbeiten Sie links, sehen Sie Änderungen rechts in Echtzeit!
 
 ## Schritt 7: Das integrierte Terminal verwenden
 
-- Klicken Sie auf **Terminal** → **Neues Terminal**
+- Klicken Sie auf **Terminal** → **New Terminal**
 - Probieren Sie diese Befehle aus:
 
 **Dateien auflisten:**
@@ -124,30 +124,30 @@ Prüfen Sie den Explorer – der `notes`-Ordner erscheint! Das Terminal läuft i
 
 ## Schritt 8: KI-Agenten in VS Code verwenden (Optional)
 
-VS Code enthält [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/getting-started-chat), einen KI-Assistenten, der Code erklären, schreiben und debuggen kann.
+VS Code enthält [GitHub Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/copilot-chat), einen KI-Assistenten, der Code erklären, schreiben und debuggen kann.
 
 - Öffnen Sie die Datei `README.md` (oder eine andere Datei in Ihrem Projekt)
-- Klicken Sie in der Titelleiste auf **Chat** → **Chat öffnen** (oder drücken Sie `Strg+Alt+I` unter Windows/Linux, `Ctrl+Cmd+I` auf Mac)
+- Klicken Sie in der Titelleiste auf **Chat** → **Open Chat** (oder drücken Sie `Strg+Alt+I` unter Windows/Linux, `Ctrl+Cmd+I` auf Mac)
 - Wenn Sie dazu aufgefordert werden, melden Sie sich mit Ihrem **GitHub-Konto** an (ein kostenloser Plan ist verfügbar)
-- Geben Sie im Chat-Panel ein: „Erkläre diese Datei"
-- Drücken Sie **Eingabe**
+- Geben Sie im Chat-Panel ein: „Erkläre diese Datei“
+- Drücken Sie **Enter**
 
-GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es bitten, neuen Code zu schreiben, Fehler zu beheben oder Fragen zu beantworten wie „Wie füge ich weitere Funktionen hinzu?"
+GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es bitten, neuen Code zu schreiben, Fehler zu beheben oder Fragen zu beantworten wie „Wie füge ich weitere Funktionen hinzu?“
 
-**Tipp:** Für [Inline-Bearbeitung](https://code.visualstudio.com/docs/copilot/copilot-chat) markieren Sie Code in einer beliebigen Datei und drücken Sie `Strg+I` (Windows/Linux) oder `Cmd+I` (Mac), um Copilot zu bitten, nur diesen Abschnitt zu ändern, zu reparieren oder zu erklären.
+**Tipp:** Für [Inline-Bearbeitung](https://code.visualstudio.com/docs/chat/inline-chat) markieren Sie Code in einer beliebigen Datei und drücken Sie `Strg+I` (Windows/Linux) oder `Cmd+I` (Mac), um Copilot zu bitten, nur diesen Abschnitt zu ändern, zu reparieren oder zu erklären.
 
 ## So öffnen Sie Ihr Projekt erneut
 
 - Öffnen Sie VS Code aus dem Startmenü (Windows), Spotlight (Mac) oder Programme (Linux)
-- Klicken Sie auf **Datei** → **Zuletzt geöffnet** → wählen Sie Ihren Ordner
-- Oder klicken Sie auf **Datei** → **Ordner öffnen** und navigieren Sie dorthin
+- Klicken Sie auf **File** → **Open Recent** → wählen Sie Ihren Ordner
+- Oder klicken Sie auf **File** → **Open Folder** und navigieren Sie dorthin
 
 ## Fehlerbehebung
 
 - **Vorschau wird nicht angezeigt:** Stellen Sie sicher, dass die Markdown Preview Enhanced-Erweiterung installiert ist und Sie eine `.md`-Datei geöffnet haben
-- **Terminal zeigt falsches Verzeichnis:** Klicken Sie auf das Papierkorb-Symbol im Terminal-Panel, dann klicken Sie auf **Terminal** → **Neues Terminal**
-- **Chat-Menü nicht sichtbar:** GitHub Copilot Chat muss möglicherweise installiert werden – klicken Sie auf das **Erweiterungen**-Symbol, suchen Sie nach „GitHub Copilot Chat" und installieren Sie es
-- **Erweiterungen funktionieren nicht:** Klicken Sie auf **Ansicht** → **Befehlspalette**, geben Sie „reload window" ein und wählen Sie **Developer: Reload Window**
+- **Terminal zeigt falsches Verzeichnis:** Klicken Sie auf das Papierkorb-Symbol im Terminal-Panel, dann klicken Sie auf **Terminal** → **New Terminal**
+- **Chat-Menü nicht sichtbar:** Die KI-Funktionen sind möglicherweise ausgeschaltet. Öffnen Sie die **Settings** (Einstellungen; drücken Sie `Strg+,` unter Windows/Linux oder `Cmd+,` auf dem Mac), suchen Sie nach `disable AI features` und entfernen Sie das Häkchen. Bewegen Sie dann die Maus über das Copilot-Symbol in der Statusleiste (unten) und wählen Sie **Use AI Features**
+- **Erweiterungen funktionieren nicht:** Klicken Sie auf **View** → **Command Palette**, geben Sie „reload window“ ein und wählen Sie **Developer: Reload Window**
 
 ## Der komplette Workflow
 
@@ -162,8 +162,8 @@ GitHub Copilot analysiert Ihre Datei und erklärt, was sie tut. Sie können es b
 
 - **Andere Dateitypen ausprobieren:** Erstellen Sie `.html`-, `.css`-, `.js`- oder `.py`-Dateien und sehen Sie VS Codes Syntax-Hervorhebung
 - **KI-Funktionen erkunden:** Bitten Sie KI, Code zu schreiben, Fehler zu beheben oder Verbesserungen für Ihre Projekte vorzuschlagen
-- **Weitere Erweiterungen installieren:** Probieren Sie „Prettier" für Auto-Formatierung oder „GitLens" für Git-Funktionen
-- **Tastenkürzel lernen:** Klicken Sie auf **Hilfe** → **Tastenkombinationsreferenz**, um Ihren Workflow zu beschleunigen
+- **Weitere Erweiterungen installieren:** Probieren Sie „Prettier“ für Auto-Formatierung oder „GitLens“ für Git-Funktionen
+- **Tastenkürzel lernen:** Klicken Sie auf **Help** → **Keyboard Shortcuts Reference**, um Ihren Workflow zu beschleunigen
 
 ---
 

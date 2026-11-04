@@ -26,15 +26,14 @@ Diese Anleitung führt Sie Schritt für Schritt durch die Installation, mit deta
 
 - Einen Mac-Computer (macOS 13.0 Ventura oder neuer)
 - Internetverbindung
-- Administratorzugang auf Ihrem Computer
 - Claude Pro/Max-Abonnement oder API-Schlüssel
 - 5 - 10 Minuten
 
 ## Schritt 1: Terminal öffnen
 
-- Klicken Sie auf das **Launchpad**-Symbol in Ihrem Dock (das Symbol mit den bunten Quadraten)
-- Geben Sie `Terminal` in das Suchfeld oben ein
-- Klicken Sie auf **Terminal** (ein schwarzes quadratisches Symbol)
+- Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
+- Geben Sie `Terminal` ein
+- Drücken Sie die **Return**-Taste (oder klicken Sie in den Ergebnissen auf **Terminal**, ein schwarzes quadratisches Symbol)
 - Ein Terminal-Fenster öffnet sich mit einem blinkenden Cursor
 
 **Tipp:** Lassen Sie Terminal für die nächsten Schritte geöffnet.
@@ -47,12 +46,17 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 - Warten Sie, bis Claude Code installiert ist (1-2 Minuten)
-- Möglicherweise sehen Sie einige Fortschrittsmeldungen – das ist normal
+- Das Fenster zeigt während des Downloads möglicherweise keine Meldungen an – das ist normal, warten Sie einfach
 - Wenn die Installation abgeschlossen ist, schließen Sie Terminal und öffnen Sie es erneut. Überprüfen Sie dann durch Eingabe von:
    ```
    claude --version
    ```
 - Sie sollten die Versionsnummer von Claude Code sehen
+- Wenn stattdessen `zsh: command not found: claude` erscheint (Befehl nicht gefunden), führen Sie diese zwei Zeilen aus (sie teilen Ihrem Mac mit, wo Claude Code zu finden ist) und versuchen Sie dann `claude --version` noch einmal:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 **Alternative: Installation mit Homebrew**
 
@@ -71,13 +75,10 @@ brew install --cask claude-code
    ```
    claude
    ```
-- Claude versucht, einen Browser zu öffnen. Wenn er sich nicht automatisch öffnet, kopieren Sie die im Terminal angezeigte URL und fügen Sie sie in Ihren Browser ein.
+- Claude versucht, einen Browser zu öffnen. Wenn er sich nicht automatisch öffnet, drücken Sie die Taste **c**, um den Anmeldelink zu kopieren, und fügen Sie ihn dann in Ihren Browser ein.
 - Melden Sie sich bei Ihrem Claude.ai-Konto an (dies kann automatisch geschehen)
-- Klicken Sie auf **Authorize**
-- Klicken Sie auf **Copy Code**, wenn ein langer Code erscheint
-- Gehen Sie zurück zum Terminal-Fenster
-- Zum Einfügen im Terminal: Klicken Sie auf **Bearbeiten** in der Menüleiste, dann auf **Einfügen**
-- Sie sollten eine Erfolgsmeldung sehen
+- Klicken Sie auf **Authorize**. Der Browser sollte anzeigen, dass Sie angemeldet sind, und Terminal zeigt eine Erfolgsmeldung.
+- Nur wenn der Browser stattdessen einen langen Code anzeigt: Klicken Sie auf **Copy Code**, gehen Sie zurück zu Terminal, fügen Sie den Code bei **Paste code here if prompted** ein (**Command (⌘) + V**) und drücken Sie **Return**.
 - Folgen Sie den Anweisungen, um die Einrichtung abzuschließen
 
 ### Option B. Anthropic-API-Schlüssel verwenden
@@ -96,10 +97,11 @@ Wenn Sie einen Anthropic-API-Schlüssel anstelle eines Claude-Abonnements haben:
    ```
    Ersetzen Sie `your-api-key-here` durch Ihren tatsächlichen API-Schlüssel
 - Schließen Sie Terminal und öffnen Sie es erneut, damit die Änderungen wirksam werden
+- Starten Sie Claude Code, indem Sie `claude` eingeben. Beim ersten Mal fragt es, ob Sie den gefundenen API-Schlüssel verwenden möchten. Wählen Sie **Yes**. (Wenn Sie versehentlich **No** wählen, geben Sie `/config` ein und aktivieren Sie **Use custom API key**.)
 
 **Hinweis:** Wenn Sie einen älteren Mac mit bash anstelle von zsh verwenden, ersetzen Sie `~/.zshrc` durch `~/.bash_profile` im obigen Befehl.
 
-### Option C. OpenRouter API verwenden (kostenlos starten!)
+### Option C. OpenRouter API verwenden (Bezahlung nach Nutzung)
 
 OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sprachmodellen über einen einzigen API-Schlüssel bietet. Dies kann eine wirtschaftliche Möglichkeit sein, Claude Code zu nutzen, da Sie nur für die Nutzung bezahlen und aus Modellen verschiedener Preisklassen wählen können.
 
@@ -110,9 +112,9 @@ OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sp
    export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
    export ANTHROPIC_AUTH_TOKEN="your-openrouter-api-key"
    export ANTHROPIC_API_KEY=""
-   export ANTHROPIC_DEFAULT_SONNET_MODEL="openai/gpt-5.1-codex-max"
-   export ANTHROPIC_DEFAULT_OPUS_MODEL="openai/gpt-5.2-pro"
-   export ANTHROPIC_DEFAULT_HAIKU_MODEL="minimax/minimax-m2:exacto"
+   export ANTHROPIC_DEFAULT_SONNET_MODEL="~anthropic/claude-sonnet-latest"
+   export ANTHROPIC_DEFAULT_OPUS_MODEL="~anthropic/claude-opus-latest"
+   export ANTHROPIC_DEFAULT_HAIKU_MODEL="~anthropic/claude-haiku-latest"
    ```
 - Starten Sie Claude Code:
    ```
@@ -128,11 +130,13 @@ OpenRouter ist ein einheitliches API-Gateway, das Zugang zu über 500 großen Sp
    export ANTHROPIC_DEFAULT_SONNET_MODEL="model-provider/model-name"
    ```
 - Durchsuchen Sie verfügbare Modelle auf [openrouter.ai/models](https://openrouter.ai/models)
-- Das kostenlose Kontingent gibt Ihnen 50 API-Anfragen pro Tag
-- Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/guides/claude-code-integration)
+- Kostenlose Modelle (`:free`) sind auf 50 Anfragen pro Tag begrenzt – eine einzige Aufgabe in Claude Code kann diese schnell aufbrauchen
+- Die oben gezeigten Modelle sind kostenpflichtig – prüfen Sie ihre Preise unter [openrouter.ai/models](https://openrouter.ai/models), bevor Sie sie verwenden
+- Über OpenRouter funktioniert Claude Code nur mit Anthropic-Modellen garantiert
+- Weitere Details finden Sie im [offiziellen OpenRouter-Leitfaden](https://openrouter.ai/docs/cookbook/coding-agents/claude-code-integration)
 
 
-### Option D. Anthropic API über Azure Foundry verwenden
+### Option D. Anthropic API über Microsoft Foundry (Azure) verwenden
 
 Diese Option ist für Organisationen gedacht, die Azure-gehostete Claude-Modelle verwenden. Fügen Sie im Terminal-Fenster diesen Code ein, um Umgebungsvariablen zu definieren (vor dem Starten von Claude):
 ```
@@ -141,12 +145,15 @@ export CLAUDE_CODE_USE_FOUNDRY=1
 # Azure resource name
 export ANTHROPIC_FOUNDRY_RESOURCE=xxxx-eastus2
 # Set models to your resource's deployment names
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-5
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-5
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-8
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
 export ANTHROPIC_FOUNDRY_API_KEY=your_api_key
 ```
 
 **Hinweis:** Ersetzen Sie `xxxx-eastus2` durch Ihren Foundry-Ressourcennamen (verwenden Sie nicht die gesamte Basis-URL). Ersetzen Sie `your_api_key` durch Ihren vollständigen API-Schlüssel aus Ihrem Azure-Portal.
+
+Starten Sie dann Claude Code, indem Sie `claude` eingeben.
 
 ## Schritt 4: Claude Code testen
 
@@ -157,7 +164,7 @@ Sie sind fertig! So verwenden Sie Claude Code:
    claude
    ```
 - Es stellt Ihnen einige Fragen, bevor es bereit ist zum Chatten
-- Um zu testen, ob es funktioniert, stellen Sie eine allgemeine Frage wie „Erkläre mir Quantencomputing."
+- Um zu testen, ob es funktioniert, stellen Sie eine allgemeine Frage wie „Erkläre mir Quantencomputing.“
 
 ## Schritt 5: Zu Ihrem Projekt navigieren
 
@@ -183,9 +190,11 @@ Claude Code, das über den nativen Installer installiert wurde, aktualisiert sic
 
 - Geben Sie im Terminal ein:
    ```
-   sudo claude
+   claude update
    ```
 - Claude Code prüft auf Updates und installiert die neueste Version
+
+**Hinweis:** Verwenden Sie `sudo` nicht, um Claude Code auszuführen oder zu aktualisieren – dadurch können in Ihrem Ordner `~/.claude` Dateien entstehen, die root gehören und beim nächsten normalen Start von Claude Code Berechtigungsfehler verursachen.
 
 **Hinweis:** Homebrew-Installationen aktualisieren sich nicht automatisch. Führen Sie regelmäßig `brew upgrade claude-code` aus, um die neueste Version zu erhalten.
 
@@ -198,9 +207,9 @@ Claude Code, das über den nativen Installer installiert wurde, aktualisiert sic
 
 Nach dem Schließen von Terminal können Sie es so wieder öffnen:
 
-- Klicken Sie auf das **Launchpad**-Symbol in Ihrem Dock (das Symbol mit den bunten Quadraten)
-- Geben Sie `Terminal` in das Suchfeld oben ein
-- Klicken Sie auf **Terminal**
+- Drücken Sie **Command (⌘) + Leertaste**, um die Spotlight-Suche zu öffnen
+- Geben Sie `Terminal` ein
+- Drücken Sie die **Return**-Taste
 - Ein Terminal-Fenster öffnet sich
 
 ## Fehlerbehebung
@@ -221,7 +230,11 @@ Er überprüft Ihre Installation und meldet eventuelle Probleme.
 - Schließen Sie Terminal vollständig (klicken Sie auf **Terminal** in der Menüleiste, dann auf **Terminal beenden**)
 - Öffnen Sie Terminal erneut
 - Versuchen Sie `claude --version`, um zu prüfen, ob es installiert ist
-- Versuchen Sie, den Installationsbefehl erneut auszuführen: `curl -fsSL https://claude.ai/install.sh | bash`
+- Wenn weiterhin `command not found` erscheint, führen Sie diese zwei Zeilen aus und versuchen Sie dann `claude --version` noch einmal:
+   ```
+   echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
 
 ### Authentifizierung schlägt fehl
 - Stellen Sie sicher, dass Sie ein aktives Claude Pro/Max-Abonnement oder einen gültigen API-Schlüssel haben

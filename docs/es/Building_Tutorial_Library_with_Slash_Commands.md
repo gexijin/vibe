@@ -1,8 +1,10 @@
 ---
-title: "Cómo automaticé la documentación con prompts reutilizables"
+title: "Cómo Claude Code me ayudó a crear estos tutoriales"
 lang: "es"
 ---
-# Cómo automaticé la documentación con prompts reutilizables
+[Inicio](index.html)
+
+# Cómo Claude Code me ayudó a crear estos tutoriales
 
 A mediados de diciembre de 2025, pasé 2 horas tratando de ayudar a mi asistente de investigación a instalar Claude Code por Zoom. Me di cuenta de que alguien como ella necesita instrucciones específicas y prácticas, así que me propuse crear tutoriales completos para Claude Code. Mi objetivo: tutoriales prácticos y enfocados que guíen a principiantes completos a través de tareas reales paso a paso. Sin volcados de teoría. Sin manuales de referencia exhaustivos. Solo "haz esto, después esto, después esto" hasta lograr algo concreto.
 
@@ -74,7 +76,7 @@ Los tutoriales evolucionan. Los comandos cambian. Se añaden nuevas secciones. E
 
 La revisión de calidad es exhaustiva. Para japonés, verifica frases naturales (no palabra por palabra), nivel de cortesía apropiado (forma です/ます), uso correcto de partículas (は/が, を, に, で), y que no haya uso excesivo de katakana antinatural. Cuando actualicé los tutoriales en inglés, pude propagar rápidamente los cambios a todas las traducciones manteniendo la calidad del idioma.
 
-### Puliendo Traducciones para un Flujo Natural
+### Puliendo traducciones para un flujo natural
 
 Después de sincronizar las traducciones con los originales en inglés, añadí un paso final de pulido: editar cada documento traducido por sí solo para mejorar la calidad del lenguaje, sin comparar con el inglés. Este paso se enfoca puramente en hacer que el texto suene natural para hablantes nativos.
 
@@ -92,17 +94,17 @@ La combinación de comandos slash para flujos de trabajo estructurados y subagen
 
 ## Los resultados
 
-En menos de dos semanas, creé más de 20 tutoriales en inglés que cubren temas de principiante a intermedio, 81 tutoriales traducidos en 3 idiomas, calidad consistente mediante procesos de revisión automatizados, y documentación mantenible con herramientas de sincronización para traducciones.
+En menos de dos semanas, creé más de 20 tutoriales en inglés que cubren temas de principiante a intermedio, 81 tutoriales traducidos en cinco idiomas, calidad consistente mediante procesos de revisión automatizados, y documentación mantenible con herramientas de sincronización para traducciones.
 
 Todos los tutoriales siguen la misma estructura, estilo de escritura y convenciones de formato porque fueron generados por el mismo proceso sistemático.
 
 ## Lecciones clave
 
-- **Empieza manual, luego automatiza.** Haz la tarea manualmente primero, refina el proceso y luego pídele a Claude que lo guarde como un comando.
-- **Estructura los comandos como flujos de trabajo de múltiples fases.** Dile a Claude cómo pensar el problema, no solo qué hacer.
-- **Incorpora el control de calidad en el proceso.** Crea un comando de revisión junto con tu comando de generación.
-- **Haz los comandos colaborativos, no autónomos.** Incluye pasos de aprobación. Claude maneja las partes tediosas; tú tomas las decisiones estratégicas.
-- **Usa subagentes para procesamiento por lotes.** Al procesar muchos documentos, di explícitamente "Use subagents" en tu prompt. Presiona Shift+Tab primero para habilitar el modo de aceptación automática—los subagentes no pedirán permisos, haciendo el procesamiento paralelo más fluido.
+- **Empiece de forma manual y luego automatice.** Haga la tarea manualmente primero, refine el proceso y luego pídale a Claude que lo guarde como un comando.
+- **Estructure los comandos como flujos de trabajo de múltiples fases.** Dígale a Claude cómo pensar el problema, no solo qué hacer.
+- **Incorpore el control de calidad en el proceso.** Cree un comando de revisión junto con su comando de generación.
+- **Haga los comandos colaborativos, no autónomos.** Incluya pasos de aprobación. Claude maneja las partes tediosas; usted toma las decisiones estratégicas.
+- **Use subagentes para procesamiento por lotes.** Al procesar muchos documentos, diga explícitamente "Use subagents" en su prompt. Primero asegúrese de que la línea de estado muestre **accept edits on** o **auto mode on** (presione Shift+Tab para cambiar)—los subagentes usan el mismo modo, así que rara vez se detienen a pedir permiso, lo que hace el procesamiento paralelo mucho más fluido.
 
 ## Conclusión
 
@@ -110,13 +112,13 @@ Construir esta biblioteca de tutoriales me enseñó que la automatización no se
 
 Los comandos slash transformaron Claude Code de un asistente útil en una fábrica de documentación que trabaja bajo mi dirección, mantiene mis estándares y escala al tamaño de proyecto que necesite.
 
-Si tienes tareas de documentación repetitivas, no sigas haciéndolas manualmente. Construye el comando slash una vez y luego despliégalo docenas o cientos de veces.
+Si tiene tareas de documentación repetitivas, no siga haciéndolas manualmente. Construya el comando slash una vez y luego despliéguelo docenas o cientos de veces.
 
 Ese es el poder de la automatización sistemática.
 
 ---
 
-*¿Quieres ver los comandos slash que construí? Revisa la [carpeta de comandos](../assets/commands/). La biblioteca completa de tutoriales está disponible en el [sitio de documentación del proyecto](https://github.com/gexijin/vibe/tree/main/docs).*
+*¿Quiere ver los comandos slash que construí? Revise la [carpeta de comandos](https://github.com/gexijin/vibe/tree/main/docs/assets/commands). La biblioteca completa de tutoriales está disponible en el [sitio de documentación del proyecto](https://github.com/gexijin/vibe/tree/main/docs).*
 
 ---
 
@@ -125,10 +127,10 @@ Ese es el poder de la automatización sistemática.
 2. "Refleja que el comando /tutorial evolucionó primero a partir de prompts interactivos manuales."
 3. "Enfatiza mi estilo de tutorial: práctico, enfocado, paso a paso."
 4. "Añade que las traducciones al japonés llegaron primero sin comandos slash, y que Claude usó 8 subagentes en paralelo."
-5. "Añade que Claude escribió los comandos slash de traducción sin pautas específicas, y que 25 tutoriales fueron traducidos en 15 minutos usando subagentes."
+5. "Añade que Claude escribió los comandos slash de traducción sin pautas específicas, y el uso de subagentes."
 6. "Añade enlace a los comandos guardados en docs/assets/commands."
 7. "Reescribe con menos viñetas."
 8. "Lee realmente los comandos slash y añade detalles."
-9. "Resume nuestra interacción en cada turno. Añade una P.D. sobre cómo se generó este blog."
+9. "Resume nuestra interacción. Añade una P.D. sobre cómo se generó este blog."
 
 Creado por [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) el 15 de diciembre de 2025.

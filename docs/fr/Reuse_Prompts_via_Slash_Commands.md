@@ -6,9 +6,9 @@ lang: "fr"
 
 # Créer des Commandes Slash Personnalisées
 
-Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Comme créer des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
+Fatigué de taper les mêmes prompts détaillés encore et encore ? Les commandes slash personnalisées vous permettent de sauvegarder des instructions complexes sous forme de raccourcis réutilisables. Tout comme des raccourcis clavier pour vos tâches les plus fréquentes, les commandes slash transforment de longs prompts en commandes simples comme `/stock-report Apple` qui génèrent des rapports complets instantanément.
 
-Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer la Skill. Oui, Claude est très doué pour se prompter... lui-même.
+Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer la commande slash. Oui, Claude est très doué pour se prompter... lui-même.
 
 ## Concepts Clés
 
@@ -18,36 +18,37 @@ Le meilleur ? Nous utilisons Claude pour écrire le prompt détaillé et créer 
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir complété [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) ou [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
+- Avoir terminé [Configurer VS Code pour Claude Code sur Windows](./Claude_Code_in_VS_Code_Win.md) ou [Utiliser Claude Code depuis VS Code sur Mac](./Claude_Code_in_VS_Code_Mac.md)
 - Un sujet à rechercher (nous utiliserons les rapports boursiers comme exemple)
 - Un éditeur de texte tel que VS Code installé
 - 15-20 minutes
 
 ## Étape 1 : Créer un Dossier de Projet
 
-**Windows (WSL) :**
-- Ouvrez **Ubuntu** depuis le menu Démarrer
+**Windows (PowerShell) :**
+- Ouvrez **PowerShell** depuis le menu Démarrer
 - Tapez ces commandes :
-  ```bash
-  cd /mnt/c/Users/YOUR_USERNAME/Documents
-  mkdir test_claude
+  ```
+  cd ~\Documents
+  mkdir -Force test_claude
   cd test_claude
-   ```
-  Remplacez `YOUR_USERNAME` par votre nom d'utilisateur Windows
+  ```
 
 **Mac :**
 - Ouvrez **Terminal** (trouvez-le dans Applications > Utilitaires)
 - Tapez ces commandes :
   ```bash
   cd ~/Documents
-  mkdir test_claude
+  mkdir -p test_claude
   cd test_claude
   ```
 
+Si le dossier existe déjà, ces commandes le réutilisent simplement.
+
 ## Étape 2 : Démarrer Claude Code
 
-**Windows (WSL) :**
-- Toujours dans le terminal Ubuntu, tapez :
+**Windows (PowerShell) :**
+- Toujours dans PowerShell, tapez :
   ```
   claude
   ```
@@ -65,7 +66,7 @@ Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installatio
 Au lieu de créer manuellement des fichiers, laissez Claude faire le travail. Tapez ce prompt :
 
 ```
-Crée une commande slash appelée stock-report qui génère
+Crée une commande slash dans .claude/commands/ appelée stock-report qui génère
 des rapports sur les développements récents d'une entreprise identifiée par nom ou symbole boursier.
 Inclus :
 - Actualités produits ou services
@@ -73,8 +74,9 @@ Inclus :
 - Rapports financiers récents
 - Rapports d'analystes
 ```
-Lorsqu'on vous le demande, accordez à Claude la permission de créer le fichier.
+Si Claude demande la permission de créer le fichier, choisissez **Yes**.
 Claude créera un prompt détaillé et l'enregistrera sous `stock-report.md` dans le dossier `.claude/commands/`.
+(Si Claude l'a plutôt enregistré sous `.claude/skills/stock-report/SKILL.md`, cela fonctionne de la même manière. Ouvrez ce fichier dans les étapes suivantes.)
 
 **Remarque :** Nous utilisons le format Markdown partout : dans les prompts, les rapports et les commandes slash. Markdown est adapté à l'IA et peut être facilement modifié comme des fichiers texte brut.
 
@@ -84,8 +86,8 @@ Utilisez n'importe quel éditeur de texte pour ouvrir le fichier `stock-report.m
 
 Si vous avez VS Code installé (recommandé) :
 - Démarrez VS Code
-- Depuis **File**, choisissez **Open folder**, et sélectionnez le dossier de projet `Documents/test_claude`
-- Depuis l'explorateur de fichiers, naviguez vers `.claude/commands` et cliquez sur le fichier `stock-report.md` pour l'ouvrir
+- Depuis **File**, choisissez **Open Folder**, et sélectionnez le dossier de projet `Documents/test_claude`
+- Dans le panneau **Explorer** de VS Code (à gauche), naviguez vers `.claude/commands` et cliquez sur le fichier `stock-report.md` pour l'ouvrir
 
 Examinez le prompt et apportez des modifications aux instructions si vous le souhaitez.
 
@@ -97,7 +99,7 @@ Commencez par **quitter** la session Claude Code actuelle en appuyant sur **Ctrl
   ```
   claude
   ```
-Maintenant, testez votre nouvelle commande avec un vrai symbole boursier :
+Maintenant, testez votre nouvelle commande avec une vraie entreprise :
 
 ```
 /stock-report Apple
@@ -144,7 +146,7 @@ Claude génère le rapport et l'enregistre sous forme de fichier markdown nommé
 Vous pouvez demander à Claude de modifier les commandes slash :
 
 ```
-Révise la commande slash stock-report pour enregistrer le rapport sous forme de fichier html.
+Révise la commande slash stock-report pour enregistrer le rapport sous forme de fichier HTML.
 ```
 
 Claude met à jour le fichier de commande. Vous pouvez vérifier depuis l'éditeur.
@@ -162,11 +164,11 @@ Claude met à jour le fichier de commande. Vous pouvez vérifier depuis l'édite
   /stock-report AAPL
   ```
 
-Claude crée un fichier nommé quelque chose comme `Apple_2025-12-13.html`. Cliquez sur ce fichier depuis File Explorer sur Windows ou Mac pour l'ouvrir dans votre navigateur par défaut.
+Claude crée un fichier nommé quelque chose comme `Apple_2025-12-13.html`. Double-cliquez sur ce fichier dans l'**Explorateur de fichiers** (Windows) ou le **Finder** (Mac) pour l'ouvrir dans votre navigateur par défaut.
 
 ## Étape 11 : Réutiliser la Commande Slash (Optionnel)
 
-Le mot-clé `$ARGUMENTS` dans votre commande slash agit comme un paramètre fictif. Lorsque vous tapez `/stock-report AAPL`, Claude remplace `$ARGUMENTS` par `AAPL` avant d'exécuter le prompt.
+Le mot-clé `$ARGUMENTS` dans votre commande slash agit comme un paramètre fictif. Lorsque vous tapez `/stock-report AAPL`, Claude remplace `$ARGUMENTS` par `AAPL` avant d'exécuter le prompt. (Si votre fichier de commande ne contient pas `$ARGUMENTS`, Claude Code ajoute simplement ce que vous avez tapé à la fin du prompt, donc cela fonctionne quand même.)
 
 Essayez un autre symbole :
 
@@ -178,7 +180,7 @@ La même structure de commande recherche maintenant Tesla à la place.
 
 ## Étape 12 : Essayer une Autre Commande Slash (Optionnel)
 
-Si vous avez complété le tutoriel [Writing Research Paper](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
+Si vous avez terminé le tutoriel [Rédiger un article de recherche avec Claude Code](./Writing_Research_Paper_Claude_Code.md), vous devriez avoir une commande `/research-paper`. Testez-la sur un nouveau sujet.
 
 Commencez par effacer la mémoire de Claude pour repartir de zéro :
 
@@ -186,19 +188,19 @@ Commencez par effacer la mémoire de Claude pour repartir de zéro :
 /clear
 ```
 
-Ensuite, exécutez la commande research paper :
+Ensuite, exécutez la commande `/research-paper` :
 
 ```
-/research-paper AI in schools
+/research-paper L'IA à l'école
 ```
 
 Deux différences clés :
-- /research-paper a été créé à la fin d'une session en capturant l'interaction humaine, tandis que /stock-report est créé à partir de zéro.
+- La commande /research-paper a été créée à la fin d'une session en capturant l'interaction humaine, tandis que /stock-report a été créée de zéro.
 - /research-paper demande de manière interactive des entrées avant de rédiger un article.
 
 ## Prochaines Étapes
 
-Maintenant que vous comprenez les commandes slash, créez davantage de commandes personnalisées pour vos workflows :
+Maintenant que vous comprenez les commandes slash, créez davantage de commandes personnalisées pour vos flux de travail :
 
 - **Revue de code :** `/review-code` - Analyser le code pour les bugs et les améliorations
 - **Notes de réunion :** `/meeting-summary` - Générer des résumés de réunion structurés
@@ -207,15 +209,15 @@ Maintenant que vous comprenez les commandes slash, créez davantage de commandes
 ## Dépannage
 
 - **Commande non trouvée :** Redémarrez Claude Code pour recharger les commandes depuis `.claude/commands/`
-- **Arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
-- **Rapport incomplet :** Demandez à Claude de « continuer » ou « ajouter plus de détails à la section [nom de la section] »
+- **Les arguments ne fonctionnent pas :** Vérifiez que `$ARGUMENTS` est orthographié correctement dans le fichier de commande (sensible à la casse)
+- **Rapport incomplet :** Demandez à Claude : « continue » ou « ajoute plus de détails à la section [nom de la section] »
 
-## Aperçu du Workflow
+## Aperçu du Flux de Travail
 
 - **Les commandes slash personnalisées** font gagner du temps en transformant des prompts complexes en raccourcis simples
 - **Les arguments** rendent les commandes flexibles pour différentes entrées (symboles boursiers, sujets, fichiers)
 - **Claude construit les commandes** - Vous n'avez pas besoin d'écrire manuellement des fichiers Markdown ; décrivez simplement ce que vous voulez
-- **Les commandes sont réutilisables** - Une fois créées, utilisez-les à travers les projets et les sessions
+- **Les commandes sont réutilisables** - Une fois créées, utilisez-les dans chaque session de ce dossier de projet. Pour utiliser une commande dans tous vos projets, demandez à Claude de la déplacer dans votre dossier personnel `~/.claude/commands/`
 - **Combinez les commandes** - Construisez une bibliothèque de commandes spécialisées pour différentes tâches
 
 ---

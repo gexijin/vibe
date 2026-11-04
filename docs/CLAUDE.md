@@ -7,7 +7,8 @@ This repository contains comprehensive beginner-friendly tutorials for using Cla
 The tutorials follow a progression shown in the interactive graph on `index.html`. Here are the recommended sequences:
 
 ### Windows - Basic Path (Research & Writing)
-1. `Install_CLAUDE_Code_Win.md` - Install Claude Code via WSL
+0. `What_Is_Anthropic_And_Claude.md` - Intro to Anthropic and Claude (no install required)
+1. `Install_CLAUDE_Code_Win.md` - Install Claude Code natively via PowerShell (WSL optional)
 2. `Claude_Code_Basic_Operations.md` - Essential Claude Code operations
 3. `VS_Code_Getting_Started.md` - VS Code basics for beginners
 4. `Claude_Code_in_VS_Code_Win.md` - Connect VS Code to Claude Code
@@ -20,8 +21,10 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 **Alternative Windows paths:**
 - `Claude_Code_Git_Windows.md` - Local version control (branch from step 1)
 - `Claude_Code_WSL_RStudio_Windows.md` - Use RStudio with Claude Code (branch from step 1)
+- `Install_Claude_Desktop_App.md` - Optional: install the Claude Desktop chat app (not required for coding)
 
 ### Mac - Basic Path (Research & Writing)
+0. `What_Is_Anthropic_And_Claude.md` - Intro to Anthropic and Claude (no install required)
 1. `Install_Claude_Code_MacOS.md` - Install Claude Code on macOS
 2. `Claude_Code_Basic_Operations.md` - Essential Claude Code operations
 3. `VS_Code_Getting_Started.md` - VS Code basics for beginners
@@ -35,6 +38,7 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 **Alternative Mac paths:**
 - `Claude_Code_Git_Mac.md` - Local version control (branch from step 1)
 - `Claude_Code_RStudio_Mac.md` - Use RStudio with Claude Code (branch from step 1)
+- `Install_Claude_Desktop_App.md` - Optional: install the Claude Desktop chat app (not required for coding)
 
 ### R Coding Path
 **Main Path (Docker + VS Code):**
@@ -68,11 +72,28 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 **Alternative Python Path:**
 - **Claude Code + Python (Mac only):** Python in VS Code → `Claude_Code_Python_VS_Code_Mac.md`
 
+### Excel Coding Path
+**Main Path (VS Code, no Docker needed - Claude Code's xlsx skill runs directly):**
+1. Install Claude Code (`Install_CLAUDE_Code_Win.md` or `Install_Claude_Code_MacOS.md`)
+2. `VS_Code_Getting_Started.md` - VS Code basics
+3. `Excel_Coding_VS_Code_Guide.md` - Use Claude Code to create and edit spreadsheets in VS Code
+4. `Vibe_Coding_Excel_Guide.md` - Vibe coding a multi-sheet budget tracker with charts
+
+**Supporting Skills (branch from step 1):**
+- `Github_desktop.md` - Version control basics with GitHub Desktop
+- `GitHub_Desktop_Claude_Code_Workflow.md` - Integrated development workflow
+
 ## Content Overview
 
+### Introduction
+- `What_Is_Anthropic_And_Claude.md` - What Anthropic and Claude are, with a first hands-on chat
+
 ### Installation Guides
-- `Install_CLAUDE_Code_Win.md` - Windows installation via WSL2 with Ubuntu
+- `Install_CLAUDE_Code_Win.md` - Windows installation via native PowerShell (WSL2 optional)
 - `Install_Claude_Code_MacOS.md` - macOS installation with Terminal
+- `Install_Claude_Desktop_App.md` - Installing the Claude Desktop chat app (Windows and Mac, optional alternative to Claude Code)
+- `workshop_prep.md` - Workshop setup for Windows (Git, Docker Desktop, VS Code, Google Antigravity)
+- `workshop_prep_linux.md` - Workshop setup for Ubuntu Linux (same tools)
 
 ### VS Code Setup
 - `VS_Code_Getting_Started.md` - Complete VS Code basics for beginners
@@ -87,13 +108,15 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 - `Claude_Code_Git_Mac.md` - Git basics and local version control on Mac
 - `Github_desktop.md` - GitHub Desktop for beginners
 - `GitHub_Desktop_Claude_Code_Workflow.md` - Integrated Claude Code + GitHub workflow
+- `Git_Branching_GitHub_Desktop_Guide.md` - Branches and merging in GitHub Desktop while building a data dashboard
+- `React_First_App_Windows.md` - Building a first React dashboard on Windows
 
 ### R Coding Guides
 - `R_Coding_VS_Code_Guide.md` - R development environment in VS Code
 - `R_Coding_Docker_Guide.md` - R in Docker containers for reproducibility
 - `Vibe_Coding_R_Docker_Guide.md` - Building an NBA dashboard with Shiny
 - `Claude_Code_RStudio_Mac.md` - Claude Code integration with RStudio on Mac
-- `Claude_Code_WSL_RStudio_Windows.md` - Claude Code with RStudio on Windows via WSL
+- `Claude_Code_WSL_RStudio_Windows.md` - Claude Code with RStudio on Windows (PowerShell, WSL optional)
 - `Claude_Code_R_VS_Code_Mac.md` - Streamlined R coding in VS Code on Mac
 
 ### Python Coding Guides
@@ -102,11 +125,16 @@ The tutorials follow a progression shown in the interactive graph on `index.html
 - `Vibe_Coding_Python_Docker_Guide.md` - Building a Streamlit dashboard with vibe coding
 - `Claude_Code_Python_VS_Code_Mac.md` - Streamlined Python coding in VS Code on Mac
 
+### Excel Coding Guides
+- `Excel_Coding_VS_Code_Guide.md` - Creating and editing Excel spreadsheets with Claude Code in VS Code
+- `Vibe_Coding_Excel_Guide.md` - Building a multi-sheet budget tracker with charts using vibe coding
+
 ### Advanced Tutorials
 - `Create_Your_First_Claude_Skill.md` - Creating custom Claude Code skills
 - `Create_subagents.md` - Building specialized subagents for complex tasks
 - `Reuse_Prompts_via_Slash_Commands.md` - Creating reusable slash commands
 - `Medical_Research_Skill.md` - Using Claude Code for medical research
+- `Building_Tutorial_Library_with_Slash_Commands.md` - How slash commands were used to build this tutorial library
 
 ### Research & Writing Projects
 - `Writing_Research_Paper_Claude_Code.md` - Complete academic writing workflow
@@ -173,16 +201,16 @@ All tutorials follow these principles:
 
 ## Translations
 
-Complete translations are available in three languages:
+Translations live in one folder per language, using the same filenames as the English originals:
 
-### Japanese (`ja/`)
-All English tutorials have corresponding Japanese versions with the same filename structure.
+- German (`de/`)
+- Spanish (`es/`)
+- French (`fr/`)
+- Hindi (`hi/`)
+- Japanese (`ja/`)
+- Simplified Chinese (`zh/`)
 
-### Chinese (`zh/`)
-All English tutorials have corresponding Simplified Chinese versions with the same filename structure.
-
-### Spanish (`es/`)
-All English tutorials have corresponding Spanish versions with the same filename structure.
+A few newer English pages (for example `Git_Branching_GitHub_Desktop_Guide.md`, `React_First_App_Windows.md`, `workshop_prep.md` and `workshop_prep_linux.md`) are not translated into every language yet.
 
 Each translation folder includes:
 - All installation guides
@@ -209,18 +237,15 @@ docs/
 ├── _layouts/                               # HTML templates
 │   └── default.html
 ├── assets/                                 # Images and static files
-├── es/                                     # Spanish translations
-│   ├── index.html
-│   └── [all tutorials in Spanish]
-├── ja/                                     # Japanese translations
-│   ├── index.html
-│   └── [all tutorials in Japanese]
-├── zh/                                     # Chinese translations
-│   ├── index.html
-│   └── [all tutorials in Chinese]
+├── _data/                                  # Site data files
+├── de/ es/ fr/ hi/ ja/ zh/                 # Translations (each has its own index.html)
 │
+├── What_Is_Anthropic_And_Claude.md
 ├── Install_CLAUDE_Code_Win.md
 ├── Install_Claude_Code_MacOS.md
+├── Install_Claude_Desktop_App.md
+├── workshop_prep.md
+├── workshop_prep_linux.md
 ├── VS_Code_Getting_Started.md
 ├── Claude_Code_in_VS_Code_Win.md
 ├── Claude_Code_in_VS_Code_Mac.md
@@ -229,6 +254,8 @@ docs/
 ├── Claude_Code_Git_Mac.md
 ├── Github_desktop.md
 ├── GitHub_Desktop_Claude_Code_Workflow.md
+├── Git_Branching_GitHub_Desktop_Guide.md
+├── React_First_App_Windows.md
 │
 ├── R_Coding_VS_Code_Guide.md
 ├── R_Coding_Docker_Guide.md
@@ -242,10 +269,14 @@ docs/
 ├── Vibe_Coding_Python_Docker_Guide.md
 ├── Claude_Code_Python_VS_Code_Mac.md
 │
+├── Excel_Coding_VS_Code_Guide.md
+├── Vibe_Coding_Excel_Guide.md
+│
 ├── Create_Your_First_Claude_Skill.md
 ├── Create_subagents.md
 ├── Reuse_Prompts_via_Slash_Commands.md
 ├── Medical_Research_Skill.md
+├── Building_Tutorial_Library_with_Slash_Commands.md
 ├── Writing_Research_Paper_Claude_Code.md
 └── example_paper.md
 ```

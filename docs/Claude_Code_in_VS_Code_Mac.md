@@ -35,18 +35,7 @@ You've installed Claude Code on your Mac - now you want a visual editor to work 
 - Click **File** in the menu bar, then **New Folder**
 - Name the folder `test_claude`
 
-## Step 3: Log In
-
-Claude Code will first ask you to log in. Follow the instructions.
-
-1. Press Enter to open a browser window
-2. Log in or create an account with Anthropic
-3. Copy the code and paste it back in the terminal
-4. Press Enter
-
-You are now logged in. You only need to do this once.
-
-## Step 4: Open the Folder in VS Code
+## Step 3: Open the Folder in VS Code
 
 - In VS Code, click **File** in the menu bar, then **Open Folder**
 - Navigate to **Documents** and select the `test_claude` folder you created
@@ -55,7 +44,7 @@ You are now logged in. You only need to do this once.
 
 You should now see `TEST_CLAUDE` in the Explorer panel on the left side.
 
-## Step 5: Start Claude Code
+## Step 4: Start Claude Code and Log In
 
 - Open a new terminal: click **Terminal** in the menu bar, then **New Terminal**
 - A terminal panel appears at the bottom of VS Code
@@ -63,10 +52,13 @@ You should now see `TEST_CLAUDE` in the Explorer panel on the left side.
   ```
   claude
   ```
+- If Claude Code asks you to log in, follow the login steps in the [installation tutorial](./Install_Claude_Code_MacOS). Claude Code needs a paid Claude plan (such as Pro or Max) or an Anthropic Console account — the free plan doesn't include it.
 - You'll see a welcome message and the Claude Code prompt
 - Now you can use Claude Code while editing files in VS Code
 
-## Step 6: Test the Workflow
+**Note:** You only need to log in once — future sessions skip straight to the welcome message.
+
+## Step 5: Test the Workflow
 
 - In Claude Code, type:
 ```
@@ -74,7 +66,7 @@ Write a short article explaining why LLMs like to use Markdown format. Save it a
 ```
 - Claude Code creates the file - you'll see `article.md` appear in the Explorer panel on the left
 - Click on `article.md` in the Explorer to view it in the editor
-- To preview the formatted article: right-click on the `article.md` tab and select **Open Preview**
+- To preview the formatted article: right-click inside the `article.md` editor and select **Markdown Preview Enhanced: Open Preview to the Side** (the extension from [VS Code Basics](./VS_Code_Getting_Started)). If you don't have that extension, right-click the `article.md` tab and select **Open Preview** instead
 - You'll see the Markdown rendered with proper headings, bullet points, and formatting
 
 ## Reopening Claude in VS Code Later
@@ -91,7 +83,7 @@ VS Code remembers your recent folders, so Option A with Open Recent is usually t
 - Ask Claude Code to explain an existing codebase: "Explain what this project does"
 - Have Claude Code help you write new features: "Add a function that calculates the average of a list"
 - Use Claude Code to fix bugs: "This code gives an error, can you fix it?"
-- Try the Claude Code VS Code extension for a visual interface with inline diffs (search "Claude Code" in Extensions)
+- Try the Claude Code extension for a visual chat panel with inline diffs. Running `claude` in VS Code's terminal usually installs it for you (if not, search "Claude Code" in Extensions). Open any file, then click the Spark icon at the top-right of the editor
 
 ## Troubleshooting
 

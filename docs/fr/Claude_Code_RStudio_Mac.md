@@ -6,7 +6,7 @@ lang: "fr"
 
 # Utiliser Claude Code avec RStudio sur Mac
 
-Vous disposez de RStudio sur Mac pour exécuter du code R et de Claude Code pour l'assistance de codage assistée par IA. Ce tutoriel vous montre comment utiliser les deux outils ensemble sur les mêmes fichiers de projet. Vous allez créer un projet R, écrire du code manuellement, puis utiliser Claude Code depuis le Terminal pour l'améliorer avec des visualisations et des analyses, tout en gardant RStudio ouvert pour exécuter et tester votre code.
+Vous disposez de RStudio sur Mac pour exécuter du code R et de Claude Code pour une aide à la programmation par IA. Ce tutoriel vous montre comment utiliser les deux outils ensemble sur les mêmes fichiers de projet. Vous allez créer un projet R, écrire du code manuellement, puis utiliser Claude Code depuis le Terminal pour l'améliorer avec des visualisations et des analyses, tout en gardant RStudio ouvert pour exécuter et tester votre code.
 
 ## Concepts Clés
 
@@ -16,15 +16,15 @@ Vous disposez de RStudio sur Mac pour exécuter du code R et de Claude Code pour
 
 ## Ce Dont Vous Aurez Besoin
 
-- Avoir complété le guide [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS)
+- Avoir terminé le guide [Installer Claude Code sur Mac](./Install_Claude_Code_MacOS)
 - RStudio installé sur Mac
 - 20-30 minutes
 
 ## Étape 1 : Ouvrir RStudio sur Mac
 
-- Cliquez sur **Launchpad** dans votre Dock (l'icône en grille de points)
-- Tapez `RStudio` dans la zone de recherche
-- Cliquez sur **RStudio** pour l'ouvrir
+- Appuyez sur **Command (⌘) + Espace** pour ouvrir la recherche Spotlight
+- Tapez `RStudio`
+- Appuyez sur **Retour** pour l'ouvrir
 - La fenêtre RStudio s'ouvre avec plusieurs panneaux
 
 ## Étape 2 : Créer un Nouveau Projet R
@@ -59,13 +59,13 @@ summary(iris)
 ```
 
 - Cliquez sur **File > Save** pour enregistrer vos modifications (ou appuyez sur **Command (⌘) + S**)
-- Pour exécuter le code : surlignez toutes les lignes, puis cliquez sur le bouton **Run** (en haut à droite du panneau de script)
+- Pour exécuter le code : sélectionnez toutes les lignes, puis cliquez sur le bouton **Run** (en haut à droite du panneau de script)
 - Vous devriez voir le résultat dans le panneau Console montrant la structure et les statistiques du jeu de données
 
 ## Étape 5 : Ouvrir le Terminal
 
 - Ouvrez **Finder** et cliquez sur **Applications** dans la barre latérale gauche
-- Ouvrez le dossier **Utilities**
+- Ouvrez le dossier **Utilitaires** (Utilities)
 - Double-cliquez sur **Terminal**
 - La fenêtre Terminal s'ouvre
 
@@ -90,17 +90,17 @@ summary(iris)
   claude
   ```
 
-Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
+Connectez-vous avec votre abonnement Claude en suivant le [tutoriel d'installation](Install_Claude_Code_MacOS.md). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code. Si Claude Code vous demande si vous faites confiance aux fichiers de ce dossier, choisissez **Yes** et appuyez sur Entrée.
 
-## Étape 8 : Demander à Claude un Graphique de Dispersion
+## Étape 8 : Demander à Claude un Nuage de Points
 
 Si Claude Code est lent ou ne répond pas, attendez simplement qu'il s'initialise. Ensuite, tapez cette demande :
 
 ```
-Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
+Ajoute du code à iris.R pour créer un nuage de points de la longueur vs. largeur des sépales, coloré par espèce. Utilise ggplot2.
 ```
 - Claude Code va lire votre fichier `iris.R` et ajouter le code de visualisation
-- Lorsqu'on vous le demande, donnez à Claude la permission de modifier le fichier iris.R en sélectionnant l'option appropriée
+- Si Claude demande la permission de modifier `iris.R`, choisissez **Yes** (utilisez les touches fléchées, puis appuyez sur Entrée)
 - Attendez que Claude termine (vous verrez un message de confirmation)
 
 
@@ -108,12 +108,12 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 
 - Revenez à RStudio (cliquez sur la fenêtre RStudio ou appuyez sur **Command (⌘) + Tab**)
 - Vous verrez peut-être une invite indiquant que le fichier a changé - cliquez sur **Yes** pour recharger
-- Si aucune invite n'apparaît, cliquez sur **File > Reopen with Encoding > UTF-8**
-- Surlignez tout le code et cliquez sur **Run**
-- Un graphique de dispersion apparaît dans le panneau **Plots** (en bas à droite)
+- Si le nouveau code n'apparaît pas, cliquez sur **File > Reopen with Encoding...**, choisissez **UTF-8**, puis cliquez sur **OK**
+- Sélectionnez tout le code et cliquez sur **Run**
+- Un nuage de points apparaît dans le panneau **Plots** (en bas à droite)
 - Si vous obtenez une erreur concernant ggplot2, installez-le en tapant `install.packages("ggplot2")` dans le panneau Console
 
-## Étape 10 : Affiner le Graphique de Dispersion
+## Étape 10 : Affiner le Nuage de Points
 
 - Revenez au Terminal (appuyez sur **Command (⌘) + Tab** ou cliquez sur la fenêtre Terminal)
 - Tapez cette demande :
@@ -125,11 +125,11 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 
 - Revenez à RStudio
 - Rechargez le fichier si demandé
-- Surlignez le code mis à jour et cliquez sur **Run**
+- Sélectionnez le code mis à jour et cliquez sur **Run**
 - Le graphique devrait maintenant s'afficher sans titre, avec différentes formes de marqueurs pour chaque espèce, et utilisant le thème classique
 
 
-## Étape 12 : Demander à Claude un Graphique PCA
+## Étape 12 : Demander à Claude un Graphique d'ACP
 
 - Revenez au Terminal
 - Tapez cette demande :
@@ -137,12 +137,12 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
   Ajoute du code pour effectuer une ACP sur les variables numériques et tracer les échantillons en utilisant les deux premières composantes principales.
   ```
 
-## Étape 13 : Exécuter l'Analyse PCA
+## Étape 13 : Exécuter l'ACP
 
 - Revenez à RStudio
 - Rechargez le fichier si demandé
-- Surlignez tout le code et cliquez sur **Run**
-- Un graphique PCA apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
+- Sélectionnez tout le code et cliquez sur **Run**
+- Un graphique d'ACP apparaît montrant les échantillons projetés sur PC1 et PC2, colorés par espèce
 
 ## Étape 14 : Demander à Claude de Réviser et Commenter
 
@@ -160,7 +160,7 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
   ```
   Crée un nouveau fichier R Markdown pour cette analyse. Enregistre-le sous iris_report.Rmd
   ```
-- Claude vous demandera la permission de créer ce fichier
+- Si Claude demande la permission de créer ce fichier, choisissez **Yes**
 - Claude créera un nouveau fichier `.Rmd` dans votre dossier de projet
 
 
@@ -170,14 +170,15 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 - Cliquez sur **File > Open File...**
 - Sélectionnez `iris_report.Rmd` et cliquez sur **Open**
 - Cliquez sur le bouton **Knit** (avec une icône de pelote de laine) en haut du panneau de script
+- Si RStudio indique que des packages tels que **rmarkdown** sont nécessaires, cliquez sur **Install** (ou **Yes**) et attendez la fin de l'installation, puis cliquez à nouveau sur **Knit**
 - RStudio va générer un rapport HTML
 - Le rapport s'ouvre dans une nouvelle fenêtre montrant votre analyse complète avec du texte narratif
 - Le fichier HTML est enregistré dans votre dossier de projet
 
 ## Dépannage
 
-- **RStudio n'affiche pas les modifications du fichier** - Cliquez sur **File > Reopen with Encoding > UTF-8** pour recharger manuellement le fichier, ou fermez et rouvrez le fichier.
-- **"claude: command not found"** - Assurez-vous d'avoir complété le [guide d'installation](./Install_Claude_Code_MacOS). Essayez d'ouvrir une nouvelle fenêtre Terminal, ou fermez Terminal complètement (**Command (⌘) + Q**) et rouvrez-le.
+- **RStudio n'affiche pas les modifications du fichier** - Cliquez sur **File > Reopen with Encoding...**, choisissez **UTF-8**, puis cliquez sur **OK** pour recharger manuellement le fichier, ou fermez et rouvrez le fichier.
+- **"claude: command not found"** - Assurez-vous d'avoir terminé le [guide d'installation](./Install_Claude_Code_MacOS). Essayez d'ouvrir une nouvelle fenêtre Terminal, ou fermez Terminal complètement (**Command (⌘) + Q**) et rouvrez-le.
 - **Les graphiques n'apparaissent pas** - Assurez-vous que ggplot2 est installé. Exécutez `install.packages("ggplot2")` dans la Console RStudio si nécessaire.
 - **"No such file or directory"** - Vérifiez que vous avez tapé le chemin correctement à l'Étape 6. Essayez d'utiliser l'astuce glisser-déposer : glissez le dossier test_claude depuis Finder dans le Terminal après avoir tapé `cd ` (avec un espace).
 - **Claude Code est lent lors de la première demande** - Attendez 30-60 secondes pour que Claude s'initialise. Les demandes suivantes seront plus rapides.
@@ -187,13 +188,13 @@ Ajoute du code à iris.R pour créer un graphique de dispersion de la longueur v
 Raccourcis utiles pour basculer entre les applications :
 - **Command (⌘) + Tab** - Basculer rapidement entre les applications ouvertes
 - **Command (⌘) + `** (accent grave) - Basculer entre les fenêtres de la même application
-- **Command (⌘) + Space** - Ouvrir la recherche Spotlight (pour ouvrir des applications)
+- **Command (⌘) + Espace** - Ouvrir la recherche Spotlight (pour ouvrir des applications)
 - **Command (⌘) + Q** - Quitter complètement une application
 
 ## Prochaines Étapes
 
 - Essayez de demander à Claude d'ajouter des tests statistiques (tests t, ANOVA) à votre analyse
-- Demandez à Claude d'obtenir une **version Python** de ce code et de préparer un document Quarto
+- Demandez à Claude d'écrire une **version Python** de ce code et de préparer un document Quarto
 - Demandez à Claude de créer des fonctions pour les tâches répétitives dans vos scripts R
 - Utilisez Claude pour déboguer les messages d'erreur lorsque votre code R ne s'exécute pas
 - Explorez la possibilité de demander à Claude d'optimiser du code R lent pour de meilleures performances
@@ -208,8 +209,8 @@ Cette configuration hybride combine le meilleur des deux mondes :
 - **Raffinement itératif** - Commencez avec du code manuel, améliorez-le avec Claude, testez dans RStudio, puis affinez davantage
 - **Documentation** - Claude peut générer des rapports et des commentaires complets pour votre analyse
 
-Le flux de travail est simple : écrivez ou modifiez du code avec Claude dans le Terminal, puis testez-le et exécutez-le immédiatement dans RStudio. Aucune copie de fichiers ou synchronisation manuelle nécessaire—les deux applications accèdent aux mêmes fichiers de manière transparente sur votre Mac.
+Le flux de travail est simple : écrivez ou modifiez du code avec Claude dans le Terminal, puis testez-le et exécutez-le immédiatement dans RStudio. Aucune copie de fichiers ni synchronisation manuelle n'est nécessaire : les deux applications accèdent aux mêmes fichiers de manière transparente sur votre Mac.
 
 ---
 
-Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 11 décembre 2024.
+Créé par [Steven Ge](https://www.linkedin.com/in/steven-ge-ab016947/) le 11 décembre 2025.

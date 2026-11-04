@@ -1,14 +1,15 @@
 {
   "name": "R in Docker (AMD64)",
+
   "build": {
     "dockerfile": "Dockerfile"
   },
 
-# pass API keys and other environment variables to the container
-#  "runArgs": [
-#    "--env-file",
-#    ".devcontainer/api.env"
-#  ],
+  // Pass API keys and other environment variables to the container
+  // "runArgs": [
+  //   "--env-file",
+  //   ".devcontainer/api.env"
+  // ],
 
   "customizations": {
     "vscode": {
@@ -24,10 +25,15 @@
       }
     }
   },
-  
+
   "remoteUser": "shiny",
+
   "forwardPorts": [3838],
+
   "portsAttributes": {
-    "3838": { "label": "Shiny app", "onAutoForward": "openBrowser" }
+    "3838": {
+      "label": "Shiny app",
+      "onAutoForward": "openBrowser"
+    }
   }
 }

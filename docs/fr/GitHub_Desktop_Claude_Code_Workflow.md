@@ -26,7 +26,7 @@ Créer une application de minuteur simple avec Claude Code et suivre toutes les 
 - Créer un projet et une application de minuteur
 - Tester et corriger les erreurs
 - Committer et pousser les modifications
-- Supprimer les mauvaises modifications et réessayer
+- Abandonner les mauvaises modifications et réessayer
 - Laisser Claude automatiser les commits
 
 ## Ce Dont Vous Aurez Besoin
@@ -42,8 +42,9 @@ Créer une application de minuteur simple avec Claude Code et suivre toutes les 
 - Remplissez :
   - **Name :** `test_claude`
   - **Description :** `A timer app built with Claude Code`
-  - **Local Path :** dossier Documents
+  - **Local Path :** Cliquez sur **Choose...** et choisissez votre dossier **Documents** (par défaut, c'est un dossier `GitHub` à l'intérieur de Documents, donc modifiez-le)
   - **Cochez** "Initialize this repository with a README"
+- Si GitHub Desktop indique que le dossier « appears to be a Git repository » (semble être un dépôt Git), c'est que vous avez déjà un dossier `test_claude` créé lors du tutoriel Git. Renommez cet ancien dossier (par exemple en `test_claude_old`) dans l'Explorateur de fichiers ou le Finder, puis réessayez
 - Cliquez sur **Create Repository**
 - Cliquez sur **Publish repository** en haut
 - Cliquez sur **Publish Repository**
@@ -52,11 +53,12 @@ Vous avez maintenant un projet local et une sauvegarde cloud sur GitHub.
 
 ## Étape 2 : Demander à Claude de Créer l'Application de Minuteur
 
-- Ouvrez votre **terminal**
+- Ouvrez votre terminal : **PowerShell** sous Windows, **Terminal** sur Mac
 - Naviguez vers votre projet :
   ```
   cd ~/Documents/test_claude
   ```
+  Sous Windows, si vous voyez `Cannot find path`, votre dossier Documents est sauvegardé par OneDrive. Exécutez plutôt `cd ~/OneDrive/Documents/test_claude`
 - Démarrez Claude Code :
   ```
   claude
@@ -64,7 +66,8 @@ Vous avez maintenant un projet local et une sauvegarde cloud sur GitHub.
 
 Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installation ([Windows](Install_CLAUDE_Code_Win.md) | [Mac](Install_Claude_Code_MacOS.md)). Après vous être connecté, vous verrez un message de bienvenue et l'invite Claude Code.
 
-- Tapez cette requête :
+- Copiez et collez toute cette demande (coller garde toutes les lignes ensemble ; appuyer sur Entrée l'enverrait trop tôt) :
+
   ```
   Crée une application de minuteur simple dans un seul fichier appelé timer.html.
   Elle doit avoir :
@@ -72,7 +75,7 @@ Connectez-vous avec votre abonnement Claude en suivant le tutoriel d'installatio
   - Des boutons Démarrer et Arrêter
   - Un affichage montrant le temps restant au format MM:SS
   - Quand le minuteur atteint zéro, afficher « Le temps est écoulé ! »
-  Garde ça simple avec CSS et JavaScript en ligne.
+  Garde ça simple, avec le CSS et le JavaScript directement dans le fichier.
   ```
 
 Claude crée le fichier `timer.html` (prend 10-30 secondes).
@@ -83,22 +86,23 @@ Claude crée le fichier `timer.html` (prend 10-30 secondes).
 - **Double-cliquez** sur `timer.html` pour l'ouvrir dans votre navigateur
 - Essayez le minuteur :
   - Tapez `1` dans le champ de saisie
-  - Cliquez sur **Start**
+  - Cliquez sur **Démarrer**
   - Observez le compte à rebours
 
 **Si cela fonctionne :** Passez à l'Étape 5.
+
 **Si quelque chose est cassé :** Continuez à l'Étape 4.
 
 ## Étape 4 : Corriger les Erreurs (Si Nécessaire)
 
-- Ouvrez la console du navigateur (clic droit sur la page → **Inspect** → onglet **Console**)
+- Ouvrez la console du navigateur (clic droit sur la page → **Inspecter** → onglet **Console**)
 - Copiez tous les messages d'erreur en rouge
 - Retournez à Claude Code dans votre terminal
 - Collez l'erreur :
   ```
   Je vois cette erreur : [collez l'erreur]. Peux-tu la corriger ?
   ```
-- Actualisez le navigateur (cliquez sur le bouton de rechargement ou clic droit → **Reload**) et testez à nouveau
+- Actualisez le navigateur (cliquez sur le bouton de rechargement ou clic droit → **Actualiser**) et testez à nouveau
 
 ## Étape 5 : Examiner les Modifications
 
@@ -115,7 +119,7 @@ Examinez toujours le code généré par l'IA avant de committer.
   ```
   Create initial timer app with start/stop functionality
   ```
-- Cliquez sur **Commit to main**
+- Cliquez sur le bouton bleu de commit en bas (son libellé ressemble à **Commit 1 file to main**)
 
 Vous avez créé un point de sauvegarde !
 
@@ -136,17 +140,17 @@ Votre code est maintenant sauvegardé dans le cloud.
   Ajoute une notification sonore quand le minuteur atteint zéro. Utilise le
   bip intégré du navigateur ou crée une alerte audio simple.
   ```
-- Testez : Actualisez le navigateur, réglez le minuteur sur 0.1 minutes, cliquez sur Start
+- Testez : Actualisez le navigateur, réglez le minuteur sur 1 minute, cliquez sur **Démarrer**
 
 **Pour ce tutoriel :** Faites semblant que le son ne fonctionne pas bien. Ne committez pas encore !
 
-## Étape 9 : Supprimer les Mauvaises Modifications
+## Étape 9 : Abandonner les Mauvaises Modifications
 
-  Parfois l'IA nous met sur la mauvaise voie et nous devons recommencer depuis notre dernier commit (point de sauvegarde).
+Parfois l'IA nous met sur la mauvaise voie, et nous devons recommencer depuis notre dernier commit (point de sauvegarde).
 
 - Ouvrez **GitHub Desktop**
 - Cliquez sur le menu **Branch** → **Discard All Changes**
-- Cliquez sur **Discard Changes** pour confirmer
+- Cliquez sur **Discard All Changes** pour confirmer
 - Actualisez le navigateur - le minuteur fonctionne sans le son !
 
 Vous venez de jeter le code défectueux et de revenir à votre dernier point de sauvegarde.
@@ -159,29 +163,32 @@ Vous venez de jeter le code défectueux et de revenir à votre dernier point de 
   élément audio HTML5 avec un simple bip généré par l'API Web Audio. Assure-toi
   de gérer correctement les restrictions de lecture automatique du navigateur.
   ```
-- Testez immédiatement (actualisez le navigateur, réglez sur 0.1 minutes, Start)
+- Testez immédiatement (actualisez le navigateur, réglez sur 1 minute, **Démarrer**)
 
 **Si cela fonctionne :** Continuez à l'Étape 11.
+
 **Sinon :** Collez l'erreur à Claude ou réessayez.
 
 ## Étape 11 : Laisser Claude Committer et Pousser
 
 - Dans Claude Code :
   ```
-  Commit et pousse mes modifications
+  Fais un commit et pousse mes modifications
   ```
 
 Claude va vérifier les modifications, écrire un message de commit, committer et pousser (10-20 secondes).
 
-**Quand utiliser :**
+**Si Claude indique que le push a échoué** (par exemple `could not read Username`, ou `git` n'est pas reconnu) : passez à **GitHub Desktop**. S'il affiche encore des fichiers modifiés, committez-les vous-même (comme à l'Étape 6). Cliquez ensuite sur **Push origin** en haut — GitHub Desktop est déjà connecté à GitHub.
+
+**Quand utiliser chaque méthode :**
 - Commits manuels : Lorsque vous apprenez ou voulez le contrôle
-- Commits Claude : Lorsque vous travaillez rapidement et voulez de bons messages
+- Commits par Claude : Lorsque vous travaillez rapidement et voulez de bons messages
 
 ## Étape 12 : Demander à Claude de Résumer les Modifications
 
 - Dans Claude Code :
   ```
-  Quels fichiers ai-je modifiés ?
+  Qu'est-ce que mon dernier commit a modifié ?
   ```
 
 Claude explique vos modifications en langage simple.
@@ -192,42 +199,42 @@ Claude explique vos modifications en langage simple.
 
 - Dans **GitHub Desktop**, cliquez sur l'onglet **History**
 
-Vous verrez :
-- Commit initial (README)
-- Create initial timer app
-- Add improved sound notification
+Vous verrez (le plus récent en haut) :
+- Le commit de Claude pour la notification sonore (sa formulation variera)
+- Create initial timer app with start/stop functionality
+- Initial commit
 
-Remarquez que la première tentative de son ratée n'est pas là - vous l'avez supprimée ! Seul le code fonctionnel a été inclus dans vos commits.
+Remarquez que la première tentative ratée pour le son n'est pas là - vous l'avez abandonnée ! Seul le code fonctionnel a été inclus dans vos commits.
 
 ## Défis
 - Son personnalisé : Téléchargez un .mp3 gratuit depuis [freesound.org](https://freesound.org), placez-le dans votre dossier de projet, demandez à Claude de l'utiliser
 - Minuteurs multiples : « Permets aux utilisateurs de créer et exécuter plusieurs minuteurs simultanément »
 - Barre de progression : « Ajoute une barre de progression qui montre visuellement combien de temps il reste »
 
-**Rappelez-vous :** Testez après chaque fonctionnalité, committez après chaque succès, supprimez les échecs.
+**Rappelez-vous :** Testez après chaque fonctionnalité, committez après chaque succès, abandonnez les échecs.
 
 **Consultez votre projet sur GitHub.com :** Cliquez sur **Repository** → **View on GitHub** dans GitHub Desktop pour voir votre historique complet des commits et votre code en ligne.
 
 ## Dépannage
 
-**"Authentication failed" :** GitHub Desktop → File/Preferences → Accounts → Déconnectez-vous et reconnectez-vous
+**"Authentication failed" :** Dans GitHub Desktop, ouvrez **File → Options → Accounts** (Windows) ou **GitHub Desktop → Settings → Accounts** (Mac), puis déconnectez-vous et reconnectez-vous
 
 **Claude dit "not a git repository" :** Assurez-vous d'être dans le bon dossier (`cd ~/Documents/test_claude`)
 
-**Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit → **Inspect** → **Console**), copiez les erreurs, collez-les à Claude
+**Le minuteur ne fonctionne pas :** Ouvrez la console du navigateur (clic droit → **Inspecter** → **Console**), copiez les erreurs, collez-les à Claude
 
-**Besoin d'aide ?** [Documentation GitHub Desktop](https://docs.github.com/en/desktop) • [Documentation Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+**Besoin d'aide ?** [Documentation GitHub Desktop](https://docs.github.com/en/desktop) • [Documentation Claude Code](https://code.claude.com/docs)
 
 ## Le Flux de Travail Complet
 
 - Demandez à Claude de faire des modifications
 - Testez dans le navigateur
 - Si cela fonctionne → Examinez et committez
-- Si cela échoue → Supprimez et réessayez
+- Si cela échoue → Abandonnez et réessayez
 - Poussez vers GitHub
 - Répétez
 
-Commits manuels quand vous voulez le contrôle. Commits Claude quand vous voulez la rapidité. Supprimez sans crainte - ne committez que le code fonctionnel !
+Commits manuels quand vous voulez le contrôle. Commits Claude quand vous voulez la rapidité. Abandonnez sans crainte - ne committez que le code fonctionnel !
 
 ## Prochaines Étapes
 

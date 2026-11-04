@@ -6,18 +6,18 @@ lang: "fr"
 
 # Premiers Pas avec le Contrôle de Version
 
-Vous travaillez sur un projet et effectuez des modifications qui brisent tout. Vous ne vous souvenez plus de ce que vous avez changé, et vous souhaitez revenir au moment où tout fonctionnait. Le contrôle de version est comme des points de sauvegarde dans un jeu vidéo—chaque fois que vous « committez » votre travail, vous créez un point de restauration auquel vous pouvez toujours revenir. [GitHub](https://github.com) stocke vos points de sauvegarde dans le cloud, de sorte que votre code soit sauvegardé en toute sécurité et accessible depuis n'importe quel ordinateur.
+Vous travaillez sur un projet et effectuez des modifications qui cassent tout. Vous ne vous souvenez plus de ce que vous avez changé, et vous souhaitez revenir au moment où tout fonctionnait. Le contrôle de version est comme des points de sauvegarde dans un jeu vidéo—chaque fois que vous « committez » votre travail, vous créez un point de restauration auquel vous pouvez toujours revenir. [GitHub](https://github.com) stocke vos points de sauvegarde dans le cloud, de sorte que votre code soit sauvegardé en toute sécurité et accessible depuis n'importe quel ordinateur.
 
 ## Concepts Clés
 
 - **Git** - Logiciel de contrôle de version qui suit les modifications apportées à vos fichiers sur votre ordinateur
 - **GitHub** - Site web qui stocke votre code dans le cloud, comme Google Drive pour le code
 - **GitHub Desktop** - Application qui facilite l'utilisation de Git avec des boutons au lieu de commandes
-- **Repository (repo)** - Un dossier de projet qui suit toutes vos modifications
+- **Dépôt (repository, ou repo)** - Un dossier de projet qui suit toutes vos modifications
 
 ## Ce Dont Vous Aurez Besoin
 
-- Ordinateur Windows, macOS ou Linux
+- Un ordinateur Windows ou Mac (GitHub Desktop ne fonctionne pas sous Linux)
 - Connexion Internet
 - Adresse e-mail pour créer un compte GitHub
 - 15 à 20 minutes
@@ -49,13 +49,14 @@ Vous travaillez sur un projet et effectuez des modifications qui brisent tout. V
 
 - Ouvrez GitHub Desktop
 - Cliquez sur **Sign in to GitHub.com**
-- Votre navigateur s'ouvre—cliquez sur **Authorize desktop**
+- Votre navigateur s'ouvre—connectez-vous si on vous le demande, puis cliquez sur **Authorize desktop**
+- Si votre navigateur demande d'ouvrir **GitHub Desktop**, cliquez sur **Open** (ou **Allow**)
 - Revenez à GitHub Desktop
 - Cliquez sur **Finish** pour terminer la configuration
 
-## Étape 4 : Créer Votre Premier Repository
+## Étape 4 : Créer Votre Premier Dépôt
 
-- Dans GitHub Desktop, cliquez sur **Create a New Repository on your Hard Drive**
+- Dans GitHub Desktop, cliquez sur **Create a New Repository on your Local Drive**
 - Remplissez le formulaire :
   - **Name :** `my-first-project` (ou tout nom qui vous plaît)
   - **Description :** `Learning version control` (optionnel)
@@ -72,7 +73,7 @@ Vous travaillez sur un projet et effectuez des modifications qui brisent tout. V
 
 ## Étape 6 : Effectuer Votre Première Modification
 
-- Ouvrez `README.md` dans n'importe quel éditeur de texte (Notepad, TextEdit ou VS Code)
+- Ouvrez `README.md` dans n'importe quel éditeur de texte (Bloc-notes, TextEdit ou VS Code)
 - Remplacez le contenu par :
   ```
   # My First Project
@@ -86,14 +87,14 @@ Vous travaillez sur un projet et effectuez des modifications qui brisent tout. V
   - Create save points (commits)
   - Back up my work to GitHub
   ```
-- Cliquez sur **File** → **Save**
+- Cliquez sur **Fichier** → **Enregistrer** (dans VS Code : **File** → **Save**)
 
 ## Étape 7 : Créer Votre Premier Commit (Point de Sauvegarde)
 
 - Revenez à GitHub Desktop
 - Vous verrez vos modifications surlignées sur le côté droit (vert = ajouté, rouge = supprimé)
 - En bas à gauche, saisissez un message de commit : `Updated README with project description`
-- Cliquez sur le bouton bleu **Commit to main**
+- Cliquez sur le bouton bleu **Commit 1 file to main** (le nombre correspond au nombre de fichiers que vous avez modifiés)
 
 ## Étape 8 : Push vers GitHub (Sauvegarder dans le Cloud)
 
@@ -113,14 +114,14 @@ Votre code est maintenant sauvegardé en ligne à l'adresse : `https://github.co
 ## Dépannage
 
 - **Impossible de se connecter à GitHub** - Vérifiez votre connexion Internet. Essayez d'abord de vous connecter sur github.com pour vérifier que vos identifiants fonctionnent.
-- **Les modifications n'apparaissent pas dans GitHub Desktop** - Assurez-vous d'avoir enregistré vos fichiers. Cliquez sur **Repository** → **Refresh** ou redémarrez GitHub Desktop.
-- **Le push échoue avec une erreur « rejected »** - Quelqu'un d'autre a poussé des modifications. Cliquez d'abord sur **Fetch origin**, puis réessayez de pousser.
+- **Les modifications n'apparaissent pas dans GitHub Desktop** - Assurez-vous d'avoir enregistré vos fichiers. Cliquez sur une autre application puis revenez sur GitHub Desktop, ou redémarrez GitHub Desktop.
+- **Le push échoue avec une erreur « rejected »** - Quelqu'un d'autre a poussé des modifications. Cliquez sur **Fetch origin**, puis sur **Pull origin**, puis cliquez à nouveau sur **Push origin**.
 
 ## Aperçu du Flux de Travail
 
 - Effectuez des modifications dans les fichiers de votre projet
 - Examinez les modifications dans GitHub Desktop (vert = ajouté, rouge = supprimé)
-- Rédigez un message de commit descriptif et cliquez sur **Commit to main**
+- Rédigez un message de commit descriptif et cliquez sur le bouton bleu de commit en bas (il affiche par exemple **Commit 1 file to main**)
 - Cliquez sur **Push origin** pour sauvegarder sur GitHub
 - Répétez
 

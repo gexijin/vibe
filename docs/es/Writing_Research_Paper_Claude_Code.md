@@ -12,21 +12,21 @@ Aprenda a escribir artículos de investigación utilizando Claude Code como asis
 
 - **Flujo de trabajo** - Investigación → Lluvia de ideas → Investigación enfocada → Esquema → Borrador → Revisión manual → Pulir con IA → Agregar resumen → Mejorar título → Verificar referencias → Corrección con IA
 - **Asistente de IA** - Usted toma las decisiones importantes mientras la IA realiza el trabajo repetitivo
-- **Claude Code** - Sistema de IA que busca información en la web, organiza la investigación y redacta contenido mediante instrucciones en lenguaje natural
-- **Slash command** - Comando personalizado que puede reutilizarse en Claude Code para automatizar flujos de trabajo
+- **Claude Code** - Sistema de IA agéntico que busca información en la web, organiza la investigación y redacta contenido mediante instrucciones en lenguaje natural
+- **Slash command** - Un prompt personalizado y detallado que puede reutilizarse en Claude Code
 
 ## Lo Que Necesitará
 
-- Haber completado [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win) o [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac)
+- Haber completado [Configure VS Code para Claude Code en Windows](./Claude_Code_in_VS_Code_Win.md) o [Use Claude Code desde VS Code en Mac](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 minutos
 
 ## Paso 1: Crear una Carpeta de Proyecto
 
 Cree una carpeta para su artículo de investigación:
 
-- Abra **File Explorer** (Windows) o **Finder** (Mac)
+- Abra el **Explorador de archivos** (Windows) o **Finder** (Mac)
 - Navegue a **Documentos**
-- Cree una nueva carpeta llamada `test_claude`
+- Cree una nueva carpeta llamada `test_claude` (si ya la creó en un tutorial anterior, simplemente use esa carpeta)
 
 Todo el trabajo de este proyecto se realizará en esta carpeta.
 
@@ -36,11 +36,6 @@ Para Windows:
 - Escriba `Visual Studio Code` o `VS Code` en el cuadro de búsqueda
 - Haga clic en **Visual Studio Code** cuando aparezca en los resultados de búsqueda
 - VS Code se abre con una pestaña de Bienvenida - puede cerrar esta pestaña
-- Mire la esquina inferior izquierda de VS Code - verá un icono azul o verde
-- Haga clic en este icono para abrir el menú de conexión remota
-- Seleccione **Connect to WSL** del menú
-- VS Code se recargará y se conectará a su instalación de Ubuntu
-- La esquina inferior izquierda ahora debería mostrar **WSL: Ubuntu**
 
 Para Mac:
 - Abra **Finder** y vaya a **Aplicaciones**
@@ -49,26 +44,21 @@ Para Mac:
 - VS Code se abre con una pestaña de Bienvenida - puede cerrar esta pestaña
 
 ## Paso 3: Abrir la Carpeta en VS Code
-Para Windows vía WSL:
-- En VS Code (todavía conectado a WSL), haga clic en **File** en la barra de menú, luego en **Open Folder**
-- Aparece un menú desplegable **Open Folder** en el centro superior
-- Encuentre su carpeta escribiendo:
-  ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  ```
-  Reemplace `YOUR_USERNAME` con su nombre de usuario de Windows (por ejemplo, `John.Smith`)
-- Haga clic en **OK**. VS Code se recarga con su carpeta `test_claude`
-
+Para Windows:
+- Haga clic en **File** en la barra de menú, luego en **Open Folder**
+- Navegue hasta la carpeta `test_claude` en **Documentos** y selecciónela
+- Haga clic en **Select Folder**. VS Code se recarga con su carpeta `test_claude`
+- Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
 Para Mac:
 - En VS Code, haga clic en **File** en la barra de menú, luego en **Open Folder**
 - Navegue y seleccione la carpeta `test_claude`
-- Haga clic en **Open** (Mac) o **OK** (Windows)
+- Haga clic en **Open**
 - Si se le pregunta "Do you trust the authors?", haga clic en **Yes, I trust the authors**
 
 ## Paso 4: Iniciar Claude Code
 
-- Abra un terminal: haga clic en **Terminal** en el menú principal de VS Code, luego en **New Terminal**
+- Abra una terminal: haga clic en **Terminal** en el menú principal de VS Code, luego en **New Terminal**
 - En el panel de terminal, escriba:
   ```
   claude
@@ -82,7 +72,7 @@ Pídale a Claude que investigue su tema. Copie y pegue este prompt en Claude Cod
 
 ```
 Estoy escribiendo un artículo de investigación de aproximadamente 1,000 palabras sobre la adopción de IA en el lugar de trabajo.
-Busca datos recientes (2023-2025) sobre:
+Busca datos recientes (de los últimos dos años) sobre:
 - Ganancias de productividad con herramientas de IA
 - Preocupaciones sobre desplazamiento laboral y estadísticas
 - Casos de estudio reales de empresas
@@ -107,9 +97,9 @@ Revise el resumen para obtener una visión general rápida del panorama de inves
 ## Paso 6: Leer las Fuentes
 Lea el documento de investigación y haga clic en las fuentes originales para verificar la información:
 
-1. Haga clic en `general_research.md` en el panel Explorer a la izquierda
-2. Previsualice el documento formateado: haga clic derecho en la pestaña `general_research.md` y seleccione **Open Preview**
-3. Haga clic en los enlaces de las fuentes para leer los artículos y estudios originales
+- Haga clic en `general_research.md` en el panel Explorer a la izquierda
+- Previsualice el documento formateado: haga clic derecho dentro del editor y seleccione **Markdown Preview Enhanced: Open Preview to the Side** (o, si no tiene esa extensión, haga clic derecho en la pestaña `general_research.md` y seleccione **Open Preview**)
+- Haga clic en los enlaces de las fuentes para leer los artículos y estudios originales
 
 ## Paso 7: Lluvia de Ideas Sobre Su Enfoque
 
@@ -142,7 +132,7 @@ enfocada y mi enfoque elegido. Usa viñetas para el flujo narrativo.
 Guarda como outlines.md
 ```
 
-Revise el esquema y pídale a Claude que lo ajuste según sea necesario (por ejemplo, "Haz que la sección 2 se enfoque más en casos de estudio" o "Agrega una sección sobre limitaciones").
+Revise los esquemas en `outlines.md` y pídale a Claude que lo ajuste según sea necesario (por ejemplo, "Haz que la sección 2 se enfoque más en casos de estudio" o "Agrega una sección sobre limitaciones").
 
 ## Paso 10: Redactar el Artículo
 
@@ -242,7 +232,7 @@ Haz una corrección final del artículo:
 
 Revise los cambios realizados por Claude.
 
-**Exportar a Word:** En VS Code, haga clic derecho en la pestaña `paper.md` y seleccione **Open Preview**. Haga clic dentro del panel de vista previa, luego haga clic en **Edit > Select All** y **Edit > Copy**. Pegue en Microsoft Word—el formato se conservará.
+**Exportar a Word:** Abra la vista previa de `paper.md` de la misma forma que en el Paso 6. Haga clic dentro del panel de vista previa, luego haga clic en **Edit > Select All** y **Edit > Copy**. Pegue en Microsoft Word—el formato se conservará.
 
 ## Paso 17: Crear un Slash Command para Futuros Artículos
 
@@ -253,13 +243,13 @@ Crea un slash command llamado /research-paper que me guíe a través de
 todo este flujo de trabajo. Guárdalo para que pueda usarlo en futuros artículos de investigación sobre diversos temas.
 ```
 
-Claude creará un slash command personalizado en su carpeta `.claude/commands/`. Es un archivo Markdown que contiene un prompt. Podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [tu tema]`.
+Claude creará un slash command personalizado, normalmente en su carpeta `.claude/commands/` (o en `.claude/skills/research-paper/`). Es un archivo Markdown que contiene un prompt. Antes de usarlo por primera vez, escriba `/reload-skills` (o salga de Claude Code e inícielo de nuevo) para que se cargue el nuevo comando. Luego podrá comenzar su próximo artículo simplemente escribiendo `/research-paper [su tema]`.
 
 ## Paso 18: Obtener Retroalimentación
 
-Los LLM no tienen memoria permanente. Para cada respuesta, se envía el historial completo de la conversación como contexto. A medida que la interacción se hace más larga, es importante gestionar la longitud del contexto. Limpiar el contexto permite obtener una perspectiva fresca.
+Los LLM no tienen memoria permanente. Para cada respuesta, se envía el historial completo de la conversación como contexto. A medida que la interacción se hace más larga, es importante gestionar la longitud del contexto. Si el contexto anterior no está relacionado, o si podemos proporcionar un contexto más limpio, nos conviene empezar de nuevo.
 
-Limpie la memoria de Claude para obtener retroalimentación imparcial sobre su artículo:
+Limpie la memoria de Claude para obtener retroalimentación sobre su artículo. Escriba:
 
 ```
 /clear
@@ -278,7 +268,7 @@ Claude evaluará su artículo de forma objetiva, sin estar influenciado por habe
 
 1. **Crear Carpeta** - Configure su carpeta de proyecto en Documentos
 2. **Abrir en VS Code** - Abra la carpeta en VS Code
-3. **Iniciar Claude Code** - Lance Claude Code desde el terminal
+3. **Iniciar Claude Code** - Lance Claude Code desde la terminal
 4. **Investigar** - Claude busca información general sobre su tema
 5. **Leer Fuentes** - Revise la investigación en su editor de texto
 6. **Lluvia de Ideas** - Elija su enfoque/perspectiva
@@ -307,9 +297,9 @@ El slash command lo guiará automáticamente a través de todo el flujo de traba
 
 ## Solución de Problemas
 
-- **Los resultados de búsqueda parecen desactualizados:** Especifique "busca datos de 2024-2025 sobre [tema]"
+- **Los resultados de búsqueda parecen desactualizados:** Pida un rango de tiempo, por ejemplo "busca datos de los últimos dos años sobre [tema]"
 - **El borrador es muy largo o corto:** Indique: "Haz que tenga aproximadamente 1,000 palabras"
-- **No puede encontrar archivos:** En el terminal, escriba `ls` para listar todos los archivos en la carpeta actual
+- **No puede encontrar archivos:** En la terminal, escriba `ls` para listar todos los archivos en la carpeta actual
 
 ## Lo Que Puede Pedirle a Claude
 

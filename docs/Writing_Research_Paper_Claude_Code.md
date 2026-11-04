@@ -16,7 +16,7 @@ Write research papers using Claude Code as an assistant for research, brainstorm
 
 ## What You'll Need
 
-- Finished [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win) or [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac)
+- Finished [Claude Code in VS Code on Windows](./Claude_Code_in_VS_Code_Win.md) or [Claude Code in VS Code on Mac](./Claude_Code_in_VS_Code_Mac.md)
 - 30-40 minutes
 
 ## Step 1: Create a Project Folder
@@ -25,7 +25,7 @@ Create a folder for your research paper:
 
 - Open **File Explorer** (Windows) or **Finder** (Mac)
 - Navigate to **Documents**
-- Create a new folder called `test_claude`
+- Create a new folder called `test_claude` (if you already made it in an earlier tutorial, just use that folder)
 
 Everything about this project happens in this folder. 
 
@@ -35,11 +35,6 @@ For Windows:
 - Type `Visual Studio Code` or `VS Code` in the search box
 - Click on **Visual Studio Code** when it appears in the search results
 - VS Code opens with a Welcome tab - you can close this tab
-- Look at the bottom-left corner of VS Code - you'll see a blue or green icon
-- Click this icon to open the remote connection menu
-- Select **Connect to WSL** from the menu
-- VS Code will reload and connect to your Ubuntu installation
-- The bottom-left corner should now show **WSL: Ubuntu**
 
 For Mac:
 - Open **Finder** and go to **Applications**
@@ -48,21 +43,16 @@ For Mac:
 - VS Code opens with a Welcome tab - you can close this tab
 
 ## Step 3: Open the Folder in VS Code
-For Windows via WSL:
-- In VS Code (still connected to WSL), click **File** in the menu bar, then **Open Folder**
-- A **Open Folder** dropdown appears in the top center.
-- Find your folder by typing:
-  ```
-  /mnt/c/Users/YOUR_USERNAME/Documents/test_claude
-  ```
-  Replace `YOUR_USERNAME` with your Windows username (e.g., `John.Smith`)
-- Click **OK**. VS Code reloads with your `test_claude` folder
-
+For Windows:
+- Click **File** in the menu bar, then **Open Folder**
+- Navigate to and select the `test_claude` folder in **Documents**
+- Click **Select Folder**. VS Code reloads with your `test_claude` folder
+- If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 For Mac:
 - In VS Code, click **File** in the menu bar, then **Open Folder**
 - Navigate to and select the `test_claude` folder
-- Click **Open** (Mac) or **OK** (Windows)
+- Click **Open**
 - If prompted "Do you trust the authors?", click **Yes, I trust the authors**
 
 ## Step 4: Start Claude Code
@@ -81,7 +71,7 @@ Ask Claude to research your topic. Copy and paste this prompt into Claude Code, 
 
 ```
 I'm writing a ~1,000 word research paper on AI adoption in the workplace.
-Search for recent data (2023-2025) on:
+Search for recent data (from the last two years) on:
 - Productivity gains from AI tools
 - Job displacement concerns and statistics
 - Real-world case studies from companies
@@ -106,9 +96,9 @@ Review Claude's summary to get a quick overview of the research landscape.
 ## Step 6: Read the Sources
 Read through the research document and click through to the original sources to verify the information:
 
-1. Click `general_research.md` in the Explorer panel on the left
-2. Preview the formatted document: right-click on the `general_research.md` tab and select **Open Preview**
-3. Click the source links to read the original articles and studies
+- Click `general_research.md` in the Explorer panel on the left
+- Preview the formatted document: right-click inside the editor and select **Markdown Preview Enhanced: Open Preview to the Side** (or, without that extension, right-click the `general_research.md` tab and select **Open Preview**)
+- Click the source links to read the original articles and studies
 
 ## Step 7: Brainstorm Your Angle
 
@@ -141,7 +131,7 @@ research and my chosen angle. Use bullet points for the narrative flow.
 Save as outlines.md
 ```
 
-Review the outline and ask Claude to adjust as needed (e.g., "Make section 2 focus more on case studies" or "Add a section on limitations"). 
+Review the outlines in `outlines.md` and ask Claude to adjust as needed (e.g., "Make section 2 focus more on case studies" or "Add a section on limitations"). 
 
 ## Step 10: Draft the Paper
 
@@ -241,7 +231,7 @@ Do a final proofread of the paper:
 
 Review Claude's changes.
 
-**Export to Word:** In VS Code, right-click on the `paper.md` tab and select **Open Preview**. Click inside the preview pane, then click **Edit > Select All** and **Edit > Copy**. Paste into Microsoft Word—the formatting will be retained.
+**Export to Word:** Open the preview of `paper.md` the same way as in Step 6. Click inside the preview pane, then click **Edit > Select All** and **Edit > Copy**. Paste into Microsoft Word—the formatting will be retained.
 
 ## Step 17: Create a Slash Command for Future Papers
 
@@ -252,7 +242,7 @@ Create a slash command called /research-paper that guides me through
 this entire workflow. Save it so I can use it for future research papers on various topics.
 ```
 
-Claude will create a custom slash command in your `.claude/commands/` folder. It is a Markdown file containing a prompt. You can start your next research paper by simply typing `/research-paper [your topic]`!
+Claude will create a custom slash command, usually in your `.claude/commands/` folder (or `.claude/skills/research-paper/`). It is a Markdown file containing a prompt. Before you use it the first time, type `/reload-skills` (or quit Claude Code and start it again) so the new command is loaded. Then you can start your next research paper by simply typing `/research-paper [your topic]`!
 
 ## Step 18: Get Feedback
 
@@ -306,7 +296,7 @@ The slash command will guide you through the entire workflow automatically! Don'
 
 ## Troubleshooting
 
-- **Claude search results seem outdated:** Specify "search for 2024-2025 data on [topic]"
+- **Claude search results seem outdated:** Ask for a time range, for example "search for data from the last two years on [topic]"
 - **Draft is too long/short:** Tell Claude: "Make this approximately 1,000 words"
 - **Can't find files:** In terminal, type `ls` to list all files in current folder
 
